@@ -3,27 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.nonlinear.nyc/play/ml5-test/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nonlinear.nyc/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nonlinear.nyc/play/</loc>
-    <lastmod>2021-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.nonlinear.nyc/books/angeltech/</loc>
     <lastmod>2021-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.nonlinear.nyc/books/</loc>
+    <lastmod>2021-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.nonlinear.nyc/</loc>
     <lastmod>2021-02-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,11 +39,6 @@
   
   <url>
     <loc>https://www.nonlinear.nyc/books/supersizing/</loc>
-    <lastmod>2020-01-29T18:03:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nonlinear.nyc/play/hello-world/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url>
   

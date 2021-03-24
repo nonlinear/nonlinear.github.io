@@ -6,16 +6,7 @@
     <description>Recent content on nonlinear</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nonlinear.nyc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ML5 testing</title>
-      <link>https://www.nonlinear.nyc/play/ml5-test/</link>
-      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.nonlinear.nyc/play/ml5-test/</guid>
-      <description> const bodypix = ml5.bodyPix(modelReady) function modelReady() { // segment the image given bodypix.segment(img, gotResults) } function gotImage(error, result) { if (error) { console.log(error); return; } // log the result console.log(result.maskBackground); } </description>
-    </item>
-    
+    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nonlinear.nyc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angel Tech</title>
       <link>https://www.nonlinear.nyc/books/angeltech/</link>
@@ -88,17 +79,6 @@ Read in Play Books around April 2017
 by Andy Clark, partial extraction from Sumnotes
 Embodied Cognition on Wikipedia
  This is the thesis of the extended mind: when parts of the environment are coupled to the brain in the right way, they become parts of the mind. Parity Principle, which held that if aprocess in the world works in a way that we should count as a cognitive process if it were done in the head, then we should count it as a cognitive process all the same.</description>
-    </item>
-    
-    <item>
-      <title>Testing hugo features</title>
-      <link>https://www.nonlinear.nyc/play/hello-world/</link>
-      <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
-      
-      <guid>https://www.nonlinear.nyc/play/hello-world/</guid>
-      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ut? Ipsum, quasi, dolorem. Omnis cupiditate cumque natus deleniti ex nulla obcaecati, consectetur ipsa, unde corrupti animi dicta odit maxime quod!
-Click to jump Ratione officiis in deleniti mollitia culpa dolorem, facere, quod laborum vero tempore magnam, porro. Tempora, nesciunt, recusandae dolorum suscipit natus reprehenderit minima excepturi rerum fugit molestias consequuntur dicta. Maxime, dolores.
-Tempore libero voluptates similique, laboriosam suscipit neque officia dicta maxime ab cupiditate quos rem velit aspernatur corporis adipisci sed laudantium.</description>
     </item>
     
     <item>

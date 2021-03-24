@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/nfrota/Documents/nonlinear",
+	"sourceRoot": "/Users/nfrota/Documents/nonlinear/site",
 	"sources": [
 		"assets/css/main.scss",
 		"assets/css/vendor/animatewithsass/animate.scss",
