@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="levels  exercises ">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://www.nonlinear.nyc/css/main.6370527968ba049531109978c60c0e3e3d1b1ba086f1ff0c0c96430196bd3cfa.css">
+
+	<title>nonlinear</title>
+</head>
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="https://www.nonlinear.nyc/">nonlinear</a> / 
+
+		 / 
+			</h2></nav>
+				<h1>rings, levels</h1>
+				<h3 class="date">published january 2021</h3>
+
+		<hr>
+		</header>
+<article>
+	<h1 id="high-level">High level</h1>
+<p><img src="/images/exercises/arms01.gif" alt="image">
+<img src="/images/exercises/arms02.gif" alt="image">
+<img src="/images/exercises/arms03.gif" alt="image"></p>
+<hr>
+<h1 id="low-level">Low level</h1>
+<p><img src="/images/exercises/abs03.gif" alt="image">
+<img src="/images/exercises/abs04.gif" alt="image">
+<img src="/images/exercises/abs05.gif" alt="image">
+<img src="/images/exercises/arms06.gif" alt="image"></p>
+<hr>
+<h1 id="bottom-level">Bottom level</h1>
+<p><img src="/images/exercises/abs01.gif" alt="image">
+<img src="/images/exercises/abs02.gif" alt="image"></p>
+<hr>
+<h1 id="no-level">No level</h1>
+<p><img src="/images/exercises/arms04.gif" alt="image">
+<img src="/images/exercises/arms05.gif" alt="image"></p>
+
+</article>
+</div>
+
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/popper.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script>
+</body>
+</html>

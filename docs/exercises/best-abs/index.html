@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="best-abs  exercises ">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://www.nonlinear.nyc/css/main.6370527968ba049531109978c60c0e3e3d1b1ba086f1ff0c0c96430196bd3cfa.css">
+
+	<title>nonlinear</title>
+</head>
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="https://www.nonlinear.nyc/">nonlinear</a> / 
+
+		 / 
+			</h2></nav>
+				<h1>best abs exercises</h1>
+				<h3 class="date">published january 2021</h3>
+
+		<hr>
+		</header>
+<article>
+	<p><img src="/images/exercises/best-abs-01.gif" alt="image">
+<img src="/images/exercises/best-abs-02.gif" alt="image">
+<img src="/images/exercises/best-abs-03.gif" alt="image">
+<img src="/images/exercises/best-abs-03b.gif" alt="image"></p>
+
+</article>
+</div>
+
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/popper.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script>
+</body>
+</html>

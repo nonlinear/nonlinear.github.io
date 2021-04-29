@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://www.nonlinear.nyc/css/main.6370527968ba049531109978c60c0e3e3d1b1ba086f1ff0c0c96430196bd3cfa.css">
+
+	<title>nonlinear</title>
+</head>
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="https://www.nonlinear.nyc/">nonlinear</a> /
+			</h2></nav>
+				<h1>Exercises</h1>
+				
+
+		<hr>
+		</header>
+		    <ul>
+    
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/ankle/">ankle</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/best-abs/">best abs exercises</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/ring-basics/">rings basics</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/rings-progression/">rings progression</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/ring-abs/">rings, abs</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/ring-arms/">rings, arms</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/levels/">rings, levels</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/start-training-on-rings/">start training on rings</a>
+        </li>
+    
+        <li>
+            <a href="https://www.nonlinear.nyc/exercises/stretches/">stretches</a>
+        </li>
+    
+    </ul>
+</div>
+
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/popper.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script> 
+</body>
+</html>

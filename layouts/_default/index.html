@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+{{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
 <div class="container">
@@ -30,14 +30,6 @@
 		{{ end }}
 </ul>
 	</div>
-	<!-- <div class="category">
-		<h2>Play</h2>
-		<ul>
-	{{ range where .Site.Pages "Params.category" "play" }}
-		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-		{{ end }}
-</ul>
-	</div> -->
 	<div class="category">
 		<h2>projects</h2>
 		<ul>
@@ -46,6 +38,13 @@
 			<li><a target="_blank" href="http://technoqueers.com/">technoqueers</a></li>
 				<li><a target="_blank" href="https://github.com/nonlinear/play#nonlinear-play">nonlinear play</a></li>
 		</ul>
+	</div><div class="category">
+		<h2>exercises</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "exercises" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
 	</div>
 </div>
 </div>

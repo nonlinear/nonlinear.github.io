@@ -24,7 +24,28 @@
 
 }
 
-
+.exercises {
+	table {
+		width: 100%;
+		margin-bottom: $gap2;
+		tr {
+			border-bottom: solid 1px  #aaa;
+		}
+		td {
+			padding: 10px;
+			vertical-align: top;
+			&:first-of-type {
+				padding-left: 0;
+			}
+			&:last-of-type {
+				padding-right: 0;
+			}
+		}
+	}
+	td img {
+		max-width: 100%;
+	}
+}
 
 
 
@@ -44,6 +65,7 @@ body {
 
 hr {
 	margin: $gap2 0;
+	border-color: #aaa;
 }
 
 

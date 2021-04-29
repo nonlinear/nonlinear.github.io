@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="start-training-on-rings  exercises ">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://www.nonlinear.nyc/css/main.6370527968ba049531109978c60c0e3e3d1b1ba086f1ff0c0c96430196bd3cfa.css">
+
+	<title>nonlinear</title>
+</head>
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="https://www.nonlinear.nyc/">nonlinear</a> / 
+
+		 / 
+			</h2></nav>
+				<h1>start training on rings</h1>
+				<h3 class="date">published january 2021</h3>
+
+		<hr>
+		</header>
+<article>
+	<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Support hold</td>
+<td>few seconds, close to the body, stablizing your hands. Stay till you cna handle 15 seconds.</td>
+<td style="text-align:right"><img src="/images/exercises/start01.png" alt="image"> <img src="/images/exercises/start02.png" alt="image"></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Advanced support hold</td>
+<td></td>
+<td style="text-align:right"><img src="/images/exercises/start03.png" alt="image"></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Plank with rings</td>
+<td>Stay till 15 seconds</td>
+<td style="text-align:right"><img src="/images/exercises/start04.png" alt="image"></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ring dips</td>
+<td>At least 10 good reps</td>
+<td style="text-align:right"><img src="/images/exercises/start05.png" alt="image"></td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Bulgarian dips</td>
+<td>At least 10 good reps</td>
+<td style="text-align:right"><img src="/images/exercises/start06.png" alt="image"></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ring pushup</td>
+<td>focus on stabilizing your hands. till 10 good reps</td>
+<td style="text-align:right"><img src="/images/exercises/start07.png" alt="image"></td>
+</tr>
+<tr>
+<td>5</td>
+<td>False Grip</td>
+<td>practice till 15 seconds hold</td>
+<td style="text-align:right"><img src="/images/exercises/start08.png" alt="image"> <img src="/images/exercises/start09.png" alt="image"></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ring pull ups</td>
+<td>rotate wrists doing the movement</td>
+<td style="text-align:right"><img src="/images/exercises/start10.png" alt="image"> <img src="/images/exercises/start11.png" alt="image"></td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Simpler pull ups</td>
+<td></td>
+<td style="text-align:right"><img src="/images/exercises/start12.png" alt="image"> <img src="/images/exercises/start13.png" alt="image"></td>
+</tr>
+</tbody>
+</table>
+
+</article>
+</div>
+
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/popper.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script>
+</body>
+</html>
