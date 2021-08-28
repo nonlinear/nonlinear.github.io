@@ -14920,26 +14920,6 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 45px 15px;
   padding-top: 0; }
 
-.exercises table {
-  width: 100%;
-  margin-bottom: 30px; }
-
-.exercises table tr {
-  border-bottom: solid 1px  #aaa; }
-
-.exercises table td {
-  padding: 10px;
-  vertical-align: top; }
-
-.exercises table td:first-of-type {
-  padding-left: 0; }
-
-.exercises table td:last-of-type {
-  padding-right: 0; }
-
-.exercises td img {
-  max-width: 100%; }
-
 body {
   font-family: Space Grotesk;
   background-color: #eee;
@@ -14953,8 +14933,7 @@ body {
   font-size: 110%; }
 
 hr {
-  margin: 30px 0;
-  border-color: #aaa; }
+  margin: 30px 0; }
 
 h1, h2, h3, h4, h5 {
   font-weight: bold; }

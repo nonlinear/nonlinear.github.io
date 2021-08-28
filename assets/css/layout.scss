@@ -18,7 +18,7 @@
 
 .container {
 	width: 100%;
-	max-width: 750px;
+max-width: $container;
 	padding: $gap3 $gap;
 	padding-top: 0;
 
@@ -93,6 +93,27 @@ a {
 		color: black;
 		text-decoration: none;
 		background-color: $hover;
+	}
+	.links & {
+		display: block;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: solid 1px #ccc;
+		@include radius(0);
+		text-align: left;
+		font-weight: bold;
+		span {
+			font-weight: normal;
+			display: block;
+		@include opacity(60);
+		}
+		&:hover {
+			span {
+				@include opacity(100);
+			}
+			background-color: transparent;
+			border-color: black;
+		}
 	}
 }
 
@@ -170,8 +191,6 @@ $peek: 30px;
 .categories {
 	display: grid;
 	grid-gap: $gap2;
-
-		text-transform: lowercase;
 	grid-template-columns: repeat(4, 1fr);
 	.category {
 		ul, ol {
@@ -185,7 +204,6 @@ $peek: 30px;
 header.header {
 	padding-top:  $gap2;
 	margin-bottom:  $gap2;
-		text-transform: lowercase;
 			position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;

@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-{{ partial "html.html" . }}
+<html lang="en" class="cover">
 {{ partial "head.html" . }}
 <body>
 <div class="container">
 		<header class="header">
-				<h1><a href="{{ .Permalink }}">{{ .Site.Title }}</a></h1>
-		<h4>The anagram of my name is anarchist fool</h4>
+				<h1>{{ .Site.Title }}</h1>
+		<h4>Senior UI Designer</h4>
 		<hr>
 		</header>
 
-<div class="categories">
-	<div class="category">
-		<h2>about</h2>
-		<ol>
-<li><a href="https://mastodon.social/@nonlinear">mastodon</a></li>
-<li><a href="https://twitter.com/nonlinear">twitter</a></li>
-<li><a href="https://www.instapaper.com/p/nonlinear">instapaper</a></li>
-<li><a href="https://savee.it/nonlinear">savee</a></li>
-<li><a href="https://instagram.com/nonlinear">instagram</a></li>
-<li><a href="https://github.com/nonlinear">github</a></li>
-
-</ol>
+<div class="links">
+		<h4>Find me on</h4>		
+<a class="btn" href="https://praxis.nyc">Praxis
+<span>Study groups, side projects</span>
+</a>
+<a class="btn" href="https://mastodon.social/@nonlinear">Mastodon
+<span>Mainly rants, sometimes insights</span></a>
+<a class="btn" href="https://twitter.com/nonlinear">Twitter
+<span>Same, but on a corporate platform</span></a>
+<a class="btn" href="https://www.instapaper.com/p/nonlinear">Instapaper
+<span>Articles I liked</span></a>
+<a class="btn" href="https://savee.it/nonlinear">Savee
+<span>Design inspiration</span></a>
+<a class="btn" href="https://instagram.com/nonlinear">Instagram
+<span>Another corporate platform, boo</span></a>
 	</div>
+
+
+
+<!-- <div class="categories">
+	
 	<div class="category">
 		<h2>books</h2>
 		<ul>
@@ -30,6 +38,17 @@
 		{{ end }}
 </ul>
 	</div>
+<<<<<<< HEAD
+	<div class="category">
+		<h2>Play</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "play" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
+	</div>
+=======
+>>>>>>> 53d110cfbedb982d26d9b091f5e3ec453d0c2d57
 	<div class="category">
 		<h2>projects</h2>
 		<ul>
@@ -46,7 +65,7 @@
 		{{ end }}
 </ul>
 	</div>
-</div>
+</div> -->
 </div>
 {{ partial "scripts.html" . }} 
 </body>

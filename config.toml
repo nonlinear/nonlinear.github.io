@@ -1,4 +1,5 @@
 baseURL = "https://www.nonlinear.nyc/"
 languageCode = "en-us"
-title = "nonlinear"
+title = "Nicholas Frota"
+role = "Senior UI Designer"
 publishDir = "docs"
