@@ -24,6 +24,14 @@ max-width: $container;
 
 }
 
+.ascii {
+	font-family: monospace;
+	line-height: 120%;
+	font-size:50%;
+	color: $color-fg;
+	margin-top: $gap3;
+}
+
 .exercises {
 	table {
 		width: 100%;
@@ -52,6 +60,7 @@ max-width: $container;
 body {
 	font-family: Space Grotesk;
 	background-color: $color-bg;
+	color: $color-fg;
 	padding: 0;
 	margin: 0;
 	@include transition;
@@ -86,7 +95,7 @@ h1, h2, h3, h4, h5, p {
 
 
 a {
-	color: black;
+	color: $color-fg;
 	background-color: $link;
 	@include transition;
 	&:hover {
@@ -96,23 +105,30 @@ a {
 	}
 	.links & {
 		display: block;
-		padding: 10px;
-		margin-bottom: 10px;
-		border: solid 1px #ccc;
+		padding: $gap 0;
+		border-top: solid 1px $color-fg;
+			border-bottom: solid 1px $color-fg;
+		margin-top: -1px;
+
 		@include radius(0);
+		background-color: transparent;
 		text-align: left;
 		font-weight: bold;
+		color: $color-fg;
 		span {
 			font-weight: normal;
 			display: block;
-		@include opacity(60);
+			font-size: 90%;
 		}
 		&:hover {
-			span {
-				@include opacity(100);
-			}
-			background-color: transparent;
-			border-color: black;
+		background-color: transparent !important;
+		@include translate(20, 0);
+		background-color: $link;
+		&:before {
+			@include opacity(100);
+		}
+		
+		
 		}
 	}
 }
@@ -204,9 +220,7 @@ $peek: 30px;
 header.header {
 	padding-top:  $gap2;
 	margin-bottom:  $gap2;
-			position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+			
   background-color: $color-bg;
   hr {
   	margin-bottom: 0;

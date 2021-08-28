@@ -12,7 +12,8 @@ $gaphalf: $gap * .5;
 
 $link: rgba(yellow, .3);
 $hover: rgba(orange, .4);
-$color-bg: #eee;
+$color-bg: darken(purple, 15%);
+$color-fg: white;
 $container: 350px;
 
 $delay: 300ms;
