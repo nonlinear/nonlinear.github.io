@@ -16,12 +16,18 @@
 	$transform: normal
 	);
 
+
+
 .container {
 	width: 100%;
 max-width: $container;
 	padding: $gap3 $gap;
 	padding-top: 0;
 
+}
+
+.cover .container {
+		max-width: 350px;
 }
 
 .ascii {
