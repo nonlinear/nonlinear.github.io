@@ -1,0 +1,29 @@
+
+
+{
+  "name": "aaabbbccc",
+  "short_name": "aaabbbccc",
+  "icons": [
+    {
+      "src": "/play/appicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/play/appicons/favicon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/play/appicons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/play/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}
+
