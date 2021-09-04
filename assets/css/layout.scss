@@ -16,18 +16,16 @@
 	$transform: normal
 	);
 
-
-
 .container {
 	width: 100%;
-max-width: $container;
+	max-width: $container;
 	padding: $gap3 $gap;
 	padding-top: 0;
 
 }
 
 .cover .container {
-		max-width: 350px;
+	max-width: 350px;
 }
 
 .ascii {
@@ -113,11 +111,13 @@ a {
 		display: block;
 		padding: $gap 0;
 		border-top: solid 1px $color-fg;
+		&:last-of-type {
+
 			border-bottom: solid 1px $color-fg;
-		margin-top: -1px;
+		}
 
 		@include radius(0);
-		background-color: transparent;
+		background-color: $color-bg;
 		text-align: left;
 		font-weight: bold;
 		color: $color-fg;
@@ -127,14 +127,14 @@ a {
 			font-size: 90%;
 		}
 		&:hover {
-		background-color: transparent !important;
-		@include translate(20, 0);
-		background-color: $link;
-		&:before {
-			@include opacity(100);
-		}
-		
-		
+			background-color: transparent !important;
+			@include translate(20, 0);
+			background-color: $link;
+			&:before {
+				@include opacity(100);
+			}
+			
+			
 		}
 	}
 }
@@ -226,11 +226,11 @@ $peek: 30px;
 header.header {
 	padding-top:  $gap2;
 	margin-bottom:  $gap2;
-			
-  background-color: $color-bg;
-  hr {
-  	margin-bottom: 0;
-  }
+	
+	background-color: $color-bg;
+	hr {
+		margin-bottom: 0;
+	}
 	h1, h2, h3 {
 		margin-bottom: 0;
 	}
