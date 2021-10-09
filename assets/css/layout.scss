@@ -133,8 +133,8 @@ a {
 			&:before {
 				@include opacity(100);
 			}
-			
-			
+
+
 		}
 	}
 }
@@ -226,7 +226,6 @@ $peek: 30px;
 header.header {
 	padding-top:  $gap2;
 	margin-bottom:  $gap2;
-	
 	background-color: $color-bg;
 	hr {
 		margin-bottom: 0;

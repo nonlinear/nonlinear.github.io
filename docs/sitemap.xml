@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.nonlinear.nyc/exercises/wrist/</loc>
+    <lastmod>2021-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.nonlinear.nyc/exercises/</loc>
+    <lastmod>2021-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.nonlinear.nyc/</loc>
+    <lastmod>2021-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.nonlinear.nyc/books/angeltech/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,12 +21,6 @@
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.nonlinear.nyc/exercises/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.nonlinear.nyc/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/exercises/ring-basics/</loc>
@@ -54,6 +57,9 @@
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/supersizing/</loc>
+    <lastmod>2020-01-29T18:03:16-05:00</lastmod>
+  </url><url>
+    <loc>https://www.nonlinear.nyc/hello-world/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/dispossessed/</loc>
