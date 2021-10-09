@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+style-spin-scroll 
 '>
 <head>
   <meta charset="UTF-8">
@@ -11,15 +11,6 @@ style-ml5-test
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -137,11 +128,6 @@ color: black;
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
-
-
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-
 
 
 
@@ -151,25 +137,115 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
-<script>
-	const bodypix = ml5.bodyPix(modelReady)
+<script type="module">
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
+      import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
+      import { OrbitControls } from '/play/three-example/OrbitControls.js';
+      import { GLTFLoader } from '/play/three-example/GLTFLoader.js';
+      import { RGBELoader } from '/play/three-example/RGBELoader.js';
+      import { RoughnessMipmapper } from '/play/three-example/RoughnessMipmapper.js';
 
-</script>
+      let camera, scene, renderer;
+
+      init();
+      render();
+
+      function init() {
+
+        const container = document.createElement( 'div' );
+        document.body.appendChild( container );
+
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+        camera.position.set( - 1.8, 0.6, 2.7 );
+
+        scene = new THREE.Scene();
+
+        new RGBELoader()
+          .setDataType( THREE.UnsignedByteType )
+          .setPath( 'textures/equirectangular/' )
+          .load( 'royal_esplanade_1k.hdr', function ( texture ) {
+
+            const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+
+            scene.background = envMap;
+            scene.environment = envMap;
+
+            texture.dispose();
+            pmremGenerator.dispose();
+
+            render();
+
+            // model
+
+            // use of RoughnessMipmapper is optional
+            const roughnessMipmapper = new RoughnessMipmapper( renderer );
+
+            const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
+            loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
+
+              gltf.scene.traverse( function ( child ) {
+
+                if ( child.isMesh ) {
+
+                  roughnessMipmapper.generateMipmaps( child.material );
+
+                }
+
+              } );
+
+              scene.add( gltf.scene );
+
+              roughnessMipmapper.dispose();
+
+              render();
+
+            } );
+
+          } );
+
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1;
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        container.appendChild( renderer.domElement );
+
+        const pmremGenerator = new THREE.PMREMGenerator( renderer );
+        pmremGenerator.compileEquirectangularShader();
+
+        const controls = new OrbitControls( camera, renderer.domElement );
+        controls.addEventListener( 'change', render ); // use if there is no animation loop
+        controls.minDistance = 2;
+        controls.maxDistance = 10;
+        controls.target.set( 0, 0, - 0.2 );
+        controls.update();
+
+        window.addEventListener( 'resize', onWindowResize );
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        render();
+
+      }
+
+      //
+
+      function render() {
+
+        renderer.render( scene, camera );
+
+      }
+
+    </script>
 
 
 
@@ -179,8 +255,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>spin scroll</h1>
+		<h2>spin test</h2>
 	
 
 

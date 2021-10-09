@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+spread
 '>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/reveal.css">
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+  
+    
+    
+    
+     
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/theme/magazine.css" id="theme">
+  
+    
+    
+    
+    
+    
+    
+  		    
+    
 
   <link rel="manifest" href="https://www.nonlinear.nyc/manifest.json">
   <title>Nicholas Frota</title>
@@ -133,14 +153,17 @@ color: black;
 </head>
 <body>
   
+ 
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/modernizr.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/detectizr.js"></script>
 
 
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
 
 
@@ -151,26 +174,59 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
-<script>
-	const bodypix = ml5.bodyPix(modelReady)
+  <div class="reveal">
+   <div class="slides">
+    <style>
+	:root {
+		--magazine-ratio: 500px;
+		--magazine-radius: 0px;
+		--magazine-color-1: #666;
+		--magazine-color-2: #eee;
+		--magazine-shadow: 5px 5px 0px rgba(0, 0, 0, 0.06);
+	}
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
+	.reveal-viewport {
+		background-color: #ccc;
+	}
+</style>
+<section>
+	<h2>Barebones Presentation</h2>
+	<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+</section>
+<section>
+	<h2>No Theme</h2>
+	<p>There's no theme included, so it will fall back on browser defaults.</p>
+</section>
+<section id="other">
+	<h2>Barebones Presentation</h2>
+	<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+</section>
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
+<section>
+	<h2>No Theme</h2>
+	<p>There's no theme included, so it will fall back on browser defaults.</p>
+</section>
+<section>
+	<h2>Barebones Presentation</h2>
+	<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+</section>
 
-</script>
+<section>
+	<h2>No Theme</h2>
+	<p>There's no theme included, so it will fall back on browser defaults.</p>
+</section>
+<section>
+	<h2>Barebones Presentation</h2>
+	<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+</section>
 
+<section>
+	<h2>No Theme</h2>
+	<p>There's no theme included, so it will fall back on browser defaults.</p>
+</section>
+  </div>
+</div>
+  
 
 
 <a class="credits-trigger" href="#credits"></a>
@@ -179,8 +235,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>Magazine test</h1>
+		<h2>testing revealjs magazine theme</h2>
 	
 
 
@@ -204,7 +260,14 @@ function gotImage(error, result) {
 		</header>
 		
 <section class="play-modal-content">
-	
+	<p>Revealjs resizes automatically depending on screen, so whatever you do will work properly on smaller screens preserving the framing ration, which is what I need for design creations (think comics, kinetic posters, fashion spreads).
+dfdffg</p>
+<ul>
+<li>dfdg</li>
+<li>dfdgg</li>
+<li>dgsgsfg</li>
+</ul>
+
 
 </section>
 		<footer class="play-modal-footer">
@@ -242,6 +305,21 @@ function gotImage(error, result) {
 		
 	</article>
 </div>
+
+
+<script src="https://www.nonlinear.nyc/js/revealjs/reveal.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/notes/notes.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/markdown/markdown.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/highlight/highlight.js"></script>
+<script>
+	Reveal.initialize({
+		hash: true,
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
 
 </body>
 </html>

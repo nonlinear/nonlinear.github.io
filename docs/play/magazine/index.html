@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+style-magazine 
 '>
 <head>
   <meta charset="UTF-8">
@@ -130,17 +130,22 @@ color: black;
 <link rel="stylesheet" href="https://www.nonlinear.nyc/css/main.a48bba79a9889ba90880ec94ebec5258ce2354321acda510e1efb2eb0b2d7f88.css">
   
    
+<link rel="stylesheet" href="https://www.nonlinear.nyc//css/spread.css">
+ 
 </head>
 <body>
   
+ 
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/modernizr.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/detectizr.js"></script>
 
 
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
 
 
@@ -151,25 +156,42 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
-<script>
-	const bodypix = ml5.bodyPix(modelReady)
+<div class="spread">
+		<section>
+	<h2>Scroll test</h2>scroll here</p>
+	<div class="spin-scroll vertical">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+	<div class="spin-scroll horizontal">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+</section>
+<section>
+	<h1>h1 test</h1>
+	<h2>h2 test</h2>
+	<h3>h3 test</h3>
+	<p>paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?</p>
+</section>
+<section>
+	<h2>Image</h2>
+	<p class="pending">Images of different sizes here</p>
+</section>
+<section>
+	<h2>Background</h2>
+	<p class="pending">backgrounds of different types here</p>
+</section>
+<section>
+	<h2>SVG test</h2>
+	<p class="pending">embedded, img, with css stuff on it</p>
+</section>
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
-
-</script>
+</div>
 
 
 
@@ -179,8 +201,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>Magazine</h1>
+		<h2>testing CSS-only magazine</h2>
 	
 
 

@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+spread
 '>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/reveal.css">
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+  
+    
+    
+    
+     
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/theme/magazine.css" id="theme">
+  
+    
+    
+    
+    
+    
+    
+  		    
+    
+
   <link rel="manifest" href="https://www.nonlinear.nyc/manifest.json">
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -133,14 +144,17 @@ color: black;
 </head>
 <body>
   
+ 
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/modernizr.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/detectizr.js"></script>
 
 
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
 
 
@@ -151,26 +165,68 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
+  <div class="reveal">
+   <div class="slides">
+    <section class="cross">
+
+		<h1>Mosaic</h1>
+
+</section>
+<section class="cross-2">
+
+		<h1>Mosaic 2</h1>
+
+</section>
+<section class="lines">
+
+		<h2>cross lines</h2>
+
+</section>
+<section>
+	<h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolore, tempora voluptatibus repellat aliquam quasi iste praesentium, exercitationem aspernatur quos sed eius autem, suscipit id, soluta ipsum nulla. Tenetur, reiciendis.</h2>
+</section>
+<section>
+	<h2>Quo necessitatibus magni, fuga aliquid fugiat possimus debitis dolore ut perspiciatis, maxime quisquam laborum corporis harum natus, nesciunt officia optio. Expedita repellat, deserunt fugiat! Earum aspernatur explicabo aut quae voluptates.</h2>
+</section>
+<section>
+	<h2>Sunt consequuntur dignissimos, voluptatem totam nesciunt dolorum eum at veniam fugiat harum cum esse magni atque odio expedita quaerat beatae dolor, amet tempore voluptates odit cupiditate iure ducimus. Repudiandae, rem?</h2>
+</section>
 <script>
-	const bodypix = ml5.bodyPix(modelReady)
+var mouseX;
+var mouseY;
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
+_default_unit = 'px';
+_default_minX = 0;
+_default_minY = 0;
+_default_event = 'mousemove';
+
+
+unit = _default_unit;
+minX =  50 ;
+minY =  50 ;
+event = "mousemove";
+
+
+window.addEventListener(event, function(e) {
+	mouseX = e.clientX;
+mouseY = e.clientY;
+const target = document.querySelector("section.cross");
+target.style.setProperty("--size-1", relationship(0, screen.width, minX,  70 , mouseX) + unit);
+target.style.setProperty("--size-2", relationship(0, screen.height, minY,  70 , mouseY) + unit);
+});
+
+function relationship(origin0, origin1, destination0, destination1, element) {
+	var lengthOrigin = origin1 - origin0;
+	var lengthDestination = destination1 - destination0;
+	var ratio = lengthDestination / lengthOrigin;
+	return destination0 + element * ratio;
 }
-
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
-
 </script>
 
+
+  </div>
+</div>
+  
 
 
 <a class="credits-trigger" href="#credits"></a>
@@ -179,8 +235,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>Mosaic</h1>
+		<h2>mosaic experiments</h2>
 	
 
 
@@ -204,7 +260,12 @@ function gotImage(error, result) {
 		</header>
 		
 <section class="play-modal-content">
-	
+	<p>Just playing around: dfdfdf sdgfsdfsdf</p>
+<ul>
+<li><a href="https://projects.verou.me/css3patterns/#cross">CSS3 Patterns Gallery</a></li>
+<li><a href="https://css-tricks.com/moving-backgrounds-with-mouse-position/">Moving Backgrounds With Mouse Position | CSS-Tricks</a></li>
+</ul>
+
 
 </section>
 		<footer class="play-modal-footer">
@@ -242,6 +303,21 @@ function gotImage(error, result) {
 		
 	</article>
 </div>
+
+
+<script src="https://www.nonlinear.nyc/js/revealjs/reveal.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/notes/notes.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/markdown/markdown.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/highlight/highlight.js"></script>
+<script>
+	Reveal.initialize({
+		hash: true,
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
 
 </body>
 </html>

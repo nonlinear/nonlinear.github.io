@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+style-simple-cube 
 '>
 <head>
   <meta charset="UTF-8">
@@ -11,15 +11,6 @@ style-ml5-test
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -137,11 +128,6 @@ color: black;
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
-
-
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-
 
 
 
@@ -151,25 +137,35 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
 <script>
-	const bodypix = ml5.bodyPix(modelReady)
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
+const loader = new GLTFLoader();
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-</script>
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			const animate = function () {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
 
 
 
@@ -179,8 +175,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>simple cube</h1>
+		<h2>spin test</h2>
 	
 
 

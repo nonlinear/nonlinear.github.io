@@ -11,7 +11,10 @@
     <loc>https://www.nonlinear.nyc/</loc>
     <lastmod>2021-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/magazine/</loc>
+    <loc>https://www.nonlinear.nyc/play/magazine/</loc>
+    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.nonlinear.nyc/play/</loc>
     <lastmod>2021-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/angeltech/</loc>
@@ -47,31 +50,31 @@
     <loc>https://www.nonlinear.nyc/exercises/stretches/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/bodypix/</loc>
+    <loc>https://www.nonlinear.nyc/play/bodypix/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/revealjs-magazine/</loc>
+    <loc>https://www.nonlinear.nyc/play/revealjs-magazine/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/ml5-test/</loc>
+    <loc>https://www.nonlinear.nyc/play/ml5-test/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/mosaic/</loc>
+    <loc>https://www.nonlinear.nyc/play/mosaic/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/reveal/</loc>
+    <loc>https://www.nonlinear.nyc/play/reveal/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/reveal-test/</loc>
+    <loc>https://www.nonlinear.nyc/play/reveal-test/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/simple-cube/</loc>
+    <loc>https://www.nonlinear.nyc/play/simple-cube/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/spin-scroll-older/</loc>
+    <loc>https://www.nonlinear.nyc/play/spin-scroll-older/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/spin-scroll/</loc>
+    <loc>https://www.nonlinear.nyc/play/spin-scroll/</loc>
     <lastmod>2021-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/zendegi/</loc>
@@ -83,7 +86,7 @@
     <loc>https://www.nonlinear.nyc/books/cerebro/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/credits/</loc>
+    <loc>https://www.nonlinear.nyc/play/credits/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/schilds-ladder/</loc>
@@ -92,7 +95,7 @@
     <loc>https://www.nonlinear.nyc/books/supersizing/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://www.nonlinear.nyc/hello-world/</loc>
+    <loc>https://www.nonlinear.nyc/play/hello-world/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
     <loc>https://www.nonlinear.nyc/books/dispossessed/</loc>

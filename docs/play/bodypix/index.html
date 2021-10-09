@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+style-bodypix 
 '>
 <head>
   <meta charset="UTF-8">
@@ -11,15 +11,6 @@ style-ml5-test
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -133,7 +124,15 @@ color: black;
 </head>
 <body>
   
+ 
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
+
+
+
+<script src="https://www.nonlinear.nyc/js/modernizr.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/detectizr.js"></script>
 
 
 
@@ -151,23 +150,71 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
 <script>
-	const bodypix = ml5.bodyPix(modelReady)
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
+  let bodypix;
+  let segmentation;
+  let img;
+  let bodies = {confusing:8, fashion:28, guys:5};
+  let bodytype = "";
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
+  const options = {
+    multiplier: 0.75,
+    outputStride: 16, // 8, 16, or 32, default is 16
+    segmentationThreshold: 0.5, // 0 - 1, defaults to 0.5
+  };
+
+  // ../images/bodies(name)-(random ate o bodies #).jpg
+
+  function preload() {
+    bodytype = Object.keys(bodies)[floor(random(Object.keys(bodies).length))];
+    bodylength = ceil(random(bodies[bodytype]));
+    img = loadImage('../images/bodypix/' + bodytype + '-' + bodylength + '.jpg');
+
+    bodypix = ml5.bodyPix(options);
   }
-  // log the result
-  console.log(result.maskBackground);
-}
+
+  function setup() {
+    createCanvas(windowWidth, windowHeight);
+    createHSBPalette();
+    bodypix.segmentWithParts(img, gotResults, options);
+
+
+
+  }
+
+  function gotResults(err, result) {
+    if (err) {
+      console.log(err);
+      return
+    }
+
+    segmentation = result;
+
+    background(0);
+    image(segmentation.partMask, 0, 0, width, height);  
+       textSize(40);
+       fill(0,0,0);
+    text(bodytype, 20, 40);
+           textSize(20);
+    text("control+R to test another", 20, 65);
+
+
+  }
+
+  function createHSBPalette() {
+    colorMode(HSB);
+    options.palette = bodypix.config.palette;
+    Object.keys(options.palette).forEach(part => {
+      const h = floor(random(360));
+      const s = floor(random(100));
+      const b = floor(random(100));
+      const c = color(h, s, b);
+      options.palette[part].color = c;
+
+    });
+    console.log(options.palette);
+  }  
 
 </script>
 
@@ -179,8 +226,8 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
-		<h2></h2>
+				<h1>bodypix</h1>
+		<h2>testing bodypix <code>segmentation.partMask</code> feature</h2>
 	
 
 
@@ -204,7 +251,11 @@ function gotImage(error, result) {
 		</header>
 		
 <section class="play-modal-content">
-	
+	<p><a href="https://github.com/nonlinear/play/tree/master/static/images/bodypix">assorted images</a> (fashion, body, confusing) and <a href="https://github.com/nonlinear/play/tree/master/static/images/bodypix/patterns">assorted patterns</a> to check how far <code>partMask</code> goes.</p>
+<ul>
+<li><a href="https://learn.ml5js.org/#/reference/bodypix?id=parameters">view complete list of parts</a> - review <a href="https://p5js.org/reference/#/p5/blendMode">blend modes</a> on p5js - Some images are too large for WebGL to parse. It may be a browser or system limit, better to investigate.</li>
+</ul>
+
 
 </section>
 		<footer class="play-modal-footer">

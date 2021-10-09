@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-ml5-test 
+style-reveal-test 
 '>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/reveal.css">
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+  
+    
+  
+  <link rel="stylesheet" href="https://www.nonlinear.nyc/css/revealjs/theme/black.css" id="theme">
+  
+    
+    
+     
+    
+    
+    
+    
+    
+    
+  		    
+    
+
   <link rel="manifest" href="https://www.nonlinear.nyc/manifest.json">
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -133,14 +144,17 @@ color: black;
 </head>
 <body>
   
+ 
+<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
+<script src="https://www.nonlinear.nyc/js/modernizr.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/detectizr.js"></script>
 
 
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
 
 
@@ -151,26 +165,47 @@ color: black;
 
 
   
-<h1>Testing this thingsss</h1>
-<script>
-	const bodypix = ml5.bodyPix(modelReady)
+  <div class="reveal">
+   <div class="slides">
+    		<section>
+			<h2>Barebones Presentation</h2>
+			<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+		</section>
 
-function modelReady() {
-  // segment the image given
-  bodypix.segment(img, gotResults)
-}
+		<section>
+			<h2>No Theme</h2>
+			<p>There's no theme included, so it will fall back on browser defaults.</p>
+		</section>
+				<section>
+			<h2>Barebones Presentation</h2>
+			<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+		</section>
 
-function gotImage(error, result) {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  // log the result
-  console.log(result.maskBackground);
-}
+		<section>
+			<h2>No Theme</h2>
+			<p>There's no theme included, so it will fall back on browser defaults.</p>
+		</section>
+				<section>
+			<h2>Barebones Presentation</h2>
+			<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+		</section>
 
-</script>
+		<section>
+			<h2>No Theme</h2>
+			<p>There's no theme included, so it will fall back on browser defaults.</p>
+		</section>
+				<section>
+			<h2>Barebones Presentation</h2>
+			<p>This example contains the bare minimum includes and markup required to run a reveal.js presentation.</p>
+		</section>
 
+		<section>
+			<h2>No Theme</h2>
+			<p>There's no theme included, so it will fall back on browser defaults.</p>
+		</section>
+  </div>
+</div>
+  
 
 
 <a class="credits-trigger" href="#credits"></a>
@@ -179,7 +214,7 @@ function gotImage(error, result) {
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>ML5 testing</h1>
+				<h1>Reveal Js</h1>
 		<h2></h2>
 	
 
@@ -242,6 +277,21 @@ function gotImage(error, result) {
 		
 	</article>
 </div>
+
+
+<script src="https://www.nonlinear.nyc/js/revealjs/reveal.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/notes/notes.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/markdown/markdown.js"></script>
+
+<script src="https://www.nonlinear.nyc/js/revealjs/plugin/highlight/highlight.js"></script>
+<script>
+	Reveal.initialize({
+		hash: true,
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
 
 </body>
 </html>
