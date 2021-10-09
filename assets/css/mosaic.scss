@@ -1,0 +1,53 @@
+.play-mosaic {
+	--color-1: darkred;
+	--color-2: #fbc2eb;
+	--size-1: 50px;
+	--size-2: 25px;
+	--magazine-color-1: var(--color-1);
+	.reveal-viewport {
+		background-color: #999;
+	}
+	section {
+		padding-top: 100px;
+		h1, h2 {
+			color: white;
+			background-color: var(--color-1);
+			text-transform: uppercase;
+			padding: 20px 20px 5px 30px;
+			display: inline-block;
+			margin: 0;
+		}
+		h1 {
+			font-size: 400%;
+			@include fadeInLeft($delay: $delay * 2);
+		}
+		h2 {
+			font-size: 200%;
+			@include fadeInLeft($delay: $delay * 4);
+			margin-top: -15px;
+		}
+		&.cross, &.cross-2 {
+			background:
+			radial-gradient(circle, transparent 20%, var(--color-2) 20%, var(--color-2) 80%, transparent 80%, transparent),
+			radial-gradient(circle, transparent 20%, var(--color-2) 20%, var(--color-2) 80%, transparent 80%, transparent) 50px 50px,
+			linear-gradient(var(--color-1) 8px, transparent 8px) 0 -4px,
+			linear-gradient(90deg, var(--color-1) 8px, transparent 8px) -4px 0;
+			background-color: var(--color-2);
+			background-size:var(--size-1) var(--size-1), var(--size-1) var(--size-1), var(--size-2) var(--size-2), var(--size-2) var(--size-2);
+
+			
+		}
+		&.lines {
+			background:
+			radial-gradient(var(--color-1) 3px, transparent 4px),
+			radial-gradient(var(--color-1) 3px, transparent 4px),
+			linear-gradient(#fff 4px, transparent 0),
+			linear-gradient(45deg, transparent 74px, transparent 75px, var(--color-1) 75px, var(--color-1) 76px, transparent 77px, transparent 109px),
+			linear-gradient(-45deg, transparent 75px, transparent 76px, var(--color-1) 76px, var(--color-1) 77px, transparent 78px, var(--color-2) 109px),
+			#fff;
+			background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+			background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+			
+		}
+	}
+}

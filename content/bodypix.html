@@ -1,0 +1,79 @@
+---
+title: bodypix
+play: style, modernizr, ml5js, p5js
+description: testing bodypix `segmentation.partMask` feature
+date: 2021-03-10
+about: "[assorted images](https://github.com/nonlinear/play/tree/master/static/images/bodypix) (fashion, body, confusing) and [assorted patterns](https://github.com/nonlinear/play/tree/master/static/images/bodypix/patterns) to check how far `partMask` goes.
+
+- [view complete list of parts](https://learn.ml5js.org/#/reference/bodypix?id=parameters)
+- review [blend modes](https://p5js.org/reference/#/p5/blendMode) on p5js
+- Some images are too large for WebGL to parse. It may be a browser or system limit, better to investigate.
+"
+---
+<script>
+
+  let bodypix;
+  let segmentation;
+  let img;
+  let bodies = {confusing:8, fashion:28, guys:5};
+  let bodytype = "";
+
+  const options = {
+    multiplier: 0.75,
+    outputStride: 16, // 8, 16, or 32, default is 16
+    segmentationThreshold: 0.5, // 0 - 1, defaults to 0.5
+  };
+
+  // ../images/bodies(name)-(random ate o bodies #).jpg
+
+  function preload() {
+    bodytype = Object.keys(bodies)[floor(random(Object.keys(bodies).length))];
+    bodylength = ceil(random(bodies[bodytype]));
+    img = loadImage('../images/bodypix/' + bodytype + '-' + bodylength + '.jpg');
+
+    bodypix = ml5.bodyPix(options);
+  }
+
+  function setup() {
+    createCanvas(windowWidth, windowHeight);
+    createHSBPalette();
+    bodypix.segmentWithParts(img, gotResults, options);
+
+
+
+  }
+
+  function gotResults(err, result) {
+    if (err) {
+      console.log(err);
+      return
+    }
+
+    segmentation = result;
+
+    background(0);
+    image(segmentation.partMask, 0, 0, width, height);  
+       textSize(40);
+       fill(0,0,0);
+    text(bodytype, 20, 40);
+           textSize(20);
+    text("control+R to test another", 20, 65);
+
+
+  }
+
+  function createHSBPalette() {
+    colorMode(HSB);
+    options.palette = bodypix.config.palette;
+    Object.keys(options.palette).forEach(part => {
+      const h = floor(random(360));
+      const s = floor(random(100));
+      const b = floor(random(100));
+      const c = color(h, s, b);
+      options.palette[part].color = c;
+
+    });
+    console.log(options.palette);
+  }  
+
+</script>

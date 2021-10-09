@@ -1,0 +1,24 @@
+---
+title: ML5 testing
+play: ml5js, p5js, no-text-select, style
+date: 2021-03-10
+---
+<h1>Testing this thingsss</h1>
+<script>
+	const bodypix = ml5.bodyPix(modelReady)
+
+function modelReady() {
+  // segment the image given
+  bodypix.segment(img, gotResults)
+}
+
+function gotImage(error, result) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+  // log the result
+  console.log(result.maskBackground);
+}
+
+</script>

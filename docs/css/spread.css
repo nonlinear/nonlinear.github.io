@@ -22,7 +22,6 @@
 }
 
 .spread > section {
-
     scroll-snap-align: start;
     flex-shrink: 0;
     height: var(--spread);

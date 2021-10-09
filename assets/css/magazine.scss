@@ -1,0 +1,65 @@
+// magazine hack, disregard
+
+:root {
+	--magazine-ratio: 500px;
+	--magazine-radius: 4px;
+	--magazine-color-1: #666;
+	--magazine-color-2: #eee;
+	--magazine-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.magazine { // this is just to test, we'll get rid of it later
+// refer to nonlinear.nyc/tile
+
+.reveal {
+
+	.slides {
+		overflow: hidden;
+		box-shadow: var(--magazine-shadow);
+		border-radius: var(--magazine-radius);
+		width: var(--magazine-ratio) !important;
+		background-color: white;
+		section {
+			height: 100%;
+		}
+	}
+
+
+
+	.roll span:after {
+		color: #fff;
+		background: #00003f;
+	}
+
+	.r-frame {
+		border: 4px solid #000;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	}
+
+	a {
+		.r-frame {
+			transition: all .15s linear;
+		}
+
+		&:hover .r-frame {
+			border-color: #00008B;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+		}
+	}
+
+	.controls {
+		color: var(--magazine-color-1);
+
+	}
+
+	.progress {
+		background: var(--magazine-color-2);
+		span {
+			background-color: var(--magazine-color-1);
+		}
+
+	}
+}
+
+}
