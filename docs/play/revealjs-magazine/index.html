@@ -228,6 +228,8 @@ color: black;
 </div>
   
 
+ 
+
 
 <a class="credits-trigger" href="#credits"></a>
 
@@ -322,6 +324,7 @@ dfdffg</p>
 </script>
 
 
+
 <script src="https://www.nonlinear.nyc/js/gsap.js"></script>
 
 <script src="https://www.nonlinear.nyc/js/sketch.js"></script>
@@ -334,7 +337,16 @@ dfdffg</p>
           var intervalId = window.setInterval(function(){
             sketch.next()
           }, 5000);
-
-        </script>
+</script>
+<style>
+  #content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+</style>
 </body>
 </html>

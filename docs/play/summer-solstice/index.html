@@ -11,15 +11,6 @@ style-summer-solstice
   <title>Nicholas Frota</title>
   <style>
     
-    
-        * {
-      -webkit-touch-callout: none;  
-      -webkit-user-select: none;  
-      -khtml-user-select: none;  
-      -moz-user-select: none;  
-      -ms-user-select: none;  
-      user-select: none;  
-}
      
 
 
@@ -133,26 +124,12 @@ color: black;
 </head>
 <body>
   
- 
-<script src="https://www.nonlinear.nyc/js/jquery.min.js"></script>
 
 
 
 
 
-<script src="https://www.nonlinear.nyc/js/p5.min.js"></script>
 
-
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-
-
-
-
-<script>
-  document.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-  });
-</script>
 
 
 
@@ -161,13 +138,14 @@ color: black;
 
   
 
-<div class="slide-cover"></div>
 
 
-<div class="container"><h1>aaa</h1>
+<div class="container">
+	<h1>aaa</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe quidem magni quos eveniet quaerat, id, blanditiis eligendi ut? Placeat accusamus vero, est consectetur, provident commodi. Aliquam quia facere eveniet, eligendi?</p>
 <p>Consectetur iste temporibus eligendi totam corrupti impedit, soluta excepturi, deleniti beatae. Error omnis, autem sapiente tempore maiores amet voluptatem, obcaecati fugiat ex beatae enim impedit, vitae, ab suscipit cum dignissimos!</p>
-<p>Eum dicta ex totam deleniti, placeat labore ab iusto! Illum repellendus sapiente, similique earum asperiores quod. Excepturi, quasi nobis. Quos, eius, cupiditate aperiam repellendus quisquam odit quo et delectus aut.</p></div>
+<p>Eum dicta ex totam deleniti, placeat labore ab iusto! Illum repellendus sapiente, similique earum asperiores quod. Excepturi, quasi nobis. Quos, eius, cupiditate aperiam repellendus quisquam odit quo et delectus aut.</p>
+</div>
 
 	<div id="content">
 <div id="slider" data-images='[
@@ -178,7 +156,10 @@ color: black;
 "/images/summer-solstice/05.png"
         ]'>
 </div>
+</div>
 
+
+ 
 
 
 <a class="credits-trigger" href="#credits"></a>
@@ -252,6 +233,7 @@ color: black;
 </div>
 
 
+
 <script src="https://www.nonlinear.nyc/js/gsap.js"></script>
 
 <script src="https://www.nonlinear.nyc/js/sketch.js"></script>
@@ -264,7 +246,16 @@ color: black;
           var intervalId = window.setInterval(function(){
             sketch.next()
           }, 5000);
-
-        </script>
+</script>
+<style>
+  #content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+</style>
 </body>
 </html>
