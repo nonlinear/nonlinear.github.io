@@ -117,6 +117,17 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
     </item>
     
     <item>
+      <title>Summer Solstice</title>
+      <link>https://www.nonlinear.nyc/play/summer-solstice/</link>
+      <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
+      
+      <guid>https://www.nonlinear.nyc/play/summer-solstice/</guid>
+      <description>aaa Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe quidem magni quos eveniet quaerat, id, blanditiis eligendi ut? Placeat accusamus vero, est consectetur, provident commodi. Aliquam quia facere eveniet, eligendi?
+Consectetur iste temporibus eligendi totam corrupti impedit, soluta excepturi, deleniti beatae. Error omnis, autem sapiente tempore maiores amet voluptatem, obcaecati fugiat ex beatae enim impedit, vitae, ab suscipit cum dignissimos!
+Eum dicta ex totam deleniti, placeat labore ab iusto!</description>
+    </item>
+    
+    <item>
       <title>Testing hugo features</title>
       <link>https://www.nonlinear.nyc/play/hello-world/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>

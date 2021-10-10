@@ -69,5 +69,21 @@
 </div> -->
 </div>
 {{ partial "scripts.html" . }} 
+
+{{ $gsap := resources.Get "js/gsap.js" }}
+<script src="{{ $gsap.Permalink }}"></script>
+{{ $sketch := resources.Get "js/sketch.js" }}
+<script src="{{ $sketch.Permalink }}"></script>
+{{ $three := resources.Get "js/three.js" }}
+<script src="{{ $three.Permalink }}"></script>
+{{ $demo2 := resources.Get "js/demo2.js" }}
+<script src="{{ $demo2.Permalink }}"></script>
+
+<script>
+          var intervalId = window.setInterval(function(){
+            sketch.next()
+          }, 5000);
+
+        </script>
 </body>
 </html>
