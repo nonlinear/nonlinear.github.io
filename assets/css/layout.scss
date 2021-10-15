@@ -250,11 +250,16 @@ header.header {
 
 .style-bg-slideshow,
 .style-bg-video-youtube {
+
 	.container {
 	margin-top: 60px;
+		color: black;
+		a {
+			color: black;
+		}
 	padding: 40px;
 	width: 450px;
-	background-color: rgba(white, .3);
+	background-color: rgba(white, .6);
 
 }
 }

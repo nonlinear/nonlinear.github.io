@@ -15175,9 +15175,13 @@ header.header .date {
 
 .style-bg-slideshow .container, .style-bg-video-youtube .container {
   margin-top: 60px;
+  color: black;
   padding: 40px;
   width: 450px;
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.style-bg-slideshow .container a, .style-bg-video-youtube .container a {
+  color: black; }
 
 a[data-toggle="popover"] {
   cursor: pointer; }
@@ -15393,5 +15397,32 @@ a[data-toggle="popover"]:after {
   background: radial-gradient(var(--color-1) 3px, transparent 4px), radial-gradient(var(--color-1) 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, var(--color-1) 75px, var(--color-1) 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, var(--color-1) 76px, var(--color-1) 77px, transparent 78px, var(--color-2) 109px), #fff;
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; }
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99; }
+
+.video-foreground, .video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; }
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%; } }
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%; } }
 
 /*# sourceMappingURL=main.css.map */
