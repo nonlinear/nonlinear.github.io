@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-spin-scroll 
+style-bg-video 
 '>
 <head>
   <meta charset="UTF-8">
@@ -138,115 +138,11 @@ style-spin-scroll
 
 
   
-<script type="module">
+<div class="container">
+	<h1>Background Video, Vimeo</h1>
+<p>automating a <a href="https://codepen.io/JenyaNem/pen/abveJgp">codepen</a> for quick bg effects. adding documentation for <a href="https://praxis.nyc/play">praxis / play</a>.</p>
+</div>
 
-      import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
-
-      import { OrbitControls } from '/play/three-example/OrbitControls.js';
-      import { GLTFLoader } from '/play/three-example/GLTFLoader.js';
-      import { RGBELoader } from '/play/three-example/RGBELoader.js';
-      import { RoughnessMipmapper } from '/play/three-example/RoughnessMipmapper.js';
-
-      let camera, scene, renderer;
-
-      init();
-      render();
-
-      function init() {
-
-        const container = document.createElement( 'div' );
-        document.body.appendChild( container );
-
-        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
-        camera.position.set( - 1.8, 0.6, 2.7 );
-
-        scene = new THREE.Scene();
-
-        new RGBELoader()
-          .setDataType( THREE.UnsignedByteType )
-          .setPath( 'textures/equirectangular/' )
-          .load( 'royal_esplanade_1k.hdr', function ( texture ) {
-
-            const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
-
-            scene.background = envMap;
-            scene.environment = envMap;
-
-            texture.dispose();
-            pmremGenerator.dispose();
-
-            render();
-
-            // model
-
-            // use of RoughnessMipmapper is optional
-            const roughnessMipmapper = new RoughnessMipmapper( renderer );
-
-            const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
-            loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
-
-              gltf.scene.traverse( function ( child ) {
-
-                if ( child.isMesh ) {
-
-                  roughnessMipmapper.generateMipmaps( child.material );
-
-                }
-
-              } );
-
-              scene.add( gltf.scene );
-
-              roughnessMipmapper.dispose();
-
-              render();
-
-            } );
-
-          } );
-
-        renderer = new THREE.WebGLRenderer( { antialias: true } );
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1;
-        renderer.outputEncoding = THREE.sRGBEncoding;
-        container.appendChild( renderer.domElement );
-
-        const pmremGenerator = new THREE.PMREMGenerator( renderer );
-        pmremGenerator.compileEquirectangularShader();
-
-        const controls = new OrbitControls( camera, renderer.domElement );
-        controls.addEventListener( 'change', render ); // use if there is no animation loop
-        controls.minDistance = 2;
-        controls.maxDistance = 10;
-        controls.target.set( 0, 0, - 0.2 );
-        controls.update();
-
-        window.addEventListener( 'resize', onWindowResize );
-
-      }
-
-      function onWindowResize() {
-
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize( window.innerWidth, window.innerHeight );
-
-        render();
-
-      }
-
-      //
-
-      function render() {
-
-        renderer.render( scene, camera );
-
-      }
-
-    </script>
 
 
  
@@ -258,8 +154,8 @@ style-spin-scroll
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>spin scroll</h1>
-		<h2>spin test</h2>
+				<h1>Background Video, Youtube</h1>
+		<h2>stuff here</h2>
 	
 
 
@@ -331,7 +227,49 @@ style-spin-scroll
 
 
 
+<style>
+  .video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
 
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+</style>
+
+
+
+<div class="video-background">
+  <div class="video-foreground">
+    <iframe src="
+https://player.vimeo.com/video/45878034?background=1&autoplay=1&loop=1&autopause=0" frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 
 
