@@ -15183,6 +15183,13 @@ header.header .date {
 .style-bg-slideshow .container a, .style-bg-video .container a {
   color: black; }
 
+.style-bg-video .container {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.style-bg-video .container a {
+  color: white; }
+
 a[data-toggle="popover"] {
   cursor: pointer; }
 
