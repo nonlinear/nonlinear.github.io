@@ -1,0 +1,35 @@
+
+:root {
+	--width: 1200px;
+	--gap: 15px;
+	--gap-2: 30px;
+	--color-fg: black;
+	--color-bg: white;
+}
+
+.rex-modal {
+	max-width: var(--width) !important;
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+	margin: var(--gap-2) auto;
+	padding: var(--gap-2);
+	@include radius(var(--gap));
+	section.author {
+		padding: var(--gap);
+		display: grid;
+		grid-gap: var(--gap-2);
+		grid-template-columns: 1fr 4fr;
+		&:nth-of-type(2n) {
+			background-color: #eee;
+		}
+		.roles {
+			display: grid;
+			grid-gap: var(--gap-2);
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		.role {
+			display: block;
+		}
+	}
+}
+

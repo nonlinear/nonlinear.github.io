@@ -19,3 +19,30 @@ $container: 700px;
 $delay: 300ms;
 
 
+
+.center {
+     --card-width: 300px;
+    --card-height: 200px;
+  position: absolute;
+  width: var(--card-width);
+  height: var(--card-height);
+  top: 50%;
+  left: 50%;
+  margin: calc(-0.5 * var(--card-height)) 0 0 calc(-0.5 * var(--card-width));
+}
+.mockup {
+    --mockup-image: url(/images/mockups/bubble-wrap-2.png);
+    &:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+   transition: all 300ms ease-out;
+    mix-blend-mode: screen;
+    content: "";
+    position: absolute;
+    background-image: var(--mockup-image);
+    background-size: cover;
+  }
+}
