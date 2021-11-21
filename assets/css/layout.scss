@@ -282,12 +282,11 @@ header.header {
 	padding: $gap2;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	@extend .center;
 	--card-width: 500px;
 	--card-height: 600px;
+	@extend .center;
+	--mockup-image: url(/images/mockups/sleeve-with-reflection.png);
 	@extend .mockup;
-	&:hover:before {
-			opacity: .5;
-		}
+
 
 }
