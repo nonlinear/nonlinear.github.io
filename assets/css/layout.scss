@@ -299,7 +299,7 @@ header.header {
 	}
 	.style-mockup-2 & {
 		--mockup-image: url(/images/mockups/film-sheet-7.png);
-			&:before {
+		&:before {
 			@include opacity(60);
 		}
 	}
@@ -318,14 +318,88 @@ header.header {
 }
 
 .style-grainy {
+
 	.center-card {
-	--center-card-width: 400px;
-    --center-card-height: 600px;
-		@include find(red);
+
+		--center-card-width: 400px;
+		--center-card-height: 600px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-gap: $gap;
 		div {
-			@include find(red);
+			$first-color: red;
+			$second-color: white;
+			&:after {
+				content: "xxx";
+				color: black;
+				padding: 5px;
+			}
+			&:nth-of-type(1) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  linear-gradient(15deg, $first-color, rgba($first-color,0)),
+					url(/images/svg-filters/grainy-01.svg), 
+					$second-color;
+					&:after {
+						content: "grainy filter";
+					}
+				
+			}
+			&:nth-of-type(2) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  radial-gradient($first-color 10%, rgba($first-color,0) 80%),
+					url(/images/svg-filters/grainy-01.svg), 
+					$second-color;
+					&:after {
+						content: "grainy filter, radial";
+					}
+				
+			}
+			&:nth-of-type(3) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  radial-gradient($first-color, rgba($first-color,0)),
+					url(/images/svg-filters/moon.svg), 
+					$second-color;
+					&:after {
+						content: "moon filter";
+					}
+				
+			}
+			&:nth-of-type(4) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  radial-gradient($first-color, rgba($first-color,0)),
+					url(/images/svg-filters/watery.svg), 
+					$second-color;
+					&:after {
+						content: "watery filter";
+					}
+				
+			}
+			&:nth-of-type(5) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  radial-gradient($first-color, rgba($first-color,0)),
+					url(/images/svg-filters/grainy-01.svg), 
+					$second-color;
+					&:after {
+						content: "label";
+					}
+				
+			}
+			&:nth-of-type(6) {
+			
+					filter: contrast(170%) brightness(300%);
+					background:  radial-gradient($first-color, rgba($first-color,0)),
+					url(/images/svg-filters/grainy-01.svg), 
+					$second-color;
+					&:after {
+						content: "label";
+					}
+				
+			}
 		}
 	}
 }
