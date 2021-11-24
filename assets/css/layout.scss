@@ -299,6 +299,9 @@ header.header {
 	}
 	.style-mockup-2 & {
 		--mockup-image: url(/images/mockups/film-sheet-7.png);
+			&:before {
+			@include opacity(60);
+		}
 	}
 	.style-mockup-3 & {
 		--mockup-image: url(/images/mockups/crinkled-pouch-open-top.png);
