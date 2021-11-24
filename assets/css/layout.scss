@@ -277,6 +277,14 @@ header.header {
 	}
 }
 
+.reveal {
+	@include find(red);
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
 
 .bubble {
 	padding: $gap2;
@@ -287,6 +295,9 @@ header.header {
 	@extend .center;
 	--mockup-image: url(/images/mockups/sleeve-with-reflection.png);
 	@extend .mockup;
-
+a.btn-primary:hover {
+	@include find(red);
+		--mockup-image: url(/images/mockups/film-sheet-2.png);
+}
 
 }

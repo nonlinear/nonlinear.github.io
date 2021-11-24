@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class='
-style-simple-cube 
+style-mockup-examples 
 '>
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,16 @@ style-simple-cube
   
 
   
-   
+  
+  * {
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none;  
+    -khtml-user-select: none;  
+    -moz-user-select: none;  
+    -ms-user-select: none;  
+      user-select: none;  
+    }
+     
 
 
     a.credits-trigger {
@@ -123,10 +132,20 @@ style-simple-cube
   <link rel="stylesheet" href="https://nonlinear.github.io/css/main.daa6ab4fe3c9492e63a6031baa7ec5e15294245385e0e2584fc970eca9955aa4.css">
   
   
+  <link rel="stylesheet" href="https://nonlinear.github.io//css/spread.css">
+  
 </head>
 <body>
   
+ 
+<script src="https://nonlinear.github.io/js/jquery.min.js"></script>
 
+
+
+
+<script src="https://nonlinear.github.io/js/modernizr.js"></script>
+
+<script src="https://nonlinear.github.io/js/detectizr.js"></script>
 
 
 
@@ -138,36 +157,43 @@ style-simple-cube
 
 
   
-<script>
+<div class="spread">
+    <section>
+	<h2>Scroll test</h2>scroll here</p>
+	<div class="spin-scroll vertical">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+	<div class="spin-scroll horizontal">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+</section>
+<section>
+	<h1>h1 test</h1>
+	<h2>h2 test</h2>
+	<h3>h3 test</h3>
+	<p>paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?</p>
+</section>
+<section>
+	<h2>Image</h2>
+	<p class="pending">Images of different sizes here</p>
+</section>
+<section>
+	<h2>Background</h2>
+	<p class="pending">backgrounds of different types here</p>
+</section>
+<section>
+	<h2>SVG test</h2>
+	<p class="pending">embedded, img, with css stuff on it</p>
+</section>
 
 
-const loader = new GLTFLoader();
-			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			const geometry = new THREE.BoxGeometry();
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-			camera.position.z = 5;
-
-			const animate = function () {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
-
+</div>
+ 
 
  
 
@@ -178,8 +204,8 @@ const loader = new GLTFLoader();
 	<article class="play-modal-body">
 		<header class="play-modal-header">
 			<div>
-				<h1>simple cube</h1>
-		<h2>spin test</h2>
+				<h1>Magazine</h1>
+		<h2>testing CSS-only magazine</h2>
 	
 
 

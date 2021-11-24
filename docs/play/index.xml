@@ -2,48 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plays on Nicholas Frota</title>
-    <link>https://www.nonlinear.nyc/play/</link>
+    <link>https://nonlinear.github.io/play/</link>
     <description>Recent content in Plays on Nicholas Frota</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nonlinear.nyc/play/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nonlinear.github.io/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bubble Wrap</title>
-      <link>https://www.nonlinear.nyc/play/bubble-wrap/</link>
+      <link>https://nonlinear.github.io/play/bubble-wrap/</link>
       <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bubble-wrap/</guid>
+      <guid>https://nonlinear.github.io/play/bubble-wrap/</guid>
       <description> test Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde!
 xxx </description>
     </item>
     
     <item>
       <title>Mockups</title>
-      <link>https://www.nonlinear.nyc/play/mockups/</link>
+      <link>https://nonlinear.github.io/play/mockups/</link>
       <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/mockups/</guid>
+      <guid>https://nonlinear.github.io/play/mockups/</guid>
       <description> Mockups example of mockups Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Neque minima laudantium adipisci maxime beatae quas quo maiores facere ipsam deserunt!
 Eveniet quia doloremque consectetur eum numquam saepe similique. Ipsa eos nemo rem vitae dolorum neque quaerat nesciunt laborum consectetur aliquam.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde!
-button example another button example </description>
+example 1 example 2 example 3 example 4 </description>
     </item>
     
     <item>
       <title>Rex Modal</title>
-      <link>https://www.nonlinear.nyc/play/rex-modal/</link>
+      <link>https://nonlinear.github.io/play/rex-modal/</link>
       <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/rex-modal/</guid>
+      <guid>https://nonlinear.github.io/play/rex-modal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Magazine</title>
-      <link>https://www.nonlinear.nyc/play/magazine/</link>
+      <link>https://nonlinear.github.io/play/magazine/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/magazine/</guid>
+      <guid>https://nonlinear.github.io/play/magazine/</guid>
+      <description>Scroll testscroll here
+      h1 test h2 test h3 test paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
+  Image Images of different sizes here
+  Background backgrounds of different types here
+  SVG test embedded, img, with css stuff on it</description>
+    </item>
+    
+    <item>
+      <title>Magazine</title>
+      <link>https://nonlinear.github.io/play/mockup-examples/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nonlinear.github.io/play/mockup-examples/</guid>
       <description>Scroll testscroll here
       h1 test h2 test h3 test paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
@@ -54,19 +68,19 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
     
     <item>
       <title>bodypix</title>
-      <link>https://www.nonlinear.nyc/play/bodypix/</link>
+      <link>https://nonlinear.github.io/play/bodypix/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bodypix/</guid>
+      <guid>https://nonlinear.github.io/play/bodypix/</guid>
       <description>let bodypix; let segmentation; let img; let bodies = {confusing:8, fashion:28, guys:5}; let bodytype = &#34;&#34;; const options = { multiplier: 0.75, outputStride: 16, // 8, 16, or 32, default is 16 segmentationThreshold: 0.5, // 0 - 1, defaults to 0.5 }; // ../images/bodies(name)-(random ate o bodies #).jpg function preload() { bodytype = Object.keys(bodies)[floor(random(Object.keys(bodies).length))]; bodylength = ceil(random(bodies[bodytype])); img = loadImage(&#39;../images/bodypix/&#39; + bodytype + &#39;-&#39; + bodylength + &#39;.jpg&#39;); bodypix = ml5.</description>
     </item>
     
     <item>
       <title>Magazine test</title>
-      <link>https://www.nonlinear.nyc/play/revealjs-magazine/</link>
+      <link>https://nonlinear.github.io/play/revealjs-magazine/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/revealjs-magazine/</guid>
+      <guid>https://nonlinear.github.io/play/revealjs-magazine/</guid>
       <description>:root { --magazine-ratio: 500px; --magazine-radius: 0px; --magazine-color-1: #666; --magazine-color-2: #eee; --magazine-shadow: 5px 5px 0px rgba(0, 0, 0, 0.06); } .reveal-viewport { background-color: #ccc; }   Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
   No Theme There&#39;s no theme included, so it will fall back on browser defaults.
  Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.</description>
@@ -74,37 +88,37 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
     
     <item>
       <title>ML5 testing</title>
-      <link>https://www.nonlinear.nyc/play/ml5-test/</link>
+      <link>https://nonlinear.github.io/play/ml5-test/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/ml5-test/</guid>
+      <guid>https://nonlinear.github.io/play/ml5-test/</guid>
       <description>Testing this thingsss  const bodypix = ml5.bodyPix(modelReady) function modelReady() { // segment the image given bodypix.segment(img, gotResults) } function gotImage(error, result) { if (error) { console.log(error); return; } // log the result console.log(result.maskBackground); } </description>
     </item>
     
     <item>
       <title>Mosaic</title>
-      <link>https://www.nonlinear.nyc/play/mosaic/</link>
+      <link>https://nonlinear.github.io/play/mosaic/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/mosaic/</guid>
+      <guid>https://nonlinear.github.io/play/mosaic/</guid>
       <description>Mosaic  Mosaic 2  cross lines   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolore, tempora voluptatibus repellat aliquam quasi iste praesentium, exercitationem aspernatur quos sed eius autem, suscipit id, soluta ipsum nulla. Tenetur, reiciendis.   Quo necessitatibus magni, fuga aliquid fugiat possimus debitis dolore ut perspiciatis, maxime quisquam laborum corporis harum natus, nesciunt officia optio. Expedita repellat, deserunt fugiat! Earum aspernatur explicabo aut quae voluptates.</description>
     </item>
     
     <item>
       <title>reveal</title>
-      <link>https://www.nonlinear.nyc/play/reveal/</link>
+      <link>https://nonlinear.github.io/play/reveal/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/reveal/</guid>
+      <guid>https://nonlinear.github.io/play/reveal/</guid>
       <description>.play-reveal section { background-color: red; margin: 0; } }   Example Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
       <title>Reveal Js</title>
-      <link>https://www.nonlinear.nyc/play/reveal-test/</link>
+      <link>https://nonlinear.github.io/play/reveal-test/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/reveal-test/</guid>
+      <guid>https://nonlinear.github.io/play/reveal-test/</guid>
       <description>Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
   No Theme There&#39;s no theme included, so it will fall back on browser defaults.
   Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
@@ -113,66 +127,66 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
     
     <item>
       <title>simple cube</title>
-      <link>https://www.nonlinear.nyc/play/simple-cube/</link>
+      <link>https://nonlinear.github.io/play/simple-cube/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/simple-cube/</guid>
+      <guid>https://nonlinear.github.io/play/simple-cube/</guid>
       <description>const loader = new GLTFLoader(); const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); const renderer = new THREE.WebGLRenderer(); renderer.setSize( window.innerWidth, window.innerHeight ); document.body.appendChild( renderer.domElement ); const geometry = new THREE.BoxGeometry(); const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); const cube = new THREE.Mesh( geometry, material ); scene.add( cube ); camera.position.z = 5; const animate = function () { requestAnimationFrame( animate ); cube.</description>
     </item>
     
     <item>
       <title>spin scroll</title>
-      <link>https://www.nonlinear.nyc/play/spin-scroll-older/</link>
+      <link>https://nonlinear.github.io/play/spin-scroll-older/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/spin-scroll-older/</guid>
+      <guid>https://nonlinear.github.io/play/spin-scroll-older/</guid>
       <description>let scene, camera, renderer; function init() { scene = new THREE.Scene(); scene.background = new THREE.Color(0xdddddd); camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000); camera.rotation.y = 45/180*Math.PI; camera.position.x = 800; camera.position.y = 100; camera.position.z = 1000; controls = new THREE.OrbitControls(camera, renderer.domElement); controls.addEventListener(&#39;change&#39;, renderer); hlight = new THREE.AmbientLight (0x404040,100); scene.add(hlight); directionalLight = new THREE.DirectionalLight(0xffffff,100); directionalLight.position.set(0,1,0); directionalLight.castShadow = true; scene.add(directionalLight); light = new THREE.PointLight(0xc4c4c4,10); light.position.set(0,300,500); scene.add(light); light2 = new THREE.PointLight(0xc4c4c4,10); light2.position.set(500,100,0); scene.add(light2); light3 = new THREE.PointLight(0xc4c4c4,10); light3.</description>
     </item>
     
     <item>
       <title>spin scroll</title>
-      <link>https://www.nonlinear.nyc/play/spin-scroll/</link>
+      <link>https://nonlinear.github.io/play/spin-scroll/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/spin-scroll/</guid>
+      <guid>https://nonlinear.github.io/play/spin-scroll/</guid>
       <description>import * as THREE from &#39;https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js&#39;; import { OrbitControls } from &#39;/play/three-example/OrbitControls.js&#39;; import { GLTFLoader } from &#39;/play/three-example/GLTFLoader.js&#39;; import { RGBELoader } from &#39;/play/three-example/RGBELoader.js&#39;; import { RoughnessMipmapper } from &#39;/play/three-example/RoughnessMipmapper.js&#39;; let camera, scene, renderer; init(); render(); function init() { const container = document.createElement( &#39;div&#39; ); document.body.appendChild( container ); camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 ); camera.position.set( - 1.8, 0.6, 2.7 ); scene = new THREE.Scene(); new RGBELoader() .</description>
     </item>
     
     <item>
       <title>Background Slideshow</title>
-      <link>https://www.nonlinear.nyc/play/bg-slideshow/</link>
+      <link>https://nonlinear.github.io/play/bg-slideshow/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bg-slideshow/</guid>
+      <guid>https://nonlinear.github.io/play/bg-slideshow/</guid>
       <description>Background slideshow automating some codrops example, for quick bg effects. adding documentation for praxis / play.
  </description>
     </item>
     
     <item>
       <title>Background Video</title>
-      <link>https://www.nonlinear.nyc/play/bg-video/</link>
+      <link>https://nonlinear.github.io/play/bg-video/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bg-video/</guid>
+      <guid>https://nonlinear.github.io/play/bg-video/</guid>
       <description>Background Video automating a codepen for quick bg effects. adding documentation for praxis / play.
  </description>
     </item>
     
     <item>
       <title>Playing with credits</title>
-      <link>https://www.nonlinear.nyc/play/credits/</link>
+      <link>https://nonlinear.github.io/play/credits/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/credits/</guid>
+      <guid>https://nonlinear.github.io/play/credits/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Testing hugo features</title>
-      <link>https://www.nonlinear.nyc/play/hello-world/</link>
+      <link>https://nonlinear.github.io/play/hello-world/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/hello-world/</guid>
+      <guid>https://nonlinear.github.io/play/hello-world/</guid>
       <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ut? Ipsum, quasi, dolorem. Omnis cupiditate cumque natus deleniti ex nulla obcaecati, consectetur ipsa, unde corrupti animi dicta odit maxime quod!
 Click to jump Ratione officiis in deleniti mollitia culpa dolorem, facere, quod laborum vero tempore magnam, porro. Tempora, nesciunt, recusandae dolorum suscipit natus reprehenderit minima excepturi rerum fugit molestias consequuntur dicta. Maxime, dolores.
 Tempore libero voluptates similique, laboriosam suscipit neque officia dicta maxime ab cupiditate quos rem velit aspernatur corporis adipisci sed laudantium.</description>

@@ -2,58 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nicholas Frota</title>
-    <link>https://www.nonlinear.nyc/</link>
+    <link>https://nonlinear.github.io/</link>
     <description>Recent content on Nicholas Frota</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nonlinear.nyc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nonlinear.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bubble Wrap</title>
-      <link>https://www.nonlinear.nyc/play/bubble-wrap/</link>
+      <link>https://nonlinear.github.io/play/bubble-wrap/</link>
       <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bubble-wrap/</guid>
+      <guid>https://nonlinear.github.io/play/bubble-wrap/</guid>
       <description> test Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde!
 xxx </description>
     </item>
     
     <item>
       <title>Mockups</title>
-      <link>https://www.nonlinear.nyc/play/mockups/</link>
+      <link>https://nonlinear.github.io/play/mockups/</link>
       <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/mockups/</guid>
+      <guid>https://nonlinear.github.io/play/mockups/</guid>
       <description> Mockups example of mockups Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Neque minima laudantium adipisci maxime beatae quas quo maiores facere ipsam deserunt!
 Eveniet quia doloremque consectetur eum numquam saepe similique. Ipsa eos nemo rem vitae dolorum neque quaerat nesciunt laborum consectetur aliquam.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, unde!
-button example another button example </description>
+example 1 example 2 example 3 example 4 </description>
     </item>
     
     <item>
       <title>Rex Modal</title>
-      <link>https://www.nonlinear.nyc/play/rex-modal/</link>
+      <link>https://nonlinear.github.io/play/rex-modal/</link>
       <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/rex-modal/</guid>
+      <guid>https://nonlinear.github.io/play/rex-modal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>De Quervain&#39;s Tenosynovitis Rehabilitation Exercises</title>
-      <link>https://www.nonlinear.nyc/exercises/wrist/</link>
+      <link>https://nonlinear.github.io/exercises/wrist/</link>
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/wrist/</guid>
+      <guid>https://nonlinear.github.io/exercises/wrist/</guid>
       <description>You may do all of these exercises when the initial pain is gone.
            Opposition stretch  Rest your hand on a table, palm up. Touch the tip of your thumb to the tip of your little finger. Hold this position for 6 seconds. Repeat 10 times.     Wrist stretch  With one hand, help to bend the opposite wrist down by pressing the to back of your hand and holding it down for 15 to 30 seconds.</description>
     </item>
     
     <item>
       <title>Magazine</title>
-      <link>https://www.nonlinear.nyc/play/magazine/</link>
+      <link>https://nonlinear.github.io/play/magazine/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/magazine/</guid>
+      <guid>https://nonlinear.github.io/play/magazine/</guid>
+      <description>Scroll testscroll here
+      h1 test h2 test h3 test paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
+  Image Images of different sizes here
+  Background backgrounds of different types here
+  SVG test embedded, img, with css stuff on it</description>
+    </item>
+    
+    <item>
+      <title>Magazine</title>
+      <link>https://nonlinear.github.io/play/mockup-examples/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nonlinear.github.io/play/mockup-examples/</guid>
       <description>Scroll testscroll here
       h1 test h2 test h3 test paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
@@ -64,10 +78,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?
     
     <item>
       <title>Angel Tech</title>
-      <link>https://www.nonlinear.nyc/books/angeltech/</link>
+      <link>https://nonlinear.github.io/books/angeltech/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/angeltech/</guid>
+      <guid>https://nonlinear.github.io/books/angeltech/</guid>
       <description>Angel Tech: Undoing Yourself with Energized Meditation and Other Devices
 by Antero Alli
 Read in Play Books around September 2014
@@ -77,101 +91,101 @@ Review
     
     <item>
       <title>ankle</title>
-      <link>https://www.nonlinear.nyc/exercises/ankle/</link>
+      <link>https://nonlinear.github.io/exercises/ankle/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/ankle/</guid>
+      <guid>https://nonlinear.github.io/exercises/ankle/</guid>
       <description>Circuit 1           1 Knee drive    2 Shin raise/Quad extension    3 Standing hip abductors    4 Cross lifts    5 Jumps     Circuit 2           1 Lying knee drive    2 Lying cross-in/out    3 Lying hamstring curls    4 Lying half burpee jumps     </description>
     </item>
     
     <item>
       <title>best abs exercises</title>
-      <link>https://www.nonlinear.nyc/exercises/best-abs/</link>
+      <link>https://nonlinear.github.io/exercises/best-abs/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/best-abs/</guid>
+      <guid>https://nonlinear.github.io/exercises/best-abs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rings basics</title>
-      <link>https://www.nonlinear.nyc/exercises/ring-basics/</link>
+      <link>https://nonlinear.github.io/exercises/ring-basics/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/ring-basics/</guid>
+      <guid>https://nonlinear.github.io/exercises/ring-basics/</guid>
       <description>1. Rings Plank 3-5 sets, goal is 60s hold  Pointed toes Full body tension Round upper back Protacted shoulders Locked elbows Turned out rings   2. Push-ups 3-5 sets, goal is 10 reps  Start in previous plank position Keep elbows tucked in Maintain protraction Full range of motion Lock the elbows on the top and externally rotate the rings   3. Hinge rows 3-5 sets, goal is 10 reps  Straight body in bottom position Lower body stays still and movement comes from upper body Retract the shoulder at the top Hold for a short second on top and retract the shoulder blades   4.</description>
     </item>
     
     <item>
       <title>rings progression</title>
-      <link>https://www.nonlinear.nyc/exercises/rings-progression/</link>
+      <link>https://nonlinear.github.io/exercises/rings-progression/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/rings-progression/</guid>
+      <guid>https://nonlinear.github.io/exercises/rings-progression/</guid>
       <description>note: those are progressions not sets: you only move to next after you master previous one. slow!
      hold on top and turn your head left to right    slower is better     hold on top and turn your head left to right     count to 5 seconds when going down    </description>
     </item>
     
     <item>
       <title>rings, abs</title>
-      <link>https://www.nonlinear.nyc/exercises/ring-abs/</link>
+      <link>https://nonlinear.github.io/exercises/ring-abs/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/ring-abs/</guid>
+      <guid>https://nonlinear.github.io/exercises/ring-abs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rings, arms</title>
-      <link>https://www.nonlinear.nyc/exercises/ring-arms/</link>
+      <link>https://nonlinear.github.io/exercises/ring-arms/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/ring-arms/</guid>
+      <guid>https://nonlinear.github.io/exercises/ring-arms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rings, levels</title>
-      <link>https://www.nonlinear.nyc/exercises/levels/</link>
+      <link>https://nonlinear.github.io/exercises/levels/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/levels/</guid>
+      <guid>https://nonlinear.github.io/exercises/levels/</guid>
       <description>High level  Low level  Bottom level  No level </description>
     </item>
     
     <item>
       <title>start training on rings</title>
-      <link>https://www.nonlinear.nyc/exercises/start-training-on-rings/</link>
+      <link>https://nonlinear.github.io/exercises/start-training-on-rings/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/start-training-on-rings/</guid>
+      <guid>https://nonlinear.github.io/exercises/start-training-on-rings/</guid>
       <description>1 Support hold few seconds, close to the body, stablizing your hands. Stay till you cna handle 15 seconds.    1.2 Advanced support hold     2 Plank with rings Stay till 15 seconds    3 Ring dips At least 10 good reps    3.2 Bulgarian dips At least 10 good reps    4 Ring pushup focus on stabilizing your hands.</description>
     </item>
     
     <item>
       <title>stretches</title>
-      <link>https://www.nonlinear.nyc/exercises/stretches/</link>
+      <link>https://nonlinear.github.io/exercises/stretches/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/exercises/stretches/</guid>
+      <guid>https://nonlinear.github.io/exercises/stretches/</guid>
       <description>           1 Squat opener 3 min    2 Shoulder stretch 1 min per side    3 Butterfly stretch 3 min    4 Forearms 3 min    5 Triceps stretch 1 min per side    6 (night) Hip stretch 2 min per side    7 (night) Forward fold 3 min     </description>
     </item>
     
     <item>
       <title>bodypix</title>
-      <link>https://www.nonlinear.nyc/play/bodypix/</link>
+      <link>https://nonlinear.github.io/play/bodypix/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bodypix/</guid>
+      <guid>https://nonlinear.github.io/play/bodypix/</guid>
       <description>let bodypix; let segmentation; let img; let bodies = {confusing:8, fashion:28, guys:5}; let bodytype = &#34;&#34;; const options = { multiplier: 0.75, outputStride: 16, // 8, 16, or 32, default is 16 segmentationThreshold: 0.5, // 0 - 1, defaults to 0.5 }; // ../images/bodies(name)-(random ate o bodies #).jpg function preload() { bodytype = Object.keys(bodies)[floor(random(Object.keys(bodies).length))]; bodylength = ceil(random(bodies[bodytype])); img = loadImage(&#39;../images/bodypix/&#39; + bodytype + &#39;-&#39; + bodylength + &#39;.jpg&#39;); bodypix = ml5.</description>
     </item>
     
     <item>
       <title>Magazine test</title>
-      <link>https://www.nonlinear.nyc/play/revealjs-magazine/</link>
+      <link>https://nonlinear.github.io/play/revealjs-magazine/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/revealjs-magazine/</guid>
+      <guid>https://nonlinear.github.io/play/revealjs-magazine/</guid>
       <description>:root { --magazine-ratio: 500px; --magazine-radius: 0px; --magazine-color-1: #666; --magazine-color-2: #eee; --magazine-shadow: 5px 5px 0px rgba(0, 0, 0, 0.06); } .reveal-viewport { background-color: #ccc; }   Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
   No Theme There&#39;s no theme included, so it will fall back on browser defaults.
  Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.</description>
@@ -179,37 +193,37 @@ Review
     
     <item>
       <title>ML5 testing</title>
-      <link>https://www.nonlinear.nyc/play/ml5-test/</link>
+      <link>https://nonlinear.github.io/play/ml5-test/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/ml5-test/</guid>
+      <guid>https://nonlinear.github.io/play/ml5-test/</guid>
       <description>Testing this thingsss  const bodypix = ml5.bodyPix(modelReady) function modelReady() { // segment the image given bodypix.segment(img, gotResults) } function gotImage(error, result) { if (error) { console.log(error); return; } // log the result console.log(result.maskBackground); } </description>
     </item>
     
     <item>
       <title>Mosaic</title>
-      <link>https://www.nonlinear.nyc/play/mosaic/</link>
+      <link>https://nonlinear.github.io/play/mosaic/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/mosaic/</guid>
+      <guid>https://nonlinear.github.io/play/mosaic/</guid>
       <description>Mosaic  Mosaic 2  cross lines   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia dolore, tempora voluptatibus repellat aliquam quasi iste praesentium, exercitationem aspernatur quos sed eius autem, suscipit id, soluta ipsum nulla. Tenetur, reiciendis.   Quo necessitatibus magni, fuga aliquid fugiat possimus debitis dolore ut perspiciatis, maxime quisquam laborum corporis harum natus, nesciunt officia optio. Expedita repellat, deserunt fugiat! Earum aspernatur explicabo aut quae voluptates.</description>
     </item>
     
     <item>
       <title>reveal</title>
-      <link>https://www.nonlinear.nyc/play/reveal/</link>
+      <link>https://nonlinear.github.io/play/reveal/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/reveal/</guid>
+      <guid>https://nonlinear.github.io/play/reveal/</guid>
       <description>.play-reveal section { background-color: red; margin: 0; } }   Example Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
       <title>Reveal Js</title>
-      <link>https://www.nonlinear.nyc/play/reveal-test/</link>
+      <link>https://nonlinear.github.io/play/reveal-test/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/reveal-test/</guid>
+      <guid>https://nonlinear.github.io/play/reveal-test/</guid>
       <description>Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
   No Theme There&#39;s no theme included, so it will fall back on browser defaults.
   Barebones Presentation This example contains the bare minimum includes and markup required to run a reveal.js presentation.
@@ -218,37 +232,37 @@ Review
     
     <item>
       <title>simple cube</title>
-      <link>https://www.nonlinear.nyc/play/simple-cube/</link>
+      <link>https://nonlinear.github.io/play/simple-cube/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/simple-cube/</guid>
+      <guid>https://nonlinear.github.io/play/simple-cube/</guid>
       <description>const loader = new GLTFLoader(); const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); const renderer = new THREE.WebGLRenderer(); renderer.setSize( window.innerWidth, window.innerHeight ); document.body.appendChild( renderer.domElement ); const geometry = new THREE.BoxGeometry(); const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); const cube = new THREE.Mesh( geometry, material ); scene.add( cube ); camera.position.z = 5; const animate = function () { requestAnimationFrame( animate ); cube.</description>
     </item>
     
     <item>
       <title>spin scroll</title>
-      <link>https://www.nonlinear.nyc/play/spin-scroll-older/</link>
+      <link>https://nonlinear.github.io/play/spin-scroll-older/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/spin-scroll-older/</guid>
+      <guid>https://nonlinear.github.io/play/spin-scroll-older/</guid>
       <description>let scene, camera, renderer; function init() { scene = new THREE.Scene(); scene.background = new THREE.Color(0xdddddd); camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000); camera.rotation.y = 45/180*Math.PI; camera.position.x = 800; camera.position.y = 100; camera.position.z = 1000; controls = new THREE.OrbitControls(camera, renderer.domElement); controls.addEventListener(&#39;change&#39;, renderer); hlight = new THREE.AmbientLight (0x404040,100); scene.add(hlight); directionalLight = new THREE.DirectionalLight(0xffffff,100); directionalLight.position.set(0,1,0); directionalLight.castShadow = true; scene.add(directionalLight); light = new THREE.PointLight(0xc4c4c4,10); light.position.set(0,300,500); scene.add(light); light2 = new THREE.PointLight(0xc4c4c4,10); light2.position.set(500,100,0); scene.add(light2); light3 = new THREE.PointLight(0xc4c4c4,10); light3.</description>
     </item>
     
     <item>
       <title>spin scroll</title>
-      <link>https://www.nonlinear.nyc/play/spin-scroll/</link>
+      <link>https://nonlinear.github.io/play/spin-scroll/</link>
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/spin-scroll/</guid>
+      <guid>https://nonlinear.github.io/play/spin-scroll/</guid>
       <description>import * as THREE from &#39;https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js&#39;; import { OrbitControls } from &#39;/play/three-example/OrbitControls.js&#39;; import { GLTFLoader } from &#39;/play/three-example/GLTFLoader.js&#39;; import { RGBELoader } from &#39;/play/three-example/RGBELoader.js&#39;; import { RoughnessMipmapper } from &#39;/play/three-example/RoughnessMipmapper.js&#39;; let camera, scene, renderer; init(); render(); function init() { const container = document.createElement( &#39;div&#39; ); document.body.appendChild( container ); camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 ); camera.position.set( - 1.8, 0.6, 2.7 ); scene = new THREE.Scene(); new RGBELoader() .</description>
     </item>
     
     <item>
       <title>Zendegi</title>
-      <link>https://www.nonlinear.nyc/books/zendegi/</link>
+      <link>https://nonlinear.github.io/books/zendegi/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/zendegi/</guid>
+      <guid>https://nonlinear.github.io/books/zendegi/</guid>
       <description>📚
   Whittling the collection down would feel like a kind of revisionism
   ‘Groundhog Cage’ she’d constructed that made thirty-day free-trial software think it was always on the first day of the trial
@@ -258,30 +272,30 @@ Review
     
     <item>
       <title>Background Slideshow</title>
-      <link>https://www.nonlinear.nyc/play/bg-slideshow/</link>
+      <link>https://nonlinear.github.io/play/bg-slideshow/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bg-slideshow/</guid>
+      <guid>https://nonlinear.github.io/play/bg-slideshow/</guid>
       <description>Background slideshow automating some codrops example, for quick bg effects. adding documentation for praxis / play.
  </description>
     </item>
     
     <item>
       <title>Background Video</title>
-      <link>https://www.nonlinear.nyc/play/bg-video/</link>
+      <link>https://nonlinear.github.io/play/bg-video/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/bg-video/</guid>
+      <guid>https://nonlinear.github.io/play/bg-video/</guid>
       <description>Background Video automating a codepen for quick bg effects. adding documentation for praxis / play.
  </description>
     </item>
     
     <item>
       <title>Incomplete Nature</title>
-      <link>https://www.nonlinear.nyc/books/incomplete/</link>
+      <link>https://nonlinear.github.io/books/incomplete/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/incomplete/</guid>
+      <guid>https://nonlinear.github.io/books/incomplete/</guid>
       <description>Incomplete Nature: How Mind Emerged from Matter
 by Terence W. Deacon
 Reading
@@ -291,10 +305,10 @@ Reading
     
     <item>
       <title>O Que o Cérebro Tem Para Contar</title>
-      <link>https://www.nonlinear.nyc/books/cerebro/</link>
+      <link>https://nonlinear.github.io/books/cerebro/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/cerebro/</guid>
+      <guid>https://nonlinear.github.io/books/cerebro/</guid>
       <description>O Que o Cérebro Tem Para Contar: Desvendando os Mistérios da Natureza Humana
 by V.S. Ramachandran
 Read in Play Books around April 2017
@@ -304,29 +318,29 @@ Read in Play Books around April 2017
     
     <item>
       <title>Playing with credits</title>
-      <link>https://www.nonlinear.nyc/play/credits/</link>
+      <link>https://nonlinear.github.io/play/credits/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/credits/</guid>
+      <guid>https://nonlinear.github.io/play/credits/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Schilds Ladder</title>
-      <link>https://www.nonlinear.nyc/books/schilds-ladder/</link>
+      <link>https://nonlinear.github.io/books/schilds-ladder/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/schilds-ladder/</guid>
+      <guid>https://nonlinear.github.io/books/schilds-ladder/</guid>
       <description>📚
  &amp;ldquo;I&amp;rsquo;m the quintessential singleton,&amp;rdquo; Cass replied. &amp;ldquo;I weigh up all my choices very carefully.&amp;rdquo;  April 30, 2016   Every viewpoint was a compromise, but she had to be as close as she could get.  May 1, 2016   What was the worst that one of these transient selves might do?  May 1, 2016   endless varieties of suffering, endless varieties of stupidity, endless varieties of banality.</description>
     </item>
     
     <item>
       <title>Supersizing the mind</title>
-      <link>https://www.nonlinear.nyc/books/supersizing/</link>
+      <link>https://nonlinear.github.io/books/supersizing/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/supersizing/</guid>
+      <guid>https://nonlinear.github.io/books/supersizing/</guid>
       <description>Supersizing the Mind: Embodiment, Action, and Cognitive Extension
 by Andy Clark, partial extraction from Sumnotes
 Embodied Cognition on Wikipedia
@@ -335,10 +349,10 @@ Embodied Cognition on Wikipedia
     
     <item>
       <title>Testing hugo features</title>
-      <link>https://www.nonlinear.nyc/play/hello-world/</link>
+      <link>https://nonlinear.github.io/play/hello-world/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/play/hello-world/</guid>
+      <guid>https://nonlinear.github.io/play/hello-world/</guid>
       <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ut? Ipsum, quasi, dolorem. Omnis cupiditate cumque natus deleniti ex nulla obcaecati, consectetur ipsa, unde corrupti animi dicta odit maxime quod!
 Click to jump Ratione officiis in deleniti mollitia culpa dolorem, facere, quod laborum vero tempore magnam, porro. Tempora, nesciunt, recusandae dolorum suscipit natus reprehenderit minima excepturi rerum fugit molestias consequuntur dicta. Maxime, dolores.
 Tempore libero voluptates similique, laboriosam suscipit neque officia dicta maxime ab cupiditate quos rem velit aspernatur corporis adipisci sed laudantium.</description>
@@ -346,10 +360,10 @@ Tempore libero voluptates similique, laboriosam suscipit neque officia dicta max
     
     <item>
       <title>The Dispossessed</title>
-      <link>https://www.nonlinear.nyc/books/dispossessed/</link>
+      <link>https://nonlinear.github.io/books/dispossessed/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://www.nonlinear.nyc/books/dispossessed/</guid>
+      <guid>https://nonlinear.github.io/books/dispossessed/</guid>
       <description>by Ursula Le Guin
 Read in Play Books around January 2017
 📚
