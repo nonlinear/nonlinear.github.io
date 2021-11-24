@@ -20,15 +20,15 @@ $delay: 300ms;
 
 
 
-.center {
-     --card-width: 300px;
-    --card-height: 200px;
+.center-card {
+     --center-card-width: 300px;
+    --center-card-height: 200px;
   position: absolute;
-  width: var(--card-width);
-  height: var(--card-height);
+  width: var(--center-card-width);
+  height: var(--center-card-height);
   top: 50%;
   left: 50%;
-  margin: calc(-0.5 * var(--card-height)) 0 0 calc(-0.5 * var(--card-width));
+  margin: calc(-0.5 * var(--center-card-height)) 0 0 calc(-0.5 * var(--center-card-width));
 }
 .mockup {
     --mockup-image: url(/images/mockups/bubble-wrap-2.png);

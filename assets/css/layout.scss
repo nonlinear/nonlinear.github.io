@@ -290,10 +290,10 @@ header.header {
 	padding: $gap2;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	--card-width: 500px;
-	--card-height: 600px;
+	--center-card-width: 500px;
+	--center-card-height: 600px;
 	padding-top: $gap10 + $gap5;
-	@extend .center;
+	@extend .center-card;
 	.style-mockup-1 & {
 		--mockup-image: url(/images/mockups/sleeve-with-reflection.png);
 	}
@@ -315,4 +315,17 @@ header.header {
 	@extend .mockup;
 
 
+}
+
+.style-grainy {
+	.center-card {
+	--center-card-width: 400px;
+    --center-card-height: 600px;
+		@include find(red);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		div {
+			@include find(red);
+		}
+	}
 }
