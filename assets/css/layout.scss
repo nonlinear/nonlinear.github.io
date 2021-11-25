@@ -333,11 +333,12 @@ header.header {
 				content: "xxx";
 				color: black;
 				padding: 5px;
+				display: block;
 			}
 			&:nth-of-type(1) {
 			
-					filter: contrast(170%) brightness(300%);
-					background:  linear-gradient(15deg, $first-color, rgba($first-color,0)),
+				
+					background:  linear-gradient(30deg, $first-color 30%, rgba($first-color,0)80%),
 					url(/images/svg-filters/grainy-01.svg), 
 					$second-color;
 					&:after {
@@ -347,7 +348,6 @@ header.header {
 			}
 			&:nth-of-type(2) {
 			
-					filter: contrast(170%) brightness(300%);
 					background:  radial-gradient($first-color 10%, rgba($first-color,0) 80%),
 					url(/images/svg-filters/grainy-01.svg), 
 					$second-color;
@@ -380,7 +380,6 @@ header.header {
 			}
 			&:nth-of-type(5) {
 			
-					filter: contrast(170%) brightness(300%);
 					background:  radial-gradient($first-color, rgba($first-color,0)),
 					url(/images/svg-filters/grainy-01.svg), 
 					$second-color;
@@ -391,7 +390,6 @@ header.header {
 			}
 			&:nth-of-type(6) {
 			
-					filter: contrast(170%) brightness(300%);
 					background:  radial-gradient($first-color, rgba($first-color,0)),
 					url(/images/svg-filters/grainy-01.svg), 
 					$second-color;
