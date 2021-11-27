@@ -325,7 +325,7 @@ header.header {
 		--center-card-height: 600px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: $gap;
+		grid-gap: 1px;
 		div {
 			$first-color: red;
 			$second-color: white;
