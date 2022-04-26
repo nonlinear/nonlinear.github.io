@@ -401,3 +401,40 @@ header.header {
 		}
 	}
 }
+
+.kinetic {
+	section {
+		align-items: end;
+		padding-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr 30px 30px;
+	iframe {
+		margin-right: 15px;
+	}
+
+		a {
+			display: inline-block;
+			background: none;
+			font-size: 30px;
+			opacity: .5;
+			@include transition;
+			color: white;
+			&.disabled {
+				opacity: .2;
+			}
+			&.up:before {
+				content: '⇡';
+
+			}
+				&.down:before {
+				content: '⇣';
+
+			}
+			&:not(.disabled):hover {
+				opacity: 1;
+				color: white;
+				
+			}
+		}
+	}
+}
