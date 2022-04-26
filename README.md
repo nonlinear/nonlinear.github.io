@@ -30,6 +30,11 @@
 ## to try out
 
 - [ ] [Scroll-Linked Animations With the Web Animations API (WAAPI) and ScrollTimeline - CSS-Tricks](https://css-tricks.com/scroll-linked-animations-with-the-web-animations-api-waapi-and-scrolltimeline/)
+- [ ] [Pixel Patterns](https://yuanchuan.dev/pixel-patterns)
+- [ ] [Breaking Out of the Box – A List Apart](https://alistapart.com/article/breaking-out-of-the-box/)
+- [ ] [Coloring With Code — A Programmatic Approach To Design - Codrops](https://tympanus.net/codrops/2021/12/07/coloring-with-code-a-programmatic-approach-to-design/)
+- [ ] [Creating Generative Patterns with The CSS Paint API - CSS-Tricks](https://css-tricks.com/creating-generative-patterns-with-the-css-paint-api/)
+- [ ] [Parallax Powered by CSS Custom Properties - CSS-Tricks](https://css-tricks.com/parallax-powered-by-css-custom-properties/)
 - [ ] animated gradients: [pseudo elements](https://keithjgrant.com/posts/2017/07/transitioning-gradients/), [playground](https://www.gradient-animator.com/)
 - [ ] [card flip](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
 - [ ] [Animating CSS Gradients, using only CSS — Medium](https://medium.com/@dave_lunny/animating-css-gradients-using-only-css-d2fd7671e759)
@@ -65,6 +70,7 @@
 - [Best practices for fonts](https://web.dev/font-best-practices/)
 - [2300+ Free Fonts for Personal Use › Fontesk](https://fontesk.com/license/free-for-personal-use/)
 - [Fontshare: Quality fonts. Free.](https://www.fontshare.com/)
+- [The Best Free Fonts for UI and Web Designers | Theme-UI](https://themeui.net/free-fonts/)
 
 ## tools
 
@@ -81,22 +87,22 @@
   - [css2scss - from css to scss](http://sebastianpontow.de/css2compass/)
   - [extractCSS - Online CSS Extractor](http://extractcss.com/)
   - [HTMLKit.com CSS Poster](https://www.htmlkit.com/services/cssposter/)
-
 - vector
 
   - [SVGOMG - SVGO's Missing GUI](https://jakearchibald.github.io/svgomg/)
 
   - [SVG Loaders - Sam Herbert](https://samherbert.net/svg-loaders/)
-
 - site
 
   - [.htTool](http://kanduvisla.github.io/httool/)
   - [Styleguide & Boilerplate Patterns comparison](https://docs.google.com/spreadsheets/d/1tZYPnzLG0y51QinLxrV97Xflzr2MbTqwWNvaHYN04BE/edit#gid=0)
   - [Shapecatcher: Draw the Unicode character you want!](http://shapecatcher.com/)
-
 - images
 
   - [Clipping Magic](https://clippingmagic.com/) Remove Background From Image
+- lists
+  - [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge): A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.
+
 
 ## colors
 
@@ -192,6 +198,30 @@
 - [mariuszostrowski/wireframingbrush](https://github.com/mariuszostrowski/wireframingbrush)
 - [Keynote Motion Graphic Experiment](http://www.lindadong.com/blog/keynotemotiongraphic)
 
+## resources
+
+- [Chinese Mobile App UI Trends](http://dangrover.com/blog/2014/12/01/chinese-mobile-app-ui-trends.html)
+- [Motion experiments](http://www.michaelvillar.com/motion)
+- [Feedback Template](http://wonderfulfeedback.com/client/)
+- [7 Things I Wish Everyone Knew About Interaction Design](http://uxmas.com/2014/7-things-i-wish-everyone-knew-about-interaction-design)
+- [UX Recipe](http://uxrecipe.github.io)
+- [UX Project Checklist](http://uxchecklist.github.io/)
+- [Transitioning to SCSS at Scale](https://codeascraft.com/2015/02/02/transitioning-to-scss-at-scale/)
+- [Yourbrowser.is Shares Your Browser and Computer Info by Email](http://lifehacker.com/yourbrowser-is-shares-your-browser-and-computer-info-by-1691305385)
+- [Web Design Quotation Generator](https://webdesignquote.beewits.com/)
+- [A Checklist for Planning Your Next Big Meeting - HBR](https://hbr.org/2015/03/a-checklist-for-planning-your-next-big-meeting)
+- [Yourbrowser.is Shares Your Browser and Computer Info by Email](http://lifehacker.com/yourbrowser-is-shares-your-browser-and-computer-info-by-1691305385)
+- [Ask DN: Where do you get participants for UX/Usability Research? - Designer News](https://news.layervault.com/stories/47742-ask-dn-where-do-you-get-participants-for-uxusability-research)
+- [Localise designs with Sketch and Invision](https://medium.com/@houbenkristof/localise-designs-with-sketch-6300cd9165f6)
+- [Designer’s Toolkit: A Primer On Capturing Research](https://medium.com/@lchapmanruiz/designer-s-toolkit-a-primer-on-capturing-research-775e7e8bc05e)
+- [Web Design Stack](http://webdesignstack.com/)
+- [wwwhere](http://wwwhere.io/)
+- [Choose prototypes over mockups](http://blog.webflow.com/always-choose-prototypes-over-mockups)
+- [wwwhere](http://wwwhere.io/)
+- [Gallery of Concept Visualization](http://conceptviz.github.io/#/e30=)
+- [Acessibilidade: o quanto meu site já é acessível? |](http://arquiteturadeinformacao.com/acessibilidade/acessibilidade-o-quanto-meu-site-ja-e-acessivel/)
+- [Designing with all of the data](http://radar.oreilly.com/2015/07/designing-with-all-of-the-data.html)
+
 ## email
 
 - [Bulletproof background images](http://backgrounds.cm/)
@@ -209,4 +239,15 @@
   A Starter Kit for HTML Emails
 - [Things I've Learned About Building & Coding HTML Email Templates](http://www.leemunroe.com/building-html-email/)
 - [This Template Makes Introduction Emails Easier](http://lifehacker.com/this-template-makes-introduction-emails-easier-1716092031)
+
+## nextcloud
+
+- [Cookbook - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/cookbook)
+- [Cookbook - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/cookbook)
+- [Keeweb - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/keeweb)
+- [QOwnNotesAPI - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/qownnotesapi)
+- [IPFS for Nextcloud - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/files_external_ipfs)
+- [OPDS catalog - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/files_opds)
+- [Tasks - Apps - App Store - Nextcloud](https://apps.nextcloud.com/apps/tasks)
+- 
 
