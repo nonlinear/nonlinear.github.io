@@ -29,8 +29,25 @@
 	{{ partial "ascii.html" . }}
 </div>
 
-
-<!-- 
+<!-- <div class="categories">
+	
+	<div class="category">
+		<h2>books</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "books" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
+	</div>
+<<<<<<< HEAD
+	<div class="category">
+		<h2>Play</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "play" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
+	</div>
 =======
 >>>>>>> 53d110cfbedb982d26d9b091f5e3ec453d0c2d57
 	<div class="category">
