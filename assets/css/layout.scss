@@ -100,13 +100,17 @@ h1, h2, h3, h4, h5, p {
 
 	&:hover {
 		h4 .emoji {
-			font-size: 45px;
+			font-size: 60px;
 			margin-right: $gap;
+			margin-top: -$gap;
+			filter: grayscale(0);
+			margin-right: ($gaphalf - 0);
 		}
 	}
 	h4 {
 		.emoji {
 				@include transition;
+				filter: grayscale(1);
 			margin-left: -($gap4 + $gaphalf + 6);
 			width: $gap4;
 			float: left;
