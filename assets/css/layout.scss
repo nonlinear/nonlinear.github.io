@@ -96,7 +96,32 @@ h1, h2, h3, h4, h5, p {
 
 
 
+.links {
 
+	&:hover {
+		h4 .emoji {
+			font-size: 45px;
+			margin-right: $gap;
+		}
+	}
+	h4 {
+		.emoji {
+				@include transition;
+			margin-left: -($gap4 + $gaphalf + 6);
+			width: $gap4;
+			float: left;
+			height: $gap4;
+			text-align: right;
+			margin-right: $gaphalf;
+			display: inline-block;
+			font-size: 30px;
+		}
+
+	}
+	&:not(:first-of-type) {
+margin-top: $gap;
+}
+}
 
 a {
 	color: $color-fg;
