@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="cover">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://nonlinear.github.io/css/main.4f2a4ca078f6cb39ac0c1a70eeb25d9a5b4357e5b5cb80b454db8bbd0180ee0f.css">
+
+	<title>Nicholas Frota</title>
+</head>
+<body>
+<div class="container">
+		
+
+
+<h2 id="circuit-1">Circuit 1</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Knee drive</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-01.gif" alt="image"></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Shin raise/Quad extension</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-02.gif" alt="image"></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Standing hip abductors</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-03.gif" alt="image"></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cross lifts</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-04.gif" alt="image"></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jumps</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-05.gif" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="circuit-2">Circuit 2</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align:right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lying knee drive</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-06.gif" alt="image"> <img src="/images/exercises/ankle-06b.gif" alt="image"></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lying cross-in/out</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-07.gif" alt="image"></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Lying hamstring curls</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-08.gif" alt="image"></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lying half burpee jumps</td>
+<td style="text-align:right"><img src="/images/exercises/ankle-09.gif" alt="image"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+</div>
+
+<script src="https://nonlinear.github.io/js/jquery.min.js"></script>
+<script src="https://nonlinear.github.io/js/popper.min.js"></script>
+<script src="https://nonlinear.github.io/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script>
+ 
+
+
+</body>
+</html>

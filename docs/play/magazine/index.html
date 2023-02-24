@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="cover">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://nonlinear.github.io/css/main.4f2a4ca078f6cb39ac0c1a70eeb25d9a5b4357e5b5cb80b454db8bbd0180ee0f.css">
+
+	<title>Nicholas Frota</title>
+</head>
+<body>
+<div class="container">
+		
+
+
+<section>
+	<h2>Scroll test</h2>scroll here</p>
+	<div class="spin-scroll vertical">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+	<div class="spin-scroll horizontal">
+		<div class="scroll">
+			<img src="../images/LylCdAEGKFD0pruRuUJ8.png">
+		</div>
+	</div>
+</section>
+<section>
+	<h1>h1 test</h1>
+	<h2>h2 test</h2>
+	<h3>h3 test</h3>
+	<p>paragraph test Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore quod at, voluptatem nihil quo cupiditate facere deserunt explicabo dolorum!</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, hic?</p>
+</section>
+<section>
+	<h2>Image</h2>
+	<p class="pending">Images of different sizes here</p>
+</section>
+<section>
+	<h2>Background</h2>
+	<p class="pending">backgrounds of different types here</p>
+</section>
+<section>
+	<h2>SVG test</h2>
+	<p class="pending">embedded, img, with css stuff on it</p>
+</section>
+
+
+
+
+</div>
+
+<script src="https://nonlinear.github.io/js/jquery.min.js"></script>
+<script src="https://nonlinear.github.io/js/popper.min.js"></script>
+<script src="https://nonlinear.github.io/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script>
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root {
+--spread: 100vh;
+--lang: 50px;
+--spread-ratio: 0.6;
+}
+
+.spread {
+
+  width: calc(var(--spread) * var(--spread-ratio));
+  height: var(--spread);
+  overflow: hidden;
+  background-color: white;
+  margin: 0 auto;
+  box-sizing: content-box;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(calc(var(--spread) * var(--spread-ratio)));
+    scroll-snap-type: mandatory;
+}
+
+.spread > section {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    height: var(--spread);
+    width: calc(var(--spread) * var(--spread-ratio));
+  }
