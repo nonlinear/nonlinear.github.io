@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plays on Nicholas Frota</title>
-    <link>https://***REMOVED***.nyc/play/</link>
+    <link>https://***REMOVED***.github.io/play/</link>
     <description>Recent content in Plays on Nicholas Frota</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.nyc/play/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.github.io/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>focus test</title>
-      <link>https://***REMOVED***.nyc/play/focus-test/</link>
+      <link>https://***REMOVED***.github.io/play/focus-test/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.nyc/play/focus-test/</guid>
+      <guid>https://***REMOVED***.github.io/play/focus-test/</guid>
       <description>Disregard font and icons. This is just a test to be deleted soon
 primary button secondary button   checkbox checkbox, selected radio radio, selected </description>
     </item>
     
     <item>
       <title>gallery scroll</title>
-      <link>https://***REMOVED***.nyc/play/gallery-scroll/</link>
+      <link>https://***REMOVED***.github.io/play/gallery-scroll/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.nyc/play/gallery-scroll/</guid>
+      <guid>https://***REMOVED***.github.io/play/gallery-scroll/</guid>
       <description>const html = document.documentElement; const canvas = document.getElementById(&#34;gallery-scroll&#34;); const context = canvas.getContext(&#34;2d&#34;); const frameCount = 148; const currentFrame = index = ( `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, &#39;0&#39;)}.jpg` ) const preloadImages = () = { for (let i = 1; i { img.src = currentFrame(index); context.drawImage(img, 0, 0); } window.addEventListener(&#39;scroll&#39;, () = { const scrollTop = html.scrollTop; const maxScrollTop = html.scrollHeight - window.innerHeight; const scrollFraction = scrollTop / maxScrollTop; const frameIndex = Math.</description>
     </item>
     
     <item>
       <title>gallery scroll</title>
-      <link>https://***REMOVED***.nyc/play/test/</link>
+      <link>https://***REMOVED***.github.io/play/test/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.nyc/play/test/</guid>
+      <guid>https://***REMOVED***.github.io/play/test/</guid>
       <description>image 1
 image 2
 image 3
@@ -71,20 +71,20 @@ image 35</description>
     
     <item>
       <title>SVG SASS tiles</title>
-      <link>https://***REMOVED***.nyc/play/tile/</link>
+      <link>https://***REMOVED***.github.io/play/tile/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.nyc/play/tile/</guid>
+      <guid>https://***REMOVED***.github.io/play/tile/</guid>
       <description>Vector tile library A vector pattern library mixin
 How to use  Download and reference tile.scss on your scss/sass flow summon mixin with @include tile($type, $color, $size) with:  $type (required) as any type below $color (optional) as pattern color $size (optional) as size (play around)     .cross-a .cross-b .cross-c   .dots-a .dots-b .dots-c   .grid   .lines-a .lines-b .lines-c   .lines-down-a .lines-down-b .</description>
     </item>
     
     <item>
       <title>video scroll</title>
-      <link>https://***REMOVED***.nyc/play/video-scroll/</link>
+      <link>https://***REMOVED***.github.io/play/video-scroll/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.nyc/play/video-scroll/</guid>
+      <guid>https://***REMOVED***.github.io/play/video-scroll/</guid>
       <description> html { scroll-behavior: smooth; } #video { position: fixed; height: 100vh; } .scroll-dummy { height: 3000px; max-width: 998px; padding: 20px; z-index: 1; }       var FRAMES = 148; var FPS = 30; var video = document.getElementById(&#39;video&#39;); window.addEventListener(&#39;scroll&#39;, function (e) { var time = (window.scrollY / 1000) * FRAMES / FPS; video.currentTime = time; console.log(time); }); window.addEventListener(&#39;load&#39;, function(e) { video.pause(); video.currentTime = 0; }); </description>
     </item>
     
