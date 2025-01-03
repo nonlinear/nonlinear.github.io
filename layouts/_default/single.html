@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" class="single {{ with .File }}{{ .BaseFileName }}{{ end }} {{ if .Params.style  }}{{ .Params.style }}{{ end }} {{ if .Params.category  }}{{ .Params.category }}{{ end }} {{ if .Params.status  }}{{ .Params.status }}{{ end }}">
+{{ partial "head.html" . }}
+<body>
+
+<article class="container">
+
+ {{ if (eq .Type "books") }}
+          <h1>{{ .Page.Title }} by {{ .Params.Author }}</h1>
+          <a href="{{ .Params.Link }}">Read More</a>
+          {{ else }}
+          {{ end }}
+	{{ .Content }}
+</article>
+
+
+</body>
+</html>

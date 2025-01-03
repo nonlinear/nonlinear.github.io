@@ -1,0 +1,48 @@
+---
+title: video scroll
+description: a way to control videos by scrolling page
+status: ongoing
+date: 2023-06-28
+category: play
+---
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #video {
+    position: fixed;
+    height: 100vh;
+  }
+  .scroll-dummy {
+    height: 3000px;
+    max-width: 998px;
+    padding: 20px;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- Ref https://www.reddit.com/r/javascript/comments/dolagh/apple_airpods_pro_page_uses_a_lot_of_images_so_i/ -->
+  <div class="scroll-dummy">
+    <video id="video" width="300">
+      <source src="/images/video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <script>
+      var FRAMES = 148;
+      var FPS = 30;
+      var video = document.getElementById('video');
+
+      window.addEventListener('scroll', function (e) {
+        var time = (window.scrollY / 1000) * FRAMES / FPS;
+        video.currentTime = time;
+        console.log(time);
+      });
+
+      window.addEventListener('load', function(e) {
+        video.pause();
+        video.currentTime = 0;
+      });
+    </script>

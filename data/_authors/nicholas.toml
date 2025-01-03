@@ -1,0 +1,14 @@
+given_name      = "Nicholas"
+family_name     = "Frota"
+display_name    = "Nicholas Frota"
+thumbnail       = "img link"
+image           = "img link"
+short_bio       = "super short bio"
+email           = "info@nicholasfrota.com"
+
+[social]
+	site		= "https://nonlinear.nyc"
+    github      = "nonlinear"
+    instagram   = "nonlinear"
+    twitter     = "nonlinear"
+    savee     	= "nonlinear"

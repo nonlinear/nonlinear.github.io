@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "3a61c0d72d8274af",
+    "type": "split",
+    "children": [
+      {
+        "id": "de0721e252d4fad7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1913b4308b1e9baf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/anime.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "anime"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "69855696396750f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "73e84de9e604b6be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c9f753d2a252639",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "200d0f6ebe995942",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b63f5da27bf34096",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "c1b8adde69ede9a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "57bff911c3d7a01d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ccf1313bb4d93c9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "1df44e170ce5d8ba",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "77a475970e48e931",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f127eb8b9e377c67",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1913b4308b1e9baf",
+  "lastOpenFiles": [
+    "public/images/title_grid_wide_20230802142406e7657be1fa6.png",
+    "public/images/delicious-in-dungeon-anime-serie.jpg",
+    "public/images/delicious-in-dungeon-anime-serie 1.jpg",
+    "public/images/Frieren_anime_profile_3.webp",
+    "public/images/71URGcsdgKL._AC_UF1000,1000_QL80_.jpg",
+    "public/book/index.xml",
+    "public/blog/anime/index.html",
+    "public/blog/index.xml",
+    "public/blog/anime",
+    "public/blog",
+    "public/book/zendegi/index.html",
+    "public/book/supersizing/index.html",
+    "public/book/staying/index.html",
+    "public/book/schilds-ladder/index.html",
+    "public/book/philosophy-simulation/index.html",
+    "static/images/delicious-in-dungeon-anime-serie 1.jpg",
+    "content/blog/anime.md",
+    "static/images/71URGcsdgKL._AC_UF1000,1000_QL80_.jpg",
+    "static/images/title_grid_wide_20230802142406e7657be1fa6.png",
+    "static/images/delicious-in-dungeon-anime-serie.jpg",
+    "static/images/Frieren_anime_profile_3.webp",
+    "content/books/angeltech.md"
+  ]
+}

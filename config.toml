@@ -1,0 +1,6 @@
+baseURL = "https://nonlinear.nyc/"
+languageCode = "en-us"
+title = "Nicholas Frota"
+role = "Senior UI Designer"
+publishDir = "public"
+theme = "play"

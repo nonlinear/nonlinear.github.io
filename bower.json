@@ -1,0 +1,20 @@
+{
+  "name": "nonlinear",
+  "authors": [
+    "nicholas frota <info@nicholasfrota.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tile": "*"
+  }
+}
