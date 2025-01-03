@@ -1,0 +1,217 @@
+@include font-face(Space Grotesk, 
+	$path: "../fonts/", 
+	$file: SpaceGrotesk-Light, 
+	$weight: normal, 
+	$style: normal, 
+	$stretch: normal, 
+	$transform: normal
+	);
+
+@include font-face(Space Grotesk, 
+	$path: "../fonts/", 
+	$file: SpaceGrotesk-Regular, 
+	$weight: bold, 
+	$style: normal, 
+	$stretch: normal, 
+	$transform: normal
+	);
+
+.container {
+	width: 100%;
+	max-width: $container;
+	padding-top: 0;
+	margin: 0 auto;
+
+}
+
+blockquote {
+	padding: $gap*.5 $gap;
+	background-color: rgba(255,255,255,.05);
+	margin: 0;
+	margin-bottom: $gap;
+
+
+}
+
+.links {
+
+	@media screen and (min-width: 600px) {
+	displaY: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	&.two {
+		grid-template-columns: 1fr 2fr;
+	}
+	grid-gap: $gap;
+}
+	ul, ol {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		margin-top: 7px;
+	}
+}
+body {
+	background-color: $color-bg;
+	color: $color-fg;
+	@include transition;
+	font-family: Space Grotesk;
+	line-height: 130%;
+}
+
+ul, ol {
+	padding-left: $gap;
+}
+
+
+.ascii {
+	line-height: 120%;
+	font-size:65%;
+	font-family: monospace;
+}
+
+a {
+	color: $color-fg;
+	p & {
+		margin: 0 5px;
+	}
+	text-decoration: none;
+	outline: solid 5px darken(yellow, 10%);
+
+	background-color: darken(yellow, 10%);
+	color: $color-bg;
+	@include transition;
+	&:hover {
+
+		background-color: darken(yellow, 20%);
+		outline: solid 5px darken(yellow, 20%);
+		color: $color-fg;
+	}
+}
+
+.gallery-scroll {
+	height: 500vh;
+	background: #000;
+	canvas {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100vw;
+		max-height: 100vh;
+	}
+}
+
+.tile {
+	ul.tile {
+	
+		@include reset(list);
+		padding: 0;
+		grid-template-columns: 1fr 1fr 1fr;
+		
+		li {
+			
+			height: 100px;
+		
+			span {
+				font-family: monospace;
+				background-color: black;
+				padding: 2px 7px;
+				font-size: 12px;
+				font-weight: normal;
+			}
+		}
+
+	}
+	section {
+		&.cross ul.tile {
+			li:nth-of-type(1) {
+				@include tile(cross-a, $size: 15px);
+			}
+			li:nth-of-type(2) {
+				@include tile(cross-b, $size: 15px)
+			}
+			li:nth-of-type(3) {
+				@include tile(cross-c, $size: 15px)
+			}
+		}
+		&.dots ul.tile {
+			li:nth-of-type(1) {
+				@include tile(dots-a, $size: 15px);
+			}
+			li:nth-of-type(2) {
+				@include tile(dots-b, $size: 15px)
+			}
+			li:nth-of-type(3) {
+				@include tile(dots-c, $size: 15px)
+			}
+		}
+		&.grid ul.tile {
+			li:nth-of-type(1) {
+				@include tile(grid);
+			}
+
+		}
+		&.lines ul.tile {
+			li:nth-of-type(1) {
+				@include tile(lines-a);
+			}
+			li:nth-of-type(2) {
+				@include tile(lines-b)
+			}
+			li:nth-of-type(3) {
+				@include tile(lines-c)
+			}
+		}
+		&.lines-down ul.tile {
+			li:nth-of-type(1) {
+				@include tile(lines-down-a);
+			}
+			li:nth-of-type(2) {
+				@include tile(lines-down-b)
+			}
+			li:nth-of-type(3) {
+				@include tile(lines-down-c)
+			}
+		}
+		&.lines-up ul.tile {
+			li:nth-of-type(1) {
+				@include tile(lines-up-a);
+			}
+			li:nth-of-type(2) {
+				@include tile(lines-up-b)
+			}
+			li:nth-of-type(3) {
+				@include tile(lines-up-c)
+			}
+		}
+		&.lines-vert ul.tile {
+			li:nth-of-type(1) {
+				@include tile(lines-vert-a);
+			}
+			li:nth-of-type(2) {
+				@include tile(lines-vert-b)
+			}
+			li:nth-of-type(3) {
+				@include tile(lines-vert-c)
+			}
+		}
+	}
+
+}
+
+tt {
+	background-color: rgba(white, .6);
+	color: black;
+	padding: 2px 5px;
+}
+
+p.footer {
+	border-top: solid 1px white;
+	padding-top: $gap;
+}
+
+a.ongoing:after {
+	content: "  ⚡";
+}
+

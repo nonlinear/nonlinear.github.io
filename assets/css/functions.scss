@@ -1,0 +1,48 @@
+$gap: 15px;
+$gap2: $gap * 2;
+$gap3: $gap * 3;
+$gap4: $gap * 4;
+$gap5: $gap * 5;
+$gap6: $gap * 6;
+$gap7: $gap * 7;
+$gap8: $gap * 8;
+$gap9: $gap * 9;
+$gap10: $gap * 10;
+$gaphalf: $gap * .5;
+
+$link: black;
+$hover: grey;
+$color-bg: #666;
+$color-fg: white;
+$container: 500px;
+
+$delay: 300ms;
+
+
+
+.center-card {
+     --center-card-width: 300px;
+    --center-card-height: 200px;
+  position: absolute;
+  width: var(--center-card-width);
+  height: var(--center-card-height);
+  top: 50%;
+  left: 50%;
+  margin: calc(-0.5 * var(--center-card-height)) 0 0 calc(-0.5 * var(--center-card-width));
+}
+.mockup {
+    --mockup-image: url(/images/mockups/bubble-wrap-2.png);
+    &:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+   transition: all 300ms ease-out;
+    mix-blend-mode: screen;
+    content: "";
+    position: absolute;
+    background-image: var(--mockup-image);
+    background-size: cover;
+  }
+}

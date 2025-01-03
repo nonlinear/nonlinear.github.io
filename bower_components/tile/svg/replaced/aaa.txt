@@ -1,0 +1,12 @@
+// (\_/)   ***REMOVED*** tile
+// (`ㅅ`)づ extended from PatternBolt https://github.com/buseca/patternbolt
+// (")(")  more at ***REMOVED***.nyc/tile
+
+@mixin tile($tile, $color: #000, $size: 200px, $mask: "none") {
+  @if unitless($size) {
+    @warn "Assuming PatternBolt background-size `#{$size}` to be in pixels.";
+
+    $size: $size + 0px;
+  }
+
+  $background-image: null;
