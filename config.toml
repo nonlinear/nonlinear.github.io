@@ -1,0 +1,6 @@
+baseURL = "https://***REMOVED***.nyc/"
+languageCode = "en-us"
+title = "Nicholas Frota"
+role = "Senior UI Designer"
+publishDir = "public"
+theme = "play"
