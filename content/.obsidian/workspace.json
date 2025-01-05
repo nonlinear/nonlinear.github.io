@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e40a488949291c4a",
+        "id": "3e7c98847df30aa0",
         "type": "tabs",
         "children": [
           {
-            "id": "dd42a12f5e339161",
+            "id": "a503168e85561456",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "New tab"
             }
           }
         ]
@@ -156,7 +154,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dd42a12f5e339161",
+  "active": "a503168e85561456",
   "lastOpenFiles": [
     "blog/anime.md",
     "blog/Untitled.md",
