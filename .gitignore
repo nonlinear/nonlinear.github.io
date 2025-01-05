@@ -1,4 +1,5 @@
 _site
 .sass-cache
+content/project/work
 .jekyll-metadata
 node_modules
