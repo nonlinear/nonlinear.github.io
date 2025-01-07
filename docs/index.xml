@@ -6,7 +6,44 @@
     <description>Recent content on Nicholas Frota</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anamnese para o professor</title>
+      <link>https://***REMOVED***.github.io/personal/anamnese/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://***REMOVED***.github.io/personal/anamnese/</guid>
+      <description>Idade: 50 anos
+Massa corporal total: 140 lb?
+Altura: 6 feet
+Restrições a atividade física? : Nenhuma
+Tem diabetes, hipertensão ou outro ? : Não
+Toma medicamentos ? Quais? :
+Objetivo principal? : Primeiro recuperação da cirurgia de cotovelo&amp;hellip; Mas também crescer naturalmente, mantendo articulações e flexibilidade. Energia e qualidade de vida.
+Nível de condicionamento? : Avançado (mas diminui um pouco por causa do acidente)
+O que você não gosta de fazer nos treinos ?</description>
+    </item>
+    
+    <item>
+      <title>Storybook as DS</title>
+      <link>https://***REMOVED***.github.io/work/storybook/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://***REMOVED***.github.io/work/storybook/</guid>
+      <description>Here&amp;rsquo;s my initial list on how to migrate from Figma to storybook for design Deliverables. It has nothing to do with the &amp;quot; exploded view&amp;quot; work, it&amp;rsquo;s just an exploration of the possibilities ahead of us, after design system is stable enough.
+  Consistent Sandbox Access: Provide a consistent, accessible sandbox link for non-developers across the company. Treat Text Content as Components: Manage object names, button labels, and descriptions as components to ensure consistency.</description>
+    </item>
+    
+    <item>
+      <title>Community Privacy Residency (2025)</title>
+      <link>https://***REMOVED***.github.io/personal/apply/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://***REMOVED***.github.io/personal/apply/</guid>
+      <description>Link: Community Privacy Residency (2025) form  Short bio I am an UX designer working for almost a decade for a scientific publisher heavily invested in open access, and volunteering as a community organizer for open source/P2P initiatives on the side.
+What is your motivation for joining the Community Privacy Residency? What would you like to receive from our time together? What do you hope to contribute? Designing for open source is notoriously difficult, and I am looking for a more product-based approach to solutions, partnering with required stakeholders and community leaders from the start, for more robust, usable solutions.</description>
+    </item>
+    
     <item>
       <title>TODO</title>
       <link>https://***REMOVED***.github.io/admin/todo/</link>
@@ -305,6 +342,15 @@ How to use  Download and reference tile.scss on your scss/sass flow summon mixin
       <description>Desvendando os Mistérios da Natureza Humana  Durante a maior parte do século XX, tudo o que tínhamos a oferecer em matéria de explicação do comportamento humano eram dois edifícios teóricos &amp;gt; o freudismo e o behaviorismo
  30 de outubro de 2016
  em sistemas biológicos há uma profunda unidade entre estrutura, função e origem. Não se pode fazer muito progresso na compreensão de qualquer desses aspectos a menos que se esteja também rigorosamente atento aos outros dois.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://***REMOVED***.github.io/2025-01-06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://***REMOVED***.github.io/2025-01-06/</guid>
+      <description></description>
     </item>
     
   </channel>
