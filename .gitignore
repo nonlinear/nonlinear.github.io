@@ -1,7 +1,9 @@
 _site
 .sass-cache
-content/work
 content/.obsidian
+content/work
 docs/work
+content/personal
+docs/personal
 .jekyll-metadata
 node_modules
