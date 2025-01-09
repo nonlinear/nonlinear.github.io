@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "personal/apply.md",
-                "mode": "source",
-                "source": true
+                "file": "work/storybook.md",
+                "mode": "preview",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "apply"
+              "title": "storybook"
             }
           }
         ],
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "storyboo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,8 +177,8 @@
   },
   "active": "df24f7c8717e0a96",
   "lastOpenFiles": [
-    "work/todo.md",
     "personal/apply.md",
+    "work/todo.md",
     "personal/anamnese.md",
     "personal",
     "untitled folder",
