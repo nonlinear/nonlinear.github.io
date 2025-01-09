@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://***REMOVED***.github.io/personal/anamnese/</loc>
-    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+    <loc>https://***REMOVED***.github.io/art/illustration-01/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/art/illustration-02/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/art/illustration-03/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/art/illustration-04/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/art/illustration-05/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/art/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://***REMOVED***.github.io/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/tags/procreate-photo-realistic/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/tags/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.github.io/personal/anamnese/</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://***REMOVED***.github.io/personal/</loc>
@@ -111,7 +135,5 @@
     <priority>0</priority>
   </url><url>
     <loc>https://***REMOVED***.github.io/categories/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.github.io/tags/</loc>
   </url>
 </urlset>
