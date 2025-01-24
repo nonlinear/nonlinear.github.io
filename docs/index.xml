@@ -70,16 +70,6 @@ O que você não gosta de fazer nos treinos ?</description>
     </item>
     
     <item>
-      <title>Storybook as DS</title>
-      <link>https://***REMOVED***.github.io/work/storybook/</link>
-      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.github.io/work/storybook/</guid>
-      <description>Here&amp;rsquo;s my initial list on how to migrate from Figma to storybook for design Deliverables. It has nothing to do with the &amp;quot; exploded view&amp;quot; work, it&amp;rsquo;s just an exploration of the possibilities ahead of us, after design system is stable enough.
-  Consistent Sandbox Access: Provide a consistent, accessible sandbox link for non-developers across the company. Treat Text Content as Components: Manage object names, button labels, and descriptions as components to ensure consistency.</description>
-    </item>
-    
-    <item>
       <title>Community Privacy Residency (2025)</title>
       <link>https://***REMOVED***.github.io/personal/apply/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
@@ -96,15 +86,6 @@ What is your motivation for joining the Community Privacy Residency? What would 
       
       <guid>https://***REMOVED***.github.io/admin/todo/</guid>
       <description> create work project .gitignore work project from both content and published move projects to root? check ***REMOVED***.nyc freeform &amp;ldquo;open&amp;rdquo; script: image paths, obsidian &amp;ldquo;publish&amp;rdquo; script: zed, hugo serve, image paths, push?    </description>
-    </item>
-    
-    <item>
-      <title>TODO</title>
-      <link>https://***REMOVED***.github.io/work/todo/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.github.io/work/todo/</guid>
-      <description> think of an AI to help work put important info here set meeting with HR set meeting with DS devs  </description>
     </item>
     
     <item>
@@ -387,15 +368,6 @@ How to use  Download and reference tile.scss on your scss/sass flow summon mixin
       <description>Desvendando os Mistérios da Natureza Humana  Durante a maior parte do século XX, tudo o que tínhamos a oferecer em matéria de explicação do comportamento humano eram dois edifícios teóricos &amp;gt; o freudismo e o behaviorismo
  30 de outubro de 2016
  em sistemas biológicos há uma profunda unidade entre estrutura, função e origem. Não se pode fazer muito progresso na compreensão de qualquer desses aspectos a menos que se esteja também rigorosamente atento aos outros dois.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.github.io/2025-01-06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.github.io/2025-01-06/</guid>
-      <description></description>
     </item>
     
   </channel>
