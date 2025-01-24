@@ -4,35 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "3e7c98847df30aa0",
+        "id": "c9df1731f92e6bf4",
         "type": "tabs",
         "children": [
           {
-            "id": "a503168e85561456",
+            "id": "26054e684a2a0804",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "work/todo.md",
+                "file": "Al Services Alignment for PI4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Al Services Alignment for PI4"
+            }
+          },
+          {
+            "id": "4a2378aa6db1a327",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UX sessions.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "todo"
-            }
-          },
-          {
-            "id": "df24f7c8717e0a96",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "work/storybook.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "storybook"
+              "title": "UX sessions"
             }
           }
         ],
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "storyboo",
+                "query": "align",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "743b00b9e51f3034",
@@ -175,16 +176,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "df24f7c8717e0a96",
+  "active": "4a2378aa6db1a327",
   "lastOpenFiles": [
-    "personal/apply.md",
+    "Al Services Alignment for PI4.md",
+    "UX sessions.md",
+    "Screenshot 2025-01-21 at 11.03.33 AM.png",
+    "Screenshot 2025-01-21 at 10.08.13 AM.png",
+    "Adding members to server.md",
+    "Al-Enriched Creativity Priorities and Alignment for PI4.md",
+    "work/Al-Enriched Creativity Priorities and Alignment for PI4.md",
+    "work/2025-01-06.md",
+    "Screenshot 2025-01-17 at 10.51.35 AM.png",
+    "Screenshot 2025-01-17 at 10.14.22 AM.png",
+    "Screenshot 2025-01-17 at 10.12.20 AM.png",
     "work/todo.md",
+    "work/component checklist.md",
+    "work/storybook kickoff.md",
+    "work/storybook as design system.md",
+    "work/AI studio.md",
+    "work/Screenshot 2025-01-16 at 10.46.00 AM.png",
+    "personal/apply.md",
     "personal/anamnese.md",
     "personal",
     "untitled folder",
-    "work/storybook.md",
     "2025-01-06.md",
-    "Untitled.md",
     "blog/anime.md",
     "blog/Untitled.md"
   ]
