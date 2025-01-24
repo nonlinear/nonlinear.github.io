@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Admins on Nicholas Frota</title>
-    <link>https://***REMOVED***.github.io/admin/</link>
+    <link>https://***REMOVED***.nyc/admin/</link>
     <description>Recent content in Admins on Nicholas Frota</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.github.io/admin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.nyc/admin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TODO</title>
-      <link>https://***REMOVED***.github.io/admin/todo/</link>
+      <link>https://***REMOVED***.nyc/admin/todo/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://***REMOVED***.github.io/admin/todo/</guid>
+      <guid>https://***REMOVED***.nyc/admin/todo/</guid>
       <description> create work project .gitignore work project from both content and published move projects to root? check ***REMOVED***.nyc freeform &amp;ldquo;open&amp;rdquo; script: image paths, obsidian &amp;ldquo;publish&amp;rdquo; script: zed, hugo serve, image paths, push?    </description>
     </item>
     
