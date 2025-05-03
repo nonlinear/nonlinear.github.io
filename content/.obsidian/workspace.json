@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "36663a8ca231b5e0",
+        "id": "73e214d7aef62355",
         "type": "tabs",
         "children": [
           {
-            "id": "0a78c6abcf8bb1c9",
+            "id": "d98fb05bd0d3a17b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "clippings/UNISEX Serial Experiments Lain Hoodie, Anime Graphic, Science Fiction, Hoodie Men & Women, Anime Sweater, Anime Gift, Cyberpunk - Etsy.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "UNISEX Serial Experiments Lain Hoodie, Anime Graphic, Science Fiction, Hoodie Men & Women, Anime Sweater, Anime Gift, Cyberpunk - Etsy"
+            }
+          },
+          {
+            "id": "6449faa3534e8bd4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "clippings/Forty Ways to Know a Star Using Stars to Understand Astronomy - Magers & Quinn Booksellers.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Forty Ways to Know a Star Using Stars to Understand Astronomy - Magers & Quinn Booksellers"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,8 +175,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a78c6abcf8bb1c9",
+  "active": "6449faa3534e8bd4",
   "lastOpenFiles": [
+    "clippings/Forty Ways to Know a Star Using Stars to Understand Astronomy - Magers & Quinn Booksellers.md",
+    "clippings/네이버 지도.md",
+    "clippings/UNISEX Serial Experiments Lain Hoodie, Anime Graphic, Science Fiction, Hoodie Men & Women, Anime Sweater, Anime Gift, Cyberpunk - Etsy.md",
     "clippings/CLP-Sweatpants.md",
     "clippings/Sticky-Resistente.md",
     "clippings/Starry-Notes.md",
@@ -183,9 +205,6 @@
     "work/todo.md",
     "work/AI_studio.md",
     "work/Anytype.20250206.110122.57/apoorvas-product-operating-model.md",
-    "work/storybook kickoff.md",
-    "work/storybook as design system.md",
-    "work/component checklist.md",
     "work/Screenshot 2025-01-21 at 11.03.33 AM.png",
     "work/Screenshot 2025-01-21 at 10.08.13 AM.png",
     "work/Screenshot 2025-01-17 at 10.51.35 AM.png",
