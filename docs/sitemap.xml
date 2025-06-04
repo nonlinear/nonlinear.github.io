@@ -2,187 +2,129 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://***REMOVED***.nyc/art/illustration-01/</loc>
+    <loc>http://localhost:1313/art/illustration-01/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/art/illustration-02/</loc>
+    <loc>http://localhost:1313/art/illustration-02/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/art/illustration-03/</loc>
+    <loc>http://localhost:1313/art/illustration-03/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/art/illustration-04/</loc>
+    <loc>http://localhost:1313/art/illustration-04/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/art/illustration-05/</loc>
+    <loc>http://localhost:1313/art/illustration-05/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/art/</loc>
+    <loc>http://localhost:1313/art/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/tags/photo/</loc>
+    <loc>http://localhost:1313/tags/photo/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/tags/procreate/</loc>
+    <loc>http://localhost:1313/tags/procreate/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/tags/realistic/</loc>
+    <loc>http://localhost:1313/tags/realistic/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/personal/anamnese/</loc>
-    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/personal/</loc>
-    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/admin/</loc>
+    <loc>http://localhost:1313/admin/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/work/ai_studio/</loc>
+    <loc>http://localhost:1313/admin/todo/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/personal/apply/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/admin/todo/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/todo/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/ux-sessions/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/wiley-links/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/blog/anime/</loc>
+    <loc>http://localhost:1313/blog/anime/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/consulting/</loc>
+    <loc>http://localhost:1313/consulting/</loc>
     <lastmod>2024-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/</loc>
+    <loc>http://localhost:1313/book/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/care-manifesto/</loc>
+    <loc>http://localhost:1313/book/care-manifesto/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/philosophy-simulation/</loc>
+    <loc>http://localhost:1313/book/philosophy-simulation/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/staying/</loc>
+    <loc>http://localhost:1313/book/staying/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/chimeras/</loc>
+    <loc>http://localhost:1313/book/chimeras/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/machine-dreams/</loc>
+    <loc>http://localhost:1313/book/machine-dreams/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/marx-anthropocene/</loc>
+    <loc>http://localhost:1313/book/marx-anthropocene/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/dawn/</loc>
+    <loc>http://localhost:1313/book/dawn/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/diamond-age/</loc>
+    <loc>http://localhost:1313/book/diamond-age/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/being/</loc>
+    <loc>http://localhost:1313/book/being/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/clippings/</loc>
-    <lastmod>2024-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/tags/fashion/</loc>
-    <lastmod>2024-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/tags/shop/</loc>
-    <lastmod>2024-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/clippings/unisex-serial-experiments-lain-hoodie-anime-graphic-science-fiction-hoodie-men-women-anime-sweater-anime-gift-cyberpunk-etsy/</loc>
-    <lastmod>2024-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/play/focus-test/</loc>
+    <loc>http://localhost:1313/play/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/</loc>
+    <loc>http://localhost:1313/play/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/gallery-scroll/</loc>
+    <loc>http://localhost:1313/play/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/test/</loc>
+    <loc>http://localhost:1313/play/test/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/tile/</loc>
+    <loc>http://localhost:1313/play/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/video-scroll/</loc>
+    <loc>http://localhost:1313/play/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/zendegi/</loc>
+    <loc>http://localhost:1313/book/zendegi/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/incomplete/</loc>
+    <loc>http://localhost:1313/book/incomplete/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/schilds-ladder/</loc>
+    <loc>http://localhost:1313/book/schilds-ladder/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/supersizing/</loc>
+    <loc>http://localhost:1313/book/supersizing/</loc>
     <lastmod>2020-01-29T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/dispossessed/</loc>
+    <loc>http://localhost:1313/book/dispossessed/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/angeltech/</loc>
+    <loc>http://localhost:1313/book/angeltech/</loc>
     <lastmod>2014-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/curva/circular-01/</loc>
+    <loc>http://localhost:1313/curva/circular-01/</loc>
     <lastmod>2014-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/curva/</loc>
+    <loc>http://localhost:1313/curva/</loc>
     <lastmod>2014-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/book/cerebro/</loc>
+    <loc>http://localhost:1313/book/cerebro/</loc>
     <lastmod>2007-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/work/2025-01-06/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/adding-members-to-server/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/al-services-alignment-for-pi4/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/al-enriched-creativity-priorities-and-alignment-for-pi4/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/anytype.20250206.110122.57/apoorvas-product-operating-model/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/component-checklist/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/storybook-as-design-system/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/work/storybook-kickoff/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/categories/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/tags/device/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/tags/games/</loc>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/clippings/mcon/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

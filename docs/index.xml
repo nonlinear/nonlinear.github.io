@@ -2,568 +2,221 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nicholas Frota</title>
-    <link>https://***REMOVED***.nyc/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Nicholas Frota</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://***REMOVED***.nyc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://***REMOVED***.nyc/art/illustration-01/</link>
+      <link>http://localhost:1313/art/illustration-01/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/art/illustration-01/</guid>
+      <guid>http://localhost:1313/art/illustration-01/</guid>
       <description></description>
     </item>
-    
     <item>
       <title></title>
-      <link>https://***REMOVED***.nyc/art/illustration-02/</link>
+      <link>http://localhost:1313/art/illustration-02/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/art/illustration-02/</guid>
+      <guid>http://localhost:1313/art/illustration-02/</guid>
       <description></description>
     </item>
-    
     <item>
       <title></title>
-      <link>https://***REMOVED***.nyc/art/illustration-03/</link>
+      <link>http://localhost:1313/art/illustration-03/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/art/illustration-03/</guid>
+      <guid>http://localhost:1313/art/illustration-03/</guid>
       <description></description>
     </item>
-    
     <item>
       <title></title>
-      <link>https://***REMOVED***.nyc/art/illustration-04/</link>
+      <link>http://localhost:1313/art/illustration-04/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/art/illustration-04/</guid>
+      <guid>http://localhost:1313/art/illustration-04/</guid>
       <description></description>
     </item>
-    
     <item>
       <title></title>
-      <link>https://***REMOVED***.nyc/art/illustration-05/</link>
+      <link>http://localhost:1313/art/illustration-05/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/art/illustration-05/</guid>
+      <guid>http://localhost:1313/art/illustration-05/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Anamnese para o professor</title>
-      <link>https://***REMOVED***.nyc/personal/anamnese/</link>
-      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/personal/anamnese/</guid>
-      <description>Idade: 50 anos
-Massa corporal total: 140 lb?
-Altura: 6 feet
-Restrições a atividade física? : Nenhuma
-Tem diabetes, hipertensão ou outro ? : Não
-Toma medicamentos ? Quais? :
-Objetivo principal? : Primeiro recuperação da cirurgia de cotovelo&amp;hellip; Mas também crescer naturalmente, mantendo articulações e flexibilidade. Energia e qualidade de vida.
-Nível de condicionamento? : Avançado (mas diminui um pouco por causa do acidente)
-O que você não gosta de fazer nos treinos ?</description>
-    </item>
-    
-    <item>
-      <title>AI Studio</title>
-      <link>https://***REMOVED***.nyc/work/ai_studio/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/ai_studio/</guid>
-      <description>Avoid Siloed Efforts, Integrate Across Teams Define Intent and Scope, Avoid Endless Experimentation Where products already exist for our capabilities, be very clear on which products are inside vs. outside Al Services goals  AI stuff
-Collins, Brian 11
-Meskine, Hakim 14
-Lisa (not here)
-ScribbleStudio
-Wiley AI Studio
-https://scribble.dev.ais.wiley.host/074ee377-6a3c-44c6-8f4b-87cbdbc57ce1/chat
-akin to chatgpt playground
-Guest/project/admin
-Translation: brian
-GPT 4 with canvas
-Patterns
-Moodboard on miro
-Ask chatGPT prompt on select</description>
-    </item>
-    
-    <item>
-      <title>Community Privacy Residency (2025)</title>
-      <link>https://***REMOVED***.nyc/personal/apply/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/personal/apply/</guid>
-      <description>Link: Community Privacy Residency (2025) form  Short bio I am an UX designer working for almost a decade for a scientific publisher heavily invested in open access, and volunteering as a community organizer for open source/P2P initiatives on the side.
-What is your motivation for joining the Community Privacy Residency? What would you like to receive from our time together? What do you hope to contribute? Designing for open source is notoriously difficult, and I am looking for a more product-based approach to solutions, partnering with required stakeholders and community leaders from the start, for more robust, usable solutions.</description>
-    </item>
-    
     <item>
       <title>TODO</title>
-      <link>https://***REMOVED***.nyc/admin/todo/</link>
+      <link>http://localhost:1313/admin/todo/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/admin/todo/</guid>
-      <description> create work project .gitignore work project from both content and published move projects to root? check ***REMOVED***.nyc freeform &amp;ldquo;open&amp;rdquo; script: image paths, obsidian &amp;ldquo;publish&amp;rdquo; script: zed, hugo serve, image paths, push?    </description>
+      <guid>http://localhost:1313/admin/todo/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; create work project&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; .gitignore work project from both content and published&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; move projects to root?&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; check &lt;a href=&#34;https://www.icloud.com/freeform/080VrAG9qXZT6q5ydfezslIWw#Nonlinear&#34;&gt;***REMOVED***.nyc freeform&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;ldquo;open&amp;rdquo; script: image paths, obsidian&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;ldquo;publish&amp;rdquo; script: zed, hugo serve, image paths, push?&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
-    <item>
-      <title>TODO</title>
-      <link>https://***REMOVED***.nyc/work/todo/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/todo/</guid>
-      <description> think of an AI to help work put important info here set meeting with HR set meeting with DS devs  </description>
-    </item>
-    
-    <item>
-      <title>UX sessions</title>
-      <link>https://***REMOVED***.nyc/work/ux-sessions/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/ux-sessions/</guid>
-      <description> hakim meskine, gen AI detection brian collins, translation localization lisa willie, peer review integration onto rex  workflow workflow type open ended, ticket (goal-oriented), kiosk granularity of version
- logo   </description>
-    </item>
-    
-    <item>
-      <title>Wiley links</title>
-      <link>https://***REMOVED***.nyc/work/wiley-links/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/wiley-links/</guid>
-      <description>Todos Aha TODOS
-   UAXD AI Studio Research Exchange     Catherine Hakim Candace    Brian Emily    Lisa Deirdre    Gary Kate    </description>
-    </item>
-    
     <item>
       <title>Best Animes</title>
-      <link>https://***REMOVED***.nyc/blog/anime/</link>
+      <link>http://localhost:1313/blog/anime/</link>
       <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/blog/anime/</guid>
-      <description>Frieren Dorohedoro Heavenly Delusion!!! Delicious in Dungeon </description>
+      <guid>http://localhost:1313/blog/anime/</guid>
+      <description>&lt;h2 id=&#34;frieren&#34;&gt;Frieren&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/Frieren_anime_profile_3.webp&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;dorohedoro&#34;&gt;Dorohedoro&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/71URGcsdgKL._AC_UF1000,1000_QL80_.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;heavenly-delusion&#34;&gt;Heavenly Delusion!!!&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/title_grid_wide_20230802142406e7657be1fa6.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;delicious-in-dungeon&#34;&gt;Delicious in Dungeon&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/delicious-in-dungeon-anime-serie.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Free usability consulting for commons</title>
-      <link>https://***REMOVED***.nyc/consulting/</link>
+      <link>http://localhost:1313/consulting/</link>
       <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/consulting/</guid>
-      <description>I’m an usability/UI-UX/product designer offering one-hour consulting sessions for open source projects.
-In the session, we will validate some assumptions together, to get a sense of where your product is, and where it could go.
-I’ll provide focused, practical feedback, and propose some directions.
-In return you help me map the state of usability in open source, and we all help community by doing something for commons.
-Reach out if:  Your project reached a plateau, and needs traction You&amp;rsquo;re lost on which features to focus on, and need a roadmap You are a dev with no personalproject and considering starting one, and needs help deciding on what&amp;rsquo;s needed/wanted  This offer is only valid for non profit, open source projects.</description>
+      <guid>http://localhost:1313/consulting/</guid>
+      <description>&lt;p&gt;I’m an usability/UI-UX/product designer offering one-hour consulting sessions for open source projects.&lt;/p&gt;&#xA;&lt;p&gt;In the session, we will validate some assumptions together, to get a sense of where your product is, and where it could go.&lt;/p&gt;&#xA;&lt;p&gt;I’ll provide focused, practical feedback, and propose some directions.&lt;/p&gt;&#xA;&lt;p&gt;In return you help me map the state of usability in open source, and we all help community by doing something for commons.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reach-out-if&#34;&gt;Reach out if:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Your project reached a plateau, and needs traction&lt;/li&gt;&#xA;&lt;li&gt;You&amp;rsquo;re lost on which features to focus on, and need a roadmap&lt;/li&gt;&#xA;&lt;li&gt;You are a dev with no personalproject and considering starting one, and needs help deciding on what&amp;rsquo;s needed/wanted&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This offer is only valid for non profit, open source projects.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Care Manifesto</title>
-      <link>https://***REMOVED***.nyc/book/care-manifesto/</link>
+      <link>http://localhost:1313/book/care-manifesto/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/care-manifesto/</guid>
-      <description>The Politics of Interdependence 1. Caring Politics  we must elaborate a feminist, queer, anti-racist and eco-socialist perspective
-  the very wealthy retain their full sense of agency, having the capacity to dominate or sack and replace those who care for them.
-  punitive humiliation
-  Dependence on care has been pathologised, rather than recognised as part of our human condition
-  autonomy and independence have historically been lionised in the Global North and gendered ‘male’</description>
+      <guid>http://localhost:1313/book/care-manifesto/</guid>
+      <description>&lt;h2 id=&#34;the-politics-of-interdependence&#34;&gt;The Politics of Interdependence&lt;/h2&gt;&#xA;&lt;h2 id=&#34;1-caring-politics&#34;&gt;1. Caring Politics&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;we must elaborate a feminist, queer, anti-racist and eco-socialist perspective&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the very wealthy retain their full sense of agency, having the capacity to dominate or sack and replace those who care for them.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;punitive humiliation&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Dependence on care has been pathologised, rather than recognised as part of our human condition&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;autonomy and independence have historically been lionised in the Global North and gendered ‘male’&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Philosophy and Simulation</title>
-      <link>https://***REMOVED***.nyc/book/philosophy-simulation/</link>
+      <link>http://localhost:1313/book/philosophy-simulation/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/philosophy-simulation/</guid>
-      <description>The Emergence of Synthetic Reason Introduction Emergence in History  the absence of novelty in physical interactions meant that explaining their effects could be reduced to deduction from general principles or laws
-  But the synthesis of water does produce something new, not new in the absolute sense of something that has never existed before but only in the relative sense that something emerges that was not in the interacting entities acting as causes</description>
+      <guid>http://localhost:1313/book/philosophy-simulation/</guid>
+      <description>&lt;h2 id=&#34;the-emergence-of-synthetic-reason&#34;&gt;The Emergence of Synthetic Reason&lt;/h2&gt;&#xA;&lt;h2 id=&#34;introduction-emergence-in-history&#34;&gt;Introduction Emergence in History&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the absence of novelty in physical interactions meant that explaining their effects could be reduced to deduction from general principles or laws&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;But the synthesis of water does produce something new, not new in the absolute sense of something that has never existed before but only in the relative sense that something emerges that was not in the interacting entities acting as causes&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Staying with the Trouble</title>
-      <link>https://***REMOVED***.nyc/book/staying/</link>
+      <link>http://localhost:1313/book/staying/</link>
       <pubDate>Wed, 08 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/staying/</guid>
-      <description>Making Kin in the Chthulucene  “to stir up,” “to make cloudy,” “to disturb.”
-  The task is to make kin in lines of inventive connection as a practice of learning to live and die well with each other in a thick present
-  Staying with the trouble does not require such a relationship to times called the future
-  Nothing in kainos must mean conventional pasts, presents, or futures</description>
+      <guid>http://localhost:1313/book/staying/</guid>
+      <description>&lt;h2 id=&#34;making-kin-in-the-chthulucene&#34;&gt;Making Kin in the Chthulucene&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“to stir up,” “to make cloudy,” “to disturb.”&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The task is to make kin in lines of inventive connection as a practice of learning to live and die well with each other in a thick present&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Staying with the trouble does not require such a relationship to times called the future&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Nothing in kainos must mean conventional pasts, presents, or futures&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;they writhe and luxuriate in manifold forms and manifold names&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chimeras</title>
-      <link>https://***REMOVED***.nyc/book/chimeras/</link>
+      <link>http://localhost:1313/book/chimeras/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/chimeras/</guid>
-      <description>Inventory of Synthetic Cognition  Modernist terms of linearity, sequentiality, separability, temporality, and spatiality
-  Modernity’s efforts to legitimate the violent rationalities and acts of colonialism
-  Refusal to install the application would automatically lower the social trust rating of the individual
-  equates being seen with being protected
-  ideological weaponization against the Other
-  biometrical nudity
-  the goal of “Safety” can be seen as labor exploitation for economic benefits</description>
+      <guid>http://localhost:1313/book/chimeras/</guid>
+      <description>&lt;h2 id=&#34;inventory-of-synthetic-cognition&#34;&gt;Inventory of Synthetic Cognition&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Modernist terms of linearity, sequentiality, separability, temporality, and spatiality&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Modernity’s efforts to legitimate the violent rationalities and acts of colonialism&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Refusal to install the application would automatically lower the social trust rating of the individual&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;equates being seen with being protected&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;ideological weaponization against the Other&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;biometrical nudity&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the goal of “Safety” can be seen as labor exploitation for economic benefits&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Machine Dreams</title>
-      <link>https://***REMOVED***.nyc/book/machine-dreams/</link>
+      <link>http://localhost:1313/book/machine-dreams/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/machine-dreams/</guid>
-      <description>Economics Becomes a Cyborg Science  cyborg science tended to parse its dynamics in terms of basins of attraction; due to its ontological commitment to dissipation, it imagined situations where a plurality of attractors existed, with the codicil that stochastic consid- erations could tip a system from one to another instantaneously
-  To those seeking a new theory of social organization, the neoclassicals retorted that all effective organizations were merely disguised versions of their notion of an ur-market</description>
+      <guid>http://localhost:1313/book/machine-dreams/</guid>
+      <description>&lt;h2 id=&#34;economics-becomes-a-cyborg-science&#34;&gt;Economics Becomes a Cyborg Science&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;cyborg science tended to parse its dynamics in terms of basins of attraction; due to its ontological commitment to dissipation, it imagined situations where a plurality of attractors existed, with the codicil that stochastic consid- erations could tip a system from one to another instantaneously&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;To those seeking a new theory of social organization, the neoclassicals retorted that all effective organizations were merely disguised versions of their notion of an ur-market&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Marx in the Anthropocene</title>
-      <link>https://***REMOVED***.nyc/book/marx-anthropocene/</link>
+      <link>http://localhost:1313/book/marx-anthropocene/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/marx-anthropocene/</guid>
-      <description>Towards the Idea of Degrowth Communism  fundamental materialist claim about the continuity of nature and humanity
-  When the ideal of scientific knowledge is applied to nature it simply furthers the progress of science. But when it is applied to society it turns out to be ideological weapon of the bourgeoisie
-  immediacy. Nature appears as given and can be objectively known as ‘pure facts
-  total quantification of the world</description>
+      <guid>http://localhost:1313/book/marx-anthropocene/</guid>
+      <description>&lt;h2 id=&#34;towards-the-idea-of-degrowth-communism&#34;&gt;Towards the Idea of Degrowth Communism&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;fundamental materialist claim about the continuity of nature and humanity&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;When the ideal of scientific knowledge is applied to nature it simply furthers the progress of science. But when it is applied to society it turns out to be ideological weapon of the bourgeoisie&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;immediacy. Nature appears as given and can be objectively known as ‘pure facts&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;total quantification of the world&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Dawn of Everything</title>
-      <link>https://***REMOVED***.nyc/book/dawn/</link>
+      <link>http://localhost:1313/book/dawn/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/dawn/</guid>
-      <description>A New History of Humanity 2 Wicked Liberty: The indigenous critique and the myth of progress  They brand us for slaves, and call us miserable souls, whose life is not worth having, alleging that we degrade ourselves in subjecting ourselves to one man [the king] who possesses all the power, and is bound by no law but his own will.
-  Power over possessions could be directly translated into power over other human beings.</description>
+      <guid>http://localhost:1313/book/dawn/</guid>
+      <description>&lt;h2 id=&#34;a-new-history-of-humanity&#34;&gt;A New History of Humanity&lt;/h2&gt;&#xA;&lt;h2 id=&#34;2-wicked-liberty-the-indigenous-critique-and-the-myth-of-progress&#34;&gt;2 Wicked Liberty: The indigenous critique and the myth of progress&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;They brand us for slaves, and call us miserable souls, whose life is not worth having, alleging that we degrade ourselves in subjecting ourselves to one man [the king] who possesses all the power, and is bound by no law but his own will.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Power over possessions could be directly translated into power over other human beings.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Diamond Age</title>
-      <link>https://***REMOVED***.nyc/book/diamond-age/</link>
+      <link>http://localhost:1313/book/diamond-age/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/diamond-age/</guid>
-      <description>Or, A Young Lady&amp;rsquo;s Illustrater Primer </description>
+      <guid>http://localhost:1313/book/diamond-age/</guid>
+      <description>&lt;h2 id=&#34;or-a-young-ladys-illustrater-primer&#34;&gt;Or, A Young Lady&amp;rsquo;s Illustrater Primer&lt;/h2&gt;</description>
     </item>
-    
     <item>
       <title>Ways of Being</title>
-      <link>https://***REMOVED***.nyc/book/being/</link>
+      <link>http://localhost:1313/book/being/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/being/</guid>
-      <description>Beyond Human Intelligence 3: The Thicket of Life  there was no clean species break, but rather a gradual and drawn-out speciation process
-  a ‘ghost population’ of ancient humans living half a million years ago
-  a Neanderthal instrument
-  Göbekli Tepe
-  other-than-human beings.
-  intermingling and interbreeding
-  the glacial winters of the Pleistocene
-  not a rigid map, but a pattern of interference</description>
+      <guid>http://localhost:1313/book/being/</guid>
+      <description>&lt;h2 id=&#34;beyond-human-intelligence&#34;&gt;Beyond Human Intelligence&lt;/h2&gt;&#xA;&lt;h2 id=&#34;3-the-thicket-of-life&#34;&gt;3: The Thicket of Life&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;there was no clean species break, but rather a gradual and drawn-out speciation process&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;a ‘ghost population’ of ancient humans living half a million years ago&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;a Neanderthal instrument&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Göbekli Tepe&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;other-than-human beings.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;intermingling and interbreeding&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the glacial winters of the Pleistocene&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;not a rigid map, but a pattern of interference&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The ribosomes are 3D printers for living bodies&lt;/p&gt;</description>
     </item>
-    
-    <item>
-      <title>UNISEX Serial Experiments Lain Hoodie, Anime Graphic, Science Fiction, Hoodie Men &amp; Women, Anime Sweater, Anime Gift, Cyberpunk - Etsy</title>
-      <link>https://***REMOVED***.nyc/clippings/unisex-serial-experiments-lain-hoodie-anime-graphic-science-fiction-hoodie-men-women-anime-sweater-anime-gift-cyberpunk-etsy/</link>
-      <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/clippings/unisex-serial-experiments-lain-hoodie-anime-graphic-science-fiction-hoodie-men-women-anime-sweater-anime-gift-cyberpunk-etsy/</guid>
-      <description>Price: $39.90+
-Original Price: $57.00+
-Loading
-30% off
-New markdown! Biggest sale in 60+ days
-Arrives soon! Get it by
-Mar 6-12
-Your order should arrive by this date if you buy today. To calculate an estimated delivery date you can count on, we look at things like the carrier&amp;rsquo;s latest transit times, the seller&amp;rsquo;s processing time and shipping history, and where the order is shipping to and from.
-if you order today</description>
-    </item>
-    
     <item>
       <title>focus test</title>
-      <link>https://***REMOVED***.nyc/play/focus-test/</link>
+      <link>http://localhost:1313/play/focus-test/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/play/focus-test/</guid>
-      <description>Disregard font and icons. This is just a test to be deleted soon
-primary button secondary button   checkbox checkbox, selected radio radio, selected </description>
+      <guid>http://localhost:1313/play/focus-test/</guid>
+      <description>&lt;ul class=&#34;focus-test&#34;&gt;&#xA;&#x9;&lt;p&gt;Disregard font and icons. This is just a test to be deleted soon&lt;/p&gt;&#xA;&#x9;&lt;li&gt;&lt;a class=&#34;btn btn-primary&#34; href=&#34;#&#34;&gt;primary button&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a class=&#34;btn btn-secondary&#34; href=&#34;#&#34;&gt;secondary button&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input type=&#34;text&#34; placeholder=&#34;Placeholder text&#34;&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input type=&#34;text&#34; value=&#34;Input text&#34;&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34;&gt;checkbox&lt;/label&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked&gt;checkbox, selected&lt;/label&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;label&gt;&lt;input type=&#34;radio&#34;&gt;radio&lt;/label&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;label&gt;&lt;input type=&#34;radio&#34; checked&gt;radio, selected&lt;/label&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>gallery scroll</title>
-      <link>https://***REMOVED***.nyc/play/gallery-scroll/</link>
+      <link>http://localhost:1313/play/gallery-scroll/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/play/gallery-scroll/</guid>
-      <description>const html = document.documentElement; const canvas = document.getElementById(&#34;gallery-scroll&#34;); const context = canvas.getContext(&#34;2d&#34;); const frameCount = 148; const currentFrame = index = ( `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, &#39;0&#39;)}.jpg` ) const preloadImages = () = { for (let i = 1; i { img.src = currentFrame(index); context.drawImage(img, 0, 0); } window.addEventListener(&#39;scroll&#39;, () = { const scrollTop = html.scrollTop; const maxScrollTop = html.scrollHeight - window.innerHeight; const scrollFraction = scrollTop / maxScrollTop; const frameIndex = Math.</description>
+      <guid>http://localhost:1313/play/gallery-scroll/</guid>
+      <description>&lt;div class=&#34;gallery-scroll&#34;&gt;&#xA;  &lt;canvas id=&#34;gallery-scroll&#34; /&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;  const html = document.documentElement;&#xA;const canvas = document.getElementById(&#34;gallery-scroll&#34;);&#xA;const context = canvas.getContext(&#34;2d&#34;);&#xA;&#xA;const frameCount = 148;&#xA;const currentFrame = index =&gt; (&#xA;  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, &#39;0&#39;)}.jpg`&#xA;)&#xA;&#xA;const preloadImages = () =&gt; {&#xA;  for (let i = 1; i &lt; frameCount; i++) {&#xA;    const img = new Image();&#xA;    img.src = currentFrame(i);&#xA;  }&#xA;};&#xA;&#xA;const img = new Image()&#xA;img.src = currentFrame(1);&#xA;canvas.width=1158;&#xA;canvas.height=770;&#xA;img.onload=function(){&#xA;  context.drawImage(img, 0, 0);&#xA;}&#xA;&#xA;const updateImage = index =&gt; {&#xA;  img.src = currentFrame(index);&#xA;  context.drawImage(img, 0, 0);&#xA;}&#xA;&#xA;window.addEventListener(&#39;scroll&#39;, () =&gt; {  &#xA;  const scrollTop = html.scrollTop;&#xA;  const maxScrollTop = html.scrollHeight - window.innerHeight;&#xA;  const scrollFraction = scrollTop / maxScrollTop;&#xA;  const frameIndex = Math.min(&#xA;    frameCount - 1,&#xA;    Math.ceil(scrollFraction * frameCount)&#xA;  );&#xA;  &#xA;  requestAnimationFrame(() =&gt; updateImage(frameIndex + 1))&#xA;});&#xA;&#xA;preloadImages()&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>gallery scroll</title>
-      <link>https://***REMOVED***.nyc/play/test/</link>
+      <link>http://localhost:1313/play/test/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/play/test/</guid>
-      <description>image 1
-image 2
-image 3
-image 4
-image 5
-image 6
-image 7
-image 8
-image 9
-image 10
-image 11
-image 12
-image 13
-image 14
-image 15
-image 16
-image 17
-image 18
-image 19
-image 20
-image 21
-image 22
-image 23
-image 24
-image 25
-image 26
-image 27
-image 28
-image 29
-image 30
-image 31
-image 32
-image 33
-image 34
-image 35</description>
+      <guid>http://localhost:1313/play/test/</guid>
+      <description>&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0001.jpg&#34;&gt;image 1&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0002.jpg&#34;&gt;image 2&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0003.jpg&#34;&gt;image 3&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0004.jpg&#34;&gt;image 4&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0005.jpg&#34;&gt;image 5&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0006.jpg&#34;&gt;image 6&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0007.jpg&#34;&gt;image 7&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0008.jpg&#34;&gt;image 8&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0009.jpg&#34;&gt;image 9&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0010.jpg&#34;&gt;image 10&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0011.jpg&#34;&gt;image 11&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0012.jpg&#34;&gt;image 12&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0013.jpg&#34;&gt;image 13&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0014.jpg&#34;&gt;image 14&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0015.jpg&#34;&gt;image 15&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0016.jpg&#34;&gt;image 16&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0017.jpg&#34;&gt;image 17&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0018.jpg&#34;&gt;image 18&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0019.jpg&#34;&gt;image 19&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0020.jpg&#34;&gt;image 20&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0021.jpg&#34;&gt;image 21&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0022.jpg&#34;&gt;image 22&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0023.jpg&#34;&gt;image 23&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0024.jpg&#34;&gt;image 24&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0025.jpg&#34;&gt;image 25&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0026.jpg&#34;&gt;image 26&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0027.jpg&#34;&gt;image 27&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0028.jpg&#34;&gt;image 28&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0029.jpg&#34;&gt;image 29&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0030.jpg&#34;&gt;image 30&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0031.jpg&#34;&gt;image 31&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0032.jpg&#34;&gt;image 32&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0033.jpg&#34;&gt;image 33&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0034.jpg&#34;&gt;image 34&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0035.jpg&#34;&gt;image 35&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0036.jpg&#34;&gt;image 36&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0037.jpg&#34;&gt;image 37&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0038.jpg&#34;&gt;image 38&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0039.jpg&#34;&gt;image 39&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0040.jpg&#34;&gt;image 40&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0041.jpg&#34;&gt;image 41&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0042.jpg&#34;&gt;image 42&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0043.jpg&#34;&gt;image 43&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0044.jpg&#34;&gt;image 44&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0045.jpg&#34;&gt;image 45&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0046.jpg&#34;&gt;image 46&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0047.jpg&#34;&gt;image 47&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0048.jpg&#34;&gt;image 48&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0049.jpg&#34;&gt;image 49&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0050.jpg&#34;&gt;image 50&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0051.jpg&#34;&gt;image 51&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0052.jpg&#34;&gt;image 52&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0053.jpg&#34;&gt;image 53&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0054.jpg&#34;&gt;image 54&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0055.jpg&#34;&gt;image 55&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0056.jpg&#34;&gt;image 56&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0057.jpg&#34;&gt;image 57&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0058.jpg&#34;&gt;image 58&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0059.jpg&#34;&gt;image 59&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0060.jpg&#34;&gt;image 60&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0061.jpg&#34;&gt;image 61&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0062.jpg&#34;&gt;image 62&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0063.jpg&#34;&gt;image 63&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0064.jpg&#34;&gt;image 64&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0065.jpg&#34;&gt;image 65&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0066.jpg&#34;&gt;image 66&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0067.jpg&#34;&gt;image 67&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0068.jpg&#34;&gt;image 68&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0069.jpg&#34;&gt;image 69&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0070.jpg&#34;&gt;image 70&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0071.jpg&#34;&gt;image 71&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0072.jpg&#34;&gt;image 72&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0073.jpg&#34;&gt;image 73&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0074.jpg&#34;&gt;image 74&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0075.jpg&#34;&gt;image 75&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0076.jpg&#34;&gt;image 76&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0077.jpg&#34;&gt;image 77&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0078.jpg&#34;&gt;image 78&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0079.jpg&#34;&gt;image 79&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0080.jpg&#34;&gt;image 80&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0081.jpg&#34;&gt;image 81&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0082.jpg&#34;&gt;image 82&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0083.jpg&#34;&gt;image 83&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0084.jpg&#34;&gt;image 84&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0085.jpg&#34;&gt;image 85&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0086.jpg&#34;&gt;image 86&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0087.jpg&#34;&gt;image 87&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0088.jpg&#34;&gt;image 88&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0089.jpg&#34;&gt;image 89&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0090.jpg&#34;&gt;image 90&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0091.jpg&#34;&gt;image 91&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0092.jpg&#34;&gt;image 92&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0093.jpg&#34;&gt;image 93&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0094.jpg&#34;&gt;image 94&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0095.jpg&#34;&gt;image 95&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0096.jpg&#34;&gt;image 96&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0097.jpg&#34;&gt;image 97&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0098.jpg&#34;&gt;image 98&lt;/a&gt;&lt;br&gt;&#xA;&lt;a href=&#34;https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0099.jpg&#34;&gt;image 99&lt;/a&gt;&lt;br&gt;</description>
     </item>
-    
     <item>
       <title>SVG SASS tiles</title>
-      <link>https://***REMOVED***.nyc/play/tile/</link>
+      <link>http://localhost:1313/play/tile/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/play/tile/</guid>
-      <description>Vector tile library A vector pattern library mixin
-How to use  Download and reference tile.scss on your scss/sass flow summon mixin with @include tile($type, $color, $size) with:  $type (required) as any type below $color (optional) as pattern color $size (optional) as size (play around)     .cross-a .cross-b .cross-c   .dots-a .dots-b .dots-c   .grid   .lines-a .lines-b .lines-c   .lines-down-a .lines-down-b .</description>
+      <guid>http://localhost:1313/play/tile/</guid>
+      <description>&lt;h1&gt;Vector tile library&lt;/h1&gt;&#xA;&lt;p&gt;A vector pattern library mixin&lt;/p&gt;&#xA;&lt;h2&gt;How to use&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&#x9;&lt;li&gt;&lt;a href=&#34;https://gitlab.com/***REMOVED***.nyc/***REMOVED***.nyc.gitlab.io/-/raw/main/assets/css/tile.scss?ref_type=heads&amp;inline=false&#34;&gt;Download&lt;/a&gt; and reference &lt;tt&gt;tile.scss&lt;/tt&gt; on your &lt;tt&gt;scss/sass&lt;/tt&gt; flow&lt;/li&gt;&#xA;&#x9;&lt;li&gt;summon mixin with &lt;tt&gt;@include tile($type, $color, $size)&lt;/tt&gt; with:&#xA;&#x9;&#x9;&lt;ul&gt;&#xA;&#x9;&#x9;&#x9;&lt;li&gt;&lt;tt&gt;$type&lt;/tt&gt; (required) as any type below&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&lt;li&gt;&lt;tt&gt;$color&lt;/tt&gt; (optional) as pattern color&lt;/li&gt;&#xA;&#x9;&#x9;&#x9;&lt;li&gt;&lt;tt&gt;$size&lt;/tt&gt; (optional) as size (play around)&lt;/li&gt;&#xA;&#x9;&#x9;&lt;/ul&gt;&#xA;&#x9;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;section class=&#34;cross&#34;&gt;&#xA;&lt;h1&gt;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.cross-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.cross-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.cross-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&lt;section class=&#34;dots&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.dots-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.dots-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.dots-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&lt;section class=&#34;grid&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.grid&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&lt;section class=&#34;lines&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&lt;section class=&#34;lines-down&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-down-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-down-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-down-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&lt;section class=&#34;lines-up&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-up-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-up-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-up-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&lt;section class=&#34;lines-vert&#34;&gt;&#xA;&#xA;&lt;ul class=&#34;tile&#34;&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-vert-a&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-vert-b&lt;/span&gt;&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&lt;span&gt;.lines-vert-c&lt;/span&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/section&gt;&#xA;&lt;h2&gt;TODO&lt;/h2&gt;&#xA;&lt;p&gt;Some colors are not passsing on. Investigate.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>video scroll</title>
-      <link>https://***REMOVED***.nyc/play/video-scroll/</link>
+      <link>http://localhost:1313/play/video-scroll/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/play/video-scroll/</guid>
-      <description> html { scroll-behavior: smooth; } #video { position: fixed; height: 100vh; } .scroll-dummy { height: 3000px; max-width: 998px; padding: 20px; z-index: 1; }       var FRAMES = 148; var FPS = 30; var video = document.getElementById(&#39;video&#39;); window.addEventListener(&#39;scroll&#39;, function (e) { var time = (window.scrollY / 1000) * FRAMES / FPS; video.currentTime = time; console.log(time); }); window.addEventListener(&#39;load&#39;, function(e) { video.pause(); video.currentTime = 0; }); </description>
+      <guid>http://localhost:1313/play/video-scroll/</guid>
+      <description>&lt;style&gt;&#xA;  html {&#xA;    scroll-behavior: smooth;&#xA;  }&#xA;&#xA;  #video {&#xA;    position: fixed;&#xA;    height: 100vh;&#xA;  }&#xA;  .scroll-dummy {&#xA;    height: 3000px;&#xA;    max-width: 998px;&#xA;    padding: 20px;&#xA;    z-index: 1;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;  &lt;!-- partial:index.partial.html --&gt;&#xA;  &lt;!-- Ref https://www.reddit.com/r/javascript/comments/dolagh/apple_airpods_pro_page_uses_a_lot_of_images_so_i/ --&gt;&#xA;  &lt;div class=&#34;scroll-dummy&#34;&gt;&#xA;    &lt;video id=&#34;video&#34; width=&#34;300&#34;&gt;&#xA;      &lt;source src=&#34;http://localhost:1313/images/video.mp4&#34; type=&#34;video/mp4&#34;&gt;&#xA;      &lt;/video&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;script&gt;&#xA;      var FRAMES = 148;&#xA;      var FPS = 30;&#xA;      var video = document.getElementById(&#39;video&#39;);&#xA;&#xA;      window.addEventListener(&#39;scroll&#39;, function (e) {&#xA;        var time = (window.scrollY / 1000) * FRAMES / FPS;&#xA;        video.currentTime = time;&#xA;        console.log(time);&#xA;      });&#xA;&#xA;      window.addEventListener(&#39;load&#39;, function(e) {&#xA;        video.pause();&#xA;        video.currentTime = 0;&#xA;      });&#xA;    &lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>Zendegi</title>
-      <link>https://***REMOVED***.nyc/book/zendegi/</link>
+      <link>http://localhost:1313/book/zendegi/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/zendegi/</guid>
-      <description>Whittling the collection down would feel like a kind of revisionism
-  ‘Groundhog Cage’ she’d constructed that made thirty-day free-trial software think it was always on the first day of the trial
-  I want to see if I can ride the coattails of the distribution
-  So you’d be satisfied with passing as a low-affect psychopath, just so long as you don’t actually come across as brain-dead?</description>
+      <guid>http://localhost:1313/book/zendegi/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Whittling the collection down would feel like a kind of revisionism&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;‘Groundhog Cage’ she’d constructed that made thirty-day free-trial software think it was always on the first day of the trial&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;I want to see if I can ride the coattails of the distribution&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;So you’d be satisfied with passing as a low-affect psychopath, just so long as you don’t actually come across as brain-dead?&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;He actually had a ninety-minute layover, but he could never relax until he knew exactly where he had to be at departure time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Incomplete Nature</title>
-      <link>https://***REMOVED***.nyc/book/incomplete/</link>
+      <link>http://localhost:1313/book/incomplete/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/incomplete/</guid>
-      <description>How Mind Emerged from Matter  But it is not simply a many-to-one relationship; it is the mapping of a continuum to discrete states. Morphodynamic work shares one very significant attribute with thermodynamic work: the law of diminishing returns. As this tendency to complexity becomes amplified to a far greater extend when we consider the superimposition of teleodynamic processes. how the evolutionary process is able to mine the morphodynamic domain for these sorts of reciprocities and complementarities In general terms, an orthograde teleodynamic process is an end-directed process, and more specifically, one that will tend to occur spontaneously new teleodynamic systems and relationships are generated from the interactions of prior teleodynamic systems with respect to their shared environmental contexts teleodynamic processes because they are end-directed toward specific target states orthograde because they are what organism dynamics produce naturally and spontaneously Organisms are of course highly complicated synergistic constellations of teleodynamic processes But like other forms of work, teleodynamic work can also be used to transform one form of teleodynamic process into another, and to generate emergent phenomena at a higher order And since all ultimately depend on thermodynamic work, this is the final arbiter of teleodynamic success evolution is a kind of teleodynamic engine This shift of work up-level, so to speak, significantly decreases the total amount of thermodynamic work to achieve this end The diversity of forms of teleodynamic work is as extensive as the fields of biology, psychology, human social behavior, and all the arts combined.</description>
+      <guid>http://localhost:1313/book/incomplete/</guid>
+      <description>&lt;h2 id=&#34;how-mind-emerged-from-matter&#34;&gt;How Mind Emerged from Matter&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;But it is not simply a many-to-one relationship; it is the mapping of a continuum to discrete states.&lt;/li&gt;&#xA;&lt;li&gt;Morphodynamic work shares one very significant attribute with thermodynamic work: the law of diminishing returns. As this tendency to complexity becomes amplified to a far greater extend when we consider the superimposition of teleodynamic processes.&lt;/li&gt;&#xA;&lt;li&gt;how the evolutionary process is able to mine the morphodynamic domain for these sorts of reciprocities and complementarities&lt;/li&gt;&#xA;&lt;li&gt;In general terms, an orthograde teleodynamic process is an end-directed process, and more specifically, one that will tend to occur spontaneously&lt;/li&gt;&#xA;&lt;li&gt;new teleodynamic systems and relationships are generated from the interactions of prior teleodynamic systems with respect to their shared environmental contexts&lt;/li&gt;&#xA;&lt;li&gt;teleodynamic processes because they are end-directed toward specific target states&lt;/li&gt;&#xA;&lt;li&gt;orthograde because they are what organism dynamics produce naturally and spontaneously&lt;/li&gt;&#xA;&lt;li&gt;Organisms are of course highly complicated synergistic constellations of teleodynamic processes&lt;/li&gt;&#xA;&lt;li&gt;But like other forms of work, teleodynamic work can also be used to transform one form of teleodynamic process into another, and to generate emergent phenomena at a higher order&lt;/li&gt;&#xA;&lt;li&gt;And since all ultimately depend on thermodynamic work, this is the final arbiter of teleodynamic success&lt;/li&gt;&#xA;&lt;li&gt;evolution is a kind of teleodynamic engine&lt;/li&gt;&#xA;&lt;li&gt;This shift of work up-level, so to speak, significantly decreases the total amount of thermodynamic work to achieve this end&lt;/li&gt;&#xA;&lt;li&gt;The diversity of forms of teleodynamic work is as extensive as the fields of biology, psychology, human social behavior, and all the arts combined.&lt;/li&gt;&#xA;&lt;li&gt;One important contribution of this perspective is that it untangles the notion of causal power from undifferentiated notions of causality&lt;/li&gt;&#xA;&lt;li&gt;their status as sources of work, that is, the production of non-spontaneous change in some conditions&lt;/li&gt;&#xA;&lt;li&gt;Debates concerning the status of human conscious agency are about the proper locus of this causal power.&lt;/li&gt;&#xA;&lt;li&gt;Although the fundamental constants and laws of physics do not change, and there is no gain or loss of mass-energy during any physical transformation process, there can be quite significant alterations in the organizational nature of causal processes.&lt;/li&gt;&#xA;&lt;li&gt;work can restructure the constraints acting as boundary conditions that determine what patterns of change will be orthograde in some other linked system.&lt;/li&gt;&#xA;&lt;li&gt;universe is closed to gain or loss of mass-energy and the most basic level of formal causality is unchanging, but it is open to organizational constraints on formal cause and the introduction of novel forms of efficient cause&lt;/li&gt;&#xA;&lt;li&gt;This difficulty may be mitigated by recasting this notion of power in terms of teleodynamic work&lt;/li&gt;&#xA;&lt;li&gt;In cognitive terms, orthograde teleodynamic processes may be expressed as goal-directed innate adaptive behaviors, spontaneous emotional tendencies, learned unconscious patterns of behavior, stream-of-consciousness word associations, and so forth&lt;/li&gt;&#xA;&lt;li&gt;the ability to discern whether methods and concepts developed in different scientific contexts are transferable in more than merely analogous forms&lt;/li&gt;&#xA;&lt;li&gt;with the emergence of new forms of work, the causal organization of the world changes fundamentally, even though the basic laws of nature remain the same&lt;/li&gt;&#xA;&lt;li&gt;higher-order forms of teleodynamic processes&lt;/li&gt;&#xA;&lt;li&gt;This is the essence of emergence, and the creative explosion it unleashes.&lt;/li&gt;&#xA;&lt;li&gt;Claude Shannon&lt;/li&gt;&#xA;&lt;li&gt;whose understanding of energy was still laboring under the inadequate and ultimately fallacious conception of ethereal substances&lt;/li&gt;&#xA;&lt;li&gt;Even though energy was a defining concept of the early nineteenth century, the development of a relational rather than substantive concept of energy took many decades of scientific inquiry to clarify&lt;/li&gt;&#xA;&lt;li&gt;The concept of energy was ultimately tamed by recognizing that it was a quite general sort of physical difference, which could be embodied in any of many possible substrates (heat, momentum, magnetic attraction, chemical bonds, etc.), and which could give rise to non-spontaneous change if able to interact with another physical substrate&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Schilds Ladder</title>
-      <link>https://***REMOVED***.nyc/book/schilds-ladder/</link>
+      <link>http://localhost:1313/book/schilds-ladder/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/schilds-ladder/</guid>
-      <description>&amp;ldquo;I&amp;rsquo;m the quintessential singleton,&amp;rdquo; Cass replied. &amp;ldquo;I weigh up all my choices very carefully.&amp;rdquo;  April 30, 2016   Every viewpoint was a compromise, but she had to be as close as she could get.  May 1, 2016   What was the worst that one of these transient selves might do?  May 1, 2016   endless varieties of suffering, endless varieties of stupidity, endless varieties of banality.</description>
+      <guid>http://localhost:1313/book/schilds-ladder/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;I&amp;rsquo;m the quintessential singleton,&amp;rdquo; Cass replied. &amp;ldquo;I weigh up all my choices very carefully.&amp;rdquo;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;April 30, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Every viewpoint was a compromise, but she had to be as close as she could get.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;What was the worst that one of these transient selves might do?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;endless varieties of suffering, endless varieties of stupidity, endless varieties of banality.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;If Rainzi&amp;rsquo;s eyes still seemed kind to her, after five years, wasn&amp;rsquo;t that because he&amp;rsquo;d shown her genuine kindness?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;This was not the time for paranoid delusions about the unknowable mind behind the mask.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;other self would wake, watch the whole event unfold in slow motion, bifurcate a million times, then vanish&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;She would have to make do with whatever glimpses she could steal.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;she still had no hope of perceiving them as they perceived themselves.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;a translation interacting with a simulation&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Anything else was both futile and a kind of masochistic doublecounting&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;what&amp;rsquo;s the simplest way to reconcile the contradictions?&amp;quot;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;She was perceiving the danger a billion times more clearly than she could ever have hoped to if she&amp;rsquo;d been embodied.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whoever first gains the power to impose their own view decides the issue? Isn&amp;rsquo;t that the definition of barbarism?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;an ancient principle known as Lorentz invariance, dating back to the abolition of the aether&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 1, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Kähler manifold&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;I was moved around a lot when I was young, to keep my perceptions flexible.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Imagining that you need to float through every last abstract space that shows up in a physics problem is just being literal-minded.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;but spur-of-the-moment bickering in a confined space wasn&amp;rsquo;t his idea of productive disharmony.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;It would take a cosmic disaster even larger than Mimosa to rob him of more than a few minutes&amp;rsquo; memories&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;under the circumstances he was more than happy to let instincts predicated on absolute life and death come to the fore and do their best to protect him.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Transcendence was a content-free word left over from religion&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;It was probably an appealing notion if you were so lazy that you&amp;rsquo;d never actually learned anything about the universe you inhabited, and couldn&amp;rsquo;t quite conceive of putting in the effort to do so&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;so long as they can keep the same algorithms ticking over&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Quickly! Give your Exoself this code.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 2, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;there was no point asking her for assurances; at best, that would only offend her, and at worst it might tempt her to act out his fears.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 4, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;This was the first thing he&amp;rsquo;d done since he&amp;rsquo;d joined her that wasn&amp;rsquo;t part of some complicated strategy to please her, or confound her.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 4, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;, he would probably have asked his Mediator to plead on his behalf for their attention.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 4, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;doing quantum mechanics with these arbitrary borders thrown in&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 4, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;What creates the illusion of classical mechanics is our inability to keep track of every aspect of a quantum system&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They apply to systems that have not been rendered classical by decoherence&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;How could I not be curious? It&amp;rsquo;s what flesh is famous for. However undeservedly&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;You&amp;rsquo;ve mapped some stable mammalian neurobiology, and it&amp;rsquo;s not too pathological in its original form.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;pleasure for its own sake is a very uninteresting cul-de-sac&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 7, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Tchicaya struggled to think of a way to deflect the inquiry without piquing Yann&amp;rsquo;s curiosity further&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 7, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;This is really what the anachronauts expected? No progress, no happiness, no success, no harmony? Just the worst excesses of their own sordid history, repeated over and over for millennia?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 7, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;She smiled. &amp;ldquo;I&amp;rsquo;m sorry, but that&amp;rsquo;s because you are.&amp;rdquo;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Planck-scale biota&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;vendekobiology&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;we don&amp;rsquo;t know that these things are primeval , we just know that they seem to be ubiquitous&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;In most multicellular creatures, all the cells in all the tissues share their full genome, with different parts of it switched on and off.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;How did you sweep our Augean stables clean?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;when the entire discussion was guaranteed to revolve around a mixture of procedural issues and mutual paranoia.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Tchicaya hasn&amp;rsquo;t smeared himself in goat fat yet, so it&amp;rsquo;ll have to be me.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 8, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Life does not arise easily in a universe of vacuum.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 9, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;He instructed his Exoself to calm his body; whatever sense of urgency he&amp;rsquo;d managed to convey by allowing his stress hormones free reign, the effect had either succeeded or failed by now&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 9, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;spies would probably only share that knowledge with people who would not be swayed by it.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 9, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Yeah, yeah. You&amp;rsquo;re a battered old creature, on the verge of slipping out of sentience into senility. But I think I can drag you back from the brink&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 10, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;If you have scars, I&amp;rsquo;ll kiss them away&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 10, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Bodies like the Rindler &amp;rsquo;s had plenty of neurons in reserve, since the precise delegation of tasks between the digital components and the central nervous system varied widely from culture to culture.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;This was the first time in his life that he&amp;rsquo;d begun a conversation with a stranger without the ground being prepared in advance, without two Mediators conspiring to bridge the gap.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;You&amp;rsquo;ll outlive the stars, if you want to.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;If you live long enough, you get to compromise on everything&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;I don&amp;rsquo;t want to start pretending that I&amp;rsquo;m inhabiting your body. Since I can&amp;rsquo;t actually control it, that would just make me feel trapped&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;As local deaths went, he&amp;rsquo;d had worse.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;We&amp;rsquo;re not in the near side anymore. Coherence is nowhere near as fragile here.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;We reach out and swallow the problem; we internalize it completely. Then we can bludgeon our way through by trial and error, without the world ever seeing a single mistake.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 11, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Then it would release the resulting superposition into the depths of the far side, and wait for the reply that would enable it to erase all its failures.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;from the inside, each part of the state vector that described your mind experiencing something definite simply had that one, definite experience.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Sweeping principles of homogeneity were wishful thining here.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;the excitement of the changes that had percolated up from nowhere.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;the excitement of the changes that had percolated up from nowhere.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;All they could do now was keep on climbing Schild&amp;rsquo;s ladder.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;when you eat for the sake of eating, you&amp;rsquo;re infecting yourself.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;All food works like yogurt&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Humans had been nothing but a colony of specialized cells&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 12, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The less catharsis I can get these days, the better.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 13, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Students will curse our names. What more can anyone hope for?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 13, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;We don&amp;rsquo;t even know the difference between their communications signals and their waste products&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 13, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Decoherence and the Appearance of a Classical World in Quantum Theory&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 14, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Supersizing the mind</title>
-      <link>https://***REMOVED***.nyc/book/supersizing/</link>
+      <link>http://localhost:1313/book/supersizing/</link>
       <pubDate>Wed, 29 Jan 2020 18:03:16 -0500</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/supersizing/</guid>
-      <description>Embodiment, Action, and Cognitive Extension  This is the thesis of the extended mind: when parts of the environment are coupled to the brain in the right way, they become parts of the mind. Parity Principle, which held that if aprocess in the world works in a way that we should count as a cognitive process if it were done in the head, then we should count it as a cognitive process all the same.</description>
+      <guid>http://localhost:1313/book/supersizing/</guid>
+      <description>&lt;h2 id=&#34;embodiment-action-and-cognitive-extension&#34;&gt;Embodiment, Action, and Cognitive Extension&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This is the thesis of the extended mind: when parts of the environment are coupled to the brain in the right way, they become parts of the mind.&lt;/li&gt;&#xA;&lt;li&gt;Parity Principle, which held that if aprocess in the world works in a way that we should count as a cognitive process if it were done in the head, then we should count it as a cognitive process all the same.&lt;/li&gt;&#xA;&lt;li&gt;What about extended desires, extended reasoning, extended perception, extended imagination, and extended emotions?&lt;/li&gt;&#xA;&lt;li&gt;direct access to information on an extremely high bandwidth.&lt;/li&gt;&#xA;&lt;li&gt;network as a mental state, then there is a presumption of mntality, one that can only be defeated by displaying a relevant difference between&lt;/li&gt;&#xA;&lt;li&gt;language itself as a form of mind-transforming cognitive scaffolding: a persisting, though never stationary, symbolic edifice whose critical role in promoting thought and reason remains surprisingly ill understood.&lt;/li&gt;&#xA;&lt;li&gt;loosen the bonds between perception and action.&lt;/li&gt;&#xA;&lt;li&gt;The act of labeling thus alters the computatioal burdens imposed by certain kinds of problems.&lt;/li&gt;&#xA;&lt;li&gt;Linguistic labels, on this view, are tools for grouping and in this sense act much like real spatial reorganization.&lt;/li&gt;&#xA;&lt;li&gt;experience with tags and labels warps and reconfi gures the problem spaces for the cognitive engine.&lt;/li&gt;&#xA;&lt;li&gt;phonetic or spatial sequence of symbolic encodings to stand proxy for the temporal sequence of acts.&lt;/li&gt;&#xA;&lt;li&gt;behavioral self-scaffoldin&lt;/li&gt;&#xA;&lt;li&gt;Experts, I argued, are douly expert. They are expert at the task in hand but also expert at using well-chosen linguistic prompts and reminders to maintain performance in the face of adversity.&lt;/li&gt;&#xA;&lt;li&gt;linguistic tools enable us to deliberately and systematically sculpt and modify our own proesses of selective attention.&lt;/li&gt;&#xA;&lt;li&gt;“instructional nuges” (small strings of words, simple maxims). Such nudges, Sutton argues, are often best employed not by the novice but by the expert, who can use them to tune and modulate highly learned forms of embodied performance.4&lt;/li&gt;&#xA;&lt;li&gt;Agents’ linguistic abilities, the researchers concluded, are indeed actively involved in their ability to solve problems requiring the integration of geometric and nongeometric information.&lt;/li&gt;&#xA;&lt;li&gt;The exact tasks show signifi cant activity in the speech-related areas of the left frontal lobe, while the approximate tasks recruit bilateral areas of the parietal lobes implicated in visuospatial reasoning.&lt;/li&gt;&#xA;&lt;li&gt;language as complementary to more basic forms of neural processing&lt;/li&gt;&#xA;&lt;li&gt;coordination dynamic&lt;/li&gt;&#xA;&lt;li&gt;Words and linguisticstrings are among the most powerful and basic tools we use to discipline and stabilize dynamic processes of reason and recall.&lt;/li&gt;&#xA;&lt;li&gt;seeing them as inputs (whether externally or internally generated) that drive, sculpt, and discipline the internal representational regime.&lt;/li&gt;&#xA;&lt;li&gt;Rather than putting word knowledgeinto a passive storage (which then entails mechanisms by which that knowledge can be “accessed,” “retrieved,” “integrated” etc.) words might be thought of in the same way that one thinks of other kinds of sensory stimuli: they act directly on mental states.&lt;/li&gt;&#xA;&lt;li&gt;Words and sentences act as artifi cial input signal&lt;/li&gt;&#xA;&lt;li&gt;along reliable and useful trajectories&lt;/li&gt;&#xA;&lt;li&gt;learning, of recall, of representation and of selective attention&lt;/li&gt;&#xA;&lt;li&gt;attention, memory, and control&lt;/li&gt;&#xA;&lt;li&gt;It’s quite likely that Mentalese co-opts bits of natural language in all sorts of ways;&lt;/li&gt;&#xA;&lt;li&gt;the potential cognitive impact of a little hybridity and co-opting may be much greaterthan Fodor concedes.&lt;/li&gt;&#xA;&lt;li&gt;mind expansion by the use of hybrid representational forms&lt;/li&gt;&#xA;&lt;li&gt;exposure to language as installing a new virtual serial mchine in the neural wetware by affecting “myriad microsettings in the plasticity of the brain”&lt;/li&gt;&#xA;&lt;li&gt;it must be possible to represent syntactically structured language without using syntactically structured representations to do so (just as it is possible to represent green objects without using green representations to do so).&lt;/li&gt;&#xA;&lt;li&gt;minds like ours are trasformed by the web of material symbols and epistemic artifacts.&lt;/li&gt;&#xA;&lt;li&gt;would be good to have a clear account of just what attention—that crucial variable tha linguistic scaffolding seems so potently to adjust—actually is.&lt;/li&gt;&#xA;&lt;li&gt;By second-order cognitive dynamics, I mean a cluster of powerful capacities involving refl ection on our own thoughts and thought processes.&lt;/li&gt;&#xA;&lt;li&gt;critical self-reflection&lt;/li&gt;&#xA;&lt;li&gt;For (to rehearse a line ursued at length in Clark 1998a) as soon as we formulate a thought in words or on paper, it becomes an object for both ourselves and for others. As an object, it is the kind of thing we can have thoughts about. In creating the object, we need have no thoughts about thoughts, but once it is there, the opportunity immediately exists to attend to it as an object in its own right.&lt;/li&gt;&#xA;&lt;li&gt;This positions language to act as a kind of cognitive superniche: a cognitive niche, one of whose greatest virtues is to allow us to construct (“with malice aforethought,” as Fodor 1994, rather elegantly puts it) an open-ended sequence of new cognitive niches.&lt;/li&gt;&#xA;&lt;li&gt;our cognitive relation to our own words and language both as individuals and as a species) defies any simple logic of inner versus outer.&lt;/li&gt;&#xA;&lt;li&gt;But they then form a potent overay that effectively, and iteratively, reconfi gures the space for biological reason and self-control.&lt;/li&gt;&#xA;&lt;li&gt;We do not just self-engineer beter worlds to think in. We self-engineer ourselves to think and perform better in the worlds we fi nd ourselves in. We self-engineer worlds in which to build better worlds to think in.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>The Dispossessed</title>
-      <link>https://***REMOVED***.nyc/book/dispossessed/</link>
+      <link>http://localhost:1313/book/dispossessed/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/dispossessed/</guid>
-      <description>If the foreman had no experience in bossing a mob, they had no experience in being one.  December 24, 2016   A stone lay there. It was dark like the wall, but on it, or inside it, there was a number; and 5 he thought at first, then took it for 1 then understood what it was—the primal number, that was both unity and plurality. “That is the cornerstone  May 6, 2017   if I’m the prisoner, I can’t decide.</description>
+      <guid>http://localhost:1313/book/dispossessed/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;If the foreman had no experience in bossing a mob, they had no experience in being one.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;December 24, 2016&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;A stone lay there. It was dark like the wall, but on it, or inside it, there was a number; and 5 he thought at first, then took it for 1 then understood what it was—the primal number, that was both unity and plurality. “That is the cornerstone&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;if I’m the prisoner, I can’t decide. I’m not free. You have to decide when to let me out.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They were not playing the new role now, it was playing them&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Every time he looked into his mind there was Kadagv in it. It was disgusting.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Forbidden? Nonorganic word. Who forbids? You’re externalizing the integrative function itself&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Their central function wasn’t being wasted. They were working: doing what they wanted to do. He was not working. He was being worked.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Having’s wrong; sharing’s right.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Beshun, expert in delight, took him into the heart of sexuality, where there is no rancor and no ineptitude, where the two bodies striving to join each other annihilate the moment in&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They were overintellectual. They didn’t seem to want to commit themselves either to work or to sex.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Uninfluenced by others, he never knew he influenced them; he had no idea they liked him.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;blunt self-assurance of one accustomed to respect.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;except for Atro, who had outlived intensity.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The idea is like grass. It craves light, likes crowds, thrives on crossbreeding, grows better for being stepped on.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 6, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They are a coordinating system for all syndicates, do not govern persons; they administer production. They have no authority either to support me or to prevent me. They can only tell us the public opinion of us—where we stand in the social conscience. That’s what you want to know?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 15, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;not organized federatively but hierarchically, from the top down.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 16, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;He had assumed that if you removed a human being’s natural incentive to work—his initiative, his spontaneous creative energy—and replaced it with external motivation and coercion, he would become a lazy and careless worker&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 16, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The explorer who will not come back or send back his ships to tell his tale is not an explorer, only an adventurer, and his sons are born in exile.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 17, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;It is hard, however, for people who have never paid money for anything to understand the psychology of cost, the argument of the marketplace. Seven generations of peace had not brought trust.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 17, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;they held to the ideal of complex organicism. They built the roads first, the houses second&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 17, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;And from the start the Settlers were aware that that unavoidable centralization was a lasting threat, to be countered by lasting vigilance.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 17, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;O child Anarchia, infinite promise&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 17, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“Excess is excrement,” Odo wrote in the Analogy. “Excrement retained in the body is a poison.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 21, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;There were no disguises and no advertisements. It was all there, all the work, all the life of the city, open to the eye and to the hand.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 21, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Privilege is responsibility. Correct?”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 21, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;If you found a pack of explosive caps in the street would you ‘share’ them with every kid that went by? Those books are explosives. Now do you follow me?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 21, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Did such people actually exchange ideas with free people in a nonaggressive, voluntary manner?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 21, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;But for those who accepted the privilege and obligation of human solidarity, privacy was a value only where it served a function.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Lack of physical labor, lack of variety of occupation, lack of social and sexual intercourse, none of these appeared to him as lacks, but as freedom&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The universe as a giant harpstring, oscillating in and out of existence!&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Can true function arise from basic dysfunction?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“Stop egoizing,” the doctor said. “Roll over.” Shevek obeyed.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They play dominance games there.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;I confess to being proud of you. That’s strange, isn’t it? Unreasonable. Propertarian, even.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;But as one gets older one needs certain reassurances that aren’t, always, entirely reasonable. In order to go on at all.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“It might have been better,” he said, “if you’d gone on thinking of me as a statistic too.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“I suppose,” she said, “that I was trying to make a claim on you. But I thought in terms of your making a claim on me. If you wanted to.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 23, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;When you are on the bottom, you must organize from the bottom up!&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Their society maintained them in complete freedom from want, distractions, and cares.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;It appeared to Shevek that their freedom from obligation was in exact proportion to their lack of freedom of initiative.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;He was appalled by the examination system, when it was explained to him; he could not imagine a greater deterrent to the natural wish to learn than this pattern of cramming in information and disgorging it at demand.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;In feudal times the aristocracy had sent their sons to university, conferring superiority on the institution. Nowadays it was the other way round: the university conferred superiority on the man.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;all the operations of capitalism were as meaningless to him as the rites of a primitive religion&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;everything either useless to begin with or ornamented so as to disguise its use;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;All the people in all the shops were either buyers or sellers. They had no relation to the things but that of possession.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 24, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“Pae is a pretty good physicist And very obliging. But I don’t trust him.” “Why not?” “Well . . . he evades.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 25, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;your habit of approaching everybody as a person, an&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 25, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;They think if people can possess enough things they will be content to live in prison.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 25, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;“To make a thief, make an owner; to create crime, create laws. The Social Organism.”&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 25, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;There’s a great deal that’s admirable, I’m sure, in your society, but it doesn’t teach you to discriminate—which is after all the best thing civilization teaches&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 31, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;No distinction was drawn between the arts and the crafts; art was not considered as having a place in life, but as being a basic technique of life, like speech.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 31, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;He copulated with a number of girls, but copulation was not the joy it ought to be. It was a mere relief of need, like evacuating, and he felt ashamed of it afterward because it involved another person as object.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 31, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;As a functions analyst I must point out that there is no need for orange. Orange serves no vital function in the social organism at either the cellular or the organic level, and certainly not at the holorganismic or most centrally ethical level&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 31, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;He hasn’t had a thought of his own for twenty years. Or a bath.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;May 31, 2017&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Angel Tech</title>
-      <link>https://***REMOVED***.nyc/book/angeltech/</link>
+      <link>http://localhost:1313/book/angeltech/</link>
       <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/angeltech/</guid>
-      <description>Undoing Yourself with Energized Meditation and Other Devices  the principle of Consciousness itself, which, like the god Hermes. . .travels between worlds without becoming residential to any of them.
- September 25, 2014
- Angel Tech was constructed much like a can-opener. What it describes is secondary to what it opens up as it reads
- September 25, 2014
- utter benevolence and surgical precision by which Life expresses itself through us</description>
+      <guid>http://localhost:1313/book/angeltech/</guid>
+      <description>&lt;h2 id=&#34;undoing-yourself-with-energized-meditation-and-other-devices&#34;&gt;Undoing Yourself with Energized Meditation and Other Devices&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the principle of Consciousness itself, which, like the god Hermes. . .travels between worlds without becoming residential to any of them.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;September 25, 2014&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Angel Tech was constructed much like a can-opener. What it describes is secondary to what it opens up as it reads&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;September 25, 2014&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;utter benevolence and surgical precision by which Life expresses itself through us&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Angel Tech</title>
-      <link>https://***REMOVED***.nyc/curva/circular-01/</link>
+      <link>http://localhost:1313/curva/circular-01/</link>
       <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/curva/circular-01/</guid>
-      <description>Undoing Yourself with Energized Meditation and Other Devices  the principle of Consciousness itself, which, like the god Hermes. . .travels between worlds without becoming residential to any of them.
- September 25, 2014
- Angel Tech was constructed much like a can-opener. What it describes is secondary to what it opens up as it reads
- September 25, 2014
- utter benevolence and surgical precision by which Life expresses itself through us</description>
+      <guid>http://localhost:1313/curva/circular-01/</guid>
+      <description>&lt;h2 id=&#34;undoing-yourself-with-energized-meditation-and-other-devices&#34;&gt;Undoing Yourself with Energized Meditation and Other Devices&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the principle of Consciousness itself, which, like the god Hermes. . .travels between worlds without becoming residential to any of them.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;September 25, 2014&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Angel Tech was constructed much like a can-opener. What it describes is secondary to what it opens up as it reads&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;September 25, 2014&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;utter benevolence and surgical precision by which Life expresses itself through us&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>O Que o Cérebro Tem Para Contar</title>
-      <link>https://***REMOVED***.nyc/book/cerebro/</link>
+      <link>http://localhost:1313/book/cerebro/</link>
       <pubDate>Sun, 29 Apr 2007 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/book/cerebro/</guid>
-      <description>Desvendando os Mistérios da Natureza Humana  Durante a maior parte do século XX, tudo o que tínhamos a oferecer em matéria de explicação do comportamento humano eram dois edifícios teóricos &amp;gt; o freudismo e o behaviorismo
- 30 de outubro de 2016
- em sistemas biológicos há uma profunda unidade entre estrutura, função e origem. Não se pode fazer muito progresso na compreensão de qualquer desses aspectos a menos que se esteja também rigorosamente atento aos outros dois.</description>
+      <guid>http://localhost:1313/book/cerebro/</guid>
+      <description>&lt;h2 id=&#34;desvendando-os-mistérios-da-natureza-humana&#34;&gt;Desvendando os Mistérios da Natureza Humana&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Durante a maior parte do século XX, tudo o que tínhamos a oferecer em matéria de explicação do comportamento humano eram dois edifícios teóricos &amp;gt; o freudismo e o behaviorismo&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;30 de outubro de 2016&lt;/em&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;em sistemas biológicos há uma profunda unidade entre estrutura, função e origem. Não se pode fazer muito progresso na compreensão de qualquer desses aspectos a menos que se esteja também rigorosamente atento aos outros dois.&lt;/p&gt;</description>
     </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/2025-01-06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/2025-01-06/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/adding-members-to-server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/adding-members-to-server/</guid>
-      <description>daddy  Tell them you&amp;rsquo;re adding them Get their email Set tailscale: share email to both ai server and daddy Create komga user under same email, digital11 password Set permissions to comics only Create jellyfin user as same email minus @, digital11 password Set permissions to everything but picture ones Send them a message:   komga: http://daddy.adal-rigel.ts.net:25600/ (for comics) login: the email you just sent me password digital11
-  jellyfin:http://daddy.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/al-services-alignment-for-pi4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/al-services-alignment-for-pi4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/al-enriched-creativity-priorities-and-alignment-for-pi4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/al-enriched-creativity-priorities-and-alignment-for-pi4/</guid>
-      <description>Al Studio feedback: Added vale use cases
- Content Creation and Summarization Writing introductions for eBooks. Proposal Writing and Productivity Summarizing research articles. Streamlining proposal drafting processes. Generating keywords for literature searches. Reducing time spent on initial drafts and repetitive tasks. Event and Project Planning 6. Content Formats and Outputs Proposal development for new projects (e.g., podcasts, webinars). Assisting in creating outlines for infographics and video Preparing targeted speaker questions for events.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/anytype.20250206.110122.57/apoorvas-product-operating-model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/anytype.20250206.110122.57/apoorvas-product-operating-model/</guid>
-      <description>Apoorva&amp;rsquo;s Product Operating Model Principles e2e goal is to turn now-verticals into organs of this e2e superorganism.
-an organ is a hyper-specialized adaptation, relegating redundant functions to an organism, and becoming dependent of it.
-&amp;ldquo;streamilined approach&amp;rdquo; is the end-result of a successful de-verticalization
-Platforms power products: YES! platforms are the shadow policies that products grow from, when needed.
-Product-driven sales, not sales-driven product: YES! Wiley is too reactive, just working on what&amp;rsquo;s asked of them, based on requests or hunches.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/component-checklist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/component-checklist/</guid>
-      <description>#wiley #designsystem
-Checklist for high definition component deliverables
-Isolate component on its own Figma file, so it&amp;rsquo;s easy to reference
-What is the component name? Does it follow MUI conventions?
-Link to documentation
-What are the states it needs?
-default
-error
-alert
-success
-no connection
-empty
-complete
-If interactive:
-Disabled
-Hover
-Focus
-Accessibility and other checks:
-labels (for groups, and any visual-only object)
-Keyboard navigation
-WCAG contrast
-smaller screens
-Is copy reviewed by responsible party?</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/storybook-as-design-system/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/storybook-as-design-system/</guid>
-      <description>#wiley #designsystem
-Here&amp;rsquo;s my initial list on how to migrate from Figma to storybook for design Deliverables. It has nothing to do with the &amp;quot; exploded view&amp;quot; work, it&amp;rsquo;s just an exploration of the possibilities ahead of us, after design system is stable enough.
-  Consistent Sandbox Access: Provide a consistent, accessible sandbox link for non-developers across the company. Treat Text Content as Components: Manage object names, button labels, and descriptions as components to ensure consistency.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://***REMOVED***.nyc/work/storybook-kickoff/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/work/storybook-kickoff/</guid>
-      <description>#wiley #designsystem #meetingnotes
-I just had a conversation with some of the UAXD dev team, to discuss storybook. Our findings are:
- the goal is to slowly move source of truth from figma to storybook, thinking agile, one component at the time we have 3 &amp;ldquo;projects&amp;rdquo; to test  documentation (after devs surface component, we add a layer of documentation on top of it. Fernanda will help me to install a local version, and we&amp;rsquo;ll discuss here audience, template, etc) component subscription (the code level of alignment, where products simply subscribe to a component version instead of building it themselves.</description>
-    </item>
-    
-    <item>
-      <title>MCON: The Switchblade of Mobile Controllers | By Ohsnap</title>
-      <link>https://***REMOVED***.nyc/clippings/mcon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/clippings/mcon/</guid>
-      <description>With console-level precision and effortless portability, the MCON transforms your smartphone into a gaming powerhouse. Play Now.
-Hey, we’re Ohsnap! We’re a North Carolina-based mobile accessory brand driven to find better ways to use your phone. We’re known for creating ultra-functional, ultra-thin phone grips with a focus on premium materials and usability. We already have 6 previous successful crowdfunding campaigns (3 on Kickstarter, 3 on Indiegogo), each of which has been fulfilled on schedule.</description>
-    </item>
-    
   </channel>
 </rss>
