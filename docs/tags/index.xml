@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Nicholas Frota</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://***REMOVED***.nyc/tags/</link>
     <description>Recent content in Tags on Nicholas Frota</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://***REMOVED***.nyc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Photo</title>
-      <link>http://localhost:1313/tags/photo/</link>
+      <link>https://***REMOVED***.nyc/tags/photo/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/photo/</guid>
+      <guid>https://***REMOVED***.nyc/tags/photo/</guid>
       <description></description>
     </item>
     <item>
       <title>Procreate</title>
-      <link>http://localhost:1313/tags/procreate/</link>
+      <link>https://***REMOVED***.nyc/tags/procreate/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/procreate/</guid>
+      <guid>https://***REMOVED***.nyc/tags/procreate/</guid>
       <description></description>
     </item>
     <item>
       <title>Realistic</title>
-      <link>http://localhost:1313/tags/realistic/</link>
+      <link>https://***REMOVED***.nyc/tags/realistic/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/realistic/</guid>
+      <guid>https://***REMOVED***.nyc/tags/realistic/</guid>
       <description></description>
     </item>
   </channel>
