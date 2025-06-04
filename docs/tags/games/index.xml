@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>games on Nicholas Frota</title>
-    <link>https://***REMOVED***.nyc/tags/games/</link>
-    <description>Recent content in games on Nicholas Frota</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://***REMOVED***.nyc/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    <title>Games on Nicholas Frota</title>
+    <link>http://localhost:1313/tags/games/</link>
+    <description>Recent content in Games on Nicholas Frota</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/games/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MCON: The Switchblade of Mobile Controllers | By Ohsnap</title>
-      <link>https://***REMOVED***.nyc/clippings/mcon/</link>
+      <link>http://localhost:1313/clippings/mcon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://***REMOVED***.nyc/clippings/mcon/</guid>
-      <description>With console-level precision and effortless portability, the MCON transforms your smartphone into a gaming powerhouse. Play Now.
-Hey, we’re Ohsnap! We’re a North Carolina-based mobile accessory brand driven to find better ways to use your phone. We’re known for creating ultra-functional, ultra-thin phone grips with a focus on premium materials and usability. We already have 6 previous successful crowdfunding campaigns (3 on Kickstarter, 3 on Indiegogo), each of which has been fulfilled on schedule.</description>
+      <guid>http://localhost:1313/clippings/mcon/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://i.kickstarter.com/assets/047/647/608/ec4a824863cc68da2ee3177df2f623d7_original.jpg?fit=scale-down&amp;amp;origin=ugc&amp;amp;q=92&amp;amp;v=1734981471&amp;amp;width=680&amp;amp;sig=gbCUIMXtEEl0CNFRsNCrG5TTIZYUESn5OJwdN6a8rEM%3D&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.kickstarter.com/assets/047/691/772/fa8c161c5c2c819bcdf9f30e8e4827b2_original.gif?anim=false&amp;amp;fit=scale-down&amp;amp;origin=ugc&amp;amp;q=92&amp;amp;v=1735594786&amp;amp;width=680&amp;amp;sig=Zcn6KjnUj4B%2FLvSbizg0MiQ%2FqUworzlkPheCEKrOntU%3D&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;With console-level precision and effortless portability, the MCON transforms your smartphone into a gaming powerhouse. Play Now.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.kickstarter.com/assets/047/647/464/2d3808ecbdb3f16f0701c039a143af8a_original.png?fit=scale-down&amp;amp;origin=ugc&amp;amp;q=92&amp;amp;v=1734980329&amp;amp;width=4804&amp;amp;sig=hgXLI%2BFUpVnYKYt4uVh0LSjV4y0xK9b%2Flg65RG98zEw%3D&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Hey, we’re Ohsnap! We’re a North Carolina-based mobile accessory brand driven to find better ways to use your phone. We’re known for creating ultra-functional, ultra-thin phone grips with a focus on premium materials and usability. &lt;/p&gt;&#xA;&lt;p&gt;We already have 6 previous successful crowdfunding campaigns (3 on Kickstarter, 3 on Indiegogo), each of which has been fulfilled on schedule. With a focus on clear communication and quick resolution of any issues, we’ve reached a total of over 80,000 backers on crowdfunding sites, and over 1M customers on our own store.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
