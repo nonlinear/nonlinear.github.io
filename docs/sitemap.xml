@@ -80,22 +80,25 @@
     <loc>https://***REMOVED***.nyc/book/being/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/focus-test/</loc>
+    <loc>https://***REMOVED***.nyc/card/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/</loc>
+    <loc>https://***REMOVED***.nyc/card/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/gallery-scroll/</loc>
+    <loc>https://***REMOVED***.nyc/card/3dcarousel/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/test/</loc>
+    <loc>https://***REMOVED***.nyc/card/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/tile/</loc>
+    <loc>https://***REMOVED***.nyc/card/test/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://***REMOVED***.nyc/play/video-scroll/</loc>
+    <loc>https://***REMOVED***.nyc/card/tile/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.nyc/card/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://***REMOVED***.nyc/book/zendegi/</loc>
