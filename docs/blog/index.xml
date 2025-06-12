@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Nicholas Frota</title>
-    <link>https://***REMOVED***.nyc/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on Nicholas Frota</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://***REMOVED***.nyc/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Best Animes</title>
-      <link>https://***REMOVED***.nyc/blog/anime/</link>
+      <link>http://localhost:1313/blog/anime/</link>
       <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://***REMOVED***.nyc/blog/anime/</guid>
-      <description>&lt;h2 id=&#34;frieren&#34;&gt;Frieren&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://***REMOVED***.nyc/blog/Frieren_anime_profile_3.webp&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;dorohedoro&#34;&gt;Dorohedoro&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://***REMOVED***.nyc/blog/71URGcsdgKL._AC_UF1000,1000_QL80_.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;heavenly-delusion&#34;&gt;Heavenly Delusion!!!&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://***REMOVED***.nyc/blog/title_grid_wide_20230802142406e7657be1fa6.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;delicious-in-dungeon&#34;&gt;Delicious in Dungeon&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://***REMOVED***.nyc/blog/delicious-in-dungeon-anime-serie.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/anime/</guid>
+      <description>&lt;h2 id=&#34;frieren&#34;&gt;Frieren&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/Frieren_anime_profile_3.webp&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;dorohedoro&#34;&gt;Dorohedoro&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/71URGcsdgKL._AC_UF1000,1000_QL80_.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;heavenly-delusion&#34;&gt;Heavenly Delusion!!!&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/title_grid_wide_20230802142406e7657be1fa6.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;delicious-in-dungeon&#34;&gt;Delicious in Dungeon&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/blog/delicious-in-dungeon-anime-serie.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
