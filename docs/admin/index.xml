@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Admins on Nicholas Frota</title>
-    <link>http://localhost:1313/admin/</link>
+    <link>https://***REMOVED***.nyc/admin/</link>
     <description>Recent content in Admins on Nicholas Frota</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/admin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://***REMOVED***.nyc/admin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TODO</title>
-      <link>http://localhost:1313/admin/todo/</link>
+      <link>https://***REMOVED***.nyc/admin/todo/</link>
       <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/admin/todo/</guid>
+      <guid>https://***REMOVED***.nyc/admin/todo/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; create work project&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; .gitignore work project from both content and published&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; move projects to root?&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; check &lt;a href=&#34;https://www.icloud.com/freeform/080VrAG9qXZT6q5ydfezslIWw#Nonlinear&#34;&gt;***REMOVED***.nyc freeform&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;ldquo;open&amp;rdquo; script: image paths, obsidian&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;ldquo;publish&amp;rdquo; script: zed, hugo serve, image paths, push?&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
