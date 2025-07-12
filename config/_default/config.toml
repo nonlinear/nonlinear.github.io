@@ -2,5 +2,4 @@ languageCode = "en-us"
 title = "Nonlinear"
 publishDir = "docs"
 [Params]
-latest = "dudes"
 author = "Nicholas Frota"
