@@ -2,41 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://***REMOVED***.nyc/card/dudes/</loc>
+    <loc>http://***REMOVED***.nyc/latest/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/</loc>
+    <loc>http://***REMOVED***.nyc/dudes/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/sketches-1/</loc>
+    <loc>http://***REMOVED***.nyc/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/3dcarousel/</loc>
+    <loc>http://***REMOVED***.nyc/sketches-1/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://***REMOVED***.nyc/3dcarousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/carousel/</loc>
+    <loc>http://***REMOVED***.nyc/carousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/documentation/</loc>
+    <loc>http://***REMOVED***.nyc/documentation/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/test/</loc>
+    <loc>http://***REMOVED***.nyc/test/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/focus-test/</loc>
+    <loc>http://***REMOVED***.nyc/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/gallery-scroll/</loc>
+    <loc>http://***REMOVED***.nyc/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/tile/</loc>
+    <loc>http://***REMOVED***.nyc/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/video-scroll/</loc>
+    <loc>http://***REMOVED***.nyc/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/categories/</loc>
+    <loc>http://***REMOVED***.nyc/categories/</loc>
   </url><url>
-    <loc>http://***REMOVED***.nyc/card/tags/</loc>
+    <loc>http://***REMOVED***.nyc/tags/</loc>
   </url>
 </urlset>

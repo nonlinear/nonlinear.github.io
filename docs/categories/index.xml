@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Nonlinear cards</title>
-    <link>http://***REMOVED***.nyc/card/categories/</link>
-    <description>Recent content in Categories on Nonlinear cards</description>
+    <title>Categories on Nonlinear</title>
+    <link>http://***REMOVED***.nyc/categories/</link>
+    <description>Recent content in Categories on Nonlinear</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://***REMOVED***.nyc/card/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://***REMOVED***.nyc/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
