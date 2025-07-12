@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Nicholas Frota</title>
-    <link>https://***REMOVED***.nyc/tags/</link>
-    <description>Recent content in Tags on Nicholas Frota</description>
+    <title>Tags on Nonlinear cards</title>
+    <link>http://***REMOVED***.nyc/card/tags/</link>
+    <description>Recent content in Tags on Nonlinear cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://***REMOVED***.nyc/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Photo</title>
-      <link>https://***REMOVED***.nyc/tags/photo/</link>
-      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://***REMOVED***.nyc/tags/photo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Procreate</title>
-      <link>https://***REMOVED***.nyc/tags/procreate/</link>
-      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://***REMOVED***.nyc/tags/procreate/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Realistic</title>
-      <link>https://***REMOVED***.nyc/tags/realistic/</link>
-      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://***REMOVED***.nyc/tags/realistic/</guid>
-      <description></description>
-    </item>
+    <atom:link href="http://***REMOVED***.nyc/card/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

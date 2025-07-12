@@ -1,10 +1,19 @@
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{ $sass := resources.Get "css/main.scss" | css.Sass (dict "outputStyle"
-    "compressed" "enableSourceMap" true) | fingerprint }} {{ $style := $sass |
-    css.Sass }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Page.Title }}</title>
+  <meta content="{{ default .Site.Params.author .Params.author }}" name="author" />
 
-    <title>{{ .Site.Title }}</title>
+  <!-- Hardcoded font CSS FIRST -->
+  <link rel="stylesheet" href="{{ "fonts/Space-Grotesk.css" | relURL }}">
+
+  {{ $options := dict "outputStyle" "compressed" "enableSourceMap" true }}
+  {{ $style := resources.Get "css/main.scss" | css.Sass $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
+  {{ with .Params.css }}
+    {{ range . }}
+      <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
+    {{ end }}
+  {{ end }}
 </head>

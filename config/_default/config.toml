@@ -1,0 +1,6 @@
+languageCode = "en-us"
+title = "Nonlinear cards"
+publishDir = "docs"
+[Params]
+latest = "dudes"
+author = "Nicholas Frota"
