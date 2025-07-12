@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: $container;
+    max-width: $display-sm;
     padding-top: 0;
     margin: 0 auto;
 }
@@ -11,7 +11,8 @@ ol {
 }
 li {
     list-style: none;
-    margin-top: 7px;
+    margin-top: 8px;
+    padding-left: 7px;
 }
 a[data-micromodal-trigger="credits"] {
     display: none;
@@ -24,15 +25,14 @@ body {
     line-height: 150%;
 }
 
-ul,
-ol {
-    padding-left: $gap;
-}
-
 .ascii {
     line-height: 120%;
-    font-size: 80%;
+    font-size: 60%;
     font-family: monospace;
+}
+
+p {
+    width: 100% !important;
 }
 
 a {

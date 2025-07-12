@@ -8,9 +8,8 @@ append (dict "key" $key "value" $val) }} {{ end }} {{ end }} {{ $sorted := sort
 $filteredTech "value.title" }}
 
 <section class="librariesPost">
-    <h3>Libraries used in this post</h3>
+   <p></p> <b>Libraries used in this post:</b>
 
-    <p>
         {{- range $i, $tech := $sorted }} {{- if gt $i 0 }}, {{ end }}
         <a class="tooltip" data-tooltip-id="{{ $tech.key }}"
             >{{ $tech.value.title }}</a

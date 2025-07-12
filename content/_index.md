@@ -4,6 +4,8 @@ status: published
 date: 2025-07-06
 class:
     - index
+fonts:
+    - Space-Grotesk
 ---
 # Nonlinear
 

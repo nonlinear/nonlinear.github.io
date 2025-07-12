@@ -2,41 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://nonlinear.nyc/card/dudes/</loc>
+    <loc>http://nonlinear.nyc/latest/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/</loc>
+    <loc>http://nonlinear.nyc/dudes/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/sketches-1/</loc>
+    <loc>http://nonlinear.nyc/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/3dcarousel/</loc>
+    <loc>http://nonlinear.nyc/sketches-1/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://nonlinear.nyc/3dcarousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/carousel/</loc>
+    <loc>http://nonlinear.nyc/carousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/documentation/</loc>
+    <loc>http://nonlinear.nyc/documentation/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/test/</loc>
+    <loc>http://nonlinear.nyc/test/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/focus-test/</loc>
+    <loc>http://nonlinear.nyc/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/gallery-scroll/</loc>
+    <loc>http://nonlinear.nyc/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/tile/</loc>
+    <loc>http://nonlinear.nyc/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/video-scroll/</loc>
+    <loc>http://nonlinear.nyc/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/card/categories/</loc>
+    <loc>http://nonlinear.nyc/categories/</loc>
   </url><url>
-    <loc>http://nonlinear.nyc/card/tags/</loc>
+    <loc>http://nonlinear.nyc/tags/</loc>
   </url>
 </urlset>

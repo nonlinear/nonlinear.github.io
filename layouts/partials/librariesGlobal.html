@@ -3,9 +3,8 @@ $key, $val := $allTech }} {{ $techSlice = $techSlice | append (dict "key" $key
 "value" $val) }} {{ end }} {{ $sorted := sort $techSlice "value.title" }}
 
 <section class="librariesGlobal">
-    <h3>Global libraries</h3>
-
     <p>
+        <b>Global libraries: </b>
         {{- range $i, $tech := $sorted -}} {{- if gt $i 0 }}, {{ end -}}
         <a class="tooltip" data-tooltip-id="{{ $tech.key }}"
             >{{ $tech.value.title }}</a

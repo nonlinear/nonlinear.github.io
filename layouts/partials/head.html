@@ -4,8 +4,12 @@
   <title>{{ .Page.Title }}</title>
   <meta content="{{ default .Site.Params.author .Params.author }}" name="author" />
 
-  <!-- Hardcoded font CSS FIRST -->
-  <link rel="stylesheet" href="{{ "fonts/Space-Grotesk.css" | relURL }}">
+  <!-- Dynamically included fonts -->
+  {{ with .Params.fonts }}
+    {{ range . }}
+      <link rel="stylesheet" href="{{ printf "fonts/%s.css" . | relURL }}">
+    {{ end }}
+  {{ end }}
 
   {{ $options := dict "outputStyle" "compressed" "enableSourceMap" true }}
   {{ $style := resources.Get "css/main.scss" | css.Sass $options | fingerprint }}
