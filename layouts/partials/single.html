@@ -1,0 +1,34 @@
+{{ partial "html.html" . }}
+    {{ partial "head.html" . }}
+    <body>
+
+        <main class="container">
+          <article class="content">
+              {{ .Content }}
+               <a href="#" data-micromodal-trigger="credits">🛎️</a>
+          </article>
+
+          {{ partial "credits" . }}
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      {{ partial "load-js.html" . }}
+    </body>
+
+
+</html>

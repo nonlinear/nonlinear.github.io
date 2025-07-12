@@ -1,0 +1,28 @@
+{{ $allTech := site.Data.librariesGlobal }} {{ $techSlice := slice }} {{ range
+$key, $val := $allTech }} {{ $techSlice = $techSlice | append (dict "key" $key
+"value" $val) }} {{ end }} {{ $sorted := sort $techSlice "value.title" }}
+
+<section class="librariesGlobal">
+    <h3>Global libraries</h3>
+
+    <p>
+        {{- range $i, $tech := $sorted -}} {{- if gt $i 0 }}, {{ end -}}
+        <a class="tooltip" data-tooltip-id="{{ $tech.key }}"
+            >{{ $tech.value.title }}</a
+        >
+        {{- end -}}
+    </p>
+
+    {{- range $tech := $sorted }}
+    <div id="{{ $tech.key }}" style="display: none">
+        <p>{{ $tech.value.description }}</p>
+        <a
+            href="{{ $tech.value.link }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            {{ $tech.value.title }}
+        </a>
+    </div>
+    {{- end }}
+</section>

@@ -1,0 +1,14 @@
+{{ with .Params.reference }}
+<section class="references">
+    <h3>References</h3>
+    <ul>
+        {{ range . }}
+        <li>
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                {{ . }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ else }} {{ end }}
