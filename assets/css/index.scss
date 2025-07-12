@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    max-width: $container;
+    padding-top: 0;
+    margin: 0 auto;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+li {
+    list-style: none;
+    margin-top: 7px;
+}
+a[data-micromodal-trigger="credits"] {
+    display: none;
+}
+body {
+    background-color: $color-bg;
+    color: $color-fg;
+    @include transition;
+    font-family: Space-Grotesk;
+    line-height: 150%;
+}
+
+ul,
+ol {
+    padding-left: $gap;
+}
+
+.ascii {
+    line-height: 120%;
+    font-size: 80%;
+    font-family: monospace;
+}
+
+a {
+    color: $color-fg;
+    p & {
+        margin: 0 5px;
+    }
+    text-decoration: none;
+    outline: solid 5px darken(yellow, 10%);
+
+    background-color: darken(yellow, 10%);
+    color: $color-bg;
+    @include transition;
+    &:hover {
+        background-color: darken(yellow, 20%);
+        outline: solid 5px darken(yellow, 20%);
+        color: $color-fg;
+    }
+}

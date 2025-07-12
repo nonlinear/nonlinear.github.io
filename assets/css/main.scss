@@ -1,5 +1,9 @@
 @import "vendor/animatewithsass/animate.scss";
 @import "mixins";
 @import "functions";
-@import "tile";
+@import "micromodal";
+@import "illos";
+.index {
+    @import "index";
+}
 @import "layout";

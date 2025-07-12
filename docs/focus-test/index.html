@@ -1,0 +1,226 @@
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js focus-test ongoing"
+></html>
+
+    <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>focus test</title>
+  <meta content="Nicholas Frota" name="author" />
+
+  
+  <link rel="stylesheet" href="/card/fonts/Space-Grotesk.css">
+
+  
+  
+  <link rel="stylesheet" href="/card/css/main.60a45f56b1e857625327dd3b2414c7447ddbab1a8cd147a118238eb950f836a1.css" />
+
+  
+</head>
+
+    <body>
+
+        <main class="container">
+          <article class="content">
+              <ul class="focus-test">
+	<p>Disregard font and icons. This is just a test to be deleted soon</p>
+	<li><a class="btn btn-primary" href="#">primary button</a></li>
+<li><a class="btn btn-secondary" href="#">secondary button</a></li>
+<li><input type="text" placeholder="Placeholder text"></li>
+<li><input type="text" value="Input text"></li>
+<li><label><input type="checkbox">checkbox</label></li>
+<li><label><input type="checkbox" checked>checkbox, selected</label></li>
+<li><label><input type="radio">radio</label></li>
+<li><label><input type="radio" checked>radio, selected</label></li>
+</ul>
+               <a href="#" data-micromodal-trigger="credits">🛎️</a>
+          </article>
+
+          <aside class="credits modal micromodal-slide" id="credits" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div
+                class="modal__container"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-1-title"
+            >
+
+                <header class="modal__header">
+                    <h2>About focus test</h2>
+                    <button
+                        class="modal__close"
+                        aria-label="Close modal"
+                        data-micromodal-close
+                    ></button>
+                </header>
+
+
+                <div class="modal__content">
+                    testing focus on CSS
+                    <section class="date">
+                           
+                        <p>Published 1 years ago</p>
+                        
+                    </section>
+                                           
+
+<section class="librariesPost">
+    <h3>Libraries used in this post</h3>
+
+    <p>
+    </p>
+</section>
+          
+
+<section class="librariesGlobal">
+    <h3>Global libraries</h3>
+
+    <p><a class="tooltip" data-tooltip-id="micromodal"
+            >Micromodal</a
+        >, <a class="tooltip" data-tooltip-id="qrcode"
+            >QRCode</a
+        >, <a class="tooltip" data-tooltip-id="tippy"
+            >Tippy</a
+        ></p>
+    <div id="micromodal" style="display: none">
+        <p>A lightweight modal library for accessible modals in JavaScript.</p>
+        <a
+            href="https://micromodal.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Micromodal
+        </a>
+    </div>
+    <div id="qrcode" style="display: none">
+        <p>A JavaScript library for generating QR codes in client-side web applications.</p>
+        <a
+            href="https://davidshimjs.github.io/qrcodejs/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            QRCode
+        </a>
+    </div>
+    <div id="tippy" style="display: none">
+        <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js.</p>
+        <a
+            href="https://atomiks.github.io/tippyjs/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Tippy
+        </a>
+    </div>
+</section>
+ <section class="share">
+    <h3>Share</h3>
+    <button id="share" style="display: none">Share</button>
+
+    <script>
+        if (navigator.share) {
+            document.getElementById("share").style.display = "block";
+            document
+                .getElementById("share")
+                .addEventListener("click", async () => {
+                    try {
+                        await navigator.share({
+                            title: document.title,
+                            text: "Check this out!",
+                            url: window.location.href,
+                        });
+                    } catch (err) {
+                        console.error("Error sharing:", err);
+                    }
+                });
+        }
+    </script>
+    <div id="qrdisplay"></div>
+</section>
+  
+
+
+
+                <footer class="modal__footer">
+                    <button class="modal__btn" data-micromodal-close>Close</button>
+                </footer>
+
+                </div>
+
+
+        </div>
+        <script src="http://***REMOVED***.nyc/card/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "http:\/\/***REMOVED***.nyc\/card\/focus-test\/",
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+        <script src="http://***REMOVED***.nyc/card/js/global/micromodal.min.js"></script>
+<script>
+    MicroModal.init({
+        awaitOpenAnimation: true,
+        awaitCloseAnimation: true,
+        disableScroll: true,
+    });
+</script>
+
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+         
+
+   <script>
+       document.documentElement.classList.remove("no-js");
+       document.documentElement.classList.add("js");
+   </script>
+
+   
+
+        <script src="http://***REMOVED***.nyc/card/js/global/popper.min.js"></script>
+         <script src="http://***REMOVED***.nyc/card/js/global/tippy-bundle.umd.min.js"></script>
+        <script>
+            document.querySelectorAll(".tooltip").forEach((el) => {
+                const tipId = el.getAttribute("data-tooltip-id");
+                const content =
+                    document.getElementById(tipId)?.innerHTML || "No content";
+
+                tippy(el, {
+                    content,
+                    allowHTML: true,
+                    interactive: true,
+                });
+            });
+        </script>
+
+    
+
+    </body>
+
+
+</html>
+

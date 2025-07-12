@@ -1,0 +1,7 @@
+{{ $sass := resources.Get "css/main.scss" | css.Sass (dict "outputStyle"
+"compressed" "enableSourceMap" true) | fingerprint }} {{ $style := $sass |
+css.Sass }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ with .Params.css }} {{ range . }}
+<link href="css/{{ . }}.css" rel="stylesheet" />
+{{ end }} {{ end }}

@@ -1,0 +1,21 @@
+{{ $carouselFolders := index .Params "3dcarousel" }} {{ range $folder :=
+$carouselFolders }}
+<div class="scene">
+    <div class="carousel">
+        {{ $path := printf "static/3dcarousel/%s" $folder }} {{ $images :=
+        readDir $path }} {{ range $images }} {{ if or (strings.HasSuffix .Name
+        ".jpg") (strings.HasSuffix .Name ".webp") (strings.HasSuffix .Name
+        ".png") }}
+        <div class="carousel__cell">
+            <div
+                class="card"
+                style="--img: url(/3dcarousel/{{ $folder }}/{{ .Name }})"
+            >
+                <div class="card__face card__face--front"></div>
+                <div class="card__face card__face--back"></div>
+            </div>
+        </div>
+        {{ end }} {{ end }}
+    </div>
+</div>
+{{ end }}

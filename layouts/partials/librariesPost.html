@@ -1,0 +1,33 @@
+{{ $allTech := site.Data.librariesPost }} {{ $jsFiles := .Params.js }} {{
+$jsKeys := slice }} {{/* Coleta os nomes dos arquivos JS do frontmatter */}} {{
+range $i, $js := $jsFiles }} {{ $jsKeys = $jsKeys | append (lower $js.file) }}
+{{ end }} {{/* Filtra as tecnologias que estão no frontmatter */}} {{
+$filteredTech := slice }} {{ range $key, $val := $allTech }} {{ $keyLower :=
+lower $key }} {{ if in $jsKeys $keyLower }} {{ $filteredTech = $filteredTech |
+append (dict "key" $key "value" $val) }} {{ end }} {{ end }} {{ $sorted := sort
+$filteredTech "value.title" }}
+
+<section class="librariesPost">
+    <h3>Libraries used in this post</h3>
+
+    <p>
+        {{- range $i, $tech := $sorted }} {{- if gt $i 0 }}, {{ end }}
+        <a class="tooltip" data-tooltip-id="{{ $tech.key }}"
+            >{{ $tech.value.title }}</a
+        >
+        {{- end }}
+    </p>
+
+    {{- range $tech := $sorted }}
+    <div id="{{ $tech.key }}" style="display: none">
+        <p>{{ $tech.value.description }}</p>
+        <a
+            href="{{ $tech.value.link }}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            {{ $tech.value.title }}
+        </a>
+    </div>
+    {{- end }}
+</section>

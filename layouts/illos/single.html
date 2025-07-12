@@ -1,0 +1,59 @@
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body>
+
+    <main class="container">
+      <article class="content illos">
+          {{ range .Params.illos }}
+
+          {{ end }}
+          {{ range .Params.illos }}
+          <div class="illo-wrapper">
+          <img class="zoom-img"
+              src="{{ printf "images/illos/%s.jpg" . | absURL }}"
+              data-static="{{ printf "images/illos/%s.jpg" . | absURL }}"
+              data-anim="{{ printf "images/illos/%s.webp" . | absURL }}"
+              alt="{{ . }}"
+              style="width: 100%; height: auto;"
+            />
+          </div>
+          {{ end }}
+           <a href="#" data-micromodal-trigger="credits">🛎️</a>
+      </article>
+
+      {{ partial "credits" . }}
+    </main>
+  {{ partial "load-js.html" . }}
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('in-view');
+        }, index * 300);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
+    observer.observe(wrapper);
+  });
+  </script>
+  <script>
+  document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
+    const img = wrapper.querySelector('img');
+    wrapper.addEventListener('mouseenter', () => {
+      img.src = img.dataset.anim;
+    });
+    wrapper.addEventListener('mouseleave', () => {
+      img.src = img.dataset.static;
+    });
+  });
+  </script>
+</body>
+
+
+
+
+
+</html>

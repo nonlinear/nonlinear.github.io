@@ -1,9 +1,5 @@
-_site
-.sass-cache
-content/.obsidian
-content/work
-docs/work
-content/personal
-docs/personal
-.jekyll-metadata
 node_modules
+original-illos/
+.cache
+.parcel-cache
+package-lock.json
