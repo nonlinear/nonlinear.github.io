@@ -1,5 +1,5 @@
 languageCode = "en-us"
-title = "Nonlinear cards"
+title = "Nonlinear"
 publishDir = "docs"
 [Params]
 latest = "dudes"
