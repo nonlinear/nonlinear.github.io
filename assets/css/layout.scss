@@ -76,11 +76,12 @@ article.content {
 main.container {
     .credits-open,
     .credits-close {
+        z-index: 1000;
         background-color: white;
         border-radius: 50%;
         height: $gap2;
         width: $gap2;
-        position: absolute;
+        position: fixed;
         bottom: $gap;
         right: $gap;
         text-decoration: none;
@@ -116,8 +117,12 @@ main.container {
         #credits {
             right: -$credits;
         }
+        .credits-close {
+            display: none;
+        }
         .curtain-credits {
             display: none;
+            z-index: 1000;
         }
     }
 
@@ -127,6 +132,9 @@ main.container {
         }
         #credits {
             right: 0;
+        }
+        .credits-open {
+            display: none;
         }
         .curtain-credits {
             display: block;

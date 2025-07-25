@@ -1,11 +1,10 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
-
     <main class="container">
+        <a href="javascript:void(0)" class="credits-open"></a>
       <article class="content illos">
           {{ range .Params.illos }}
-
           {{ end }}
           {{ range .Params.illos }}
           <div class="illo-wrapper">
@@ -16,11 +15,11 @@
               alt="{{ . }}"
               style="width: 100%; height: auto;"
             />
+
           </div>
           {{ end }}
-           <a href="#" data-micromodal-trigger="credits">🛎️</a>
+          <div class="curtain-credits"></div>
       </article>
-
       {{ partial "credits" . }}
     </main>
   {{ partial "load-js.html" . }}
