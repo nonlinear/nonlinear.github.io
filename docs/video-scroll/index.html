@@ -15,7 +15,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.2936f3c1ac985a35355f57251a90750a128c50e6b180561afda6e13ac2fe2384.css" />
+  <link rel="stylesheet" href="/css/main.bc11d700a8489c9bb476f3106f3a842a31fda4ef16898444f4133cef89bc9568.css" />
 
   
 </head>
@@ -65,9 +65,9 @@
         video.currentTime = 0;
       });
     </script>
-               <a href="#" data-micromodal-trigger="credits">🛎️</a>
+              <a href="#" class="credits-open">🛎️ Abrir Créditos</a>
           </article>
-          <aside class="credits">
+          <aside id="credits">
 
                     <h2>About video scroll</h2>
                     <p>a way to control videos by scrolling page</p>
@@ -140,9 +140,9 @@
 
 
 
-                    <a href="/latest">View latest creation</a>
-                    <a href="/">About ***REMOVED***</a>
-
+                    <p><a href="/latest">View latest creation</a></p>
+                    <p><a href="/">About ***REMOVED***</a></p>
+                    <p><a href="#" class="credits-close">close credits</a></p>
                 </div>
 
 
@@ -159,6 +159,25 @@
     });
 </script>
 
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.querySelector("main.container");
+
+          document.querySelectorAll(".credits-open").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.add("open-credits");
+            });
+          });
+
+          document.querySelectorAll(".credits-close").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.remove("open-credits");
+            });
+          });
+        });
+        </script>
 </aside>
 
         </main>
