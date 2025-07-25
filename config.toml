@@ -1,5 +1,6 @@
 languageCode = "en-us"
 title = "Nonlinear"
 publishDir = "docs"
+baseURL = "http://nonlinear.nyc/"
 [Params]
 author = "Nicholas Frota"
