@@ -3,9 +3,11 @@
     <body>
 
         <main class="container">
+
+            <a href="#" class="credits-open"></a>
           <article class="content">
               {{ .Content }}
-              <a href="#" class="credits-open">🛎️ Abrir Créditos</a>
+              <div class="curtain-credits"></div>
           </article>
           {{ partial "credits" . }}
         </main>
