@@ -3,11 +3,6 @@ tippy:
   link: "https://atomiks.github.io/tippyjs/"
   description: "A lightweight, highly customizable tooltip and popover library powered by Popper.js."
 
-micromodal:
-  title: "Micromodal"
-  link: "https://micromodal.vercel.app/"
-  description: "A lightweight modal library for accessible modals in JavaScript."
-
 qrcode:
   title: "QRCode"
   link: "https://davidshimjs.github.io/qrcodejs/"
