@@ -4,58 +4,28 @@ $credits: 300px;
     width: $credits;
     height: 100vh;
     padding: $gap2;
-    font-family: sans-serif;
+
     position: fixed;
     top: 0;
-    right: -$credits; // escondido por padrão
-    z-index: 1001;
+    right: 0;
+    z-index: 1000;
+
     overflow-y: auto;
     overflow-x: hidden;
+
     background-color: lighten(yellow, 30%);
     box-sizing: border-box;
     transition: right 0.3s ease-in-out;
 }
+article.content {
+    transition: margin-left 0.3s ease-in-out;
+    position: relative;
+}
 
 main.container {
-    transition: transform 0.3s ease-in-out;
-
-    &.open-credits {
-        transform: translateX(-$credits);
-
-        .credits-open {
-            display: none;
-        }
-
-        .credits-close {
-            display: flex;
-        }
-
-        .curtain-credits {
-            display: block;
-        }
-
-        #credits {
-            right: 0; // mostra os créditos
-        }
-    }
-
-    &:not(.open-credits) {
-        .credits-close {
-            display: none;
-        }
-
-        .curtain-credits {
-            display: none;
-        }
-
-        #credits {
-            right: -$credits; // garante que fique fora da tela
-        }
-    }
-
     .credits-open,
     .credits-close {
-        z-index: 1002;
+        z-index: 1000;
         background-color: white;
         border-radius: 50%;
         height: $gap2;
@@ -64,7 +34,7 @@ main.container {
         bottom: $gap;
         right: $gap;
         text-decoration: none;
-        display: flex;
+        display: flex; // Centraliza o conteúdo
         align-items: center;
         justify-content: center;
         opacity: 0.6;
@@ -91,18 +61,53 @@ main.container {
     .credits-close:before {
         content: "✖️";
     }
+
+    &:not(.open-credits) {
+        #credits {
+            right: -$credits;
+        }
+        .credits-close {
+            display: none;
+        }
+        .curtain-credits {
+            display: none;
+            z-index: 1000;
+        }
+    }
+
+    &.open-credits {
+        article.content {
+            margin-left: -$credits;
+        }
+        #credits {
+            right: 0;
+        }
+        .credits-open {
+            display: none;
+        }
+        .curtain-credits {
+            display: block;
+        }
+    }
+}
+
+article.content {
+    position: relative; // Necessário para posicionar a curtain em relação ao article
 }
 
 .curtain-credits {
-    position: fixed;
+    transition: display 0.3s ease-in-out;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.3); // opcional
+
     z-index: 1000;
-    display: none;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+
+    display: none; // Esconde por padrão
+
+    // Mostra quando o main está com .open-credits
 }
