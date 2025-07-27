@@ -15,7 +15,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.9d37d27fd1407005bd53449defb4deeb9f8b5358ab9b9f4247d85419b64c39cb.css" />
+  <link rel="stylesheet" href="/css/main.ed807638f072885b884bcaf7c7d5361cf10e90a7fde639a6d8f0433e6aff919e.css" />
 
   
 </head>
@@ -119,7 +119,7 @@
                     <p>portrait illustrations of dudes</p>
                     <section class="date">
                            
-                        <p>Published 2 weeks ago</p>
+                        <p>Published 3 weeks ago</p>
                         
                     </section>
                                            
@@ -272,12 +272,24 @@
   <script>
   document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
     const img = wrapper.querySelector('img');
-    wrapper.addEventListener('mouseenter', () => {
+
+    const activate = () => {
       img.src = img.dataset.anim;
-    });
-    wrapper.addEventListener('mouseleave', () => {
+    };
+
+    const deactivate = () => {
       img.src = img.dataset.static;
-    });
+    };
+
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+      wrapper.addEventListener('touchstart', activate);
+      wrapper.addEventListener('touchend', deactivate);
+    } else {
+      wrapper.addEventListener('mouseenter', activate);
+      wrapper.addEventListener('mouseleave', deactivate);
+    }
   });
   </script>
 </body>

@@ -41,12 +41,24 @@
   <script>
   document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
     const img = wrapper.querySelector('img');
-    wrapper.addEventListener('mouseenter', () => {
+
+    const activate = () => {
       img.src = img.dataset.anim;
-    });
-    wrapper.addEventListener('mouseleave', () => {
+    };
+
+    const deactivate = () => {
       img.src = img.dataset.static;
-    });
+    };
+
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+      wrapper.addEventListener('touchstart', activate);
+      wrapper.addEventListener('touchend', deactivate);
+    } else {
+      wrapper.addEventListener('mouseenter', activate);
+      wrapper.addEventListener('mouseleave', deactivate);
+    }
   });
   </script>
 </body>
