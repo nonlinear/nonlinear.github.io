@@ -1,9 +1,11 @@
 $credits: 300px;
+$credits-bg: #ffffcc;
 
 #credits {
     width: $credits;
     height: 100vh;
     padding: $gap2;
+    padding-bottom: $gap4;
 
     position: fixed;
     top: 0;
@@ -13,7 +15,7 @@ $credits: 300px;
     overflow-y: auto;
     overflow-x: hidden;
 
-    background-color: lighten(yellow, 30%);
+    background-color: $credits-bg;
     box-sizing: border-box;
     transition: right 0.3s ease-in-out;
 }
@@ -108,4 +110,53 @@ article.content {
     display: none; // Esconde por padrão
 
     // Mostra quando o main está com .open-credits
+}
+
+.button {
+    border: 1px solid black;
+    background-color: $credits-bg;
+    padding: $gap;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin-bottom: $gaphalf;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+.date {
+    font-size: 80%;
+}
+
+h1,
+h2,
+h3,
+h4,
+.date {
+    padding: 0;
+    margin: 0;
+}
+
+#qrdisplay {
+    margin-bottom: $gap;
+}
+
+.tooltip {
+    background-color: #ccc;
+    border-radius: 20px;
+    font-size: 80%;
+    padding: $gaphalf $gap;
+    text-decoration: none;
+    color: black;
+}
+
+.tags {
+    padding-bottom: $gap;
 }

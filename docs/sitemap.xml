@@ -8,13 +8,22 @@
     <loc>http://nonlinear.nyc/latest/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://nonlinear.nyc/dudes/</loc>
-    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://nonlinear.nyc/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://nonlinear.nyc/tags/portraits/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://nonlinear.nyc/tags/procreate/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://nonlinear.nyc/sketches-1/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://nonlinear.nyc/dudes/</loc>
+    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://nonlinear.nyc/tags/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://nonlinear.nyc/3dcarousel/</loc>
@@ -42,7 +51,5 @@
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://nonlinear.nyc/categories/</loc>
-  </url><url>
-    <loc>http://nonlinear.nyc/tags/</loc>
   </url>
 </urlset>

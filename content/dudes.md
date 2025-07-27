@@ -1,8 +1,11 @@
 ---
-title: Dudes
-description: portrait illustrations of dudes
-status: draft
+title: Some dudes
+description: procreate illustrations of scruffy dudes
+status: published
 type: illos
+tags:
+  - procreate
+  - portraits
 illos:
   - attentive
   - berliner
