@@ -58,3 +58,9 @@ qrcode.min:
   title: "QRCode"
   link: "https://davidshimjs.github.io/qrcodejs/"
   description: "A JavaScript library for generating QR codes in client-side web applications."
+
+microlink:
+  type: global
+  title: "Microlink"
+  link: "https://microlink.io"
+  description: "Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more."
