@@ -20,9 +20,15 @@
 
                     <section class="tags">
                         {{ $allTech := site.Data.librariesPost }} {{ $jsFiles := .Params.js }} {{
-                        $jsKeys := slice }} {{/* Coleta os nomes dos arquivos JS do frontmatter */}} {{
-                        range $i, $js := $jsFiles }} {{ $jsKeys = $jsKeys | append (lower $js.file) }}
-                        {{ end }} {{/* Filtra as tecnologias que estão no frontmatter */}} {{
+                        $jsKeys := slice }} {{/* Coleta os nomes dos arquivos JS do frontmatter */}}
+                        {{ range $i, $js := $jsFiles }}
+                          {{ $name := $js }}
+                          {{ if strings.Contains $js ":" }}
+                            {{ $name = index (split $js ":") 0 }}
+                          {{ end }}
+                          {{ $jsKeys = $jsKeys | append (lower $name) }}
+                        {{ end }}
+                        {{/* Filtra as tecnologias que estão no frontmatter */}} {{
                         $filteredTech := slice }} {{ range $key, $val := $allTech }} {{ $keyLower :=
                         lower $key }} {{ if in $jsKeys $keyLower }} {{ $filteredTech = $filteredTech |
                         append (dict "key" $key "value" $val) }} {{ end }} {{ end }} {{ $sorted := sort
