@@ -74,23 +74,34 @@
                         </div>
                       {{ end }}
                     </section>
-                    <a href="#" class="button" id="share" style="display: none">Share creation</a>
+                    <section class="references">
+                      {{ range .Params.reference }}
+                        <a href="{{ . }}" data-microlink>{{ . }}</a>
+                      {{ end }}
+                    </section>
 
 
-
-p
-                    {{
-                    partial "references.html" . }}
-
-
-                   <a class="button" href="/latest">View latest creation</a>
-               <a class="tooltip" href="/">About ***REMOVED***</a>
-
+                   <section class="share">
+                       <a href="javascript:void(0)" id="share">
+                           Share creation</a>
+                      <a href="/latest">
+                         Visit latest creation
+                      </a>
+                  <a href="/">
+                      About ***REMOVED***
+                  </a>
+                   </section>
                 </div>
 
 
         </div>
         {{ partial "qrcode.html" . }}
+        <script src="https://cdn.jsdelivr.net/npm/@microlink/microlink.min.js"></script>
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            microlink('.references a[data-microlink]')
+          });
+        </script>
         <script>
         document.addEventListener("DOMContentLoaded", () => {
           const container = document.querySelector("main.container");

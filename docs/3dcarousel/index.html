@@ -19,7 +19,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.1ce862b2493ac5fe6ef65a7267321f68f9d6701b37b32268eeca97baa326eae1.css" />
+  <link rel="stylesheet" href="/css/main.31594de33b71238840c6d8e393c97a1de7f24785003b0e5519d8ff2f74326e41.css" />
 
   
     
@@ -843,6 +843,11 @@
                         
                       
                     
+                      
+                        
+                        
+                      
+                    
 
                     
 
@@ -866,6 +871,14 @@
                             <p>Tag: Illustration</p>
                             <p>General illustration category</p>
 
+                          
+                        </div>
+                      
+                        <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+                        <div id="microlink" style="display: none">
+                          
+                            <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.</p>
                           
                         </div>
                       
@@ -951,43 +964,27 @@
                         </div>
                       
                     </section>
-                    <a href="#" class="button" id="share" style="display: none">Share creation</a>
+                    <section class="references">
+                      
+                        <a href="https://tympanus.net/Development/3DCarousel/" data-microlink>https://tympanus.net/Development/3DCarousel/</a>
+                      
+                        <a href="https://google.com" data-microlink>https://google.com</a>
+                      
+                        <a href="https://***REMOVED***.nyc" data-microlink>https://***REMOVED***.nyc</a>
+                      
+                    </section>
 
 
-
-p
-                    
-<section class="references">
-    <h3>References</h3>
-    <ul>
-        
-        <li>
-            <a href="https://tympanus.net/Development/3DCarousel/" target="_blank" rel="noopener noreferrer">
-                https://tympanus.net/Development/3DCarousel/
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                https://google.com
-            </a>
-        </li>
-        
-        <li>
-            <a href="https://***REMOVED***.nyc" target="_blank" rel="noopener noreferrer">
-                https://***REMOVED***.nyc
-            </a>
-        </li>
-        
-    </ul>
-</section>
-
-
-
-
-                   <a class="button" href="/latest">View latest creation</a>
-               <a class="tooltip" href="/">About ***REMOVED***</a>
-
+                   <section class="share">
+                       <a href="javascript:void(0)" id="share">
+                           Share creation</a>
+                      <a href="/latest">
+                         Visit latest creation
+                      </a>
+                  <a href="/">
+                      About ***REMOVED***
+                  </a>
+                   </section>
                 </div>
 
 
@@ -1004,6 +1001,12 @@ p
     });
 </script>
 
+        <script src="https://cdn.jsdelivr.net/npm/@microlink/microlink.min.js"></script>
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            microlink('.references a[data-microlink]')
+          });
+        </script>
         <script>
         document.addEventListener("DOMContentLoaded", () => {
           const container = document.querySelector("main.container");
