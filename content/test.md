@@ -3,10 +3,8 @@ title: test card
 description: how to write posts
 status: draft
 js:
-    - file: gsap
-      attrs: [min]
-    - file: ScrollSmoother
-      attrs: [min]
+    - gsap.min
+    - ScrollSmoother.min
 class:
   - post
 date: 2025-06-14

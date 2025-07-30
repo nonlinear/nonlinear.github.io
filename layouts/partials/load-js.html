@@ -25,30 +25,24 @@
 
     <!-- post libraries -->
 
-        {{- if .Params.js }}
-        {{- range .Params.js }}
-            {{- if (reflect.IsMap .) }}
-            {{- $filename := .file }}
-            {{- with .attrs }}
-                {{- if in . "min" }}
-                {{- $filename = printf "%s.min" $filename }}
-                {{- end }}
-            {{- end }}
-            {{- $folder := "lib" }}
-            {{- with .attrs }}
-                {{- if in . "script" }}
-                {{- $folder = "script" }}
-                {{- end }}
-            {{- end }}
-            <script src="{{ printf "js/%s/%s.js" $folder $filename | absURL }}"
-                {{- with .attrs }}
-                {{- if in . "module" }} type="module"{{ end }}
-                {{- if in . "defer" }} defer{{ end }}
-                {{- if in . "async" }} async{{ end }}
-                {{- end }}>
-            </script>
-            {{- else }}
-            <script src="{{ printf "js/lib/%s.js" . | absURL }}"></script>
-            {{- end }}
+    {{- if .Params.js }}
+      {{- range .Params.js }}
+        {{- $entry := . }}
+        {{- $name := $entry }}
+        {{- $attrs := slice }}
+
+        {{- if strings.Contains $entry ":" }}
+          {{- $parts := split $entry ":" }}
+          {{- $name = index $parts 0 }}
+          {{- $attrs = split (index $parts 1) "," }}
         {{- end }}
-        {{- end }}
+
+        {{- $folder := cond (in $attrs "script") "script" "lib" }}
+
+        <script src="{{ printf "js/%s/%s.js" $folder $name | absURL }}"
+          {{- if in $attrs "module" }} type="module"{{ end }}
+          {{- if in $attrs "defer" }} defer{{ end }}
+          {{- if in $attrs "async" }} async{{ end }}>
+        </script>
+      {{- end }}
+    {{- end }}
