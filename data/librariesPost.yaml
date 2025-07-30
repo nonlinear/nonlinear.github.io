@@ -1,28 +1,28 @@
-gsap:
+gsap.min:
   title: "GSAP"
   description: "GSAP is a powerful JavaScript animation library for smooth, high-performance animations of CSS, SVG, canvas, and more."
 
-ScrollTrigger:
+ScrollTrigger.min:
   title: "ScrollTrigger"
   description: "A GSAP plugin to trigger animations based on scroll position. Great for scroll-driven effects."
   dependencies:
-    - gsap
+    - gsap.min
 
-ScrollSmoother:
+ScrollSmoother.min:
   title: "ScrollSmoother"
   description: "A GSAP plugin that smooths page scrolling for a fluid experience, useful for parallax and easing abrupt scrolls."
   dependencies:
-    - gsap
-    - ScrollTrigger
+    - gsap.min
+    - ScrollTrigger.min
 
-ScrollToPlugin:
+ScrollToPlugin.min:
   title: "ScrollToPlugin"
   description: "A GSAP plugin to animate smooth scrolling to specific page positions or elements. Useful for smooth navigation."
   dependencies:
-    - gsap
+    - gsap.min
 
-SplitText:
+SplitText.min:
   title: "SplitText"
   description: "A GSAP plugin that splits text into lines, words, or characters for detailed text animations."
   dependencies:
-    - gsap
+    - gsap.min

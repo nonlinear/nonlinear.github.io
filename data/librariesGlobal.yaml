@@ -1,9 +1,9 @@
-tippy:
+tippy.min:
   title: "Tippy"
   link: "https://atomiks.github.io/tippyjs/"
   description: "A lightweight, highly customizable tooltip and popover library powered by Popper.js."
 
-qrcode:
+qrcode.min:
   title: "QRCode"
   link: "https://davidshimjs.github.io/qrcodejs/"
   description: "A JavaScript library for generating QR codes in client-side web applications."
