@@ -1,5 +1,6 @@
 $credits: 300px;
 $credits-bg: #ffffcc;
+$border: brown;
 
 #credits {
     width: $credits;
@@ -113,7 +114,7 @@ article.content {
 }
 
 .button {
-    border: 1px solid black;
+    border: 1px solid $border;
     background-color: $credits-bg;
     padding: $gap;
     text-decoration: none;
@@ -122,9 +123,7 @@ article.content {
     display: block;
     margin-bottom: $gaphalf;
 
-    transition:
-        background-color 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: background-color 0.2s ease;
 
     &:hover {
         background-color: white;
@@ -147,16 +146,23 @@ h4,
 #qrdisplay {
     margin-bottom: $gap;
 }
-
-.tooltip {
-    background-color: #ccc;
-    border-radius: 20px;
-    font-size: 80%;
-    padding: $gaphalf $gap;
-    text-decoration: none;
-    color: black;
+section.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: $gap;
 }
 
-.tags {
-    padding-bottom: $gap;
+.tooltip {
+    border: 1px solid $border;
+    margin: -1px -1px 0 0; // “empurra” os elementos pra que as bordas se sobreponham
+    padding: $gaphalf $gap;
+    font-size: 80%;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: white;
+    }
 }
