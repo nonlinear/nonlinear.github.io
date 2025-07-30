@@ -4,8 +4,16 @@ description: procreate illustrations of scruffy dudes
 status: published
 type: illos
 tags:
-  - procreate
-  - portraits
+    - procreate
+    - illustration
+fonts:
+    - Space-Grotesk
+js:
+    - gsap.min
+    - ScrollTrigger.min
+    - ScrollSmoother.min
+    - ScrollToPlugin.min
+    - SplitText.min
 illos:
   - attentive
   - berliner

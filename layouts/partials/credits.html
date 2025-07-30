@@ -18,64 +18,67 @@
                         </p>
                     <p>{{ .Params.description | markdownify }}</p>
 
-                    <section class="tags">
-                        {{ $allTech := site.Data.librariesPost }} {{ $jsFiles := .Params.js }} {{
-                        $jsKeys := slice }} {{/* Coleta os nomes dos arquivos JS do frontmatter */}}
-                        {{ range $i, $js := $jsFiles }}
-                          {{ $name := $js }}
-                          {{ if strings.Contains $js ":" }}
-                            {{ $name = index (split $js ":") 0 }}
-                          {{ end }}
-                          {{ $jsKeys = $jsKeys | append (lower $name) }}
+                    {{ $allowed := slice }}
+
+                    {{ with .Params.tags }}
+                      {{ $allowed = $allowed | append . }}
+                    {{ end }}
+
+                    {{ with .Params.fonts }}
+                      {{ $allowed = $allowed | append . }}
+                    {{ end }}
+
+                    {{ with .Params.js }}
+                      {{ range . }}
+                        {{ $name := . }}
+                        {{ if strings.Contains . ":" }}
+                          {{ $name = index (split . ":") 0 }}
                         {{ end }}
-                        {{/* Filtra as tecnologias que estão no frontmatter */}} {{
-                        $filteredTech := slice }} {{ range $key, $val := $allTech }} {{ $keyLower :=
-                        lower $key }} {{ if in $jsKeys $keyLower }} {{ $filteredTech = $filteredTech |
-                        append (dict "key" $key "value" $val) }} {{ end }} {{ end }} {{ $sorted := sort
-                        $filteredTech "value.title" }} {{- range $i, $tech := $sorted }} {{- if gt $i 0
-                        }}, {{ end }}
-                        <a class="tooltip" data-tooltip-id="{{ $tech.key }}">{{ $tech.value.title }}</a>
-                        {{- end }} {{- range $tech := $sorted }}
+                        {{ $allowed = $allowed | append $name }}
+                      {{ end }}
+                    {{ end }}
+
+                    {{ $technologies := slice }}
+
+                    {{ range $key, $tech := site.Data.tags }}
+                      {{ if or (eq $tech.type "global") (in $allowed $key) }}
+                        {{ $tech = merge $tech (dict "key" $key) }}
+                        {{ $technologies = $technologies | append $tech }}
+                      {{ end }}
+                    {{ end }}
+
+                    {{ $technologies = sort $technologies "title" }}
+
+                    <section class="tags">
+                      {{ range $tech := $technologies }}
+                        <a class="tooltip" data-tooltip-id="{{ $tech.key }}">{{ $tech.title }}</a>
+
                         <div id="{{ $tech.key }}" style="display: none">
-                            <p>{{ $tech.value.description }}</p>
-                            <a href="{{ $tech.value.link }}" target="_blank" rel="noopener noreferrer">
-                                {{ $tech.value.title }}
-                            </a>
+                          {{ if eq $tech.type "fonts" }}
+                            <p>Fonte: {{ $tech.title }}</p>
+                            <p>Família: {{ $tech.family }}</p>
+                            <a href="{{ $tech.url }}" target="_blank">{{ $tech.url }}</a>
+
+                          {{ else if eq $tech.type "tags" }}
+                            <p>Tag: {{ $tech.title }}</p>
+                            <p>{{ $tech.description }}</p>
+
+                          {{ else if eq $tech.type "js" }}
+                            <p>JS: {{ $tech.title }}</p>
+                            <p>{{ $tech.description }}</p>
+                            <a href="{{ $tech.url }}" target="_blank">{{ $tech.url }}</a>
+
+                          {{ else if eq $tech.type "global" }}
+                            <p>{{ $tech.description }}</p>
+                          {{ end }}
                         </div>
-                        {{- end }}
-
-                        {{ $allTech := site.Data.librariesGlobal }} {{ $techSlice := slice }} {{ range
-                        $key, $val := $allTech }} {{ $techSlice = $techSlice | append (dict "key" $key
-                        "value" $val) }} {{ end }} {{ $sorted := sort $techSlice "value.title" }}
-
-
-
-                                {{- range $i, $tech := $sorted -}} {{- if gt $i 0 }}, {{ end -}}
-                                <a class="tooltip" data-tooltip-id="{{ $tech.key }}"
-                                    >{{ $tech.value.title }}</a
-                                >
-                                {{- end -}}
-
-                            {{- range $tech := $sorted }}
-                            <div id="{{ $tech.key }}" style="display: none">
-                                <p>{{ $tech.value.description }}</p>
-                                <a
-                                    href="{{ $tech.value.link }}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {{ $tech.value.title }}
-                                </a>
-                            </div>
-                            {{- end }}
-
+                      {{ end }}
                     </section>
-
                     <a href="#" class="button" id="share" style="display: none">Share creation</a>
 
 
 
-
+p
                     {{
                     partial "references.html" . }}
 
