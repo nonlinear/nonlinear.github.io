@@ -53,23 +53,25 @@
                       {{ range $tech := $technologies }}
                         <a class="tooltip" data-tooltip-id="{{ $tech.key }}">{{ $tech.title }}</a>
 
-                        <div id="{{ $tech.key }}" style="display: none">
+                        <div class="popover" id="{{ $tech.key }}" style="display: none">
                           {{ if eq $tech.type "fonts" }}
-                            <p>Fonte: {{ $tech.title }}</p>
-                            <p>Família: {{ $tech.family }}</p>
-                            <a href="{{ $tech.url }}" target="_blank">{{ $tech.url }}</a>
+                            <p style="font-family: {{ $tech.key }}; font-size: 110%;">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
 
                           {{ else if eq $tech.type "tags" }}
-                            <p>Tag: {{ $tech.title }}</p>
                             <p>{{ $tech.description }}</p>
 
                           {{ else if eq $tech.type "js" }}
-                            <p>JS: {{ $tech.title }}</p>
                             <p>{{ $tech.description }}</p>
-                            <a href="{{ $tech.url }}" target="_blank">{{ $tech.url }}</a>
 
                           {{ else if eq $tech.type "global" }}
                             <p>{{ $tech.description }}</p>
+                          {{ end }}
+
+                          {{ with $tech.link }}
+                            <a href="{{ . | safeURL }}" class="actions" target="_blank" rel="noopener">Visit site</a>
                           {{ end }}
                         </div>
                       {{ end }}
