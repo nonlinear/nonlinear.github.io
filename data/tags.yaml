@@ -2,6 +2,7 @@ procreate:
   type: tags
   title: "Procreate app"
   description: "A powerful illustration app for iPad"
+  link: "https://procreate.com"
 
 illustration:
   type: tags
@@ -12,23 +13,24 @@ Space-Grotesk:
   type: fonts
   title: "Space Grotesk"
   description: "A modern sans-serif typeface designed for UI and code readability"
+  link: "https://floriankarsten.github.io/space-grotesk/"
 
 gsap.min:
   type: js
   title: "GSAP"
-  description: "GSAP is a powerful JavaScript animation library for smooth, high-performance animations of CSS, SVG, canvas, and more."
+  description: "GSAP is a powerful JavaScript animation library for smooth, high-performance animations of CSS, SVG, canvas, and more"
 
 ScrollTrigger.min:
   type: js
   title: "ScrollTrigger"
-  description: "A GSAP plugin to trigger animations based on scroll position. Great for scroll-driven effects."
+  description: "A GSAP plugin to trigger animations based on scroll position. Great for scroll-driven effects"
   dependencies:
     - gsap.min
 
 ScrollSmoother.min:
   type: js
   title: "ScrollSmoother"
-  description: "A GSAP plugin that smooths page scrolling for a fluid experience, useful for parallax and easing abrupt scrolls."
+  description: "A GSAP plugin that smooths page scrolling for a fluid experience, useful for parallax and easing abrupt scrolls"
   dependencies:
     - gsap.min
     - ScrollTrigger.min
@@ -36,14 +38,14 @@ ScrollSmoother.min:
 ScrollToPlugin.min:
   type: js
   title: "ScrollToPlugin"
-  description: "A GSAP plugin to animate smooth scrolling to specific page positions or elements. Useful for smooth navigation."
+  description: "A GSAP plugin to animate smooth scrolling to specific page positions or elements. Useful for smooth navigation"
   dependencies:
     - gsap.min
 
 SplitText.min:
   type: js
   title: "SplitText"
-  description: "A GSAP plugin that splits text into lines, words, or characters for detailed text animations."
+  description: "A GSAP plugin that splits text into lines, words, or characters for detailed text animations"
   dependencies:
     - gsap.min
 
@@ -51,16 +53,16 @@ tippy.min:
   type: global
   title: "Tippy"
   link: "https://atomiks.github.io/tippyjs/"
-  description: "A lightweight, highly customizable tooltip and popover library powered by Popper.js."
+  description: "A lightweight, highly customizable tooltip and popover library powered by Popper.js"
 
 qrcode.min:
   type: global
   title: "QRCode"
   link: "https://davidshimjs.github.io/qrcodejs/"
-  description: "A JavaScript library for generating QR codes in client-side web applications."
+  description: "A JavaScript library for generating QR codes in client-side web applications"
 
 microlink:
   type: global
   title: "Microlink"
   link: "https://microlink.io"
-  description: "Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more."
+  description: "Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more"
