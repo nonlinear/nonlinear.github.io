@@ -1,0 +1,19 @@
+.speeddial {
+    .scroll-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .slide {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        background: #eee;
+        border-bottom: 1px solid #ccc;
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Nonlinear</title>
+    <link>http://***REMOVED***.nyc/tags/ai/</link>
+    <description>Recent content in AI on Nonlinear</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://***REMOVED***.nyc/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speed Dial</title>
+      <link>http://***REMOVED***.nyc/speeddial/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://***REMOVED***.nyc/speeddial/</guid>
+      <description>&lt;div class=&#34;scroll-container&#34;&gt;&#xA;    &lt;section class=&#34;slide books&#34;&gt;&#xA;        &lt;h2&gt;📘 Books&lt;/h2&gt;&#xA;    &lt;/section&gt;&#xA;    &lt;section class=&#34;slide projects&#34;&gt;&#xA;        &lt;h2&gt;🎯 Projects&lt;/h2&gt;&#xA;    &lt;/section&gt;&#xA;    &lt;section class=&#34;slide study&#34;&gt;&#xA;        &lt;h2&gt;⛰️ Study&lt;/h2&gt;&#xA;    &lt;/section&gt;&#xA;    &lt;section class=&#34;slide personal&#34;&gt;&#xA;        &lt;h2&gt;🧘 Personal&lt;/h2&gt;&#xA;    &lt;/section&gt;&#xA;    &lt;!-- Adicione mais grupos conforme necessário --&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

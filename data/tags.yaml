@@ -19,6 +19,7 @@ gsap.min:
   type: js
   title: "GSAP"
   description: "GSAP is a powerful JavaScript animation library for smooth, high-performance animations of CSS, SVG, canvas, and more"
+  link: "https://greensock.com/gsap/"
 
 ScrollTrigger.min:
   type: js
@@ -26,6 +27,7 @@ ScrollTrigger.min:
   description: "A GSAP plugin to trigger animations based on scroll position. Great for scroll-driven effects"
   dependencies:
     - gsap.min
+  link: "https://greensock.com/scrolltrigger/"
 
 ScrollSmoother.min:
   type: js
@@ -34,6 +36,7 @@ ScrollSmoother.min:
   dependencies:
     - gsap.min
     - ScrollTrigger.min
+  link: "https://greensock.com/scrollsmoother/"
 
 ScrollToPlugin.min:
   type: js
@@ -41,6 +44,7 @@ ScrollToPlugin.min:
   description: "A GSAP plugin to animate smooth scrolling to specific page positions or elements. Useful for smooth navigation"
   dependencies:
     - gsap.min
+  link: "https://greensock.com/scrolltoplugin/"
 
 SplitText.min:
   type: js
@@ -48,6 +52,7 @@ SplitText.min:
   description: "A GSAP plugin that splits text into lines, words, or characters for detailed text animations"
   dependencies:
     - gsap.min
+  link: "https://greensock.com/splittext/"
 
 tippy.min:
   type: global
