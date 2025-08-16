@@ -1,7 +1,7 @@
 ---
 title: Some dudes
 description: procreate illustrations of scruffy dudes
-status: live
+status: draft
 type: illos
 tags:
     - procreate
