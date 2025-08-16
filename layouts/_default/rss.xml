@@ -1,5 +1,5 @@
 {{ $pages := where (where .Site.RegularPages "Section" "ne" "curva") "Params.status" "live" }}
-<?xml version="1.0" encoding="UTF-8"?>
+{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
 <rss version="2.0">
   <channel>
     <title>{{ .Site.Title }}</title>
