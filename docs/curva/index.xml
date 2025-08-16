@@ -1,19 +1,32 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Nonlinear</title>
-    <link>http://***REMOVED***.nyc/</link>
-    <description>Feed RSS</description>
+    <title>Nonlinear – Curva</title>
+    <link>http://***REMOVED***.nyc/curva/</link>
+    <description>Podcast Curva</description>
+    <language>pt-BR</language>
+    <itunes:author>Nicholas Frota</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
 
     
+      
       <item>
-        <title>No posts yet</title>
-        <link>http://***REMOVED***.nyc/</link>
-        <guid>http://***REMOVED***.nyc/#noposts</guid>
-        <pubDate>Sat, 16 Aug 2025 19:08:29 -0300</pubDate>
-        <description>No posts available.</description>
+        <title>Marx no Antropoceno, episódio 1</title>
+        <link>http://***REMOVED***.nyc/curva/01/</link>
+        <guid>http://***REMOVED***.nyc/curva/01/</guid>
+        <pubDate>Sat, 16 Aug 2025 00:00:00 &#43;0000</pubDate>
+        <description>&lt;![CDATA[]]></description>
+        <itunes:language>pt-br</itunes:language>
+
+        
+        <enclosure url="https://***REMOVED***.nyc/audio/ep1.mp3" length="" type="audio/mpeg"/>
+        
       </item>
+      
     
+
   </channel>
 </rss>

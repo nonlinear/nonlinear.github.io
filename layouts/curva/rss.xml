@@ -1,0 +1,40 @@
+{{ $pages := where (where .Site.RegularPages "Section" "curva") "Params.status" "live" }}
+{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ .Site.Title }} – Curva</title>
+    <link>{{ .Site.BaseURL }}curva/</link>
+    <description>{{ .Site.Params.description | default "Podcast Curva" }}</description>
+    <language>pt-BR</language>
+    <itunes:author>{{ .Site.Params.author }}</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+
+    {{ if gt (len $pages) 0 }}
+      {{ range $pages }}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <guid>{{ .Permalink }}</guid>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+        <description><![CDATA[{{ .Summary }}]]></description>
+        <itunes:language>{{ with .Params.languageCode }}{{ . }}{{ else }}pt-BR{{ end }}</itunes:language>
+
+        {{ with .Params.audio }}
+        <enclosure url="{{ . }}" length="{{ $.Params.audioLength }}" type="audio/mpeg"/>
+        {{ end }}
+      </item>
+      {{ end }}
+    {{ else }}
+      <item>
+        <title>No posts yet</title>
+        <link>{{ .Site.BaseURL }}curva/</link>
+        <guid>{{ .Site.BaseURL }}curva/#noposts</guid>
+        <pubDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+        <description>No posts available.</description>
+      </item>
+    {{ end }}
+
+  </channel>
+</rss>
