@@ -1,33 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0">
   <channel>
-    <title>Tags on Nonlinear</title>
-    <link>http://***REMOVED***.nyc/tags/</link>
-    <description>Recent content in Tags on Nonlinear</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://***REMOVED***.nyc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Nonlinear</title>
+    <link>http://***REMOVED***.nyc/</link>
+    <description>Feed RSS</description>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Aug 2025 18:35:06 -0300</lastBuildDate>
+
+    
     <item>
-      <title>AI</title>
-      <link>http://***REMOVED***.nyc/tags/ai/</link>
-      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://***REMOVED***.nyc/tags/ai/</guid>
-      <description></description>
+      <title>Some dudes</title>
+      <link>http://***REMOVED***.nyc/dudes/</link>
+      <guid>http://***REMOVED***.nyc/dudes/</guid>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 &#43;0000</pubDate>
+      <description>&lt;![CDATA[]]></description>
     </item>
-    <item>
-      <title>Illustration</title>
-      <link>http://***REMOVED***.nyc/tags/illustration/</link>
-      <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://***REMOVED***.nyc/tags/illustration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Procreate</title>
-      <link>http://***REMOVED***.nyc/tags/procreate/</link>
-      <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://***REMOVED***.nyc/tags/procreate/</guid>
-      <description></description>
-    </item>
+    
   </channel>
 </rss>

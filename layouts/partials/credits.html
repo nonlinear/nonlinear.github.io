@@ -5,15 +5,15 @@
                     <p class="date">
                         {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div
                         (sub $now.Unix $date.Unix) 86400 }} {{ if lt $diff 1 }}
-                        Published today
+                        status: live today
                         {{ else if lt $diff 7 }}
-                        Published {{ $diff }} days ago
+                        status: live {{ $diff }} days ago
                         {{ else if lt $diff 30 }}
-                        Published {{ div $diff 7 }} weeks ago
+                        status: live {{ div $diff 7 }} weeks ago
                         {{ else if lt $diff 365 }}
-                        Published {{ div $diff 30 }} months ago
+                        status: live {{ div $diff 30 }} months ago
                         {{ else }}
-                        Published {{ div $diff 365 }} years ago
+                        status: live {{ div $diff 365 }} years ago
                         {{ end }}
                         </p>
                     <p>{{ .Params.description | markdownify }}</p>

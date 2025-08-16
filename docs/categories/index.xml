@@ -1,11 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0">
   <channel>
-    <title>Categories on Nonlinear</title>
-    <link>http://***REMOVED***.nyc/categories/</link>
-    <description>Recent content in Categories on Nonlinear</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://***REMOVED***.nyc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Nonlinear</title>
+    <link>http://***REMOVED***.nyc/</link>
+    <description>Feed RSS</description>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Aug 2025 18:35:06 -0300</lastBuildDate>
+
+    
+    <item>
+      <title>Some dudes</title>
+      <link>http://***REMOVED***.nyc/dudes/</link>
+      <guid>http://***REMOVED***.nyc/dudes/</guid>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 &#43;0000</pubDate>
+      <description>&lt;![CDATA[]]></description>
+    </item>
+    
   </channel>
 </rss>

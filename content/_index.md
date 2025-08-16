@@ -1,6 +1,6 @@
 ---
 title: Nonlinear.nyc
-status: published
+status: live
 date: 2025-07-06
 class:
     - index
