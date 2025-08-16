@@ -1,14 +1,14 @@
 <section class="date">
                     {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div
                     (sub $now.Unix $date.Unix) 86400 }} {{ if lt $diff 1 }}
-                    <p>Published today</p>
+                    <p>status: live today</p>
                     {{ else if lt $diff 7 }}
-                    <p>Published {{ $diff }} days ago</p>
+                    <p>status: live {{ $diff }} days ago</p>
                     {{ else if lt $diff 30 }}
-                    <p>Published {{ div $diff 7 }} weeks ago</p>
+                    <p>status: live {{ div $diff 7 }} weeks ago</p>
                     {{ else if lt $diff 365 }}
-                    <p>Published {{ div $diff 30 }} months ago</p>
+                    <p>status: live {{ div $diff 30 }} months ago</p>
                     {{ else }}
-                    <p>Published {{ div $diff 365 }} years ago</p>
+                    <p>status: live {{ div $diff 365 }} years ago</p>
                     {{ end }}
                 </section>
