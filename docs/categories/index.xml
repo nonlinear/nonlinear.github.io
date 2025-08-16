@@ -1,5 +1,5 @@
 
-&lt;?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>Nonlinear</title>
@@ -7,23 +7,13 @@
     <description>Feed RSS</description>
 
     
-      
       <item>
-        <title>Test Post</title>
-        <link>http://***REMOVED***.nyc/post/test/</link>
-        <guid>http://***REMOVED***.nyc/post/test/</guid>
-        <pubDate>Sat, 16 Aug 2025 00:00:00 &#43;0000</pubDate>
-        <description>&lt;![CDATA[<p>Conteúdo de teste</p>]]></description>
+        <title>No posts yet</title>
+        <link>http://***REMOVED***.nyc/</link>
+        <guid>http://***REMOVED***.nyc/#noposts</guid>
+        <pubDate>Sat, 16 Aug 2025 19:08:29 -0300</pubDate>
+        <description>No posts available.</description>
       </item>
-      
-      <item>
-        <title>Some dudes</title>
-        <link>http://***REMOVED***.nyc/dudes/</link>
-        <guid>http://***REMOVED***.nyc/dudes/</guid>
-        <pubDate>Sun, 06 Jul 2025 00:00:00 &#43;0000</pubDate>
-        <description>&lt;![CDATA[]]></description>
-      </item>
-      
     
   </channel>
 </rss>
