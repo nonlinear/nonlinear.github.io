@@ -1,0 +1,21 @@
+{{- $pages := where (where .Site.RegularPages "Section" "ne" "curva") "Params.status" "live" -}}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Site.Params.description | default "Feed RSS" }}</description>
+    <language>{{ .Site.Language.Lang }}</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+
+    {{ range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description><![CDATA[{{ .Summary }}]]></description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
