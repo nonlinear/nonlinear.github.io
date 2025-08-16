@@ -1,6 +1,11 @@
-languageCode = "en-us"
+baseURL = "http://nonlinear.nyc/"
+languageCode = "en-us"            # idioma padrão
 title = "Nonlinear"
 publishDir = "docs"
-baseURL = "http://nonlinear.nyc/"
-[Params]
+
+[params]
 author = "Nicholas Frota"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
