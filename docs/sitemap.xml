@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://***REMOVED***.nyc/curva/</loc>
+    <loc>http://localhost:1313/curva/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/curva/01/</loc>
+    <loc>http://localhost:1313/curva/01/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/live-model/</loc>
+    <loc>http://localhost:1313/live-model/</loc>
     <lastmod>2025-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/speeddial/</loc>
+    <loc>http://localhost:1313/speeddial/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/latest/</loc>
+    <loc>http://localhost:1313/latest/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/tags/illustration/</loc>
+    <loc>http://localhost:1313/tags/illustration/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/tags/procreate/</loc>
+    <loc>http://localhost:1313/tags/procreate/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/sketches-1/</loc>
+    <loc>http://localhost:1313/sketches-1/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/dudes/</loc>
+    <loc>http://localhost:1313/dudes/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/3dcarousel/</loc>
+    <loc>http://localhost:1313/3dcarousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/carousel/</loc>
+    <loc>http://localhost:1313/carousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/documentation/</loc>
+    <loc>http://localhost:1313/documentation/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/test/</loc>
+    <loc>http://localhost:1313/test/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/focus-test/</loc>
+    <loc>http://localhost:1313/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/gallery-scroll/</loc>
+    <loc>http://localhost:1313/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/tile/</loc>
+    <loc>http://localhost:1313/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/video-scroll/</loc>
+    <loc>http://localhost:1313/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://***REMOVED***.nyc/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

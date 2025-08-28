@@ -1,0 +1,42 @@
+{{ partial "html.html" . }}
+    {{ partial "head.html" . }}
+    <body>
+
+        <main class="container">
+            <h1>Curva podcast</h1>
+            
+        <ul class="topics">
+{{ range $slug, $topic := .Site.Data.curva }}
+  <li class="topic">
+    <h2>{{ $topic.nome }}</h2>
+    
+    {{ if eq $topic.type "book" }}
+      <h3><em>{{ $topic.author }}</em></h3>
+      <p>{{ $topic.descricao }}</p>
+      <p>Tipo: {{ $topic.type }}</p>
+      <a href="{{ $topic.url }}">
+        <img src="{{ $topic.cover }}" alt="{{ $topic.nome }}">
+      </a>
+    {{ else }}
+      <p>{{ $topic.descricao }}</p>
+      <p>Tipo: {{ $topic.type }}</p>
+      
+      <ul class="syllabus">
+      {{ range $topic.books }}
+        <li class="book">
+          <h3>{{ .title }}</h3>
+          <h4><em>{{ .author }}</em></h4>
+          <a href="{{ .url }}">
+            <img src="{{ .cover }}" alt="{{ .title }}">
+          </a>
+        </li>
+      {{ end }}
+      </ul>
+    {{ end }}
+  </li>
+{{ end }}
+</ul>
+        </main>
+    
+    </body>
+</html>

@@ -5,7 +5,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Nonlinear – Curva</title>
-    <link>http://***REMOVED***.nyc/curva/</link>
+    <link>http://localhost:1313/curva/</link>
     <description>Podcast Curva</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
@@ -15,8 +15,8 @@
       
       <item>
         <title>Marx no Antropoceno, episódio 1</title>
-        <link>http://***REMOVED***.nyc/curva/01/</link>
-        <guid>http://***REMOVED***.nyc/curva/01/</guid>
+        <link>http://localhost:1313/curva/01/</link>
+        <guid>http://localhost:1313/curva/01/</guid>
         <pubDate>Sat, 16 Aug 2025 00:00:00 &#43;0000</pubDate>
         <description>&lt;![CDATA[]]></description>
         <itunes:language>pt-br</itunes:language>
