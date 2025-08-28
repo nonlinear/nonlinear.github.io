@@ -1,12 +1,10 @@
-# /data/topicos.yaml
-
 marx-in-the-anthropocene:
   nome: "Marx in the Anthropocene"
   type: "book"
   language: "pt-br"
   author: "Kohei Saito"
   url: "https://www.cambridge.org/core/books/karl-marx-in-the-anthropocene/7766884B0F50109BDFF1B5B4E3D9AB83"
-  cover: "https://assets.cambridge.org/97811084/71614/cover/9781108471614.jpg"
+  cover: "/images/curva/marx-in-the-anthropocene.jpg"
   descricao: "Uma reinterpretação ecológica da obra de Marx, explorando como suas ideias sobre metabolismo social e alienação da natureza oferecem insights cruciais para entender e enfrentar a crise ambiental contemporânea."
 
 capital-is-dead:
@@ -15,7 +13,7 @@ capital-is-dead:
   language: "pt-br"
   author: "McKenzie Wark"
   url: "https://www.versobooks.com/books/2924-capital-is-dead"
-  cover: "https://www.versobooks.com/cdn/shop/files/9781788735308_600x.jpg"
+  cover: "/images/curva/capital-is-dead.jpg"
   descricao: "Wark argumenta que vivemos além do capitalismo em uma nova formação social baseada na informação como commodity, onde uma nova classe dominante controla os vetores de informação que organizam tanto a produção quanto o consumo."
 
 permutation-city:
@@ -24,7 +22,7 @@ permutation-city:
   language: "pt-br"
   author: "Greg Egan"
   url: "https://www.goodreads.com/book/show/156784.Permutation_City"
-  cover: "https://images-na.ssl-images-amazon.com/images/I/51DQ5WQZQ5L._SX331_BO1,204,203,200_.jpg"
+  cover: "/images/curva/permutation-city.jpg"
   descricao: "Romance de ficção científica que explora questões de identidade, consciência e realidade através de simulações computacionais e universos virtuais, questionando a natureza da existência em mundos digitais."
 
 war-in-the-age-of-intelligent-machines:
@@ -33,7 +31,7 @@ war-in-the-age-of-intelligent-machines:
   language: "pt-br"
   author: "Manuel De Landa"
   url: "https://mitpress.mit.edu/9780262540551/war-in-the-age-of-intelligent-machines/"
-  cover: "https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262540551%26type%3D.jpg"
+  cover: "/images/curva/war-in-the-age-of-intelligent-machines.jpg"
   descricao: "De Landa examina a evolução da guerra através da lente da teoria dos sistemas e da filosofia deleuziana, explorando como as máquinas inteligentes transformaram tanto as estratégias militares quanto nossa compreensão do conflito."
 
 circular-design:
@@ -44,21 +42,21 @@ circular-design:
     - title: "Cradle to Cradle"
       author: "Michael Braungart & William McDonough"
       url: "https://mcdonough.com/cradle-to-cradle/"
-      cover: "https://images-na.ssl-images-amazon.com/images/I/51XQZQ0ZYXL._SX327_BO1,204,203,200_.jpg"
+      cover: "/images/curva/cradle-to-cradle.jpg"
     - title: "Shaping Things"
       author: "Bruce Sterling"
       url: "https://mitpress.mit.edu/9780262693264/shaping-things/"
-      cover: "https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262693264%26type%3D.jpg"
+      cover: "/images/curva/shaping-things.jpg"
     - title: "Simulacra and Simulation"
       author: "Jean Baudrillard"
       url: "https://www.press.umich.edu/130395/simulacra_and_simulation"
-      cover: "https://www.press.umich.edu/sites/default/files/covers/9780472065219.jpg"
+      cover: "/images/curva/simulacra-and-simulation.jpg"
     - title: "The Circular Economy Handbook"
       author: "Peter Lacy & Jessica Long"
       url: "https://www.palgrave.com/gp/book/9781349945580"
-      cover: "https://media.springernature.com/w306/springer-static/cover-hires/book/978-1-349-94559-7"
+      cover: "/images/curva/the-circular-economy-handbook.jpg"
     - title: "The Circular Economy"
       author: "Walter Stahel"
       url: "https://www.routledge.com/The-Circular-Economy/Stahel/p/book/9780367200145"
-      cover: "https://images.routledge.com/common/jackets/amazon/978036720/9780367200145.jpg"
+      cover: "/images/curva/the-circular-economy.jpg"
   descricao: "Campo de estudo que repensa o design de produtos, sistemas e serviços para eliminar desperdício e poluição, mantendo materiais em uso e regenerando sistemas naturais através de princípios circulares de economia e sustentabilidade."
