@@ -1,0 +1,12 @@
+.curva {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    padding: $gap;
+    margin: 0 auto;
+  }
+  img { max-width: 300px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+}
