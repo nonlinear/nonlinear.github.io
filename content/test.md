@@ -1,20 +1,28 @@
 ---
-title: test card
-description: how to write posts
+title: Some dudes
+description: testing all objects
 status: draft
+tags:
+    - procreate
+    - illustration
+fonts:
+    - Space-Grotesk
 js:
     - gsap.min
+    - ScrollTrigger.min
     - ScrollSmoother.min
-class:
-  - post
-date: 2025-06-14
+    - ScrollToPlugin.min
+    - SplitText.min
+illos:
+  - attentive
+  - berliner
+  - disgust
+  - esquerdista
+  - latinodude
+  - pinoy
+  - poet
+reference:
+  - https://github.com/vercel/microlink
+  - https://tympanus.net/Development/3DCarousel/
+date: 2025-07-06
 ---
-## aaa
-
-dfdfdg
-sdgsfgsfg
-sdfgsfgsfg
-- sdfgsfgsfgsd
-- sdfdsgsg
-
-## aaaa

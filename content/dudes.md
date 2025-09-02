@@ -6,14 +6,6 @@ type: illos
 tags:
     - procreate
     - illustration
-fonts:
-    - Space-Grotesk
-js:
-    - gsap.min
-    - ScrollTrigger.min
-    - ScrollSmoother.min
-    - ScrollToPlugin.min
-    - SplitText.min
 illos:
   - attentive
   - berliner
