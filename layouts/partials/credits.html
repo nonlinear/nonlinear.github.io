@@ -78,7 +78,7 @@
                     </section>
                     <section class="references">
                       {{ range .Params.reference }}
-                        <a href="{{ . }}" data-microlink>{{ . }}</a>
+                        <a href="{{ . }}">{{ . }}</a>
                       {{ end }}
                     </section>
 
@@ -98,12 +98,7 @@
 
         </div>
         {{ partial "qrcode.html" . }}
-        <script src="https://cdn.jsdelivr.net/npm/@microlink/microlink.min.js"></script>
-        <script>
-          window.addEventListener('DOMContentLoaded', () => {
-            microlink('.references a[data-microlink]')
-          });
-        </script>
+      
         <script>
         document.addEventListener("DOMContentLoaded", () => {
           const container = document.querySelector("main.container");
