@@ -1,4 +1,4 @@
-baseURL = "http://***REMOVED***.nyc/"
+baseURL = "https://***REMOVED***.nyc/"
 languageCode = "en-us"            # idioma padrão
 title = "Nonlinear"
 publishDir = "docs"
