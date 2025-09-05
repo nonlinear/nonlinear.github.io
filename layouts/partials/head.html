@@ -20,12 +20,19 @@
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
     {{ end }}
   {{ end }}
-  {{/* Open Graph image logic */}}
-  {{ $ogImage := "/images/cover/live.jpg" }}
+  {{/* Open Graph image logic com verificação de arquivo customizado */}}
+  {{ $ogImage := "/images/covers/live.jpg" }}
   {{ if ne .Params.status "live" }}
-    {{ $ogImage = "/images/cover/draft.jpg" }}
+    {{ $ogImage = "/images/covers/draft.jpg" }}
   {{ else if .Params.cover }}
-    {{ $ogImage = printf "/images/cover/%s.jpg" .Params.cover }}
+    {{ $ogImage = printf "/images/covers/%s.jpg" .Params.cover }}
+  {{ else }}
+    {{ $slug := .File.BaseFileName }}
+    {{ $customCover := printf "images/covers/%s.jpg" $slug }}
+    {{ with resources.Get $customCover }}
+      {{ $ogImage = printf "/images/covers/%s.jpg" $slug }}
+    {{ end }}
   {{ end }}
   <meta property="og:image" content="{{ $ogImage | absURL }}" />
+  <meta property="og:description" content="{{ .Params.description }}" />
 </head>
