@@ -8,13 +8,15 @@
     <description>Feed RSS</description>
 
     
+      
       <item>
-        <title>No posts yet</title>
-        <link>https://***REMOVED***.nyc/</link>
-        <guid>https://***REMOVED***.nyc/#noposts</guid>
-        <pubDate>Fri, 05 Sep 2025 17:40:17 -0400</pubDate>
-        <description>No posts available.</description>
+        <title>Some dudes</title>
+        <link>https://***REMOVED***.nyc/dudes/</link>
+         <guid>https://***REMOVED***.nyc/dudes/</guid>
+        <pubDate>Sun, 06 Jul 2025 00:00:00 &#43;0000</pubDate>
+        <description>&lt;![CDATA[]]></description>
       </item>
+      
     
   </channel>
 </rss>
