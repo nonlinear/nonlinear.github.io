@@ -9,6 +9,7 @@
 {{ $allPages := .Site.RegularPages | default (slice) }}
 {{ range $slug, $topic := .Site.Data.curva }}
   {{ $posts := where (where $allPages "Section" "curva") "Params.topic" $slug }}
+  <!-- TODO fix live list -->
   {{ $livePosts := where $posts "Params.status" "live" }}
   {{ if gt (len $livePosts) 0 }}
     <li class="topic">
