@@ -20,4 +20,12 @@
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
     {{ end }}
   {{ end }}
+  {{/* Open Graph image logic */}}
+  {{ $ogImage := "/images/cover/live.jpg" }}
+  {{ if ne .Params.status "live" }}
+    {{ $ogImage = "/images/cover/draft.jpg" }}
+  {{ else if .Params.cover }}
+    {{ $ogImage = printf "/images/cover/%s.jpg" .Params.cover }}
+  {{ end }}
+  <meta property="og:image" content="{{ $ogImage | absURL }}" />
 </head>
