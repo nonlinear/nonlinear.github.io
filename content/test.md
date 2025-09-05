@@ -2,6 +2,7 @@
 title: Some dudes
 description: testing all objects
 status: draft
+cover: testing-example
 tags:
     - procreate
     - illustration
