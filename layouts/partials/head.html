@@ -1,4 +1,15 @@
 <head>
+  {{/*
+    Cover image selection logic (for Open Graph and RSS):
+    Priority order:
+    1. If status is not "live", use {{ .Site.BaseURL }}/images/covers/draft.jpg
+    2. If status is "live" and frontmatter has "cover", use cover name: eg, dudes.md have {{ .Site.BaseURL }}/images/covers/dudes.jpg
+    3. If status is "live" and {{ .Site.BaseURL }}/images/covers/SLUG.jpg exists, use it
+    4. If status is "live", no cover, no slug.jpg, and type is "illos", use the first illo in the list. eg, illos: attentive has {{ .Site.BaseURL }}/images/illos/attentive.jpg
+    5. Otherwise, use {{ .Site.BaseURL }}/images/covers/live.jpg
+
+    All this work is to push and forget, knowing full well RSS feeds and opengraph links are covered by default plus the possibility to customize it (if I care to remember).
+  */}}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ .Page.Title }}</title>
