@@ -20,7 +20,7 @@
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
     {{ end }}
   {{ end }}
-  {{/* Open Graph image logic com verificação de arquivo customizado */}}
+  {{/* Open Graph image logic com prioridade slug.jpg sobre type illos */}}
   {{ $ogImage := "/images/covers/live.jpg" }}
   {{ if ne .Params.status "live" }}
     {{ $ogImage = "/images/covers/draft.jpg" }}
@@ -28,9 +28,13 @@
     {{ $ogImage = printf "/images/covers/%s.jpg" .Params.cover }}
   {{ else }}
     {{ $slug := .File.BaseFileName }}
-    {{ $customCover := printf "images/covers/%s.jpg" $slug }}
-    {{ with resources.Get $customCover }}
-      {{ $ogImage = printf "/images/covers/%s.jpg" $slug }}
+    {{ $slugCover := printf "/images/covers/%s.jpg" $slug }}
+    {{ $ogImage = $slugCover }}
+    {{ if and (eq .Type "illos") (not .Params.cover) (not (fileExists (printf "static%s" $slugCover))) }}
+      {{ $firstIllo := index .Params.illos 0 }}
+      {{ if $firstIllo }}
+        {{ $ogImage = printf "/images/illos/%s.jpg" $firstIllo }}
+      {{ end }}
     {{ end }}
   {{ end }}
   <meta property="og:image" content="{{ $ogImage | absURL }}" />
