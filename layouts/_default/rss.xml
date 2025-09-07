@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-{{ $pages := where (where .Site.RegularPages "Section" "curva") "Params.status" "live" }}
+{{ $pages := where (where .Site.RegularPages "Section" "ne" "curva") "Params.status" "live" }}
 
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
@@ -14,17 +14,31 @@
 
     {{ if gt (len $pages) 0 }}
       {{ range $pages }}
+        {{/* Image selection logic for RSS, same as head.html */}}
+        {{ $base := .Site.BaseURL }}
+        {{ $ogImage := printf "%simages/covers/live.jpg" $base }}
+        {{ if .Params.cover }}
+          {{ $ogImage = printf "%simages/covers/%s.jpg" $base .Params.cover }}
+        {{ else }}
+          {{ $slug := .File.BaseFileName }}
+          {{ $slugCover := printf "%simages/covers/%s.jpg" $base $slug }}
+          {{ $ogImage = $slugCover }}
+          {{ if and (eq .Type "illos") (not .Params.cover) (not (fileExists (printf "static/images/covers/%s.jpg" $slug))) }}
+            {{ $firstIllo := index .Params.illos 0 }}
+            {{ if $firstIllo }}
+              {{ $ogImage = printf "%simages/illos/%s.jpg" $base $firstIllo }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
       <item>
         <title>{{ .Title | htmlEscape }}</title>
         <link>{{ .Permalink | htmlEscape }}</link>
         <guid>{{ .Permalink | htmlEscape }}</guid>
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
-        <description><![CDATA[{{ .Summary }}]]></description>
-        <itunes:language>{{ with .Params.languageCode }}{{ . }}{{ else }}pt-BR{{ end }}</itunes:language>
-
-        {{ with .Params.audio }}
-        <enclosure url="{{ . | htmlEscape }}" length="{{ $.Params.audioLength | htmlEscape }}" type="audio/mpeg"/>
-        {{ end }}
+        <description><![CDATA[
+          <p>{{ .Params.description }}</p>
+          <a href="{{ .Permalink }}"><img src="{{ $ogImage }}" alt="{{ .Title }}" /></a>
+        ]]></description>
       </item>
       {{ end }}
     {{ else }}
