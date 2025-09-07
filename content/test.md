@@ -1,7 +1,7 @@
 ---
 title: Some dudes
 description: testing all objects
-status: draft
+status: live
 cover: testing-example
 tags:
     - procreate

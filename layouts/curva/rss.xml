@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 {{ $pages := where (where .Site.RegularPages "Section" "curva") "Params.status" "live" }}
 
-<!-- TODO review feed for live/draft, topics, etc -->
-
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
@@ -16,18 +14,37 @@
 
     {{ if gt (len $pages) 0 }}
       {{ range $pages }}
-      <item>
-        <title>{{ .Title }}</title>
-        <link>{{ .Permalink }}</link>
-        <guid>{{ .Permalink }}</guid>
-        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
-        <description><![CDATA[{{ .Summary }}]]></description>
-        <itunes:language>{{ with .Params.languageCode }}{{ . }}{{ else }}pt-BR{{ end }}</itunes:language>
-
-        {{ with .Params.audio }}
-        <enclosure url="{{ . }}" length="{{ $.Params.audioLength }}" type="audio/mpeg"/>
+        {{/* Image selection logic for RSS, same as head.html */}}
+        {{ $base := .Site.BaseURL }}
+        {{ $ogImage := printf "%simages/covers/live.jpg" $base }}
+        {{ if .Params.cover }}
+          {{ $ogImage = printf "%simages/covers/%s.jpg" $base .Params.cover }}
+        {{ else }}
+          {{ $slug := .File.BaseFileName }}
+          {{ $slugCover := printf "%simages/covers/%s.jpg" $base $slug }}
+          {{ $ogImage = $slugCover }}
+          {{ if and (eq .Type "illos") (not .Params.cover) (not (fileExists (printf "static/images/covers/%s.jpg" $slug))) }}
+            {{ $firstIllo := index .Params.illos 0 }}
+            {{ if $firstIllo }}
+              {{ $ogImage = printf "%simages/illos/%s.jpg" $base $firstIllo }}
+            {{ end }}
+          {{ end }}
         {{ end }}
-      </item>
+        <item>
+          <title>{{ .Title | htmlEscape }}</title>
+          <link>{{ .Permalink | htmlEscape }}</link>
+          <guid>{{ .Permalink | htmlEscape }}</guid>
+          <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+          <description><![CDATA[
+            <p>{{ .Params.description }}</p>
+            <a href="{{ .Permalink }}"><img src="{{ $ogImage }}" alt="{{ .Title }}" /></a>
+          ]]></description>
+          <itunes:language>{{ with .Params.languageCode }}{{ . }}{{ else }}pt-BR{{ end }}</itunes:language>
+
+          {{ with .Params.audio }}
+          <enclosure url="{{ . | htmlEscape }}" length="{{ $.Params.audioLength | htmlEscape }}" type="audio/mpeg"/>
+          {{ end }}
+        </item>
       {{ end }}
     {{ else }}
       <item>
