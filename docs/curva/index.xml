@@ -1,7 +1,7 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 
+<!-- TODO review feed for live/draft, topics, etc -->
 
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
@@ -20,12 +20,12 @@
         <title>curva</title>
         <link>https://***REMOVED***.nyc/curva/005/</link>
         <guid>https://***REMOVED***.nyc/curva/005/</guid>
-        <pubDate>Sun, 17 Aug 2025 00:00:00 &#43;0000</pubDate>
-        <description>&lt;![CDATA[]]></description>
+        <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[]]></description>
         <itunes:language>pt-BR</itunes:language>
 
         
-        <enclosure url="https://***REMOVED***.nyc/audio/005.mp3" length="" type="audio/mpeg"/>
+        <enclosure url="https://***REMOVED***.nyc/audio/005.mp3" length="<no value>" type="audio/mpeg"/>
         
       </item>
       
@@ -33,12 +33,12 @@
         <title>curva</title>
         <link>https://***REMOVED***.nyc/curva/004/</link>
         <guid>https://***REMOVED***.nyc/curva/004/</guid>
-        <pubDate>Thu, 14 Aug 2025 00:00:00 &#43;0000</pubDate>
-        <description>&lt;![CDATA[]]></description>
+        <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[]]></description>
         <itunes:language>pt-BR</itunes:language>
 
         
-        <enclosure url="https://***REMOVED***.nyc/audio/004.mp3" length="" type="audio/mpeg"/>
+        <enclosure url="https://***REMOVED***.nyc/audio/004.mp3" length="<no value>" type="audio/mpeg"/>
         
       </item>
       
@@ -46,12 +46,12 @@
         <title>curva</title>
         <link>https://***REMOVED***.nyc/curva/006/</link>
         <guid>https://***REMOVED***.nyc/curva/006/</guid>
-        <pubDate>Tue, 12 Aug 2025 00:00:00 &#43;0000</pubDate>
-        <description>&lt;![CDATA[]]></description>
+        <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[]]></description>
         <itunes:language>pt-BR</itunes:language>
 
         
-        <enclosure url="https://***REMOVED***.nyc/audio/006.mp3" length="" type="audio/mpeg"/>
+        <enclosure url="https://***REMOVED***.nyc/audio/006.mp3" length="<no value>" type="audio/mpeg"/>
         
       </item>
       
