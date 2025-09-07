@@ -1,30 +1,41 @@
-{{ $pages := where (where .Site.RegularPages "Section" "ne" "curva") "Params.status" "live" }}
-{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
-<!-- TODO review feed for live/draft, etc -->
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+{{ $pages := where (where .Site.RegularPages "Section" "curva") "Params.status" "live" }}
+
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>{{ .Site.Title }}</title>
-    <link>{{ .Site.BaseURL }}</link>
-    <description>{{ .Site.Params.description | default "Feed RSS" }}</description>
+    <title>{{ .Site.Title | htmlEscape }} – Curva</title>
+    <link>{{ .Site.BaseURL | htmlEscape }}curva/</link>
+    <description>{{ .Site.Params.description | default "Podcast Curva" | htmlEscape }}</description>
+    <language>pt-BR</language>
+    <itunes:author>{{ .Site.Params.author | htmlEscape }}</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
 
     {{ if gt (len $pages) 0 }}
       {{ range $pages }}
       <item>
-        <title>{{ .Title }}</title>
-        <link>{{ .Permalink }}</link>
-         <guid>{{ .Permalink }}</guid>
+        <title>{{ .Title | htmlEscape }}</title>
+        <link>{{ .Permalink | htmlEscape }}</link>
+        <guid>{{ .Permalink | htmlEscape }}</guid>
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
         <description><![CDATA[{{ .Summary }}]]></description>
+        <itunes:language>{{ with .Params.languageCode }}{{ . }}{{ else }}pt-BR{{ end }}</itunes:language>
+
+        {{ with .Params.audio }}
+        <enclosure url="{{ . | htmlEscape }}" length="{{ $.Params.audioLength | htmlEscape }}" type="audio/mpeg"/>
+        {{ end }}
       </item>
       {{ end }}
     {{ else }}
       <item>
         <title>No posts yet</title>
-        <link>{{ .Site.BaseURL }}</link>
-        <guid>{{ .Site.BaseURL }}#noposts</guid>
+        <link>{{ .Site.BaseURL | htmlEscape }}curva/</link>
+        <guid>{{ .Site.BaseURL | htmlEscape }}curva/#noposts</guid>
         <pubDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
         <description>No posts available.</description>
       </item>
     {{ end }}
+
   </channel>
 </rss>

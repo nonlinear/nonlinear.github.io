@@ -1,5 +1,5 @@
 baseURL = "https://***REMOVED***.nyc/"
-languageCode = "en-us"            # idioma padrão
+languageCode = "en-us"
 title = "Nonlinear"
 publishDir = "docs"
 
@@ -9,3 +9,11 @@ author = "Nicholas Frota"
 [outputs]
 home = ["HTML", "RSS"]
 section = ["HTML", "RSS"]
+
+[mediaTypes."application/rss+xml"]
+suffixes = ["xml"]
+
+[outputFormats.RSS]
+mediaType = "application/rss+xml"
+baseName = "index"
+isPlainText = true
