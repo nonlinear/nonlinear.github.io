@@ -1,11 +1,14 @@
-   <!-- js detector -->
-
+{{ if .Params.jsScript }}
+  {{ range .Params.jsScript }}
+    <script src="{{ printf "js/script/%s.js" . | absURL }}"></script>
+  {{ end }}
+{{ end }}
+ 
    <script>
        document.documentElement.classList.remove("no-js");
        document.documentElement.classList.add("js");
    </script>
 
-   <!-- global libraries -->
 
         <script src="{{ printf "js/global/popper.min.js" | absURL }}"></script>
          <script src="{{ printf "js/global/tippy-bundle.umd.min.js" | absURL }}"></script>
@@ -23,26 +26,26 @@
             });
         </script>
 
-    <!-- post libraries -->
 
-    {{- if .Params.js }}
-      {{- range .Params.js }}
-        {{- $entry := . }}
-        {{- $name := $entry }}
-        {{- $attrs := slice }}
 
-        {{- if strings.Contains $entry ":" }}
-          {{- $parts := split $entry ":" }}
-          {{- $name = index $parts 0 }}
-          {{- $attrs = split (index $parts 1) "," }}
-        {{- end }}
+    {{ if .Params.jsLib }}
+      {{ range .Params.jsLib }}
+        {{ $entry := . }}
+        {{ $name := $entry }}
+        {{ $attrs := slice }}
 
-        {{- $folder := cond (in $attrs "script") "script" "lib" }}
+        {{ if strings.Contains $entry ":" }}
+          {{ $parts := split $entry ":" }}
+          {{ $name = index $parts 0 }}
+          {{ $attrs = split (index $parts 1) "," }}
+        {{ end }}
+
+        {{ $folder := cond (in $attrs "script") "script" "lib" }}
 
         <script src="{{ printf "js/%s/%s.js" $folder $name | absURL }}"
-          {{- if in $attrs "module" }} type="module"{{ end }}
-          {{- if in $attrs "defer" }} defer{{ end }}
-          {{- if in $attrs "async" }} async{{ end }}>
+          {{ if in $attrs "module" }} type="module"{{ end }}
+          {{ if in $attrs "defer" }} defer{{ end }}
+          {{ if in $attrs "async" }} async{{ end }}>
         </script>
-      {{- end }}
-    {{- end }}
+      {{ end }}
+    {{ end }}
