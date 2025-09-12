@@ -1,5 +1,5 @@
-{{ if .Params.jsScript }}
-  {{ range .Params.jsScript }}
+{{ with index .Params "js-script" }}
+  {{ range . }}
     <script src="{{ printf "js/script/%s.js" . | absURL }}"></script>
   {{ end }}
 {{ end }}
@@ -28,8 +28,8 @@
 
 
 
-    {{ if .Params.jsLib }}
-      {{ range .Params.jsLib }}
+    {{ with index .Params "js-lib" }}
+      {{ range . }}
         {{ $entry := . }}
         {{ $name := $entry }}
         {{ $attrs := slice }}
