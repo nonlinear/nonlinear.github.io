@@ -1,8 +1,21 @@
-{{ with index .Params "js-script" }}
-  {{ range . }}
-    <script src="{{ printf "js/script/%s.js" . | absURL }}"></script>
-  {{ end }}
+<!--
+    JS script loading logic:
+    - If a script matching the post slug exists in /js/script/, include it.
+    - If not, and a script matching the post type exists, include that.
+    - If both slug and type are the same, only include one (slug takes precedence).
+    - If neither exists, no script is included.
+-->
+{{ $slug := .File.BaseFileName }}
+{{ $type := .Params.type }}
+{{ $slugScript := printf "js/script/%s.js" $slug }}
+{{ $typeScript := printf "js/script/%s.js" $type }}
+
+{{ if (fileExists (printf "static/%s" $slugScript)) }}
+    <script src="{{ $slugScript | absURL }}"></script>
+{{ else if and $type (fileExists (printf "static/%s" $typeScript)) }}
+    <script src="{{ $typeScript | absURL }}"></script>
 {{ end }}
+
  
    <script>
        document.documentElement.classList.remove("no-js");
@@ -12,6 +25,19 @@
 
         <script src="{{ printf "js/global/popper.min.js" | absURL }}"></script>
          <script src="{{ printf "js/global/tippy-bundle.umd.min.js" | absURL }}"></script>
+
+                {{ with index .Params "js-lib" }}
+                    {{ range . }}
+                        <script src="{{ printf "js/lib/%s.min.js" . | absURL }}"></script>
+                    {{ end }}
+                {{ else }}
+                    <!-- WARNING: No js-lib scripts found in frontmatter -->
+                {{ end }}
+{{ with index .Params "js-script" }}
+  {{ range . }}
+    <script src="{{ printf "js/script/%s.js" . | absURL }}"></script>
+  {{ end }}
+{{ end }}
         <script>
             document.querySelectorAll(".tooltip").forEach((el) => {
                 const tipId = el.getAttribute("data-tooltip-id");
@@ -28,24 +54,3 @@
 
 
 
-    {{ with index .Params "js-lib" }}
-      {{ range . }}
-        {{ $entry := . }}
-        {{ $name := $entry }}
-        {{ $attrs := slice }}
-
-        {{ if strings.Contains $entry ":" }}
-          {{ $parts := split $entry ":" }}
-          {{ $name = index $parts 0 }}
-          {{ $attrs = split (index $parts 1) "," }}
-        {{ end }}
-
-        {{ $folder := cond (in $attrs "script") "script" "lib" }}
-
-        <script src="{{ printf "js/%s/%s.js" $folder $name | absURL }}"
-          {{ if in $attrs "module" }} type="module"{{ end }}
-          {{ if in $attrs "defer" }} defer{{ end }}
-          {{ if in $attrs "async" }} async{{ end }}>
-        </script>
-      {{ end }}
-    {{ end }}
