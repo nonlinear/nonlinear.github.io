@@ -1,0 +1,32 @@
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body>
+    <main class="container">
+        <a href="javascript:void(0)" class="mice credits-open"></a>
+      <article class="content illos">
+          {{ range .Params.illos }}
+          {{ end }}
+          {{ range .Params.illos }}
+          <div class="illo-wrapper">
+          <img class="zoom-img"
+              src="{{ printf "images/illos/%s.jpg" . | absURL }}"
+              data-static="{{ printf "images/illos/%s.jpg" . | absURL }}"
+              data-anim="{{ printf "images/illos/%s.webp" . | absURL }}"
+              alt="{{ . }}"
+              style="width: 100%; height: auto;"
+            />
+
+          </div>
+          {{ end }}
+          <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+      </article>
+      {{ partial "credits" . }}
+    </main>
+  {{ partial "load-js.html" . }}
+</body>
+
+
+
+
+
+</html>

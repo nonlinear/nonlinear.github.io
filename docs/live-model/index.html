@@ -4,7 +4,7 @@
     class="single no-js live-model draft single"
 >
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +24,7 @@
   
     
   
-  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
   <meta property="og:description" content="Drawing live models" />
 </head>
 
@@ -39,9 +39,9 @@
           
           <div class="illo-wrapper">
           <img class="zoom-img"
-              src="https://***REMOVED***.nyc/images/illos/model-1.jpg"
-              data-static="https://***REMOVED***.nyc/images/illos/model-1.jpg"
-              data-anim="https://***REMOVED***.nyc/images/illos/model-1.webp"
+              src="http://localhost:1313/images/illos/model-1.jpg"
+              data-static="http://localhost:1313/images/illos/model-1.jpg"
+              data-anim="http://localhost:1313/images/illos/model-1.webp"
               alt="model-1"
               style="width: 100%; height: auto;"
             />
@@ -50,9 +50,9 @@
           
           <div class="illo-wrapper">
           <img class="zoom-img"
-              src="https://***REMOVED***.nyc/images/illos/model-2.jpg"
-              data-static="https://***REMOVED***.nyc/images/illos/model-2.jpg"
-              data-anim="https://***REMOVED***.nyc/images/illos/model-2.webp"
+              src="http://localhost:1313/images/illos/model-2.jpg"
+              data-static="http://localhost:1313/images/illos/model-2.jpg"
+              data-anim="http://localhost:1313/images/illos/model-2.webp"
               alt="model-2"
               style="width: 100%; height: auto;"
             />
@@ -61,9 +61,9 @@
           
           <div class="illo-wrapper">
           <img class="zoom-img"
-              src="https://***REMOVED***.nyc/images/illos/model-3.jpg"
-              data-static="https://***REMOVED***.nyc/images/illos/model-3.jpg"
-              data-anim="https://***REMOVED***.nyc/images/illos/model-3.webp"
+              src="http://localhost:1313/images/illos/model-3.jpg"
+              data-static="http://localhost:1313/images/illos/model-3.jpg"
+              data-anim="http://localhost:1313/images/illos/model-3.webp"
               alt="model-3"
               style="width: 100%; height: auto;"
             />
@@ -186,10 +186,10 @@
 
 
         </div>
-        <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
+        <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/live-model\/",
+        text: "http:\/\/localhost:1313\/live-model\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -244,7 +244,7 @@
 
 
 
-    <script src="https://***REMOVED***.nyc/js/script/illos.js"></script>
+    <script src="http://localhost:1313/js/script/illos.js"></script>
 
 
  
@@ -254,8 +254,8 @@
    </script>
 
 
-        <script src="https://***REMOVED***.nyc/js/global/popper.min.js"></script>
-         <script src="https://***REMOVED***.nyc/js/global/tippy-bundle.umd.min.js"></script>
+        <script src="http://localhost:1313/js/global/popper.min.js"></script>
+         <script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
                 
                     
@@ -278,53 +278,5 @@
 
 
 
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('in-view');
-        }, index * 300);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
-    observer.observe(wrapper);
-  });
-  </script>
-  <script>
-  document.querySelectorAll('.illo-wrapper').forEach(wrapper => {
-    const img = wrapper.querySelector('img');
-    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (isTouch) {
-      let animActive = false;
-      wrapper.addEventListener('touchstart', () => {
-        if (!animActive) {
-          img.src = img.dataset.anim;
-          animActive = true;
-        } else {
-          img.src = img.dataset.static;
-          animActive = false;
-        }
-      });
-    } else {
-      const activate = () => {
-        img.src = img.dataset.anim;
-      };
-      const deactivate = () => {
-        img.src = img.dataset.static;
-      };
-      wrapper.addEventListener('mouseenter', activate);
-      wrapper.addEventListener('mouseleave', deactivate);
-    }
-  });
-  </script>
 </body>
-
-
-
-
-
 </html>

@@ -21,7 +21,7 @@
 
 # Done
 
-## Done September 2025
+## September 2025
 
 - [js from slug or type](https://github.com/***REMOVED***/***REMOVED***.github.io/commit/a2f567d)
 	- Refactored JS loader to use slug/type logic in `layouts/partials/load-js.html`
