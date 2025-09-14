@@ -6,7 +6,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Nonlinear – Curva</title>
-    <link>https://***REMOVED***.nyc/curva/</link>
+    <link>http://localhost:1313/curva/</link>
     <description>Podcast Curva</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
@@ -25,12 +25,12 @@
         
         <item>
           <title>curva</title>
-          <link>https://***REMOVED***.nyc/curva/005/</link>
-          <guid>https://***REMOVED***.nyc/curva/005/</guid>
+          <link>http://localhost:1313/curva/005/</link>
+          <guid>http://localhost:1313/curva/005/</guid>
           <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p><no value></p>
-            <a href="https://***REMOVED***.nyc/curva/005/"><img src="https://***REMOVED***.nyc/images/covers/005.jpg" alt="curva" /></a>
+            <a href="http://localhost:1313/curva/005/"><img src="http://localhost:1313/images/covers/005.jpg" alt="curva" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -50,12 +50,12 @@
         
         <item>
           <title>curva</title>
-          <link>https://***REMOVED***.nyc/curva/004/</link>
-          <guid>https://***REMOVED***.nyc/curva/004/</guid>
+          <link>http://localhost:1313/curva/004/</link>
+          <guid>http://localhost:1313/curva/004/</guid>
           <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p><no value></p>
-            <a href="https://***REMOVED***.nyc/curva/004/"><img src="https://***REMOVED***.nyc/images/covers/004.jpg" alt="curva" /></a>
+            <a href="http://localhost:1313/curva/004/"><img src="http://localhost:1313/images/covers/004.jpg" alt="curva" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -75,12 +75,12 @@
         
         <item>
           <title>curva</title>
-          <link>https://***REMOVED***.nyc/curva/006/</link>
-          <guid>https://***REMOVED***.nyc/curva/006/</guid>
+          <link>http://localhost:1313/curva/006/</link>
+          <guid>http://localhost:1313/curva/006/</guid>
           <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p><no value></p>
-            <a href="https://***REMOVED***.nyc/curva/006/"><img src="https://***REMOVED***.nyc/images/covers/006.jpg" alt="curva" /></a>
+            <a href="http://localhost:1313/curva/006/"><img src="http://localhost:1313/images/covers/006.jpg" alt="curva" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
