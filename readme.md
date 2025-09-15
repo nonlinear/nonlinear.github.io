@@ -23,6 +23,15 @@
 
 ## September 2025
 
+- [cleaning up speeddial, starting anew](https://github.com/***REMOVED***/***REMOVED***.github.io/commit/0f67835)
+	- Major refactor of speeddial logic and styles in `assets/css/speeddial.scss`, `content/speeddial.html`, `static/js/script/speeddial.js`
+
+- [consolidating layouts](https://github.com/***REMOVED***/***REMOVED***.github.io/commit/48d44f1)
+	- Merged illos layout into default, updated `layouts/partials/single.html`, removed `layouts/illos/single.html`, backup in `layouts/illos/single.html.bak`
+
+- [readme](https://github.com/***REMOVED***/***REMOVED***.github.io/commit/9812dfb)
+	- Updated documentation and changelog in `readme.md`, affected: `content/speeddial.html`, `layouts/partials/load-js.html`, `static/js/script/illos.js`
+
 - [js from slug or type](https://github.com/***REMOVED***/***REMOVED***.github.io/commit/a2f567d)
 	- Refactored JS loader to use slug/type logic in `layouts/partials/load-js.html`
 	- Updated post content files: `content/3dcarousel.html`, `content/carousel.html`, `content/test.md`
