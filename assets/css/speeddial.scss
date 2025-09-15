@@ -1,3 +1,4 @@
+
 .speeddial {
     .scroll-container {
         height: 100vh;
@@ -5,7 +6,7 @@
         scroll-snap-type: y mandatory;
         scroll-behavior: smooth;
     }
-
+    
     .slide {
         max-width: 500px; /* largura máxima */
         margin: 0 auto; /* centraliza */
@@ -22,14 +23,14 @@
         position: relative; /* necessário para posicionar cards empilhados */
         overflow: hidden;
     }
-
+    
     .cards {
         position: relative;
         flex: 1;
         width: 100%;
         margin-top: 1rem;
     }
-
+    
     .cards a {
         position: absolute;
         top: 0;
@@ -38,7 +39,7 @@
         height: 70vh;
         border-radius: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,30 +48,38 @@
         color: inherit;
         font-size: 1.5rem;
         font-weight: 500;
-
+        
         background: #fff;
         transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
+        transform 0.3s ease,
+        opacity 0.3s ease;
+        
     }
-
+    a[draggable="true"] {
+        cursor: grab;
+    }
+    a[draggable="true"].dragging {
+        opacity: 0.7;
+        cursor: grabbing;
+    }
+    
     .cards a:nth-child(n + 2) {
         opacity: 0; /* só o primeiro visível */
         pointer-events: none;
     }
-
+    
     /* Animação swipe left para ir pro próximo */
     .cards a.swipe-left {
         transform: translateX(-120%) rotate(-5deg);
         opacity: 0;
     }
-
+    
     /* Animação swipe right para abrir link */
     .cards a.swipe-right {
         transform: translateX(120%) rotate(5deg);
         opacity: 0;
     }
-
+    
     .cards a:hover {
         transform: translateY(-2px);
     }
