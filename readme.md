@@ -1,3 +1,4 @@
+
 # [***REMOVED***.nyc](https://***REMOVED***.nyc)
 
 ---
@@ -15,7 +16,7 @@
 - [ ] Review curva RSS feed
 - [x] Find zencastr or similar
 - [ ] AWS for audio files
-- [ ] Test curva filter
+- [x] Test curva filter
 
 ---
 

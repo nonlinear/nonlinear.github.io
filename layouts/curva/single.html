@@ -1,0 +1,75 @@
+{{ partial "html.html" . }}
+		{{ partial "head.html" . }}
+		<body>
+
+				<main class="container">
+						<h1>Curva podcast</h1>
+            
+	<ul class="topics">
+{{ $allPages := .Site.RegularPages | default (slice) }}
+{{ range $slug, $topic := .Site.Data.curva }}
+	{{ $posts := where (where $allPages "Section" "curva") "Params.topic" $slug }}
+	{{ $livePosts := where $posts "Params.status" "live" }}
+	{{ range $livePosts }}
+	{{ end }}
+	{{ if gt (len $livePosts) 0 }}
+		<li class="topic">
+			<h2>{{ $topic.nome }}</h2>
+			{{ if eq $topic.type "book" }}
+				<h3><em>{{ $topic.author }}</em></h3>
+				<p>{{ $topic.descricao }}</p>
+				<p>Tipo: {{ $topic.type }}</p>
+				<a href="{{ $topic.url }}">
+					<img src="{{ $topic.cover }}" alt="{{ $topic.nome }}">
+				</a>
+				<ul class="episodes">
+					{{ $liveSorted := sort (where $posts "Params.status" "live") "Date" "desc" }}
+					{{ range $liveSorted }}
+						<li>
+							<a href="{{ .RelPermalink }}">Episódio {{ .Params.number }}</a>
+							{{ $now := now }}
+							{{ $date := .Date }}
+							{{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+							<span class="episode-date">
+								{{ if lt $diff 1 }}postado hoje
+								{{ else if lt $diff 7 }}
+									postado há {{ $diff }} {{ if eq $diff 1 }}dia{{ else }}dias{{ end }}
+								{{ else if lt $diff 30 }}
+									{{ $weeks := div $diff 7 }}
+									postado há {{ $weeks }} {{ if eq $weeks 1 }}semana{{ else }}semanas{{ end }}
+								{{ else if lt $diff 365 }}
+									{{ $months := div $diff 30 }}
+									postado há {{ $months }} {{ if eq $months 1 }}mês{{ else }}meses{{ end }}
+								{{ else }}
+									{{ $years := div $diff 365 }}
+									postado há {{ $years }} {{ if eq $years 1 }}ano{{ else }}anos{{ end }}
+								{{ end }}
+							</span>
+						</li>
+					{{ end }}
+				<ul class="syllabus">
+				{{ range $topic.books }}
+					<li class="book">
+						<h3>{{ .title }}</h3>
+						<h4><em>{{ .author }}</em></h4>
+						<a href="{{ .url }}">
+							<img src="{{ .cover }}" alt="{{ .title }}">
+						</a>
+						<ul class="episodes">
+							{{ $bookPosts := where $posts "Params.topic" $slug }}
+							{{ range $bookPosts }}
+								<li><a href="{{ .RelPermalink }}">{{ .File.BaseFileName }}</a></li>
+							{{ end }}
+						</ul>
+					</li>
+				{{ end }}
+				</ul>
+			{{ end }}
+		</li>
+	{{ end }}
+{{ end }}
+</ul>
+				</main>
+    
+		</body>
+</html>

@@ -1,10 +1,13 @@
 {{ partial "html.html" . }}
     {{ partial "head.html" . }}
     <body>
-
-        <main class="container">
-            <h1>Curva podcast</h1>
-            
+<article class="cover">
+  <div class="container">
+     <h1>A Curva de Aprendizado podcast</h1>
+   <p>Um podcast humano-máquina, onde o humano reclama do que tem que aprender, e a máquina se vira como pode.</p>
+  </div>
+</article>
+<nav class="episodes"> 
   <ul class="topics">
 {{ $allPages := .Site.RegularPages | default (slice) }}
 {{ range $slug, $topic := .Site.Data.curva }}
@@ -69,7 +72,7 @@
   {{ end }}
 {{ end }}
 </ul>
-        </main>
+</nav>
     
     </body>
 </html>
