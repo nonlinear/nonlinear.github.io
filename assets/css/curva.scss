@@ -1,12 +1,77 @@
+$curva-fold: 60vh;
+$curva-episodes: calc(100vh - #{$curva-fold});
+$topic-width: 500px;
+
 .curva {
-  .container {
-    width: 100%;
-    max-width: 700px;
-    padding: $gap;
-    margin: 0 auto;
+  // Regra única para grid de 2 colunas (cover + content)
+  .container,
+  .topic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: $gap2;
   }
-  img { max-width: 300px;
+
+  article.about {
+    width: 100vw;
+    min-height: $curva-fold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+
+      .cover {
+        grid-column: 1;
+        width: 100%;
+      }
+
+      .content {
+        grid-column: 2;
+        width: 100%;
+      }
+    }
+  }
+
+  nav.episodes {
+    width: 100vw;
+    height: $curva-episodes;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    scrollbar-width: thin;
+    scrollbar-color: #90caf9 #e3f2fd;
+  }
+
+  .topic {
+    flex: 0 0 $topic-width;
+    width: $topic-width;
+    height: $curva-episodes;
+    margin: 0;
+
+    .cover {
+      grid-column: 1;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .content {
+      grid-column: 2;
+      width: 100%;
+    }
+  }
+
+  img { 
+    max-width: 100%;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
     border-radius: 2px;
+  }
+
+  html, body {
+    overflow: hidden;
   }
 }

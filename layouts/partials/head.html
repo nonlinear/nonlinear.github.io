@@ -31,6 +31,12 @@
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
     {{ end }}
   {{ end }}
+
+  {{ $isCurva := eq .Section "curva" }}
+  {{ $hasBootstrapTag := in .Params.tags "bootstrap" }}
+  {{ if or $isCurva $hasBootstrapTag }}
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  {{ end }}
   {{/* Open Graph image logic com prioridade slug.jpg sobre type illos */}}
   {{ $ogImage := "/images/covers/live.jpg" }}
   {{ if ne .Params.status "live" }}
