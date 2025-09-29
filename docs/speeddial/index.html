@@ -23,13 +23,12 @@
   
   
   
-  
-  
-  
     
   
   <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
   <meta property="og:description" content="A speed dial for AI conversations... Scroll up-down for categories, left for another conversation, right to activate conversation." />
+
+
 </head>
 
 <body>
@@ -287,10 +286,18 @@
                 });
             });
         </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl, {
+        trigger: 'hover',
+        html: true
+      });
+    });
+  });
+</script>
 
-  
-  
-  
 
 
 

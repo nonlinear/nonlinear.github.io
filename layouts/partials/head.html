@@ -32,11 +32,6 @@
     {{ end }}
   {{ end }}
 
-  {{ $isCurva := eq .Section "curva" }}
-  {{ $hasBootstrapTag := in .Params.tags "bootstrap" }}
-  {{ if or $isCurva $hasBootstrapTag }}
-    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-  {{ end }}
   {{/* Open Graph image logic com prioridade slug.jpg sobre type illos */}}
   {{ $ogImage := "/images/covers/live.jpg" }}
   {{ if ne .Params.status "live" }}
@@ -56,4 +51,6 @@
   {{ end }}
   <meta property="og:image" content="{{ $ogImage | absURL }}" />
   <meta property="og:description" content="{{ .Params.description }}" />
+
+
 </head>
