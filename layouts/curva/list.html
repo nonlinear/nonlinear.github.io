@@ -1,13 +1,15 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" }}
 <body>
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
 <article class="about">
   <div class="container">
     <div class="cover">cover here</div>
    <div class="content">
       <h1>A Curva de Aprendizado podcast</h1>
      <p>Um podcast humano-máquina, onde o humano reclama do que tem que aprender, e a máquina se vira como pode.</p>
-       <div class="player">
+     <div class="player">
+        <hr>
   {{ $allPages := .Site.RegularPages | default (slice) }}
   {{ $curvaPosts := where $allPages "Section" "curva" }}
   {{ $livePosts := where $curvaPosts "Params.status" "live" }}
@@ -20,6 +22,21 @@
           <source src="{{ .Params.audio }}" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+        <p>{{ .Description }} 
+          https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md
+          <span
+  class="badge rounded-pill text-bg-light"
+  tabindex="0"
+  data-bs-toggle="popover"
+  data-bs-trigger="focus"
+  data-bs-html="true"
+  data-bs-content='<a href="https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md" target="_blank">Ver notas no GitHub</a>'
+>
+  Leia notas
+</span>
+          
+          <a href="(link pro github)" target="notes">View notes</a></p>
+        
       </div>
     {{ else }}
       <em>Sem áudio disponível para o último episódio.</em>
@@ -56,5 +73,44 @@
   {{ end }}
 </nav>
 {{ partial "load-js.html" . }}
+    <script src="/js/lib/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  popoverTriggerList.forEach(function (el) {
+    var popover = new bootstrap.Popover(el, {
+      trigger: 'manual',
+      html: true
+    });
+
+    var timeout = null;
+
+    el.addEventListener('mouseenter', function () {
+      popover.show();
+    });
+
+    el.addEventListener('mouseleave', function () {
+      timeout = setTimeout(function () {
+        var popoverElem = document.querySelector('.popover:hover');
+        if (!popoverElem) {
+          popover.hide();
+        }
+      }, 200);
+    });
+
+    document.body.addEventListener('mouseenter', function (event) {
+      if (event.target.classList.contains('popover')) {
+        clearTimeout(timeout);
+      }
+    }, true);
+
+    document.body.addEventListener('mouseleave', function (event) {
+      if (event.target.classList.contains('popover')) {
+        popover.hide();
+      }
+    }, true);
+  });
+});
+</script>
 </body>
 </html>
