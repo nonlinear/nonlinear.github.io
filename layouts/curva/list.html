@@ -40,7 +40,11 @@
         <div class="cover">
            {{ if $topic.cover }}
           <img src="{{ $topic.cover }}" alt="{{ $topic.name }}">
-        {{ end }}
+        {{ else if and (isset $topic "books") (gt (len $topic.books) 0) }}
+  {{ $books := $topic.books }}
+  {{ $randomBook := index $books (mod (now.Unix) (len $books)) }}
+  <img src="{{ $randomBook.cover }}" alt="{{ $randomBook.title }}">
+{{ end }}
         </div>
        <div class="content">
          <h2>{{ $topic.name }}</h2>
