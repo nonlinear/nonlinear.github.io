@@ -7,7 +7,27 @@
    <div class="content">
       <h1>A Curva de Aprendizado podcast</h1>
      <p>Um podcast humano-máquina, onde o humano reclama do que tem que aprender, e a máquina se vira como pode.</p>
-   </div>
+       <div class="player">
+  {{ $allPages := .Site.RegularPages | default (slice) }}
+  {{ $curvaPosts := where $allPages "Section" "curva" }}
+  {{ $livePosts := where $curvaPosts "Params.status" "live" }}
+  {{ $last := first 1 (sort $livePosts "Date" "desc") }}
+  {{ with index $last 0 }}
+    {{ if .Params.audio }}
+      <div class="player-title">
+      <strong>{{ .Title }}</strong>
+        <audio controls style="width:100%">
+          <source src="{{ .Params.audio }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    {{ else }}
+      <em>Sem áudio disponível para o último episódio.</em>
+    {{ end }}
+  {{ end }}
+</div>
+    </div>
+
   </div>
 </article>
 <nav class="episodes">
@@ -27,8 +47,6 @@
         <span class="badge rounded-pill text-bg-primary">{{ $topic.type }}</span>
         <p>{{ $topic.description }}</p>
        </div>
-       
-        
       </div>
     {{ end }}
   {{ end }}
