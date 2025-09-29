@@ -4,6 +4,13 @@ $topic-width: 500px;
 
 .curva {
   // Regra única para grid de 2 colunas (cover + content)
+  
+  body {
+    
+    background: #e3f2fd;
+    line-height: 140%;
+  }
+
   .container,
   .topic {
     display: grid;
@@ -11,32 +18,38 @@ $topic-width: 500px;
     align-items: center;
     grid-gap: $gap2;
   }
-
+  .topic {
+    padding: 0 $gap2;
+    border-right: solid 1px black;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+  
   article.about {
     width: 100vw;
     min-height: $curva-fold;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e3f2fd;
-
+    
     .container {
       width: 100%;
       max-width: 900px;
       margin: 0 auto;
-
+      
       .cover {
         grid-column: 1;
         width: 100%;
       }
-
+      
       .content {
         grid-column: 2;
         width: 100%;
       }
     }
   }
-
+  
   nav.episodes {
     width: 100vw;
     height: $curva-episodes;
@@ -45,15 +58,14 @@ $topic-width: 500px;
     display: flex;
     flex-direction: row;
     scrollbar-width: thin;
-    scrollbar-color: #90caf9 #e3f2fd;
   }
-
+  
   .topic {
     flex: 0 0 $topic-width;
     width: $topic-width;
     height: $curva-episodes;
     margin: 0;
-
+    
     .cover {
       grid-column: 1;
       width: 100%;
@@ -64,14 +76,27 @@ $topic-width: 500px;
       width: 100%;
     }
   }
-
+  
   img { 
     max-width: 100%;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
     border-radius: 2px;
   }
-
+  
   html, body {
     overflow: hidden;
+  }
+  .chapters {
+    a {
+      display: block;
+      border-bottom: solid 1px black;
+      &:first-of-type {
+        border-top: solid 1px black;
+      }
+      padding: $gaphalf 0;
+       text-decoration: none;
+       color: black;
+
+    }
   }
 }

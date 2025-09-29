@@ -17,25 +17,17 @@
   {{ with index $last 0 }}
     {{ if .Params.audio }}
       <div class="player-title">
-      <strong>{{ .Title }}</strong>
+      <h2>{{ .Title }}</h2>
         <audio controls style="width:100%">
           <source src="{{ .Params.audio }}" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
         <p>{{ .Description }} 
           https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md
-          <span
-  class="badge rounded-pill text-bg-light"
-  tabindex="0"
-  data-bs-toggle="popover"
-  data-bs-trigger="focus"
-  data-bs-html="true"
-  data-bs-content='<a href="https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md" target="_blank">Ver notas no GitHub</a>'
->
-  Leia notas
-</span>
+         
+          </p>
           
-          <a href="(link pro github)" target="notes">View notes</a></p>
+          
         
       </div>
     {{ else }}
@@ -64,9 +56,33 @@
 {{ end }}
         </div>
        <div class="content">
-         <h2>{{ $topic.name }}</h2>
-        <span class="badge rounded-pill text-bg-primary">{{ $topic.type }}</span>
+         <span class="badge rounded-pill text-bg-secondary">{{ $topic.type }}</span>
+         <h3>{{ $topic.name }}</h3>
+       
         <p>{{ $topic.description }}</p>
+       <div class="chapters">
+         <a href="#"
+            data-bs-toggle="popover"
+            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
+          >
+            Episode 3
+            
+          </a>
+           <a href="#"
+            data-bs-toggle="popover"
+            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
+          >
+            Episode 2
+            
+          </a>
+           <a href="#"
+            data-bs-toggle="popover"
+            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
+          >
+            Episode 1
+            
+          </a>
+       </div>
        </div>
       </div>
     {{ end }}
@@ -75,42 +91,28 @@
 {{ partial "load-js.html" . }}
     <script src="/js/lib/bootstrap.bundle.min.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-  popoverTriggerList.forEach(function (el) {
-    var popover = new bootstrap.Popover(el, {
-      trigger: 'manual',
-      html: true
-    });
-
-    var timeout = null;
-
-    el.addEventListener('mouseenter', function () {
-      popover.show();
-    });
-
-    el.addEventListener('mouseleave', function () {
-      timeout = setTimeout(function () {
-        var popoverElem = document.querySelector('.popover:hover');
-        if (!popoverElem) {
-          popover.hide();
+  $('.selector').popover({
+        html: true,
+        trigger: 'manual',
+        container: $(this).attr('id'),
+        placement: 'top',
+        content: function () {
+            $return = '<div class="hover-hovercard"></div>';
         }
-      }, 200);
+    }).on("mouseenter", function () {
+        var _this = this;
+        $(this).popover("show");
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(_this).popover('hide');
+        });
+    }).on("mouseleave", function () {
+        var _this = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(_this).popover("hide")
+            }
+        }, 100);
     });
-
-    document.body.addEventListener('mouseenter', function (event) {
-      if (event.target.classList.contains('popover')) {
-        clearTimeout(timeout);
-      }
-    }, true);
-
-    document.body.addEventListener('mouseleave', function (event) {
-      if (event.target.classList.contains('popover')) {
-        popover.hide();
-      }
-    }, true);
-  });
-});
 </script>
 </body>
 </html>
