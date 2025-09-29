@@ -61,28 +61,34 @@
        
         <p>{{ $topic.description }}</p>
        <div class="chapters">
-         <a href="#"
-            data-bs-toggle="popover"
-            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
-          >
-            Episode 3
-            
-          </a>
-           <a href="#"
-            data-bs-toggle="popover"
-            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
-          >
-            Episode 2
-            
-          </a>
-           <a href="#"
-            data-bs-toggle="popover"
-            data-bs-content="<p>{{ $topic.description }}</p> <p class='sig'>Publicado 3 meses</p>"
-          >
-            Episode 1
-            
-          </a>
-       </div>
+
+    {{ $liveSorted := sort $livePosts "Date" "desc" }}
+    {{ range $liveSorted }}
+      {{ $now := now }}
+      {{ $date := .Date }}
+      {{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+      {{ $pub := "" }}
+      {{ if lt $diff 1 }}
+        {{ $pub = "Publicado hoje" }}
+      {{ else if lt $diff 7 }}
+        {{ $pub = printf "Publicado há %d %s" $diff (cond (eq $diff 1) "dia" "dias") }}
+      {{ else if lt $diff 30 }}
+        {{ $weeks := div $diff 7 }}
+        {{ $pub = printf "Publicado há %d %s" $weeks (cond (eq $weeks 1) "semana" "semanas") }}
+      {{ else if lt $diff 365 }}
+        {{ $months := div $diff 30 }}
+        {{ $pub = printf "Publicado há %d %s" $months (cond (eq $months 1) "mês" "meses") }}
+      {{ else }}
+        {{ $years := div $diff 365 }}
+        {{ $pub = printf "Publicado há %d %s" $years (cond (eq $years 1) "ano" "anos") }}
+      {{ end }}
+      <a href="{{ .RelPermalink }}" data-bs-toggle="popover"
+        data-bs-content="<p>{{ .Description }}</p><p>{{ $pub }}</p>">
+        Episódio {{ .Params.number }}
+      </a>
+    {{ end }}
+
+</div>
        </div>
       </div>
     {{ end }}
