@@ -51,19 +51,16 @@
                 });
             });
         </script>
-
-  {{ $isCurva := eq .Section "curva" }}
-  {{ $hasBootstrapTag := in .Params.tags "bootstrap" }}
-  {{ if or $isCurva $hasBootstrapTag }}
-      <!-- Bootstrap JS Bundle (Cloudflare CDN) -->
-    <script src="/js/lib/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl);
-        });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl, {
+        trigger: 'hover',
+        html: true
       });
-    </script>
-  {{ end }}
+    });
+  });
+</script>
+
 
