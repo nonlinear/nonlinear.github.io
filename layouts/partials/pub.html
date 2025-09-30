@@ -1,0 +1,17 @@
+{{ $now := now }}
+{{ $date := .Date }}
+{{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+{{ if lt $diff 1 }}
+  Publicado hoje
+{{ else if lt $diff 7 }}
+  Publicado há {{ $diff }} {{ cond (eq $diff 1) "dia" "dias" }}
+{{ else if lt $diff 30 }}
+  {{ $weeks := div $diff 7 }}
+  Publicado há {{ $weeks }} {{ cond (eq $weeks 1) "semana" "semanas" }}
+{{ else if lt $diff 365 }}
+  {{ $months := div $diff 30 }}
+  Publicado há {{ $months }} {{ cond (eq $months 1) "mês" "meses" }}
+{{ else }}
+  {{ $years := div $diff 365 }}
+  Publicado há {{ $years }} {{ cond (eq $years 1) "ano" "anos" }}
+{{ end }}
