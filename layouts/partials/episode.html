@@ -1,0 +1,30 @@
+<p class="sig">
+{{ $audioLength := .Params.audioLength }}
+{{ $minutes := div $audioLength 60000 }}
+{{ $hours := div $minutes 60 }}
+{{ if ge $hours 1 }}
+  {{ printf "%d:%02d horas de duração" $hours (mod $minutes 60) }}
+{{ else }}
+  {{ printf "%d minutos de duração" $minutes }}
+{{ end }}
+ • 
+{{ $now := now }}
+{{ $date := .Date }}
+{{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+{{ if lt $diff 1 }}
+  Publicado hoje
+{{ else if lt $diff 7 }}
+  Publicado há {{ $diff }} {{ cond (eq $diff 1) "dia" "dias" }}
+{{ else if lt $diff 30 }}
+  {{ $weeks := div $diff 7 }}
+  Publicado há {{ $weeks }} {{ cond (eq $weeks 1) "semana" "semanas" }}
+{{ else if lt $diff 365 }}
+  {{ $months := div $diff 30 }}
+  Publicado há {{ $months }} {{ cond (eq $months 1) "mês" "meses" }}
+{{ else }}
+  {{ $years := div $diff 365 }}
+  Publicado há {{ $years }} {{ cond (eq $years 1) "ano" "anos" }}
+{{ end }}
+ • 
+<a href="https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md">Leia notas</a>
+</p>

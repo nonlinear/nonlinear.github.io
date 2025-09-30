@@ -1,124 +1,135 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" }}
 <body>
-      <link rel="stylesheet" href="/css/bootstrap.min.css">
-<article class="about">
-  <div class="container">
-    <div class="cover">cover here</div>
-   <div class="content">
-      <h1>A Curva de Aprendizado podcast</h1>
-     <p>Um podcast humano-máquina, onde o humano reclama do que tem que aprender, e a máquina se vira como pode.</p>
-     <div class="player">
-        <hr>
-  {{ $allPages := .Site.RegularPages | default (slice) }}
-  {{ $curvaPosts := where $allPages "Section" "curva" }}
-  {{ $livePosts := where $curvaPosts "Params.status" "live" }}
-  {{ $last := first 1 (sort $livePosts "Date" "desc") }}
-  {{ with index $last 0 }}
-    {{ if .Params.audio }}
-      <div class="player-title">
-      <h2>{{ .Title }}</h2>
-        <audio controls style="width:100%">
-          <source src="{{ .Params.audio }}" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <p>{{ .Description }} 
-          https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md
-         
-          </p>
-          
-          
-        
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <article>
+    <div class="container about">
+      <div class="content">
+         <h1>A Curva de Aprendizado podcast</h1>
+        <p>Um podcast humano-máquina, onde o humano reclama do que tem que aprender, e a máquina se vira como pode.</p>
+ 
+
       </div>
-    {{ else }}
-      <em>Sem áudio disponível para o último episódio.</em>
-    {{ end }}
-  {{ end }}
-</div>
+      <div class="player">
+       
+          {{ $allPages := .Site.RegularPages | default (slice) }}
+          {{ $curvaPosts := where $allPages "Section" "curva" }}
+          {{ $livePosts := where $curvaPosts "Params.status" "live" }}
+          {{ $last := first 1 (sort $livePosts "Date" "desc") }}
+          {{ with index $last 0 }}
+          {{ if .Params.audio }}
+            <h3>{{ .Title }}</h3>
+            
+          
+            <p>{{ .Description }}</p>
+              <audio controls style="width:100%">
+              <source src="{{ .Params.audio }}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+           <div class="sig"> {{ partial "length.html" . }}- {{ partial "pub.html" . }}- <a href="https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/content/curva/{{ .File.BaseFileName }}.md" target="_blank">Leia notas</a></div>
+            
+          {{ else }}
+          <em>Sem áudio disponível para o último episódio.</em>
+          {{ end }}
+          {{ end }}
+    
+      </div>
+      
     </div>
 
-  </div>
-</article>
-<nav class="episodes">
-  {{ $allPages := .Site.RegularPages | default (slice) }}
-  {{ range $slug, $topic := .Site.Data.curva }}
+  <nav class="episodes">
+    {{ $allPages := .Site.RegularPages | default (slice) }}
+    {{ range $slug, $topic := .Site.Data.curva }}
     {{ $posts := where (where $allPages "Section" "curva") "Params.topic" $slug }}
     {{ $livePosts := where $posts "Params.status" "live" }}
     {{ if gt (len $livePosts) 0 }}
-      <div class="topic">
-        <div class="cover">
-           {{ if $topic.cover }}
-          <img src="{{ $topic.cover }}" alt="{{ $topic.name }}">
+    <div class="topic">
+      <div class="cover">
+        {{ if $topic.cover }}
+        <img src="{{ $topic.cover }}" alt="{{ $topic.name }}">
         {{ else if and (isset $topic "books") (gt (len $topic.books) 0) }}
-  {{ $books := $topic.books }}
-  {{ $randomBook := index $books (mod (now.Unix) (len $books)) }}
-  <img src="{{ $randomBook.cover }}" alt="{{ $randomBook.title }}">
-{{ end }}
-        </div>
-       <div class="content">
-         <span class="badge rounded-pill text-bg-secondary">{{ $topic.type }}</span>
-         <h3>{{ $topic.name }}</h3>
-       
-        <p>{{ $topic.description }}</p>
-       <div class="chapters">
-
-    {{ $liveSorted := sort $livePosts "Date" "desc" }}
-    {{ range $liveSorted }}
-      {{ $now := now }}
-      {{ $date := .Date }}
-      {{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
-      {{ $pub := "" }}
-      {{ if lt $diff 1 }}
-        {{ $pub = "Publicado hoje" }}
-      {{ else if lt $diff 7 }}
-        {{ $pub = printf "Publicado há %d %s" $diff (cond (eq $diff 1) "dia" "dias") }}
-      {{ else if lt $diff 30 }}
-        {{ $weeks := div $diff 7 }}
-        {{ $pub = printf "Publicado há %d %s" $weeks (cond (eq $weeks 1) "semana" "semanas") }}
-      {{ else if lt $diff 365 }}
-        {{ $months := div $diff 30 }}
-        {{ $pub = printf "Publicado há %d %s" $months (cond (eq $months 1) "mês" "meses") }}
-      {{ else }}
-        {{ $years := div $diff 365 }}
-        {{ $pub = printf "Publicado há %d %s" $years (cond (eq $years 1) "ano" "anos") }}
-      {{ end }}
-      <a href="{{ .RelPermalink }}" data-bs-toggle="popover"
-        data-bs-content="<p>{{ .Description }}</p><p>{{ $pub }}</p>">
-        Episódio {{ .Params.number }}
-      </a>
-    {{ end }}
-
-</div>
-       </div>
+        {{ $books := $topic.books }}
+        {{ $randomBook := index $books (mod (now.Unix) (len $books)) }}
+        <img src="{{ $randomBook.cover }}" alt="{{ $randomBook.title }}">
+        {{ end }}
       </div>
-    {{ end }}
+      <div class="content">
+        <span class="badge rounded-pill text-bg-secondary">{{ $topic.type }}</span>
+        <h3>{{ $topic.name }}</h3>
+        
+        <p>{{ $topic.description }}</p>
+        
+        <div class="chapters">
+          
+          {{ $liveSorted := sort $livePosts "Date" "desc" }}
+          {{ range $liveSorted }}
+          {{ $now := now }}
+          {{ $date := .Date }}
+          {{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+          {{ $pub := "" }}
+          {{ if lt $diff 1 }}
+          {{ $pub = "Publicado hoje" }}
+          {{ else if lt $diff 7 }}
+          {{ $pub = printf "Publicado há %d %s" $diff (cond (eq $diff 1) "dia" "dias") }}
+          {{ else if lt $diff 30 }}
+          {{ $weeks := div $diff 7 }}
+          {{ $pub = printf "Publicado há %d %s" $weeks (cond (eq $weeks 1) "semana" "semanas") }}
+          {{ else if lt $diff 365 }}
+          {{ $months := div $diff 30 }}
+          {{ $pub = printf "Publicado há %d %s" $months (cond (eq $months 1) "mês" "meses") }}
+          {{ else }}
+          {{ $years := div $diff 365 }}
+          {{ $pub = printf "Publicado há %d %s" $years (cond (eq $years 1) "ano" "anos") }}
+          {{ end }}
+          
+  
+          
+          <a href="{{ .RelPermalink }}"
+             data-bs-toggle="popover"
+             data-bs-placement="left"
+             data-bs-content='<p>{{ .Description }}</p><hr>{{ partial "length.html" . }}- {{ partial "pub.html" . }}'>
+             Episódio {{ .Params.number }}
+          </a> 
+        {{ end }}
+        
+      </div>
+    </div>
+  </div>
+  {{ end }}
   {{ end }}
 </nav>
+  </article>
 {{ partial "load-js.html" . }}
-    <script src="/js/lib/bootstrap.bundle.min.js"></script>
-    <script>
-  $('.selector').popover({
-        html: true,
-        trigger: 'manual',
-        container: $(this).attr('id'),
-        placement: 'top',
-        content: function () {
-            $return = '<div class="hover-hovercard"></div>';
-        }
-    }).on("mouseenter", function () {
-        var _this = this;
-        $(this).popover("show");
-        $(this).siblings(".popover").on("mouseleave", function () {
-            $(_this).popover('hide');
-        });
-    }).on("mouseleave", function () {
-        var _this = this;
-        setTimeout(function () {
-            if (!$(".popover:hover").length) {
-                $(_this).popover("hide")
-            }
-        }, 100);
-    });
+<script src="/js/lib/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/share.js/dist/js/share.min.js"></script>
+<script>
+  var share = new Share('#share-btn', {
+    title: document.title,
+    url: window.location.href
+  });
 </script>
+<script>
+  $('[data-bs-toggle="popover"]').popover({
+    trigger: 'manual',
+    placement: 'top',
+    content: function () {
+      return $(this).attr('data-bs-content');
+    }
+  }).on("mouseenter", function () {
+    var _this = this;
+    $(_this).popover("show");
+    $('.popover').on("mouseleave", function () {
+      $(_this).popover('hide');
+    });
+  }).on("mouseleave", function () {
+    var _this = this;
+    setTimeout(function () {
+      if (!$('.popover:hover').length) {
+        $(_this).popover("hide");
+      }
+    }, 100);
+  });
+</script>
+
 </body>
 </html>

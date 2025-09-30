@@ -11,14 +11,22 @@ $topic-width: 500px;
     line-height: 140%;
   }
 
-  .container,
+  .about,
   .topic {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    
+    align-items: start; // <-- troque 'center' por 'start'
     grid-gap: $gap2;
   }
+  .about {
+    grid-template-columns: 2fr 1fr;
+    width: $bp;
+    height: $curva-fold;
+    align-items: center; // <-- troque 'center' por 'start'
+
+  }
   .topic {
+    grid-template-columns: 1fr 1fr;
     padding: 0 $gap2;
     border-right: solid 1px black;
     &:last-of-type {
@@ -26,29 +34,7 @@ $topic-width: 500px;
     }
   }
   
-  article.about {
-    width: 100vw;
-    min-height: $curva-fold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      
-      .cover {
-        grid-column: 1;
-        width: 100%;
-      }
-      
-      .content {
-        grid-column: 2;
-        width: 100%;
-      }
-    }
-  }
+
   
   nav.episodes {
     width: 100vw;
@@ -74,18 +60,30 @@ $topic-width: 500px;
     .content {
       grid-column: 2;
       width: 100%;
+      max-height: $curva-episodes;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #90caf9 #e3f2fd;
     }
   }
   
   img { 
     max-width: 100%;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    border-radius: 2px;
+  }
+  img, .popover {
+
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: .05);
   }
   
   html, body {
     overflow: hidden;
   }
+  .popover {
+  max-width: 200px !important;
+
+}
   .chapters {
     a {
       display: block;
@@ -93,10 +91,31 @@ $topic-width: 500px;
       &:first-of-type {
         border-top: solid 1px black;
       }
+      transition: background-color 0.2s, padding-left 0.2s;
+      &:hover {
+        background-color: white;
+        padding-left: $gaphalf;
+      }
       padding: $gaphalf 0;
-       text-decoration: none;
-       color: black;
+      text-decoration: none;
+      color: black;
 
     }
   }
+.sig, .popover {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: $gaphalf;
 }
+.popover {
+  margin: $gaphalf !important;
+   
+}
+
+.popover .popover-body {
+
+  padding: $gap;
+}
+
+}
+
