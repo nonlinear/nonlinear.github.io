@@ -5,7 +5,7 @@ marx-in-the-anthropocene:
   author: "Kohei Saito"
   url: "https://www.cambridge.org/core/books/karl-marx-in-the-anthropocene/7766884B0F50109BDFF1B5B4E3D9AB83"
   cover: "/images/curva/marx-in-the-anthropocene.jpg"
-  description: "Marx revisto sob a ótica ecológica, conectando metabolismo social e crise ambiental."
+  description: "Marx revisto sob a ótica ecológica, conectando metabolismo social e crise ambiental"
 
 capital-is-dead:
   name: "Capital is Dead"
@@ -14,7 +14,7 @@ capital-is-dead:
   author: "McKenzie Wark"
   url: "https://www.versobooks.com/books/2924-capital-is-dead"
   cover: "/images/curva/capital-is-dead.jpg"
-  description: "Vivemos além do capitalismo, onde informação e vetores digitais dominam."
+  description: "Vivemos além do capitalismo, onde informação e vetores digitais dominam"
 
 permutation-city:
   name: "Permutation City"
@@ -23,7 +23,7 @@ permutation-city:
   author: "Greg Egan"
   url: "https://www.goodreads.com/book/show/156784.Permutation_City"
   cover: "/images/curva/permutation-city.jpg"
-  description: "Ficção científica sobre identidade, consciência e realidades simuladas."
+  description: "Ficção científica sobre identidade, consciência e realidades simuladas"
 
 war-in-the-age-of-intelligent-machines:
   name: "War in the Age of Intelligent Machines"
@@ -32,7 +32,7 @@ war-in-the-age-of-intelligent-machines:
   author: "Manuel De Landa"
   url: "https://mitpress.mit.edu/9780262540551/war-in-the-age-of-intelligent-machines/"
   cover: "/images/curva/war-in-the-age-of-intelligent-machines.jpg"
-  description: "Como máquinas inteligentes mudaram estratégias e a lógica da guerra."
+  description: "Como máquinas inteligentes mudaram estratégias e a lógica da guerra"
 
 circular-design:
   name: "Circular Design"
@@ -59,4 +59,4 @@ circular-design:
       author: "Walter Stahel"
       url: "https://www.routledge.com/The-Circular-Economy/Stahel/p/book/9780367200145"
       cover: "/images/curva/the-circular-economy.jpg"
-  description: "Estudo sobre design para eliminar desperdício e regenerar sistemas naturais."
+  description: "Estudo sobre design para eliminar desperdício e regenerar sistemas naturais"

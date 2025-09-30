@@ -1,0 +1,8 @@
+{{ $audioLength := .Params.audioLength }}
+{{ $minutes := div $audioLength 60000 }}
+{{ $hours := div $minutes 60 }}
+{{ if ge $hours 1 }}
+  {{ printf "%d:%02d horas de duração" $hours (mod $minutes 60) }}
+{{ else }}
+  {{ printf "%d minutos de duração" $minutes }}
+{{ end }}
