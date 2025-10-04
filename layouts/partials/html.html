@@ -1,5 +1,12 @@
+{{ $mainCSS := readFile "assets/css/main.scss" }}
 <!doctype html>
 <html
     lang="en"
-    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.class }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}{{ if .Section }} {{ .Section }}{{ end }}{{ if .IsPage }} single{{ else }} list{{ end }}"
+    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.class }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}{{ if .Section }} {{ .Section }}{{ end }}{{ if .IsPage }} single{{ else }} list{{ end }}
+    {{ with .Params.style }}
+      {{ range . }}
+        {{ $importLine := printf "@import \"%s\";" . }}
+        {{ if in $mainCSS $importLine }} {{ . }}{{ end }}
+      {{ end }}
+    {{ end }}"
 >
