@@ -7,15 +7,15 @@ $credits-color: brown;
     height: 100vh;
     padding: $gap2;
     padding-bottom: $gap4;
-
+    
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1000;
-
+    
     overflow-y: auto;
     overflow-x: hidden;
-
+    
     background-color: $credits-bg;
     box-sizing: border-box;
     transition: right 0.3s ease-in-out;
@@ -43,12 +43,12 @@ main.container {
         filter: grayscale(100%);
         transition: all 0.3s ease;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-
+        
         &:before {
             font-size: 0.8rem;
             line-height: 1;
         }
-
+        
         &:hover {
             opacity: 1;
             filter: grayscale(0%);
@@ -57,12 +57,12 @@ main.container {
         &.credits-open:before {
             content: "🛎️";
         }
-
+        
         &.credits-close:before {
             content: "✖️";
         }
     }
-
+    
     &:not(.open-credits) {
         #credits {
             right: -$credits;
@@ -75,7 +75,7 @@ main.container {
             z-index: 1000;
         }
     }
-
+    
     &.open-credits {
         article.content {
             margin-left: -$credits;
@@ -103,13 +103,13 @@ article.content {
     left: 0;
     width: 100%;
     height: 100%;
-
+    
     backdrop-filter: blur(8px);
-
+    
     z-index: 1000;
-
+    
     display: none; // Esconde por padrão
-
+    
     // Mostra quando o main está com .open-credits
 }
 
@@ -122,9 +122,9 @@ article.content {
     font-weight: bold;
     display: block;
     margin-bottom: $gaphalf;
-
+    
     transition: background-color 0.2s ease;
-
+    
     &:hover {
         background-color: white;
     }
@@ -185,49 +185,55 @@ section.share {
 }
 
 /* .share {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid $credits-color;
-    border-width: 1px 1px 0 0;
-    overflow: hidden;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+border: 1px solid $credits-color;
+border-width: 1px 1px 0 0;
+overflow: hidden;
 
-    a {
-        padding: $gaphalf;
-        font-size: 80%;
-        font-weight: 600;
-        color: black;
-        text-decoration: none;
-        border: 1px solid $credits-color;
-        margin: -1px -1px 0 0;
-        transition: background-color 0.2s ease;
+a {
+padding: $gaphalf;
+font-size: 80%;
+font-weight: 600;
+color: black;
+text-decoration: none;
+border: 1px solid $credits-color;
+margin: -1px -1px 0 0;
+transition: background-color 0.2s ease;
 
-        svg {
-            width: 24px;
-            height: 24px;
-            display: block;
-            margin-bottom: $gaphalf;
+svg {
+width: 24px;
+height: 24px;
+display: block;
+margin-bottom: $gaphalf;
 
-            path {
-                fill: black;
-            }
-        }
+path {
+fill: black;
+}
+}
 
-        &:hover {
-            background-color: white;
-        }
-    }
+&:hover {
+background-color: white;
+}
+}
 } */
 
 .tippy-box {
-    background-color: white;
-    color: black;
-    width: $credits;
+    
     border-radius: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    margin-left: -4px;
     max-height: 250px;
-    overflow: auto;
-    padding: 22px;
+    &:not(.nav-tooltip) {
+        background-color: white;
+        color: black;
+        width: $credits;
+        overflow: auto;
+        margin-left: -4px;
+        padding: 22px;
+        .tippy-arrow {
+            display: none;
+        }
+    }
     p {
         &:first-of-type {
             margin-top: 0;
@@ -242,21 +248,6 @@ section.share {
         opacity: 1;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-
-    .tippy-arrow {
-        display: none;
-        /* width: 5px;
-        height: 5px;
-        color: white;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: currentColor;
-            transform: rotate(45deg);
-            z-index: -1;
-        } */
-    }
+    
+    
 }
