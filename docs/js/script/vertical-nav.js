@@ -26,9 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
     nav.appendChild(link);
   });
 
-  // Intersection Observer para .active e .visited com delay
+  // Intersection Observer para .active e .visited com delay + URL hash update
   const navLinks = nav.querySelectorAll('a');
   const visitTimers = {};
+  let lastActiveId = null;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -42,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
               visitTimers[linkTarget] = setTimeout(() => {
                 link.classList.add('visited');
               }, 500);
+            }
+            // Atualiza o hash na URL se mudou
+            if (lastActiveId !== entry.target.id) {
+              history.replaceState(null, '', '#' + entry.target.id);
+              lastActiveId = entry.target.id;
             }
           } else {
             link.classList.remove('active');
@@ -64,12 +70,25 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetSection = sections[idx];
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', link.getAttribute('href'));
+        lastActiveId = targetSection.id;
       }
     });
   });
 
+  // Scroll para o hash ao carregar a página
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    const targetSection = Array.from(sections).find(sec => sec.id === hash);
+    if (targetSection) {
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100); // pequeno delay para garantir que o DOM está pronto
+    }
+  }
+
   // Após criar os links:
-  if (navLinks.length > 0) {
+  if (navLinks.length > 0 && !hash) {
     navLinks[0].classList.add('active');
   }
 });
