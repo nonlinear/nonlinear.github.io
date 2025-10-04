@@ -15,6 +15,15 @@
 {{ else if and $type (fileExists (printf "static/%s" $typeScript)) }}
     <script src="{{ $typeScript | absURL }}"></script>
 {{ end }}
+{{ with .Params.style }}
+  {{ range . }}
+    {{ $styleScript := printf "js/script/%s.js" . }}
+    {{ if (fileExists (printf "static/%s" $styleScript)) }}
+      <script src="{{ $styleScript | absURL }}"></script>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 
  
    <script>
