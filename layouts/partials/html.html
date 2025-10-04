@@ -1,3 +1,16 @@
+{{/* 
+    Class logic for <html> element:
+    - Always includes "single" and "no-js".
+    - Adds the base file name as a class if available (e.g. the post's slug).
+    - Adds each value from .Params.class (if present), as individual classes.
+    - Adds the post's status (e.g. "live", "draft") as a class if present.
+    - Adds the section name (e.g. "curva") as a class if present.
+    - Adds "single" if the page is a single post, otherwise "list".
+    - For each value in .Params.style:
+        - If main.scss contains @import "(style)";
+        - Adds (style) as a class.
+    - All classes are space-separated and appear in the order above.
+*/}}
 {{ $mainCSS := readFile "assets/css/main.scss" }}
 <!doctype html>
 <html

@@ -15,6 +15,14 @@
 {{ else if and $type (fileExists (printf "static/%s" $typeScript)) }}
     <script src="{{ $typeScript | absURL }}"></script>
 {{ end }}
+
+<!--
+    Style-based JS script loading logic:
+    - For each value in the post's frontmatter 'style' array:
+        - If a script named js/script/(style).js exists in /static/, include it.
+        - Multiple style scripts can be included if multiple styles are listed.
+    - This allows per-style JS to be loaded automatically for posts that declare styles.
+-->
 {{ with .Params.style }}
   {{ range . }}
     {{ $styleScript := printf "js/script/%s.js" . }}
