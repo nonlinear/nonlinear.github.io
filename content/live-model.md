@@ -2,7 +2,8 @@
 title: Live model
 description: Drawing live models
 status: draft
-type: illos
+style:
+  - illos
 illos:
   - model-1
   - model-2
