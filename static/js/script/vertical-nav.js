@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.forEach((section, idx) => {
     let id = section.id;
     if (!id) {
-      id = `section${(idx + 1).toString().padStart(2, '0')}`;
+      id = `slide${(idx + 1).toString().padStart(2, '0')}`;
       section.id = id;
     }
     const link = document.createElement('a');
@@ -88,7 +88,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Após criar os links:
-  if (navLinks.length > 0 && !hash) {
+  if (navLinks.length > 0 && !window.location.hash) {
     navLinks[0].classList.add('active');
   }
+
+  // Tippy tooltips para cada link do nav
+  navLinks.forEach((link, idx) => {
+    const section = sections[idx];
+    let label = section.getAttribute('aria-label');
+    if (!label) {
+      label = `Slide ${idx + 1}`;
+    }
+    tippy(link, {
+      content: label,
+      placement: 'right',
+      theme: 'light',
+      arrow: true,
+      delay: [100, 0],
+      onShow(instance) {
+        instance.popper.querySelector('.tippy-box').classList.add('nav-tooltip');
+      }
+    });
+  });
 });

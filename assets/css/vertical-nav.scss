@@ -54,6 +54,7 @@
                 background: white;
             }
         }
+  
         
     }
     section {
@@ -69,4 +70,16 @@
         position: relative;
         overflow: hidden;
     }
+          
 }
+
+.tippy-box.nav-tooltip {
+padding: 0 4px;
+color: black;
+background-color: white;
+  border-radius: 50px;
+  .tippy-arrow {
+    display: none;
+  }
+}
+
