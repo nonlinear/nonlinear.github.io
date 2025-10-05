@@ -1,6 +1,12 @@
 .vertical-nav article.content {
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden; // impede scroll horizontal
+    overscroll-behavior-x: contain; // previne overscroll horizontal
+    max-width: 100vw; // nunca ultrapassa a largura da viewport
+    width: 100vw;
+    box-sizing: border-box;
+    touch-action: pan-y; // só permite scroll vertical em dispositivos touch
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     position: relative;
