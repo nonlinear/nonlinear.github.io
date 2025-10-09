@@ -58,7 +58,7 @@ main.container {
             content: "🛎️";
         }
         &.reload {
-            top: $gap;
+            bottom: $gap4;
             position: absolute;
             &:before {
             content: "🔄";
