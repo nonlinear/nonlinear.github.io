@@ -6,7 +6,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Nonlinear – Curva</title>
-    <link>http://localhost:1313/curva/</link>
+    <link>https://***REMOVED***.nyc/curva/</link>
     <description>Podcast Curva</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
@@ -25,12 +25,12 @@
         
       <item>
         <title>Some dudes</title>
-        <link>http://localhost:1313/dudes/</link>
-        <guid>http://localhost:1313/dudes/</guid>
+        <link>https://***REMOVED***.nyc/dudes/</link>
+        <guid>https://***REMOVED***.nyc/dudes/</guid>
         <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>procreate illustrations of scruffy dudes</p>
-          <a href="http://localhost:1313/dudes/"><img src="http://localhost:1313/images/covers/dudes.jpg" alt="Some dudes" /></a>
+          <a href="https://***REMOVED***.nyc/dudes/"><img src="https://***REMOVED***.nyc/images/covers/dudes.jpg" alt="Some dudes" /></a>
         ]]></description>
       </item>
       
@@ -42,12 +42,12 @@
         
       <item>
         <title>Some dudes</title>
-        <link>http://localhost:1313/test/</link>
-        <guid>http://localhost:1313/test/</guid>
+        <link>https://***REMOVED***.nyc/test/</link>
+        <guid>https://***REMOVED***.nyc/test/</guid>
         <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>testing all objects</p>
-          <a href="http://localhost:1313/test/"><img src="http://localhost:1313/images/covers/testing-example.jpg" alt="Some dudes" /></a>
+          <a href="https://***REMOVED***.nyc/test/"><img src="https://***REMOVED***.nyc/images/covers/testing-example.jpg" alt="Some dudes" /></a>
         ]]></description>
       </item>
       
