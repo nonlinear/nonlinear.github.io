@@ -57,6 +57,14 @@ main.container {
         &.credits-open:before {
             content: "🛎️";
         }
+        &.reload {
+            top: $gap;
+            position: absolute;
+            &:before {
+            content: "🔄";
+            line-height: 1.2;
+        }
+        }
         
         &.credits-close:before {
             content: "✖️";
