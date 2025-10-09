@@ -8,7 +8,7 @@ tags:
     - illustration
 fonts:
     - Space-Grotesk
-js-lib:
+resources:
     - gsap.min
     - ScrollTrigger.min
     - ScrollSmoother.min
