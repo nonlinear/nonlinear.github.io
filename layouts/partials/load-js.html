@@ -43,13 +43,31 @@
         <script src="{{ printf "js/global/popper.min.js" | absURL }}"></script>
          <script src="{{ printf "js/global/tippy-bundle.umd.min.js" | absURL }}"></script>
 
-                {{ with index .Params "js-lib" }}
-                    {{ range . }}
-                        <script src="{{ printf "js/lib/%s.min.js" . | absURL }}"></script>
-                    {{ end }}
-                {{ else }}
-                    <!-- WARNING: No js-lib scripts found in frontmatter -->
-                {{ end }}
+                <!--
+    JS Library Loading Logic:
+    - For each value in the post's frontmatter 'js-lib' array:
+        - Check if "js/lib/NAME.min.js" exists:
+            - If it exists, include it.
+        - If "js/lib/NAME.min.js" does not exist, check for "js/lib/NAME.js":
+            - If it exists, include it.
+        - If neither exists, skip the library.
+    - This ensures that the minified version is preferred if both are available.
+-->
+{{ with index .Params "js-lib" }}
+  {{ range . }}
+    {{ $libMin := printf "js/lib/%s.min.js" . }}
+    {{ $lib := printf "js/lib/%s.js" . }}
+    {{ if (fileExists (printf "static/%s" $libMin)) }}
+      <script src="{{ $libMin | absURL }}"></script>
+    {{ else if (fileExists (printf "static/%s" $lib)) }}
+      <script src="{{ $lib | absURL }}"></script>
+    {{ else }}
+      <!-- WARNING: Library "js/lib/{{ . }}" not found -->
+    {{ end }}
+  {{ end }}
+{{ else }}
+  <!-- WARNING: No js-lib scripts found in frontmatter -->
+{{ end }}
 {{ with index .Params "js-script" }}
   {{ range . }}
     <script src="{{ printf "js/script/%s.js" . | absURL }}"></script>
