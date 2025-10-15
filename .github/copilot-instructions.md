@@ -45,6 +45,23 @@ This document provides guidelines for using GitHub Copilot effectively in the **
   - Validate RSS feeds using online tools.
   - Maintain consistency with the site's overall design.
 
+### 4. Dynamic Script Loading in `load-js.html`
+- **File**: `layouts/partials/load-js.html`
+- **Logic**:
+  - Load JavaScript libraries based on the `resources` frontmatter array:
+    - Check for `js/lib/ITEM.min.js` first, then `js/lib/ITEM.js`.
+    - Include the minified version if both exist.
+    - Skip the resource if neither file exists.
+  - Load JavaScript scripts based on the `style` frontmatter array:
+    - Check for `js/script/NAME.min.js` first, then `js/script/NAME.js`.
+    - Include the minified version if both exist.
+    - Skip the script if neither file exists.
+- **Tips**:
+  - Ensure the `resources` and `style` arrays are correctly defined in the frontmatter.
+  - Use `fileExists` to verify the presence of files in the `static/` directory.
+  - Debug by inspecting the generated HTML for `<script>` tags.
+  - Add warnings in the HTML comments for missing resources or scripts.
+
 ---
 
 ## Best Practices
