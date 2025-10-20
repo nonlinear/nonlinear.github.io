@@ -1,0 +1,77 @@
+.SVG-coloring {
+  #slide01 {
+          background: linear-gradient(to top, lighten(blue, 35%), lighten(blue, 45%));
+      svg {
+        #hair {
+          fill: lighten(green, 50%);
+        }
+
+        #neck {
+          fill: lighten(pink, 8%);
+        }
+
+        #eyes {
+          fill: white;
+        }
+
+        #face {
+          fill: lighten(pink, 10%);
+        }
+
+        #lineart path {
+          fill: brown;
+        }
+      }
+    }
+
+    #slide02 {
+          background: linear-gradient(to top, lighten(green, 45%), lighten(green, 65%));
+      svg {
+        #hair {
+          fill: lighten(red, 30%);
+        }
+
+        #neck {
+          fill: lighten(orange, 40%);
+        }
+
+        #eyes {
+          fill: white;
+        }
+
+        #face {
+          fill: lighten(orange, 30%);
+        }
+
+        #lineart path {
+          fill: darkblue;
+        }
+      }
+    }
+
+
+    #slide03 {
+        background: linear-gradient(to top, lighten(yellow, 30%), white);
+      svg {
+        #hair {
+          fill: darken(orange, 3%);
+        }
+
+        #neck {
+          fill: lighten(orange, 40%);
+        }
+
+        #eyes {
+          fill: white;
+        }
+
+        #face {
+          fill: lighten(orange, 30%);
+        }
+
+        #lineart path {
+          fill: darken(orange, 15%);
+        }
+      }
+    }
+}

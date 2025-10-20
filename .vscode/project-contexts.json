@@ -1,0 +1,19 @@
+{
+  "contexts": {
+    "1760658401559": {
+      "id": "1760658401559",
+      "name": "code layout",
+      "lastAccessed": "2025-10-16T23:53:42.757Z",
+      "layout": {
+        "editorGroups": [],
+        "activeGroup": 0,
+        "terminals": [
+          {
+            "name": "zsh",
+            "isVisible": true
+          }
+        ]
+      }
+    }
+  }
+}

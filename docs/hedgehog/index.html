@@ -1,0 +1,329 @@
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js hedgehog draft single
+    
+      
+        
+        
+      
+    "
+>
+
+    <head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hedgehog</title>
+  <meta content="Nicholas Frota" name="author" />
+
+  
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/main.dd75a94cfb63d0836645574dbac866b0425fba0018dfb78de3f8ea66dbfe0be2.css" />
+
+  
+
+  
+  
+  
+    
+  
+  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
+  <meta property="og:description" content="processing ideas" />
+
+
+</head>
+
+    <body>
+
+        <main class="container">
+
+                <a href="javascript:void(0)" class="mice credits-open"></a>
+            <article class="content">
+                    
+                        
+
+
+<section id="hedgehog" style="position: relative;"></section>
+<a href="/processing-1#slide01" class="mice reload"></a>
+Reload Sketch
+</button>
+<section id="slide02" aria-label="Tilework">
+  2
+</section>
+<section id="slide03" aria-label="Floating ribbon">
+  3
+</section>
+<section id="slide04" aria-label="3D ribbon">
+  4
+</section>
+<section id="slide05" aria-label="Hypercube">
+  5
+</section>
+
+                    
+                    <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+            </article>
+            <aside id="credits">
+    <a href="javascript:void(0)" class="mice credits-close"></a>
+ <div id="qrdisplay"></div>
+                    <h2>Hedgehog</h2>
+                    <p class="date">
+                           
+                        status: live today
+                        
+                        </p>
+                    <p>processing ideas</p>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+
+                    
+
+                    <section class="tags">
+                      
+                        <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+                        <div class="popover" id="microlink" style="display: none">
+                          
+                            <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more</p>
+                          
+
+                          
+                            <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                        <a class="tooltip" data-tooltip-id="qrcode.min">QRCode</a>
+
+                        <div class="popover" id="qrcode.min" style="display: none">
+                          
+                            <p>A JavaScript library for generating QR codes in client-side web applications</p>
+                          
+
+                          
+                            <a href="https://davidshimjs.github.io/qrcodejs/" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                        <a class="tooltip" data-tooltip-id="tippy.min">Tippy</a>
+
+                        <div class="popover" id="tippy.min" style="display: none">
+                          
+                            <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js</p>
+                          
+
+                          
+                            <a href="https://atomiks.github.io/tippyjs/" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                    </section>
+                    <section class="references">
+                      
+                        <a href="https://generated.space/sketch/hedgehog-2/">https://generated.space/sketch/hedgehog-2/</a>
+                      
+                    </section>
+
+
+                   <section class="share">
+                       <a href="javascript:void(0)" id="share">
+                           Share creation</a>
+                      <a href="/latest">
+                         Visit latest creation
+                      </a>
+                  <a href="/">
+                      About ***REMOVED***
+                  </a>
+                   </section>
+                </div>
+
+
+        </div>
+        <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "https:\/\/***REMOVED***.nyc\/hedgehog\/",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffcc",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+      
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.querySelector("main.container");
+
+          document.querySelectorAll(".credits-open").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.add("open-credits");
+            });
+          });
+
+          document.querySelectorAll(".credits-close").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.remove("open-credits");
+            });
+          });
+        });
+        </script>
+        <script>
+            if (navigator.share) {
+                document.getElementById("share").style.display = "block";
+                document.getElementById("share").addEventListener("click", async () => {
+                    try {
+                        await navigator.share({
+                            title: document.title,
+                            text: "Check this out!",
+                            url: window.location.href,
+                        });
+                    } catch (err) {
+                        console.error("Error sharing:", err);
+                    }
+                });
+            }
+        </script>
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      
+
+  
+    
+    
+    
+      <script src="https://***REMOVED***.nyc/js/lib/p5.js"></script>
+    
+  
+
+
+
+
+  
+    
+    
+    
+      <script src="https://***REMOVED***.nyc/js/script/nav-p5.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+</script>
+
+<script src="https://***REMOVED***.nyc/js/global/popper.min.js"></script>
+<script src="https://***REMOVED***.nyc/js/global/tippy-bundle.umd.min.js"></script>
+
+<script>
+  document.querySelectorAll(".tooltip").forEach((el) => {
+    const tipId = el.getAttribute("data-tooltip-id");
+    const content =
+      document.getElementById(tipId)?.innerHTML || "No content";
+
+    tippy(el, {
+      content,
+      allowHTML: true,
+      interactive: true,
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl, {
+        trigger: 'hover',
+        html: true
+      });
+    });
+  });
+</script>
+
+
+
+
+    </body>
+
+
+</html>
+
