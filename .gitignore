@@ -1,6 +1,32 @@
-node_modules
-internal/
-.cache
-.parcel-cache
-package-lock.json
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo cache
+.cache/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (if using npm/yarn for assets)
+node_modules/
+
+# SASS/SCSS cache
+.sass-cache/
+
+# Backup files
+*~
+
+# Ignore everything in .github
+.github/*
+
+# But allow specific files/folders if needed (uncomment and edit as needed)
+# !.github/README.md
+
+# Ignore any file ending with -private.*
+*-private.*
 
