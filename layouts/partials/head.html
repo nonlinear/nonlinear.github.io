@@ -26,6 +26,20 @@
   {{ $style := resources.Get "css/main.scss" | css.Sass $options | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
+  <!--
+    This block includes CSS files listed in the page's front matter 'style' or 'css' parameter.
+    For example, if style: ["AAA", "BBB"] is set, it will include css/AAA.css and css/BBB.css.
+    Additionally, if the post is named BLURB and css/BLURB.css exists, it will be included.
+  -->
+
+
+  {{ $base := .File.BaseFileName }}
+  {{ $cssPath := printf "static/css/%s.css" $base }}
+  {{ $cssHref := printf "css/%s.css" $base | relURL }}
+  {{ if fileExists $cssPath }}
+    <link href="{{ $cssHref }}" rel="stylesheet" />
+  {{ end }}
+
   {{ with .Params.css }}
     {{ range . }}
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
