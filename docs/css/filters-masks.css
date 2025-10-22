@@ -1,0 +1,32 @@
+.square {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square svg {
+  max-height: 100vh;
+  margin: auto;
+  display: block;
+}
+
+/* Displacement circle overlay */
+.displacement {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+}
+
+.displacement.first {
+  top: 10%;
+  left: 10%;
+}
+.displacement.second {
+  top: 60%;
+  left: 60%;
+}
