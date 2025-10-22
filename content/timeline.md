@@ -7,6 +7,24 @@ date: 2025-07-06
 
 ```mermaid
 timeline
+  title Criação de arquivos em content/
+  2023-06-28 gallery-scroll.html criado
+  2023-06-28 tile.html criado
+  2023-06-28 video-scroll.html criado
+  2023-07-06 timeline.md criado
+  2025-06-14 documentation.md criado
+  2025-07-08 speeddial.html criado
+  2025-07-12 live-model.md criado
+  2025-09-03 vectoring.html criado
+  2025-10-08 processing-1.html criado
+  2025-10-20 filters-masks.html criado
+  2025-10-20 hedgehog.html criado
+  2025-10-20 svg-coloring.html criado
+  2025-10-22 curva/001.md a curva/010.md criados
+```
+
+```mermaid
+timeline
   title GitHub Commit History (***REMOVED***.github.io)
   2025-10-04 url #
   2025-10-04 nav tooltip
