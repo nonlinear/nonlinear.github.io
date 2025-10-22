@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:nth-of-type($2)
+]]>
+  </content>
+  <tabTrigger>order</tabTrigger>
+  <description>nth-of-type pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

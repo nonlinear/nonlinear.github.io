@@ -1,0 +1,12 @@
+<snippet>
+  <content>
+<![CDATA[
+  position: -webkit-sticky;
+  position: sticky;
+  top: ${1:0};
+]]>
+  </content>
+  <tabTrigger>sticky</tabTrigger>
+  <description>sticky CSS object</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

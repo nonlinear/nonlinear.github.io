@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include shake;
+]]>
+  </content>
+  <tabTrigger>shake</tabTrigger>
+  <description>shake animation</description>
+  <scope>source.scss</scope>
+</snippet>

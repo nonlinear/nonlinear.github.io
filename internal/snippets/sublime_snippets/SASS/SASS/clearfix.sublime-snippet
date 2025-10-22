@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++clearfix
+]]>
+  </content>
+  <tabTrigger>clearfix</tabTrigger>
+  <description>clearfix mixins</description>
+  <scope>source.sass</scope>
+</snippet>

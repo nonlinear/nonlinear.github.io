@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+]]>
+  </content>
+  <tabTrigger>cdn</tabTrigger>
+  <description>CDN for modernizr</description>
+</snippet>

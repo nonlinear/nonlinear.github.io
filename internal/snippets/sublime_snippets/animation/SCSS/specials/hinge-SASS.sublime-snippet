@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include hinge;
+]]>
+  </content>
+  <tabTrigger>hinge</tabTrigger>
+  <description>hinge animation</description>
+  <scope>source.scss</scope>
+</snippet>

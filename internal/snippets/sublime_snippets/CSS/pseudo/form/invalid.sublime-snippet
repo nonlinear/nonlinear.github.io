@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:invalid
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>invalid pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

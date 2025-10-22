@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: screen
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>screen blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

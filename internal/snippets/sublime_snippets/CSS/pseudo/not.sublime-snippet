@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1::not($2)
+]]>
+  </content>
+  <tabTrigger>not</tabTrigger>
+  <description>not pseudo-element</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

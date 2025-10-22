@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+background: filter(url(${1:image path}), ${2:filter to use})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>background filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

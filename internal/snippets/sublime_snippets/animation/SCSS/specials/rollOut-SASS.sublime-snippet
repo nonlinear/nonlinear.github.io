@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include rollOut;
+]]>
+  </content>
+  <tabTrigger>rollOut</tabTrigger>
+  <description>rollOut animation</description>
+  <scope>source.scss</scope>
+</snippet>

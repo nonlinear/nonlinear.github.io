@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++flipInX
+]]>
+  </content>
+  <tabTrigger>flipInX</tabTrigger>
+  <description>flipInX animation</description>
+  <scope>source.sass</scope>
+</snippet>

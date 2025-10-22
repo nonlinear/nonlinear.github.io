@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1::selection
+]]>
+  </content>
+  <tabTrigger>text</tabTrigger>
+  <description>selection pseudo-element</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

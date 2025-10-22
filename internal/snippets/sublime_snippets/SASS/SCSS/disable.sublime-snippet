@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include disable(${1:link|drag|select});
+]]>
+  </content>
+  <tabTrigger>disable</tabTrigger>
+  <description>disable rules</description>
+  <scope>source.scss</scope>
+</snippet>

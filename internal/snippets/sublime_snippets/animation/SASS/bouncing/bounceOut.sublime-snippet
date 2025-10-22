@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++bounceOut
+]]>
+  </content>
+  <tabTrigger>bounceOut</tabTrigger>
+  <description>bounceOut animation</description>
+  <scope>source.sass</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++fadeInUp
+]]>
+  </content>
+  <tabTrigger>fadeInUp</tabTrigger>
+  <description>fadeInUp animation</description>
+  <scope>source.sass</scope>
+</snippet>

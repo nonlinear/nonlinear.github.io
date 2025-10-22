@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+<div class="card">
+  <img class="card-img-top img-fluid" src="${1:image path}" alt="${2:alt}">
+  <div class="card-block">
+    <h4 class="card-title">${3:title}</h4>
+    <p class="card-text">${4:text}</p>
+    <a href="#" class="btn btn-primary">${5:button}</a>
+  </div>
+</div>
+]]></content>
+  <tabTrigger>card</tabTrigger>
+  <description>Bootstrap card</description>
+</snippet>

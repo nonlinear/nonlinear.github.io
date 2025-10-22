@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++shake
+]]>
+  </content>
+  <tabTrigger>shake</tabTrigger>
+  <description>shake animation</description>
+  <scope>source.sass</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+darken(${1:color}, ${2:percent}%)
+]]>
+  </content>
+  <tabTrigger>darken</tabTrigger>
+  <description>darken SCSS</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++shadow(${1:box|text}, ${2:0} ${3:1px} ${4:3px} rgba(${5:0}, ${6:0}, ${7:0}, ${8:0.25}))
+]]>
+  </content>
+  <tabTrigger>shadow</tabTrigger>
+  <description>shadow mixin</description>
+  <scope>source.sass</scope>
+</snippet>

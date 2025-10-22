@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: difference
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>difference blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

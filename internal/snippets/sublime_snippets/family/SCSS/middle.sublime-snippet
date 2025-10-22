@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include middle($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>middle items</description>
+  <scope>source.scss</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include rotateOut;
+]]>
+  </content>
+  <tabTrigger>rotateOut</tabTrigger>
+  <description>rotateOut animation</description>
+  <scope>source.scss</scope>
+</snippet>

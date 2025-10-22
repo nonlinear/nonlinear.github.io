@@ -1,0 +1,17 @@
+<snippet>
+  <content>
+<![CDATA[
+${2:<!-- Global site tag (gtag.js) - Google Analytics -->
+}<script async src="https://www.googletagmanager.com/gtag/js?id=${1:UA-XXXXX-X}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${1:UA-XXXXX-X}');
+</script>
+]]>
+  </content>
+  <tabTrigger>analytics</tabTrigger>
+  <description>Google Analytics code</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include border-box;
+]]>
+  </content>
+  <tabTrigger>border-box</tabTrigger>
+  <description>border-box mixin</description>
+  <scope>source.scss</scope>
+</snippet>

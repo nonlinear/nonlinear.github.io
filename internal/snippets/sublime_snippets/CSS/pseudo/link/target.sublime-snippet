@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:target
+]]>
+  </content>
+  <tabTrigger>link</tabTrigger>
+  <description>target pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

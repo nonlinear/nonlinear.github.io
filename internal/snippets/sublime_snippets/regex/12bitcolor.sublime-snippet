@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+([[:xdigit:]])([[:xdigit:]])([[:xdigit:]])([^[:xdigit:]])
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for 12 bit color strings</description>
+</snippet>

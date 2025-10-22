@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+"([^"]*)"
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for anything inside quotes</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+```${1:language}
+${2:Multi-line Code}
+```
+${0}
+]]></content>
+  <tabTrigger>pre</tabTrigger>
+  <scope>source.md</scope>
+</snippet>

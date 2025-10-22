@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include first-of($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>first-of items</description>
+  <scope>source.scss</scope>
+</snippet>

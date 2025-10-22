@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+| ${1:Column 1} | ${2:Column 2} |
+| ------------- | ------------- |
+| ${3:Cell 1-1} | ${4:Cell 1-2} |
+| ${5:Cell 2-1} | ${6:Cell 2-2} |
+${0}
+]]></content>
+  <tabTrigger>table</tabTrigger>
+  <scope>source.md</scope>
+</snippet>

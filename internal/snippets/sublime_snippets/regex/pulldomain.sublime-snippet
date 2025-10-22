@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+/https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for pull domain from URL</description>
+</snippet>

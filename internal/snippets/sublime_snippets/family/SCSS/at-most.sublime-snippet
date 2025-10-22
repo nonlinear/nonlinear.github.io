@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include at-most($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>at-most items</description>
+  <scope>source.scss</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:visited
+]]>
+  </content>
+  <tabTrigger>link</tabTrigger>
+  <description>visited pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

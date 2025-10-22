@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++lightSpeedIn
+]]>
+  </content>
+  <tabTrigger>lightSpeedIn</tabTrigger>
+  <description>lightSpeedIn animation</description>
+  <scope>source.sass</scope>
+</snippet>

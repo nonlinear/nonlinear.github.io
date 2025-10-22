@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include translate(${1:x}, ${2:y});
+]]>
+  </content>
+  <tabTrigger>translate</tabTrigger>
+  <description>translate transform</description>
+  <scope>source.scss</scope>
+</snippet>

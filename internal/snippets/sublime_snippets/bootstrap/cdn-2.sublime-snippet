@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+]]>
+  </content>
+  <tabTrigger>cdn</tabTrigger>
+  <description>bootstrap CSS CDN</description>
+</snippet>

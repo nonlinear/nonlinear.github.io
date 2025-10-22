@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+opacity(${1:[number or %]})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>opacity filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

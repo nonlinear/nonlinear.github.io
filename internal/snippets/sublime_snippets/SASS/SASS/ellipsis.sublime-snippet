@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++ellipsis
+]]>
+  </content>
+  <tabTrigger>ellipsis</tabTrigger>
+  <description>ellipsis mixin</description>
+  <scope>source.sass</scope>
+</snippet>

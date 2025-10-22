@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++translate(${1:x}, ${2:y})
+]]>
+  </content>
+  <tabTrigger>translate</tabTrigger>
+  <description>translate transform</description>
+  <scope>source.sass</scope>
+</snippet>

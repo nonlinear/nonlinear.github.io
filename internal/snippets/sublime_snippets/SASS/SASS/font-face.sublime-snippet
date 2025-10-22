@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
+${2:// Alert: if font path is NOT `../fonts/`, define $path too.
+}+font-face(${1:font title})
+]]>
+  </content>
+  <tabTrigger>font-face</tabTrigger>
+  <description>font-face mixin</description>
+  <scope>source.sass</scope>
+</snippet>

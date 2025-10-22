@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+drop-shadow(${1:x} ${2:y} ${3:blur} rgba(${4:black}, ${5:0.9}))
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>drop-shadow filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

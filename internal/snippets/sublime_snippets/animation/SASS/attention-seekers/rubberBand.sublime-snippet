@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++rubberBand
+]]>
+  </content>
+  <tabTrigger>rubberBand</tabTrigger>
+  <description>rubberBand animation</description>
+  <scope>source.sass</scope>
+</snippet>

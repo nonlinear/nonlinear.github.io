@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
+-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+]]>
+  </content>
+  <tabTrigger>system</tabTrigger>
+  <description>System web fonts</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1::after
+]]>
+  </content>
+  <tabTrigger>after</tabTrigger>
+  <description>after pseudo-element</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

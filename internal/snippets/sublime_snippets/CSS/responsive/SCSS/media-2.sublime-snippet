@@ -1,0 +1,13 @@
+<snippet>
+  <content>
+<![CDATA[
+ @media only screen and (min-device-${1:width}: ${2:100px}) and (max-device-${1:width}: ${3:100px}) {
+  $4
+}
+]]>
+  </content>
+  <tabTrigger>responsive</tabTrigger>
+  <description>range media query</description>
+  <scope>source.(scss|css)</scope>
+</snippet>
+

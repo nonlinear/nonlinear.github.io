@@ -1,0 +1,28 @@
+<snippet>
+  <content>
+<![CDATA[
+${4:// requires `animate` variables
+}@mixin ${1:title}(\$duration: \$durationDefault, \$function: \$functionDefault, \$delay: \$delayDefault, \$count: \$countDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault) {
+  @include animation-name(${1:title});
+  @include duration(\$duration);
+  @include function(\$function);
+  @include delay(\$delay);
+  @include count(\$count);
+  @include visibility(\$visibility);
+  @at-root {
+    @include keyframes(${1:title}) {
+      0% {
+       ${2:initial state}
+      }
+      100% {
+       ${3:final state}
+      }
+    }
+  }
+}
+]]>
+  </content>
+  <tabTrigger>animate</tabTrigger>
+  <description>animate mixin</description>
+  <scope>source.scss</scope>
+</snippet>

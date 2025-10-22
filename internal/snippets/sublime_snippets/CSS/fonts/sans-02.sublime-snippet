@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+Futura, 'Trebuchet MS', Arial, sans-serif
+]]>
+  </content>
+  <tabTrigger>sans</tabTrigger>
+  <description>Futura web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

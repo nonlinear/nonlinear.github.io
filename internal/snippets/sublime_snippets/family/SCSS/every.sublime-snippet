@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include every($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>every items</description>
+  <scope>source.scss</scope>
+</snippet>

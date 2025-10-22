@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:checked
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>checked pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include bounce;
+]]>
+  </content>
+  <tabTrigger>bounce</tabTrigger>
+  <description>bounce animation</description>
+  <scope>source.scss</scope>
+</snippet>

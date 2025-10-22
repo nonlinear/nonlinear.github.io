@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++fadeOutLeftBig
+]]>
+  </content>
+  <tabTrigger>fadeOutLeftBig</tabTrigger>
+  <description>fadeOutLeftBig animation</description>
+  <scope>source.sass</scope>
+</snippet>

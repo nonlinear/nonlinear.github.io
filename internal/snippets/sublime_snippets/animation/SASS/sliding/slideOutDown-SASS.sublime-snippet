@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++slideOutDown
+]]>
+  </content>
+  <tabTrigger>slideOutDown</tabTrigger>
+  <description>slideOutDown animation</description>
+  <scope>source.sass</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++from-end($1)
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>from-end items</description>
+  <scope>source.sass</scope>
+</snippet>

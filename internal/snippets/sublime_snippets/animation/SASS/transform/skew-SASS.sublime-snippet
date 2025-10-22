@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++skew(${1:0})
+]]>
+  </content>
+  <tabTrigger>skew</tabTrigger>
+  <description>skew transform</description>
+  <scope>source.sass</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+map-get(${1:group}, ${2:name});
+]]>
+  </content>
+  <tabTrigger>map</tabTrigger>
+  <description>map SCSS instance</description>
+  <scope>source.scss</scope>
+</snippet>

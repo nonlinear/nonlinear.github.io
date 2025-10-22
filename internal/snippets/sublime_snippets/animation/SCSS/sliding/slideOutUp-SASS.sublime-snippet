@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include slideOutUp;
+]]>
+  </content>
+  <tabTrigger>slideOutUp</tabTrigger>
+  <description>slideOutUp animation</description>
+  <scope>source.scss</scope>
+</snippet>

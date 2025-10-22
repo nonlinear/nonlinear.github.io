@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+'Lucida Sans Unicode', 'Lucida Grande', sans-serif
+]]>
+  </content>
+  <tabTrigger>sans</tabTrigger>
+  <description>Lucida web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include bounceInRight;
+]]>
+  </content>
+  <tabTrigger>bounceInRight</tabTrigger>
+  <description>bounceInRight animation</description>
+  <scope>source.scss</scope>
+</snippet>

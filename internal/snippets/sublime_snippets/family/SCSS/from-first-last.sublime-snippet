@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include from-first-last($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>from-first-last items</description>
+  <scope>source.scss</scope>
+</snippet>

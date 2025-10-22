@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include zoomInRight;
+]]>
+  </content>
+  <tabTrigger>zoomInRight</tabTrigger>
+  <description>zoomInRight animation</description>
+  <scope>source.scss</scope>
+</snippet>

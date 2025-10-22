@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+1. ${1:First Item}
+2. ${2:Second Item}
+3. ${3:Third Item}
+${0}
+]]></content>
+  <tabTrigger>ol</tabTrigger>
+  <scope>source.md</scope>
+</snippet>

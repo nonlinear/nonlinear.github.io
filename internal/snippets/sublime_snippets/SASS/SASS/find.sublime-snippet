@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
++find(${1:red})
+]]>
+  </content>
+  <tabTrigger>find</tabTrigger>
+  <description>find mixin</description>
+  <scope>source.sass</scope>
+  <scope>source.sass</scope>
+</snippet>

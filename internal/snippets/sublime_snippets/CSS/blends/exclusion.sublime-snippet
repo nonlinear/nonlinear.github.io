@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: exclusion
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>exclusion blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

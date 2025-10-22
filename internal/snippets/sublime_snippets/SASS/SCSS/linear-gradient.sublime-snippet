@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
+${3:// refer to https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+}@include linear-gradient($1, $2);
+]]>
+  </content>
+  <tabTrigger>gradient</tabTrigger>
+  <description>linear gradient mixin</description>
+  <scope>source.scss</scope>
+</snippet>
