@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include fadeIn;
+]]>
+  </content>
+  <tabTrigger>fadeIn</tabTrigger>
+  <description>fadeIn animation</description>
+  <scope>source.scss</scope>
+</snippet>

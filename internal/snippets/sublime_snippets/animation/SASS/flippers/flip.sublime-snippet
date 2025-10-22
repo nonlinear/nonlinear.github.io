@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++flip
+]]>
+  </content>
+  <tabTrigger>flip</tabTrigger>
+  <description>flip animation</description>
+  <scope>source.sass</scope>
+</snippet>

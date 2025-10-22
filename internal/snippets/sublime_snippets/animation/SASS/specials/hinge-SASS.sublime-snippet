@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++hinge
+]]>
+  </content>
+  <tabTrigger>hinge</tabTrigger>
+  <description>hinge animation</description>
+  <scope>source.sass</scope>
+</snippet>

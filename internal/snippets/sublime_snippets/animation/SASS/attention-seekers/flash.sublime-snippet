@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++flash
+]]>
+  </content>
+  <tabTrigger>flash</tabTrigger>
+  <description>flash animation</description>
+  <scope>source.sass</scope>
+</snippet>

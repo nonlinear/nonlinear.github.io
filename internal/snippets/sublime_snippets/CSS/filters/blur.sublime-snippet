@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+blur(${1:[px]})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>blur filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

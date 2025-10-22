@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++bounceInRight
+]]>
+  </content>
+  <tabTrigger>bounceInRight</tabTrigger>
+  <description>bounceInRight animation</description>
+  <scope>source.sass</scope>
+</snippet>

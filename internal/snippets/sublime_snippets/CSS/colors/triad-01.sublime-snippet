@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+adjust-hue(${1:color}, 120deg)
+]]>
+  </content>
+  <tabTrigger>triad</tabTrigger>
+  <description>triad 1 color</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

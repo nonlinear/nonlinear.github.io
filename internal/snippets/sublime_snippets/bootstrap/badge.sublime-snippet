@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+<span class="badge${2: pull-right}">${1:content}</span>
+]]></content>
+  <tabTrigger>badge</tabTrigger>
+  <description>Bootstrap badge</description>
+</snippet>

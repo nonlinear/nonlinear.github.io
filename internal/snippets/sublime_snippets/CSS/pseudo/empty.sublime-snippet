@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:empty
+]]>
+  </content>
+  <tabTrigger>empty</tabTrigger>
+  <description>empty pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

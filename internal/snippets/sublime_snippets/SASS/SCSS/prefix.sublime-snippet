@@ -1,0 +1,12 @@
+<snippet>
+  <content>
+<![CDATA[
+ @include prefix((
+    ${1:transition}: ${2:none // add more with comma}
+  ), ${3:\$prefixes});
+]]>
+  </content>
+  <tabTrigger>prefix</tabTrigger>
+  <description>prefix mixin</description>
+  <scope>source.scss</scope>
+</snippet>

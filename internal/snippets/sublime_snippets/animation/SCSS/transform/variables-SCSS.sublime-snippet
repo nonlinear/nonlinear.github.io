@@ -1,0 +1,15 @@
+<snippet>
+  <content>
+<![CDATA[
+\$animation-duration: {$1:1s} !default;
+\$animation-function: {$2:ease} !default;
+\$animation-delay: {$3:0.2s} !default;
+\$animation-count: {$4:1} !default;
+\$animation-fill: {$5:both} !default;
+\$animation-visibility: {$6:hidden} !default;
+]]>
+  </content>
+  <tabTrigger>variables</tabTrigger>
+  <description>animate variables</description>
+  <scope>source.scss</scope>
+</snippet>

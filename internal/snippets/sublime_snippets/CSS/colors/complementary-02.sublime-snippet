@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+hsl(hue(complement(${1:color})),saturation(${1:color}),70)
+]]>
+  </content>
+  <tabTrigger>complementary</tabTrigger>
+  <description>complementary 2 color</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

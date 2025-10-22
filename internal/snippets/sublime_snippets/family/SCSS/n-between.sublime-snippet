@@ -1,0 +1,12 @@
+<snippet>
+  <content>
+<![CDATA[
+// This mixin uses 3 arguments, the first one is equal to N item,
+// the second is the starting item and the third the end item.
+@include n-between($1, $2, $3);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>n-between items</description>
+  <scope>source.scss</scope>
+</snippet>

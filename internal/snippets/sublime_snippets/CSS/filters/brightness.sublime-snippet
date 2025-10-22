@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+brightness(${1:[number or %]})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>brightness filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1::first-line
+]]>
+  </content>
+  <tabTrigger>text</tabTrigger>
+  <description>first-line pseudo-element</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

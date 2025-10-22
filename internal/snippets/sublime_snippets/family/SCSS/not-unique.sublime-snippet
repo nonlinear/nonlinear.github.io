@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include not-unique;
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>not-unique items</description>
+  <scope>source.scss</scope>
+</snippet>

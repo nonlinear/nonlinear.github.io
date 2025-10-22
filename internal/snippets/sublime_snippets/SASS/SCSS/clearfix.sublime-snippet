@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include clearfix;
+]]>
+  </content>
+  <tabTrigger>clearfix</tabTrigger>
+  <description>clearfix mixins</description>
+  <scope>source.scss</scope>
+</snippet>

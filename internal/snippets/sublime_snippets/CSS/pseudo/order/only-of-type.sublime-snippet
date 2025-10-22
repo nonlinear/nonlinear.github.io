@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:only-of-type
+]]>
+  </content>
+  <tabTrigger>order</tabTrigger>
+  <description>only-of-type pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

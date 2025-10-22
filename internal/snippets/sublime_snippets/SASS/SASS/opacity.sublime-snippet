@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++opacity(${1:40})
+]]>
+  </content>
+  <tabTrigger>opacity</tabTrigger>
+  <description>opacity mixin</description>
+  <scope>source.sass</scope>
+</snippet>

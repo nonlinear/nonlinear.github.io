@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include reset(${1:all|list|border|bg|padding|margin});
+]]>
+  </content>
+  <tabTrigger>reset</tabTrigger>
+  <description>reset mixin</description>
+  <scope>source.scss</scope>
+</snippet>

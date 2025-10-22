@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++even
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>even items</description>
+  <scope>source.sass</scope>
+</snippet>

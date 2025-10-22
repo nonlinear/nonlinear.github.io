@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+/\d{1,3}(?=(\d{3})+(?!\d))/g
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for thousands separator</description>
+</snippet>

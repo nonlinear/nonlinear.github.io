@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:in-range
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>in-range pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

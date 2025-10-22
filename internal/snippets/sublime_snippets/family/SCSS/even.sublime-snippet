@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include even;
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>even items</description>
+  <scope>source.scss</scope>
+</snippet>

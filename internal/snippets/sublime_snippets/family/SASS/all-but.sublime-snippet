@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++all-but($1)
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>all-but items</description>
+  <scope>source.sass</scope>
+</snippet>

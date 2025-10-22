@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: hue
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>hue blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+hue-rotate(${1:[deg]})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>hue-rotate filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

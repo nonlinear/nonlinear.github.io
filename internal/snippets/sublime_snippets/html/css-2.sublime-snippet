@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
+<style type="text/css">
+$1
+</style>
+]]>
+  </content>
+  <tabTrigger>css</tabTrigger>
+  <description>CSS inline</description>
+</snippet>

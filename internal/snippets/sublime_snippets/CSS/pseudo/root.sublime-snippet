@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:root
+]]>
+  </content>
+  <tabTrigger>root</tabTrigger>
+  <description>root pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

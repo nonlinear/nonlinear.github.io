@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+url(${1:[url]})
+]]>
+  </content>
+  <tabTrigger>filter</tabTrigger>
+  <description>url filter</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

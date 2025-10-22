@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif
+]]>
+  </content>
+  <tabTrigger>slab</tabTrigger>
+  <description>Rockwell web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

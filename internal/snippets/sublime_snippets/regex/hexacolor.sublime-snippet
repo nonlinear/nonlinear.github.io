@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+\#([a-fA-F]|[0-9]){3, 6}
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for hexadecimal color</description>
+</snippet>

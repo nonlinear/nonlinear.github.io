@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++unique
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>unique items</description>
+  <scope>source.sass</scope>
+</snippet>

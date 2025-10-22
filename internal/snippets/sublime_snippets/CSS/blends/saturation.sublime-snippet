@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: saturation
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>saturation blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

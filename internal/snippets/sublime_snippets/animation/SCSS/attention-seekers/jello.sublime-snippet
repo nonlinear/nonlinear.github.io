@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include jello;
+]]>
+  </content>
+  <tabTrigger>jello</tabTrigger>
+  <description>jello animation</description>
+  <scope>source.scss</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: multiply
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>multiply blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

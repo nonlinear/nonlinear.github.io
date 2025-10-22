@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include fadeInRightBig;
+]]>
+  </content>
+  <tabTrigger>fadeInRightBig</tabTrigger>
+  <description>fadeInRightBig animation</description>
+  <scope>source.scss</scope>
+</snippet>

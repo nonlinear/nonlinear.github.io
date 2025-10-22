@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include odd;
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>odd items</description>
+  <scope>source.scss</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++radius(${1:5px})
+]]>
+  </content>
+  <tabTrigger>radius</tabTrigger>
+  <description>regular radius mixin</description>
+  <scope>source.sass</scope>
+</snippet>

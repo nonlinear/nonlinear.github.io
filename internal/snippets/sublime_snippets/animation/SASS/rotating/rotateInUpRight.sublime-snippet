@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++rotateInUpRight
+]]>
+  </content>
+  <tabTrigger>rotateInUpRight</tabTrigger>
+  <description>rotateInUpRight animation</description>
+  <scope>source.sass</scope>
+</snippet>

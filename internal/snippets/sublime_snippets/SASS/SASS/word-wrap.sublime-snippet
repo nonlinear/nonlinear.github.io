@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++word-wrap
+]]>
+  </content>
+  <tabTrigger>word-wrap</tabTrigger>
+  <description>word-wrap mixin</description>
+  <scope>source.sass</scope>
+</snippet>

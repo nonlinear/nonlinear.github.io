@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++wobble
+]]>
+  </content>
+  <tabTrigger>wobble</tabTrigger>
+  <description>wobble animation</description>
+  <scope>source.sass</scope>
+</snippet>

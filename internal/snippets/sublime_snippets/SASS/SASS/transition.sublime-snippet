@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++transition
+]]>
+  </content>
+  <tabTrigger>transition</tabTrigger>
+  <description>transition mixin</description>
+  <scope>source.sass</scope>
+</snippet>

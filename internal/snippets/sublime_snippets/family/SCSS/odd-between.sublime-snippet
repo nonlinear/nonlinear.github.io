@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include odd-between($1, $2);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>odd-between items</description>
+  <scope>source.scss</scope>
+</snippet>

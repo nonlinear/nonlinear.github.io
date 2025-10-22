@@ -1,0 +1,12 @@
+<snippet>
+  <content>
+<![CDATA[
+if (!s.match(/^[a-zA-Z]+:\/\//))
+{
+    s = 'http://' + s;
+}
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex for http prepend on hyperlink</description>
+</snippet>

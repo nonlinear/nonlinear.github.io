@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:read-only
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>read-only pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

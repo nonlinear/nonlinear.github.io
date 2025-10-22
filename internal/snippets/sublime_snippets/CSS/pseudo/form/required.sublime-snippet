@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:required
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>required pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

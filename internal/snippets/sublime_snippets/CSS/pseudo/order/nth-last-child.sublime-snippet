@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:nth-last-child($2)
+]]>
+  </content>
+  <tabTrigger>order</tabTrigger>
+  <description>nth-last-child pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

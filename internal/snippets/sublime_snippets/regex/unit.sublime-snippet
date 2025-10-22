@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+[[:alpha:]]+(-[[:alpha:]]+)*\s*:\s*-?([[:digit:]]*)?\.?[[:digit:]]+(${1:px})
+]]>
+  </content>
+  <tabTrigger>regex</tabTrigger>
+  <description>regex to find any attribute with unit</description>
+</snippet>

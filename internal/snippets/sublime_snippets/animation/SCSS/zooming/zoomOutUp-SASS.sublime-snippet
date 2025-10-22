@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include zoomOutUp;
+]]>
+  </content>
+  <tabTrigger>zoomOutUp</tabTrigger>
+  <description>zoomOutUp animation</description>
+  <scope>source.scss</scope>
+</snippet>

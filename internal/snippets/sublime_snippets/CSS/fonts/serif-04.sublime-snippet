@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif
+]]>
+  </content>
+  <tabTrigger>serif</tabTrigger>
+  <description>Garamond web font, SCSS</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

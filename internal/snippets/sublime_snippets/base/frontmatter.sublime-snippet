@@ -1,0 +1,19 @@
+<snippet>
+  <content>
+<![CDATA[
+---
+title:       ${1:title}
+description: ${2:a shared events calendar}
+category:    ${3:resources}
+slug:        ${4:slug}
+template:    ${5:post.hbs}
+date:        ${6:2015-07-31}
+author:      ${7:Nicholas Frota}
+---
+$8
+]]>
+  </content>
+  <tabTrigger>frontmatter</tabTrigger>
+  <description>frontmatter blog post</description>
+  <scope>source.md</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include rollIn;
+]]>
+  </content>
+  <tabTrigger>rollIn</tabTrigger>
+  <description>rollIn animation</description>
+  <scope>source.scss</scope>
+</snippet>

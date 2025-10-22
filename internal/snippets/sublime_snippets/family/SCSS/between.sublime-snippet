@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include between($1, $2);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>between items</description>
+  <scope>source.scss</scope>
+</snippet>

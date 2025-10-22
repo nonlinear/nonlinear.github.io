@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:hover
+]]>
+  </content>
+  <tabTrigger>link</tabTrigger>
+  <description>hover pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

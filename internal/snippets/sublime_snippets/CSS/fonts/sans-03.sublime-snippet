@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+'Helvetica Neue', Helvetica, Arial, sans-serif
+]]>
+  </content>
+  <tabTrigger>sans</tabTrigger>
+  <description>Helvetica Neue web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

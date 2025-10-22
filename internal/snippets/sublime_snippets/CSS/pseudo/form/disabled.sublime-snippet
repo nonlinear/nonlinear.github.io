@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+$1:disabled
+]]>
+  </content>
+  <tabTrigger>form</tabTrigger>
+  <description>disabled pseudo-class</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

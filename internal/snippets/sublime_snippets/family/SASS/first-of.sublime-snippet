@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++first-of($1)
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>first-of items</description>
+  <scope>source.sass</scope>
+</snippet>

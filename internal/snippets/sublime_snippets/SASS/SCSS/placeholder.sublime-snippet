@@ -1,0 +1,12 @@
+<snippet>
+	<content>
+<![CDATA[
+@include placeholder {
+  $1
+}
+]]>
+	</content>
+	<tabTrigger>placeholder</tabTrigger>
+	<description>placeholder rules</description>
+  <scope>source.scss</scope>
+</snippet>

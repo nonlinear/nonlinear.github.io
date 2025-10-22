@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif
+]]>
+  </content>
+  <tabTrigger>serif</tabTrigger>
+  <description>Didot web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

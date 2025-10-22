@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++zoomOutRight
+]]>
+  </content>
+  <tabTrigger>zoomOutRight</tabTrigger>
+  <description>zoomOutRight animation</description>
+  <scope>source.sass</scope>
+</snippet>

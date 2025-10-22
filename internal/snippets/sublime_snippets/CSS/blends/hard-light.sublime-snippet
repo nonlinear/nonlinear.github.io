@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:mix}-blend-mode: hard-light
+]]>
+  </content>
+  <tabTrigger>blend</tabTrigger>
+  <description>hard-light blend mode</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

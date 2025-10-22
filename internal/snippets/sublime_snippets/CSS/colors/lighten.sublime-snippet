@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+lighten(${1:color}, ${2:percent}%)
+]]>
+  </content>
+  <tabTrigger>lighten</tabTrigger>
+  <description>lighten SCSS</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

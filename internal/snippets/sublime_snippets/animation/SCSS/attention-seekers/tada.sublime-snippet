@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include tada;
+]]>
+  </content>
+  <tabTrigger>tada</tabTrigger>
+  <description>tada animation</description>
+  <scope>source.scss</scope>
+</snippet>

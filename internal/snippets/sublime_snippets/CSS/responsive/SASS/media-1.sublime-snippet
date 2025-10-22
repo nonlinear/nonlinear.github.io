@@ -1,0 +1,11 @@
+<snippet>
+  <content>
+<![CDATA[
+@media screen and (${1:max}-${2:width}: ${3:100px})
+  $4
+]]>
+  </content>
+  <tabTrigger>responsive</tabTrigger>
+  <description>simple media query</description>
+  <scope>source.sass</scope>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:// https://css-tricks.com/centering-the-newest-coolest-way-vs-the-oldest-coolest-way/
+}display: grid;
+height: 100vh;
+margin: 0;
+place-items: center center;
+]]>
+  </content>
+  <tabTrigger>center</tabTrigger>
+  <description>center children objects</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

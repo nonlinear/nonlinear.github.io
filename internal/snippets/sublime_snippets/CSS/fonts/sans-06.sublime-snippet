@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+Gill Sans / Gill Sans MT, sans-serif
+]]>
+  </content>
+  <tabTrigger>sans</tabTrigger>
+  <description>Gill Sans web font</description>
+  <scope>source.(scss|css|sass)</scope>
+</snippet>

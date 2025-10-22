@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
++at-most($1)
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>at-most items</description>
+  <scope>source.sass</scope>
+</snippet>

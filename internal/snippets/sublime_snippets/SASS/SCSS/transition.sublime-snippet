@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include transition;
+]]>
+  </content>
+  <tabTrigger>transition</tabTrigger>
+  <description>transition mixin</description>
+  <scope>source.scss</scope>
+</snippet>

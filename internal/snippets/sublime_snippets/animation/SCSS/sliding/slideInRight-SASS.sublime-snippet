@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include slideInRight;
+]]>
+  </content>
+  <tabTrigger>slideInRight</tabTrigger>
+  <description>slideInRight animation</description>
+  <scope>source.scss</scope>
+</snippet>

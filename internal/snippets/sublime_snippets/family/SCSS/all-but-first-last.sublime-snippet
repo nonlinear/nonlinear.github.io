@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include all-but-first-last($1);
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>all-but-first-last items</description>
+  <scope>source.scss</scope>
+</snippet>

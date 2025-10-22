@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include swing;
+]]>
+  </content>
+  <tabTrigger>swing</tabTrigger>
+  <description>swing animation</description>
+  <scope>source.scss</scope>
+</snippet>

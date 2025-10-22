@@ -1,0 +1,10 @@
+<snippet>
+  <content>
+<![CDATA[
+@include last-child;
+]]>
+  </content>
+  <tabTrigger>family</tabTrigger>
+  <description>last-child items</description>
+  <scope>source.scss</scope>
+</snippet>
