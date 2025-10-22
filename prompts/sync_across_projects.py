@@ -27,7 +27,7 @@ def sync_folders(source, targets):
     for target in targets:
         if target != source:
             subprocess.run([
-                "rsync", "-av", "--delete", f"{source}/", f"{target}/"
+                "rsync", "-av", "--delete", "--exclude", "copilot-instructions.md", f"{source}/", f"{target}/"
             ])
 
 if __name__ == "__main__":
