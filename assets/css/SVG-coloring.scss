@@ -1,4 +1,11 @@
-.SVG-coloring {
+.svg-coloring {
+
+  #displacement {
+    border: solid 2px red;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
   #slide01 {
           background: linear-gradient(to top, lighten(blue, 35%), lighten(blue, 45%));
       svg {

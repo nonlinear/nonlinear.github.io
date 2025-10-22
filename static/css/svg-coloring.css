@@ -1,0 +1,78 @@
+.svg-coloring #displacement {
+  border: solid 2px red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.svg-coloring #slide01 {
+  background: linear-gradient(to top, #6699ff, #99ccff); /* lightened blue */
+}
+
+.svg-coloring #slide01 svg #hair {
+  fill: #80ff80; /* lightened green */
+}
+
+.svg-coloring #slide01 svg #neck {
+  fill: #ffb6c1; /* lightened pink */
+}
+
+.svg-coloring #slide01 svg #eyes {
+  fill: white;
+}
+
+.svg-coloring #slide01 svg #face {
+  fill: #ffc0cb; /* lightened pink */
+}
+
+.svg-coloring #slide01 svg #lineart path {
+  fill: brown;
+}
+
+.svg-coloring #slide02 {
+  background: linear-gradient(to top, #99ff99, #ccffcc); /* lightened green */
+}
+
+.svg-coloring #slide02 svg #hair {
+  fill: #ff9999; /* lightened red */
+}
+
+.svg-coloring #slide02 svg #neck {
+  fill: #ffd699; /* lightened orange */
+}
+
+.svg-coloring #slide02 svg #eyes {
+  fill: white;
+}
+
+.svg-coloring #slide02 svg #face {
+  fill: #ffd699; /* lightened orange */
+}
+
+.svg-coloring #slide02 svg #lineart path {
+  fill: darkblue;
+}
+
+.svg-coloring #slide03 {
+  background: linear-gradient(to top, #ffff99, white); /* lightened yellow */
+}
+
+.svg-coloring #slide03 svg #hair {
+  fill: #ff9900; /* darkened orange */
+}
+
+.svg-coloring #slide03 svg #neck {
+  fill: #ffd699; /* lightened orange */
+}
+
+.svg-coloring #slide03 svg #eyes {
+  fill: white;
+}
+
+.svg-coloring #slide03 svg #face {
+  fill: #ffd699; /* lightened orange */
+}
+
+.svg-coloring #slide03 svg #lineart path {
+  fill: #cc6600; /* darkened orange */
+}
