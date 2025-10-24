@@ -3,12 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js hedgehog draft single
-    
-      
-        
-        
-      
+    class="single no-js volume draft single
     "
 >
 
@@ -16,7 +11,7 @@
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hedgehog</title>
+  <title>3D showcase</title>
   <meta content="Nicholas Frota" name="author" />
 
   
@@ -42,7 +37,7 @@
     
   
   <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
-  <meta property="og:description" content="processing ideas" />
+  <meta property="og:description" content="Example of a 3D showcase" />
 
 
 </head>
@@ -54,25 +49,42 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        
+                        <div id="viewer" style="width: 400px; height: 400px;"></div>
+<script type="module">
+  import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+  import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+  import { GLTFLoader } from 'https://unpkg.com/three/examples/jsm/loaders/GLTFLoader.js';
 
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(400, 400);
+  document.getElementById('viewer').appendChild(renderer.domElement);
 
-<section id="hedgehog" style="position: relative;"></section>
-<a href="/processing-1#slide01" class="mice reload"></a>
-Reload Sketch
-</button>
-<section id="slide02" aria-label="Tilework">
-  2
-</section>
-<section id="slide03" aria-label="Floating ribbon">
-  3
-</section>
-<section id="slide04" aria-label="3D ribbon">
-  4
-</section>
-<section id="slide05" aria-label="Hypercube">
-  5
-</section>
+  const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+  scene.add(light);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enablePan = false;
+  controls.enableZoom = false;
+  controls.minPolarAngle = Math.PI / 2;
+  controls.maxPolarAngle = Math.PI / 2;
+
+  const loader = new GLTFLoader();
+  loader.load('/3D/duck.glb', function(gltf) {
+    scene.add(gltf.scene);
+  }, undefined, function(error) {
+    console.error(error);
+  });
+
+  camera.position.set(0, 0, 2);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+</script>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -80,13 +92,13 @@ Reload Sketch
             <aside id="credits">
     <a href="javascript:void(0)" class="mice credits-close"></a>
  <div id="qrdisplay"></div>
-                    <h2>Hedgehog</h2>
+                    <h2>3D showcase</h2>
                     <p class="date">
                            
-                        status: live 4 days ago
+                        status: live 1 days ago
                         
                         </p>
-                    <p>processing ideas</p>
+                    <p>Example of a 3D showcase</p>
 
                     
 
@@ -174,8 +186,6 @@ Reload Sketch
                     </section>
                     <section class="references">
                       
-                        <a href="https://generated.space/sketch/hedgehog-2/">https://generated.space/sketch/hedgehog-2/</a>
-                      
                     </section>
 
 
@@ -196,7 +206,7 @@ Reload Sketch
         <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/hedgehog\/",
+        text: "https:\/\/***REMOVED***.nyc\/volume\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -264,23 +274,9 @@ Reload Sketch
       
 
   
-    
-    
-    
-      <script src="https://***REMOVED***.nyc/js/lib/p5.js"></script>
-    
-  
 
 
 
-
-  
-    
-    
-    
-      <script src="https://***REMOVED***.nyc/js/script/nav-p5.js"></script>
-    
-  
 
 
 
