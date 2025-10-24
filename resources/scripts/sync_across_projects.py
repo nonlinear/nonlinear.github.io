@@ -4,7 +4,7 @@ from pathlib import Path
 
 folders = [
     Path.home() / "Documents/***REMOVED***/.github",
-    Path.home() / "Documents/***REMOVED***/prompts",
+    Path.home() / "Documents/***REMOVED***/resources",
     Path.home() / "Documents/praxis/.github",
     Path.home() / "Documents/wiley/storybook/.github",
     Path.home() / "Documents/notes/.github"
