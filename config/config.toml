@@ -1,0 +1,19 @@
+baseURL = "https://***REMOVED***.nyc/"
+languageCode = "en-us"
+title = "Nonlinear"
+publishDir = "docs"
+
+[params]
+author = "Nicholas Frota"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+
+[mediaTypes."application/rss+xml"]
+suffixes = ["xml"]
+
+[outputFormats.RSS]
+mediaType = "application/rss+xml"
+baseName = "index"
+isPlainText = true

@@ -16,6 +16,11 @@ else:
 script_name = os.path.basename(__file__)
 
 for filename in os.listdir(target_folder):
+    # Ignorar arquivos ocultos e específicos
+    if filename.startswith('.') or filename in ['.gitignore', '.gitattributes', '.DS_Store']:
+        print(f"Ignorando arquivo: '{filename}'")
+        continue
+
     file_path = os.path.join(target_folder, filename)
     if os.path.isfile(file_path) and filename != script_name:
         # Remove tudo " (*)" do nome
