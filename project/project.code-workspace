@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "./"
+    }
+  ],
+  "settings": {
+    // Set the title bar format
+    "window.title": "***REMOVED***",
+
+    // Hugo / project exclusions
+    "search.exclude": {
+      "**/docs/**": true,
+      "**/internal/**": true,
+      "**/resources/**": true
+    }
+  }
+}

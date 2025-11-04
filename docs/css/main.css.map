@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/***REMOVED***/Documents/***REMOVED***",
+	"sourceRoot": "/Users/nfrota/Documents/***REMOVED***",
 	"sources": [
 		"assets/css/main.scss",
 		"assets/css/vendor/animatewithsass/animate.scss",
