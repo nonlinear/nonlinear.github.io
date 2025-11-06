@@ -6,12 +6,12 @@ import shutil
 
 import sys
 
-# Se passado argumento, usa como pasta alvo; senão, usa pasta onde o script está
+# Se passado argumento, usa como pasta alvo; senão, usa pasta de comics
 
 if len(sys.argv) > 1:
     target_folder = os.path.abspath(sys.argv[1])
 else:
-    target_folder = os.getcwd()
+    target_folder = "/Users/nfrota/Documents/sync/comics"
 
 script_name = os.path.basename(__file__)
 
