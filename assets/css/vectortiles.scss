@@ -53,11 +53,12 @@
     background-repeat: repeat;
 }
 
+
 @mixin dots-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
+  $svg-color: color-to-data-url($color);
+  background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: $size;
+  background-repeat: repeat;
 }
 
 @mixin dots-b($size: 36px, $color: #ff8c00) {
@@ -95,26 +96,18 @@
     background-repeat: repeat;
 }
 
-@mixin lines-a($size: 36px, $color: #ff8c00) {
+@mixin lines($thickness: 10%, $size: 36px, $color: #ff8c00) {
     $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0h36v3.6H0z'/%3E%3C/svg%3E");
+
+    // Calcula altura baseada na porcentagem do viewBox (sempre 36px)
+    $height: 36 * $thickness / 100%;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0h36v#{$height}H0z'/%3E%3C/svg%3E");
     background-size: $size;
     background-repeat: repeat;
 }
 
-@mixin lines-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-b%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0h36v10.8H0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
 
-@mixin lines-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0h36v18H0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
 
 @mixin lines-down-a($size: 36px, $color: #ff8c00) {
     $svg-color: color-to-data-url($color);
