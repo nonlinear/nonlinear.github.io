@@ -1,0 +1,346 @@
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js vectortiles draft single
+    "
+>
+
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vector tiles</title>
+  <meta content="Nicholas Frota" name="author" />
+
+  
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/main.7b4589521946c5b11b6a1f8b75a4d0a61efd6b36b5b6e38942fcacca71e4981b.css" />
+
+  
+
+
+  
+  
+  
+  
+    <link href="/css/vectortiles.css" rel="stylesheet" />
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
+  <meta property="og:description" content="testing vectors" />
+
+
+</head>
+
+    <body>
+
+        <main class="container">
+
+                <a href="javascript:void(0)" class="mice credits-open"></a>
+            <article class="content">
+                    
+                        
+<style>
+ul.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.grid li {
+    width: 200px;
+    height: 200px;
+    background-repeat: repeat;
+    background-size: var(--tile-size, 36px);
+}
+
+.cross-a {
+    --tile-size: 40px;
+    background-color: lightgreen;
+}
+</style>
+
+<ul class="grid">
+  <li class="cross-a"></li>
+  <li class="cross-b"></li>
+  <li class="cross-c"></li>
+  <li class="dots-a"></li>
+  <li class="dots-b"></li>
+  <li class="dots-c"></li>
+  <li class="grid-a"></li>
+  <li class="grid-b"></li>
+  <li class="grid-c"></li>
+  <li class="lines-a"></li>
+  <li class="lines-b"></li>
+  <li class="lines-c"></li>
+  <li class="lines-down-a"></li>
+  <li class="lines-down-b"></li>
+  <li class="lines-down-c"></li>
+  <li class="lines-up-a"></li>
+  <li class="lines-up-b"></li>
+  <li class="lines-up-c"></li>
+  <li class="lines-vert-a"></li>
+  <li class="lines-vert-b"></li>
+  <li class="lines-vert-c"></li>
+</ul>
+
+                    
+                    <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+            </article>
+            <aside id="credits">
+    <a href="javascript:void(0)" class="mice credits-close"></a>
+ <div id="qrdisplay"></div>
+                    <h2>Vector tiles</h2>
+                    <p class="date">
+                           
+                        status: live today
+                        
+                        </p>
+                    <p>testing vectors</p>
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+                      
+                        
+                        
+                      
+                    
+
+                    
+
+                    <section class="tags">
+                      
+                        <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+                        <div class="popover" id="microlink" style="display: none">
+                          
+                            <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more</p>
+                          
+
+                          
+                            <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                        <a class="tooltip" data-tooltip-id="qrcode.min">QRCode</a>
+
+                        <div class="popover" id="qrcode.min" style="display: none">
+                          
+                            <p>A JavaScript library for generating QR codes in client-side web applications</p>
+                          
+
+                          
+                            <a href="https://davidshimjs.github.io/qrcodejs/" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                        <a class="tooltip" data-tooltip-id="tippy.min">Tippy</a>
+
+                        <div class="popover" id="tippy.min" style="display: none">
+                          
+                            <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js</p>
+                          
+
+                          
+                            <a href="https://atomiks.github.io/tippyjs/" class="actions" target="_blank" rel="noopener">Visit site</a>
+                          
+                        </div>
+                      
+                    </section>
+                    <section class="references">
+                      
+                    </section>
+
+
+                   <section class="share">
+                       <a href="javascript:void(0)" id="share">
+                           Share creation</a>
+                      <a href="/latest">
+                         Visit latest creation
+                      </a>
+                  <a href="/">
+                      About ***REMOVED***
+                  </a>
+                   </section>
+                </div>
+
+
+        </div>
+        <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "http:\/\/localhost:1313\/vectortiles\/",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffcc",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+      
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.querySelector("main.container");
+
+          document.querySelectorAll(".credits-open").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.add("open-credits");
+            });
+          });
+
+          document.querySelectorAll(".credits-close").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              container.classList.remove("open-credits");
+            });
+          });
+        });
+        </script>
+        <script>
+            if (navigator.share) {
+                document.getElementById("share").style.display = "block";
+                document.getElementById("share").addEventListener("click", async () => {
+                    try {
+                        await navigator.share({
+                            title: document.title,
+                            text: "Check this out!",
+                            url: window.location.href,
+                        });
+                    } catch (err) {
+                        console.error("Error sharing:", err);
+                    }
+                });
+            }
+        </script>
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+</script>
+
+<script src="http://localhost:1313/js/global/popper.min.js"></script>
+<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
+
+<script>
+  document.querySelectorAll(".tooltip").forEach((el) => {
+    const tipId = el.getAttribute("data-tooltip-id");
+    const content =
+      document.getElementById(tipId)?.innerHTML || "No content";
+
+    tippy(el, {
+      content,
+      allowHTML: true,
+      interactive: true,
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl, {
+        trigger: 'hover',
+        html: true
+      });
+    });
+  });
+</script>
+
+
+
+
+    </body>
+
+
+</html>
+

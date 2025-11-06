@@ -1,0 +1,53 @@
+---
+title: Vector tiles
+description: testing vectors
+status: draft
+date: 2025-11-06
+---
+
+<style>
+ul.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.grid li {
+    width: 200px;
+    height: 200px;
+    background-repeat: repeat;
+    background-size: var(--tile-size, 36px);
+}
+
+.cross-a {
+    --tile-size: 40px;
+    background-color: lightgreen;
+}
+</style>
+
+<ul class="grid">
+  <li class="cross-a"></li>
+  <li class="cross-b"></li>
+  <li class="cross-c"></li>
+  <li class="dots-a"></li>
+  <li class="dots-b"></li>
+  <li class="dots-c"></li>
+  <li class="grid-a"></li>
+  <li class="grid-b"></li>
+  <li class="grid-c"></li>
+  <li class="lines-a"></li>
+  <li class="lines-b"></li>
+  <li class="lines-c"></li>
+  <li class="lines-down-a"></li>
+  <li class="lines-down-b"></li>
+  <li class="lines-down-c"></li>
+  <li class="lines-up-a"></li>
+  <li class="lines-up-b"></li>
+  <li class="lines-up-c"></li>
+  <li class="lines-vert-a"></li>
+  <li class="lines-vert-b"></li>
+  <li class="lines-vert-c"></li>
+</ul>
