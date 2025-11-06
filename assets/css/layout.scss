@@ -3,3 +3,125 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
+
+.vectortiles {
+    background-color: #ccc;
+
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0; // Zero gap para tiles se encostarem
+    list-style: none;
+    padding: 30px;
+    margin: 0;
+    grid-gap: 20px;
+    border: none; // Remove borda do container
+    li {
+        width: 100%;
+        height: 200px;
+        background-repeat: repeat;
+        border: none; // Remove bordas dos tiles
+        margin: 0; // Remove margens
+        padding: 0; // Remove padding
+        position: relative; // Para posicionar os labels
+        box-sizing: border-box; // Inclui border no tamanho
+
+        &:before {
+            background-color: #666;
+            color: white;
+            padding: 3px 8px;
+            margin-left: -8px;
+            position: absolute;
+            margin-top: -8px;
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        &:nth-of-type(1) {
+            @include cross-a(20, #666);
+            &:before { content: "cross-a"; }
+        }
+        &:nth-of-type(2) {
+            @include cross-b(20, #666);
+            &:before { content: "cross-b"; }
+        }
+        &:nth-of-type(3) {
+            @include cross-c(20, #666);
+            &:before { content: "cross-c"; }
+        }
+        &:nth-of-type(4) {
+            @include dots-a(20, #666);
+            &:before { content: "dots-a"; }
+        }
+        &:nth-of-type(5) {
+            @include dots-b(20, #666);
+            &:before { content: "dots-b"; }
+        }
+        &:nth-of-type(6) {
+            @include dots-c(20, #666);
+            &:before { content: "dots-c"; }
+        }
+        &:nth-of-type(7) {
+            @include grid-a(30, #666);
+            &:before { content: "grid-a"; }
+        }
+        &:nth-of-type(8) {
+            @include grid-b(30, #666);
+            &:before { content: "grid-b"; }
+        }
+        &:nth-of-type(9) {
+            @include grid-c(30, #666);
+            &:before { content: "grid-c"; }
+        }
+        &:nth-of-type(10) {
+            @include lines-a(20, #666);
+            &:before { content: "lines-a"; }
+        }
+        &:nth-of-type(11) {
+            @include lines-b(20, #666);
+            &:before { content: "lines-b"; }
+        }
+        &:nth-of-type(12) {
+            @include lines-c(20, #666);
+            &:before { content: "lines-c"; }
+        }
+        &:nth-of-type(13) {
+            @include lines-down-a(20, #666);
+            &:before { content: "lines-down-a"; }
+        }
+        &:nth-of-type(14) {
+            @include lines-down-b(20, #666);
+            &:before { content: "lines-down-b"; }
+        }
+        &:nth-of-type(15) {
+            @include lines-down-c(20, #666);
+            &:before { content: "lines-down-c"; }
+        }
+        &:nth-of-type(16) {
+            @include lines-up-a(20, #666);
+            &:before { content: "lines-up-a"; }
+        }
+        &:nth-of-type(17) {
+            @include lines-up-b(20, #666);
+            &:before { content: "lines-up-b"; }
+        }
+        &:nth-of-type(18) {
+            @include lines-up-c(20, #666);
+            &:before { content: "lines-up-c"; }
+        }
+        &:nth-of-type(19) {
+            @include lines-vert-a(20, #666);
+            &:before { content: "lines-vert-a"; }
+        }
+        &:nth-of-type(20) {
+            @include lines-vert-b(20, #666);
+            &:before { content: "lines-vert-b"; }
+        }
+        &:nth-of-type(21) {
+            @include lines-vert-c(20, #666);
+            &:before { content: "lines-vert-c"; }
+        }
+    }
+}
+}
