@@ -32,69 +32,69 @@
     @return $string;
 }
 
-@mixin cross-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-a%3C/title%3E%3Cpath d='M4 0v4H0v3h4v4h3.001V7H11V4H7.001V0H4zm18 18v4h-4v3h4v4h3.001v-4H29v-3h-3.999v-4H22z' fill='#{$svg-color}' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin cross-a($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-a%3C/title%3E%3Cpath d='M4 0v4H0v3h4v4h3.001V7H11V4H7.001V0H4zm18 18v4h-4v3h4v4h3.001v-4H29v-3h-3.999v-4H22z' fill='#{$svg-color}' fill-rule='evenodd'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin cross-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-b%3C/title%3E%3Cpath d='M12 8H8v4H4V8H0V4h4V0h4v4h4v4zm18 18h-4v4h-4v-4h-4v-4h4v-4h4v4h4v4z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin cross-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-b%3C/title%3E%3Cpath d='M12 8H8v4H4V8H0V4h4V0h4v4h4v4zm18 18h-4v4h-4v-4h-4v-4h4v-4h4v4h4v4z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin cross-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-c%3C/title%3E%3Cpath d='M12 9H9v3H3V9H0V3h3V0h6v3h3v6zm18 18h-3v3h-6v-3h-3v-6h3v-3h6v3h3v6z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin cross-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-c%3C/title%3E%3Cpath d='M12 9H9v3H3V9H0V3h3V0h6v3h3v6zm18 18h-3v3h-6v-3h-3v-6h3v-3h6v3h3v6z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
 
-@mixin dots-a($size: 36px, $color: #ff8c00) {
-  $svg-color: color-to-data-url($color);
-  background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: $size;
-  background-repeat: repeat;
-}
+// @mixin dots-a($size: 36px, $color: #ff8c00) {
+//   $svg-color: color-to-data-url($color);
+//   background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z'/%3E%3C/g%3E%3C/svg%3E");
+//   background-size: $size;
+//   background-repeat: repeat;
+// }
 
-@mixin dots-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-b%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 26c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin dots-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-b%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 26c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z'/%3E%3C/g%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin dots-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-c%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 29c-6.1 0-11-4.9-11-11S11.9 7 18 7s11 4.9 11 11-4.9 11-11 11zM0 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S11-6.1 11 0 6.1 11 0 11zM0 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11S6.1 47 0 47zM36 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S47-6.1 47 0s-4.9 11-11 11zM36 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11-4.9 11-11 11z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin dots-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-c%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 29c-6.1 0-11-4.9-11-11S11.9 7 18 7s11 4.9 11 11-4.9 11-11 11zM0 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S11-6.1 11 0 6.1 11 0 11zM0 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11S6.1 47 0 47zM36 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S47-6.1 47 0s-4.9 11-11 11zM36 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11-4.9 11-11 11z'/%3E%3C/g%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin grid-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M6 0v6H0V0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin grid-a($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M6 0v6H0V0z'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin grid-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-b%3C/title%3E%3Crect fill='#{$svg-color}' fill-rule='nonzero' transform='rotate(90 3 3)' width='6' height='6' rx='3'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin grid-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-b%3C/title%3E%3Crect fill='#{$svg-color}' fill-rule='nonzero' transform='rotate(90 3 3)' width='6' height='6' rx='3'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin grid-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M4.243 0l4.242 4.243-4.242 4.243L0 4.243z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin grid-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M4.243 0l4.242 4.243-4.242 4.243L0 4.243z'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
 @mixin lines($thickness: 10%, $size: 36px, $color: #ff8c00) {
     $svg-color: color-to-data-url($color);
