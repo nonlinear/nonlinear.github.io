@@ -16,7 +16,7 @@
                         status: live {{ div $diff 365 }} years ago
                         {{ end }}
                         </p>
-                    <p>{{ .Params.description | markdownify }}</p>
+                    <div class="description">{{ .Params.description | markdownify }}</div>
 
                     {{ $allowed := slice }}
 
@@ -98,7 +98,7 @@
 
         </div>
         {{ partial "qrcode.html" . }}
-      
+
         <script>
         document.addEventListener("DOMContentLoaded", () => {
           const container = document.querySelector("main.container");
