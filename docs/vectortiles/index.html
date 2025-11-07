@@ -7,7 +7,7 @@
     "
 >
 
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +19,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.409f7f57e152485308f9413e5ea449d8ef96456565dd2032400b440c2a16f42c.css" />
+  <link rel="stylesheet" href="/css/main.18a6d2a5d1e3710519e1ba85c30eb94eb3e6c27e92412b042444509b63f04bc2.css" />
 
   
 
@@ -36,8 +36,13 @@
   
     
   
-  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
-  <meta property="og:description" content="testing vectors" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
+  <meta property="og:description" content="## Vector Pattern Testing
+
+Experimenting with **vector-based patterns** and [line generation](/) techniques.
+
+This explores different densities and spacing parameters for creating repeating line patterns.
+" />
 
 
 </head>
@@ -52,7 +57,7 @@
                         
 <div class="container">
   <h1>vectortiles</h1>
-  <h2>dots</h2>
+  <!-- <h2>dots</h2>
   <ul class="dots">
     <li></li>
     <li></li>
@@ -69,7 +74,7 @@
     <li></li>
     <li></li>
     <li></li>
-  </ul>
+  </ul> -->
 
     <h2>lines</h2>
     <ul class="lines">
@@ -78,6 +83,11 @@
       <li></li>
       <li></li>
       <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
     </ul>
 
 
@@ -92,10 +102,13 @@
                     <h2>Vector tiles</h2>
                     <p class="date">
                            
-                        status: live today
+                        status: live 1 days ago
                         
                         </p>
-                    <p>testing vectors</p>
+                    <div class="description"><h2 id="vector-pattern-testing">Vector Pattern Testing</h2>
+<p>Experimenting with <strong>vector-based patterns</strong> and <a href="/">line generation</a> techniques.</p>
+<p>This explores different densities and spacing parameters for creating repeating line patterns.</p>
+</div>
 
                     
 
@@ -200,10 +213,10 @@
 
 
         </div>
-        <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
+        <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/vectortiles\/",
+        text: "http:\/\/localhost:1313\/vectortiles\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -212,7 +225,7 @@
     });
 </script>
 
-      
+
         <script>
         document.addEventListener("DOMContentLoaded", () => {
           const container = document.querySelector("main.container");
@@ -291,8 +304,8 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="https://***REMOVED***.nyc/js/global/popper.min.js"></script>
-<script src="https://***REMOVED***.nyc/js/global/tippy-bundle.umd.min.js"></script>
+<script src="http://localhost:1313/js/global/popper.min.js"></script>
+<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
 <script>
   document.querySelectorAll(".tooltip").forEach((el) => {

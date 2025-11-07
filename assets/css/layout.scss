@@ -66,88 +66,88 @@ body {
             }
         }
 
-        &.dots li {
-            &:nth-of-type(1) {
-                @include dots-a(20, #666);
+        // &.dots li {
+        //     &:nth-of-type(1) {
+        //         @include dots-a(20, #666);
 
-                &:before {
-                    content: "dots-a(20, #666)";
-                }
-            }
+        //         &:before {
+        //             content: "dots-a(20, #666)";
+        //         }
+        //     }
 
-            &:nth-of-type(2) {
-                @include dots-b(20, #666);
+        //     &:nth-of-type(2) {
+        //         @include dots-b(20, #666);
 
-                &:before {
-                    content: "dots-b(20, #666)";
-                }
-            }
+        //         &:before {
+        //             content: "dots-b(20, #666)";
+        //         }
+        //     }
 
-            &:nth-of-type(3) {
-                @include dots-c(20, #666);
+        //     &:nth-of-type(3) {
+        //         @include dots-c(20, #666);
 
-                &:before {
-                    content: "dots-c(20, #666)";
-                }
-            }
-
-
-        }
-
-        &.grid li {
-            &:nth-of-type(1) {
-                @include grid-a(40, #666);
-
-                &:before {
-                    content: "grid-a(40, #666)";
-                }
-            }
-
-            &:nth-of-type(2) {
-                @include grid-b(40, #666);
-
-                &:before {
-                    content: "grid-b(40, #666)";
-                }
-            }
-
-            &:nth-of-type(3) {
-                @include grid-c(40, #666);
-                &:before {
-                    content: "grid-c(40, #666)";
-                }
-            }
+        //         &:before {
+        //             content: "dots-c(20, #666)";
+        //         }
+        //     }
 
 
-        }
+        // }
 
-        &.cross li {
-            &:nth-of-type(1) {
-                @include cross-a(20, #666);
+        // &.grid li {
+        //     &:nth-of-type(1) {
+        //         @include grid-a(40, #666);
 
-                &:before {
-                    content: "cross-a(20, #666)";
-                }
-            }
+        //         &:before {
+        //             content: "grid-a(40, #666)";
+        //         }
+        //     }
 
-            &:nth-of-type(2) {
-                @include cross-b(20, #666);
+        //     &:nth-of-type(2) {
+        //         @include grid-b(40, #666);
 
-                &:before {
-                    content: "cross-b(20, #666)";
-                }
-            }
+        //         &:before {
+        //             content: "grid-b(40, #666)";
+        //         }
+        //     }
 
-            &:nth-of-type(3) {
-                @include cross-c(20, #666);
+        //     &:nth-of-type(3) {
+        //         @include grid-c(40, #666);
+        //         &:before {
+        //             content: "grid-c(40, #666)";
+        //         }
+        //     }
 
-                &:before {
-                    content: "cross-c(20, #666)";
-                }
-            }
+
+        // }
+
+        // &.cross li {
+        //     &:nth-of-type(1) {
+        //         @include cross-a(20, #666);
+
+        //         &:before {
+        //             content: "cross-a(20, #666)";
+        //         }
+        //     }
+
+        //     &:nth-of-type(2) {
+        //         @include cross-b(20, #666);
+
+        //         &:before {
+        //             content: "cross-b(20, #666)";
+        //         }
+        //     }
+
+        //     &:nth-of-type(3) {
+        //         @include cross-c(20, #666);
+
+        //         &:before {
+        //             content: "cross-c(20, #666)";
+        //         }
+        //     }
 
 
-        }
+        // }
 
 
         li {
