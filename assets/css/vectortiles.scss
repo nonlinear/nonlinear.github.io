@@ -21,10 +21,8 @@
  * @include lines($layer1, $layer2, $layer3...);
  *
  * COLOR SUPPORT:
- * - Hex: #ff0000, #f00
- * - RGB/RGBA: rgb(255, 0, 0), rgba(255, 0, 0, 0.5)
- * - Named colors: red, blue, lightblue, darkgreen, etc.
- * - Transparent/alpha values work perfectly for layer blending
+ * - All color inputs (hex, named colors, rgb, rgba, anything you throw at it)
+ * PS:  Transparent/alpha values work perfectly for layer blending
  *
  * BLEED CONTROL:
  * If patterns show edge artifacts, increase the secret 5th parameter:
@@ -43,37 +41,18 @@
  * Tartan: @include lines((5%, 40px, red, 45deg), (5%, 40px, blue, 90deg), (5%, 40px, yellow, 135deg));
  */
 
-// Função para converter qualquer cor para formato data URL
+// Função para converter qualquer cor para formato data URL (versão simplificada)
 @function color-to-data-url($color) {
+    // Converte tudo para string e substitui # por %23 se necessário
     $color-string: "#{$color}";
 
-    // Se começa com #, é hex - converte para %23
+    // Se é hex, substitui # por %23
     @if str-index($color-string, "#") == 1 {
         @return "%23" + str-slice($color-string, 2);
     }
 
-    // Se contém rgb( ou rgba(, URL-encode
-    @if str-index($color-string, "rgb") {
-        $encoded: str-replace($color-string, "(", "%28");
-        $encoded: str-replace($encoded, ")", "%29");
-        $encoded: str-replace($encoded, ",", "%2C");
-        $encoded: str-replace($encoded, " ", "");
-        @return $encoded;
-    }
-
-    // Se é nome de cor (red, blue, lightblue, etc), usa direto
+    // Para rgba/rgb, retorna como está (navegadores modernos suportam)
     @return $color-string;
-}
-
-// Função helper para substituir strings
-@function str-replace($string, $search, $replace: "") {
-    $index: str-index($string, $search);
-
-    @if $index {
-        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-    }
-
-    @return $string;
 }
 
 // @mixin cross-a($size: 36px, $color: #ff8c00) {
