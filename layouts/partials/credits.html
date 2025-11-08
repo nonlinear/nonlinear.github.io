@@ -16,7 +16,6 @@
       status: live {{ div $diff 365 }} years ago
       {{ end }}
     </p>
-    <br>
     <div class="description">{{ .Params.description | markdownify }}</div>
 
     {{ $allowed := slice }}
@@ -72,7 +71,7 @@
         {{ end }}
 
         {{ with $tech.link }}
-        <a href="{{ . | safeURL }}" class="actions" target="_blank" rel="noopener">Visit site</a>
+        <a href="{{ . | safeURL }}" class="actions" target="_blank" rel="noopener">Visit page</a>
         {{ end }}
       </div>
       {{ end }}
