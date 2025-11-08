@@ -1,137 +1,138 @@
 <aside id="credits">
-    <a href="javascript:void(0)" class="mice credits-close"></a>
- <div id="qrdisplay"></div>
-                    <h2>{{ .Page.Title }}</h2>
-                    <p class="date">
-                        {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div
-                        (sub $now.Unix $date.Unix) 86400 }} {{ if lt $diff 1 }}
-                        status: live today
-                        {{ else if lt $diff 7 }}
-                        status: live {{ $diff }} days ago
-                        {{ else if lt $diff 30 }}
-                        status: live {{ div $diff 7 }} weeks ago
-                        {{ else if lt $diff 365 }}
-                        status: live {{ div $diff 30 }} months ago
-                        {{ else }}
-                        status: live {{ div $diff 365 }} years ago
-                        {{ end }}
-                        </p>
-                    <div class="description">{{ .Params.description | markdownify }}</div>
+  <a href="javascript:void(0)" class="mice credits-close"></a>
+  <div id="qrdisplay"></div>
+  <h2>{{ .Page.Title }}</h2>
+  <p class="date">
+    {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div
+      (sub $now.Unix $date.Unix) 86400 }} {{ if lt $diff 1 }}
+      status: live today
+      {{ else if lt $diff 7 }}
+      status: live {{ $diff }} days ago
+      {{ else if lt $diff 30 }}
+      status: live {{ div $diff 7 }} weeks ago
+      {{ else if lt $diff 365 }}
+      status: live {{ div $diff 30 }} months ago
+      {{ else }}
+      status: live {{ div $diff 365 }} years ago
+      {{ end }}
+    </p>
+    <br>
+    <div class="description">{{ .Params.description | markdownify }}</div>
 
-                    {{ $allowed := slice }}
+    {{ $allowed := slice }}
 
-                    {{ with .Params.tags }}
-                      {{ $allowed = $allowed | append . }}
-                    {{ end }}
+    {{ with .Params.tags }}
+    {{ $allowed = $allowed | append . }}
+    {{ end }}
 
-                    {{ with .Params.fonts }}
-                      {{ $allowed = $allowed | append . }}
-                    {{ end }}
+    {{ with .Params.fonts }}
+    {{ $allowed = $allowed | append . }}
+    {{ end }}
 
-                    {{ with .Params.js }}
-                      {{ range . }}
-                        {{ $name := . }}
-                        {{ if strings.Contains . ":" }}
-                          {{ $name = index (split . ":") 0 }}
-                        {{ end }}
-                        {{ $allowed = $allowed | append $name }}
-                      {{ end }}
-                    {{ end }}
+    {{ with .Params.js }}
+    {{ range . }}
+    {{ $name := . }}
+    {{ if strings.Contains . ":" }}
+    {{ $name = index (split . ":") 0 }}
+    {{ end }}
+    {{ $allowed = $allowed | append $name }}
+    {{ end }}
+    {{ end }}
 
-                    {{ $technologies := slice }}
+    {{ $technologies := slice }}
 
-                    {{ range $key, $tech := site.Data.tags }}
-                      {{ if or (eq $tech.type "global") (in $allowed $key) }}
-                        {{ $tech = merge $tech (dict "key" $key) }}
-                        {{ $technologies = $technologies | append $tech }}
-                      {{ end }}
-                    {{ end }}
+    {{ range $key, $tech := site.Data.tags }}
+    {{ if or (eq $tech.type "global") (in $allowed $key) }}
+    {{ $tech = merge $tech (dict "key" $key) }}
+    {{ $technologies = $technologies | append $tech }}
+    {{ end }}
+    {{ end }}
 
-                    {{ $technologies = sort $technologies "title" }}
+    {{ $technologies = sort $technologies "title" }}
 
-                    <section class="tags">
-                      {{ range $tech := $technologies }}
-                        <a class="tooltip" data-tooltip-id="{{ $tech.key }}">{{ $tech.title }}</a>
+    <section class="tags">
+      {{ range $tech := $technologies }}
+      <a class="tooltip" data-tooltip-id="{{ $tech.key }}">{{ $tech.title }}</a>
 
-                        <div class="popover" id="{{ $tech.key }}" style="display: none">
-                          {{ if eq $tech.type "fonts" }}
-                            <p style="font-family: {{ $tech.key }}; font-size: 110%;">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
+      <div class="popover" id="{{ $tech.key }}" style="display: none">
+        {{ if eq $tech.type "fonts" }}
+        <p style="font-family: {{ $tech.key }}; font-size: 110%;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
 
-                          {{ else if eq $tech.type "tags" }}
-                            <p>{{ $tech.description }}</p>
+        {{ else if eq $tech.type "tags" }}
+        <p>{{ $tech.description }}</p>
 
-                          {{ else if eq $tech.type "js" }}
-                            <p>{{ $tech.description }}</p>
-<a href="#" class="actions">Others with {{ $tech.title }}</a>
-                          {{ else if eq $tech.type "global" }}
-                            <p>{{ $tech.description }}</p>
-                          {{ end }}
+        {{ else if eq $tech.type "js" }}
+        <p>{{ $tech.description }}</p>
+        <a href="#" class="actions">Others with {{ $tech.title }}</a>
+        {{ else if eq $tech.type "global" }}
+        <p>{{ $tech.description }}</p>
+        {{ end }}
 
-                          {{ with $tech.link }}
-                            <a href="{{ . | safeURL }}" class="actions" target="_blank" rel="noopener">Visit site</a>
-                          {{ end }}
-                        </div>
-                      {{ end }}
-                    </section>
-                    <section class="references">
-                      {{ range .Params.reference }}
-                        <a href="{{ . }}">{{ . }}</a>
-                      {{ end }}
-                    </section>
-
-
-                   <section class="share">
-                       <a href="javascript:void(0)" id="share">
-                           Share creation</a>
-                      <a href="/latest">
-                         Visit latest creation
-                      </a>
-                  <a href="/">
-                      About ***REMOVED***
-                  </a>
-                   </section>
-                </div>
+        {{ with $tech.link }}
+        <a href="{{ . | safeURL }}" class="actions" target="_blank" rel="noopener">Visit site</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    <section class="references">
+      {{ range .Params.reference }}
+      <a href="{{ . }}">{{ . }}</a>
+      {{ end }}
+    </section>
 
 
-        </div>
-        {{ partial "qrcode.html" . }}
+    <section class="share">
+      <a href="javascript:void(0)" id="share">
+        Share this page</a>
+        <!-- <a href="/latest">
+          Visit latest creation
+        </a> -->
+        <a href="/">
+          About ***REMOVED***
+        </a>
+      </section>
+    </div>
 
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const container = document.querySelector("main.container");
 
-          document.querySelectorAll(".credits-open").forEach((btn) => {
-            btn.addEventListener("click", (e) => {
-              e.preventDefault();
-              container.classList.add("open-credits");
-            });
-          });
+  </div>
+  {{ partial "qrcode.html" . }}
 
-          document.querySelectorAll(".credits-close").forEach((btn) => {
-            btn.addEventListener("click", (e) => {
-              e.preventDefault();
-              container.classList.remove("open-credits");
-            });
-          });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("main.container");
+
+      document.querySelectorAll(".credits-open").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.add("open-credits");
         });
-        </script>
-        <script>
-            if (navigator.share) {
-                document.getElementById("share").style.display = "block";
-                document.getElementById("share").addEventListener("click", async () => {
-                    try {
-                        await navigator.share({
-                            title: document.title,
-                            text: "Check this out!",
-                            url: window.location.href,
-                        });
-                    } catch (err) {
-                        console.error("Error sharing:", err);
-                    }
-                });
-            }
-        </script>
+      });
+
+      document.querySelectorAll(".credits-close").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.remove("open-credits");
+        });
+      });
+    });
+  </script>
+  <script>
+    if (navigator.share) {
+      document.getElementById("share").style.display = "block";
+      document.getElementById("share").addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: "Check this out!",
+            url: window.location.href,
+          });
+        } catch (err) {
+          console.error("Error sharing:", err);
+        }
+      });
+    }
+  </script>
 </aside>

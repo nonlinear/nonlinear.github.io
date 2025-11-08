@@ -1,4 +1,48 @@
 
+/*
+ * VECTORTILES.SCSS - SVG Pattern Generation Library
+ * =================================================
+ *
+ * LINES MIXIN - Master pattern generator for line-based SVG backgrounds
+ *
+ * SINGLE LAYER USAGE:
+ * @include lines($thickness, $size, $color, $angle, $svg-size);
+ *
+ * Parameters (in order):
+ * - $thickness: Line thickness as percentage of pattern size (e.g., 10%, 50%, 90%)
+ * - $size: Pattern repeat size in pixels (e.g., 20px, 36px, 100px)
+ * - $color: Any CSS color format (see Color Support below)
+ * - $angle: Rotation angle with units (e.g., 0deg, 45deg, 90deg, 135deg)
+ * - $svg-size: [OPTIONAL] SVG canvas size for bleed control (default: 500px)
+ *
+ * MULTI-LAYER USAGE:
+ * $layer1: ($thickness, $size, $color, $angle);
+ * $layer2: ($thickness, $size, $color, $angle);
+ * @include lines($layer1, $layer2, $layer3...);
+ *
+ * COLOR SUPPORT:
+ * - Hex: #ff0000, #f00
+ * - RGB/RGBA: rgb(255, 0, 0), rgba(255, 0, 0, 0.5)
+ * - Named colors: red, blue, lightblue, darkgreen, etc.
+ * - Transparent/alpha values work perfectly for layer blending
+ *
+ * BLEED CONTROL:
+ * If patterns show edge artifacts, increase the secret 5th parameter:
+ * @include lines(10%, 36px, red, 45deg, 800px); // Larger SVG canvas
+ *
+ * COMMON PATTERNS:
+ * - Horizontal lines: @include lines(10%, 30px, #666, 0deg);
+ * - Diagonal stripes: @include lines(50%, 20px, blue, 45deg);
+ * - Grid pattern: Use multi-layer with 0deg + 90deg angles
+ * - Tartan plaid: Use multi-layer with 45deg + 90deg + 135deg angles
+ * - Cross/Plus: Use multi-layer with matching angles 90deg apart
+ *
+ * EXAMPLES:
+ * Simple stripe: @include lines(15%, 24px, #ff8c00, 30deg);
+ * Grid: @include lines((8%, 30px, green, 0deg), (8%, 30px, green, 90deg));
+ * Tartan: @include lines((5%, 40px, red, 45deg), (5%, 40px, blue, 90deg), (5%, 40px, yellow, 135deg));
+ */
+
 // Função para converter qualquer cor para formato data URL
 @function color-to-data-url($color) {
     $color-string: "#{$color}";
@@ -96,78 +140,127 @@
 //     background-repeat: repeat;
 // }
 
-@mixin lines($thickness: 10%, $size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
+@mixin lines($args...) {
+    // Verifica se o primeiro argumento é uma lista (layer) ou valor simples
+    $first-arg: nth($args, 1);
+    $is-multi-layer: false;
 
-    // Calcula altura baseada na porcentagem do viewBox (sempre 36px)
-    $height: 36 * $thickness / 100%;
+    // Se o primeiro argumento é uma lista de 4+ elementos, é multi-layer
+    @if type-of($first-arg) == list and length($first-arg) >= 4 {
+        $is-multi-layer: true;
+    }
 
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0h36v#{$height}H0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
+    @if $is-multi-layer {
+        // Multi-layer mode
+        $background-images: ();
+        $background-sizes: ();
+        $background-positions: ();
+        $counter: 1;
+
+        @each $layer in $args {
+            $thickness: nth($layer, 1);
+            $size: nth($layer, 2);
+            $color: nth($layer, 3);
+            $angle: nth($layer, 4);
+            $svg-size: if(length($layer) > 4, nth($layer, 5), 500px);
+
+            $svg-color: color-to-data-url($color);
+            $height: $size * $thickness / 100%;
+            $angle-value: if($angle == 0deg, 0, str-slice(#{$angle}, 1, str-length(#{$angle}) - 3));
+            $svg-size-value: if($svg-size == 500px, 500, str-slice(#{$svg-size}, 1, str-length(#{$svg-size}) - 2));
+            $center: $svg-size-value / 2;
+
+            $pattern-id: 'lines-pattern-#{$counter}';
+            $svg: url("data:image/svg+xml,%3Csvg width='#{$svg-size-value}' height='#{$svg-size-value}' viewBox='0 0 #{$svg-size-value} #{$svg-size-value}' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='#{$pattern-id}' width='#{$size}' height='#{$size}' patternUnits='userSpaceOnUse'%3E%3Crect width='#{$size}' height='#{$height}' fill='#{$svg-color}'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23#{$pattern-id})' transform='rotate(#{$angle-value} #{$center} #{$center})'/%3E%3C/svg%3E");
+
+            $background-images: append($background-images, $svg, comma);
+            $background-sizes: append($background-sizes, $svg-size $svg-size, comma);
+            $background-positions: append($background-positions, center center, comma);
+
+            $counter: $counter + 1;
+        }        // Usa propriedades separadas que funcionam
+        background-image: $background-images;
+        background-size: $background-sizes;
+        background-position: $background-positions;
+    }
+    @else {
+        // Single layer mode - argumentos simples
+        $thickness: if(length($args) > 0, nth($args, 1), 10%);
+        $size: if(length($args) > 1, nth($args, 2), 36px);
+        $color: if(length($args) > 2, nth($args, 3), #ff8c00);
+        $angle: if(length($args) > 3, nth($args, 4), 0deg);
+        $svg-size: if(length($args) > 4, nth($args, 5), 500px);
+
+        $svg-color: color-to-data-url($color);
+        $height: $size * $thickness / 100%;
+        $angle-value: if($angle == 0deg, 0, str-slice(#{$angle}, 1, str-length(#{$angle}) - 3));
+        $svg-size-value: if($svg-size == 500px, 500, str-slice(#{$svg-size}, 1, str-length(#{$svg-size}) - 2));
+        $center: $svg-size-value / 2;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='#{$svg-size-value}' height='#{$svg-size-value}' viewBox='0 0 #{$svg-size-value} #{$svg-size-value}' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='lines-pattern' width='#{$size}' height='#{$size}' patternUnits='userSpaceOnUse'%3E%3Crect width='#{$size}' height='#{$height}' fill='#{$svg-color}'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23lines-pattern)' transform='rotate(#{$angle-value} #{$center} #{$center})'/%3E%3C/svg%3E");
+        background-size: $svg-size $svg-size;
+        background-position: center center;
+    }
 }
+// @mixin lines-down-a($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M36.1 0H34l2.1 2.1zM0 34v2.1h2.1z'/%3E%3Cpath d='M0 34v2.1h2.1zM36 33.9V36h-2.1L0 2.1V0h2.1z'/%3E%3C/g%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
+// @mixin lines-down-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-b%3C/title%3E%3Cpath d='M6.3 0H0v6.3L29.7 36H36v-6.3L6.3 0zM36 6.3L29.7 0H36v6.3zM6.3 36H0v-6.3L6.3 36z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
+// @mixin lines-down-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-c%3C/title%3E%3Cpath d='M10.5 0H0v10.5L25.5 36H36V25.5L10.5 0zM0 36V25.5L10.5 36H0zm36-25.5L25.5 0H36v10.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-down-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M36.1 0H34l2.1 2.1zM0 34v2.1h2.1z'/%3E%3Cpath d='M0 34v2.1h2.1zM36 33.9V36h-2.1L0 2.1V0h2.1z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-up-a($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M0 0h2.1l-2.1 2.1zM36 2.1V0h-2.1z'/%3E%3Cpath d='M36 2.1V0h-2.1zM0 2.1v-2.1h2.1L36 33.9V36h-2.1z'/%3E%3C/g%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-down-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-b%3C/title%3E%3Cpath d='M6.3 0H0v6.3L29.7 36H36v-6.3L6.3 0zM36 6.3L29.7 0H36v6.3zM6.3 36H0v-6.3L6.3 36z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-up-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-b%3C/title%3E%3Cpath d='M6.3 36H0v-6.3L29.7 0H36v6.3L6.3 36zM36 29.7L29.7 36H36v-6.3zM6.3 0H0v6.3L6.3 0z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-down-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-c%3C/title%3E%3Cpath d='M10.5 0H0v10.5L25.5 36H36V25.5L10.5 0zM0 36V25.5L10.5 36H0zm36-25.5L25.5 0H36v10.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-up-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-c%3C/title%3E%3Cpath d='M10.5 36H0V25.5L25.5 0H36v10.5L10.5 36zM0 0v10.5L10.5 0H0zm36 25.5L25.5 36H36V25.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-up-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M0 0h2.1l-2.1 2.1zM36 2.1V0h-2.1z'/%3E%3Cpath d='M36 2.1V0h-2.1zM0 2.1v-2.1h2.1L36 33.9V36h-2.1z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-vert-a($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0v36h3.6V0z'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-up-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-b%3C/title%3E%3Cpath d='M6.3 36H0v-6.3L29.7 0H36v6.3L6.3 36zM36 29.7L29.7 36H36v-6.3zM6.3 0H0v6.3L6.3 0z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-vert-b($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-b%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M10.4.4v36H-.4V.4z'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
 
-@mixin lines-up-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-c%3C/title%3E%3Cpath d='M10.5 36H0V25.5L25.5 0H36v10.5L10.5 36zM0 0v10.5L10.5 0H0zm36 25.5L25.5 36H36V25.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
-
-@mixin lines-vert-a($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0v36h3.6V0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
-
-@mixin lines-vert-b($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-b%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M10.4.4v36H-.4V.4z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
-
-@mixin lines-vert-c($size: 36px, $color: #ff8c00) {
-    $svg-color: color-to-data-url($color);
-    background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M18 0v36H0V0z'/%3E%3C/svg%3E");
-    background-size: $size;
-    background-repeat: repeat;
-}
+// @mixin lines-vert-c($size: 36px, $color: #ff8c00) {
+//     $svg-color: color-to-data-url($color);
+//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M18 0v36H0V0z'/%3E%3C/svg%3E");
+//     background-size: $size;
+//     background-repeat: repeat;
+// }
