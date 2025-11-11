@@ -1,245 +1,1156 @@
 
-/*
- * VECTORTILES.SCSS - SVG Pattern Generation Library
- * =================================================
- *
- * LINES MIXIN - Master pattern generator for line-based SVG backgrounds
- *
- * SINGLE LAYER USAGE:
- * @include lines($thickness, $size, $color, $angle, $svg-size);
- *
- * Parameters (in order):
- * - $thickness: Line thickness as percentage of pattern size (e.g., 10%, 50%, 90%)
- * - $size: Pattern repeat size in pixels (e.g., 20px, 36px, 100px)
- * - $color: Any CSS color format (see Color Support below)
- * - $angle: Rotation angle with units (e.g., 0deg, 45deg, 90deg, 135deg)
- * - $svg-size: [OPTIONAL] SVG canvas size for bleed control (default: 500px)
- *
- * MULTI-LAYER USAGE:
- * $layer1: ($thickness, $size, $color, $angle);
- * $layer2: ($thickness, $size, $color, $angle);
- * @include lines($layer1, $layer2, $layer3...);
- *
- * COLOR SUPPORT:
- * - All color inputs (hex, named colors, rgb, rgba, anything you throw at it)
- * PS:  Transparent/alpha values work perfectly for layer blending
- *
- * BLEED CONTROL:
- * If patterns show edge artifacts, increase the secret 5th parameter:
- * @include lines(10%, 36px, red, 45deg, 800px); // Larger SVG canvas
- *
- * COMMON PATTERNS:
- * - Horizontal lines: @include lines(10%, 30px, #666, 0deg);
- * - Diagonal stripes: @include lines(50%, 20px, blue, 45deg);
- * - Grid pattern: Use multi-layer with 0deg + 90deg angles
- * - Tartan plaid: Use multi-layer with 45deg + 90deg + 135deg angles
- * - Cross/Plus: Use multi-layer with matching angles 90deg apart
- *
- * EXAMPLES:
- * Simple stripe: @include lines(15%, 24px, #ff8c00, 30deg);
- * Grid: @include lines((8%, 30px, green, 0deg), (8%, 30px, green, 90deg));
- * Tartan: @include lines((5%, 40px, red, 45deg), (5%, 40px, blue, 90deg), (5%, 40px, yellow, 135deg));
- */
 
-// Função para converter qualquer cor para formato data URL (versão simplificada)
-@function color-to-data-url($color) {
-    // Converte tudo para string e substitui # por %23 se necessário
-    $color-string: "#{$color}";
+.vectortiles article {
 
-    // Se é hex, substitui # por %23
-    @if str-index($color-string, "#") == 1 {
-        @return "%23" + str-slice($color-string, 2);
+    h1,
+    h2,
+    h3 {
+        margin: 30px;
     }
 
-    // Para rgba/rgb, retorna como está (navegadores modernos suportam)
-    @return $color-string;
-}
 
-// @mixin cross-a($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-a%3C/title%3E%3Cpath d='M4 0v4H0v3h4v4h3.001V7H11V4H7.001V0H4zm18 18v4h-4v3h4v4h3.001v-4H29v-3h-3.999v-4H22z' fill='#{$svg-color}' fill-rule='evenodd'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0; // Zero gap para tiles se encostarem
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        grid-gap: 0;
+        border: none; // Remove borda do container
 
-// @mixin cross-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-b%3C/title%3E%3Cpath d='M12 8H8v4H4V8H0V4h4V0h4v4h4v4zm18 18h-4v4h-4v-4h-4v-4h4v-4h4v4h4v4z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+        // SINGLE LINES - 10 examples with single layer patterns (using $line variable format)
+        &.single-lines li {
+            border: none;
 
-// @mixin cross-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ecross-c%3C/title%3E%3Cpath d='M12 9H9v3H3V9H0V3h3V0h6v3h3v6zm18 18h-3v3h-6v-3h-3v-6h3v-3h6v3h3v6z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+            &:nth-of-type(1) {
+                $line: (
+                    15%,
+                    24px,
+                    #E74C3C,
+                    0deg
+                ); // Vermelho coral, horizontal suave
+            @include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+            background-color: #FDF2F8;
 
+            &:before {
+                content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+            }
+        }
 
-// @mixin dots-a($size: 36px, $color: #ff8c00) {
-//   $svg-color: color-to-data-url($color);
-//   background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM0 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM36 41c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z'/%3E%3C/g%3E%3C/svg%3E");
-//   background-size: $size;
-//   background-repeat: repeat;
-// }
+        &:nth-of-type(2) {
+            $line: (
+                20%,
+                32px,
+                #3498DB,
+                15deg
+            ); // Azul vibrante, leve inclinação
+        @include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+        background-color: #EBF8FF;
 
-// @mixin dots-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-b%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 26c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM0 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 8c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zM36 44c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z'/%3E%3C/g%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
-
-// @mixin dots-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Edots-c%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M18 29c-6.1 0-11-4.9-11-11S11.9 7 18 7s11 4.9 11 11-4.9 11-11 11zM0 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S11-6.1 11 0 6.1 11 0 11zM0 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11S6.1 47 0 47zM36 11c-6.1 0-11-4.9-11-11s4.9-11 11-11S47-6.1 47 0s-4.9 11-11 11zM36 47c-6.1 0-11-4.9-11-11s4.9-11 11-11 11 4.9 11 11-4.9 11-11 11z'/%3E%3C/g%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
-
-// @mixin grid-a($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M6 0v6H0V0z'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
-
-// @mixin grid-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-b%3C/title%3E%3Crect fill='#{$svg-color}' fill-rule='nonzero' transform='rotate(90 3 3)' width='6' height='6' rx='3'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
-
-// @mixin grid-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Egrid-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M4.243 0l4.242 4.243-4.242 4.243L0 4.243z'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
-
-@mixin lines($args...) {
-    // Verifica se o primeiro argumento é uma lista (layer) ou valor simples
-    $first-arg: nth($args, 1);
-    $is-multi-layer: false;
-
-    // Se o primeiro argumento é uma lista de 4+ elementos, é multi-layer
-    @if type-of($first-arg) == list and length($first-arg) >= 4 {
-        $is-multi-layer: true;
+        &:before {
+            content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+        }
     }
 
-    @if $is-multi-layer {
-        // Multi-layer mode
-        $background-images: ();
-        $background-sizes: ();
-        $background-positions: ();
-        $counter: 1;
+    &:nth-of-type(3) {
+        $line: (
+            25%,
+            28px,
+            #2ECC71,
+            45deg
+        ); // Verde esmeralda, diagonal clássica
+    @include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+    background-color: #F0FDF4;
 
-        @each $layer in $args {
-            $thickness: nth($layer, 1);
-            $size: nth($layer, 2);
-            $color: nth($layer, 3);
-            $angle: nth($layer, 4);
-            $svg-size: if(length($layer) > 4, nth($layer, 5), 500px);
-
-            $svg-color: color-to-data-url($color);
-            $height: $size * $thickness / 100%;
-            $angle-value: if($angle == 0deg, 0, str-slice(#{$angle}, 1, str-length(#{$angle}) - 3));
-            $svg-size-value: if($svg-size == 500px, 500, str-slice(#{$svg-size}, 1, str-length(#{$svg-size}) - 2));
-            $center: $svg-size-value / 2;
-
-            $pattern-id: 'lines-pattern-#{$counter}';
-            $svg: url("data:image/svg+xml,%3Csvg width='#{$svg-size-value}' height='#{$svg-size-value}' viewBox='0 0 #{$svg-size-value} #{$svg-size-value}' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='#{$pattern-id}' width='#{$size}' height='#{$size}' patternUnits='userSpaceOnUse'%3E%3Crect width='#{$size}' height='#{$height}' fill='#{$svg-color}'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23#{$pattern-id})' transform='rotate(#{$angle-value} #{$center} #{$center})'/%3E%3C/svg%3E");
-
-            $background-images: append($background-images, $svg, comma);
-            $background-sizes: append($background-sizes, $svg-size $svg-size, comma);
-            $background-positions: append($background-positions, center center, comma);
-
-            $counter: $counter + 1;
-        }        // Usa propriedades separadas que funcionam
-        background-image: $background-images;
-        background-size: $background-sizes;
-        background-position: $background-positions;
-    }
-    @else {
-        // Single layer mode - argumentos simples
-        $thickness: if(length($args) > 0, nth($args, 1), 10%);
-        $size: if(length($args) > 1, nth($args, 2), 36px);
-        $color: if(length($args) > 2, nth($args, 3), #ff8c00);
-        $angle: if(length($args) > 3, nth($args, 4), 0deg);
-        $svg-size: if(length($args) > 4, nth($args, 5), 500px);
-
-        $svg-color: color-to-data-url($color);
-        $height: $size * $thickness / 100%;
-        $angle-value: if($angle == 0deg, 0, str-slice(#{$angle}, 1, str-length(#{$angle}) - 3));
-        $svg-size-value: if($svg-size == 500px, 500, str-slice(#{$svg-size}, 1, str-length(#{$svg-size}) - 2));
-        $center: $svg-size-value / 2;
-
-        background-image: url("data:image/svg+xml,%3Csvg width='#{$svg-size-value}' height='#{$svg-size-value}' viewBox='0 0 #{$svg-size-value} #{$svg-size-value}' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='lines-pattern' width='#{$size}' height='#{$size}' patternUnits='userSpaceOnUse'%3E%3Crect width='#{$size}' height='#{$height}' fill='#{$svg-color}'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23lines-pattern)' transform='rotate(#{$angle-value} #{$center} #{$center})'/%3E%3C/svg%3E");
-        background-size: $svg-size $svg-size;
-        background-position: center center;
+    &:before {
+        content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
     }
 }
-// @mixin lines-down-a($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M36.1 0H34l2.1 2.1zM0 34v2.1h2.1z'/%3E%3Cpath d='M0 34v2.1h2.1zM36 33.9V36h-2.1L0 2.1V0h2.1z'/%3E%3C/g%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
+
+&:nth-of-type(4) {
+    $line: (
+        18%,
+        36px,
+        #F39C12,
+        90deg
+    ); // Laranja dourado, vertical
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FFFBEB;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(5) {
+    $line: (
+        12%,
+        20px,
+        #9B59B6,
+        135deg
+    ); // Roxo ametista, diagonal inversa
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FAF5FF;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(6) {
+    $line: (
+        22%,
+        40px,
+        #1ABC9C,
+        30deg
+    ); // Turquesa, inclinação suave
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #F0FDFA;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(7) {
+    $line: (
+        30%,
+        44px,
+        #E67E22,
+        60deg
+    ); // Laranja queimado, diagonal acentuada
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FFF7ED;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(8) {
+    $line: (
+        16%,
+        26px,
+        #8E44AD,
+        120deg
+    ); // Roxo escuro, diagonal obtusa
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #F3E8FF;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(9) {
+    $line: (
+        28%,
+        38px,
+        #27AE60,
+        180deg
+    ); // Verde floresta, horizontal invertido
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #ECFDF5;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(10) {
+    $line: (
+        14%,
+        30px,
+        #C0392B,
+        270deg
+    ); // Vermelho tijolo, vertical invertido
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FEF2F2;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+}
+
+// MULTI LINES 2 LAYERS - 10 examples with dual patterns
+&.multi-lines-2 li {
+    border: none;
+
+    &:nth-of-type(1) {
+        // Classic grid
+        $h: (
+            8%,
+            30px,
+            rgba(52, 152, 219, 0.6),
+            0deg
+        );
+    $v: (
+        8%,
+        30px,
+        rgba(52, 152, 219, 0.6),
+        90deg
+    );
+@include lines($h, $v);
+background-color: #EBF8FF;
+
+&:before {
+    content: "grid: horizontal + vertical";
+}
+}
+
+&:nth-of-type(2) {
+    // Diagonal cross
+    $d1: (
+        12%,
+        25px,
+        rgba(231, 76, 60, 0.5),
+        45deg
+    );
+$d2: (
+    12%,
+    25px,
+    rgba(231, 76, 60, 0.5),
+    135deg
+);
+@include lines($d1, $d2);
+background-color: #FDF2F8;
+
+&:before {
+    content: "cross: 45° + 135°";
+}
+}
+
+&:nth-of-type(3) {
+    // Dense vs sparse
+    $thick: (
+        40%,
+        60px,
+        rgba(46, 204, 113, 0.3),
+        30deg
+    );
+$thin: (
+    2%,
+    15px,
+    rgba(46, 204, 113, 0.8),
+    30deg
+);
+@include lines($thick, $thin);
+background-color: #F0FDF4;
+
+&:before {
+    content: "density: thick + thin";
+}
+}
+
+&:nth-of-type(4) {
+    // Perpendicular angles
+    $a1: (
+        15%,
+        40px,
+        rgba(155, 89, 182, 0.6),
+        20deg
+    );
+$a2: (
+    15%,
+    40px,
+    rgba(241, 196, 15, 0.6),
+    110deg
+);
+@include lines($a1, $a2);
+background-color: #FAF5FF;
+
+&:before {
+    content: "perpendicular: 20° + 110°";
+}
+}
+
+&:nth-of-type(5) {
+    // Size contrast
+    $large: (
+        20%,
+        100px,
+        rgba(230, 126, 34, 0.4),
+        60deg
+    );
+$small: (
+    20%,
+    20px,
+    rgba(230, 126, 34, 0.7),
+    60deg
+);
+@include lines($large, $small);
+background-color: #FFF7ED;
+
+&:before {
+    content: "sizes: large + small";
+}
+}
+
+&:nth-of-type(6) {
+    // Color contrast
+    $warm: (
+        25%,
+        35px,
+        rgba(231, 76, 60, 0.6),
+        75deg
+    );
+$cool: (
+    25%,
+    35px,
+    rgba(52, 152, 219, 0.6),
+    75deg
+);
+@include lines($warm, $cool);
+background-color: #F8FAFC;
+
+&:before {
+    content: "colors: warm + cool";
+}
+}
+
+&:nth-of-type(7) {
+    // Offset parallel
+    $p1: (
+        10%,
+        50px,
+        rgba(39, 174, 96, 0.5),
+        0deg
+    );
+$p2: (
+    10%,
+    25px,
+    rgba(39, 174, 96, 0.8),
+    0deg
+);
+@include lines($p1, $p2);
+background-color: #ECFDF5;
+
+&:before {
+    content: "parallel: different spacing";
+}
+}
+
+&:nth-of-type(8) {
+    // Sharp angle clash
+    $s1: (
+        30%,
+        30px,
+        rgba(142, 68, 173, 0.5),
+        10deg
+    );
+$s2: (
+    30%,
+    30px,
+    rgba(241, 196, 15, 0.5),
+    80deg
+);
+@include lines($s1, $s2);
+background-color: #FFFBF0;
+
+&:before {
+    content: "clash: 10° + 80°";
+}
+}
+
+&:nth-of-type(9) {
+    // Thickness contrast
+    $fat: (
+        70%,
+        40px,
+        rgba(26, 188, 156, 0.3),
+        90deg
+    );
+$skinny: (
+    3%,
+    40px,
+    rgba(26, 188, 156, 0.9),
+    90deg
+);
+@include lines($fat, $skinny);
+background-color: #F0FDFA;
+
+&:before {
+    content: "thickness: 70% + 3%";
+}
+}
+
+&:nth-of-type(10) {
+    // Chaotic angles
+    $c1: (
+        20%,
+        45px,
+        rgba(192, 57, 43, 0.6),
+        37deg
+    );
+$c2: (
+    20%,
+    45px,
+    rgba(52, 152, 219, 0.6),
+    143deg
+);
+@include lines($c1, $c2);
+background-color: #FEF7F0;
+
+&:before {
+    content: "chaos: 37° + 143°";
+}
+}
+}
+
+// ABUSIVE LINES 3+ LAYERS - 10 examples with maximum complexity
+&.abusive-lines li {
+    border: none;
+
+    &:nth-of-type(1) {
+        // Classic tartan
+        $t1: (
+            5%,
+            40px,
+            rgba(231, 76, 60, 0.4),
+            45deg
+        );
+    $t2: (
+        5%,
+        40px,
+        rgba(52, 152, 219, 0.4),
+        90deg
+    );
+$t3: (
+    5%,
+    40px,
+    rgba(241, 196, 15, 0.4),
+    135deg
+);
+@include lines($t1, $t2, $t3);
+background-color: #FFFBF0;
+
+&:before {
+    content: "tartan: 45° + 90° + 135°";
+}
+}
+
+&:nth-of-type(2) {
+    // Four cardinal directions
+    $n: (
+        8%,
+        30px,
+        rgba(231, 76, 60, 0.3),
+        0deg
+    );
+$e: (
+    8%,
+    30px,
+    rgba(52, 152, 219, 0.3),
+    90deg
+);
+$s: (
+    8%,
+    30px,
+    rgba(46, 204, 113, 0.3),
+    180deg
+);
+$w: (
+    8%,
+    30px,
+    rgba(241, 196, 15, 0.3),
+    270deg
+);
+@include lines($n, $e, $s, $w);
+background-color: #F8FAFC;
+
+&:before {
+    content: "cardinal: N+E+S+W";
+}
+}
+
+&:nth-of-type(3) {
+    // Density stack
+    $xl: (
+        60%,
+        80px,
+        rgba(155, 89, 182, 0.2),
+        30deg
+    );
+$l: (
+    30%,
+    40px,
+    rgba(155, 89, 182, 0.4),
+    30deg
+);
+$m: (
+    15%,
+    20px,
+    rgba(155, 89, 182, 0.6),
+    30deg
+);
+$s: (
+    5%,
+    10px,
+    rgba(155, 89, 182, 0.8),
+    30deg
+);
+@include lines($xl, $l, $m, $s);
+background-color: #FAF5FF;
+
+&:before {
+    content: "density: XL+L+M+S";
+}
+}
+
+&:nth-of-type(4) {
+    // Angle chaos
+    $a1: (
+        25%,
+        25px,
+        rgba(230, 126, 34, 0.4),
+        17deg
+    );
+$a2: (
+    25%,
+    25px,
+    rgba(46, 204, 113, 0.4),
+    73deg
+);
+$a3: (
+    25%,
+    25px,
+    rgba(192, 57, 43, 0.4),
+    129deg
+);
+@include lines($a1, $a2, $a3);
+background-color: #FFF7ED;
+
+&:before {
+    content: "chaos: 17° + 73° + 129°";
+}
+}
+
+&:nth-of-type(5) {
+    // Rainbow stack
+    $r: (
+        15%,
+        50px,
+        rgba(231, 76, 60, 0.3),
+        60deg
+    );
+$g: (
+    15%,
+    50px,
+    rgba(46, 204, 113, 0.3),
+    60deg
+);
+$b: (
+    15%,
+    50px,
+    rgba(52, 152, 219, 0.3),
+    60deg
+);
+$y: (
+    15%,
+    50px,
+    rgba(241, 196, 15, 0.3),
+    60deg
+);
+@include lines($r, $g, $b, $y);
+background-color: #FEFEFE;
+
+&:before {
+    content: "rainbow: R+G+B+Y";
+}
+}
+
+&:nth-of-type(6) {
+    // Size explosion
+    $tiny: (
+        3%,
+        8px,
+        rgba(142, 68, 173, 0.9),
+        90deg
+    );
+$small: (
+    10%,
+    24px,
+    rgba(142, 68, 173, 0.6),
+    90deg
+);
+$large: (
+    40%,
+    120px,
+    rgba(142, 68, 173, 0.2),
+    90deg
+);
+@include lines($tiny, $small, $large);
+background-color: #F3E8FF;
+
+&:before {
+    content: "explosion: 8px + 24px + 120px";
+}
+}
+
+&:nth-of-type(7) {
+    // Cross multiplication
+    $h1: (
+        12%,
+        20px,
+        rgba(26, 188, 156, 0.4),
+        0deg
+    );
+$h2: (
+    12%,
+    40px,
+    rgba(26, 188, 156, 0.3),
+    0deg
+);
+$v1: (
+    12%,
+    20px,
+    rgba(26, 188, 156, 0.4),
+    90deg
+);
+$v2: (
+    12%,
+    40px,
+    rgba(26, 188, 156, 0.3),
+    90deg
+);
+@include lines($h1, $h2, $v1, $v2);
+background-color: #F0FDFA;
+
+&:before {
+    content: "cross-multi: H1+H2+V1+V2";
+}
+}
+
+&:nth-of-type(8) {
+    // Diagonal madness
+    $d1: (
+        20%,
+        35px,
+        rgba(231, 76, 60, 0.3),
+        22deg
+    );
+$d2: (
+    20%,
+    35px,
+    rgba(52, 152, 219, 0.3),
+    67deg
+);
+$d3: (
+    20%,
+    35px,
+    rgba(46, 204, 113, 0.3),
+    112deg
+);
+$d4: (
+    20%,
+    35px,
+    rgba(241, 196, 15, 0.3),
+    157deg
+);
+@include lines($d1, $d2, $d3, $d4);
+background-color: #FFFBF0;
+
+&:before {
+    content: "madness: 22°+67°+112°+157°";
+}
+}
+
+&:nth-of-type(9) {
+    // Thickness chaos
+    $ultra: (
+        90%,
+        30px,
+        rgba(192, 57, 43, 0.2),
+        45deg
+    );
+$thick: (
+    50%,
+    30px,
+    rgba(192, 57, 43, 0.3),
+    45deg
+);
+$thin: (
+    10%,
+    30px,
+    rgba(192, 57, 43, 0.6),
+    45deg
+);
+$hair: (
+    2%,
+    30px,
+    rgba(192, 57, 43, 0.9),
+    45deg
+);
+@include lines($ultra, $thick, $thin, $hair);
+background-color: #FEF2F2;
+
+&:before {
+    content: "thickness: 90%+50%+10%+2%";
+}
+}
+
+&:nth-of-type(10) {
+    // Maximum abuse - everything clashing
+    $clash1: (
+        30%,
+        60px,
+        rgba(231, 76, 60, 0.25),
+        13deg
+    );
+$clash2: (
+    15%,
+    30px,
+    rgba(52, 152, 219, 0.4),
+    59deg
+);
+$clash3: (
+    45%,
+    90px,
+    rgba(46, 204, 113, 0.2),
+    104deg
+);
+$clash4: (
+    7%,
+    15px,
+    rgba(241, 196, 15, 0.7),
+    149deg
+);
+@include lines($clash1, $clash2, $clash3, $clash4);
+background-color: #F8F9FA;
+
+&:before {
+    content: "MAXIMUM CHAOS";
+}
+}
+}
+
+// OLD STUFF COMMENTED OUT
+&.basic-lines li {
+    border: none; // Remove borda de debug
+
+    &:nth-of-type(1) {
+        $line: (
+            8%,
+            24px,
+            #E74C3C,
+            0deg
+        ); // Vermelho coral, horizontal
+    @include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+    background-color: #FDF2F8;
+
+    &:before {
+        content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+    }
+}
+
+&:nth-of-type(2) {
+    $line: (
+        15%,
+        28px,
+        #3498DB,
+        15deg
+    ); // Azul vibrante, diagonal suave
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #EBF8FF;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(3) {
+    $line: (
+        25%,
+        20px,
+        #2ECC71,
+        45deg
+    ); // Verde esmeralda, diagonal 45°
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #F0FDF4;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(4) {
+    $line: (
+        35%,
+        32px,
+        #F39C12,
+        90deg
+    ); // Laranja dourado, vertical
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FFFBEB;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(5) {
+    $line: (
+        45%,
+        18px,
+        #9B59B6,
+        135deg
+    ); // Roxo ametista, diagonal inversa
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FAF5FF;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(6) {
+    $line: (
+        20%,
+        36px,
+        #1ABC9C,
+        30deg
+    ); // Turquesa, diagonal suave
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #F0FDFA;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(7) {
+    $line: (
+        60%,
+        22px,
+        #E67E22,
+        60deg
+    ); // Laranja queimado, diagonal acentuada
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FFF7ED;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(8) {
+    $line: (
+        12%,
+        30px,
+        #8E44AD,
+        120deg
+    ); // Roxo escuro, diagonal reversa acentuada
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #F3E8FF;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(9) {
+    $line: (
+        80%,
+        26px,
+        #27AE60,
+        180deg
+    ); // Verde floresta, horizontal invertido
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #ECFDF5;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+
+&:nth-of-type(10) {
+    $line: (
+        90%,
+        20px,
+        #C0392B,
+        270deg
+    ); // Vermelho tijolo, vertical invertido
+@include lines(nth($line, 1), nth($line, 2), nth($line, 3), nth($line, 4));
+background-color: #FEF2F2;
+
+&:before {
+    content: "lines(#{nth($line, 1)}, #{nth($line, 2)}, #{nth($line, 3)}, #{nth($line, 4)})";
+}
+}
+}
+
+&.multi-lines li {
+    border: none; // Remove borda de debug
+
+    &:nth-of-type(1) {
+        // Horizontal + Diagonal usando UM mixin master
+        $layer1: (
+            3%,
+            20px,
+            rgba(231, 76, 60, 0.6),
+            0deg
+        );
+    $layer2: (
+        15%,
+        50px,
+        rgba(52, 152, 219, 0.4),
+        45deg
+    );
+@include lines($layer1, $layer2);
+background-color: #FEF7F0;
+
+&:before {
+    content: "lines(layer1, layer2): horizontal + diagonal";
+}
+}
+
+&:nth-of-type(2) {
+    // Grid: vertical + horizontal
+    $horizontal: (
+        8%,
+        30px,
+        rgba(46, 204, 113, 0.5),
+        0deg
+    );
+$vertical: (
+    8%,
+    30px,
+    rgba(46, 204, 113, 0.5),
+    90deg
+);
+@include lines($horizontal, $vertical);
+background-color: #F0FDF4;
+
+&:before {
+    content: "lines(horizontal, vertical): grid";
+}
+}
+
+&:nth-of-type(3) {
+    // Tartan: 3 layers
+    $layer1: (
+        5%,
+        40px,
+        rgba(241, 196, 15, 0.4),
+        45deg
+    );
+$layer2: (
+    5%,
+    40px,
+    rgba(155, 89, 182, 0.4),
+    90deg
+);
+$layer3: (
+    5%,
+    40px,
+    rgba(231, 76, 60, 0.4),
+    135deg
+);
+@include lines($layer1, $layer2, $layer3);
+background-color: #FFFBF0;
+
+&:before {
+    content: "lines(3-layers): tartan";
+}
+}
+
+&:nth-of-type(4) {
+    // Cross em 30°
+    $layer1: (
+        12%,
+        35px,
+        rgba(52, 152, 219, 0.6),
+        30deg
+    );
+$layer2: (
+    12%,
+    35px,
+    rgba(52, 152, 219, 0.6),
+    120deg
+);
+@include lines($layer1, $layer2);
+background-color: #EBF8FF;
+
+&:before {
+    content: "lines(30°, 120°): cross";
+}
+}
+
+&:nth-of-type(5) {
+    // Multi-layer custom: grosso + fino + médio
+    $thick: (
+        40%,
+        80px,
+        rgba(52, 152, 219, 0.2),
+        15deg
+    );
+$thin: (
+    2%,
+    12px,
+    rgba(231, 76, 60, 0.8),
+    15deg
+);
+$medium: (
+    10%,
+    25px,
+    rgba(46, 204, 113, 0.6),
+    15deg
+);
+@include lines($thick, $thin, $medium);
+background-color: #F8FAFC;
+
+&:before {
+    content: "lines(thick, thin, medium): density";
+}
+}
+
+&:nth-of-type(6) {
+    // Ângulos extremos - MÁXIMO teste
+    $l1: (
+        20%,
+        60px,
+        rgba(155, 89, 182, 0.4),
+        15deg
+    );
+$l2: (
+    20%,
+    60px,
+    rgba(241, 196, 15, 0.4),
+    75deg
+);
+$l3: (
+    20%,
+    60px,
+    rgba(231, 76, 60, 0.4),
+    135deg
+);
+$l4: (
+    5%,
+    20px,
+    rgba(46, 204, 113, 0.7),
+    0deg
+);
+@include lines($l1, $l2, $l3, $l4);
+background-color: #FEFCE8;
+
+&:before {
+    content: "lines(4-layers): max test";
+}
+}
+}
+
+// Comentários antigos dos outros patterns...
+
+// &.dots li {
+//     &:nth-of-type(1) {
+//         @include dots-a(20, #666);
+
+//         &:before {
+//             content: "dots-a(20, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(2) {
+//         @include dots-b(20, #666);
+
+//         &:before {
+//             content: "dots-b(20, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(3) {
+//         @include dots-c(20, #666);
+
+//         &:before {
+//             content: "dots-c(20, #666)";
+//         }
+//     }
+
+
 // }
 
-// @mixin lines-down-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-b%3C/title%3E%3Cpath d='M6.3 0H0v6.3L29.7 36H36v-6.3L6.3 0zM36 6.3L29.7 0H36v6.3zM6.3 36H0v-6.3L6.3 36z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
+// &.grid li {
+//     &:nth-of-type(1) {
+//         @include grid-a(40, #666);
+
+//         &:before {
+//             content: "grid-a(40, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(2) {
+//         @include grid-b(40, #666);
+
+//         &:before {
+//             content: "grid-b(40, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(3) {
+//         @include grid-c(40, #666);
+//         &:before {
+//             content: "grid-c(40, #666)";
+//         }
+//     }
+
+
 // }
 
-// @mixin lines-down-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-down-c%3C/title%3E%3Cpath d='M10.5 0H0v10.5L25.5 36H36V25.5L10.5 0zM0 36V25.5L10.5 36H0zm36-25.5L25.5 0H36v10.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
+// &.cross li {
+//     &:nth-of-type(1) {
+//         @include cross-a(20, #666);
+
+//         &:before {
+//             content: "cross-a(20, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(2) {
+//         @include cross-b(20, #666);
+
+//         &:before {
+//             content: "cross-b(20, #666)";
+//         }
+//     }
+
+//     &:nth-of-type(3) {
+//         @include cross-c(20, #666);
+
+//         &:before {
+//             content: "cross-c(20, #666)";
+//         }
+//     }
+
+
 // }
 
-// @mixin lines-up-a($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-a%3C/title%3E%3Cg fill='#{$svg-color}' fill-rule='nonzero'%3E%3Cpath d='M0 0h2.1l-2.1 2.1zM36 2.1V0h-2.1z'/%3E%3Cpath d='M36 2.1V0h-2.1zM0 2.1v-2.1h2.1L36 33.9V36h-2.1z'/%3E%3C/g%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
 
-// @mixin lines-up-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-b%3C/title%3E%3Cpath d='M6.3 36H0v-6.3L29.7 0H36v6.3L6.3 36zM36 29.7L29.7 36H36v-6.3zM6.3 0H0v6.3L6.3 0z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+li {
+    width: 100%;
+    height: 250px;
+    background-repeat: repeat;
+    border: none; // Remove bordas dos tiles
+    margin: 0; // Remove margens
+    padding: 0; // Remove padding
+    position: relative; // Para posicionar os labels
+    box-sizing: border-box; // Inclui border no tamanho
+    transition: all 0.3s ease; // Suaviza a transição ao aplicar hover
 
-// @mixin lines-up-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-c%3C/title%3E%3Cpath d='M10.5 36H0V25.5L25.5 0H36v10.5L10.5 36zM0 0v10.5L10.5 0H0zm36 25.5L25.5 36H36V25.5z' fill='#{$svg-color}' fill-rule='nonzero'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+    &:before {
+        background-color: white;
+        color: #333;
+        padding: 4px 15px;
+        margin: -10px 10px 0 10px;
+        position: absolute;
+        font-size: 12px;
+        font-family: monospace;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    }
 
-// @mixin lines-vert-a($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-a%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M0 0v36h3.6V0z'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+}
 
-// @mixin lines-vert-b($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-b%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M10.4.4v36H-.4V.4z'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
 
-// @mixin lines-vert-c($size: 36px, $color: #ff8c00) {
-//     $svg-color: color-to-data-url($color);
-//     background-image: url("data:image/svg+xml,%3Csvg width='#{$size}' height='#{$size}' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-vert-c%3C/title%3E%3Cpath fill='#{$svg-color}' fill-rule='nonzero' d='M18 0v36H0V0z'/%3E%3C/svg%3E");
-//     background-size: $size;
-//     background-repeat: repeat;
-// }
+}
+}
