@@ -24,27 +24,19 @@
           
         
       <item>
-        <title>Vector tiles</title>
-        <link>https://***REMOVED***.nyc/vectortiles/</link>
-        <guid>https://***REMOVED***.nyc/vectortiles/</guid>
+        <title>CSS tile patterns</title>
+        <link>https://***REMOVED***.nyc/csstile/</link>
+        <guid>https://***REMOVED***.nyc/csstile/</guid>
         <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
-          <p>A SCSS mixin for vector tiles. just add [vectortiles.scss](https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/assets/css/vendor/vectortiles.scss) to your pipeline and follow instructions.
-
-### next steps
-
-1. use other patterns (circles, crosses, and maybe more organic shapes)
-1. what about color filters?
-1. better presentation (organic shapes)
-1. generalize mixin (maybe we can have just ONE mixin, with type of pattern using preset or create your own)
-1. back to CSS? less dependencies
+          <p>A gradient-based CSS pattern mixin set (formerly vectortiles). Add [csstile.scss](https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/assets/css/vendor/csstile.scss) to your pipeline and follow instructions.
 
 ### digital artist?
 
 Are you interested in creative code explorations? [Join us on
 signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
 </p>
-          <a href="https://***REMOVED***.nyc/vectortiles/"><img src="https://***REMOVED***.nyc/images/covers/vectortiles.jpg" alt="Vector tiles" /></a>
+          <a href="https://***REMOVED***.nyc/csstile/"><img src="https://***REMOVED***.nyc/images/covers/csstile.jpg" alt="CSS tile patterns" /></a>
         ]]></description>
       </item>
       

@@ -72,8 +72,8 @@ microlink:
   link: "https://microlink.io"
   description: "Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more"
 
-vectortiles:
+csstile:
   type: tags
-  title: "vector tiles"
-  description: "An SCSS mixin library for generating SVG-based line patterns and vector backgrounds"
-  link: "https://***REMOVED***.nyc/vectortiles"
+  title: "css tile patterns"
+  description: "Gradient-based CSS pattern mixins (lines, dots) formerly named vectortiles"
+  link: "https://***REMOVED***.nyc/csstile"
