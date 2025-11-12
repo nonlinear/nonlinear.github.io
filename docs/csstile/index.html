@@ -3,7 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js gallery-scroll ongoing single
+    class="single no-js csstile live single
     "
 >
 
@@ -11,7 +11,7 @@
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>gallery scroll</title>
+  <title>CSS tile patterns</title>
   <meta content="Nicholas Frota" name="author" />
 
   
@@ -35,9 +35,18 @@
   
   
     
+    
+    
+    
   
-  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
-  <meta property="og:description" content="a way to control videos by scrolling page" />
+  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/csstile.jpg" />
+  <meta property="og:description" content="A gradient-based CSS pattern mixin set (formerly vectortiles). Add [csstile.scss](https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/assets/css/vendor/csstile.scss) to your pipeline and follow instructions.
+
+### digital artist?
+
+Are you interested in creative code explorations? [Join us on
+signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
+" />
 
 
 </head>
@@ -49,68 +58,90 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <div class="gallery-scroll">
-  <canvas id="gallery-scroll" />
-</div>
-
-<script>
-  const html = document.documentElement;
-const canvas = document.getElementById("gallery-scroll");
-const context = canvas.getContext("2d");
-
-const frameCount = 148;
-const currentFrame = index => (
-  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-)
-
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
+                        
+<style>
+  .credits-open {
+    text-decoration: none !important;
   }
-};
+</style>
+<ul class="dots single-dots">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
 
-const img = new Image()
-img.src = currentFrame(1);
-canvas.width=1158;
-canvas.height=770;
-img.onload=function(){
-  context.drawImage(img, 0, 0);
-}
+</ul>
+<ul class="dots multi-dots">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<ul class="lines single-lines">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<ul class="lines multi-lines">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<ul class="lines abusive-lines">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 
-const updateImage = index => {
-  img.src = currentFrame(index);
-  context.drawImage(img, 0, 0);
-}
 
-window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(
-    frameCount - 1,
-    Math.ceil(scrollFraction * frameCount)
-  );
-  
-  requestAnimationFrame(() => updateImage(frameIndex + 1))
-});
 
-preloadImages()
-</script>
+
+
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
             </article>
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>gallery scroll</h2>
+  <h2>CSS tile patterns</h2>
   <p class="date">
        
-      status: live 2 years ago
+      status: live 6 days ago
       
     </p>
-    <div class="description">a way to control videos by scrolling page</div>
+    <div class="description"><p>A gradient-based CSS pattern mixin set (formerly vectortiles). Add <a href="https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/assets/css/vendor/csstile.scss">csstile.scss</a> to your pipeline and follow instructions.</p>
+<h3 id="digital-artist">digital artist?</h3>
+<p>Are you interested in creative code explorations? <a href="https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81">Join us on
+signal</a></p>
+</div>
 
+    
+
+    
+    
     
 
     
@@ -120,7 +151,8 @@ preloadImages()
     
 
     
-
+    
+    
     
     
     
@@ -159,6 +191,19 @@ preloadImages()
     
 
     <section class="tags">
+      
+      <a class="tooltip" data-tooltip-id="csstile">css tile patterns</a>
+
+      <div class="popover" id="csstile" style="display: none">
+        
+        <p>Gradient-based CSS pattern mixins (lines, dots) formerly named vectortiles</p>
+
+        
+
+        
+        <a href="https://***REMOVED***.nyc/csstile" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
       
       <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
 
@@ -217,7 +262,7 @@ preloadImages()
   <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/gallery-scroll\/",
+        text: "https:\/\/***REMOVED***.nyc\/csstile\/",
         width: 100,
         height: 100,
         colorDark: "#000000",

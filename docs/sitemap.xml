@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://***REMOVED***.nyc/csstile/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.nyc/tags/csstile/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://***REMOVED***.nyc/tags/</loc>
-    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/vectortiles/</loc>
-    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://***REMOVED***.nyc/tags/vectortiles/</loc>
     <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://***REMOVED***.nyc/volume/</loc>
