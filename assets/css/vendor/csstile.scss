@@ -1,0 +1,58 @@
+/*
+ * CSSTILE.SCSS - CSS Pattern Library (gradients-based)
+ * =================================================
+ * Formerly vectortiles.scss (renamed for accuracy: purely CSS patterns)
+ */
+
+// Contents migrated from the previous vectortiles.scss
+
+// DOTS mixin
+@mixin dots($density, $size, $color, $spacing) {
+	background-image: radial-gradient(circle, #{$color} #{$size}, transparent #{$size});
+	background-size: $spacing $spacing;
+	background-repeat: repeat;
+}
+
+// LINES mixin (single or multi-layer)
+@mixin lines($args...) {
+	$first-arg: nth($args, 1);
+	$is-multi-layer: false;
+
+	@if type-of($first-arg) == list and length($first-arg) >= 4 {
+		$is-multi-layer: true;
+	}
+
+	@if $is-multi-layer {
+		$images: ();
+		@each $layer in $args {
+			$thickness: nth($layer, 1);
+			$size: nth($layer, 2);
+			$color: nth($layer, 3);
+			$angle: nth($layer, 4);
+			$height: $size * $thickness / 100%;
+			$grad: repeating-linear-gradient(
+				$angle,
+				#{$color} 0,
+				#{$color} #{$height},
+				transparent #{$height},
+				transparent #{$size}
+			);
+			$images: append($images, $grad, comma);
+		}
+		background-image: $images;
+	}
+	@else {
+		$thickness: if(length($args) > 0, nth($args, 1), 10%);
+		$size: if(length($args) > 1, nth($args, 2), 36px);
+		$color: if(length($args) > 2, nth($args, 3), #ff8c00);
+		$angle: if(length($args) > 3, nth($args, 4), 0deg);
+		$height: $size * $thickness / 100%;
+		background-image: repeating-linear-gradient(
+			$angle,
+			#{$color} 0,
+			#{$color} #{$height},
+			transparent #{$height},
+			transparent #{$size}
+		);
+	}
+}
