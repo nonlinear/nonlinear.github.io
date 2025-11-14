@@ -4,39 +4,53 @@
       "path": "./"
     }
   ],
-  "settings": {
-    // Set the title bar format
-    "window.title": "***REMOVED***",
-
-    // Hugo / project exclusions
-    "search.exclude": {
-      "**/docs/**": true,
-      "**/internal/**": true,
-      "**/resources/**": true
-    }
-  },
   "tasks": {
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Run hugo locally",
+        "label": "Run hugo",
         "type": "shell",
-        "command": "hugo serve -D && open http://localhost:1313",
-        "group": "build",
-        "isBackground": true,
-        "problemMatcher": []
+        "command": "hugo serve -D",
+        "group": "build"
       },
       {
-        "label": "Commit changes",
+        "label": "Kill hugo",
         "type": "shell",
-        "command": "hugo && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
-        "group": "build",
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared"
-        }
+        "command": "pkill -f 'hugo serve'",
+        "group": "build"
+      },
+      {
+          "label": "Commit changes",
+          "type": "shell",
+          "command": "hugo && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
+          "group": "build",
+          "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "shared"
+          }
+        },
+      {
+        "label": "Rename comics",
+        "type": "shell",
+        "command": "python3 .github/scripts/Rename comics.py",
+        "group": "build"
+      },
+      {
+        "label": "Sync settings",
+        "type": "shell",
+        "command": "python3 .github/scripts/Sync settings.py",
+        "group": "build"
+      },
+      {
+        "label": "Preview hugo",
+        "type": "shell",
+        "command": "open",
+        "args": [
+          "http://localhost:1313/${fileBasenameNoExtension}"
+        ],
+        "group": "build"
       }
     ]
   }
