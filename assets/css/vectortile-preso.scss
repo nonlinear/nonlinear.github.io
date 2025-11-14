@@ -1,0 +1,69 @@
+.vectortile {
+  /* Aplica o background no container do slide para garantir pintura do background.
+     Background em elementos SVG de shape (ex.: path) não é pintado pelos browsers. */
+  #slide01 {
+    @include vectortile("dot");
+  }
+
+  #slide01 svg {
+      #blob1 {
+       @include vectortile;
+      }
+
+      #blob2 {
+        stroke: green;
+        stroke-width: 4;
+      }
+
+      #blob3 {
+        stroke: yellow;
+        stroke-width: 4;
+      }
+
+      #blob4 {
+        stroke: brown;
+        stroke-width: 4;
+      }
+
+      #blob5 {
+        stroke: black;
+        stroke-width: 4;
+      }
+
+      #blob6 {
+        stroke: grey;
+        stroke-width: 4;
+      }
+    }
+            #slide02 svg {
+              #blob1 {
+                stroke: #ff0000;
+                stroke-width: 4;
+              }
+
+              #blob2 {
+                stroke: green;
+                stroke-width: 4;
+              }
+
+              #blob3 {
+                stroke: yellow;
+                stroke-width: 4;
+              }
+
+              #blob4 {
+                stroke: brown;
+                stroke-width: 4;
+              }
+
+              #blob5 {
+                stroke: black;
+                stroke-width: 4;
+              }
+
+              #blob6 {
+                stroke: grey;
+                stroke-width: 4;
+              }
+            }
+}

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://***REMOVED***.nyc/vectortile/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://***REMOVED***.nyc/csstile/</loc>
     <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -118,6 +121,8 @@
   </url><url>
     <loc>https://***REMOVED***.nyc/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://***REMOVED***.nyc/vectortile-example/</loc>
   </url><url>
     <loc>https://***REMOVED***.nyc/categories/</loc>
   </url>

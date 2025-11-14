@@ -14,5 +14,30 @@
       "**/internal/**": true,
       "**/resources/**": true
     }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run hugo locally",
+        "type": "shell",
+        "command": "hugo serve -D && open http://localhost:1313",
+        "group": "build",
+        "isBackground": true,
+        "problemMatcher": []
+      },
+      {
+        "label": "Commit changes",
+        "type": "shell",
+        "command": "hugo && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      }
+    ]
   }
 }
