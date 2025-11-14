@@ -1,4 +1,8 @@
 {
+    "settings": {
+    // Set the title bar format
+    "window.title": "📓 ***REMOVED***"
+  },
   "folders": [
     {
       "path": "./"
@@ -34,13 +38,13 @@
       {
         "label": "Rename comics",
         "type": "shell",
-        "command": "python3 .github/scripts/Rename comics.py",
+        "command": "python3 .github/scripts/Rename_comics.py",
         "group": "build"
       },
       {
         "label": "Sync settings",
         "type": "shell",
-        "command": "python3 .github/scripts/Sync settings.py",
+        "command": "python3 .github/scripts/Sync_settings.py",
         "group": "build"
       },
       {
