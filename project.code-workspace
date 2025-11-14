@@ -44,7 +44,16 @@
         "group": "build"
       },
       {
-        "label": "Preview hugo",
+        "label": "Open hugo",
+        "type": "shell",
+        "command": "open",
+        "args": [
+          "http://localhost:1313/"
+        ],
+        "group": "build"
+      },
+      {
+        "label": "Preview on hugo",
         "type": "shell",
         "command": "open",
         "args": [
