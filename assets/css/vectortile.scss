@@ -1,0 +1,8 @@
+
+@mixin vectortile(
+  $id: "xxxeee",
+  $file: "dot",
+  $path: "/images/vectortile/"
+) {
+  content: "<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><defs><pattern id='#{$id}' patternUnits='userSpaceOnUse' width='100' height='100'><image href='#{$path}#{$file}.svg' width='100' height='100' /></pattern></defs></svg>";
+}
