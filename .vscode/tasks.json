@@ -1,0 +1,97 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Kill hugo",
+			"type": "shell",
+			"command": "pkill -f 'hugo serve'",
+			"group": "build"
+		},
+		{
+		"label": "On load",
+		"type": "shell",
+		"command": "zsh .github/scripts/Start_hugo.sh",
+		"group": "build",
+		"runOptions": {
+			"runOn": "folderOpen"
+		}
+	},
+		{
+			"label": "Run hugo",
+			"type": "shell",
+			"command": "hugo serve -D",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "custom",
+				"pattern": {
+					"regexp": "."
+				},
+				"background": {
+					"beginsPattern": ".*",
+					"endsPattern": ".*"
+				}
+			}
+		},
+		{
+			"label": "Wait",
+			"type": "shell",
+			"command": "sleep 3",
+			"group": "build"
+		},
+		{
+			"label": "Open hugo",
+			"type": "shell",
+			"command": "open http://localhost:1313/",
+			"group": "build"
+		},
+		{
+			"label": "Run hugo",
+			"type": "shell",
+			"command": "hugo serve -D",
+			"group": "build"
+		},
+		{
+			"label": "Kill hugo",
+			"type": "shell",
+			"command": "pkill -f 'hugo serve'",
+			"group": "build"
+		},
+		{
+			"label": "Commit changes",
+			"type": "shell",
+			"command": "hugo && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Sync settings",
+			"type": "shell",
+			"command": "python3 .github/scripts/Sync_settings.py",
+			"group": "build"
+		},
+		{
+			"label": "Open hugo",
+			"type": "shell",
+			"command": "open",
+			"args": [
+				"http://localhost:1313/"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Preview on hugo",
+			"type": "shell",
+			"command": "open",
+			"args": [
+				"http://localhost:1313/${fileBasenameNoExtension}"
+			],
+			"group": "build"
+		}
+	]
+}
