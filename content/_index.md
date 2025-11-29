@@ -2,11 +2,13 @@
 title: Nonlinear.nyc
 status: live
 date: 2025-07-06
+elasticScroll: true
 class:
-    - index
+  - index
 fonts:
-    - Space-Grotesk
+  - Space-Grotesk
 ---
+
 # Nonlinear
 
 {{< ascii >}}

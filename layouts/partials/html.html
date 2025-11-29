@@ -1,4 +1,4 @@
-{{/* 
+{{/*
     Class logic for <html> element:
     - Always includes "single" and "no-js".
     - Adds the base file name as a class if available (e.g. the post's slug).
@@ -15,7 +15,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.class }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}{{ if .Section }} {{ .Section }}{{ end }}{{ if .IsPage }} single{{ else }} list{{ end }}
+    class="single no-js{{ with .File }} {{ .BaseFileName }}{{ end }}{{ with .Params.class }}{{ range . }} {{ . }}{{ end }}{{ end }}{{ if .Params.status }} {{ .Params.status }}{{ end }}{{ if .Section }} {{ .Section }}{{ end }}{{ if .IsPage }} single{{ else }} list{{ end }}{{ if .Params.elasticScroll }} elastic-scroll{{ end }}
     {{ with .Params.style }}
       {{ range . }}
         {{ $importLine := printf "@import \"%s\";" . }}

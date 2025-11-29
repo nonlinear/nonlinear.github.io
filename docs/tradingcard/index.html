@@ -10,7 +10,16 @@
     <head>
   
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#000000" />
+
   <title>Trading Card effect</title>
   <meta content="Nicholas Frota" name="author" />
 
@@ -19,7 +28,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.02063fa381572e951ad9667fc7629bf535d6a5d8acce33851bb51c97ce41b752.css" />
+  <link rel="stylesheet" href="/css/main.755e3d5ebd3fc935adf291d67bb1e59edde3ead0d04c064f672411801f266986.css" />
 
   
 
@@ -40,10 +49,19 @@
   <meta property="og:description" content="Trading card effect with parallax/gyroscope &amp; holographic shine
 
 ## TODO
-- [ ] Test current implementation (hugo serve -D)
+- [x] Test current implementation (hugo serve -D)
+- [x] Test on iPhone via local network
+- [ ] Add iOS fullscreen/standalone meta tags
+  - [ ] Meta tags pra fullscreen/standalone (sem browser bars)
+  - [ ] Status bar styling (black-translucent)
+  - [ ] Disable elastic scroll (prevent bounce)
+  - [ ] Viewport lock (prevent zoom/pan)
+  - [ ] Home screen icon (se adicionar à tela inicial)
+  - [ ] Prevent text selection (opcional, pra parecer mais app)
+  - [ ] Disable callouts/touch highlights (iOS)
 - [ ] Add gyroscope permission UI for iOS 13&#43;
 - [ ] Make shine effect follow movement direction
-- [ ] Test on mobile device (Android &amp; iOS)
+- [ ] Test gyroscope on actual device
 - [ ] Fine-tune sensitivity (movement, rotation, shadow)
 - [ ] Create SVG card content system (reusable template)
 - [ ] Add holographic shine masking (specific areas)
@@ -69,7 +87,7 @@
       --mouse-x: 0;
       --mouse-y: 0;
       --shadow-x: 0;
-      --shadow-y: 20;
+      --shadow-y: 40;
     }
 
     body {
@@ -342,10 +360,22 @@
     <div class="description"><p>Trading card effect with parallax/gyroscope &amp; holographic shine</p>
 <h2 id="todo">TODO</h2>
 <ul>
-<li><input disabled="" type="checkbox"> Test current implementation (hugo serve -D)</li>
+<li><input checked="" disabled="" type="checkbox"> Test current implementation (hugo serve -D)</li>
+<li><input checked="" disabled="" type="checkbox"> Test on iPhone via local network</li>
+<li><input disabled="" type="checkbox"> Add iOS fullscreen/standalone meta tags
+<ul>
+<li><input disabled="" type="checkbox"> Meta tags pra fullscreen/standalone (sem browser bars)</li>
+<li><input disabled="" type="checkbox"> Status bar styling (black-translucent)</li>
+<li><input disabled="" type="checkbox"> Disable elastic scroll (prevent bounce)</li>
+<li><input disabled="" type="checkbox"> Viewport lock (prevent zoom/pan)</li>
+<li><input disabled="" type="checkbox"> Home screen icon (se adicionar à tela inicial)</li>
+<li><input disabled="" type="checkbox"> Prevent text selection (opcional, pra parecer mais app)</li>
+<li><input disabled="" type="checkbox"> Disable callouts/touch highlights (iOS)</li>
+</ul>
+</li>
 <li><input disabled="" type="checkbox"> Add gyroscope permission UI for iOS 13+</li>
 <li><input disabled="" type="checkbox"> Make shine effect follow movement direction</li>
-<li><input disabled="" type="checkbox"> Test on mobile device (Android &amp; iOS)</li>
+<li><input disabled="" type="checkbox"> Test gyroscope on actual device</li>
 <li><input disabled="" type="checkbox"> Fine-tune sensitivity (movement, rotation, shadow)</li>
 <li><input disabled="" type="checkbox"> Create SVG card content system (reusable template)</li>
 <li><input disabled="" type="checkbox"> Add holographic shine masking (specific areas)</li>
