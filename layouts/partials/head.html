@@ -11,7 +11,16 @@
     All this work is to push and forget, knowing full well RSS feeds and opengraph links are covered by default plus the possibility to customize it (if I care to remember).
   */}}
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  <!-- iOS webapp meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Color scheme and theme color -->
+  <meta name="color-scheme" content="{{ default "dark light" .Params.colorScheme }}" />
+  <meta name="theme-color" content="{{ default "#000000" .Params.themeColor }}" />
+
   <title>{{ .Page.Title }}</title>
   <meta content="{{ default .Site.Params.author .Params.author }}" name="author" />
 
