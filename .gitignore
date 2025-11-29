@@ -21,8 +21,6 @@ node_modules/
 # Backup files
 *~
 
-# Ignore everything in .github
-.github/*
 
 # But allow specific files/folders if needed (uncomment and edit as needed)
 # !.github/README.md
