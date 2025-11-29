@@ -214,22 +214,56 @@
     .debug.active {
       display: block;
     }
+
+    /* Welcome modal */
+    .welcome-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .welcome-modal.hidden {
+      display: none;
+    }
+
+    .welcome-content {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .start-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 16px 48px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .start-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+    }
   </style>
 </head>
 <body>
 
-  <div class="card-container">
-    <div class="card">
-      <div class="card-shine"></div>
-      <div class="card-content">
-        <h2>Trading Card</h2>
-        <p>Move your device or mouse to see the parallax effect.</p>
-        <p style="margin-top: 20px; font-size: 11px; color: #999;">
-          Status: <span id="status">Static float animation</span>
-        </p>
-      </div>
+  <!-- Welcome modal -->
+  <div class="welcome-modal" id="welcomeModal">
+    <div class="welcome-content">
+      <button class="start-button" id="startButton">Start</button>
     </div>
   </div>
+
 
   <div class="debug" id="debug">
     <div>Mode: <span id="debug-mode">none</span></div>
@@ -239,7 +273,38 @@
     <div>Shadow Y: <span id="debug-shadow-y">20</span></div>
   </div>
 
+
+  <!-- screenfull.js é carregado via Hugo resources -->
   <script>
+    // Só mostra modal se o device tem giroscópio
+    function deviceHasGyroscope() {
+      // DeviceOrientationEvent existe E não é desktop
+      const isMobile = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(navigator.userAgent);
+      return isMobile && ('DeviceOrientationEvent' in window);
+    }
+
+    const welcomeModal = document.getElementById('welcomeModal');
+    const startButton = document.getElementById('startButton');
+
+    if (deviceHasGyroscope()) {
+      welcomeModal.classList.remove('hidden');
+    } else {
+      welcomeModal.classList.add('hidden');
+    }
+
+    startButton.addEventListener('click', function() {
+      // Só esconde o modal, não pede fullscreen
+      welcomeModal.classList.add('hidden');
+      setTimeout(function() {
+        if (!welcomeModal.classList.contains('hidden')) {
+          welcomeModal.style.display = 'none';
+        }
+      }, 500);
+    });
+  </script>
+
+  <script>
+
     // Phase 1: Basic setup with CSS variables approach
     const card = document.querySelector('.card');
     const status = document.getElementById('status');
@@ -273,23 +338,7 @@
       updateDebug('mouse', deltaX, deltaY);
     });
 
-    // Gyroscope (mobile) - will implement next
-    function initGyroscope() {
-      if (typeof DeviceOrientationEvent === 'undefined') {
-        console.log('DeviceOrientation not supported');
-        return;
-      }
-
-      // Check if permission needed (iOS 13+)
-      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        // Will implement permission request UI later
-        console.log('Permission required for gyroscope');
-      } else {
-        // Android or older iOS
-        window.addEventListener('deviceorientation', handleOrientation);
-      }
-    }
-
+    // Gyroscope (mobile)
     function handleOrientation(event) {
       isGyroActive = true;
       isMouseActive = false;
@@ -340,10 +389,17 @@
       document.getElementById('debug-x').textContent = x.toFixed(2);
       document.getElementById('debug-y').textContent = y.toFixed(2);
     }
-
-    // Initialize
-    initGyroscope();
   </script>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-shine"></div>
+      <div class="card-content">
+        <h2>Trading Card</h2>
+        <p>Parallax & Gyroscope Demo</p>
+      </div>
+    </div>
+  </div>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -555,6 +611,12 @@
 
       
 
+  
+    
+    
+    
+      <script src="https://***REMOVED***.nyc/js/lib/screenfull.js"></script>
+    
   
 
 
