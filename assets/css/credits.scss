@@ -7,19 +7,26 @@ $credits-color: brown;
     height: 100vh;
     padding: $gap2;
     padding-bottom: $gap4;
-    
+
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1000;
-    
+
     overflow-y: auto;
     overflow-x: hidden;
-    
+
     background-color: $credits-bg;
     box-sizing: border-box;
     transition: right 0.3s ease-in-out;
+
+                color: black;
+                .description {
+                    margin: $gap 0;
+                }
+
 }
+
 article.content {
     transition: margin-left 0.3s ease-in-out;
     position: relative;
@@ -43,12 +50,12 @@ main.container {
         filter: grayscale(100%);
         transition: all 0.3s ease;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-        
+
         &:before {
             font-size: 0.8rem;
             line-height: 1;
         }
-        
+
         &:hover {
             opacity: 1;
             filter: grayscale(0%);
@@ -65,12 +72,12 @@ main.container {
             line-height: 1.2;
         }
         }
-        
+
         &.credits-close:before {
             content: "✖️";
         }
     }
-    
+
     &:not(.open-credits) {
         #credits {
             right: -$credits;
@@ -83,7 +90,7 @@ main.container {
             z-index: 1000;
         }
     }
-    
+
     &.open-credits {
         article.content {
             margin-left: -$credits;
@@ -111,13 +118,13 @@ article.content {
     left: 0;
     width: 100%;
     height: 100%;
-    
+
     backdrop-filter: blur(8px);
-    
+
     z-index: 1000;
-    
+
     display: none; // Esconde por padrão
-    
+
     // Mostra quando o main está com .open-credits
 }
 
@@ -130,9 +137,9 @@ article.content {
     font-weight: bold;
     display: block;
     margin-bottom: $gaphalf;
-    
+
     transition: background-color 0.2s ease;
-    
+
     &:hover {
         background-color: white;
     }
@@ -176,6 +183,7 @@ section.share {
             background-color: white;
         }
     }
+
     .actions {
         margin-top: $gap;
         display: inline-block;
@@ -227,7 +235,7 @@ background-color: white;
 } */
 
 .tippy-box {
-    
+
     border-radius: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     max-height: 250px;
@@ -256,6 +264,6 @@ background-color: white;
         opacity: 1;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-    
-    
+
+
 }
