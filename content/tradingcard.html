@@ -1,0 +1,282 @@
+---
+title: Trading Card effect
+status: draft
+description: |
+  Trading card effect with parallax/gyroscope & holographic shine
+
+  ## TODO
+  - [ ] Test current implementation (hugo serve -D)
+  - [ ] Add gyroscope permission UI for iOS 13+
+  - [ ] Make shine effect follow movement direction
+  - [ ] Test on mobile device (Android & iOS)
+  - [ ] Fine-tune sensitivity (movement, rotation, shadow)
+  - [ ] Create SVG card content system (reusable template)
+  - [ ] Add holographic shine masking (specific areas)
+  - [ ] Refactor into reusable component
+---
+
+  <style>
+    :root {
+      /* CSS Variables para gyroscope/mouse */
+      --gyro-x: 0;
+      --gyro-y: 0;
+      --mouse-x: 0;
+      --mouse-y: 0;
+      --shadow-x: 0;
+      --shadow-y: 20;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      perspective: 1000px;
+    }
+
+    .card-container {
+      width: 240px;
+      height: 360px;
+      position: relative;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 12px;
+      position: relative;
+      transform-style: preserve-3d;
+
+      /* Default floating animation */
+      animation: float 6s ease-in-out infinite;
+
+      /* Will be overridden by JS when gyro/mouse active */
+      transform:
+        translateY(0px)
+        rotateX(0deg)
+        rotateY(0deg);
+
+      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+
+      /* Dynamic shadow - will be updated by JS */
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.1),
+        calc(var(--shadow-x) * -1px) calc(var(--shadow-y) * 1px) 60px rgba(0,0,0,0.3);
+    }
+
+    /* Default floating animation (fallback) */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow:
+          0 0 0 1px rgba(255,255,255,0.1),
+          0 20px 60px rgba(0,0,0,0.3);
+      }
+      33% {
+        transform: translateY(-10px) rotate(1deg);
+        box-shadow:
+          0 0 0 1px rgba(255,255,255,0.1),
+          2px 30px 60px rgba(0,0,0,0.3);
+      }
+      66% {
+        transform: translateY(-5px) rotate(-1deg);
+        box-shadow:
+          0 0 0 1px rgba(255,255,255,0.1),
+          -2px 25px 60px rgba(0,0,0,0.3);
+      }
+    }
+
+    /* Shine effect layer */
+    .card-shine {
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.3) 50%,
+        rgba(255,255,255,0) 100%
+      );
+      opacity: 0;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-shine {
+      opacity: 1;
+    }
+
+    /* Card content placeholder */
+    .card-content {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-content h2 {
+      margin: 0 0 10px 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .card-content p {
+      margin: 0;
+      color: #666;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* Debug info */
+    .debug {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      display: none;
+    }
+
+    .debug.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-shine"></div>
+      <div class="card-content">
+        <h2>Trading Card</h2>
+        <p>Move your device or mouse to see the parallax effect.</p>
+        <p style="margin-top: 20px; font-size: 11px; color: #999;">
+          Status: <span id="status">Static float animation</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="debug" id="debug">
+    <div>Mode: <span id="debug-mode">none</span></div>
+    <div>X: <span id="debug-x">0</span></div>
+    <div>Y: <span id="debug-y">0</span></div>
+    <div>Shadow X: <span id="debug-shadow-x">0</span></div>
+    <div>Shadow Y: <span id="debug-shadow-y">20</span></div>
+  </div>
+
+  <script>
+    // Phase 1: Basic setup with CSS variables approach
+    const card = document.querySelector('.card');
+    const status = document.getElementById('status');
+    const debug = document.getElementById('debug');
+
+    let isGyroActive = false;
+    let isMouseActive = false;
+
+    // Toggle debug with 'd' key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'd') {
+        debug.classList.toggle('active');
+      }
+    });
+
+    // Mouse parallax (desktop)
+    document.addEventListener('mousemove', (e) => {
+      if (isGyroActive) return; // Gyro takes priority
+
+      isMouseActive = true;
+      const rect = card.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const deltaX = (e.clientX - centerX) / (rect.width / 2);
+      const deltaY = (e.clientY - centerY) / (rect.height / 2);
+
+      updateCardTransform(deltaX * 10, deltaY * 10);
+      status.textContent = 'Mouse parallax active';
+
+      updateDebug('mouse', deltaX, deltaY);
+    });
+
+    // Gyroscope (mobile) - will implement next
+    function initGyroscope() {
+      if (typeof DeviceOrientationEvent === 'undefined') {
+        console.log('DeviceOrientation not supported');
+        return;
+      }
+
+      // Check if permission needed (iOS 13+)
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        // Will implement permission request UI later
+        console.log('Permission required for gyroscope');
+      } else {
+        // Android or older iOS
+        window.addEventListener('deviceorientation', handleOrientation);
+      }
+    }
+
+    function handleOrientation(event) {
+      isGyroActive = true;
+      isMouseActive = false;
+
+      const beta = event.beta;  // X axis (-180 to 180)
+      const gamma = event.gamma; // Y axis (-90 to 90)
+
+      // Normalize and limit range
+      const normalizedX = Math.max(-30, Math.min(30, beta)) / 30;
+      const normalizedY = Math.max(-30, Math.min(30, gamma)) / 30;
+
+      updateCardTransform(normalizedY * 15, normalizedX * 15);
+      status.textContent = 'Gyroscope active';
+
+      updateDebug('gyro', gamma, beta);
+    }
+
+    function updateCardTransform(x, y) {
+      // Disable default animation when interactive
+      if (isMouseActive || isGyroActive) {
+        card.style.animation = 'none';
+      }
+
+      // Calculate shadow offset (opposite direction for realism)
+      const shadowX = x * 0.3;
+      const shadowY = 20 + (y * 0.3);
+
+      // Update CSS variables
+      card.style.setProperty('--shadow-x', shadowX);
+      card.style.setProperty('--shadow-y', shadowY);
+
+      card.style.transform = `
+        translateX(${x}px)
+        translateY(${y}px)
+        rotateY(${x * 0.5}deg)
+        rotateX(${-y * 0.5}deg)
+      `;
+
+      // Update debug
+      if (debug.classList.contains('active')) {
+        document.getElementById('debug-shadow-x').textContent = shadowX.toFixed(2);
+        document.getElementById('debug-shadow-y').textContent = shadowY.toFixed(2);
+      }
+    }
+
+    function updateDebug(mode, x, y) {
+      document.getElementById('debug-mode').textContent = mode;
+      document.getElementById('debug-x').textContent = x.toFixed(2);
+      document.getElementById('debug-y').textContent = y.toFixed(2);
+    }
+
+    // Initialize
+    initGyroscope();
+  </script>
