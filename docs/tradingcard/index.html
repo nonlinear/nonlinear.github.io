@@ -28,7 +28,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.755e3d5ebd3fc935adf291d67bb1e59edde3ead0d04c064f672411801f266986.css" />
+  <link rel="stylesheet" href="/css/main.70d680f1d257a0ddf16ec46b0561d31c68397dafd40d820fd63f1a1256cc4d9d.css" />
 
   
 
@@ -79,6 +79,7 @@
             <article class="content">
                     
                         
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <style>
     :root {
       /* CSS Variables para gyroscope/mouse */
@@ -90,16 +91,37 @@
       --shadow-y: 40;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden !important;
+      overscroll-behavior: none;
+      touch-action: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       perspective: 1000px;
     }
+
+    article.content {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 
     .card-container {
       width: 240px;
@@ -257,13 +279,18 @@
 </head>
 <body>
 
-  <!-- Welcome modal -->
-  <div class="welcome-modal" id="welcomeModal">
-    <div class="welcome-content">
-      <button class="start-button" id="startButton">Start</button>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-shine"></div>
+      <div class="card-content">
+        <h2>Trading Card</h2>
+        <p>Parallax & Gyroscope Demo</p>
+        <div id="fullscreen-status" style="margin:10px 0;font-size:14px;color:#444;"></div>
+        <button class="start-button" id="startButton">Start Fullscreen</button>
+      </div>
     </div>
   </div>
-
 
   <div class="debug" id="debug">
     <div>Mode: <span id="debug-mode">none</span></div>
@@ -276,31 +303,43 @@
 
   <!-- screenfull.js é carregado via Hugo resources -->
   <script>
-    // Só mostra modal se o device tem giroscópio
-    function deviceHasGyroscope() {
-      // DeviceOrientationEvent existe E não é desktop
-      const isMobile = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(navigator.userAgent);
-      return isMobile && ('DeviceOrientationEvent' in window);
-    }
-
-    const welcomeModal = document.getElementById('welcomeModal');
-    const startButton = document.getElementById('startButton');
-
-    if (deviceHasGyroscope()) {
-      welcomeModal.classList.remove('hidden');
+    // Mostra status de suporte ao fullscreen
+    var statusDiv = document.getElementById('fullscreen-status');
+    var startButton = document.getElementById('startButton');
+    var cardContainer = document.querySelector('.card-container');
+    var supportMsg = '';
+    if (window.screenfull) {
+      supportMsg = 'screenfull.js carregado. ';
+      supportMsg += 'isEnabled: ' + screenfull.isEnabled;
     } else {
-      welcomeModal.classList.add('hidden');
+      supportMsg = 'screenfull.js NÃO carregado.';
     }
+    statusDiv.textContent = supportMsg;
 
     startButton.addEventListener('click', function() {
-      // Só esconde o modal, não pede fullscreen
-      welcomeModal.classList.add('hidden');
-      setTimeout(function() {
-        if (!welcomeModal.classList.contains('hidden')) {
-          welcomeModal.style.display = 'none';
+      if (window.screenfull && screenfull.isEnabled && cardContainer) {
+        try {
+          screenfull.request(cardContainer);
+          statusDiv.textContent = 'Tentou fullscreen (veja se mudou algo na tela)';
+        } catch (err) {
+          statusDiv.textContent = 'Erro ao tentar fullscreen: ' + err;
         }
-      }, 500);
+      } else {
+        statusDiv.textContent = 'Fullscreen não suportado neste device/browser.';
+      }
     });
+
+    if (window.screenfull) {
+      screenfull.on('change', function() {
+        if (screenfull.isFullscreen) {
+          document.body.style.background = '#222';
+          statusDiv.textContent = 'Entrou em fullscreen!';
+        } else {
+          document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+          statusDiv.textContent = supportMsg;
+        }
+      });
+    }
   </script>
 
   <script>
@@ -391,15 +430,7 @@
     }
   </script>
 
-  <div class="card-container">
-    <div class="card">
-      <div class="card-shine"></div>
-      <div class="card-content">
-        <h2>Trading Card</h2>
-        <p>Parallax & Gyroscope Demo</p>
-      </div>
-    </div>
-  </div>
+
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
