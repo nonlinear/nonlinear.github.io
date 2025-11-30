@@ -3,11 +3,14 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js live-model draft single
+    class="single no-js tradingcard-2 draft single
     
       
         
-         illos
+        
+      
+        
+         vertical-nav
       
     "
 >
@@ -25,7 +28,7 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>Live model</title>
+  <title>Trading Card effect</title>
   <meta content="Nicholas Frota" name="author" />
 
   
@@ -45,7 +48,9 @@
 
   
     
-      <link href="/css/illos.css" rel="stylesheet" />
+      <link href="/css/trading-card.css" rel="stylesheet" />
+    
+      <link href="/css/vertical-nav.css" rel="stylesheet" />
     
   
 
@@ -55,7 +60,29 @@
     
   
   <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
-  <meta property="og:description" content="Drawing live models" />
+  <meta property="og:description" content="Trading card effect with parallax/gyroscope &amp; holographic shine
+
+## TODO
+  - ~~Test current implementation (hugo serve -D)~~
+  - ~~Test on iPhone via local network~~
+  - ~~Add iOS fullscreen/standalone meta tags~~
+    - ~~Meta tags pra fullscreen/standalone (sem browser bars)~~
+    - ~~Status bar styling (black-translucent)~~
+    - ~~Disable elastic scroll (prevent bounce)~~
+    - ~~Viewport lock (prevent zoom/pan)~~
+    - Home screen icon (se adicionar à tela inicial)
+    - ~~Prevent text selection (opcional, pra parecer mais app)~~
+    - Disable callouts/touch highlights (iOS)
+    - Home screen icon (se adicionar à tela inicial)
+    - ~~Disable callouts/touch highlights (iOS)~~
+  - Add gyroscope permission UI for iOS 13&#43;
+  - Make shine effect follow movement direction
+  - Test gyroscope on actual device
+  - Fine-tune sensitivity (movement, rotation, shadow)
+  - Create SVG card content system (reusable template)
+  - Add holographic shine masking (specific areas)
+  - Refactor into reusable component
+" />
 
 
 </head>
@@ -65,55 +92,69 @@
         <main class="container">
 
                 <a href="javascript:void(0)" class="mice credits-open"></a>
-            <article class="content illos">
+            <article class="content">
                     
-                        
-                        <div class="illo-wrapper">
-                            <img class="zoom-img"
-                                    src="https://***REMOVED***.nyc/images/illos/model-1.jpg"
-                                    data-static="https://***REMOVED***.nyc/images/illos/model-1.jpg"
-                                    data-anim="https://***REMOVED***.nyc/images/illos/model-1.webp"
-                                    alt="model-1"
-                                    style="width: 100%; height: auto;"
-                                />
-                        </div>
-                        
-                        <div class="illo-wrapper">
-                            <img class="zoom-img"
-                                    src="https://***REMOVED***.nyc/images/illos/model-2.jpg"
-                                    data-static="https://***REMOVED***.nyc/images/illos/model-2.jpg"
-                                    data-anim="https://***REMOVED***.nyc/images/illos/model-2.webp"
-                                    alt="model-2"
-                                    style="width: 100%; height: auto;"
-                                />
-                        </div>
-                        
-                        <div class="illo-wrapper">
-                            <img class="zoom-img"
-                                    src="https://***REMOVED***.nyc/images/illos/model-3.jpg"
-                                    data-static="https://***REMOVED***.nyc/images/illos/model-3.jpg"
-                                    data-anim="https://***REMOVED***.nyc/images/illos/model-3.webp"
-                                    alt="model-3"
-                                    style="width: 100%; height: auto;"
-                                />
-                        </div>
-                        
+                        <section aria-label="First test">
+  <div class="card">
+      <img id="card-svg" src="/trading-card/antonio.svg" alt="antonio" class="tradingcards-img" />
+
+  </div>
+</section>
+<section aria-label="First test">
+  <div class="card">
+      <img id="card-svg" src="/trading-card/antonio.svg" alt="antonio" class="tradingcards-img" />
+
+  </div>
+</section>
+<section aria-label="First test">
+  <div class="card">
+      <img id="card-svg" src="/trading-card/antonio.svg" alt="antonio" class="tradingcards-img" />
+
+  </div>
+</section>
+
+
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
             </article>
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>Live model</h2>
+  <h2>Trading Card effect</h2>
   <p class="date">
     
         
       
-        status: live 4 months ago
+        status: live 1 days ago
       
     
   </p>
-    <div class="description">Drawing live models</div>
+    <div class="description"><p>Trading card effect with parallax/gyroscope &amp; holographic shine</p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li><del>Test current implementation (hugo serve -D)</del></li>
+<li><del>Test on iPhone via local network</del></li>
+<li><del>Add iOS fullscreen/standalone meta tags</del>
+<ul>
+<li><del>Meta tags pra fullscreen/standalone (sem browser bars)</del></li>
+<li><del>Status bar styling (black-translucent)</del></li>
+<li><del>Disable elastic scroll (prevent bounce)</del></li>
+<li><del>Viewport lock (prevent zoom/pan)</del></li>
+<li>Home screen icon (se adicionar à tela inicial)</li>
+<li><del>Prevent text selection (opcional, pra parecer mais app)</del></li>
+<li>Disable callouts/touch highlights (iOS)</li>
+<li>Home screen icon (se adicionar à tela inicial)</li>
+<li><del>Disable callouts/touch highlights (iOS)</del></li>
+</ul>
+</li>
+<li>Add gyroscope permission UI for iOS 13+</li>
+<li>Make shine effect follow movement direction</li>
+<li>Test gyroscope on actual device</li>
+<li>Fine-tune sensitivity (movement, rotation, shadow)</li>
+<li>Create SVG card content system (reusable template)</li>
+<li>Add holographic shine masking (specific areas)</li>
+<li>Refactor into reusable component</li>
+</ul></div>
 
     
 
@@ -221,7 +262,7 @@
   <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/live-model\/",
+        text: "https:\/\/***REMOVED***.nyc\/tradingcard-2\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -289,6 +330,12 @@
       
 
   
+    
+    
+    
+      <script src="https://***REMOVED***.nyc/js/lib/screenfull.js"></script>
+    
+  
 
 
 
@@ -297,7 +344,13 @@
     
     
     
-      <script src="https://***REMOVED***.nyc/js/script/illos.js"></script>
+      <script src="https://***REMOVED***.nyc/js/script/trading-card.js"></script>
+    
+  
+    
+    
+    
+      <script src="https://***REMOVED***.nyc/js/script/vertical-nav.js"></script>
     
   
 
