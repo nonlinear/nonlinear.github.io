@@ -49,7 +49,7 @@
     <link href="{{ $cssHref }}" rel="stylesheet" />
   {{ end }}
 
-  {{ with .Params.css }}
+  {{ with .Params.style }}
     {{ range . }}
       <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
     {{ end }}

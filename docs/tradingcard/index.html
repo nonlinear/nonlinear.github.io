@@ -4,10 +4,15 @@
 <html
     lang="en"
     class="single no-js tradingcard draft single
+    
+      
+        
+        
+      
     "
 >
 
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -39,13 +44,17 @@
   
 
   
+    
+      <link href="/css/trading-card.css" rel="stylesheet" />
+    
+  
 
   
   
   
     
   
-  <meta property="og:image" content="https://***REMOVED***.nyc/images/covers/draft.jpg" />
+  <meta property="og:image" content="http://192.168.1.243:1313/images/covers/draft.jpg" />
   <meta property="og:description" content="Trading card effect with parallax/gyroscope &amp; holographic shine
 
 ## TODO
@@ -80,355 +89,9 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-
-  <style>
-    :root {
-      /* CSS Variables para gyroscope/mouse */
-      --gyro-x: 0;
-      --gyro-y: 0;
-      --mouse-x: 0;
-      --mouse-y: 0;
-      --shadow-x: 0;
-      --shadow-y: 40;
-      /* Card config (sobrescreva via frontmatter se quiser) */
-      --card-ratio: 9/16;
-      --card-radius: 10px;
-
-    }
-
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden !important;
-      overscroll-behavior: none;
-      touch-action: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-touch-callout: none;
-      -webkit-tap-highlight-color: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      perspective: 1000px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-    }
-
-    @media (orientation: landscape) {
-      html, body {
-        background: #e53935 !important; /* vermelho para landscape */
-      }
-    }
-
-    article.content {
-
-      min-height: 100vh;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 9/16;
-      border-radius: 10px;
-      width: 80vw;
-      height: auto;
-      max-height: 100vh;
-      max-width: 100vw;
-    }
-
-    @media (orientation: landscape) {
-      .card-container {
-        width: auto;
-        height: 80vh;
-        aspect-ratio: 9/16;
-        max-width: 100vw;
-        max-height: 100vh;
-      }
-    }
-
-    .card {
-      width: 100%;
-      height: 100%;
-      background: white;
-      border-radius: var(--card-radius);
-      position: relative;
-      transform-style: preserve-3d;
-      animation: float 6s ease-in-out infinite;
-      /* Will be overridden by JS when gyro/mouse active */
-      transform:
-        translateY(0px)
-        rotateX(0deg)
-        rotateY(0deg);
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
-      /* Dynamic shadow - will be updated by JS */
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.1),
-        calc(var(--shadow-x) * -1px) calc(var(--shadow-y) * 1px) 60px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
-
-    /* Default floating animation (fallback) */
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-        box-shadow:
-          0 0 0 1px rgba(255,255,255,0.1),
-          0 20px 60px rgba(0,0,0,0.3);
-      }
-      33% {
-        transform: translateY(-10px) rotate(1deg);
-        box-shadow:
-          0 0 0 1px rgba(255,255,255,0.1),
-          2px 30px 60px rgba(0,0,0,0.3);
-      }
-      66% {
-        transform: translateY(-5px) rotate(-1deg);
-        box-shadow:
-          0 0 0 1px rgba(255,255,255,0.1),
-          -2px 25px 60px rgba(0,0,0,0.3);
-      }
-    }
-
-    /* Shine effect layer */
-
-    .card-shine {
-      position: absolute;
-      inset: 0;
-      border-radius: var(--card-radius);
-      background: linear-gradient(
-        135deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.3) 50%,
-        rgba(255,255,255,0) 100%
-      );
-      opacity: 0;
-      pointer-events: none;
-      mix-blend-mode: overlay;
-      transition: opacity 0.3s ease;
-    }
-
-    .card:hover .card-shine {
-      opacity: 1;
-    }
-
-    /* Card content placeholder */
-    .card-content {
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .card-content h2 {
-      margin: 0 0 10px 0;
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #333;
-      font-size: 18px;
-    }
-
-    .card-content p {
-      margin: 0;
-      color: #666;
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    /* Debug info */
-    .debug {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: rgba(0,0,0,0.8);
-      color: white;
-      padding: 10px;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 12px;
-      display: none;
-    }
-
-    .debug.active {
-      display: block;
-    }
-
-  </style>
-</head>
-<body>
-
-
-
-
-
-  <div class="card-container">
-    <div class="card">
-      <div class="card-shine"></div>
-      <div class="card-content">
-        <h2>Trading Card</h2>
-        <p>Parallax & Gyroscope Demo</p>
-        <div id="fullscreen-status" style="margin:10px 0;font-size:14px;color:#444;"></div>
-
-      </div>
+                            <div class="card">
+        <img id="card-svg" src="/trading-card/antonio.svg" alt="antonio" class="tradingcards-img" />
     </div>
-  </div>
-
-
-  <div class="debug" id="debug">
-    <div>Mode: <span id="debug-mode">none</span></div>
-    <div>X: <span id="debug-x">0</span></div>
-    <div>Y: <span id="debug-y">0</span></div>
-    <div>Shadow X: <span id="debug-shadow-x">0</span></div>
-    <div>Shadow Y: <span id="debug-shadow-y">20</span></div>
-  </div>
-
-
-  <!-- screenfull.js é carregado via Hugo resources -->
-
-  <script>
-    // Mostra status de suporte ao fullscreen
-    var statusDiv = document.getElementById('fullscreen-status');
-    var startButton = document.getElementById('startButton');
-    var cardContainer = document.querySelector('.card-container');
-    var supportMsg = '';
-    if (window.screenfull) {
-      supportMsg = 'screenfull.js carregado. ';
-      supportMsg += 'isEnabled: ' + screenfull.isEnabled;
-    } else {
-      supportMsg = 'screenfull.js NÃO carregado.';
-    }
-    statusDiv.textContent = supportMsg;
-
-    startButton.addEventListener('click', function() {
-      if (window.screenfull && screenfull.isEnabled && cardContainer) {
-        try {
-          screenfull.request(cardContainer);
-          statusDiv.textContent = 'Tentou fullscreen (veja se mudou algo na tela)';
-        } catch (err) {
-          statusDiv.textContent = 'Erro ao tentar fullscreen: ' + err;
-        }
-      } else {
-        statusDiv.textContent = 'Fullscreen não suportado neste device/browser.';
-      }
-    });
-
-    if (window.screenfull) {
-      screenfull.on('change', function() {
-        if (screenfull.isFullscreen) {
-          document.body.style.background = '#222';
-          statusDiv.textContent = 'Entrou em fullscreen!';
-        } else {
-          document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-          statusDiv.textContent = supportMsg;
-        }
-      });
-    }
-
-    // Modal logic removido
-  </script>
-
-  <script>
-
-    // Phase 1: Basic setup with CSS variables approach
-    const card = document.querySelector('.card');
-    const status = document.getElementById('status');
-    const debug = document.getElementById('debug');
-
-    let isGyroActive = false;
-    let isMouseActive = false;
-
-    // Toggle debug with 'd' key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'd') {
-        debug.classList.toggle('active');
-      }
-    });
-
-    // Mouse parallax (desktop)
-    document.addEventListener('mousemove', (e) => {
-      if (isGyroActive) return; // Gyro takes priority
-
-      isMouseActive = true;
-      const rect = card.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-
-      const deltaX = (e.clientX - centerX) / (rect.width / 2);
-      const deltaY = (e.clientY - centerY) / (rect.height / 2);
-
-      updateCardTransform(deltaX * 10, deltaY * 10);
-      status.textContent = 'Mouse parallax active';
-
-      updateDebug('mouse', deltaX, deltaY);
-    });
-
-    // Gyroscope (mobile)
-    function handleOrientation(event) {
-      isGyroActive = true;
-      isMouseActive = false;
-
-      const beta = event.beta;  // X axis (-180 to 180)
-      const gamma = event.gamma; // Y axis (-90 to 90)
-
-      // Normalize and limit range
-      const normalizedX = Math.max(-30, Math.min(30, beta)) / 30;
-      const normalizedY = Math.max(-30, Math.min(30, gamma)) / 30;
-
-      updateCardTransform(normalizedY * 15, normalizedX * 15);
-      status.textContent = 'Gyroscope active';
-
-      updateDebug('gyro', gamma, beta);
-    }
-
-    function updateCardTransform(x, y) {
-      // Disable default animation when interactive
-      if (isMouseActive || isGyroActive) {
-        card.style.animation = 'none';
-      }
-
-      // Calculate shadow offset (opposite direction for realism)
-      const shadowX = x * 0.3;
-      const shadowY = 20 + (y * 0.3);
-
-      // Update CSS variables
-      card.style.setProperty('--shadow-x', shadowX);
-      card.style.setProperty('--shadow-y', shadowY);
-
-      card.style.transform = `
-        translateX(${x}px)
-        translateY(${y}px)
-        rotateY(${x * 0.5}deg)
-        rotateX(${-y * 0.5}deg)
-      `;
-
-      // Update debug
-      if (debug.classList.contains('active')) {
-        document.getElementById('debug-shadow-x').textContent = shadowX.toFixed(2);
-        document.getElementById('debug-shadow-y').textContent = shadowY.toFixed(2);
-      }
-    }
-
-    function updateDebug(mode, x, y) {
-      document.getElementById('debug-mode').textContent = mode;
-      document.getElementById('debug-x').textContent = x.toFixed(2);
-      document.getElementById('debug-y').textContent = y.toFixed(2);
-    }
-  </script>
-
-
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -575,10 +238,10 @@
 
 
   </div>
-  <script src="https://***REMOVED***.nyc/js/global/qrcode.min.js"></script>
+  <script src="http://192.168.1.243:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/***REMOVED***.nyc\/tradingcard\/",
+        text: "http:\/\/192.168.1.243:1313\/tradingcard\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -649,12 +312,20 @@
     
     
     
-      <script src="https://***REMOVED***.nyc/js/lib/screenfull.js"></script>
+      <script src="http://192.168.1.243:1313/js/lib/screenfull.js"></script>
     
   
 
 
 
+
+  
+    
+    
+    
+      <script src="http://192.168.1.243:1313/js/script/trading-card.js"></script>
+    
+  
 
 
 
@@ -672,8 +343,8 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="https://***REMOVED***.nyc/js/global/popper.min.js"></script>
-<script src="https://***REMOVED***.nyc/js/global/tippy-bundle.umd.min.js"></script>
+<script src="http://192.168.1.243:1313/js/global/popper.min.js"></script>
+<script src="http://192.168.1.243:1313/js/global/tippy-bundle.umd.min.js"></script>
 
 <script>
   document.querySelectorAll(".tooltip").forEach((el) => {
