@@ -1,7 +1,7 @@
-// Mostra status de suporte ao fullscreen
+// Suporte ao fullscreen
 var statusDiv = document.getElementById('fullscreen-status');
 var startButton = document.getElementById('startButton');
-var cardContainer = document.querySelector('.card-container');
+var card = document.querySelector('.card');
 var supportMsg = '';
 if (window.screenfull) {
   supportMsg = 'screenfull.js carregado. ';
@@ -9,52 +9,52 @@ if (window.screenfull) {
 } else {
   supportMsg = 'screenfull.js NÃO carregado.';
 }
-statusDiv && (statusDiv.textContent = supportMsg);
+if (statusDiv) statusDiv.textContent = supportMsg;
 
-startButton && startButton.addEventListener('click', function() {
-  if (window.screenfull && screenfull.isEnabled && cardContainer) {
-    try {
-      screenfull.request(cardContainer);
-      statusDiv.textContent = 'Tentou fullscreen (veja se mudou algo na tela)';
-    } catch (err) {
-      statusDiv.textContent = 'Erro ao tentar fullscreen: ' + err;
+if (startButton) {
+  startButton.addEventListener('click', function() {
+    if (window.screenfull && screenfull.isEnabled && card) {
+      try {
+        screenfull.request(card);
+        statusDiv && (statusDiv.textContent = 'Tentou fullscreen (veja se mudou algo na tela)');
+      } catch (err) {
+        statusDiv && (statusDiv.textContent = 'Erro ao tentar fullscreen: ' + err);
+      }
+    } else {
+      statusDiv && (statusDiv.textContent = 'Fullscreen não suportado neste device/browser.');
     }
-  } else {
-    statusDiv.textContent = 'Fullscreen não suportado neste device/browser.';
-  }
-});
+  });
+}
 
 if (window.screenfull) {
   screenfull.on('change', function() {
     if (screenfull.isFullscreen) {
       document.body.style.background = '#222';
-      statusDiv.textContent = 'Entrou em fullscreen!';
+      statusDiv && (statusDiv.textContent = 'Entrou em fullscreen!');
     } else {
       document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-      statusDiv.textContent = supportMsg;
+      statusDiv && (statusDiv.textContent = supportMsg);
     }
   });
 }
-// Modal logic removido
 
-// Phase 1: Basic setup with CSS variables approach
-const card = document.querySelector('.card');
+// Parallax e debug
 const status = document.getElementById('status');
 const debug = document.getElementById('debug');
 
 let isGyroActive = false;
 let isMouseActive = false;
 
-// Toggle debug with 'd' key
+// Toggle debug com 'd'
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'd') {
+  if (e.key === 'd' && debug) {
     debug.classList.toggle('active');
   }
 });
 
 // Mouse parallax (desktop)
 document.addEventListener('mousemove', (e) => {
-  if (isGyroActive) return; // Gyro takes priority
+  if (isGyroActive || !card) return;
 
   isMouseActive = true;
   const rect = card.getBoundingClientRect();
@@ -75,10 +75,10 @@ function handleOrientation(event) {
   isGyroActive = true;
   isMouseActive = false;
 
-  const beta = event.beta;  // X axis (-180 to 180)
-  const gamma = event.gamma; // Y axis (-90 to 90)
+  const beta = event.beta;  // Eixo X (-180 a 180)
+  const gamma = event.gamma; // Eixo Y (-90 a 90)
 
-  // Normalize and limit range
+  // Normaliza e limita o intervalo
   const normalizedX = Math.max(-30, Math.min(30, beta)) / 30;
   const normalizedY = Math.max(-30, Math.min(30, gamma)) / 30;
 
@@ -89,16 +89,17 @@ function handleOrientation(event) {
 }
 
 function updateCardTransform(x, y) {
-  // Disable default animation when interactive
+  if (!card) return;
+  // Desabilita animação padrão quando interativo
   if (isMouseActive || isGyroActive) {
     card.style.animation = 'none';
   }
 
-  // Calculate shadow offset (opposite direction for realism)
+  // Calcula o deslocamento da sombra (direção oposta para realismo)
   const shadowX = x * 0.3;
   const shadowY = 20 + (y * 0.3);
 
-  // Update CSS variables
+  // Atualiza as variáveis CSS
   card.style.setProperty('--shadow-x', shadowX);
   card.style.setProperty('--shadow-y', shadowY);
 
@@ -109,7 +110,7 @@ function updateCardTransform(x, y) {
     rotateX(${-y * 0.5}deg)
   `;
 
-  // Update debug
+  // Atualiza debug
   if (debug && debug.classList.contains('active')) {
     document.getElementById('debug-shadow-x').textContent = shadowX.toFixed(2);
     document.getElementById('debug-shadow-y').textContent = shadowY.toFixed(2);

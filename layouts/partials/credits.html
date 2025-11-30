@@ -3,21 +3,20 @@
   <div id="qrdisplay"></div>
   <h2>{{ .Page.Title }}</h2>
   <p class="date">
-    {{ if .Draft }}
-      status: draft
+    {{ $status := .Params.status | default "live" }}
+    {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
+    {{ $isDraft := eq $status "draft" }}
+    {{ $prefix := cond $isDraft "In draft since" $status }}
+    {{ if lt $diff 1 }}
+      {{ $prefix }} today
+    {{ else if lt $diff 7 }}
+      {{ $prefix }} {{ $diff }} {{ cond (eq $diff 1) "day" "days" }} ago
+    {{ else if lt $diff 30 }}
+      {{ $prefix }} {{ div $diff 7 }} weeks ago
+    {{ else if lt $diff 365 }}
+      {{ $prefix }} {{ div $diff 30 }} months ago
     {{ else }}
-      {{ $now := now }} {{ $date := .Page.Date }} {{ $diff := div (sub $now.Unix $date.Unix) 86400 }}
-      {{ if lt $diff 1 }}
-        status: live today
-      {{ else if lt $diff 7 }}
-        status: live {{ $diff }} days ago
-      {{ else if lt $diff 30 }}
-        status: live {{ div $diff 7 }} weeks ago
-      {{ else if lt $diff 365 }}
-        status: live {{ div $diff 30 }} months ago
-      {{ else }}
-        status: live {{ div $diff 365 }} years ago
-      {{ end }}
+      {{ $prefix }} {{ div $diff 365 }} years ago
     {{ end }}
   </p>
     <div class="description">{{ .Params.description | markdownify }}</div>
