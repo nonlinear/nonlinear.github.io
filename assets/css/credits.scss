@@ -23,6 +23,7 @@ $credits-text: black;
     transition: right 0.3s ease-in-out;
 
     color: $credits-text;
+
     .description {
         margin: $gap 0;
         // Aumenta o line-height de todos os elementos dentro de .description
@@ -164,6 +165,7 @@ article.content {
 
 .date {
     font-size: 80%;
+    margin-top:5px !important;
 }
 
 h1,
