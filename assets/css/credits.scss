@@ -1,6 +1,8 @@
+
 $credits: 300px;
 $credits-bg: #ffffcc;
 $credits-color: brown;
+$credits-text: black;
 
 #credits {
     width: $credits;
@@ -20,10 +22,25 @@ $credits-color: brown;
     box-sizing: border-box;
     transition: right 0.3s ease-in-out;
 
-                color: black;
-                .description {
-                    margin: $gap 0;
-                }
+    color: $credits-text;
+    .description {
+        margin: $gap 0;
+        // Aumenta o line-height de todos os elementos dentro de .description
+        *, *:before, *:after {
+            line-height: 1.4 !important;
+        }
+        // Aplica opacidade 50% para elementos com strikethrough
+        del, s, strike, .strikethrough, li:has(del), li:has(s), li:has(strike) {
+            opacity: 0.5;
+        }
+        ul {
+            font-size: 13px;
+            list-style: disc;
+            padding-left: $gap;
+        }
+
+
+    }
 
 }
 
@@ -68,9 +85,9 @@ main.container {
             bottom: $gap4;
             position: absolute;
             &:before {
-            content: "🔄";
-            line-height: 1.2;
-        }
+                content: "🔄";
+                line-height: 1.2;
+            }
         }
 
         &.credits-close:before {
@@ -133,7 +150,7 @@ article.content {
     background-color: $credits-bg;
     padding: $gap;
     text-decoration: none;
-    color: black;
+    color: $credits-text;
     font-weight: bold;
     display: block;
     margin-bottom: $gaphalf;
@@ -177,7 +194,7 @@ section.share {
         font-size: 80%;
         text-decoration: none;
         font-weight: 600;
-        color: black;
+        color: $credits-text;
         transition: background-color 0.2s ease;
         &:hover {
             background-color: white;
@@ -211,7 +228,7 @@ a {
 padding: $gaphalf;
 font-size: 80%;
 font-weight: 600;
-color: black;
+color: $credits-text;
 text-decoration: none;
 border: 1px solid $credits-color;
 margin: -1px -1px 0 0;
@@ -224,7 +241,7 @@ display: block;
 margin-bottom: $gaphalf;
 
 path {
-fill: black;
+fill: $credits-text;
 }
 }
 
@@ -241,7 +258,7 @@ background-color: white;
     max-height: 250px;
     &:not(.nav-tooltip) {
         background-color: white;
-        color: black;
+        color: $credits-text;
         width: $credits;
         overflow: auto;
         margin-left: -4px;
@@ -267,3 +284,4 @@ background-color: white;
 
 
 }
+
