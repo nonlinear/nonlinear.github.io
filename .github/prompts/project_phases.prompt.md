@@ -17,6 +17,7 @@ When this prompt is activated, you MUST AUTOMATICALLY:
 
 When user activates this prompt, respond CONCISELY with:
 
+```
 ## PHASE X: PHASE NAME
 
 ### What is it?
@@ -49,6 +50,7 @@ You are in PHASE X if:
 
 - Question 1?
 - Question 2?
+```
 
 ---
 
