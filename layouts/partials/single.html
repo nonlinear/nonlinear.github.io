@@ -7,6 +7,7 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content{{ if .Params.illos }} illos{{ end }}">
                     {{ if .Params.illos }}
+                        {{ .Content }}
                         {{ range .Params.illos }}
                         <div class="illo-wrapper">
                             <img class="zoom-img"

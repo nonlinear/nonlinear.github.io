@@ -8,26 +8,26 @@
 			"group": "build"
 		},
 		{
-		"label": "On load",
-		"type": "shell",
-		"command": "zsh .github/scripts/Start_hugo.sh '${file}'",
-		"group": "build",
-		"runOptions": {
-			"runOn": "folderOpen"
-		}
-	},
-	{
-		"label": "Preview current file",
-		"type": "shell",
-		"command": "zsh .github/scripts/Start_hugo.sh ${relativeFile}",
-		"group": "build",
-		"presentation": {
-			"echo": true,
-			"reveal": "always",
-			"focus": false,
-			"panel": "shared"
-		}
-	},
+			"label": "On load",
+			"type": "shell",
+			"command": "zsh .github/scripts/Start_hugo.sh '${file}'",
+			"group": "build",
+			"runOptions": {
+				"runOn": "folderOpen"
+			}
+		},
+		{
+			"label": "Preview current file",
+			"type": "shell",
+			"command": "zsh .github/scripts/Start_hugo.sh ${relativeFile}",
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		},
 		{
 			"label": "Run hugo",
 			"type": "shell",
@@ -103,6 +103,12 @@
 			"args": [
 				"http://localhost:1313/${fileBasenameNoExtension}"
 			],
+			"group": "build"
+		},
+		{
+			"label": "Post new illos",
+			"type": "shell",
+			"command": "python3 .github/scripts/post_new_illos.py",
 			"group": "build"
 		}
 	]
