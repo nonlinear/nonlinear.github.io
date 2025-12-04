@@ -10,7 +10,7 @@
 		{
 			"label": "🔌 Media SSH",
 			"type": "shell",
-			"command": "ssh -t ***REMOVED***@***REMOVED*** 'cd /serve/media/; exec bash'",
+			"command": "ssh -t nonlinear@192.168.1.152 'cd /serve/media/; exec bash'",
 			"group": "build",
 			"presentation": {
 				"panel": "new"
@@ -19,7 +19,7 @@
 		{
 			"label": "🔌 aiai SSH",
 			"type": "shell",
-			"command": "ssh ***REMOVED***@192.168.1.159; exec bash'",
+			"command": "ssh nonlinear@192.168.1.159; exec bash'",
 			"group": "build",
 			"presentation": {
 				"panel": "new"

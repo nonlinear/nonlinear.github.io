@@ -1,7 +1,7 @@
 <snippet>
   <content>
 <![CDATA[
-<a href="http://twitter.com/home?status=${1:Visit my website} ${2:http://www.nicholasfrota.com} ${3:@***REMOVED***}"
+<a href="http://twitter.com/home?status=${1:Visit my website} ${2:https://nonlinear.nyc}"
  target="_blank">
  ${4:<i class="fa fa-twitter"></i>}
 </a>

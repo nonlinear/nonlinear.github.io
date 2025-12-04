@@ -1,7 +1,7 @@
 ## Requirements
 - [Sublime Text](http://www.sublimetext.com) (2 or 3)
 - [Font Awesome](http://fontawesome.io)
-- [***REMOVED***/snippets](https://github.com/***REMOVED***/snippets/#snippets)
+- [nonlinear/snippets](https://github.com/nonlinear/snippets/#snippets)
 
 ## Social Snippets
 
