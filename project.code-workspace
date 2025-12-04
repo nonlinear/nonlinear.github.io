@@ -18,7 +18,7 @@
         "group": "build"
       },
       {
-        "label": "On load",
+        "label": "🖋️ Start hugo",
         "type": "shell",
         "command": "zsh .github/scripts/Start_hugo.sh '${file}'",
         "group": "build",
@@ -43,29 +43,6 @@
           "focus": false,
           "panel": "shared"
         }
-      },
-      {
-        "label": "🖋️ Run hugo",
-        "type": "shell",
-        "command": "hugo serve -D",
-        "group": "build",
-        "isBackground": true,
-        "problemMatcher": {
-          "owner": "custom",
-          "pattern": {
-            "regexp": "."
-          },
-          "background": {
-            "beginsPattern": ".*",
-            "endsPattern": ".*"
-          }
-        }
-      },
-      {
-        "label": "🖋️ Open hugo",
-        "type": "shell",
-        "command": "open http://localhost:1313/",
-        "group": "build"
       },
       {
         "label": "👁️ Preview on hugo",
