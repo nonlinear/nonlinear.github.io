@@ -6,7 +6,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Nonlinear – Curva</title>
-    <link>https://nonlinear.nyc/curva/</link>
+    <link>http://localhost:1313/curva/</link>
     <description>Podcast Curva</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
@@ -25,12 +25,12 @@
         
         <item>
           <title>Marx in the Anthropocene - Episódio 2</title>
-          <link>https://nonlinear.nyc/curva/002/</link>
-          <guid>https://nonlinear.nyc/curva/002/</guid>
+          <link>http://localhost:1313/curva/002/</link>
+          <guid>http://localhost:1313/curva/002/</guid>
           <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Exemplo de template para episódio do podcast, incluindo campos essenciais e conteúdo variado.</p>
-            <a href="https://nonlinear.nyc/curva/002/"><img src="https://nonlinear.nyc/images/covers/002.jpg" alt="Marx in the Anthropocene - Episódio 2" /></a>
+            <a href="http://localhost:1313/curva/002/"><img src="http://localhost:1313/images/covers/002.jpg" alt="Marx in the Anthropocene - Episódio 2" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -50,12 +50,12 @@
         
         <item>
           <title>War in the Age of Intelligent Machines - Episódio 1</title>
-          <link>https://nonlinear.nyc/curva/010/</link>
-          <guid>https://nonlinear.nyc/curva/010/</guid>
+          <link>http://localhost:1313/curva/010/</link>
+          <guid>http://localhost:1313/curva/010/</guid>
           <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre guerra e tecnologia, com conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/010/"><img src="https://nonlinear.nyc/images/covers/010.jpg" alt="War in the Age of Intelligent Machines - Episódio 1" /></a>
+            <a href="http://localhost:1313/curva/010/"><img src="http://localhost:1313/images/covers/010.jpg" alt="War in the Age of Intelligent Machines - Episódio 1" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -75,12 +75,12 @@
         
         <item>
           <title>Capital is Dead - Episódio 2</title>
-          <link>https://nonlinear.nyc/curva/005/</link>
-          <guid>https://nonlinear.nyc/curva/005/</guid>
+          <link>http://localhost:1313/curva/005/</link>
+          <guid>http://localhost:1313/curva/005/</guid>
           <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre Capital is Dead, com conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/005/"><img src="https://nonlinear.nyc/images/covers/005.jpg" alt="Capital is Dead - Episódio 2" /></a>
+            <a href="http://localhost:1313/curva/005/"><img src="http://localhost:1313/images/covers/005.jpg" alt="Capital is Dead - Episódio 2" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -100,12 +100,12 @@
         
         <item>
           <title>Capital is Dead - Episódio 1</title>
-          <link>https://nonlinear.nyc/curva/004/</link>
-          <guid>https://nonlinear.nyc/curva/004/</guid>
+          <link>http://localhost:1313/curva/004/</link>
+          <guid>http://localhost:1313/curva/004/</guid>
           <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre Capital is Dead, com exemplos de conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/004/"><img src="https://nonlinear.nyc/images/covers/004.jpg" alt="Capital is Dead - Episódio 1" /></a>
+            <a href="http://localhost:1313/curva/004/"><img src="http://localhost:1313/images/covers/004.jpg" alt="Capital is Dead - Episódio 1" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -125,12 +125,12 @@
         
         <item>
           <title>Circular Design - Episódio 2</title>
-          <link>https://nonlinear.nyc/curva/008/</link>
-          <guid>https://nonlinear.nyc/curva/008/</guid>
+          <link>http://localhost:1313/curva/008/</link>
+          <guid>http://localhost:1313/curva/008/</guid>
           <pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre Circular Design, com exemplos de conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/008/"><img src="https://nonlinear.nyc/images/covers/008.jpg" alt="Circular Design - Episódio 2" /></a>
+            <a href="http://localhost:1313/curva/008/"><img src="http://localhost:1313/images/covers/008.jpg" alt="Circular Design - Episódio 2" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -150,12 +150,12 @@
         
         <item>
           <title>Permutation City - Episódio 1</title>
-          <link>https://nonlinear.nyc/curva/006/</link>
-          <guid>https://nonlinear.nyc/curva/006/</guid>
+          <link>http://localhost:1313/curva/006/</link>
+          <guid>http://localhost:1313/curva/006/</guid>
           <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre Permutation City, com conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/006/"><img src="https://nonlinear.nyc/images/covers/006.jpg" alt="Permutation City - Episódio 1" /></a>
+            <a href="http://localhost:1313/curva/006/"><img src="http://localhost:1313/images/covers/006.jpg" alt="Permutation City - Episódio 1" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
@@ -175,12 +175,12 @@
         
         <item>
           <title>Circular Design - Episódio 1</title>
-          <link>https://nonlinear.nyc/curva/007/</link>
-          <guid>https://nonlinear.nyc/curva/007/</guid>
+          <link>http://localhost:1313/curva/007/</link>
+          <guid>http://localhost:1313/curva/007/</guid>
           <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
           <description><![CDATA[
             <p>Template de episódio sobre Circular Design, com conteúdo variado para testar o layout.</p>
-            <a href="https://nonlinear.nyc/curva/007/"><img src="https://nonlinear.nyc/images/covers/007.jpg" alt="Circular Design - Episódio 1" /></a>
+            <a href="http://localhost:1313/curva/007/"><img src="http://localhost:1313/images/covers/007.jpg" alt="Circular Design - Episódio 1" /></a>
           ]]></description>
           <itunes:language>pt-BR</itunes:language>
 
