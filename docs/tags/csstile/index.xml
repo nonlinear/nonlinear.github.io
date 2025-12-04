@@ -6,7 +6,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Nonlinear</title>
-    <link>https://nonlinear.nyc/</link>
+    <link>http://localhost:1313/</link>
     <description>nonlinear projects</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
@@ -25,12 +25,12 @@
         
       <item>
         <title>Drawings</title>
-        <link>https://nonlinear.nyc/drawings-1/</link>
-        <guid>https://nonlinear.nyc/drawings-1/</guid>
+        <link>http://localhost:1313/drawings-1/</link>
+        <guid>http://localhost:1313/drawings-1/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>drawings across the years</p>
-          <a href="https://nonlinear.nyc/drawings-1/"><img src="https://nonlinear.nyc/images/covers/drawings-1.jpg" alt="Drawings" /></a>
+          <a href="http://localhost:1313/drawings-1/"><img src="http://localhost:1313/images/covers/drawings-1.jpg" alt="Drawings" /></a>
         ]]></description>
       </item>
       
@@ -45,12 +45,12 @@
         
       <item>
         <title>Drawings</title>
-        <link>https://nonlinear.nyc/drawings-2/</link>
-        <guid>https://nonlinear.nyc/drawings-2/</guid>
+        <link>http://localhost:1313/drawings-2/</link>
+        <guid>http://localhost:1313/drawings-2/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>drawings across the years</p>
-          <a href="https://nonlinear.nyc/drawings-2/"><img src="https://nonlinear.nyc/images/covers/drawings-2.jpg" alt="Drawings" /></a>
+          <a href="http://localhost:1313/drawings-2/"><img src="http://localhost:1313/images/covers/drawings-2.jpg" alt="Drawings" /></a>
         ]]></description>
       </item>
       
@@ -65,12 +65,12 @@
         
       <item>
         <title>Drawings</title>
-        <link>https://nonlinear.nyc/drawings-3/</link>
-        <guid>https://nonlinear.nyc/drawings-3/</guid>
+        <link>http://localhost:1313/drawings-3/</link>
+        <guid>http://localhost:1313/drawings-3/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>drawings across the years</p>
-          <a href="https://nonlinear.nyc/drawings-3/"><img src="https://nonlinear.nyc/images/covers/drawings-3.jpg" alt="Drawings" /></a>
+          <a href="http://localhost:1313/drawings-3/"><img src="http://localhost:1313/images/covers/drawings-3.jpg" alt="Drawings" /></a>
         ]]></description>
       </item>
       
@@ -85,12 +85,12 @@
         
       <item>
         <title>Live models</title>
-        <link>https://nonlinear.nyc/live-models/</link>
-        <guid>https://nonlinear.nyc/live-models/</guid>
+        <link>http://localhost:1313/live-models/</link>
+        <guid>http://localhost:1313/live-models/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>illustrations of live models (and sometimes the people drawing them)</p>
-          <a href="https://nonlinear.nyc/live-models/"><img src="https://nonlinear.nyc/images/covers/live-models.jpg" alt="Live models" /></a>
+          <a href="http://localhost:1313/live-models/"><img src="http://localhost:1313/images/covers/live-models.jpg" alt="Live models" /></a>
         ]]></description>
       </item>
       
@@ -105,12 +105,12 @@
         
       <item>
         <title>Other drawings</title>
-        <link>https://nonlinear.nyc/other-drawings/</link>
-        <guid>https://nonlinear.nyc/other-drawings/</guid>
+        <link>http://localhost:1313/other-drawings/</link>
+        <guid>http://localhost:1313/other-drawings/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>nature, art illustrations</p>
-          <a href="https://nonlinear.nyc/other-drawings/"><img src="https://nonlinear.nyc/images/covers/other-drawings.jpg" alt="Other drawings" /></a>
+          <a href="http://localhost:1313/other-drawings/"><img src="http://localhost:1313/images/covers/other-drawings.jpg" alt="Other drawings" /></a>
         ]]></description>
       </item>
       
@@ -125,12 +125,12 @@
         
       <item>
         <title>Street drawings</title>
-        <link>https://nonlinear.nyc/street-drawings/</link>
-        <guid>https://nonlinear.nyc/street-drawings/</guid>
+        <link>http://localhost:1313/street-drawings/</link>
+        <guid>http://localhost:1313/street-drawings/</guid>
         <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>Drawing strangers on the street is the most rewarding kind of drawing.</p>
-          <a href="https://nonlinear.nyc/street-drawings/"><img src="https://nonlinear.nyc/images/covers/street-drawings.jpg" alt="Street drawings" /></a>
+          <a href="http://localhost:1313/street-drawings/"><img src="http://localhost:1313/images/covers/street-drawings.jpg" alt="Street drawings" /></a>
         ]]></description>
       </item>
       
@@ -145,8 +145,8 @@
         
       <item>
         <title>CSS tile patterns</title>
-        <link>https://nonlinear.nyc/csstile/</link>
-        <guid>https://nonlinear.nyc/csstile/</guid>
+        <link>http://localhost:1313/csstile/</link>
+        <guid>http://localhost:1313/csstile/</guid>
         <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>A gradient-based CSS pattern mixin set (formerly vectortiles). Add [csstile.scss](https://github.com/***REMOVED***/***REMOVED***.github.io/blob/main/assets/css/vendor/csstile.scss) to your pipeline and follow instructions.
@@ -156,7 +156,7 @@
 Are you interested in creative code explorations? [Join us on
 signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
 </p>
-          <a href="https://nonlinear.nyc/csstile/"><img src="https://nonlinear.nyc/images/covers/csstile.jpg" alt="CSS tile patterns" /></a>
+          <a href="http://localhost:1313/csstile/"><img src="http://localhost:1313/images/covers/csstile.jpg" alt="CSS tile patterns" /></a>
         ]]></description>
       </item>
       
@@ -171,12 +171,12 @@ signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEh
         
       <item>
         <title>SVG coloring</title>
-        <link>https://nonlinear.nyc/svg-coloring/</link>
-        <guid>https://nonlinear.nyc/svg-coloring/</guid>
+        <link>http://localhost:1313/svg-coloring/</link>
+        <guid>http://localhost:1313/svg-coloring/</guid>
         <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>Demonstration of coloring SVG images via CSS"</p>
-          <a href="https://nonlinear.nyc/svg-coloring/"><img src="https://nonlinear.nyc/images/covers/svg-coloring.jpg" alt="SVG coloring" /></a>
+          <a href="http://localhost:1313/svg-coloring/"><img src="http://localhost:1313/images/covers/svg-coloring.jpg" alt="SVG coloring" /></a>
         ]]></description>
       </item>
       
@@ -191,12 +191,12 @@ signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEh
         
       <item>
         <title>SVG filters and masks</title>
-        <link>https://nonlinear.nyc/filters-masks/</link>
-        <guid>https://nonlinear.nyc/filters-masks/</guid>
+        <link>http://localhost:1313/filters-masks/</link>
+        <guid>http://localhost:1313/filters-masks/</guid>
         <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>Demonstration of coloring SVG images via CSS"</p>
-          <a href="https://nonlinear.nyc/filters-masks/"><img src="https://nonlinear.nyc/images/covers/filters-masks.jpg" alt="SVG filters and masks" /></a>
+          <a href="http://localhost:1313/filters-masks/"><img src="http://localhost:1313/images/covers/filters-masks.jpg" alt="SVG filters and masks" /></a>
         ]]></description>
       </item>
       
@@ -211,12 +211,12 @@ signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEh
         
       <item>
         <title>Some dudes</title>
-        <link>https://nonlinear.nyc/dudes/</link>
-        <guid>https://nonlinear.nyc/dudes/</guid>
+        <link>http://localhost:1313/dudes/</link>
+        <guid>http://localhost:1313/dudes/</guid>
         <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>procreate illustrations of scruffy dudes</p>
-          <a href="https://nonlinear.nyc/dudes/"><img src="https://nonlinear.nyc/images/covers/dudes.jpg" alt="Some dudes" /></a>
+          <a href="http://localhost:1313/dudes/"><img src="http://localhost:1313/images/covers/dudes.jpg" alt="Some dudes" /></a>
         ]]></description>
       </item>
       
@@ -228,12 +228,12 @@ signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEh
         
       <item>
         <title>Some dudes</title>
-        <link>https://nonlinear.nyc/test/</link>
-        <guid>https://nonlinear.nyc/test/</guid>
+        <link>http://localhost:1313/test/</link>
+        <guid>http://localhost:1313/test/</guid>
         <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
         <description><![CDATA[
           <p>testing all objects</p>
-          <a href="https://nonlinear.nyc/test/"><img src="https://nonlinear.nyc/images/covers/testing-example.jpg" alt="Some dudes" /></a>
+          <a href="http://localhost:1313/test/"><img src="http://localhost:1313/images/covers/testing-example.jpg" alt="Some dudes" /></a>
         ]]></description>
       </item>
       
