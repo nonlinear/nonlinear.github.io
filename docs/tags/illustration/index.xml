@@ -5,9 +5,9 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Nonlinear – Curva</title>
-    <link>https://***REMOVED***.nyc/curva/</link>
-    <description>Podcast Curva</description>
+    <title>Nonlinear</title>
+    <link>https://***REMOVED***.nyc/</link>
+    <description>nonlinear projects</description>
     <language>pt-BR</language>
     <itunes:author>Nicholas Frota</itunes:author>
     <itunes:explicit>no</itunes:explicit>
