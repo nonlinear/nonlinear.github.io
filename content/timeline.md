@@ -25,7 +25,7 @@ timeline
 
 ```mermaid
 timeline
-  title GitHub Commit History (***REMOVED***.github.io)
+  title GitHub Commit History (nonlinear.github.io)
   2025-10-04 url #
   2025-10-04 nav tooltip
   2025-10-04 remove speeddial layout

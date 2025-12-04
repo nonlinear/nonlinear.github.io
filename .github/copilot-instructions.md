@@ -1,4 +1,4 @@
-# Copilot Instructions for the ***REMOVED***.github.io Repository
+# Copilot Instructions for the nonlinear.github.io Repository
 
 This repository is a Hugo-powered static site for personal knowledge management. It is content-first, with most logic and structure in markdown and HTML files, and a few configuration assets. Follow these guidelines to be immediately productive as an AI coding agent:
 
