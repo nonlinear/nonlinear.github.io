@@ -45,7 +45,7 @@ I am a Brazilian-American UX designer working in scientific publishing for more 
 
 ### Contact
 
-<!-- - [RSS feed](https://***REMOVED***.nyc/index.xml){:rel="alternate" type="application/rss+xml"} -->
+<!-- - [RSS feed](https://nonlinear.nyc/index.xml){:rel="alternate" type="application/rss+xml"} -->
 
 - [Set an event to talk commons](https://zcal.co/***REMOVED***/commons)
 - [Set an event to chat](https://zcal.co/***REMOVED***/chat)
