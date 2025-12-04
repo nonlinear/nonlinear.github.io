@@ -15,12 +15,12 @@ def get_unique_filename(path):
     """Generate unique filename by adding -1, -2, etc. if file exists"""
     if not path.exists():
         return path
-    
+
     stem = path.stem
     suffix = path.suffix
     parent = path.parent
     counter = 1
-    
+
     while True:
         new_path = parent / f"{stem}-{counter}{suffix}"
         if not new_path.exists():
@@ -51,41 +51,41 @@ def convert_video_to_webp(video_path, output_path):
 
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    
+
     # Find all video files
     video_files = list(SOURCE_DIR.glob("*.mov")) + list(SOURCE_DIR.glob("*.MOV")) + \
                   list(SOURCE_DIR.glob("*.mp4")) + list(SOURCE_DIR.glob("*.MP4"))
-    
+
     if not video_files:
         print("No video files found in", SOURCE_DIR)
         return
-    
+
     total = len(video_files)
     print(f"Found {total} video file(s) to process\n")
-    
+
     for idx, video_path in enumerate(video_files, 1):
         print(f"[{idx}/{total}] Processing: {video_path.name}")
-        
+
         # Generate output paths
         base_name = re.sub(r'\s+', '-', video_path.stem.lower())
         webp_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.webp")
         jpeg_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.jpg")
-        
+
         try:
             # Convert to WebP
             print(f"  → Converting to WebP: {webp_path.name}")
             convert_video_to_webp(video_path, webp_path)
-            
+
             # Extract JPEG thumbnail
             print(f"  → Extracting JPEG: {jpeg_path.name}")
             extract_first_frame_jpeg(video_path, jpeg_path)
-            
+
             print(f"  ✅ Done\n")
-            
+
         except subprocess.CalledProcessError as e:
             print(f"  ❌ Error: {e}\n")
             continue
-    
+
     print(f"✨ Processed {total} file(s)")
 
 if __name__ == "__main__":

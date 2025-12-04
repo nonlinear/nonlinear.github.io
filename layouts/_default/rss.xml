@@ -5,9 +5,9 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>{{ .Site.Title | htmlEscape }} – Curva</title>
-    <link>{{ .Site.BaseURL | htmlEscape }}curva/</link>
-    <description>{{ .Site.Params.description | default "Podcast Curva" | htmlEscape }}</description>
+    <title>{{ .Site.Title | htmlEscape }}</title>
+    <link>{{ .Site.BaseURL | htmlEscape }}</link>
+    <description>{{ .Site.Params.description | default "nonlinear projects" | htmlEscape }}</description>
     <language>pt-BR</language>
     <itunes:author>{{ .Site.Params.author | htmlEscape }}</itunes:author>
     <itunes:explicit>no</itunes:explicit>
@@ -44,8 +44,8 @@
     {{ else }}
       <item>
         <title>No posts yet</title>
-        <link>{{ .Site.BaseURL | htmlEscape }}curva/</link>
-        <guid>{{ .Site.BaseURL | htmlEscape }}curva/#noposts</guid>
+        <link>{{ .Site.BaseURL | htmlEscape }}</link>
+        <guid>{{ .Site.BaseURL | htmlEscape }}#noposts</guid>
         <pubDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
         <description>No posts available.</description>
       </item>
