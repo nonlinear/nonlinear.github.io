@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nonlinear.nyc/cryboy/</loc>
+    <lastmod>2025-12-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nonlinear.nyc/drawings-1/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -48,9 +51,6 @@
     <lastmod>2025-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nonlinear.nyc/hedgehog/</loc>
-    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nonlinear.nyc/svg-coloring/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nonlinear.nyc/filters-masks/</loc>
@@ -114,12 +114,6 @@
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nonlinear.nyc/dudes/</loc>
-    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nonlinear.nyc/test/</loc>
-    <lastmod>2025-07-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nonlinear.nyc/testeprovictor/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nonlinear.nyc/timeline/</loc>
