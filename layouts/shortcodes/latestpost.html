@@ -1,0 +1,6 @@
+{{ $filtered := where .Site.RegularPages "Params.type" "ne" "redirect" }}
+{{ $latest := index (sort $filtered "Date" "desc") 0 }}
+{{ if $latest }}
+{{ $link := printf "[latest: %s](%s)" $latest.Title $latest.RelPermalink }}
+{{ $link | markdownify }}
+{{ end }}
