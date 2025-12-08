@@ -43,6 +43,11 @@ I am a Brazilian-American UX designer working in scientific publishing for more 
 <!-- - [Live models](/live-models)
 - [Other drawings](/other-drawings) -->
 
+### Creative code
+
+- {{< latestpost >}}
+- [posts on #creativecode](https://social.praxis.nyc/tags/creativecode)
+
 ### Contact
 
 <!-- - [RSS feed](https://nonlinear.nyc/index.xml){:rel="alternate" type="application/rss+xml"} -->
