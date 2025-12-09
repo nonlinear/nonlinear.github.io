@@ -1,5 +1,15 @@
 # Project Phase Detection & Guidance System
 
+## Registro de Histórico (para humanos)
+
+- Após cada etapa ou decisão importante, registre de forma breve e compreensível o que foi feito, objetivos, ideias e decisões relevantes.
+- O registro deve ser voltado para humanos, não um log técnico detalhado.
+- Se não for especificado um arquivo de histórico, pergunte ao usuário qual arquivo deseja usar para armazenar o histórico.
+- Exemplos de registro:
+  - "Finalizamos a fase de planejamento e definimos os próximos passos."
+  - "Ideia: explorar integração com ferramenta X."
+  - "Objetivo: melhorar a comunicação entre equipes."
+
 ## YOUR MISSION
 
 When this prompt is activated, you MUST AUTOMATICALLY:
