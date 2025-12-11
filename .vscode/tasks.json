@@ -15,36 +15,6 @@
 			"presentation": {
 				"panel": "new"
 			}
-		},
-		{
-			"label": "🔄 sync comics",
-			"type": "shell",
-			"command": "python3 .gyithub/scripts/sync_comics.py",
-			"group": "build"
-		},
-		{
-			"label": "🔄 sync inspiration images",
-			"type": "shell",
-			"command": "python3 .github/scripts/sync_inspiration_images.py",
-			"group": "build"
-		}
-		,
-		{
-			"label": "🔄 sync literature",
-			"type": "shell",
-			"command": "python3 .github/scripts/sync_literature.py",
-			"group": "build"
-		}
-		,
-		{
-			"label": "🔄 sync rot airtable",
-			"type": "shell",
-			"command": "node .github/scripts/sync_rot_airtable.js",
-			"group": "build",
-			"presentation": {
-				"reveal": "always"
-			},
-			"problemMatcher": []
 		}
 	]
 }
