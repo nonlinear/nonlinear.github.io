@@ -1,64 +1,35 @@
-# [nonlinear.nyc](https://nonlinear.nyc)
+[nonlinear.nyc](https://nonlinear.nyc) is a personal site for Nicholas Frota, built with [Hugo](https://gohugo.io/) for knowledge management, creative coding experiments, and digital publishing. It serves as a content-first platform for notes, illustrations, podcasts, and interactive web features, with a modular structure for rapid prototyping and documentation.
 
----
+Repository: [nonlinear/nonlinear.github.io](https://github.com/nonlinear/nonlinear.github.io)
 
-# Todo
+View [TODO](https://github.com/nonlinear/nonlinear.github.io/blob/main/TODO.md), [done](https://github.com/nonlinear/nonlinear.github.io/blob/main/done.md)
 
-## Creative code
+## Architecture
 
-- [ ] Warning/nudge logic (hover/click for more, dependencies expected, etc)
-- [ ] Mailing list, Email Octopus
+- **[content/](https://github.com/nonlinear/nonlinear.github.io/tree/main/content)**: Markdown and HTML files organized by topic and type (e.g., curva podcast, drawings, experiments).
+- **[assets/](https://github.com/nonlinear/nonlinear.github.io/tree/main/assets)** & **[static/](https://github.com/nonlinear/nonlinear.github.io/tree/main/static)**: CSS, JS, images, and fonts for site styling and interactivity.
+- **Site Build**: [Hugo](https://gohugo.io/) builds the site from `content/` and outputs to [docs/](https://github.com/nonlinear/nonlinear.github.io/tree/main/docs) for GitHub Pages publishing.
+- **[config/](https://github.com/nonlinear/nonlinear.github.io/tree/main/config)**: TOML files for site settings.
+- **[data/](https://github.com/nonlinear/nonlinear.github.io/tree/main/data)**: YAML files for tags and podcast metadata.
+- **[layouts/](https://github.com/nonlinear/nonlinear.github.io/tree/main/layouts)**: Hugo templates, shortcodes, and partials for page rendering.
+- **[.github/scripts/](https://github.com/nonlinear/nonlinear.github.io/tree/main/.github/scripts)**: Python scripts for syncing media, comics, and inspiration images.
 
-## Curva 
+## Key Components
 
-- [ ] Find screenflow equivalent
-- [ ] Review curva RSS feed
-- [x] Find zencastr or similar
-- [ ] AWS for audio files
-- [x] Test curva filter
+- **[content/](https://github.com/nonlinear/nonlinear.github.io/tree/main/content)**: Main source of posts, notes, and experiments
+- **[assets/](https://github.com/nonlinear/nonlinear.github.io/tree/main/assets)** & **[static/](https://github.com/nonlinear/nonlinear.github.io/tree/main/static)**: Styling, images, and JS for UI/UX
+- **[layouts/](https://github.com/nonlinear/nonlinear.github.io/tree/main/layouts)**: Hugo templates, shortcodes, and partials
+- **[data/](https://github.com/nonlinear/nonlinear.github.io/tree/main/data)**: YAML files for tags and podcast metadata
+- **[config/](https://github.com/nonlinear/nonlinear.github.io/tree/main/config)**: Site-wide configuration (config.toml)
+- **[docs/](https://github.com/nonlinear/nonlinear.github.io/tree/main/docs)**: Build output for GitHub Pages
+- **[.github/scripts/](https://github.com/nonlinear/nonlinear.github.io/tree/main/.github/scripts)**: Automation scripts for media and asset management
 
----
+## Technologies Used
 
-# Done
-
-## September 2025
-
-🎨 [cleaning up speeddial, starting anew](https://github.com/nonlinear/nonlinear.github.io/commit/0f67835)  
-    Major refactor of speeddial logic and styles in `assets/css/speeddial.scss`, `content/speeddial.html`, `static/js/script/speeddial.js`
-
-🎨 [consolidating layouts](https://github.com/nonlinear/nonlinear.github.io/commit/48d44f1)  
-    Merged illos layout into default, updated `layouts/partials/single.html`, removed `layouts/illos/single.html`, backup in `layouts/illos/single.html.bak`
-
-📄 [readme](https://github.com/nonlinear/nonlinear.github.io/commit/9812dfb)  
-    Updated documentation and changelog in `readme.md`, affected: `content/speeddial.html`, `layouts/partials/load-js.html`, `static/js/script/illos.js`
-
-🎨 [js from slug or type](https://github.com/nonlinear/nonlinear.github.io/commit/a2f567d)  
-    Refactored JS loader to use slug/type logic in `layouts/partials/load-js.html`  
-    Updated post content files: `content/3dcarousel.html`, `content/carousel.html`, `content/test.md`
-
-🎨 [back to js-](https://github.com/nonlinear/nonlinear.github.io/commit/a2f567d)  
-    Refactored JS loader to use slug/type logic in `layouts/partials/load-js.html`  
-    Updated post content files for new JS logic
-
-📄 [redoing jsLib and jsScript and TODO on readme](https://github.com/nonlinear/nonlinear.github.io/commit/17d5165)  
-    Updated JS loader logic in `layouts/partials/load-js.html`  
-    Updated TODOs in `readme.md`  
-    Added/updated scripts in `content/speeddial.html`
-
-🐞 [rss feeds](https://github.com/nonlinear/nonlinear.github.io/commit/02c0970)  
-    Improved RSS logic in `layouts/_default/rss.xml` and `layouts/curva/rss.xml`  
-    Updated `content/test.md`
-
-🎨 [cover conditions](https://github.com/nonlinear/nonlinear.github.io/commit/344932b)  
-    Refined cover image selection logic in `layouts/partials/head.html`  
-    Updated `content/dudes.md`
-
-🎨 [illos og:image default](https://github.com/nonlinear/nonlinear.github.io/commit/523d1ef)  
-    Added default og:image logic for illos in `layouts/partials/head.html`
-
-🐞 [rss feed fix](https://github.com/nonlinear/nonlinear.github.io/commit/a870824)  
-    Fixed RSS output format in `config.toml`  
-    Updated RSS templates
-
-📄 [image priority comment](https://github.com/nonlinear/nonlinear.github.io/commit/d201d0a)  
-    Added documentation comment for image priority in `layouts/partials/head.html`
+- [Hugo](https://gohugo.io/) (static site generator)
+- Markdown & HTML
+- SCSS/CSS
+- JavaScript
+- Python (automation scripts)
+- YAML/TOML (configuration)
+- Git & GitHub Pages
