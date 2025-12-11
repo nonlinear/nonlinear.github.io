@@ -12,10 +12,10 @@ const OUTPUT_DIR = path.join(__dirname, '..', '..', 'rot', 'airtable');
 
 // Table configs: { name, baseId, tableId }
 const TABLES = [
-  { name: 'rolodex', baseId: 'appoLxmYQNacb9kYG', tableId: 'tbl6hjKmWrTkxDjCm' },
-  { name: 'feedback', baseId: 'appnx6c8gKHwsIFgq', tableId: 'tblMtJiBiC19OXNoT' },
-  { name: 'classifieds', baseId: 'app1NFJNAu8SCkWWJ', tableId: 'tbl8xoVhFQrJOeuSJ' },
-  { name: 'content-tracker', baseId: 'appPbEum8wza4hcEc', tableId: 'tblHncmZVyKkK7PFq' },
+  { name: 'rolodex', baseId: process.env.AIRTABLE_BASEID_ROLODEX, tableId: process.env.AIRTABLE_TABLEID_ROLODEX },
+  { name: 'feedback', baseId: process.env.AIRTABLE_BASEID_FEEDBACK, tableId: process.env.AIRTABLE_TABLEID_FEEDBACK },
+  { name: 'classifieds', baseId: process.env.AIRTABLE_BASEID_CLASSIFIEDS, tableId: process.env.AIRTABLE_TABLEID_CLASSIFIEDS },
+  { name: 'content-tracker', baseId: process.env.AIRTABLE_BASEID_CONTENT_TRACKER, tableId: process.env.AIRTABLE_TABLEID_CONTENT_TRACKER },
 ];
 
 if (!AIRTABLE_TOKEN) {
