@@ -1,5 +1,5 @@
 ---
-title: Live models
+title: Live models, 1
 description: illustrations of live models (and sometimes the people drawing them)
 status: live
 style:
