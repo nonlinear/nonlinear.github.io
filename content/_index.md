@@ -36,12 +36,7 @@ I am a Brazilian-American UX designer working in scientific publishing for more 
 
 ### Some illustrations
 
-- [Drawings, 1](/drawings-1)
-- [Drawings, 2](/drawings-2)
-- [Drawings, 3](/drawings-3)
-- [Street drawings](/street-drawings)
-<!-- - [Live models](/live-models)
-- [Other drawings](/other-drawings) -->
+{{< illos >}}
 
 ### Creative code
 
