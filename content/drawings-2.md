@@ -22,7 +22,6 @@ illos:
   - espanola
   - wary
   - cap
-  - rural
   - observing
   - pinoy
 date: 2025-12-03
