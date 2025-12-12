@@ -22,5 +22,6 @@ illos:
   - snarky
   - rough
   - spanish
+  - bluedude
 date: 2025-12-03
 ---
