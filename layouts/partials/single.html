@@ -10,13 +10,28 @@
                         {{ .Content }}
                         {{ range .Params.illos }}
                         <div class="illo-wrapper">
-                            <img class="zoom-img"
-                                    src="{{ printf "images/illos/%s.jpg" . | absURL }}"
-                                    data-static="{{ printf "images/illos/%s.jpg" . | absURL }}"
-                                    data-anim="{{ printf "images/illos/%s.webp" . | absURL }}"
+                            {{ $base := printf "images/illos/%s" . }}
+                            {{ $jpg := printf "%s.jpg" $base }}
+                            {{ $png := printf "%s.png" $base }}
+                            {{ if (fileExists (printf "static/%s" $jpg)) }}
+                                <img class="zoom-img"
+                                    src="{{ $jpg | absURL }}"
+                                    data-static="{{ $jpg | absURL }}"
+                                    data-anim="{{ printf "%s.webp" $base | absURL }}"
                                     alt="{{ . }}"
                                     style="width: 100%; height: auto;"
                                 />
+                            {{ else if (fileExists (printf "static/%s" $png)) }}
+                                <img class="zoom-img"
+                                    src="{{ $png | absURL }}"
+                                    data-static="{{ $png | absURL }}"
+                                    data-anim="{{ printf "%s.webp" $base | absURL }}"
+                                    alt="{{ . }}"
+                                    style="width: 100%; height: auto;"
+                                />
+                            {{ else }}
+                                <img class="zoom-img" src="" alt="Missing image: {{ . }}" style="width: 100%; height: auto; border: 2px solid red;" />
+                            {{ end }}
                         </div>
                         {{ end }}
                     {{ else }}

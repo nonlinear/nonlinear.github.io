@@ -16,6 +16,7 @@ illos:
   - drag
   - illustrator-1
   - illustrator-2
+  - naked
   - illustrator-3
 date: 2025-12-03
 ---
