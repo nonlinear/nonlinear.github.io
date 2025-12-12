@@ -1,6 +1,24 @@
-## September 2025
-
 ## December 2025
+
+🔧 [CNAME](https://github.com/nonlinear/nonlinear.github.io/commit/d55510f2): Added or updated the CNAME file in the assets directory for domain configuration. (2025-12-04)
+
+🔧 [dude as redirect](https://github.com/nonlinear/nonlinear.github.io/commit/52a73f91): Changed `dudes.md` to a redirect, updating tags and sitemap accordingly. (2025-12-07)
+
+🎨 [less experiments](https://github.com/nonlinear/nonlinear.github.io/commit/903c149d): Reduced the number of experiments in the codebase, focusing on core features. (2025-12-07)
+
+🎨 [cryboy](https://github.com/nonlinear/nonlinear.github.io/commit/65a8878b): Added new SVG and HTML assets for the “cryboy” experiment, including multiple vector variations. (2025-12-07)
+
+🎨 [feat: add Python automation scripts](https://github.com/nonlinear/nonlinear.github.io/commit/743ef03f): Added new Python scripts for automation: syncing comics, settings, and posting new illustrations. (2025-12-04)
+
+🔧 [fix: restore CNAME with correct domain](https://github.com/nonlinear/nonlinear.github.io/commit/9b93bbc5): Fixed the CNAME file to ensure the custom domain works for GitHub Pages. (2025-12-04)
+
+🔧 [dedupe files](https://github.com/nonlinear/nonlinear.github.io/commit/96595896): Further deduplication and cleanup of scripts and image assets. (2025-12-05)
+
+🔧 [dedupe](https://github.com/nonlinear/nonlinear.github.io/commit/e1f4bd9c): Deduplicated image and asset files, reducing redundancy in the image directories. (2025-12-05)
+
+🔧 [remove removed](https://github.com/nonlinear/nonlinear.github.io/commit/f892ee2c): Cleaned up deprecated files and configuration, removing unused or obsolete content and tags. (2025-12-04)
+
+🔧 [fix: restore nonlinear.nyc domain from **_REMOVED_**](https://github.com/nonlinear/nonlinear.github.io/commit/1f363676): Restored the main domain and updated multiple content and index files to ensure the site points to the correct address. (2025-12-04)
 
 🔧 [latestpost Hugo shortcode](https://github.com/nonlinear/nonlinear.github.io/commit/DEC2025)
 Created and refined `layouts/shortcodes/latestpost.html` to output a Markdown/HTML link to the latest post, excluding posts with `type: redirect`. - Filtering logic: uses Hugo `where` to exclude any post with `type: redirect` in frontmatter (e.g. `type: redirect` in `content/dudes.md`, `content/sketches-1.html`, `content/latest.html`). - Sorts by `Date` descending. - Renders link as HTML using `markdownify`. - Fixes: empty link text (missing titles), raw Markdown output, inclusion of redirects. - See TODO for missing titles and testing steps.
@@ -44,3 +62,33 @@ Updated RSS templates
 
 📄 [image priority comment](https://github.com/nonlinear/nonlinear.github.io/commit/d201d0a)
 Added documentation comment for image priority in `layouts/partials/head.html`
+
+🔧 [fix: restore nonlinear.nyc domain from **_REMOVED_**](https://github.com/nonlinear/nonlinear.github.io/commit/1f363676)
+Restored the main domain and updated multiple content and index files to ensure the site points to the correct address.
+
+🔧 [remove removed](https://github.com/nonlinear/nonlinear.github.io/commit/f892ee2c)
+Cleaned up deprecated files and configuration, removing unused or obsolete content and tags.
+
+🔧 [dedupe](https://github.com/nonlinear/nonlinear.github.io/commit/e1f4bd9c)
+Deduplicated image and asset files, reducing redundancy in the image directories.
+
+🔧 [dedupe files](https://github.com/nonlinear/nonlinear.github.io/commit/96595896)
+Further deduplication and cleanup of scripts and image assets.
+
+🔧 [fix: restore CNAME with correct domain](https://github.com/nonlinear/nonlinear.github.io/commit/9b93bbc5)
+Fixed the CNAME file to ensure the custom domain works for GitHub Pages.
+
+🎨 [feat: add Python automation scripts](https://github.com/nonlinear/nonlinear.github.io/commit/743ef03f)
+Added new Python scripts for automation: syncing comics, settings, and posting new illustrations.
+
+🎨 [cryboy](https://github.com/nonlinear/nonlinear.github.io/commit/65a8878b)
+Added new SVG and HTML assets for the “cryboy” experiment, including multiple vector variations.
+
+🎨 [less experiments](https://github.com/nonlinear/nonlinear.github.io/commit/903c149d)
+Reduced the number of experiments in the codebase, focusing on core features.
+
+🔧 [dude as redirect](https://github.com/nonlinear/nonlinear.github.io/commit/52a73f91)
+Changed `dudes.md` to a redirect, updating tags and sitemap accordingly.
+
+🔧 [CNAME](https://github.com/nonlinear/nonlinear.github.io/commit/d55510f2)
+Added or updated the CNAME file in the assets directory for domain configuration.
