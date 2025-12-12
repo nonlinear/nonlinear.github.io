@@ -9,9 +9,11 @@ tags:
   - illustration
 illos:
   - model-1
+  - nonbi
   - model-2
   - model-3
   - livemodel-1
+  - drag
   - illustrator-1
   - illustrator-2
   - illustrator-3

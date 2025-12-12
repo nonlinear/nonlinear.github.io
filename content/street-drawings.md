@@ -17,6 +17,8 @@ illos:
   - street-7
   - street-8
   - street-9
+  - jacket
+  - boypack
   - street-11
   - street-12
   - street-13-1

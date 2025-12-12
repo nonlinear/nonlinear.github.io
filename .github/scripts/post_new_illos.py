@@ -63,6 +63,7 @@ def main():
     total = len(video_files)
     print(f"Found {total} video file(s) to process\n")
 
+    new_base_names = []
     for idx, video_path in enumerate(video_files, 1):
         print(f"[{idx}/{total}] Processing: {video_path.name}")
 
@@ -80,6 +81,16 @@ def main():
             print(f"  → Extracting JPEG: {jpeg_path.name}")
             extract_first_frame_jpeg(video_path, jpeg_path)
 
+            # Add base name to list for post addition
+            new_base_names.append(base_name)
+
+            # Delete original video file
+            try:
+                video_path.unlink()
+                print(f"  🗑️ Deleted source: {video_path.name}")
+            except Exception as del_err:
+                print(f"  ⚠️ Could not delete {video_path.name}: {del_err}")
+
             print(f"  ✅ Done\n")
 
         except subprocess.CalledProcessError as e:
@@ -87,6 +98,10 @@ def main():
             continue
 
     print(f"✨ Processed {total} file(s)")
+    if new_base_names:
+        print("\nNew files (add to posts):")
+        for name in new_base_names:
+            print(f"- {name}")
 
 if __name__ == "__main__":
     main()
