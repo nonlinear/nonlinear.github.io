@@ -7,7 +7,7 @@
 <ul>
 {{ $pages := where .Site.RegularPages "Params.status" "live" }}
 {{ $filtered := where $pages "Params.style" "intersect" (slice "illos") }}
-{{ $sorted := sort $filtered "Date" "desc" }}
+{{ $sorted := sort $filtered "Title" }}
 {{ range $sorted }}
   <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 {{ end }}

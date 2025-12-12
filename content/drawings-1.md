@@ -1,5 +1,5 @@
 ---
-title: Drawings, 1
+title: Photo drawings, 1
 description: drawings across the years
 status: live
 style:
