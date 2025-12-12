@@ -1,7 +1,7 @@
 ---
 title: Other drawings
 description: nature, art illustrations
-status: live
+status: draft
 style:
   - illos
 tags:
