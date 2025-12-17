@@ -36,7 +36,7 @@ I am a Brazilian-American UX designer working in scientific publishing for more 
 
 ### Some illustrations
 
-{{< illos >}}
+{{< illustrations >}}
 
 ### Creative code
 

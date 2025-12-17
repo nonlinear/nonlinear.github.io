@@ -1,0 +1,44 @@
+---
+title: 3D showcase
+description: Example of a 3D showcase
+status: draft
+aliases:
+  - /volume/
+date: 2025-10-23
+---
+<div id="viewer" style="width: 400px; height: 400px;"></div>
+<script type="module">
+  import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+  import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+  import { GLTFLoader } from 'https://unpkg.com/three/examples/jsm/loaders/GLTFLoader.js';
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(400, 400);
+  document.getElementById('viewer').appendChild(renderer.domElement);
+
+  const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+  scene.add(light);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enablePan = false;
+  controls.enableZoom = false;
+  controls.minPolarAngle = Math.PI / 2;
+  controls.maxPolarAngle = Math.PI / 2;
+
+  const loader = new GLTFLoader();
+  loader.load('/3D/duck.glb', function(gltf) {
+    scene.add(gltf.scene);
+  }, undefined, function(error) {
+    console.error(error);
+  });
+
+  camera.position.set(0, 0, 2);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+</script>
