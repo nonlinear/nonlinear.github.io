@@ -12,7 +12,14 @@
   {{ $illos := .Params.illos }}
   {{ $shuffled := shuffle $illos }}
   {{ $pick := index $shuffled 0 }}
-  {{ $img := printf "/images/illos/%s.jpg" $pick }}
+  {{ $jpg := printf "static/images/illos/%s.jpg" $pick }}
+  {{ $png := printf "static/images/illos/%s.png" $pick }}
+  {{ $img := "" }}
+  {{ if (fileExists $jpg) }}
+    {{ $img = printf "/images/illos/%s.jpg" $pick }}
+  {{ else if (fileExists $png) }}
+    {{ $img = printf "/images/illos/%s.png" $pick }}
+  {{ end }}
   <a href="{{ .RelPermalink }}" class="preview" style="background-image: url('{{ $img }}')">
   </a>
 {{ end }}
