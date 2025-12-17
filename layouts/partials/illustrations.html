@@ -1,0 +1,14 @@
+<div class="illustration-preview">
+{{ $site := .Site | default . }}
+{{ $pages := where $site.RegularPages "Params.status" "live" }}
+{{ $filtered := where $pages "File.Dir" "eq" "illustrations/" }}
+{{ $sorted := sort $filtered "Title" }}
+{{ range $sorted }}
+  {{ $illos := .Params.illos }}
+  {{ $shuffled := shuffle $illos }}
+  {{ $pick := index $shuffled 0 }}
+  {{ $img := printf "/images/illos/%s.jpg" $pick }}
+  <a href="{{ .RelPermalink }}" class="preview" style="background-image: url('{{ $img }}')">
+  </a>
+{{ end }}
+</div>

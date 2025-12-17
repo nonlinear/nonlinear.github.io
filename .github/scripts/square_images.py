@@ -30,21 +30,20 @@ def crop_to_square(img):
     return img.crop((left, top, right, bottom))
 
 def main():
-    # Find all JPG and PNG files
-    image_files = list(ILLOS_DIR.glob("*.jpg")) + list(ILLOS_DIR.glob("*.png"))
+    jpg_files = list(ILLOS_DIR.glob("*.jpg"))
 
-    if not image_files:
-        print("No JPG or PNG files found in", ILLOS_DIR)
+    if not jpg_files:
+        print("No JPG files found in", ILLOS_DIR)
         return
 
     non_square = []
 
     # First pass: detect non-square images
     print("🔍 Scanning for non-square images...\n")
-    for img_path in image_files:
-        img = Image.open(img_path)
+    for jpg_path in jpg_files:
+        img = Image.open(jpg_path)
         if not is_square(img):
-            non_square.append((img_path, img.width, img.height))
+            non_square.append((jpg_path, img.width, img.height))
 
     if not non_square:
         print("✅ All images are already square!")
@@ -62,15 +61,11 @@ def main():
 
     # Second pass: crop images
     print("\n✂️  Cropping images...\n")
-    for img_path, w, h in non_square:
-        img = Image.open(img_path)
+    for jpg_path, w, h in non_square:
+        img = Image.open(jpg_path)
         cropped = crop_to_square(img)
-        # Save with appropriate format
-        if img_path.suffix.lower() == ".jpg" or img_path.suffix.lower() == ".jpeg":
-            cropped.save(img_path, quality=95)
-        elif img_path.suffix.lower() == ".png":
-            cropped.save(img_path)
-        print(f"  ✅ {img_path.name}: {w}x{h} → {cropped.width}x{cropped.height}")
+        cropped.save(jpg_path, quality=95)
+        print(f"  ✅ {jpg_path.name}: {w}x{h} → {cropped.width}x{cropped.height}")
 
     print(f"\n✨ Cropped {len(non_square)} image(s) to square")
 

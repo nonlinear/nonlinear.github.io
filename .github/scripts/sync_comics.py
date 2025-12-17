@@ -1,3 +1,4 @@
+from send2trash import send2trash
 #!/usr/bin/env python3
 import os
 import re
@@ -71,15 +72,18 @@ def prepare_comics():
 
         print(f"\n📖 Processing: '{filename}'")
 
-        # Remove " (*)" from name
+        # Remove " (*)" from name (mas mantém número do capítulo no arquivo)
         new_filename = re.sub(r'\s*\(.*?\)', '', filename)
 
-        # Extract base name
-        match = re.match(r'^(.+?)(?:\s*(?:Book\s*|Part\s*)?\d+)?\.[^.]+$', new_filename)
+        # Remove extensão para manipular o nome base
+        name_wo_ext = re.sub(r'\.[^.]+$', '', new_filename)
+        # Remove sufixos como ' v01', ' v1', ' v02' do final do nome base
+        base_name = re.sub(r'\s+v\d{1,2}$', '', name_wo_ext, flags=re.IGNORECASE)
+        # Remove número do capítulo do final do nome base (ex: ' 014', ' 13')
+        base_name = re.sub(r'\s+\d{1,4}$', '', base_name)
 
-        if match:
-            base_name = match.group(1).strip()
-            folder_path = SYNC_FOLDER / base_name
+        if base_name:
+            folder_path = SYNC_FOLDER / base_name.strip()
 
             if folder_path.exists() and not folder_path.is_dir():
                 print(f"❌ Cannot create folder '{folder_path}'. Skipping.")
@@ -126,6 +130,8 @@ def sync_to_nas():
         '--no-perms',
         '--no-owner',
         '--no-group',
+        '--partial',
+        '--inplace',
         f'{SYNC_FOLDER}/',
         f'{REMOTE_USER}@{REMOTE_HOST}:{REMOTE_PATH}/'
     ]
@@ -158,8 +164,8 @@ def clean_sync_folder():
                 shutil.rmtree(item)
                 print(f"   🗑️  Removed folder: {item.name}")
             else:
-                item.unlink()
-                print(f"   🗑️  Removed file: {item.name}")
+                send2trash(str(item))  # New: moves to Trash/Recycle Bin
+                print(f"   🗑️  Moved to Trash: {item.name}")
             deleted_count += 1
         except Exception as e:
             print(f"❌ Error removing {item.name}: {e}")

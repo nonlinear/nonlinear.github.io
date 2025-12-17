@@ -13,7 +13,11 @@ fonts:
 
 {{< ascii >}}
 
-I am a Brazilian-American UX designer working in scientific publishing for more than a decade. I also volunteer for open source projects on the side.
+I am a Brazilian-American UX designer working in scientific publishing for more than a decade. I also volunteer for open source projects.
+
+### Illustrations
+
+{{< illustrations >}}
 
 ### Projects
 
@@ -33,10 +37,6 @@ I am a Brazilian-American UX designer working in scientific publishing for more 
 - [Soundcloud](https://soundcloud.com/nicholasfrota) (music)
 - [Instapaper](https://www.instapaper.com/p/nonlinear) (articles)
 - [Savee](https://savee.it/nonlinear) (inspiration)
-
-### Some illustrations
-
-{{< illustrations >}}
 
 ### Creative code
 
