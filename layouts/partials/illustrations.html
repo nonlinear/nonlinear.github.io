@@ -2,6 +2,11 @@
 {{ $site := .Site | default . }}
 {{ $pages := where $site.RegularPages "Params.status" "live" }}
 {{ $filtered := where $pages "File.Dir" "eq" "illustrations/" }}
+{{ if (isset . "IsPage") }}
+  {{ if .IsPage }}
+    {{ $filtered = where $filtered "Permalink" "ne" .Permalink }}
+  {{ end }}
+{{ end }}
 {{ $sorted := sort $filtered "Title" }}
 {{ range $sorted }}
   {{ $illos := .Params.illos }}
