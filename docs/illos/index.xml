@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Nonlinear</title>
+    <link>http://localhost:1313/</link>
+    <description>nonlinear projects</description>
+    <language>pt-BR</language>
+    <itunes:author>Nicholas Frota</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+
+    
+      
+        
+        
+        
+        
+          
+          
+          
+          
+            
+            
+              
+            
+          
+        
+      <item>
+        <title>Photo drawings, 1</title>
+        <link>http://localhost:1313/illos/drawings-1/</link>
+        <guid>http://localhost:1313/illos/drawings-1/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="http://localhost:1313/illos/drawings-1/"><img src="http://localhost:1313/images/illos/esquerdista.jpg" alt="Photo drawings, 1" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>CSS tile patterns</title>
+        <link>http://localhost:1313/experiments/csstile/</link>
+        <guid>http://localhost:1313/experiments/csstile/</guid>
+        <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>A gradient-based CSS pattern mixin set (formerly vectortiles). Add [csstile.scss](https://github.com/nonlinear/nonlinear.github.io/blob/main/assets/css/vendor/csstile.scss) to your pipeline and follow instructions.
+
+### digital artist?
+
+Are you interested in creative code explorations? [Join us on
+signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
+</p>
+          <a href="http://localhost:1313/experiments/csstile/"><img src="http://localhost:1313/images/covers/csstile.jpg" alt="CSS tile patterns" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>SVG filters and masks</title>
+        <link>http://localhost:1313/experiments/filters-masks/</link>
+        <guid>http://localhost:1313/experiments/filters-masks/</guid>
+        <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Demonstration of coloring SVG images via CSS"</p>
+          <a href="http://localhost:1313/experiments/filters-masks/"><img src="http://localhost:1313/images/covers/filters-masks.jpg" alt="SVG filters and masks" /></a>
+        ]]></description>
+      </item>
+      
+    
+
+  </channel>
+</rss>

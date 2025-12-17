@@ -1,14 +1,1 @@
-{{/*
-  Shortcode: illos.html
-  Usage: {{< illos >}}
-  Lists all posts with style "illos" and status "live", newest first.
-*/}}
 
-<ul>
-{{ $pages := where .Site.RegularPages "Params.status" "live" }}
-{{ $filtered := where $pages "Params.style" "intersect" (slice "illos") }}
-{{ $sorted := sort $filtered "Title" }}
-{{ range $sorted }}
-  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-{{ end }}
-</ul>

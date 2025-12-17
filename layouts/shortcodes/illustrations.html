@@ -1,0 +1,14 @@
+{{/*
+  Shortcode: illustrations.html
+  Usage: {{< illustrations >}}
+  Lists all posts with style "illustrations" e/ou pasta illustrations, status "live", mais recentes primeiro.
+*/}}
+
+<ul>
+{{ $pages := where .Site.RegularPages "Params.status" "live" }}
+{{ $filtered := where $pages "File.Dir" "in" (slice "illustrations/") }}
+{{ $sorted := sort $filtered "Title" }}
+{{ range $sorted }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
