@@ -38,7 +38,7 @@ html.index {
         width: 100% !important;
     }
 
-    a {
+    a:not(.preview) {
         color: $color-fg;
         p & {
             margin: 0 5px;
