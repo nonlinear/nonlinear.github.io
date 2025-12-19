@@ -1,0 +1,48 @@
+html.recap {
+  section.recap {
+    // background-image: url(/images/recap/CuE7szcck6cpSZE6rbmUk7-1200-80.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    .slide {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      grid-gap: $gap10 + $gap5;
+      margin: $gap3;
+      height: 100%;
+      .header, .content {
+        margin: $gap2 0;
+      }
+      .header {
+        grid-column: 1;
+        align-self: start;
+        color: white;
+        h3 {
+          background-color: red;
+          font-size: 30px;
+          display: inline-block;
+          padding: 3px 10px;
+
+        }
+        h2 {
+          background-color: red;
+          font-size: 100px;
+          display: inline-block;
+          padding: 5px 10px;
+          line-height: 90px;
+        }
+      }
+      .content {
+        grid-column: 2;
+        overflow-y: auto;
+        font-size: 20px;
+        padding: $gap2;
+      background-color: rgba(white,  .5);
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,19 @@
+{{/*
+recap.html shortcode
+Usage:
+{{< recap bg="img.webp" title="Title" >}}
+Content here (markdown allowed)
+{{< /recap >}}
+*/}}
+
+<section class="recap" aria-label="{{ .Get "title" }}" style="background-image: url(/images/recap/{{ .Get "bg" }})">
+  <div class="slide">
+    <div class="header">
+      <h3>{{ .Page.Title }}</h3>
+      <h2>{{ .Get "title" }}</h2>
+    </div>
+    <div class="content">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</section>
