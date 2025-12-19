@@ -6,7 +6,8 @@ elasticScroll: true
 class:
   - index
 fonts:
-  - Space-Grotesk
+  - SpaceGrotesk-Light
+  - SpaceGrotesk-Medium
 ---
 
 # Nonlinear

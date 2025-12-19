@@ -3,11 +3,16 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js video-scroll ongoing experiments single
+    class="single no-js comics draft 2025 single
+    
+      
+        
+         vertical-nav
+      
     "
 >
 
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -20,14 +25,15 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>video scroll</title>
+  <title>comics I&#39;ve read in 2025</title>
   <meta content="Nicholas Frota" name="author" />
+
   
   
 
   
   
-  <link rel="stylesheet" href="/css/main.6318d816bde04065fa437b851d36ca0f8deaa8c841ded5a4d24e334cd5548c1d.css" />
+  <link rel="stylesheet" href="/css/main.cfe359a0ffb22d685b8f71dc97da1cd6cda5f51c1d4a0bf7b080742720352c63.css" />
 
   
 
@@ -37,6 +43,10 @@
   
   
 
+  
+    
+      <link href="/css/vertical-nav.css" rel="stylesheet" />
+    
   
 
   
@@ -44,8 +54,8 @@
   
     
   
-  <meta property="og:image" content="https://nonlinear.nyc/images/covers/draft.jpg" />
-  <meta property="og:description" content="a way to control videos by scrolling page" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
+  <meta property="og:description" content="comics I&#39;ve read this year" />
 
 
 </head>
@@ -57,47 +67,83 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  #video {
-    position: fixed;
-    height: 100vh;
-  }
-  .scroll-dummy {
-    height: 3000px;
-    max-width: 998px;
-    padding: 20px;
-    z-index: 1;
-  }
-</style>
-</head>
-<body>
-  <!-- partial:index.partial.html -->
-  <!-- Ref https://www.reddit.com/r/javascript/comments/dolagh/apple_airpods_pro_page_uses_a_lot_of_images_so_i/ -->
-  <div class="scroll-dummy">
-    <video id="video" width="300">
-      <source src="/images/video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <script>
-      var FRAMES = 148;
-      var FPS = 30;
-      var video = document.getElementById('video');
-
-      window.addEventListener('scroll', function (e) {
-        var time = (window.scrollY / 1000) * FRAMES / FPS;
-        video.currentTime = time;
-        console.log(time);
-      });
-
-      window.addEventListener('load', function(e) {
-        video.pause();
-        video.currentTime = 0;
-      });
-    </script>
+                        <section aria-label="Absolute Martian Manhunter">
+  <h2>Absolute Martian Manhunter</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0NFGZXAC1SR54/thumbnail">
+  <p>Nov 7, 2025</p>
+</section>
+<section aria-label="The Sauroktones">
+  <h2>The Sauroktones</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0KBW969YRGCCM/thumbnail">
+  <p>Jun 5, 2025</p>
+</section>
+<section aria-label="Our Common Shores">
+  <h2>Our Common Shores</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0HGZZERR90EGJ/thumbnail">
+  <p>May 13, 2025</p>
+</section>
+<section aria-label="Free for All">
+  <h2>Free for All</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0K4TNC1YMG6FQ/thumbnail">
+  <p>May 7, 2025</p>
+</section>
+<section aria-label="Ultramega">
+  <h2>Ultramega</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0J40VZH5S0FGA/thumbnail">
+  <p>Apr 24, 2025</p>
+</section>
+<section aria-label="Birdking">
+  <h2>Birdking</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0K4TNC2FWG69J/thumbnail">
+  <p>Apr 1, 2025</p>
+</section>
+<section aria-label="Napalm Lullaby">
+  <h2>Napalm Lullaby</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JEZNMVZ10BBQ/thumbnail">
+  <p>Mar 27, 2025</p>
+</section>
+<section aria-label="Blasfamous">
+  <h2>Blasfamous</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JKD9QTZX056V/thumbnail">
+  <p>Feb 1, 2025</p>
+</section>
+<section aria-label="How Could You">
+  <h2>How Could You</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JGWW63YN032W/thumbnail">
+  <p>Jan 30, 2025</p>
+</section>
+<section aria-label="Skin Police">
+  <h2>Skin Police</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JGWW69EN0AAV/thumbnail">
+  <p>Jan 17, 2025</p>
+</section>
+<section aria-label="Juvenile">
+  <h2>Juvenile</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JGWW647N092G/thumbnail">
+  <p>Jan 17, 2025</p>
+</section>
+<section aria-label="Snotgirl">
+  <h2>Snotgirl</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0JGWW63T50E7T/thumbnail">
+  <p>Jan 16, 2025</p>
+</section>
+<section aria-label="FML">
+  <h2>FML</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0HGZZERR90EGG/thumbnail">
+  <p>Jan 16, 2025</p>
+</section>
+<section aria-label="The Fade">
+  <h2>The Fade</h2>
+  <img src="http://IMAGEHERE/api/v1/books/0J9FN4FTX0DBE/thumbnail">
+  <p>Jan 4, 2025</p>
+</section>
+<section aria-label="other 2025 recaps">
+  <h3>other 2025 recaps:</h3>
+  <ul>
+    <li><a href="/recap/2025-manga/">mangas</a></li>
+    <li><a href="/recap/2025-books/">books</a></li>
+  </ul>
+</section>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -105,17 +151,17 @@
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>video scroll</h2>
+  <h2>comics I&#39;ve read in 2025</h2>
   <p class="date">
     
       
     
     
     
-      ongoing 2 years ago
+      In draft since 6 days ago
     
   </p>
-    <div class="description">a way to control videos by scrolling page</div>
+    <div class="description">comics I&rsquo;ve read this year</div>
 
     
 
@@ -220,10 +266,10 @@
 
 
   </div>
-  <script src="https://nonlinear.nyc/js/global/qrcode.min.js"></script>
+  <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/nonlinear.nyc\/experiments\/video-scroll\/",
+        text: "http:\/\/localhost:1313\/2025\/comics\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -295,6 +341,14 @@
 
 
 
+  
+    
+    
+    
+      <script src="http://localhost:1313/js/script/vertical-nav.js"></script>
+    
+  
+
 
 
 
@@ -311,8 +365,8 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="https://nonlinear.nyc/js/global/popper.min.js"></script>
-<script src="https://nonlinear.nyc/js/global/tippy-bundle.umd.min.js"></script>
+<script src="http://localhost:1313/js/global/popper.min.js"></script>
+<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
 <script>
   document.querySelectorAll(".tooltip").forEach((el) => {
