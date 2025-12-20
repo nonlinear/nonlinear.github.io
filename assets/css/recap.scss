@@ -1,34 +1,37 @@
 html.recap {
-              font-family: SpaceGrotesk-Light;
+  font-family: SpaceGrotesk-Light;
   section.recap {
-    // background-image: url(/images/recap/CuE7szcck6cpSZE6rbmUk7-1200-80.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
+    // Gradients alternados
+    &:nth-of-type(3n) {
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    }
+    &:nth-of-type(3n-1) {
+      background: linear-gradient(135deg, #f9f9f9 0%, #e3e3e3 100%);
+    }
+    &:nth-of-type(3n-2) {
+      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+    }
+
     .slide {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      grid-gap: $gap10 + $gap5;
       margin: $gap3;
+      width: 100%;
       height: 100%;
       .header, .content {
-        margin: $gap2 0;
+        margin: $gap2;
       }
       .header {
-        grid-column: 1;
-        align-self: start;
         color: white;
-
-            font-family: holistical;
-
+        font-family: holistical;
         h3 {
           background-color: red;
           font-size: 30px;
           display: inline-block;
           padding: 3px 10px;
-
         }
         h2 {
           background-color: red;
@@ -39,14 +42,36 @@ html.recap {
         }
       }
       .content {
-        grid-column: 2;
         overflow-y: auto;
         font-size: 20px;
         padding: $gap2;
-      background-color: rgba(white,  .5);
+      }
+      // Diferenças landscape
+      @media (orientation: landscape) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        .header {
+          grid-column: 1;
+          align-self: start;
+        }
+        .content {
+          grid-column: 2;
+        }
+      }
+      // Diferenças portrait
+      @media (orientation: portrait) {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        .header {
+          flex: 0 0 auto;
+          min-height: 80px;
+          max-height: 200px;
+        }
+        .content {
+          flex: 1 1 auto;
+        }
       }
     }
   }
-
-
 }
