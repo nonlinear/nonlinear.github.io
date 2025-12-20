@@ -1,19 +1,25 @@
 {{/*
 recap.html shortcode
 Usage:
-{{< recap bg="img.webp" title="Title" >}}
+{{< recap image="img.webp" title="Title" link="https://example.com" >}}
 Content here (markdown allowed)
 {{< /recap >}}
 */}}
 
-<section class="recap" aria-label="{{ .Get "title" }}" style="background-image: url(/images/recap/{{ .Get "bg" }})">
+<section class="recap" aria-label="{{ .Get "title" }}" style="background-image: url(/images/recap/{{ .Get "image" }})">
   <div class="slide">
     <div class="header">
       <h3>{{ .Page.Title }}</h3>
       <h2>{{ .Get "title" }}</h2>
     </div>
     <div class="content">
+
       {{ .Inner | markdownify }}
+      {{ if .Get "link" }}
+        {{ $link := .Get "link" }}
+        {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
+        <a href="{{ $link }}" class="button">{{ $domain }} link</a>
+      {{ end }}
     </div>
   </div>
 </section>

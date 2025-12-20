@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.forEach((section, idx) => {
     let id = section.id;
     if (!id) {
-      id = `slide${(idx + 1).toString().padStart(2, '0')}`;
+      id = `${(idx + 1).toString().padStart(2, '0')}`;
       section.id = id;
     }
     const link = document.createElement('a');
