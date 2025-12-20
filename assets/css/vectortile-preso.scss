@@ -1,11 +1,11 @@
 .vectortile {
   /* Aplica o background no container do slide para garantir pintura do background.
      Background em elementos SVG de shape (ex.: path) não é pintado pelos browsers. */
-  #slide01 {
+  #01 {
     @include vectortile("dot");
   }
 
-  #slide01 svg {
+  #01 svg {
       #blob1 {
        @include vectortile;
       }
@@ -35,7 +35,7 @@
         stroke-width: 4;
       }
     }
-            #slide02 svg {
+            #02 svg {
               #blob1 {
                 stroke: #ff0000;
                 stroke-width: 4;
