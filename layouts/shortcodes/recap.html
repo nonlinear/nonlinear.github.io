@@ -6,10 +6,12 @@ Content here (markdown allowed)
 {{< /recap >}}
 */}}
 
-<section class="recap" aria-label="{{ .Get "title" }}" style="background-image: url(/images/recap/{{ .Get "image" }})">
+<section class="recap" aria-label="{{ .Get "title" }}"
+  {{ if .Get "bg" }}style="background-image: url(/images/recap/{{ .Get "image" }})"{{ end }}>
   <div class="slide">
     <div class="header">
       <h3>{{ .Page.Title }}</h3>
+      <br>
       <h2>{{ .Get "title" }}</h2>
     </div>
     <div class="content">
@@ -18,7 +20,7 @@ Content here (markdown allowed)
       {{ if .Get "link" }}
         {{ $link := .Get "link" }}
         {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
-        <a href="{{ $link }}" class="button">{{ $domain }} link</a>
+        <a href="{{ $link }}" class="button" target="{{ $domain }}">{{ $domain }} link</a>
       {{ end }}
     </div>
   </div>
