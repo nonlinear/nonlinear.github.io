@@ -29,16 +29,24 @@ html.recap {
         font-family: holistical;
         h3 {
           background-color: red;
-          font-size: 30px;
+          font-size: 35px;
           display: inline-block;
           padding: 3px 10px;
+          margin-bottom: 2px;
         }
+
         h2 {
           background-color: red;
           font-size: 100px;
           display: inline-block;
-          padding: 5px 10px;
-          line-height: 90px;
+          padding: 15px;
+          padding-bottom: 30px;
+          line-height: 70px;
+        }
+        h3,
+        h2 {
+          padding-left: 100px;
+          margin-left: -90px;
         }
       }
       .content {

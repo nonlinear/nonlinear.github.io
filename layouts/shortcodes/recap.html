@@ -20,7 +20,10 @@ Content here (markdown allowed)
       {{ if .Get "link" }}
         {{ $link := .Get "link" }}
         {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
-        <a href="{{ $link }}" class="button" target="{{ $domain }}">{{ $domain }} link</a>
+        {{ $domainNoTLD := replaceRE `\.[^.]+$` "" $domain }}
+        {{ $domainParts := split $domainNoTLD "." }}
+        {{ $mainDomain := index $domainParts (sub (len $domainParts) 1) }}
+        <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">{{ $mainDomain }} review</a>
       {{ end }}
     </div>
   </div>
