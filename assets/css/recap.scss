@@ -53,8 +53,12 @@ html.recap {
           }
       .header {
         color: black;
-
+.others {
+  font-size: 14px;
+  display: none;
+}
         h3 {
+
           font-size: 50px;
           font-family: holistical;
           font-weight: normal;
@@ -83,6 +87,7 @@ html.recap {
       .content {
         overflow-y: auto;
         font-size: 20px;
+        padding-right: $gap2;
       }
       // Diferenças landscape
       @media (orientation: landscape) {

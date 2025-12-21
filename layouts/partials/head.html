@@ -58,10 +58,30 @@
   {{ end }}
 
   {{ with .Params.style }}
-    {{ range . }}
-      <link href="{{ printf "css/%s.css" . | relURL }}" rel="stylesheet" />
-    {{ end }}
+      {{ range . }}
+        {{ $cssMin := printf "css/%s.min.css" . }}
+        {{ $css := printf "css/%s.css" . }}
+        {{ if (fileExists (printf "static/%s" $cssMin)) }}
+          <link href="{{ $cssMin | relURL }}" rel="stylesheet" />
+        {{ else if (fileExists (printf "static/%s" $css)) }}
+          <link href="{{ $css | relURL }}" rel="stylesheet" />
+        {{ end }}
+      {{ end }}
   {{ end }}
+
+    <!-- Slug-based CSS loading logic (mirroring load-js.html, but for CSS):
+         - Check if a CSS file matching the post slug exists in /css/:
+           - If "css/SLUG.min.css" exists, include it.
+           - If not, check for "css/SLUG.css".
+           - If neither exists, skip. Prefer minified if both. -->
+    {{ $slug := .File.BaseFileName }}
+    {{ $slugCssMin := printf "css/%s.min.css" $slug }}
+    {{ $slugCss := printf "css/%s.css" $slug }}
+    {{ if (fileExists (printf "static/%s" $slugCssMin)) }}
+      <link href="{{ $slugCssMin | relURL }}" rel="stylesheet" />
+    {{ else if (fileExists (printf "static/%s" $slugCss)) }}
+      <link href="{{ $slugCss | relURL }}" rel="stylesheet" />
+    {{ end }}
 
   {{/* Open Graph image logic com prioridade slug.jpg sobre type illos */}}
   {{ $ogImage := "/images/covers/live.jpg" }}

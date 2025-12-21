@@ -1,3 +1,4 @@
+
 {{/*
 recap.html shortcode
 Usage:
@@ -6,12 +7,24 @@ Content here (markdown allowed)
 {{< /recap >}}
 */}}
 
+
+
+
 <section class="recap" aria-label="{{ .Get "title" }}"
   {{ if .Get "bg" }}style="background-image: url(/images/recap/{{ .Get "image" }})"{{ end }}>
   <div class="slide">
     <div class="header">
       <h3>{{ .Page.Title }}</h3>
+  {{ $current := .Page.File.BaseFileName }}
+  {{ $yearPages := where (where .Site.RegularPages "Section" "2025") "File.BaseFileName" "ne" $current }}
+
+    {{ range $yearPages }}
+ <a class="others" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+
+
       <h2>{{ .Get "title" }}</h2>
+
     </div>
     <div class="content">
 
