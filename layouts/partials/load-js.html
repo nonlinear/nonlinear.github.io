@@ -78,34 +78,41 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="{{ printf "js/global/popper.min.js" | absURL }}"></script>
-<script src="{{ printf "js/global/tippy-bundle.umd.min.js" | absURL }}"></script>
 
-<script>
-  document.querySelectorAll(".tooltip").forEach((el) => {
-    const tipId = el.getAttribute("data-tooltip-id");
-    const content =
-      document.getElementById(tipId)?.innerHTML || "No content";
+{{ $hasBootstrap := false }}
+{{ with .Params.style }}
+  {{ range . }}
+    {{ if eq . "bootstrap" }}
+      {{ $hasBootstrap = true }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
-    tippy(el, {
-      content,
-      allowHTML: true,
-      interactive: true,
-    });
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl, {
-        trigger: 'hover',
-        html: true
+{{ if $hasBootstrap }}
+  <script src="{{ printf "js/global/popper.min.js" | absURL }}"></script>
+  <script src="{{ printf "js/global/tippy-bundle.umd.min.js" | absURL }}"></script>
+  <script>
+    document.querySelectorAll(".tooltip").forEach((el) => {
+      const tipId = el.getAttribute("data-tooltip-id");
+      const content =
+        document.getElementById(tipId)?.innerHTML || "No content";
+      tippy(el, {
+        content,
+        allowHTML: true,
+        interactive: true,
       });
     });
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl, {
+          trigger: 'hover',
+          html: true
+        });
+      });
+    });
+  </script>
+{{ end }}
 
 
 
