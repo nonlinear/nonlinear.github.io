@@ -1,5 +1,5 @@
 html.recap {
-  font-family: SpaceGrotesk-Light;
+
   section.recap {
     background-size: cover;
     background-position: center;
@@ -18,66 +18,95 @@ html.recap {
     }
 
     .slide {
-      margin: $gap3;
       width: 100%;
       height: 100%;
-      .header, .content {
-        margin: $gap2;
+      a.button {
+        display: inline-block;
+        text-transform: uppercase;
+        padding: $gap $gap2;
+        border-radius: 1.5em;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+        background: linear-gradient(180deg, #fff 80%, #e0e0e0 100%);
+        border: none;
+        font-size: 20px;
+        margin-top: $gap;
+        font-weight: normal;
+
+        color: #222;
+        transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+        cursor: pointer;
+
+        // Volume visual
+        position: relative;
+        top: 0;
+
+        &:hover {
+          box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+          background: linear-gradient(180deg, #e0e0e0 90%, #ccc 100%);
+          transform: translateY(2px) scale(0.98);
+          top: 2px;
+        }
       }
+        p,
+          a {
+            font-family: SpaceGrotesk-Light;
+          }
       .header {
-        color: white;
-        font-family: holistical;
+        color: black;
+
         h3 {
-          background-color: red;
-          font-size: 35px;
-          display: inline-block;
-          padding: 3px 10px;
-          margin-bottom: 2px;
+          font-size: 50px;
+          font-family: holistical;
+          font-weight: normal;
+              @media (max-width: $bp) {
+                  font-size: 40px;
+                }
         }
 
         h2 {
-          background-color: red;
-          font-size: 100px;
+          font-size: 120px;
           display: inline-block;
-          padding: 15px;
-          padding-bottom: 30px;
-          line-height: 70px;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          word-break: normal;
+          line-height: 90%;
+          font-family: messages;
+          font-weight: normal;
+          @media (max-width: $bp) {
+            font-size: 70px;
+          }
         }
-        h3,
-        h2 {
-          padding-left: 100px;
-          margin-left: -90px;
-        }
+      }
+      .header, .content {
+        margin: $gap3;
       }
       .content {
         overflow-y: auto;
         font-size: 20px;
-        padding: $gap2;
       }
       // Diferenças landscape
       @media (orientation: landscape) {
+
         display: grid;
         grid-template-columns: 2fr 2fr;
-        .header {
-          grid-column: 1;
-          align-self: start;
-        }
-        .content {
+
           grid-column: 2;
-        }
+
       }
       // Diferenças portrait
       @media (orientation: portrait) {
         display: flex;
         flex-direction: column;
         height: 100vh;
+
         .header {
           flex: 0 0 auto;
           min-height: 80px;
-          max-height: 200px;
+          margin-bottom: 0;
         }
         .content {
           flex: 1 1 auto;
+          margin-top: 0;
         }
       }
     }

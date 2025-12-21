@@ -15,7 +15,7 @@
     "
 >
 
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -32,6 +32,17 @@
   <meta content="Nicholas Frota" name="author" />
   
   
+    
+      <link rel="preload" as="font" href="/fonts/messages.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'messages';
+          src: url('/fonts/messages.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
     
       <link rel="preload" as="font" href="/fonts/holistical.woff2" type="font/woff2" crossorigin>
       <style>
@@ -59,7 +70,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.3da147aedde9fee649fcad06c475806d48a0684f521c78a0a4c3abd804368545.css" />
+  <link rel="stylesheet" href="/css/main.scss" />
 
   
 
@@ -82,7 +93,7 @@
   
     
   
-  <meta property="og:image" content="https://nonlinear.nyc/images/covers/draft.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
   <meta property="og:description" content="books I&#39;ve read this year" />
 
 
@@ -104,7 +115,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>Shaping Things</h2>
     </div>
     <div class="content">
@@ -132,7 +142,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>A Terra dos Mil Povos</h2>
     </div>
     <div class="content">
@@ -161,7 +170,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>Marx in the Anthropocene</h2>
     </div>
     <div class="content">
@@ -189,7 +197,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>Chimeras: Inventory of synthetic cognition</h2>
     </div>
     <div class="content">
@@ -220,7 +227,6 @@ I read it in 2025. If you’re interested in how AI and creativity mix, this boo
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>Heavenly Tyrant</h2>
     </div>
     <div class="content">
@@ -250,7 +256,6 @@ I read it in 2025. If you’re interested in how AI and creativity mix, this boo
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>Earthsea Series</h2>
     </div>
     <div class="content">
@@ -282,7 +287,6 @@ age, and the consequences of magic.</p>
   <div class="slide">
     <div class="header">
       <h3>2025 in books</h3>
-      <br>
       <h2>The Velvet Rage</h2>
     </div>
     <div class="content">
@@ -427,10 +431,10 @@ age, and the consequences of magic.</p>
 
 
   </div>
-  <script src="https://nonlinear.nyc/js/global/qrcode.min.js"></script>
+  <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/nonlinear.nyc\/2025\/in-books\/",
+        text: "http:\/\/localhost:1313\/2025\/in-books\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -506,7 +510,7 @@ age, and the consequences of magic.</p>
     
     
     
-      <script src="https://nonlinear.nyc/js/script/vertical-nav.js"></script>
+      <script src="http://localhost:1313/js/script/vertical-nav.js"></script>
     
   
     
@@ -532,8 +536,8 @@ age, and the consequences of magic.</p>
   document.documentElement.classList.add("js");
 </script>
 
-<script src="https://nonlinear.nyc/js/global/popper.min.js"></script>
-<script src="https://nonlinear.nyc/js/global/tippy-bundle.umd.min.js"></script>
+<script src="http://localhost:1313/js/global/popper.min.js"></script>
+<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
 <script>
   document.querySelectorAll(".tooltip").forEach((el) => {
