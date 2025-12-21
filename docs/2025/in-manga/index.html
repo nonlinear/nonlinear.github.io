@@ -15,7 +15,7 @@
     "
 >
 
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -32,6 +32,17 @@
   <meta content="Nicholas Frota" name="author" />
   
   
+    
+      <link rel="preload" as="font" href="/fonts/messages.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'messages';
+          src: url('/fonts/messages.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
     
       <link rel="preload" as="font" href="/fonts/holistical.woff2" type="font/woff2" crossorigin>
       <style>
@@ -59,7 +70,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.3da147aedde9fee649fcad06c475806d48a0684f521c78a0a4c3abd804368545.css" />
+  <link rel="stylesheet" href="/css/main.scss" />
 
   
 
@@ -82,7 +93,7 @@
   
     
   
-  <meta property="og:image" content="https://nonlinear.nyc/images/covers/draft.jpg" />
+  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
   <meta property="og:description" content="manga I&#39;ve read this year" />
 
 
@@ -102,7 +113,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>88rhapsody</h2>
     </div>
     <div class="content">
@@ -133,7 +143,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Blue Period</h2>
     </div>
     <div class="content">
@@ -161,7 +170,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>The Wandering of Girls&#39; Pair</h2>
     </div>
     <div class="content">
@@ -189,7 +197,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Dorohedoro</h2>
     </div>
     <div class="content">
@@ -217,7 +224,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>The Ancient Magus&#39; Bride</h2>
     </div>
     <div class="content">
@@ -245,7 +251,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Monthly in the Garden with My Landlord</h2>
     </div>
     <div class="content">
@@ -273,7 +278,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Mugen Shinshi</h2>
     </div>
     <div class="content">
@@ -301,7 +305,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Op</h2>
     </div>
     <div class="content">
@@ -329,7 +332,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Given</h2>
     </div>
     <div class="content">
@@ -357,7 +359,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>What Did You Eat Yesterday?</h2>
     </div>
     <div class="content">
@@ -385,7 +386,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Soa ni Mairu</h2>
     </div>
     <div class="content">
@@ -413,7 +413,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Stretch</h2>
     </div>
     <div class="content">
@@ -441,7 +440,6 @@
   <div class="slide">
     <div class="header">
       <h3>2025 in manga</h3>
-      <br>
       <h2>Tamaki and Amane</h2>
     </div>
     <div class="content">
@@ -586,10 +584,10 @@
 
 
   </div>
-  <script src="https://nonlinear.nyc/js/global/qrcode.min.js"></script>
+  <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "https:\/\/nonlinear.nyc\/2025\/in-manga\/",
+        text: "http:\/\/localhost:1313\/2025\/in-manga\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -671,7 +669,7 @@
     
     
     
-      <script src="https://nonlinear.nyc/js/script/vertical-nav.js"></script>
+      <script src="http://localhost:1313/js/script/vertical-nav.js"></script>
     
   
     
@@ -697,8 +695,8 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="https://nonlinear.nyc/js/global/popper.min.js"></script>
-<script src="https://nonlinear.nyc/js/global/tippy-bundle.umd.min.js"></script>
+<script src="http://localhost:1313/js/global/popper.min.js"></script>
+<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
 <script>
   document.querySelectorAll(".tooltip").forEach((el) => {
