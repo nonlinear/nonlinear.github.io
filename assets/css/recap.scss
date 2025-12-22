@@ -45,7 +45,7 @@ html.recap {
       height: 100%;
       display: flex;
       flex-direction: column;
-      .top-row {
+      .slide-top {
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
@@ -54,6 +54,7 @@ html.recap {
       .slide-header {
         flex: 1 1 50%;
         min-width: 0;
+
       }
       .slide-content {
         flex: 1 1 50%;
@@ -89,7 +90,7 @@ html.recap {
         }
       }
       @media (orientation: landscape) {
-        .top-row {
+        .slide-top {
           flex-direction: row;
         }
         .slide-header {
@@ -101,7 +102,7 @@ html.recap {
         }
       }
       @media (orientation: portrait) {
-        .top-row {
+        .slide-top {
           flex-direction: column;
         }
         .slide-header {
@@ -120,7 +121,6 @@ html.recap {
 
     h2 {
       font-size: 120px;
-      display: inline-block;
       overflow-wrap: break-word;
       hyphens: auto;
       word-break: normal;

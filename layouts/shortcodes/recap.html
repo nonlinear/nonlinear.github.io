@@ -13,7 +13,7 @@ Content here (markdown allowed)
 <section class="recap" aria-label="{{ .Get "title" }}"
   {{ if .Get "bg" }}style="background-image: url(/images/recap/{{ .Get "image" }})"{{ end }}>
   <div class="slide">
-    <div class="top-row">
+    <div class="slide-top">
       <div class="slide-header">
         <h3>{{ .Page.Title }}</h3>
         {{ $current := .Page.File.BaseFileName }}
