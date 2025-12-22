@@ -1,6 +1,29 @@
 html.recap {
 
   section.recap {
+    .slide-content .button {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: $gap $gap2;
+      border-radius: 1.5em;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+      background: linear-gradient(180deg, #fff 80%, #e0e0e0 100%);
+      border: none;
+      font-size: 20px;
+      margin-top: $gap;
+      font-weight: normal;
+      color: #222;
+      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+      &:hover {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+        background: linear-gradient(180deg, #e0e0e0 90%, #ccc 100%);
+        transform: translateY(2px) scale(0.98);
+        top: 2px;
+      }
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,100 +43,101 @@ html.recap {
     .slide {
       width: 100%;
       height: 100%;
-      a.button {
-        display: inline-block;
-        text-transform: uppercase;
-        padding: $gap $gap2;
-        border-radius: 1.5em;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
-        background: linear-gradient(180deg, #fff 80%, #e0e0e0 100%);
-        border: none;
-        font-size: 20px;
-        margin-top: $gap;
-        font-weight: normal;
-
-        color: #222;
-        transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-        cursor: pointer;
-
-        // Volume visual
-        position: relative;
-        top: 0;
-
-        &:hover {
-          box-shadow: 0 2px 6px rgba(0,0,0,0.10);
-          background: linear-gradient(180deg, #e0e0e0 90%, #ccc 100%);
-          transform: translateY(2px) scale(0.98);
-          top: 2px;
-        }
-      }
-        p,
-          a {
-            font-family: SpaceGrotesk-Light;
-          }
-      .header {
-        color: black;
-.others {
-  font-size: 14px;
-  display: none;
-}
-        h3 {
-
-          font-size: 50px;
-          font-family: holistical;
-          font-weight: normal;
-              @media (max-width: $bp) {
-                  font-size: 40px;
-                }
-        }
-
-        h2 {
-          font-size: 120px;
-          display: inline-block;
-          overflow-wrap: break-word;
-          hyphens: auto;
-          word-break: normal;
-          line-height: 90%;
-          font-family: messages;
-          font-weight: normal;
-          @media (max-width: $bp) {
-            font-size: 70px;
-          }
-        }
-      }
-      .header, .content {
-        margin: $gap3;
-      }
-      .content {
-        overflow-y: auto;
-        font-size: 20px;
-        padding-right: $gap2;
-      }
-      // Diferenças landscape
-      @media (orientation: landscape) {
-
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-
-          grid-column: 2;
-
-      }
-      // Diferenças portrait
-      @media (orientation: portrait) {
+      display: flex;
+      flex-direction: column;
+      .top-row {
         display: flex;
         flex-direction: column;
-        height: 100vh;
-
-        .header {
-          flex: 0 0 auto;
-          min-height: 80px;
-          margin-bottom: 0;
+        flex: 1 1 auto;
+        min-height: 0;
+      }
+      .slide-header {
+        flex: 1 1 50%;
+        min-width: 0;
+      }
+      .slide-content {
+        flex: 1 1 50%;
+        min-width: 0;
+        overflow-y: auto;
+        font-family: 'SpaceGrotesk-Light', sans-serif;
+      }
+      .slide-nav {
+        flex: 0 0 50px;
+        height: 50px;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        a {
+          font-size: 1.1em;
+          text-decoration: none;
+          margin: 0.2em 0;
+          transition: color 0.2s;
+          padding-left: 2.2em;
+          background: url('/images/recap/arrow.svg') no-repeat left center/1.5em 1.5em;
+          min-height: 1.7em;
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          &:hover {
+            color: #f8b500;
+          }
         }
-        .content {
-          flex: 1 1 auto;
-          margin-top: 0;
+        a.previous {
+          transform: scaleX(-1);
         }
       }
+      @media (orientation: landscape) {
+        .top-row {
+          flex-direction: row;
+        }
+        .slide-header {
+          flex: 1 1 50%;
+          margin-right: 2rem;
+        }
+        .slide-content {
+          flex: 1 1 50%;
+        }
+      }
+      @media (orientation: portrait) {
+        .top-row {
+          flex-direction: column;
+        }
+        .slide-header {
+          flex: 0 0 auto;
+        }
+        .slide-content {
+          flex: 1 1 auto;
+        }
+      }
+      font-family: holistical;
+      font-weight: normal;
+      @media (max-width: $bp) {
+        font-size: 40px;
+      }
     }
+
+    h2 {
+      font-size: 120px;
+      display: inline-block;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      word-break: normal;
+      line-height: 90%;
+      font-family: messages;
+      font-weight: normal;
+      @media (max-width: $bp) {
+        font-size: 70px;
+      }
+    }
+  }
+  .slide-header, .slide-content {
+    margin: $gap3;
+  }
+  .slide-content {
+    overflow-y: auto;
+    font-size: 20px;
+    padding-right: $gap2;
   }
 }

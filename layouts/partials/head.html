@@ -1,14 +1,13 @@
 <head>
   {{/*
-    Cover image selection logic (for Open Graph and RSS):
+    Cover image selection logic (Open Graph and RSS):
     Priority order:
-    1. If status is not "live", use {{ .Site.BaseURL }}/images/covers/draft.jpg
-    2. If status is "live" and frontmatter has "cover", use cover name: eg, dudes.md have {{ .Site.BaseURL }}/images/covers/dudes.jpg
-    3. If status is "live" and {{ .Site.BaseURL }}/images/covers/SLUG.jpg exists, use it
-    4. If status is "live", no cover, no slug.jpg, and type is "illos", use the first illo in the list. eg, illos: attentive has {{ .Site.BaseURL }}/images/illos/attentive.jpg
-    5. Otherwise, use {{ .Site.BaseURL }}/images/covers/live.jpg
+    1. If frontmatter has "cover", use /images/covers/COVER.jpg
+    2. If /images/covers/SLUG.jpg exists, use it
+    3. If post is in /content/illustrations/ and illos list exists, use first illo: /images/illos/FIRST.jpg or /images/illos/FIRST.png (checks both)
+    4. Otherwise, use /images/covers/live.jpg
 
-    All this work is to push and forget, knowing full well RSS feeds and opengraph links are covered by default plus the possibility to customize it (if I care to remember).
+    This ensures every post gets a sensible default cover for social and RSS, with easy customization via frontmatter or slug-based images.
   */}}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -83,20 +82,27 @@
       <link href="{{ $slugCss | relURL }}" rel="stylesheet" />
     {{ end }}
 
-  {{/* Open Graph image logic com prioridade slug.jpg sobre type illos */}}
+  {{/* Open Graph image logic simplificado: cover > slug.jpg > illos > live.jpg */}}
   {{ $ogImage := "/images/covers/live.jpg" }}
-  {{ if ne .Params.status "live" }}
-    {{ $ogImage = "/images/covers/draft.jpg" }}
-  {{ else if .Params.cover }}
+  {{ if .Params.cover }}
     {{ $ogImage = printf "/images/covers/%s.jpg" .Params.cover }}
   {{ else }}
     {{ $slug := .File.BaseFileName }}
     {{ $slugCover := printf "/images/covers/%s.jpg" $slug }}
-    {{ $ogImage = $slugCover }}
-    {{ if and (eq .Type "illos") (not .Params.cover) (not (fileExists (printf "static%s" $slugCover))) }}
+    {{ if (fileExists (printf "static%s" $slugCover)) }}
+      {{ $ogImage = $slugCover }}
+    {{ else if and (in .File.Path "/content/illustrations/") (not .Params.cover) .Params.illos }}
       {{ $firstIllo := index .Params.illos 0 }}
       {{ if $firstIllo }}
-        {{ $ogImage = printf "/images/illos/%s.jpg" $firstIllo }}
+        {{ $jpg := printf "/images/illos/%s.jpg" $firstIllo }}
+        {{ $png := printf "/images/illos/%s.png" $firstIllo }}
+        {{ if (fileExists (printf "static%s" $jpg)) }}
+          {{ $ogImage = $jpg }}
+        {{ else if (fileExists (printf "static%s" $png)) }}
+          {{ $ogImage = $png }}
+        {{ else }}
+          {{ $ogImage = $jpg }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
