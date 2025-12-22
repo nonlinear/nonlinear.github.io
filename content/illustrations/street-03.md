@@ -8,6 +8,7 @@ tags:
   - procreate
   - illustration
 illos:
+  - 2025-12-22
   - street-7
   - street-8
   - street-9
@@ -15,5 +16,5 @@ illos:
   - boypack
   - street-11
   - street-12
-date: 2025-12-17
+date: 2025-12-22
 ---

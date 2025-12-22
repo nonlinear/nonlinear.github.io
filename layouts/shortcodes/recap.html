@@ -13,30 +13,31 @@ Content here (markdown allowed)
 <section class="recap" aria-label="{{ .Get "title" }}"
   {{ if .Get "bg" }}style="background-image: url(/images/recap/{{ .Get "image" }})"{{ end }}>
   <div class="slide">
-    <div class="header">
-      <h3>{{ .Page.Title }}</h3>
-  {{ $current := .Page.File.BaseFileName }}
-  {{ $yearPages := where (where .Site.RegularPages "Section" "2025") "File.BaseFileName" "ne" $current }}
-
-    {{ range $yearPages }}
- <a class="others" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ end }}
-
-
-      <h2>{{ .Get "title" }}</h2>
-
+    <div class="top-row">
+      <div class="slide-header">
+        <h3>{{ .Page.Title }}</h3>
+        {{ $current := .Page.File.BaseFileName }}
+        {{ $yearPages := where (where .Site.RegularPages "Section" "2025") "File.BaseFileName" "ne" $current }}
+        {{ range $yearPages }}
+          <a class="others" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <h2>{{ .Get "title" }}</h2>
+      </div>
+      <div class="slide-content">
+        {{ .Inner | markdownify }}
+        {{ if .Get "link" }}
+          {{ $link := .Get "link" }}
+          {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
+          {{ $domainNoTLD := replaceRE `\.[^.]+$` "" $domain }}
+          {{ $domainParts := split $domainNoTLD "." }}
+          {{ $mainDomain := index $domainParts (sub (len $domainParts) 1) }}
+          <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">View in {{ $mainDomain }}</a>
+        {{ end }}
+      </div>
     </div>
-    <div class="content">
-
-      {{ .Inner | markdownify }}
-      {{ if .Get "link" }}
-        {{ $link := .Get "link" }}
-        {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
-        {{ $domainNoTLD := replaceRE `\.[^.]+$` "" $domain }}
-        {{ $domainParts := split $domainNoTLD "." }}
-        {{ $mainDomain := index $domainParts (sub (len $domainParts) 1) }}
-        <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">View in {{ $mainDomain }}</a>
-      {{ end }}
-    </div>
+    <div class="slide-nav">
+<a class="previous" href="#02"> <img src="/images/recap/arrow.svg" alt=""></a>
+  <a class="next" href="#02"><img src="/images/recap/arrow.svg" alt=""></a>
+    </nav>
   </div>
 </section>

@@ -6,9 +6,10 @@ Accelerates videos 1.5x and generates unique filenames if conflicts occur.
 import subprocess
 from pathlib import Path
 import re
+import datetime
 
 # Paths
-SOURCE_DIR = Path(__file__).parent.parent.parent / "internal" / "illustrations to add"
+SOURCE_DIR = Path.home() / "Sync" / "illustrations"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "static" / "images" / "illos"
 
 def get_unique_filename(path):
@@ -63,11 +64,14 @@ def main():
     total = len(video_files)
     print(f"Found {total} video file(s) to process\n")
 
+    today = datetime.date.today().strftime("%Y-%m-%d")
+    suffixes = ['', '-b', '-c', '-d', '-e', '-f', '-g', '-h', '-i', '-j']
     for idx, video_path in enumerate(video_files, 1):
         print(f"[{idx}/{total}] Processing: {video_path.name}")
 
         # Generate output paths
-        base_name = re.sub(r'\s+', '-', video_path.stem.lower())
+        suffix = suffixes[idx-1] if idx-1 < len(suffixes) else f"-{chr(97+idx-1)}"
+        base_name = f"{today}{suffix}"
         webp_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.webp")
         jpeg_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.jpg")
 
@@ -79,6 +83,10 @@ def main():
             # Extract JPEG thumbnail
             print(f"  → Extracting JPEG: {jpeg_path.name}")
             extract_first_frame_jpeg(video_path, jpeg_path)
+
+            # Move original to trash
+            print(f"  🗑️ Moving original to Trash: {video_path.name}")
+            subprocess.run(["osascript", "-e", f'tell application "Finder" to delete POSIX file "{video_path}"'], check=True)
 
             print(f"  ✅ Done\n")
 
