@@ -1,17 +1,7 @@
 
-{{/*
-recap.html shortcode
-Usage:
-{{< recap image="img.webp" title="Title" link="https://example.com" >}}
-Content here (markdown allowed)
-{{< /recap >}}
-*/}}
-
-
-
 
 <section class="recap" aria-label="{{ .Get "title" }}"
-  {{ if .Get "bg" }}style="background-image: url(/images/recap/{{ .Get "image" }})"{{ end }}>
+  {{ if .Get "image" }}style="background-image: url(/images/recap/{{ .Get "image" }}); background-repeat: repeat; background-size: cover; background-position: center;"{{ end }}>
   <div class="slide">
     <div class="slide-top">
       <div class="slide-header">
@@ -35,9 +25,32 @@ Content here (markdown allowed)
         {{ end }}
       </div>
     </div>
-    <div class="slide-nav">
-<a class="previous" href="#02"> <img src="/images/recap/arrow.svg" alt=""></a>
-  <a class="next" href="#02"><img src="/images/recap/arrow.svg" alt=""></a>
-    </nav>
-  </div>
+
+      <div class="slide-nav">
+        {{ $id := .Get "id" }}
+        {{ $end := .Get "end" }}
+        {{ if and $id (not $end) }}
+          {{ $idStripped := replaceRE "^0+" "" $id }}
+          {{ $idInt := int $idStripped }}
+          {{ $prev := printf "%02d" (sub $idInt 1) }}
+          {{ $next := printf "%02d" (add $idInt 1) }}
+          <a class="previous" href="#{{ $prev }}" data-tippy-content="previous in list"> <img src="/images/recap/previous.svg" alt=""></a>
+          <a class="next" href="#{{ $next }}" data-tippy-content="next in list"><img src="/images/recap/next.svg" alt=""></a>
+        {{ else if and $id $end }}
+          {{ $current := .Page.File.BaseFileName }}
+          {{ $nextMap := dict "in-books" "in-manga" "in-manga" "in-comics" "in-comics" "in-animation" "in-animation" "in-books" }}
+          {{ $nextBase := index $nextMap $current }}
+          {{ $nextPages := where .Site.RegularPages "File.BaseFileName" $nextBase }}
+          {{ $nextPage := cond (gt (len $nextPages) 0) (index $nextPages 0) nil }}
+          {{ $nextFile := cond (not (eq $nextPage nil)) $nextPage.RelPermalink "/2025/" }}
+          {{ $nextTitle := cond (not (eq $nextPage nil)) $nextPage.Title "next post" }}
+          {{ $idStripped := replaceRE "^0+" "" $id }}
+          {{ $idInt := int $idStripped }}
+          <a class="previous" href="#{{ printf "%02d" (sub $idInt 1) }}" data-tippy-content="previous in list"> <img src="/images/recap/previous.svg" alt=""></a>
+          <a class="next" href="{{ $nextFile }}#01" data-tippy-content="{{ $nextTitle }}"><img src="/images/recap/next.svg" alt=""></a>
+        {{ else }}
+          <a class="previous" href="#"> <img src="/images/recap/previous.svg" alt=""></a>
+          <a class="next" href="#"><img src="/images/recap/next.svg" alt=""></a>
+        {{ end }}
+      </div>
 </section>
