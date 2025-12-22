@@ -35,7 +35,7 @@ Content here (markdown allowed)
         {{ $domainNoTLD := replaceRE `\.[^.]+$` "" $domain }}
         {{ $domainParts := split $domainNoTLD "." }}
         {{ $mainDomain := index $domainParts (sub (len $domainParts) 1) }}
-        <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">{{ $mainDomain }} review</a>
+        <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">View in {{ $mainDomain }}</a>
       {{ end }}
     </div>
   </div>
