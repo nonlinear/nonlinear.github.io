@@ -15,6 +15,12 @@
 			"presentation": {
 				"panel": "new"
 			}
+		},
+		{
+			"label": "🔄 Sync comics",
+			"type": "shell",
+			"command": "python3 .github/scripts/sync_comics.py",
+			"group": "build"
 		}
 	]
 }

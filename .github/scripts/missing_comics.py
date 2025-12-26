@@ -13,7 +13,7 @@ REMOTE_USER = os.getenv("REMOTE_USER")
 REMOTE_PATH = os.getenv("REMOTE_PATH", "/serve/media/comics")
 SSH_KEY = os.getenv("SSH_KEY")  # opcional
 
-LISTA_PATH = Path(__file__).parent / "missing_comics.md"
+LISTA_PATH = Path(__file__).parent.parent.parent / "personal" / "missing comics.md"
 
 def extract_numbers(files):
     numbers = set()
@@ -57,12 +57,24 @@ def get_missing_list():
     return missing
 
 def write_missing_list(missing):
+    IGNORE_LIST = {
+        "Jem and the Holograms",
+        "Zero",
+        "Zerocalcare",
+        "The Art of",
+        "Saga",
+        "Charlton Premiere"
+    }
     with open(LISTA_PATH, "w") as f:
         f.write("# Gaps in Comics Collections\n\n")
         for folder, nums in sorted(missing.items()):
-            if nums:
-                gaps_str = ", ".join(str(n) for n in sorted(nums))
-                f.write(f"- {folder}: missing {gaps_str}\n")
+            if folder in IGNORE_LIST:
+                continue
+            for n in sorted(nums):
+                # Formatar nome para URL
+                search_name = f"{folder} {n}"
+                url_name = search_name.replace(" ", "%20")
+                f.write(f"- [ ] {folder} {n} ([getcomics](https://getcomics.org/?s={url_name}))\n")
 
 def main():
     print("Conectando ao NAS e lendo arquivos...")
