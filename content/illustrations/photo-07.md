@@ -8,8 +8,9 @@ tags:
   - procreate
   - illustration
 illos:
+  - 2025-12-28
+  - dazed
   - smirk
   - watching
-  - dazed
-date: 2025-12-17
+date: 2025-12-28
 ---
