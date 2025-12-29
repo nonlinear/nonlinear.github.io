@@ -6,11 +6,11 @@
     <div class="slide-top">
       <div class="slide-header">
         <h3>{{ .Page.Title }}</h3>
-        {{ $current := .Page.File.BaseFileName }}
+        <!-- {{ $current := .Page.File.BaseFileName }}
         {{ $yearPages := where (where .Site.RegularPages "Section" "2025") "File.BaseFileName" "ne" $current }}
         {{ range $yearPages }}
           <a class="others" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ end }}
+        {{ end }} -->
         <h2>{{ .Get "title" }}</h2>
       </div>
       <div class="slide-content">
