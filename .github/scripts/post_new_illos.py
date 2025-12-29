@@ -64,14 +64,26 @@ def main():
     total = len(video_files)
     print(f"Found {total} video file(s) to process\n")
 
+
     today = datetime.date.today().strftime("%Y-%m-%d")
-    suffixes = ['', '-b', '-c', '-d', '-e', '-f', '-g', '-h', '-i', '-j']
+
+    prefix_map = {
+        'p': 'photo-',
+        's': 'street-',
+        'l': 'live-',
+        'o': 'object-'
+    }
+
     for idx, video_path in enumerate(video_files, 1):
         print(f"[{idx}/{total}] Processing: {video_path.name}")
 
-        # Generate output paths
-        suffix = suffixes[idx-1] if idx-1 < len(suffixes) else f"-{chr(97+idx-1)}"
-        base_name = f"{today}{suffix}"
+        # Detect prefix by first letter
+        prefix = ''
+        first_letter = video_path.name[0].lower()
+        if first_letter in prefix_map:
+            prefix = prefix_map[first_letter]
+
+        base_name = f"{prefix}{today}"
         webp_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.webp")
         jpeg_path = get_unique_filename(OUTPUT_DIR / f"{base_name}.jpg")
 
