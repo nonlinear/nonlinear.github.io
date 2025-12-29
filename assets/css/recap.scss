@@ -1,9 +1,16 @@
-html.recap {
-section:first-of-type {
-  .slide-nav .previous {
-    display: none;
-  }
+.highlight {
+  background-color: white;
+  padding: 2px;
+  box-shadow: 10px 0px 0px white;
 }
+
+html.recap {
+  // Highlight apenas atrás do texto dos parágrafos
+  section:first-of-type {
+    .slide-nav .previous {
+      display: none;
+    }
+  }
   section.recap {
     .slide-content .button {
       display: inline-block;
@@ -58,6 +65,10 @@ section:first-of-type {
       .slide-header {
         flex: 1 1 50%;
         min-width: 0;
+        h1, h2, h3 {
+          font-weight: normal;
+          margin-bottom: $gap;
+        }
 
       }
       .slide-content {
@@ -65,6 +76,7 @@ section:first-of-type {
         min-width: 0;
         overflow-y: auto;
         font-family: 'SpaceGrotesk-Light', sans-serif;
+
       }
       .slide-nav {
         flex: 0 0 50px;
@@ -95,12 +107,12 @@ section:first-of-type {
             }
           }
         }
-                a.previous:hover img {
-                  margin-top: 5px;
-                }
-                                a.next:hover img {
-                                  margin-top: 15px;
-                                }
+        a.previous:hover img {
+          margin-top: 5px;
+        }
+        a.next:hover img {
+          margin-top: 15px;
+        }
 
 
 
