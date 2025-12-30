@@ -15,7 +15,7 @@
     "
 >
 
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -35,7 +35,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.scss" />
+  <link rel="stylesheet" href="/css/main.1a78c25cf07af72736dd03ec6def2675001b24aad1adf6629c86b0f427ca91d8.css" />
 
   
 
@@ -45,20 +45,32 @@
   
   
 
+  
+      
+        
+        
+        
+      
+        
+        
+        
+      
+  
+
+    
+    
+    
+    
+    
+
+  
+  
   
     
-      <link href="/css/vertical-nav.css" rel="stylesheet" />
     
-      <link href="/css/nav-p5.css" rel="stylesheet" />
     
   
-
-  
-  
-  
-    
-  
-  <meta property="og:image" content="http://localhost:1313/images/covers/draft.jpg" />
+  <meta property="og:image" content="/images/covers/live.jpg" />
   <meta property="og:description" content="testing processing, p5 and browser permissions" />
 
 
@@ -223,10 +235,10 @@
 
 
   </div>
-  <script src="http://localhost:1313/js/global/qrcode.min.js"></script>
+  <script src="/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "http:\/\/localhost:1313\/experiments\/processing-1\/",
+        text: "\/experiments\/processing-1\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -297,7 +309,7 @@
     
     
     
-      <script src="http://localhost:1313/js/lib/p5.js"></script>
+      <script src="/js/lib/p5.js"></script>
     
   
 
@@ -308,13 +320,13 @@
     
     
     
-      <script src="http://localhost:1313/js/script/vertical-nav.js"></script>
+      <script src="/js/script/vertical-nav.js"></script>
     
   
     
     
     
-      <script src="http://localhost:1313/js/script/nav-p5.js"></script>
+      <script src="/js/script/nav-p5.js"></script>
     
   
 
@@ -325,7 +337,7 @@
 
 
 
-  <script src="http://localhost:1313/js/script/processing-1.js"></script>
+  <script src="/js/script/processing-1.js"></script>
 
 
 
@@ -334,34 +346,18 @@
   document.documentElement.classList.add("js");
 </script>
 
-<script src="http://localhost:1313/js/global/popper.min.js"></script>
-<script src="http://localhost:1313/js/global/tippy-bundle.umd.min.js"></script>
 
-<script>
-  document.querySelectorAll(".tooltip").forEach((el) => {
-    const tipId = el.getAttribute("data-tooltip-id");
-    const content =
-      document.getElementById(tipId)?.innerHTML || "No content";
 
-    tippy(el, {
-      content,
-      allowHTML: true,
-      interactive: true,
-    });
-  });
-</script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl, {
-        trigger: 'hover',
-        html: true
-      });
-    });
-  });
-</script>
+  
+    
+  
+    
+  
+
+  <script src="/js/global/popper.min.js"></script>
+  <script src="/js/global/tippy-bundle.umd.min.js"></script>
+
 
 
 

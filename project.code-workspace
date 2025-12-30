@@ -55,8 +55,8 @@
       },
       {
         "label": "✅ Commit changes",
-        "type": "shell",
-        "command": "hugo && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
+          "type": "shell",
+          "command": "hugo --config config.toml --destination docs && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
         "group": "build",
         "presentation": {
           "echo": true,
