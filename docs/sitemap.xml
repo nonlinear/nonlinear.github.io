@@ -2,168 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/illustration/</loc>
+    <loc>/tags/illustration/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/illustrations/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/illustrations/photo-07/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/procreate/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/fitness/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/2025/in-animation/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/2025/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/illustrations/street-03/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/illustrations/photo-05/</loc>
     <lastmod>2025-12-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/</loc>
+    <loc>/illustrations/photo-06/</loc>
     <lastmod>2025-12-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/photo-05/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/illustrations/photo-06/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/illustrations/photo-07/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/procreate/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/illustrations/street-03/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/2025/in-books/</loc>
+    <loc>/2025/in-books/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/in-comics/</loc>
+    <loc>/2025/in-comics/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/in-manga/</loc>
+    <loc>/2025/in-manga/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/2025/</loc>
-    <lastmod>2025-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/illustrations/photo-04/</loc>
+    <loc>/illustrations/photo-04/</loc>
     <lastmod>2025-12-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/street-01/</loc>
+    <loc>/illustrations/street-01/</loc>
     <lastmod>2025-12-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/cryboy/</loc>
+    <loc>/experiments/cryboy/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/</loc>
+    <loc>/experiments/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/photo-03/</loc>
+    <loc>/illustrations/photo-03/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/live-01/</loc>
+    <loc>/illustrations/live-01/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/object-01/</loc>
+    <loc>/illustrations/object-01/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/photo-01/</loc>
+    <loc>/illustrations/photo-01/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/photo-02/</loc>
+    <loc>/illustrations/photo-02/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/illustrations/street-02/</loc>
+    <loc>/illustrations/street-02/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/tradingcard-2/</loc>
+    <loc>/experiments/tradingcard-2/</loc>
     <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/tradingcard/</loc>
+    <loc>/experiments/tradingcard/</loc>
     <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/vectortile/</loc>
+    <loc>/experiments/vectortile/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/csstile/</loc>
+    <loc>/experiments/csstile/</loc>
     <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/csstile/</loc>
+    <loc>/tags/csstile/</loc>
     <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/volume/</loc>
+    <loc>/experiments/volume/</loc>
     <lastmod>2025-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/hedgehog/</loc>
+    <loc>/experiments/hedgehog/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/filters-masks/</loc>
+    <loc>/experiments/filters-masks/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/processing-1/</loc>
+    <loc>/experiments/processing-1/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/</loc>
+    <loc>/curva/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/002/</loc>
+    <loc>/curva/002/</loc>
     <lastmod>2025-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/vectoring/</loc>
+    <loc>/experiments/vectoring/</loc>
     <lastmod>2025-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/010/</loc>
+    <loc>/curva/010/</loc>
     <lastmod>2025-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/003/</loc>
+    <loc>/curva/003/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/009/</loc>
+    <loc>/curva/009/</loc>
     <lastmod>2025-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/005/</loc>
+    <loc>/curva/005/</loc>
     <lastmod>2025-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/001/</loc>
+    <loc>/curva/001/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/004/</loc>
+    <loc>/curva/004/</loc>
     <lastmod>2025-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/008/</loc>
+    <loc>/curva/008/</loc>
     <lastmod>2025-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/006/</loc>
+    <loc>/curva/006/</loc>
     <lastmod>2025-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/curva/007/</loc>
+    <loc>/curva/007/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>/tags/ai/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/speeddial/</loc>
+    <loc>/experiments/speeddial/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/timeline/</loc>
+    <loc>/experiments/timeline/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/3dcarousel/</loc>
+    <loc>/experiments/3dcarousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/carousel/</loc>
+    <loc>/experiments/carousel/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/documentation/</loc>
+    <loc>/experiments/documentation/</loc>
     <lastmod>2025-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/focus-test/</loc>
+    <loc>/experiments/focus-test/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/gallery-scroll/</loc>
+    <loc>/experiments/gallery-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/tile/</loc>
+    <loc>/experiments/tile/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/experiments/video-scroll/</loc>
+    <loc>/experiments/video-scroll/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
   </url>
 </urlset>
