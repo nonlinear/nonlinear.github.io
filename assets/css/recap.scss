@@ -26,6 +26,7 @@ section.recap {
   }
  &:first-of-type .previous {
     opacity: 0%;
+    pointer-events: none;
   }
 &:not(.end) {
   .external {
@@ -36,8 +37,12 @@ section.recap {
     padding: $gap2 $gap4 0 $gap2;
   }
 
+
+
   .content {
     font-family: safiro-medium;
+    padding-bottom: $gap2;
+    margin-bottom: 0;
     height: 100%;
     overflow-y: auto;
     p:has(.highlight) {
