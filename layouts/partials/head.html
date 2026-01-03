@@ -86,26 +86,39 @@
       <link href="{{ $slugCss | relURL }}" rel="stylesheet" />
     {{ end }}
 
-  {{/* Open Graph image logic simplificado: cover > slug.jpg > illos > live.jpg */}}
+  {{/* Open Graph image logic simplificado: cover > slug.(webp|jpg|png) > illos > live.jpg */}}
   {{ $ogImage := "/images/covers/live.jpg" }}
   {{ if .Params.cover }}
-    {{ $ogImage = printf "/images/covers/%s.jpg" .Params.cover }}
+    {{ $extensions := slice "webp" "jpg" "png" "gif" }}
+    {{ range $extensions }}
+      {{ $candidate := printf "/images/covers/%s.%s" $.Params.cover . }}
+      {{ if (fileExists (printf "static%s" $candidate)) }}
+        {{ $ogImage = $candidate }}
+        {{ break }}
+      {{ end }}
+    {{ end }}
   {{ else }}
     {{ $slug := .File.BaseFileName }}
-    {{ $slugCover := printf "/images/covers/%s.jpg" $slug }}
-    {{ if (fileExists (printf "static%s" $slugCover)) }}
-      {{ $ogImage = $slugCover }}
-    {{ else if and (in .File.Path "/content/illustrations/") (not .Params.cover) .Params.illos }}
-      {{ $firstIllo := index .Params.illos 0 }}
-      {{ if $firstIllo }}
-        {{ $jpg := printf "/images/illos/%s.jpg" $firstIllo }}
-        {{ $png := printf "/images/illos/%s.png" $firstIllo }}
-        {{ if (fileExists (printf "static%s" $jpg)) }}
-          {{ $ogImage = $jpg }}
-        {{ else if (fileExists (printf "static%s" $png)) }}
-          {{ $ogImage = $png }}
-        {{ else }}
-          {{ $ogImage = $jpg }}
+    {{ $extensions := slice "webp" "jpg" "png" "gif" }}
+    {{ range $extensions }}
+      {{ $candidate := printf "/images/covers/%s.%s" $slug . }}
+      {{ if (fileExists (printf "static%s" $candidate)) }}
+        {{ $ogImage = $candidate }}
+        {{ break }}
+      {{ end }}
+    {{ end }}
+    {{ if eq $ogImage "/images/covers/live.jpg" }}
+      {{ if and (in .File.Path "/content/illustrations/") (not .Params.cover) .Params.illos }}
+        {{ $firstIllo := index .Params.illos 0 }}
+        {{ if $firstIllo }}
+          {{ $extensions := slice "webp" "jpg" "png" "gif" }}
+          {{ range $extensions }}
+            {{ $candidate := printf "/images/illos/%s.%s" $firstIllo . }}
+            {{ if (fileExists (printf "static%s" $candidate)) }}
+              {{ $ogImage = $candidate }}
+              {{ break }}
+            {{ end }}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
