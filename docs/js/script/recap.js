@@ -7,6 +7,13 @@ function highlightTextNodes(node) {
   if (node.nodeType === Node.TEXT_NODE) {
     const text = node.nodeValue;
     if (!text.trim()) return;
+    // Não processa se já está dentro de um span.highlight
+    let parent = node.parentNode;
+    while (parent) {
+      if (parent.classList && parent.classList.contains('highlight')) return;
+      if (parent.tagName === 'SECTION') break;
+      parent = parent.parentNode;
+    }
     // Divide por quebras de linha
     const lines = text.split(/\n/);
     // Envelopa cada linha
@@ -16,12 +23,17 @@ function highlightTextNodes(node) {
       span.className = 'highlight';
       span.textContent = line;
       frag.appendChild(span);
-      if (idx < lines.length - 1) frag.appendChild(document.createElement('br'));
+      // Adiciona espaço entre spans ao invés de <br>
+      if (idx < lines.length - 1) {
+        frag.appendChild(document.createTextNode(' '));
+      }
     });
     node.parentNode.replaceChild(frag, node);
   } else if (node.nodeType === Node.ELEMENT_NODE) {
     // Não processa se já for highlight
     if (node.classList && node.classList.contains('highlight')) return;
+    // Não processa se for marcado para pular
+    if (node.hasAttribute && node.hasAttribute('data-skip-highlight')) return;
     // Processa recursivamente os filhos
     // Array.from para evitar problemas ao modificar filhos durante o loop
     Array.from(node.childNodes).forEach(highlightTextNodes);
@@ -29,13 +41,26 @@ function highlightTextNodes(node) {
 }
 
 function highlightLineBreaks() {
-  document.querySelectorAll('.slide-content, .slide-header').forEach(function (root) {
-    highlightTextNodes(root);
+  // Processa .header
+  document.querySelectorAll('section.recap .header').forEach(function (header) {
+    highlightTextNodes(header);
+  });
+
+  // Processa .content
+  document.querySelectorAll('section.recap .content').forEach(function (content) {
+    // Marca botões para não processar
+    Array.from(content.querySelectorAll('a.button')).forEach(btn => {
+      btn.setAttribute('data-skip-highlight', 'true');
+    });
+    highlightTextNodes(content);
   });
 }
 
 // Rodar ao carregar
-window.addEventListener('DOMContentLoaded', highlightLineBreaks);
+window.addEventListener('DOMContentLoaded', function() {
+  // Pequeno delay para garantir que o conteúdo está renderizado
+  setTimeout(highlightLineBreaks, 100);
+});
 // Rodar ao redimensionar
 window.addEventListener('resize', function () {
   // Pequeno debounce para evitar excesso de processamento
