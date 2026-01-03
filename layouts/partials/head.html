@@ -10,11 +10,7 @@
     This ensures every post gets a sensible default cover for social and RSS, with easy customization via frontmatter or slug-based images.
   */}}
   <meta charset="utf-8" />
-  {{ if eq .Section "2025" }}
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  {{ else }}
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  {{ end }}
 
   <!-- iOS webapp meta tags -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
