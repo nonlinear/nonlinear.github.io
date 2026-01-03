@@ -24,23 +24,16 @@ section.recap {
     box-sizing: border-box;
 
   }
-&.end {
-  .next {
-    display: none;
+ &:first-of-type .previous {
+    opacity: 0%;
   }
-}
-&:first-of-type {
-  .previous {
-    display: none;
-  }
-}
 &:not(.end) {
-  .navigation .external {
+  .external {
     display: none;
   }
 }
   .content, .header, .navigation {
-    padding: 0 $gap4 0 $gap2;
+    padding: $gap2 $gap4 0 $gap2;
   }
 
   .content {
@@ -60,16 +53,19 @@ section.recap {
 
   }
   .header {
-padding-top: $gap;
-
+padding-right: 0px;
+display: grid;
+grid-template-columns: 1fr auto;
+grid-gap: $gap;
     h3 {
       margin: 0;
       font-size: 40px;
       font-weight: normal;
       font-family: holistical;
-      margin-bottom: $gap2;
+      margin-bottom: $gap;
       @media (max-width: $bp) {
         font-size: 30px;
+              margin-bottom: $gaphalf;
       }
     }
 
@@ -79,7 +75,6 @@ padding-top: $gap;
       overflow-wrap: break-word;
       hyphens: auto;
       word-break: normal;
-      max-width: 900px;
       line-height: 90%;
       font-family: messages;
       font-weight: normal;
@@ -112,54 +107,38 @@ padding-top: $gap;
   }
 
 
-
-  .navigation {
-
-    height: 55px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 2px;
-    @media (max-width: $bp) {
-      grid-gap: 1px;
-      padding-left: $gaphalf;
-      grid-template-columns: auto 1fr;
-    }
-    .button {
-      height: 100%;
-    }
-
     .internal {
-      display: flex;
-      flex-direction: row;
-      gap: 2px;
-      justify-content: flex-end;
-      @media (max-width: $bp) {
-        gap: 1px;
-        justify-content: flex-start;
-      }
+      display: grid;
+      grid-gap: 22px;
+      grid-template-rows: 40px 40px;
 
-      .button {
-        padding-top: 17px;
-      }
     }
 
     .external {
-      display: flex;
-      flex-direction: row;
-      gap: 2px;
-      justify-content: flex-start;
+      padding-left: $gap2;
+      padding-bottom: 0px;
+      margin-bottom: -10px;
+      .button {
+        margin-right: -7px;
+      }
     }
 
     a.previous,
     a.next {
       text-align: center;
       width: 30px;
+      height: 30px;
 
       img {
-        height: 25px !important;
+        height: 30px !important;
       }
     }
+        a.next:hover img {
+          margin-top: 5px;
+          transition: all 0.2s;
+        }
+                a.previous:hover img {
+                  margin-top: -5px;
+                  transition: all 0.2s;
+                }
   }
-}
-
