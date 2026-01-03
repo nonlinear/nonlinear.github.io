@@ -1,172 +1,164 @@
-.highlight {
+span.highlight {
   background-color: white;
-  padding: 2px;
-  box-shadow: 10px 0px 0px white;
+  padding: 4px;
+  box-shadow: -100px 0px 0px white;
 }
 
-html.recap {
-  // Highlight apenas atrás do texto dos parágrafos
-  section:first-of-type {
-    .slide-nav .previous {
-      display: none;
+
+section.recap {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: $gap2;
+    @media (max-width: $bp) {
+  grid-gap: $gap;
     }
+  padding: 0 !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & > * {
+    width: 100vw;
+    box-sizing: border-box;
+
   }
-  section.recap {
-    .slide-content .button {
-      display: inline-block;
-      text-transform: uppercase;
-      padding: $gap $gap2;
-      border-radius: 1.5em;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
-      background: linear-gradient(180deg, #fff 80%, #e0e0e0 100%);
-      border: none;
+&.end {
+  .next {
+    display: none;
+  }
+}
+&:first-of-type {
+  .previous {
+    display: none;
+  }
+}
+&:not(.end) {
+  .navigation .external {
+    display: none;
+  }
+}
+  .content, .header, .navigation {
+    padding: 0 $gap4 0 $gap2;
+  }
+
+  .content {
+    font-family: safiro-medium;
+    height: 100%;
+    overflow-y: auto;
+    p:has(.highlight) {
       font-size: 20px;
-      margin-top: $gap;
       font-weight: normal;
-      color: #222;
-      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-      cursor: pointer;
-      position: relative;
-      top: 0;
-      &:hover {
-        box-shadow: 0 2px 6px rgba(0,0,0,0.10);
-        background: linear-gradient(180deg, #e0e0e0 90%, #ccc 100%);
-        transform: translateY(2px) scale(0.98);
-        top: 2px;
-      }
-    }
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0;
-    margin: 0;
-    // Gradients alternados
-    &:nth-of-type(3n) {
-      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-    }
-    &:nth-of-type(3n-1) {
-      background: linear-gradient(135deg, #f9f9f9 0%, #e3e3e3 100%);
-    }
-    &:nth-of-type(3n-2) {
-      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+      padding: 0;
+      margin: 0;
+      line-height: 150%;
+      margin-bottom: $gap;
+        max-width: 500px;
+
     }
 
-    .slide {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      .slide-top {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
-        min-height: 0;
-      }
-      .slide-header {
-        flex: 1 1 50%;
-        min-width: 0;
-        h1, h2, h3 {
-          font-weight: normal;
-          margin-bottom: $gap;
-        }
+  }
+  .header {
+padding-top: $gap;
 
-      }
-      .slide-content {
-        flex: 1 1 50%;
-        min-width: 0;
-        overflow-y: auto;
-        font-family: 'SpaceGrotesk-Light', sans-serif;
-
-      }
-      .slide-nav {
-        flex: 0 0 50px;
-        height: 55px;
-        display: flex;
-        gap: 3px;
-        margin-right: $gap4;
-        align-items: center;
-        justify-content: flex-end;
-
-        a.previous, a.next {
-          background-color: red;
-
-          width: 55px;
-          text-align: center;
-          height: 55px;
-          img {
-            height: 35px;
-            margin-top: 10px;
-            transition: all 300ms;
-          }
-          transition: all 300ms;
-          &:hover {
-            background-color: darkred;
-            img {
-              margin-top: 15px;
-              transition: all 300ms;
-            }
-          }
-        }
-        a.previous:hover img {
-          margin-top: 5px;
-        }
-        a.next:hover img {
-          margin-top: 15px;
-        }
-
-
-
-
-      }
-      @media (orientation: landscape) {
-        .slide-top {
-          flex-direction: row;
-        }
-        .slide-header {
-          flex: 1 1 50%;
-          margin-right: 2rem;
-        }
-        .slide-content {
-          flex: 1 1 50%;
-        }
-      }
-      @media (orientation: portrait) {
-        .slide-top {
-          flex-direction: column;
-        }
-        .slide-header {
-          flex: 0 0 auto;
-        }
-        .slide-content {
-          flex: 1 1 auto;
-        }
-      }
+    h3 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: normal;
       font-family: holistical;
-      font-weight: normal;
+      margin-bottom: $gap2;
       @media (max-width: $bp) {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
 
     h2 {
+      margin: 0;
       font-size: 120px;
       overflow-wrap: break-word;
       hyphens: auto;
       word-break: normal;
+      max-width: 900px;
       line-height: 90%;
       font-family: messages;
       font-weight: normal;
+      margin-bottom: 0;
+
       @media (max-width: $bp) {
         font-size: 70px;
       }
     }
   }
-  .slide-header, .slide-content {
-    margin: $gap3;
+
+
+
+  .button {
+    display: inline-block;
+    font-family: safiro-medium;
+    padding: $gap;
+    background-color: red;
+    color: white;
+    border: 0;
+    font-size: 17px;
+    font-weight: normal;
+    transition: all 0.2s;
+    cursor: pointer;
+
+
+    &:hover {
+      background-color: darkred;
+    }
   }
-  .slide-content {
-    overflow-y: auto;
-    font-size: 20px;
-    padding-right: $gap2;
+
+
+
+  .navigation {
+
+    height: 55px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 2px;
+    @media (max-width: $bp) {
+      grid-gap: 1px;
+      padding-left: $gaphalf;
+      grid-template-columns: auto 1fr;
+    }
+    .button {
+      height: 100%;
+    }
+
+    .internal {
+      display: flex;
+      flex-direction: row;
+      gap: 2px;
+      justify-content: flex-end;
+      @media (max-width: $bp) {
+        gap: 1px;
+        justify-content: flex-start;
+      }
+
+      .button {
+        padding-top: 17px;
+      }
+    }
+
+    .external {
+      display: flex;
+      flex-direction: row;
+      gap: 2px;
+      justify-content: flex-start;
+    }
+
+    a.previous,
+    a.next {
+      text-align: center;
+      width: 30px;
+
+      img {
+        height: 25px !important;
+      }
+    }
   }
 }
+
