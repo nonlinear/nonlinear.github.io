@@ -41,8 +41,8 @@ section.recap {
 
   .content {
     font-family: safiro-medium;
-    padding-bottom: $gap2;
-    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: $gap;
     height: 100%;
     overflow-y: auto;
     p:has(.highlight) {
@@ -118,7 +118,9 @@ grid-gap: $gap;
       grid-template-rows: 40px 40px;
 
     }
-
+&.end .content {
+  margin-bottom: 0 !important;
+}
     .external {
       padding-left: $gap2;
       padding-bottom: 0px;
