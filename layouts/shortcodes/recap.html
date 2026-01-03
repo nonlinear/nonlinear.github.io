@@ -12,9 +12,16 @@
   {{ if .Get "link" }}
   {{ $link := .Get "link" }}
   {{ $domain := replaceRE `https?://(www\.)?([^/]+).*` `$2` $link }}
-  {{ $domainNoTLD := replaceRE `\.[^.]+$` "" $domain }}
-  {{ $domainParts := split $domainNoTLD "." }}
-  {{ $mainDomain := index $domainParts (sub (len $domainParts) 1) }}
+  {{ $domainParts := split $domain "." }}
+  {{ $lastPart := index $domainParts (sub (len $domainParts) 1) }}
+  {{ $domainNoTLD := "" }}
+  {{ if and (eq (len $lastPart) 2) (gt (len $domainParts) 2) }}
+    {{ $domainNoTLD = replaceRE `\.[^.]+\.[^.]+$` "" $domain }}
+  {{ else }}
+    {{ $domainNoTLD = replaceRE `\.[^.]+$` "" $domain }}
+  {{ end }}
+  {{ $domainPartsClean := split $domainNoTLD "." }}
+  {{ $mainDomain := index $domainPartsClean (sub (len $domainPartsClean) 1) }}
   {{ $capitalizedDomain := title $mainDomain }}
   <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">View in {{ $capitalizedDomain }}</a>
   {{ end }}
