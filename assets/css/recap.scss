@@ -5,16 +5,57 @@ span.highlight {
   box-shadow: -100px 0px 0px white;
 }
 
+html.recap.vertical-nav article.content {
+  nav {
+    a {
+      opacity: 1;
+      outline-color: red;
+      background-color: red;
+
+      &:hover {
+        opacity: 1;
+        outline-color: darkred;
+        background-color: darkred;
+      }
+
+      &.active {
+        opacity: 1;
+        background-color: white;
+outline-color: white;
+      }
+      &.visited:not(.active) {
+opacity: .3;
+      outline-color: red;
+        background-color: red;
+      }
+    }
+  }
+}
+
+// Tooltip customization for recap pages
+.tippy-box.nav-tooltip {
+  padding: 8px;
+  font-family: safiro-medium;
+  color: white !important;
+  background-color: red !important;
+  border-radius: 0;
+  font-size: 18px;
+
+  .tippy-arrow {
+    color: red !important;
+  }
+}
+
 
 section.recap {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: $gap2;
-    @media (max-width: $bp) {
-  grid-gap: $gap;
-    }
+  grid-gap: $gap2;
+  @media (max-width: $bp) {
+    grid-gap: $gap;
+  }
   padding: 0 !important;
   background-size: cover;
   background-position: center;
@@ -24,15 +65,15 @@ section.recap {
     box-sizing: border-box;
 
   }
- &:first-of-type .previous {
+  &:first-of-type .previous {
     opacity: 0%;
     pointer-events: none;
   }
-&:not(.end) {
-  .external {
-    display: none;
+  &:not(.end) {
+    .external {
+      display: none;
+    }
   }
-}
   .content, .header, .navigation {
     padding: $gap2 $gap4 0 $gap2;
   }
@@ -52,16 +93,16 @@ section.recap {
       margin: 0;
       line-height: 150%;
       margin-bottom: $gap;
-        max-width: 500px;
+      max-width: 500px;
 
     }
 
   }
   .header {
-padding-right: 0px;
-display: grid;
-grid-template-columns: 1fr auto;
-grid-gap: $gap;
+    padding-right: 0px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: $gap;
     h3 {
       margin: 0;
       font-size: 40px;
@@ -70,7 +111,7 @@ grid-gap: $gap;
       margin-bottom: $gap;
       @media (max-width: $bp) {
         font-size: 30px;
-              margin-bottom: $gaphalf;
+        margin-bottom: $gaphalf;
       }
     }
 
@@ -112,40 +153,47 @@ grid-gap: $gap;
   }
 
 
-    .internal {
-      display: grid;
-      grid-gap: 22px;
-      grid-template-rows: 40px 40px;
 
-    }
-&.end .content {
-  margin-bottom: 0 !important;
-}
-    .external {
-      padding-left: $gap2;
-      padding-bottom: 0px;
-      margin-bottom: -10px;
-      .button {
-        margin-right: -7px;
-      }
-    }
 
-    a.previous,
-    a.next {
-      text-align: center;
-      width: 30px;
-      height: 30px;
+  .internal {
+    display: grid;
+    grid-gap: 22px;
+    grid-template-rows: 40px 40px;
 
-      img {
-        height: 30px !important;
-      }
-    }
-        a.next:hover img {
-          margin-top: 5px;
-          transition: all 0.2s;
-        }
-                a.previous:hover img {
-                  margin-top: -5px;
-                  transition: all 0.2s;
-                }
   }
+  &.end .content {
+    margin-bottom: 0 !important;
+  }
+  .external {
+    padding-left: $gap2;
+    padding-bottom: 0px;
+    margin-bottom: -10px;
+    .button {
+      margin-right: -7px;
+    }
+  }
+
+  a.previous,
+  a.next {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+
+    img {
+      height: 30px !important;
+    }
+  }
+  a.next:hover img {
+    margin-top: 5px;
+    transition: all 0.2s;
+  }
+  a.previous:hover img {
+    margin-top: -5px;
+    transition: all 0.2s;
+  }
+
+
+
+}
+
+
