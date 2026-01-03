@@ -4,8 +4,42 @@
 {{ if .Get "image" }}style="background-image: url(/images/recap/{{ .Get "image" }}); background-repeat: repeat; background-size: cover; background-position: center;"{{ end }}>
 
 <div class="header">
+ <div class="titles">
   <h3>{{ .Page.Title }}</h3>
-  <h2>{{ .Get "title" }}</h2>
+<h2>{{ .Get "title" }}</h2>
+</div>
+  <div class="internal">
+    {{ $id := .Get "id" }}
+    {{ $end := .Get "end" }}
+    {{ if and $id (not $end) }}
+    {{ $idStripped := replaceRE "^0+" "" $id }}
+    {{ $idInt := int $idStripped }}
+    {{ $prev := printf "%02d" (sub $idInt 1) }}
+    {{ $next := printf "%02d" (add $idInt 1) }}
+    <a class="button previous" href="#{{ $prev }}" data-tippy-content="previous in list"> <img
+        src="/images/recap/previous.svg" alt=""></a>
+    <a class="button next" href="#{{ $next }}" data-tippy-content="next in list"><img src="/images/recap/next.svg"
+        alt=""></a>
+    {{ else if and $id $end }}
+    {{ $current := .Page.File.BaseFileName }}
+    {{ $nextMap := dict "in-books" "in-manga" "in-manga" "in-comics" "in-comics" "in-animation" "in-animation" "in-books"
+    }}
+    {{ $nextBase := index $nextMap $current }}
+    {{ $nextPages := where .Site.RegularPages "File.BaseFileName" $nextBase }}
+    {{ $nextPage := cond (gt (len $nextPages) 0) (index $nextPages 0) nil }}
+    {{ $nextFile := cond (not (eq $nextPage nil)) $nextPage.RelPermalink "/2025/" }}
+    {{ $nextTitle := cond (not (eq $nextPage nil)) $nextPage.Title "next post" }}
+    {{ $idStripped := replaceRE "^0+" "" $id }}
+    {{ $idInt := int $idStripped }}
+    <a class="button previous" href="#{{ printf " %02d" (sub $idInt 1) }}" data-tippy-content="previous in list"> <img
+        src="/images/recap/previous.svg" alt=""></a>
+    <a class="button next" href="{{ $nextFile }}#01" data-tippy-content="{{ $nextTitle }}"><img
+        src="/images/recap/next.svg" alt=""></a>
+    {{ else }}
+    <a class="button previous" href="#"> <img src="/images/recap/previous.svg" alt=""></a>
+    <a class="button next" href="#"><img src="/images/recap/next.svg" alt=""></a>
+    {{ end }}
+  </div>
 </div>
 <div class="content">
   {{ .Inner | markdownify }}
@@ -26,47 +60,14 @@
   <a href="{{ $link }}" class="button" target="{{ $mainDomain }}">View in {{ $capitalizedDomain }}</a>
   {{ end }}
 </div>
-<div class="navigation">
-<div class="internal">
-  {{ $id := .Get "id" }}
-  {{ $end := .Get "end" }}
-  {{ if and $id (not $end) }}
-  {{ $idStripped := replaceRE "^0+" "" $id }}
-  {{ $idInt := int $idStripped }}
-  {{ $prev := printf "%02d" (sub $idInt 1) }}
-  {{ $next := printf "%02d" (add $idInt 1) }}
-  <a class="button previous" href="#{{ $prev }}" data-tippy-content="previous in list"> <img
-      src="/images/recap/previous.svg" alt=""></a>
-  <a class="button next" href="#{{ $next }}" data-tippy-content="next in list"><img src="/images/recap/next.svg"
-      alt=""></a>
-  {{ else if and $id $end }}
-  {{ $current := .Page.File.BaseFileName }}
-  {{ $nextMap := dict "in-books" "in-manga" "in-manga" "in-comics" "in-comics" "in-animation" "in-animation" "in-books"
-  }}
-  {{ $nextBase := index $nextMap $current }}
-  {{ $nextPages := where .Site.RegularPages "File.BaseFileName" $nextBase }}
-  {{ $nextPage := cond (gt (len $nextPages) 0) (index $nextPages 0) nil }}
-  {{ $nextFile := cond (not (eq $nextPage nil)) $nextPage.RelPermalink "/2025/" }}
-  {{ $nextTitle := cond (not (eq $nextPage nil)) $nextPage.Title "next post" }}
-  {{ $idStripped := replaceRE "^0+" "" $id }}
-  {{ $idInt := int $idStripped }}
-  <a class="button previous" href="#{{ printf " %02d" (sub $idInt 1) }}" data-tippy-content="previous in list"> <img
-      src="/images/recap/previous.svg" alt=""></a>
-  <a class="button next" href="{{ $nextFile }}#01" data-tippy-content="{{ $nextTitle }}"><img
-      src="/images/recap/next.svg" alt=""></a>
-  {{ else }}
-  <a class="button previous" href="#"> <img src="/images/recap/previous.svg" alt=""></a>
-  <a class="button next" href="#"><img src="/images/recap/next.svg" alt=""></a>
-  {{ end }}
-</div>
-        <div class="external">
+<div class="external">
           {{ $current := .Page.File.BaseFileName }}
           {{ $yearPages := where (where .Site.RegularPages "Section" "2025") "File.BaseFileName" "ne" $current }}
           {{ range $yearPages }}
           {{ $shortTitle := replaceRE "^2025 in " "" .Title }}
           <a class="button" href="{{ .RelPermalink }}">{{ $shortTitle }}</a>
           {{ end }}
-        </div>
+
 
 
 
