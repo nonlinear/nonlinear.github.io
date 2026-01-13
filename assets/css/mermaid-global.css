@@ -1,0 +1,58 @@
+/* Global Mermaid diagram styles for Hugo/VS Code preview */
+.mermaid {
+  --mermaid-font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  --mermaid-font-size: 1.1em;
+  --mermaid-edge-stroke: #888;
+  --mermaid-node-bg: #f9f9f9;
+  --mermaid-node-border: #333;
+  --mermaid-label-bg: #fffbe6;
+  --mermaid-label-color: #222;
+  --mermaid-primary-color: #2e8b57;
+  --mermaid-secondary-color: #e67e22;
+  --mermaid-tertiary-color: #3498db;
+  --mermaid-note-bg: #f5f5f5;
+  --mermaid-note-border: #aaa;
+  --mermaid-font-weight: 500;
+  /* Add more custom properties as needed */
+}
+
+.mermaid svg {
+  font-family: var(--mermaid-font-family);
+  font-size: var(--mermaid-font-size);
+}
+
+.mermaid .node rect,
+.mermaid .node ellipse,
+.mermaid .node circle {
+  fill: var(--mermaid-node-bg);
+  stroke: var(--mermaid-node-border);
+  stroke-width: 1.5px;
+}
+
+.mermaid .edgePath path {
+  stroke: var(--mermaid-edge-stroke);
+  stroke-width: 1.5px;
+}
+
+.mermaid .label {
+  background: var(--mermaid-label-bg);
+  color: var(--mermaid-label-color);
+  font-weight: var(--mermaid-font-weight);
+}
+
+.mermaid .note {
+  fill: var(--mermaid-note-bg);
+  stroke: var(--mermaid-note-border);
+}
+
+.mermaid .actor {
+  fill: var(--mermaid-primary-color);
+}
+
+.mermaid .messageLine0 {
+  stroke: var(--mermaid-secondary-color);
+}
+
+.mermaid .messageLine1 {
+  stroke: var(--mermaid-tertiary-color);
+}
