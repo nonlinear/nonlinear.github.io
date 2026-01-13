@@ -1,3 +1,7 @@
+---
+category: Utilities
+---
+
 # yaml fixes
 
 ## Home Assistant YAML: What is a "HA error"?

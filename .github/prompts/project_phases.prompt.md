@@ -1,3 +1,7 @@
+---
+category: Project Management
+---
+
 # Project Phase Detection & Guidance System
 
 ## Registro de Histórico (para humanos)

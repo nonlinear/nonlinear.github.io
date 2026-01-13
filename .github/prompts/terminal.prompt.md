@@ -1,3 +1,7 @@
+---
+category: Utilities
+---
+
 # Home Assistant
 
 ## verify environemnt

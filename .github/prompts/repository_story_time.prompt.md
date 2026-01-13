@@ -1,4 +1,5 @@
 ---
+category: Analysis & Summarization
 mode: "agent"
 description: "Generate a comprehensive repository summary and narrative story from commit history"
 tools:

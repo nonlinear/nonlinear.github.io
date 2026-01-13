@@ -1,3 +1,7 @@
+---
+category: Meta & Recommendations
+---
+
 - Review content of conversation
 - Suggest 5 possible conversation titles
 - Conversation titles should have no more than 3 words

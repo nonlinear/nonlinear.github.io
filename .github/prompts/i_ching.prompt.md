@@ -1,3 +1,7 @@
+---
+category: AI Assistants
+---
+
 # I Ching
 
 As an expert I Ching interpreter:

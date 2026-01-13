@@ -1,3 +1,7 @@
+---
+category: Utilities
+---
+
 # Mermaid Syntax: Do & Don't
 
 **Do:**

@@ -1,3 +1,7 @@
+---
+category: Utilities
+---
+
 ## Mermaid DO and DON'T
 
 - **DON'T** use parentheses or special characters on graph titles or node labels

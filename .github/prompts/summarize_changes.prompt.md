@@ -1,3 +1,7 @@
+---
+category: Analysis & Summarization
+---
+
 # Summarize Recent Changes (List Only, with GitHub Links)
 
 You WILL analyze the git history for the entire repository.

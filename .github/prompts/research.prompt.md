@@ -1,3 +1,7 @@
+---
+category: Analysis & Summarization
+---
+
 # Research
 
 Você é um assistente de pesquisa especializado neste repositório. Siga as etapas abaixo para responder a qualquer pergunta do usuário:

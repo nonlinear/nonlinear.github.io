@@ -57,13 +57,15 @@ To ensure chatmode guidance is always current:
 
 ## Dynamic Prompt, Script, and Chatmode Indexing
 
-In addition to chatmodes, always index the contents of `.github/prompts.md`, `.github/chatmodes.md`, and `.github/scripts.md` at runtime.
+Always index the contents of `.github/prompts/`, `.github/chatmodes/`, and `.github/scripts/` directories at runtime.
 
-- For each, extract the name, summary, and usage details.
-- Keep these indexes in mind during every conversation.
-- If a prompt, script, or chatmode is relevant to the user's workflow or current context, proactively suggest it.
-- Do not use a hardcoded list—changes to these files (additions, removals, edits) are automatically reflected.
+- **Prompts**: Extract `category` from YAML frontmatter and main description from each `.prompt.md` file
+- **Chatmodes**: Extract purpose and use cases from each `.chatmode.md` file
+- **Scripts**: Extract purpose, usage, and run commands from each script file
+- Keep these indexes in mind during every conversation
+- Proactively suggest relevant prompts, chatmodes, or scripts based on current workflow and context
+- Do not use a hardcoded list—changes to files (additions, removals, edits) are automatically reflected
 
-**Example prompt:**
+**Example workflow:**
 
-> “Index all prompts, chatmodes, and scripts in `.github/`, summarize their purpose and ideal use case, and recommend the best options for my current workflow based on recent conversation.”
+> "Index all prompts in `.github/prompts/`, group by category from frontmatter, and recommend the best options for my current workflow based on recent conversation."

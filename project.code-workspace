@@ -33,25 +33,16 @@
 			"group": "build"
 		}
       {
-        "label": "👁️ Preview current file",
+        "label": "👁️ Preview in hugo",
         "type": "shell",
-        "command": "zsh .github/scripts/Start_hugo.sh ${relativeFile}",
+        "command": "zsh .github/scripts/preview_in_hugo.sh '${relativeFile}'",
         "group": "build",
         "presentation": {
           "echo": true,
-          "reveal": "always",
+          "reveal": "silent",
           "focus": false,
           "panel": "shared"
         }
-      },
-      {
-        "label": "👁️ Preview on hugo",
-        "type": "shell",
-        "command": "open",
-        "args": [
-          "http://localhost:1313/${fileBasenameNoExtension}"
-        ],
-        "group": "build"
       },
       {
         "label": "✅ Commit changes",
