@@ -26,6 +26,19 @@
   <meta content="Nicholas Frota" name="author" />
   
   
+    
+      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'safiro-medium';
+          src: url('/fonts/safiro-medium.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
+    
+  
 
   
   
@@ -101,7 +114,29 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        
+                        <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    A([User opens or switches to a file]) --&gt; B{File in content/ folder?}
+    B -- No --&gt; Z[Do nothing]
+    B -- Yes --&gt; C{File is .md or .html?}
+    C -- No --&gt; Z
+    C -- Yes --&gt; D{Same as last opened file?}
+    D -- Yes --&gt; Z
+    D -- No --&gt; E[Mark as last opened file]
+    E --&gt; F{Hugo server running?}
+    F -- Yes --&gt; G[Build preview URL]
+    F -- No --&gt; H{Hugo already starting?}
+    H -- Yes --&gt; I[Wait for startup]
+    H -- No --&gt; J[Start hugo serve -D]
+    J --&gt; K[Wait 3 seconds]
+    K --&gt; G
+    I --&gt; G
+    G --&gt; L[Extract path from content/]
+    L --&gt; M[Remove file extension]
+    M --&gt; N[Append to base URL]
+    N --&gt; O[Open Simple Browser beside editor]
+    O --&gt; P[Return focus to code editor]
+    P --&gt; Q([Preview ready!])
+</code></pre>
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
             </article>
@@ -124,6 +159,8 @@
 
     
 
+    
+    
     
 
     
