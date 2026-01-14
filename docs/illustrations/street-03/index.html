@@ -34,7 +34,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.a2e583d4553afddfc0ad0e7f3afb670896498eead8f0c84ec626f3943ac4b9db.css" />
+  <link rel="stylesheet" href="/css/main.b3d0c3ffb4b58fe1f03d1ef6241aad7e029c740fba8ca854ddad0fcb1834cb81.css" />
 
   
 
@@ -83,6 +83,25 @@
   <meta property="og:image" content="/images/covers/live.jpg" />
   <meta property="og:description" content="Drawing strangers on the street is the most rewarding kind of drawing." />
 
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({ startOnLoad: false, theme: 'forest' });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
 
 </head>
 
@@ -231,7 +250,7 @@
   
     
   
-  <a href="/illustrations/photo-03/" class="preview" style="background-image: url('/images/illos/russian.jpg')">
+  <a href="/illustrations/photo-03/" class="preview" style="background-image: url('/images/illos/bored.jpg')">
   </a>
 
   
@@ -243,7 +262,7 @@
   
     
   
-  <a href="/illustrations/live-01/" class="preview" style="background-image: url('/images/illos/model-1.jpg')">
+  <a href="/illustrations/live-01/" class="preview" style="background-image: url('/images/illos/illustrator-3.jpg')">
   </a>
 
   
@@ -255,7 +274,7 @@
   
     
   
-  <a href="/illustrations/photo-07/" class="preview" style="background-image: url('/images/illos/watching.jpg')">
+  <a href="/illustrations/photo-07/" class="preview" style="background-image: url('/images/illos/photo-2025-12-29-2.jpg')">
   </a>
 
   
@@ -267,7 +286,7 @@
   
     
   
-  <a href="/illustrations/photo-05/" class="preview" style="background-image: url('/images/illos/blatino2.jpg')">
+  <a href="/illustrations/photo-05/" class="preview" style="background-image: url('/images/illos/diva.jpg')">
   </a>
 
   
@@ -279,7 +298,7 @@
   
     
   
-  <a href="/illustrations/photo-06/" class="preview" style="background-image: url('/images/illos/slavic.jpg')">
+  <a href="/illustrations/photo-06/" class="preview" style="background-image: url('/images/illos/model15.jpg')">
   </a>
 
   
@@ -291,7 +310,7 @@
   
     
   
-  <a href="/illustrations/photo-01/" class="preview" style="background-image: url('/images/illos/mustache.jpg')">
+  <a href="/illustrations/photo-01/" class="preview" style="background-image: url('/images/illos/bighair.jpg')">
   </a>
 
   
@@ -303,7 +322,7 @@
   
     
   
-  <a href="/illustrations/photo-02/" class="preview" style="background-image: url('/images/illos/cachecol.jpg')">
+  <a href="/illustrations/photo-02/" class="preview" style="background-image: url('/images/illos/pink.jpg')">
   </a>
 
   
@@ -315,7 +334,7 @@
   
     
   
-  <a href="/illustrations/photo-04/" class="preview" style="background-image: url('/images/illos/friend.jpg')">
+  <a href="/illustrations/photo-04/" class="preview" style="background-image: url('/images/illos/berliner-2.jpg')">
   </a>
 
   
@@ -327,7 +346,7 @@
   
     
   
-  <a href="/illustrations/street-01/" class="preview" style="background-image: url('/images/illos/street-15.jpg')">
+  <a href="/illustrations/street-01/" class="preview" style="background-image: url('/images/illos/funny.jpg')">
   </a>
 
   
@@ -339,7 +358,7 @@
   
     
   
-  <a href="/illustrations/street-02/" class="preview" style="background-image: url('/images/illos/street-3.jpg')">
+  <a href="/illustrations/street-02/" class="preview" style="background-image: url('/images/illos/readinglady.jpg')">
   </a>
 
 </div>

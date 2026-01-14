@@ -29,7 +29,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.a2e583d4553afddfc0ad0e7f3afb670896498eead8f0c84ec626f3943ac4b9db.css" />
+  <link rel="stylesheet" href="/css/main.b3d0c3ffb4b58fe1f03d1ef6241aad7e029c740fba8ca854ddad0fcb1834cb81.css" />
 
   
 
@@ -78,6 +78,25 @@ Are you interested in creative code explorations? [Join us on
 signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
 " />
 
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({ startOnLoad: false, theme: 'forest' });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
 
 </head>
 

@@ -1,0 +1,125 @@
+// Mermaid diagram styling
+// Docs: https://mermaid.js.org/config/theming.html
+
+.mermaid {
+
+
+  // Override default font
+  svg {
+    max-width: 100%;
+    height: auto;
+    font-family: safiro-medium;
+  }
+
+  // Labels inside nodes
+  .nodeLabel,
+  .label text,
+  span,
+  p {
+    font-family: safiro-medium;
+    font-size: 14px !important;
+    font-weight: 500;
+  }
+
+  // Edge labels (YES, NO, etc) - remove background box
+  .edgeLabel {
+    background-color: black !important;
+    border: solid 5px black !important;
+    border-radius: 4px !important;
+
+
+
+    span {
+      font-family: safiro-medium;
+      color: white !important;
+    }
+  }
+
+  .labelBkg {
+    background-color: transparent !important;
+    fill: none !important;
+  }
+
+  // Arrow markers
+  marker {
+    fill: #888888;
+  }
+
+  // Cluster/subgraph backgrounds
+  .cluster rect {
+    fill: rgba(74, 158, 255, 0.1);
+    stroke: #4a9eff;
+    stroke-width: 1px;
+    rx: 4px;
+  }
+
+  // Notes
+  .note {
+    fill: rgba(255, 193, 7, 0.2);
+    stroke: #ffc107;
+    stroke-width: 1px;
+  }
+
+  // Actor (sequence diagrams)
+  .actor {
+    fill: #1a1a1a;
+    stroke: #4a9eff;
+    stroke-width: 2px;
+  }
+
+  // Different node types styling
+  .flowchart-link {
+    stroke: #888888;
+  }
+
+  // State diagram specific
+  .statediagram-state rect {
+    fill: #1a1a1a;
+    stroke: #4a9eff;
+  }
+
+  // Class diagram specific
+  .classGroup rect {
+    fill: #1a1a1a;
+    stroke: #4a9eff;
+  }
+
+  // Pie chart
+  .pieCircle {
+    stroke: #1a1a1a;
+    stroke-width: 2px;
+  }
+
+  // Gantt chart
+  .grid .tick line {
+    stroke: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Dark theme adjustments (if using theme switcher)
+@media (prefers-color-scheme: light) {
+  .mermaid {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+
+    .node rect,
+    .node circle,
+    .node ellipse,
+    .node polygon {
+      fill: #ffffff;
+      stroke: #0066cc;
+    }
+
+    .nodeLabel {
+      color: #000000;
+    }
+
+    .edgePath path {
+      stroke: #333333;
+    }
+
+    marker {
+      fill: #333333;
+    }
+  }
+}

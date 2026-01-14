@@ -3,15 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js processing-1 draft experiments single
-    
-      
-        
-         vertical-nav
-      
-        
-        
-      
+    class="single no-js search-path live ideas single
     "
 >
 
@@ -30,9 +22,22 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>Processing 1</title>
+  <title>Search Path for EPUBs and PDFs</title>
   <meta content="Nicholas Frota" name="author" />
   
+  
+    
+      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'safiro-medium';
+          src: url('/fonts/safiro-medium.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
+    
   
 
   
@@ -47,16 +52,6 @@
   
   
 
-  
-      
-        
-        
-        
-      
-        
-        
-        
-      
   
 
     
@@ -88,7 +83,7 @@
     
   
   <meta property="og:image" content="/images/covers/live.jpg" />
-  <meta property="og:description" content="testing processing, p5 and browser permissions" />
+  <meta property="og:description" content="Extending file links to support auto-search within EPUBs and PDFs" />
 
   
   <script src="/js/global/mermaid.min.js"></script>
@@ -119,26 +114,18 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        
-
-
-<section id="hedgehog" style="position: relative;"></section>
-
-        <a href="/processing-1/#01" class="mice reload"></a>
-  Reload Sketch
-</button>
-<section aria-label="Tilework">
-  2
-</section>
-<section aria-label="Floating ribbon">
-  3
-</section>
-<section aria-label="3D ribbon">
-  4
-</section>
-<section aria-label="Hypercube">
-  5
-</section>
+                        <h2 id="description">Description</h2>
+<p>Extending bare links for EPUB and PDF files to support an auto search, using a format like: <code>file://FILEPATH.EXT?search=&quot;STRING&quot;</code></p>
+<p>When accessed, this link would automatically perform a search for the given string within the file.</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    A(User clicks file path) --&gt; B{Search path?}
+    B -- No --&gt; C[Open file, ignoring search]
+    B -- Yes --&gt; D{Is string found?}
+    D -- No --&gt; C
+    D -- Yes, one entry --&gt; E[Open file at search point, highlighted]
+    D -- Yes, multiple entries --&gt; F[Open file with search modal and results to choose]
+</code></pre><blockquote>
+<p>This allows for more precise AI source lists, especially on EPUBs or other files with no pagination.</p></blockquote>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -146,22 +133,24 @@
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>Processing 1</h2>
+  <h2>Search Path for EPUBs and PDFs</h2>
   <p class="date">
     
       
     
     
     
-      In draft since 3 months ago
+      live 1 day ago
     
   </p>
-    <div class="description">testing processing, p5 and browser permissions</div>
+    <div class="description">Extending file links to support auto-search within EPUBs and PDFs</div>
 
     
 
     
 
+    
+    
     
 
     
@@ -246,16 +235,6 @@
     </section>
     <section class="references">
       
-      <a href="https://generated.space/sketch/hedgehog-2/">https://generated.space/sketch/hedgehog-2/</a>
-      
-      <a href="https://generated.space/sketch/tilework/">https://generated.space/sketch/tilework/</a>
-      
-      <a href="https://generated.space/sketch/floating-ribbon/">https://generated.space/sketch/floating-ribbon/</a>
-      
-      <a href="https://ljmocic.github.io/generative-art/p5/8/">https://ljmocic.github.io/generative-art/p5/8/</a>
-      
-      <a href="https://ljmocic.github.io/generative-art/p5/9/">https://ljmocic.github.io/generative-art/p5/9/</a>
-      
     </section>
 
 
@@ -274,7 +253,7 @@
   <script src="/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "\/experiments\/processing-1\/",
+        text: "\/ideas\/search-path\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -342,38 +321,18 @@
       
 
   
-    
-    
-    
-      <script src="/js/lib/p5.js"></script>
-    
+
+
+
+
+
+
+
+
+
+
+
   
-
-
-
-
-  
-    
-    
-    
-      <script src="/js/script/vertical-nav.js"></script>
-    
-  
-    
-    
-    
-      <script src="/js/script/nav-p5.js"></script>
-    
-  
-
-
-
-
-
-
-
-
-  <script src="/js/script/processing-1.js"></script>
 
 
 
@@ -384,12 +343,6 @@
 
 
 
-
-  
-    
-  
-    
-  
 
   <script src="/js/global/popper.min.js"></script>
   <script src="/js/global/tippy-bundle.umd.min.js"></script>

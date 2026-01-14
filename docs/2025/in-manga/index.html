@@ -72,7 +72,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/main.a2e583d4553afddfc0ad0e7f3afb670896498eead8f0c84ec626f3943ac4b9db.css" />
+  <link rel="stylesheet" href="/css/main.b3d0c3ffb4b58fe1f03d1ef6241aad7e029c740fba8ca854ddad0fcb1834cb81.css" />
 
   
 
@@ -113,6 +113,25 @@
   <meta property="og:image" content="/images/covers/2025-recap.webp" />
   <meta property="og:description" content="Some of the best mangas I&#39;ve read in 2025" />
 
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({ startOnLoad: false, theme: 'forest' });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
 
 </head>
 
@@ -150,7 +169,7 @@ style="background-image: url(/images/recap/IMG_2538.jpg); background-repeat: rep
 </div>
 <div class="content">
   <p>Yaoi that focuses on a self-deprecating keyboard player who’s admired by others but doesn’t see himself as cool.</p>
-<p>I love the minimal artstyle, and how it portrays an underground, feel-good gay romance. It’s an easy read.</p>
+<p>I love the minimal art style, and how it portrays an underground, feel-good gay romance. It’s an easy read.</p>
 
   
   

@@ -126,5 +126,24 @@
   <meta property="og:image" content="{{ $ogImage | absURL }}" />
   <meta property="og:description" content="{{ .Params.description }}" />
 
+  <!-- Mermaid diagram support -->
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({ startOnLoad: false, theme: 'forest' });
+
+      // Renderizar blocos de código com classe language-mermaid
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
 
 </head>

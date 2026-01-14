@@ -1,0 +1,7 @@
+# Override .gitignore for Copilot
+# Only hide truly sensitive/irrelevant files from Copilot context
+
+.git/
+.DS_Store
+node_modules/
+*.log

@@ -1,7 +1,18 @@
 {
     "settings": {
     // Set the title bar format
-    "window.title": "📓 nonlinear"
+    "window.title": "📓 nonlinear",
+    "search.useIgnoreFiles": false,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {},
+    "github.copilot.chat.search.useIgnoreFiles": false,
+    "github.copilot.chat.search.excludePatterns": [],
+    "github.copilot.advanced": {
+      "debug.useNodeFetcher": true
+    }
   },
   "folders": [
     {
@@ -35,7 +46,7 @@
       {
         "label": "👁️ Preview in hugo",
         "type": "shell",
-        "command": "zsh .github/scripts/preview_in_hugo.sh '${relativeFile}'",
+        "command": "FILE='${relativeFile}'; URL=$(echo \"$FILE\" | sed 's|^content/||' | sed 's|\\.md$||' | sed 's|\\.html$||'); open \"vscode://github-enterprise.simple-browser/open?url=http://localhost:1313/$URL/\"",
         "group": "build",
         "presentation": {
           "echo": true,
