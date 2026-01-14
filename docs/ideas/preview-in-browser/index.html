@@ -3,12 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js object-01 draft illustrations single
-    
-      
-        
-         illos
-      
+    class="single no-js preview-in-browser live ideas single
     "
 >
 
@@ -27,9 +22,22 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>Other drawings</title>
+  <title>Preview in Browser VSCode Extension</title>
   <meta content="Nicholas Frota" name="author" />
   
+  
+    
+      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'safiro-medium';
+          src: url('/fonts/safiro-medium.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
+    
   
 
   
@@ -44,12 +52,6 @@
   
   
 
-  
-      
-        
-        
-        
-      
   
 
     
@@ -81,7 +83,7 @@
     
   
   <meta property="og:image" content="/images/covers/live.jpg" />
-  <meta property="og:description" content="nature, art illustrations" />
+  <meta property="og:description" content="VSCode extension for quickly previewing HTML and web content in the browser" />
 
   
   <script src="/js/global/mermaid.min.js"></script>
@@ -110,198 +112,38 @@
         <main class="container">
 
                 <a href="javascript:void(0)" class="mice credits-open"></a>
-            <article class="content illos">
+            <article class="content">
                     
-                        
-                        
-                        <div class="illo-wrapper">
-                            
-                            
-                            
-                            
-                                <img class="zoom-img"
-                                    src="/images/illos/statue.jpg"
-                                    data-static="/images/illos/statue.jpg"
-                                    data-anim="/images/illos/statue.webp"
-                                    alt="statue"
-                                    style="width: 100%; height: auto;"
-                                />
-                            
-                        </div>
-                        
-                        <div class="illo-wrapper">
-                            
-                            
-                            
-                            
-                                <img class="zoom-img"
-                                    src="/images/illos/sculpture-1.png"
-                                    data-static="/images/illos/sculpture-1.png"
-                                    data-anim="/images/illos/sculpture-1.webp"
-                                    alt="sculpture-1"
-                                    style="width: 100%; height: auto;"
-                                />
-                            
-                        </div>
-                        
-                        <div class="illo-wrapper">
-                            
-                            
-                            
-                            
-                                <img class="zoom-img"
-                                    src="/images/illos/nature-1.jpg"
-                                    data-static="/images/illos/nature-1.jpg"
-                                    data-anim="/images/illos/nature-1.webp"
-                                    alt="nature-1"
-                                    style="width: 100%; height: auto;"
-                                />
-                            
-                        </div>
-                        
-                        <div class="illo-wrapper">
-                            
-                            
-                            
-                            
-                                <img class="zoom-img"
-                                    src="/images/illos/nature-3.jpg"
-                                    data-static="/images/illos/nature-3.jpg"
-                                    data-anim="/images/illos/nature-3.webp"
-                                    alt="nature-3"
-                                    style="width: 100%; height: auto;"
-                                />
-                            
-                        </div>
-                        
-                        <div class="illustration-preview">
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-03/" class="preview" style="background-image: url('/images/illos/espanola.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/live-01/" class="preview" style="background-image: url('/images/illos/nonbi.png')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-07/" class="preview" style="background-image: url('/images/illos/watching.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-05/" class="preview" style="background-image: url('/images/illos/dude-5.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-06/" class="preview" style="background-image: url('/images/illos/recife.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-01/" class="preview" style="background-image: url('/images/illos/bighair.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-02/" class="preview" style="background-image: url('/images/illos/berliner.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/photo-04/" class="preview" style="background-image: url('/images/illos/mercurial.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/street-01/" class="preview" style="background-image: url('/images/illos/reading.jpg')">
-  </a>
-
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <a href="/illustrations/street-02/" class="preview" style="background-image: url('/images/illos/street-5.jpg')">
-  </a>
-
-</div>
+                        <p>A vscode extension that automatically opens browser page of any HTML or Markdown. Works with Hugo and Storybook.</p>
+<h2 id="installation">Installation</h2>
+<pre tabindex="0"><code>code --install-extension https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix
+</code></pre><p>or <a href="https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix">Download .vsix</a></p>
+<h2 id="hugo-flow">Hugo flow</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A([nonlinear opens file]) --&gt; B{In content/ folder?}
+    B -- No --&gt; Z[Do nothing]
+    B -- Yes --&gt; C{Hugo server running?}
+    C -- No --&gt; D[Start Hugo server]
+    D --&gt; E([Open Simple Browser])
+    C -- Yes --&gt; E
+</code></pre><h2 id="storybook-flow">Storybook flow</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A([nonlinear opens component]) --&gt; B{Is .stories file?}
+    B -- No --&gt; Z[Do nothing]
+    B -- Yes --&gt; C{Storybook running?}
+    C -- No --&gt; D[Start Storybook]
+    D --&gt; E([Open Simple Browser])
+    C -- Yes --&gt; E
+</code></pre><h2 id="roadmap">Roadmap</h2>
+<ul>
+<li>Simple Browser on a separate tab column</li>
+<li>Publish on vscode marketplace?</li>
+</ul>
+<h2 id="contact">Contact</h2>
+<ul>
+<li><a href="https://nonlinear.nyc">nonlinear.nyc</a></li>
+<li><a href="https://signal.me/#eu/ODSgom5zXKVGxKUAeUs9wj9RpQRLfASDu0HIMzNZGX9FxHMN_sRD1qvHi8HELswi">Contact me on signal</a> (it&rsquo;s all signal and only signal)</li>
+</ul>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -309,25 +151,17 @@
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>Other drawings</h2>
+  <h2>Preview in Browser VSCode Extension</h2>
   <p class="date">
     
       
     
     
     
-      In draft since 1 months ago
+      live today
     
   </p>
-    <div class="description">nature, art illustrations</div>
-
-    
-
-    
-    
-    
-
-    
+    <div class="description">VSCode extension for quickly previewing HTML and web content in the browser</div>
 
     
 
@@ -336,9 +170,11 @@
     
     
     
+
     
+
     
-    
+
     
     
     
@@ -378,17 +214,6 @@
 
     <section class="tags">
       
-      <a class="tooltip" data-tooltip-id="illustration">Illustration</a>
-
-      <div class="popover" id="illustration" style="display: none">
-        
-        <p>General illustration category</p>
-
-        
-
-        
-      </div>
-      
       <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
 
       <div class="popover" id="microlink" style="display: none">
@@ -398,19 +223,6 @@
 
         
         <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit page</a>
-        
-      </div>
-      
-      <a class="tooltip" data-tooltip-id="procreate">Procreate app</a>
-
-      <div class="popover" id="procreate" style="display: none">
-        
-        <p>A powerful illustration app for iPad</p>
-
-        
-
-        
-        <a href="https://procreate.com" class="actions" target="_blank" rel="noopener">Visit page</a>
         
       </div>
       
@@ -459,7 +271,7 @@
   <script src="/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "\/illustrations\/object-01\/",
+        text: "\/ideas\/preview-in-browser\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -531,14 +343,6 @@
 
 
 
-  
-    
-    
-    
-      <script src="/js/script/illos.js"></script>
-    
-  
-
 
 
 
@@ -557,10 +361,6 @@
 
 
 
-
-  
-    
-  
 
   <script src="/js/global/popper.min.js"></script>
   <script src="/js/global/tippy-bundle.umd.min.js"></script>
