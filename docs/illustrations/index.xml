@@ -44,26 +44,6 @@
           
         
       <item>
-        <title>Preview in Browser VSCode Extension</title>
-        <link>/tools/preview-in-browser/</link>
-        <guid>/tools/preview-in-browser/</guid>
-        <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
-        <description><![CDATA[
-          <p>VSCode extension for quickly previewing HTML and web content in the browser</p>
-          <a href="/tools/preview-in-browser/"><img src="/images/covers/preview-in-browser.jpg" alt="Preview in Browser VSCode Extension" /></a>
-        ]]></description>
-      </item>
-      
-        
-        
-        
-        
-          
-          
-          
-          
-        
-      <item>
         <title>Search Path for EPUBs and PDFs</title>
         <link>/ideas/search-path/</link>
         <guid>/ideas/search-path/</guid>

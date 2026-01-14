@@ -5,6 +5,10 @@ status: live
 description: "Extending file links to support auto-search within EPUBs and PDFs"
 fonts:
   - safiro-medium
+tags:
+  - concept
+  - standard
+  - ebook
 ---
 
 ## Description

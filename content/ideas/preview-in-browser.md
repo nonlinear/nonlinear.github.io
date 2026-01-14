@@ -5,6 +5,11 @@ description: "VSCode extension for quickly previewing HTML and web content in th
 status: live
 fonts:
   - safiro-medium
+tags:
+  - stable
+  - vscode
+  - design
+  - extension
 ---
 
 A vscode extension that automatically opens browser page of any HTML or Markdown. Works with Hugo and Storybook.
