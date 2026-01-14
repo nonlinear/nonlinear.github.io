@@ -35,18 +35,6 @@
 			"group": "build"
 		},
       {
-        "label": "👁️ Preview in hugo",
-        "type": "shell",
-        "command": "FILE='${relativeFile}'; URL=$(echo \"$FILE\" | sed 's|^content/||' | sed 's|\\.md$||' | sed 's|\\.html$||'); open \"vscode://github-enterprise.simple-browser/open?url=http://localhost:1313/$URL/\"",
-        "group": "build",
-        "presentation": {
-          "echo": true,
-          "reveal": "silent",
-          "focus": false,
-          "panel": "shared"
-        }
-      },
-      {
         "label": "✅ Commit changes",
           "type": "shell",
           "command": "hugo --config config.toml --destination docs && git add -A && echo 'Enter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
