@@ -21,7 +21,7 @@ or [Download .vsix](https://github.com/nonlinear/nonlinear.github.io/raw/main/.v
 
 ```mermaid
 flowchart LR
-    A([User opens file]) --> B{In content/ folder?}
+    A([nonlinear opens file]) --> B{In content/ folder?}
     B -- No --> Z[Do nothing]
     B -- Yes --> C{Hugo server running?}
     C -- No --> D[Start Hugo server]
@@ -33,7 +33,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A([User opens component]) --> B{Is .stories file?}
+    A([nonlinear opens component]) --> B{Is .stories file?}
     B -- No --> Z[Do nothing]
     B -- Yes --> C{Storybook running?}
     C -- No --> D[Start Storybook]
@@ -45,3 +45,8 @@ flowchart LR
 
 - Simple Browser on a separate tab column
 - Publish on vscode marketplace?
+
+## Contact
+
+- [nonlinear.nyc](https://nonlinear.nyc)
+- [Contact me on signal](https://signal.me/#eu/ODSgom5zXKVGxKUAeUs9wj9RpQRLfASDu0HIMzNZGX9FxHMN_sRD1qvHi8HELswi) (it's all signal and only signal)
