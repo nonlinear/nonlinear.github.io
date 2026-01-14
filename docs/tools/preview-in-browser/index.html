@@ -114,42 +114,32 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <h2 id="installation">Installation</h2>
+                        <p>A vscode extension that automatically opens browser page of any HTML or Markdown. Works with Hugo and Storybook.</p>
+<h2 id="installation">Installation</h2>
 <pre tabindex="0"><code>code --install-extension https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix
 </code></pre><p>or <a href="https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix">Download .vsix</a></p>
-<h2 id="features">Features</h2>
-<ul>
-<li>Detects hugo, runs server</li>
-<li>Opens Simple Browser with corresponding Hugo URL</li>
-</ul>
-<h2 id="roadmap">Roadmap</h2>
-<ul>
-<li>Detects storybook, runs server</li>
-<li>Opens Simple Browser with corresponding storybook URL</li>
-</ul>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
-    A([User opens or switches to a file]) --&gt; B{File in content/ folder?}
+<h2 id="hugo-flow">Hugo flow</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A([User opens file]) --&gt; B{In content/ folder?}
     B -- No --&gt; Z[Do nothing]
-    B -- Yes --&gt; C{File is .md or .html?}
-    C -- No --&gt; Z
-    C -- Yes --&gt; D{Same as last opened file?}
-    D -- Yes --&gt; Z
-    D -- No --&gt; E[Mark as last opened file]
-    E --&gt; F{Hugo server running?}
-    F -- Yes --&gt; G[Build preview URL]
-    F -- No --&gt; H{Hugo already starting?}
-    H -- Yes --&gt; I[Wait for startup]
-    H -- No --&gt; J[Start hugo serve -D]
-    J --&gt; K[Wait 3 seconds]
-    K --&gt; G
-    I --&gt; G
-    G --&gt; L[Extract path from content/]
-    L --&gt; M[Remove file extension]
-    M --&gt; N[Append to base URL]
-    N --&gt; O[Open Simple Browser beside editor]
-    O --&gt; P[Return focus to code editor]
-    P --&gt; Q([Preview ready!])
-</code></pre>
+    B -- Yes --&gt; C{Hugo server running?}
+    C -- No --&gt; D[Start Hugo server]
+    D --&gt; E([Open Simple Browser])
+    C -- Yes --&gt; E
+</code></pre><h2 id="storybook-flow">Storybook flow</h2>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A([User opens component]) --&gt; B{Is .stories file?}
+    B -- No --&gt; Z[Do nothing]
+    B -- Yes --&gt; C{Storybook running?}
+    C -- No --&gt; D[Start Storybook]
+    D --&gt; E([Open Simple Browser])
+    C -- Yes --&gt; E
+</code></pre><h2 id="roadmap">Roadmap</h2>
+<ul>
+<li>Simple Browser on a separate tab column</li>
+<li>Publish on vscode marketplace?</li>
+</ul>
+
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
             </article>

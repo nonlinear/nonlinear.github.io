@@ -7,6 +7,8 @@ fonts:
   - safiro-medium
 ---
 
+A vscode extension that automatically opens browser page of any HTML or Markdown. Works with Hugo and Storybook.
+
 ## Installation
 
 ```
@@ -15,37 +17,31 @@ code --install-extension https://github.com/nonlinear/nonlinear.github.io/raw/ma
 
 or [Download .vsix](https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix)
 
-## Features
+## Hugo flow
 
-- Detects hugo, runs server
-- Opens Simple Browser with corresponding Hugo URL
+```mermaid
+flowchart LR
+    A([User opens file]) --> B{In content/ folder?}
+    B -- No --> Z[Do nothing]
+    B -- Yes --> C{Hugo server running?}
+    C -- No --> D[Start Hugo server]
+    D --> E([Open Simple Browser])
+    C -- Yes --> E
+```
+
+## Storybook flow
+
+```mermaid
+flowchart LR
+    A([User opens component]) --> B{Is .stories file?}
+    B -- No --> Z[Do nothing]
+    B -- Yes --> C{Storybook running?}
+    C -- No --> D[Start Storybook]
+    D --> E([Open Simple Browser])
+    C -- Yes --> E
+```
 
 ## Roadmap
 
-- Detects storybook, runs server
-- Opens Simple Browser with corresponding storybook URL
-
-```mermaid
-flowchart TD
-    A([User opens or switches to a file]) --> B{File in content/ folder?}
-    B -- No --> Z[Do nothing]
-    B -- Yes --> C{File is .md or .html?}
-    C -- No --> Z
-    C -- Yes --> D{Same as last opened file?}
-    D -- Yes --> Z
-    D -- No --> E[Mark as last opened file]
-    E --> F{Hugo server running?}
-    F -- Yes --> G[Build preview URL]
-    F -- No --> H{Hugo already starting?}
-    H -- Yes --> I[Wait for startup]
-    H -- No --> J[Start hugo serve -D]
-    J --> K[Wait 3 seconds]
-    K --> G
-    I --> G
-    G --> L[Extract path from content/]
-    L --> M[Remove file extension]
-    M --> N[Append to base URL]
-    N --> O[Open Simple Browser beside editor]
-    O --> P[Return focus to code editor]
-    P --> Q([Preview ready!])
-```
+- Simple Browser on a separate tab column
+- Publish on vscode marketplace?
