@@ -28,21 +28,12 @@
         "command": "pkill -f 'hugo serve'",
         "group": "build"
       },
-      {
-        "label": "🖋️ Start hugo",
-        "type": "shell",
-        "command": "zsh .github/scripts/Start_hugo.sh '${file}'",
-        "group": "build",
-        "runOptions": {
-          "runOn": "folderOpen"
-        }
-      },
 		{
 			"label": "🖼️ Post new illos",
 			"type": "shell",
 			"command": "python3 .github/scripts/post_new_illos.py",
 			"group": "build"
-		}
+		},
       {
         "label": "👁️ Preview in hugo",
         "type": "shell",
