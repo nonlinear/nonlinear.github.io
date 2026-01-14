@@ -114,7 +114,20 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+                        <h2 id="installation">Installation</h2>
+<pre tabindex="0"><code>code --install-extension https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix
+</code></pre><p>or <a href="https://github.com/nonlinear/nonlinear.github.io/raw/main/.vscode/extensions/preview-in-browser/preview-in-browser-latest.vsix">Download .vsix</a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Detects hugo, runs server</li>
+<li>Opens Simple Browser with corresponding Hugo URL</li>
+</ul>
+<h2 id="roadmap">Roadmap</h2>
+<ul>
+<li>Detects storybook, runs server</li>
+<li>Opens Simple Browser with corresponding storybook URL</li>
+</ul>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
     A([User opens or switches to a file]) --&gt; B{File in content/ folder?}
     B -- No --&gt; Z[Do nothing]
     B -- Yes --&gt; C{File is .md or .html?}
