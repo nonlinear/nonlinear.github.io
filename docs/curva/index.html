@@ -76,7 +76,13 @@
   <script src="/js/global/mermaid.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      mermaid.initialize({ startOnLoad: false, theme: 'forest' });
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'forest',
+        flowchart: {
+          curve: 'monotoneY'
+        }
+      });
 
       
       document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
