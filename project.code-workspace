@@ -33,19 +33,7 @@
 			"type": "shell",
 			"command": "python3 .github/scripts/post_new_illos.py",
 			"group": "build"
-		},
-      {
-        "label": "✅ Commit changes",
-          "type": "shell",
-          "command": "hugo --config config.toml --destination docs && echo '\n📦 Build complete. Staging all changes...\n' && git add -A && git status --short && echo '\nEnter commit message:' && read msg && git commit -m \"$msg\" && git pull && git push",
-        "group": "build",
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared"
-        }
-      }
+		}
     ]
   }
 }

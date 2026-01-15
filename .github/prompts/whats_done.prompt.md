@@ -1,7 +1,3 @@
----
-category: Project Management
----
-
 # What's done
 
 Check github history and update done.md accordingly.

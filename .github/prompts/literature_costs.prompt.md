@@ -1,7 +1,3 @@
----
-category: Literature & Research
----
-
 # Literature RAG Usage & Value
 
 **Purpose:** Show how useful your indexed books are - frequency, recency, and value to your work. Costs are secondary (mostly free with Gemini).

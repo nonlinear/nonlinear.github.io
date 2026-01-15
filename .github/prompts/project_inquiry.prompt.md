@@ -1,7 +1,3 @@
----
-category: Project Management
----
-
 # Project Inquiry
 
 ## Instructions for AI
