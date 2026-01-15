@@ -2,22 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/ai-tools/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/ideas/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/llamaindex/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/local-first/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/mcp/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/ideas/personal-library/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/privacy/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rag/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/semantic-search/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/vector-database/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/design/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/extension/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/ideas/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/ideas/preview-in-browser/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/stable/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/vscode/</loc>
@@ -47,7 +77,7 @@
     <loc>/tags/procreate/</loc>
     <lastmod>2025-12-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/fitness/</loc>
+    <loc>/ideas/fitness/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/2025/in-animation/</loc>

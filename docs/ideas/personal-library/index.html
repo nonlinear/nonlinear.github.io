@@ -3,7 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js search-path live ideas single
+    class="single no-js personal-library draft ideas single
     "
 >
 
@@ -22,7 +22,7 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>Search Path for EPUBs and PDFs</title>
+  <title>Personal Library MCP</title>
   <meta content="Nicholas Frota" name="author" />
   
   
@@ -83,7 +83,7 @@
     
   
   <meta property="og:image" content="/images/covers/live.jpg" />
-  <meta property="og:description" content="Extending file links to support auto-search within EPUBs and PDFs" />
+  <meta property="og:description" content="BYOB (Bring Your Own Books) local MCP so you can consult your library as you build your projects" />
 
   
   <script src="/js/global/mermaid.min.js"></script>
@@ -120,18 +120,51 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <h2 id="description">Description</h2>
-<p>Extending bare links for EPUB and PDF files to support an auto search, using a format like: <code>file://FILEPATH.EXT?search=&quot;STRING&quot;</code></p>
-<p>When accessed, this link would automatically perform a search for the given string within the file.</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
-    A(User clicks file path) --&gt; B{Search path?}
-    B -- No --&gt; C[Open file, ignoring search]
-    B -- Yes --&gt; D{Is string found?}
-    D -- No --&gt; C
-    D -- Yes, one entry --&gt; E[Open file at search point, highlighted]
-    D -- Yes, multiple entries --&gt; F[Open file with search modal and results to choose]
-</code></pre><blockquote>
-<p>This allows for more precise AI source lists, especially on EPUBs or other files with no pagination.</p></blockquote>
+                        <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    QUERY([research prompt+&lt;br&gt;specific book query]) --&gt; MAP[Read metadata.json]
+    MAP --&gt; SIM[Semantic Similarity]
+
+    SIM --&gt; T1[Topic: philosophy&lt;br/&gt;Score: 0.89]
+    SIM --&gt; T2[Topic: AI&lt;br/&gt;Score: 0.32]
+
+    T1 --&gt; B1[Book: Psychopolitics&lt;br/&gt;Tags: power, discipline&lt;br/&gt;Score: 0.91]
+
+    B1 --&gt; DECISION1{Confident match?}
+    T2 --&gt; DECISION2{Confident match?}
+
+    DECISION1 --&gt;|Yes| VEC[Query Vector Store&lt;br/&gt;Scope: philosophy/Psychopolitics]
+    DECISION2 --&gt;|No| ASK[System asks for clarification]
+
+    ASK --&gt; CLARIFY[Clarification query]
+    CLARIFY --&gt; MAP
+
+    VEC --&gt; ANSWER([Precise answer from&lt;br&gt;relevant book chunks])
+</code></pre><p><strong>The Map ≠ Territory principle:</strong> Navigate with metadata first, access content only when direction is clear.</p>
+<h3 id="2-delta-updates">2. Delta Updates</h3>
+<p>No full reindexing: The system watches your book folder and only processes what changed.</p>
+<p><strong>Promise:</strong> When you add a new book, only that book gets processed. When you remove one, only that entry gets deleted. No waiting for full reindexing.</p>
+<p><strong>Promise:</strong> The MCP never explores your vault without explicit instruction. No background scanning, no unsolicited responses, no &ldquo;smart&rdquo; auto-discovery.</p>
+<p><strong>Promise:</strong> Instant startup, sub-second queries, no model loading delays.</p>
+<p><strong>Promise:</strong></p>
+<ul>
+<li>Your book content never leaves your machine</li>
+<li>Only text chunks are embedded via API (no storage on Google&rsquo;s side)</li>
+<li>Works entirely offline after initial embedding</li>
+<li>No vendor lock-in—bring your own books</li>
+</ul>
+<h3 id="what-it-is">What it is</h3>
+<p>✅ <strong>Latency:</strong> Sub-second query responses
+✅ <strong>Privacy:</strong> Local-first, your data stays yours
+✅ <strong>Efficiency:</strong> Only indexes what changed
+✅ <strong>Clarity:</strong> Asks for clarification when uncertain
+✅ <strong>Simplicity:</strong> Single metadata file for navigation</p>
+<h3 id="what-it-is-not">What it is not</h3>
+<p>❌ Not a chat interface
+❌ Not cloud-dependent
+❌ Not a general-purpose MCP
+❌ Not trying to be &ldquo;smart&rdquo; beyond navigation
+❌ No automatic exploration without explicit invocation</p>
+<p><a href="https://github.com/nonlinear/personal-library">Github repository</a></p>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -139,17 +172,17 @@
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>Search Path for EPUBs and PDFs</h2>
+  <h2>Personal Library MCP</h2>
   <p class="date">
     
       
     
     
     
-      live 2 days ago
+      In draft since today
     
   </p>
-    <div class="description">Extending file links to support auto-search within EPUBs and PDFs</div>
+    <div class="description">BYOB (Bring Your Own Books) local MCP so you can consult your library as you build your projects</div>
 
     
 
@@ -261,7 +294,7 @@
   <script src="/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "\/ideas\/search-path\/",
+        text: "\/ideas\/personal-library\/",
         width: 100,
         height: 100,
         colorDark: "#000000",

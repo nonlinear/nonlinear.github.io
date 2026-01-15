@@ -3,7 +3,12 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js search-path live ideas single
+    class="single no-js fitness draft ideas single
+    
+      
+        
+        
+      
     "
 >
 
@@ -22,22 +27,9 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#000000" />
 
-  <title>Search Path for EPUBs and PDFs</title>
+  <title>Fitness</title>
   <meta content="Nicholas Frota" name="author" />
   
-  
-    
-      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
-      <style>
-        @font-face {
-          font-family: 'safiro-medium';
-          src: url('/fonts/safiro-medium.woff2') format('woff2');
-          font-weight: 400;
-          font-style: normal;
-          font-display: swap;
-        }
-      </style>
-    
   
 
   
@@ -52,6 +44,14 @@
   
   
 
+  
+      
+        
+        
+        
+          <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        
+      
   
 
     
@@ -83,7 +83,7 @@
     
   
   <meta property="og:image" content="/images/covers/live.jpg" />
-  <meta property="og:description" content="Extending file links to support auto-search within EPUBs and PDFs" />
+  <meta property="og:description" content="exercises to do" />
 
   
   <script src="/js/global/mermaid.min.js"></script>
@@ -120,45 +120,29 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <h2 id="description">Description</h2>
-<p>Extending bare links for EPUB and PDF files to support an auto search, using a format like: <code>file://FILEPATH.EXT?search=&quot;STRING&quot;</code></p>
-<p>When accessed, this link would automatically perform a search for the given string within the file.</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
-    A(User clicks file path) --&gt; B{Search path?}
-    B -- No --&gt; C[Open file, ignoring search]
-    B -- Yes --&gt; D{Is string found?}
-    D -- No --&gt; C
-    D -- Yes, one entry --&gt; E[Open file at search point, highlighted]
-    D -- Yes, multiple entries --&gt; F[Open file with search modal and results to choose]
-</code></pre><blockquote>
-<p>This allows for more precise AI source lists, especially on EPUBs or other files with no pagination.</p></blockquote>
-
+                        
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
             </article>
             <aside id="credits">
   <a href="javascript:void(0)" class="mice credits-close"></a>
   <div id="qrdisplay"></div>
-  <h2>Search Path for EPUBs and PDFs</h2>
+  <h2>Fitness</h2>
   <p class="date">
     
       
     
     
     
-      live 2 days ago
+      In draft since 3 weeks ago
     
   </p>
-    <div class="description">Extending file links to support auto-search within EPUBs and PDFs</div>
+    <div class="description">exercises to do</div>
 
     
 
     
-    
-    
 
-    
-    
     
 
     
@@ -261,7 +245,7 @@
   <script src="/js/global/qrcode.min.js"></script>
 <script>
     var qrcode = new QRCode(document.getElementById("qrdisplay"), {
-        text: "\/ideas\/search-path\/",
+        text: "\/ideas\/fitness\/",
         width: 100,
         height: 100,
         colorDark: "#000000",
@@ -333,6 +317,14 @@
 
 
 
+  
+    
+    
+    
+      <script src="/js/script/bootstrap.min.js"></script>
+    
+  
+
 
 
 
@@ -352,8 +344,37 @@
 
 
 
+  
+    
+      
+    
+  
+
   <script src="/js/global/popper.min.js"></script>
   <script src="/js/global/tippy-bundle.umd.min.js"></script>
+
+
+  <script>
+    document.querySelectorAll(".tooltip").forEach((el) => {
+      const tipId = el.getAttribute("data-tooltip-id");
+      const content =
+        document.getElementById(tipId)?.innerHTML || "No content";
+      tippy(el, {
+        content,
+        allowHTML: true,
+        interactive: true,
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl, {
+          trigger: 'hover',
+          html: true
+        });
+      });
+    });
+  </script>
 
 
 
