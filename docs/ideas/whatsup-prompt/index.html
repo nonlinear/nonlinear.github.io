@@ -160,28 +160,18 @@
 </ul>
 </li>
 </ol>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
-    STEP4([STEP 4: Analyze State]) --&gt; CHECK{Checks passed?}
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    STEP4([user asks /whatsup]) --&gt; CHECK{Checks passed?}
 
-    CHECK --&gt;|No| FAIL[Outcome 1: FAILED CHECKS]
+    CHECK --&gt;|No| REPORT1([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🛑 Explain problem&lt;br/&gt;List failed tests&lt;br/&gt;Suggest fixes&#34;])
     CHECK --&gt;|Yes| STABLE{Docs match reality?}
 
-    STABLE --&gt;|No| MISMATCH[Outcome 2: DOCS MISMATCH]
+    STABLE --&gt;|No| REPORT2([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;⚠️ Update docs&lt;br/&gt;Show what changed&lt;br/&gt;Auto-update files&#34;])
     STABLE --&gt;|Yes| PROGRESS{Work done?}
 
-    PROGRESS --&gt;|No changes| GROOM[Outcome 3: GROOMING MODE]
-    PROGRESS --&gt;|Partial| PARTIAL[Outcome 4: IN PROGRESS]
-    PROGRESS --&gt;|Complete| COMPLETE[Outcome 5: VERSION COMPLETE]
-
-    FAIL --&gt; REPORT1([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🛑 Explain problem&lt;br/&gt;List failed tests&lt;br/&gt;Suggest fixes&#34;])
-
-    MISMATCH --&gt; REPORT2([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;⚠️ Update docs&lt;br/&gt;Show what changed&lt;br/&gt;Auto-update files&#34;])
-
-    GROOM --&gt; REPORT3([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🧑 List next options&lt;br/&gt;Show ROADMAP&lt;br/&gt;Ask what&#39;s next&#34;])
-
-    PARTIAL --&gt; REPORT4([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;✅ Update checkboxes&lt;br/&gt;Show progress&lt;br/&gt;Push increment&#34;])
-
-    COMPLETE --&gt; REPORT5([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🎉 Move to CHANGELOG&lt;br/&gt;Announce version&lt;br/&gt;Celebrate!&#34;])
+    PROGRESS --&gt;|No changes| REPORT3([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🧑 List next options&lt;br/&gt;Show ROADMAP&lt;br/&gt;Ask what&#39;s next&#34;])
+    PROGRESS --&gt;|Partial| REPORT4([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;✅ Update checkboxes&lt;br/&gt;Show progress&lt;br/&gt;Push increment&#34;])
+    PROGRESS --&gt;|Complete| REPORT5([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🎉 Move to CHANGELOG&lt;br/&gt;Announce version&lt;br/&gt;Celebrate!&#34;])
 </code></pre><p><a href="https://github.com/nonlinear/nonlinear.github.io/blob/main/.github/prompts/whatsup.prompt.md">Get whatsup prompt</a></p>
 <hr>
 <hr>

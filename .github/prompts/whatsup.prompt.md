@@ -363,28 +363,18 @@ CURRENT=$(grep -m1 "^## v" CHANGELOG.md | sed 's/^## v//' | cut -d':' -f1 | tr -
 ### Possible Outcomes
 
 ```mermaid
-flowchart TD
-    STEP4([STEP 4: Analyze State]) --> CHECK{Checks passed?}
+flowchart LR
+    STEP4([user asks /whatsup]) --> CHECK{Checks passed?}
 
-    CHECK -->|No| FAIL[Outcome 1: FAILED CHECKS]
+    CHECK -->|No| REPORT1(["<b>NEXT:</b><br>🛑 Explain problem<br/>List failed tests<br/>Suggest fixes"])
     CHECK -->|Yes| STABLE{Docs match reality?}
 
-    STABLE -->|No| MISMATCH[Outcome 2: DOCS MISMATCH]
+    STABLE -->|No| REPORT2(["<b>NEXT:</b><br>⚠️ Update docs<br/>Show what changed<br/>Auto-update files"])
     STABLE -->|Yes| PROGRESS{Work done?}
 
-    PROGRESS -->|No changes| GROOM[Outcome 3: GROOMING MODE]
-    PROGRESS -->|Partial| PARTIAL[Outcome 4: IN PROGRESS]
-    PROGRESS -->|Complete| COMPLETE[Outcome 5: VERSION COMPLETE]
-
-    FAIL --> REPORT1(["<b>NEXT:</b><br>🛑 Explain problem<br/>List failed tests<br/>Suggest fixes"])
-
-    MISMATCH --> REPORT2(["<b>NEXT:</b><br>⚠️ Update docs<br/>Show what changed<br/>Auto-update files"])
-
-    GROOM --> REPORT3(["<b>NEXT:</b><br>🧑 List next options<br/>Show ROADMAP<br/>Ask what's next"])
-
-    PARTIAL --> REPORT4(["<b>NEXT:</b><br>✅ Update checkboxes<br/>Show progress<br/>Push increment"])
-
-    COMPLETE --> REPORT5(["<b>NEXT:</b><br>🎉 Move to CHANGELOG<br/>Announce version<br/>Celebrate!"])
+    PROGRESS -->|No changes| REPORT3(["<b>NEXT:</b><br>🧑 List next options<br/>Show ROADMAP<br/>Ask what's next"])
+    PROGRESS -->|Partial| REPORT4(["<b>NEXT:</b><br>✅ Update checkboxes<br/>Show progress<br/>Push increment"])
+    PROGRESS -->|Complete| REPORT5(["<b>NEXT:</b><br>🎉 Move to CHANGELOG<br/>Announce version<br/>Celebrate!"])
 
 ```
 
