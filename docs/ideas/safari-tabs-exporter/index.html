@@ -1,0 +1,662 @@
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js safari-tabs-exporter ideas single
+    "
+>
+
+    <head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+
+  
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#000000" />
+
+  <title></title>
+  <meta content="Nicholas Frota" name="author" />
+  
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/main.4bce94ac025904833aefb92667c6e4f8d2bd5a1259aa5738454ebf64ca10282b.css" />
+
+  
+
+
+  
+  
+  
+  
+
+  
+
+    
+    
+    
+    
+    
+
+  
+  
+  
+    
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+    
+  
+  <meta property="og:image" content="/images/covers/live.jpg" />
+  <meta property="og:description" content="" />
+
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'forest',
+        flowchart: {
+          curve: 'monotoneY'
+        }
+      });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
+
+</head>
+
+    <body>
+
+        <main class="container">
+
+                <a href="javascript:void(0)" class="mice credits-open"></a>
+            <article class="content">
+                    
+                        <h1 id="safari-tabs-exporter---guia-definitivo">Safari Tabs Exporter - Guia Definitivo</h1>
+<h2 id="o-que-faz">O que faz:</h2>
+<ol>
+<li>Captura todas as tabs abertas no Safari do iPhone/iPad</li>
+<li>Formata como markdown: <code>- [título](url)</code></li>
+<li>Salva arquivo em iCloud Drive → Shortcuts/safari-tabs-export.md</li>
+<li>Apaga todas as tabs do Safari</li>
+<li>Mostra notificação de conclusão</li>
+</ol>
+<hr>
+<h2 id="importante-realidade-do-ios-15">IMPORTANTE: Realidade do iOS 15+</h2>
+<p>⚠️ <strong>Não dá pra criar shortcuts programaticamente desde iOS 15 (2021)</strong></p>
+<ul>
+<li>Apple assina todos os arquivos <code>.shortcut</code></li>
+<li>Arquivos não-assinados são rejeitados</li>
+<li>Único jeito: <strong>criar manualmente no iPhone/iPad</strong></li>
+</ul>
+<hr>
+<h2 id="criar-no-iphoneipad---passo-a-passo-exato">Criar no iPhone/iPad - Passo a Passo EXATO</h2>
+<h3 id="1-abre-shortcuts-ícone-roxoazul-com-símbolos">1. Abre <strong>Shortcuts</strong> (ícone roxo/azul com símbolos)</h3>
+<h3 id="2-toca--canto-superior-direito">2. Toca <strong>+</strong> (canto superior direito)</h3>
+<h3 id="3-toca-add-action-botão-azul-no-meio-da-tela">3. Toca <strong>Add Action</strong> (botão azul no meio da tela)</h3>
+<hr>
+<h2 id="ações---busca-exata-use-ctrlf-na-lista-abaixo">Ações - Busca EXATA (use Ctrl+F na lista abaixo)</h2>
+<p><strong>DICA:</strong> Quando buscar, digite EXATAMENTE como aparece. Se não achar, tenta os sinônimos.</p>
+<h3 id="ação-1-get-safari-web-pages">Ação 1: Get Safari Web Pages</h3>
+<p><strong>Busca:</strong> <code>safari</code> ou <code>web pages</code> ou <code>get safari</code>
+<strong>Nome exato:</strong> &ldquo;Get current Safari web page&rdquo; ou &ldquo;Get Current Safari Web Page&rdquo; ou &ldquo;Safari Web Page&rdquo;
+<strong>Aparece em:</strong> Apps → Safari
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Toca na ação</li>
+<li>Se aparecer opções, escolhe <strong>&ldquo;Safari Web Pages&rdquo;</strong> ou <strong>&ldquo;All Tabs&rdquo;</strong></li>
+</ul>
+<h3 id="ação-2-set-variable">Ação 2: Set Variable</h3>
+<p><strong>Busca:</strong> <code>set variable</code> ou <code>variable</code>
+**N Ação 3: Get Device Details (Device Name)
+<strong>Busca:</strong> <code>device</code> ou <code>device name</code>
+<strong>Nome exato:</strong> &ldquo;Get Device Details&rdquo;
+<strong>Aparece em:</strong> Device → Device Information
+**O que fazer:**</p>
+<ul>
+<li>Toca na ação</li>
+<li>Toca em &ldquo;Detail&rdquo; (palavra azul na ação)</li>
+<li>Escolhe: <strong>&ldquo;Device Name&rdquo;</strong></li>
+</ul>
+<h3 id="ação-4-set-variable">Ação 4: Set Variable</h3>
+<p><strong>Variável:</strong> <code>DeviceName</code></p>
+<h3 id="ação-5-current-date">Ação 5: Current Date</h3>
+<p><strong>Busca:</strong> <code>date</code> ou <code>current date</code>
+<strong>Nome exato:</strong> &ldquo;Current Date&rdquo;
+<strong>Aparece em:</strong> Calendar</p>
+<h3 id="ação-6-format-date">Ação 6: Format Date</h3>
+<p><strong>Busca:</strong> <code>format date</code> ou <code>format</code>
+<strong>Nome exato:</strong> &ldquo;Format Date&rdquo;
+<strong>Aparece em:</strong> Calendar
+<strong>O que fazer:</strong></p>
+<ul>
+<li>
+<p>Toca na ação</p>
+</li>
+<li>
+<p>Toca em &ldquo;Date Format&rdquo; (palavra azul)</p>
+</li>
+<li>
+<p>Escolhe: <strong>&ldquo;Custom&rdquo;</strong></p>
+</li>
+<li>
+<p>No campo de formato, digita: <code>yyyy-MM-dd HH:mm</code>
+Ação 8: Repeat with Each
+<strong>Busca:</strong> <code>repeat</code> ou <code>repeat each</code> ou <code>loop</code>
+<strong>Nome exato:</strong> &ldquo;Repeat with Each&rdquo;
+<strong>Aparece em:</strong> Scripting → Control Flow
+<strong>O que fazer:</strong></p>
+</li>
+<li>
+<p>Toca na ação</p>
+</li>
+<li>
+<p>Toca onde diz &ldquo;Input&rdquo; ou &ldquo;Repeat Item&rdquo; (palavra azul)</p>
+</li>
+<li>
+<p>Escolhe variável: <strong>&ldquo;AllTabs&rdquo;</strong> (pode estar como &ldquo;Safari Web Pages&rdquo; ou &ldquo;Get Safari Web Pages&rdquo;)</p>
+</li>
+<li>
+<p>Se não aparecer variável, toca &ldquo;Select Magic Variable&rdquo; e escolhe a ação 1ar tabs)</p>
+</li>
+<li>
+<p>Busca: &ldquo;Count&rdquo;</p>
+</li>
+<li>
+<p>Conta: <code>AllTabs</code></p>
+</li>
+</ul>
+<h4 id="ação-11-set-variable">Ação 11: Set Variable</h4>
+<ul>
+<li>Nome: <code>TabCount</code></li>
+</ul>
+<h4 id="ação-12-repeat-loop">Ação 12: Repeat (loop)</h4>
+<ul>
+<li>Busca: &ldquo;Repeat&rdquo;</li>
+<li>Repeat <code>TabCount</code> times</li>
+</ul>
+<h4 id="ação-13-get-item-from-list-dentro-do-repeat">Ação 13: Get Item from List (dentro do Repeat)</h4>
+<ul>
+<li>Busca: &ldquo;Get Item from List&rdquo;</li>
+<li>Get item <strong>at index</strong> <code>Repeat Index</code> from <code>TabTitles</code></li>
+</ul>
+<h4 id="ação-14-set-variable">Ação 14: Set Variable</h4>
+<p>Ação 9: Get Details (Page Title)
+<strong>Busca:</strong> <code>get details</code> ou <code>details</code> ou <code>name</code>
+<strong>Nome exato:</strong> &ldquo;Get Details of Safari Web Page&rdquo;
+<strong>Aparece em:</strong> Web → Safari
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Toca na ação</li>
+<li>Toca em &ldquo;Detail&rdquo; (palavra azul)</li>
+<li>Escolhe: <strong>&ldquo;Page Title&rdquo;</strong> ou <strong>&ldquo;Name&rdquo;</strong></li>
+</ul>
+<h3 id="ação-10-set-variable">Ação 10: Set Variable</h3>
+<p><strong>Variável:</strong> <code>PageTitle</code></p>
+<h3 id="ação-11-get-details-url">Ação 11: Get Details (URL)</h3>
+<p><strong>Mesma ação anterior</strong>
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Adiciona novamente &ldquo;Get Details of Safari Web Page&rdquo;</li>
+<li>Toca em &ldquo;Detail&rdquo;</li>
+<li>Escolhe: <strong>&ldquo;Page URL&rdquo;</strong> ou <strong>&ldquo;URL&rdquo;</strong></li>
+</ul>
+<h3 id="ação-12-set-variable">Ação 12: Set Variable</h3>
+<p><strong>Variável:</strong> <code>PageURL</code></p>
+<h3 id="ação-13-text-formatar-linha-markdown">Ação 13: Text (formatar linha markdown)</h3>
+<p><strong>Busca:</strong> <code>text</code>
+<strong>Nome exato:</strong> &ldquo;Text&rdquo;
+<strong>Aparece em:</strong> Scripting → Text
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Toca na ação</li>
+<li>No campo de texto, digita: <code>- [</code></li>
+<li>Toca no campo → aparece menu → <strong>&ldquo;Select Variable&rdquo;</strong></li>
+<li>Escolhe: <strong>&ldquo;PageTitle&rdquo;</strong></li>
+<li>Continua digitando: <code>](</code></li>
+<li>Select Variable novamente</li>
+<li>Escolhe: <strong>&ldquo;PageURL&rdquo;</strong></li>
+<li>Fecha: <code>)</code></li>
+<li>Resultado final: <code>- [PageTitle](PageURL)</code> (com variáveis em azul)</li>
+</ul>
+<h3 id="ação-14-add-to-variable">Ação 14: Add to Variable</h3>
+<p><strong>Busca:</strong> <code>add variable</code> ou <code>add to</code>
+<strong>Nome exato:</strong> &ldquo;Add to Variable&rdquo;
+<strong>Aparece em:</strong> Scripting → Variables
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Toca na ação</li>
+<li>Se pedir nome de variável, cria nova: <code>MarkdownList</code></li>
+<li>A ação vai acumular cada linha markdown</li>
+</ul>
+<h3 id="ação-15-end-repeat">Ação 15: End Repeat</h3>
+<p><strong>Já aparece automaticamente</strong> depois do &ldquo;Repeat with Each&rdquo;</p>
+<ul>
+<li>Se não aparecer, busca <code>end repeat</code> e adiciona</li>
+</ul>
+<h4 id="ação-23-text-montar-nota-completa">Ação 23: Text (montar nota completa)</h4>
+<ul>
+<li>
+<p>Escreve:
+Ação 16: Text (montar arquivo final)
+<strong>O que fazer:</strong></p>
+</li>
+<li>
+<p>Adiciona outra ação &ldquo;Text&rdquo;</p>
+</li>
+<li>
+<p>No campo, digita: <code># </code></p>
+</li>
+<li>
+<p>Select Variable → <strong>&ldquo;DeviceName&rdquo;</strong></p>
+</li>
+<li>
+<p>Continua: <code>Safari Tabs -</code></p>
+</li>
+<li>
+<p>Select Variable → <strong>&ldquo;Timestamp&rdquo;</strong></p>
+</li>
+<li>
+<p><strong>Enter</strong> (quebra linha) <strong>duas vezes</strong></p>
+</li>
+<li>
+<p>Select Variable → <strong>&ldquo;MarkdownList&rdquo;</strong></p>
+</li>
+<li>
+<p>Resultado:</p>
+<pre tabindex="0"><code># DeviceName Safari Tabs - Timestamp
+
+MarkdownList
+</code></pre></li>
+</ul>
+<h3 id="ação-17-save-file">Ação 17: Save File</h3>
+<p><strong>Busca:</strong> <code>save file</code> ou <code>save</code>
+<strong>Nome exato:</strong> &ldquo;Save File&rdquo;
+<strong>Aparece em:</strong> Documents → Files
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Toca na ação</li>
+<li><strong>Ask Where to Save:</strong> OFF (desliga)</li>
+<li><strong>Service:</strong> iCloud Drive (se pedir)</li>
+<li><strong>File Path:</strong> toca e digita: <code>Shortcuts/safari-tabs-export.md</code></li>
+<li><strong>Overwrite if Exists:</strong> ON (liga)</li>
+</ul>
+<h3 id="ação-18-close-all-tabs-with-safari">Ação 18: Close All Tabs with Safari</h3>
+<p><strong>Busca:</strong> <code>close tabs</code> ou <code>close all</code>
+<strong>Nome exato:</strong> &ldquo;Close All Tabs with Safari&rdquo; ou &ldquo;Close Safari Tabs&rdquo;
+<strong>Aparece em:</strong> Apps → Safari
+<strong>O que fazer:</strong></p>
+<ul>
+<li>Só adiciona, sem configurar nada</li>
+</ul>
+<h3 id="ação-19-show-notification">Ação 19: Show Notification</h3>
+<p>**BFinalizar</p>
+<h3 id="1-nomeia-o-shortcut">1. Nomeia o Shortcut</h3>
+<ul>
+<li>Toca nos 3 pontinhos <strong>⋯</strong> (canto superior direito)</li>
+<li>Toca no nome (em cima)</li>
+<li>Digita: <strong>Safari Tabs Exporter</strong></li>
+<li>Done</li>
+</ul>
+<h3 id="2-escolhe-ícone-e-cor-opcional">2. Escolhe ícone e cor (opcional)</h3>
+<ul>
+<li>Ainda nas configurações (⋯)</li>
+<li>Toca no ícone</li>
+<li>Escolhe ícone de Safari ou Tabs</li>
+<li>Escolhe cor (azul ou laranja combina)</li>
+</ul>
+<h3 id="3-configurações-extras-opcional">3. Configurações extras (opcional)</h3>
+<ul>
+<li><strong>Show in Share Sheet:</strong> OFF (deixa desligado)</li>
+<li><strong>Show in Widget:</strong> ON (se quiser)</li>
+<li><strong>Pin to Top:</strong> ON (facilita achar)</li>
+</ul>
+<h3 id="4-done">4. Done!</h3>
+<hr>
+<h2 id="como-usar">Como usar:</h2>
+<h3 id="no-iphoneipad">No iPhone/iPad:</h3>
+<ol>
+<li>Abre o app <strong>Shortcuts</strong></li>
+<li>Toca no shortcut <strong>Safari Tabs Exporter</strong></li>
+<li>Aguarda notificação</li>
+<li>Pronto! Arquivo salvo em iCloud Drive</li>
+</ol>
+<h3 id="via-siri">Via Siri:</h3>
+<p>&ldquo;Hey Siri, Safari Tabs Exporter&rdquo;</p>
+<h3 id="no-mac-após-criar">No Mac (após criar):</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Ler o arquivo exportado</span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&#34;/Users/nfrota/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/safari-tabs-export.md&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ou processar automaticamente</span>
+</span></span><span style="display:flex;"><span>python3 process_tabs.py
+</span></span></code></pre></div><hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="não-acho-a-ação-x">&ldquo;Não acho a ação X&rdquo;</h3>
+<ul>
+<li>Tenta os sinônimos listados</li>
+<li>Scroll até o fim da lista (algumas ações ficam longe)</li>
+<li>Verifica se digitou EXATAMENTE como aparece</li>
+<li>Versões antigas do iOS podem ter nomes diferentes</li>
+</ul>
+<h3 id="ação-não-funciona">&ldquo;Ação não funciona&rdquo;</h3>
+<ul>
+<li>Verifica se escolheu a variável certa (texto azul)</li>
+<li>Confirm que &ldquo;Repeat with Each&rdquo; tá fechado com &ldquo;End Repeat&rdquo;</li>
+<li>Testa com poucas tabs primeiro (2-3)</li>
+</ul>
+<h3 id="arquivo-não-aparece-no-mac">&ldquo;Arquivo não aparece no Mac&rdquo;</h3>
+<ul>
+<li>Aguarda 10-30 segundos (sync do iCloud)</li>
+<li>Verifica se iCloud Drive tá ativo: Settings → iCloud → iCloud Drive</li>
+<li>Caminho: <code>~/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/</code></li>
+</ul>
+<h3 id="não-apaga-as-tabs">&ldquo;Não apaga as tabs&rdquo;</h3>
+<ul>
+<li>Normal se tiver muitas (Safari limita)</li>
+<li>Roda novamente ou fecha manualmente</li>
+</ul>
+<hr>
+<h2 id="alternativas">Alternativas</h2>
+<h3 id="versão-super-simplificada-5-ações">Versão SUPER simplificada (5 ações):</h3>
+<ol>
+<li>Get Safari Web Pages</li>
+<li>Get Details → Page Title</li>
+<li>Get Details → URL</li>
+<li>Text: <code>- [Title](URL)</code> (com variáveis)</li>
+<li>Copy to Clipboard</li>
+</ol>
+<p><strong>Usa:</strong> Universal Clipboard sincroniza pro Mac automaticamente</p>
+<h3 id="versão-com-notes-em-vez-de-arquivo">Versão com Notes (em vez de arquivo):</h3>
+<p>Substitui &ldquo;Save File&rdquo; por:</p>
+<ul>
+<li><strong>Create Note</strong> (ação do Notes app)</li>
+<li><strong>Show Compose Sheet:</strong> OFF</li>
+<li>Nota sincroniza via iCloud Notes</li>
+</ul>
+<hr>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li>
+<p><strong>URL Scheme para rodar do Mac:</strong></p>
+<pre tabindex="0"><code>open &#34;shortcuts://run-shortcut?name=Safari%20Tabs%20Exporter&#34;
+</code></pre></li>
+<li>
+<p><strong>Documentação oficial:</strong></p>
+<ul>
+<li><a href="https://support.apple.com/guide/shortcuts/welcome/ios">https://support.apple.com/guide/shortcuts/welcome/ios</a></li>
+<li><a href="https://support.apple.com/guide/shortcuts/use-variables-apd5b0f84c34/ios">https://support.apple.com/guide/shortcuts/use-variables-apd5b0f84c34/ios</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Comunidade:</strong></p>
+<ul>
+<li>r/shortcuts: <a href="https://reddit.com/r/shortcuts">https://reddit.com/r/shortcuts</a></li>
+<li>RoutineHub: <a href="https://routinehub.co/ri">https://routinehub.co/ri</a> Tabs to Markdown&quot;** que alguém já criou:</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.icloud.com/shortcuts/">https://www.icloud.com/shortcuts/</a></p>
+<p>(busca por &ldquo;safari tabs markdown&rdquo; na galeria de shortcuts)</p>
+
+                    
+                    <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+            </article>
+            <aside id="credits">
+  <a href="javascript:void(0)" class="mice credits-close"></a>
+  <div id="qrdisplay"></div>
+  <h2></h2>
+  <p class="date">
+    
+      
+    
+    
+    
+      live 2026 years ago
+    
+  </p>
+    <div class="description"></div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    <section class="tags">
+      
+      <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+      <div class="popover" id="microlink" style="display: none">
+        
+        <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more</p>
+        
+
+        
+        <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="qrcode.min">QRCode</a>
+
+      <div class="popover" id="qrcode.min" style="display: none">
+        
+        <p>A JavaScript library for generating QR codes in client-side web applications</p>
+        
+
+        
+        <a href="https://davidshimjs.github.io/qrcodejs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="tippy.min">Tippy</a>
+
+      <div class="popover" id="tippy.min" style="display: none">
+        
+        <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js</p>
+        
+
+        
+        <a href="https://atomiks.github.io/tippyjs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+    </section>
+    <section class="references">
+      
+    </section>
+
+
+    <section class="share">
+      <a href="javascript:void(0)" id="share">
+        Share this page</a>
+        
+        <a href="/">
+          About nonlinear
+        </a>
+      </section>
+    </div>
+
+
+  </div>
+  <script src="/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "\/ideas\/safari-tabs-exporter\/",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffcc",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("main.container");
+
+      document.querySelectorAll(".credits-open").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.add("open-credits");
+        });
+      });
+
+      document.querySelectorAll(".credits-close").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.remove("open-credits");
+        });
+      });
+    });
+  </script>
+  <script>
+    if (navigator.share) {
+      document.getElementById("share").style.display = "block";
+      document.getElementById("share").addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: "Check this out!",
+            url: window.location.href,
+          });
+        } catch (err) {
+          console.error("Error sharing:", err);
+        }
+      });
+    }
+  </script>
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+</script>
+
+
+
+
+  <script src="/js/global/popper.min.js"></script>
+  <script src="/js/global/tippy-bundle.umd.min.js"></script>
+
+
+
+
+
+    </body>
+
+
+</html>
+

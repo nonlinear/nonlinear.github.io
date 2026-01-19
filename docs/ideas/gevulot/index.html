@@ -1,0 +1,470 @@
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js gevulot live ideas single
+    "
+>
+
+    <head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+
+  
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#000000" />
+
+  <title>Gevulot</title>
+  <meta content="Nicholas Frota" name="author" />
+  
+  
+    
+      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'safiro-medium';
+          src: url('/fonts/safiro-medium.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
+    
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/main.4bce94ac025904833aefb92667c6e4f8d2bd5a1259aa5738454ebf64ca10282b.css" />
+
+  
+
+
+  
+  
+  
+  
+
+  
+
+    
+    
+    
+    
+    
+
+  
+  
+  
+    
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+    
+  
+  <meta property="og:image" content="/images/covers/live.jpg" />
+  <meta property="og:description" content="A consent-based contacts game" />
+
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'forest',
+        flowchart: {
+          curve: 'monotoneY'
+        }
+      });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
+
+</head>
+
+    <body>
+
+        <main class="container">
+
+                <a href="javascript:void(0)" class="mice credits-open"></a>
+            <article class="content">
+                    
+                        <p>Gevulot is a consent-based game for contact management. When you join, you claim <em>yourself</em>: you gain exclusive control over your own contact card. In exchange, you relinquish the ability to manually edit other players&rsquo; information. Everyone plays by the same rule—each person owns their own data, and all participants automatically receive verified updates.</p>
+<p>Contacts are placed into groups with visibility presets. <strong>Close friends</strong> may see rich data; <strong>family</strong> something different; <strong>gray rock</strong> sees almost nothing. Changes propagate automatically. The result is a shared, self-updating contact graph where accuracy replaces manual curation, and control is exercised through boundaries.</p>
+<p>Rules:</p>
+<ul>
+<li>Each person owns and edits <strong>only their own contact card</strong></li>
+<li>If you join the game, you accept the rules</li>
+<li>If you don’t accept the rules, you don’t get to play</li>
+</ul>
+<p>Principles:</p>
+<ul>
+<li>Consent &gt; privacy</li>
+<li>Defaults are restrictive</li>
+<li>Participation is voluntary but conditional</li>
+</ul>
+<h2 id="self-owned-contact-card">Self-Owned Contact Card</h2>
+<p>When a user installs the app:</p>
+<ol>
+<li>App asks: “Who are you?”</li>
+<li>OS already knows (Me Card / Profile)</li>
+<li>User claims their identity</li>
+<li>A <strong>stable user ID</strong> is created (app-level, not OS-level)</li>
+<li>Only the owner can edit their card</li>
+</ol>
+<p>Other users:</p>
+<ul>
+<li>Subscribe to this card</li>
+<li>Receive updates automatically</li>
+<li>Cannot edit it</li>
+</ul>
+<p>This eliminates:</p>
+<ul>
+<li>Manual contact maintenance</li>
+<li>Duplicate drift</li>
+<li>Third-party guessing</li>
+</ul>
+<h2 id="automatic-propagation">Automatic Propagation</h2>
+<p>When a user updates any field (phone, email, address, social links, websites, metadata), all participants with consent automatically receive updates. No manual sync, no conflicts.</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+    A[User Updates Phone] --&gt; B[App Validates Change]
+    B --&gt; C{Check Permissions}
+    C --&gt;|Family Group| D[Propagate to Family]
+    C --&gt;|Friends Group| E[Propagate to Friends]
+    C --&gt;|Grey Rock Group| F[No Update Sent]
+    D --&gt; G[Family Contacts Updated]
+    E --&gt; H[Friends Contacts Updated]
+</code></pre><h2 id="groups-as-permission-sets">Groups as Permission Sets</h2>
+<p>Contacts are placed into groups (Close Friends, Family, Friends, Work, Grey Rock). Each group defines which fields are visible, hidden, or propagate.</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+    A[User Moves Contact] --&gt; B{New Group?}
+    B --&gt;|Less visibility| C[Deny field visibility]
+    B --&gt;|More visibility| D[Allow field visiblitiy]
+</code></pre><p>When moved to <strong><code>**Grey Rock**</code></strong>, some field visibility is revoked.</p>
+<h2 id="field-level-permissions">Field-Level Permissions</h2>
+<p>Each field declares visibility rules (e.g., Phone → Family + Close Friends, Email → Work + Friends, Address → Family only). Permissions are declarative, enforced by the app, and part of the game rules.</p>
+<h2 id="third-party--friend-of-friend-future">Third-Party / Friend-of-Friend (Future)</h2>
+<p>Potential feature: &ldquo;Any friend of Nicholas can see X&rdquo; with conservative defaults, opt-in only.</p>
+<h2 id="cryptographic-consent-optional">Cryptographic Consent (Optional)</h2>
+<p>Future option: cryptographic signatures for permissions. Visibility becomes a signed capability with explicit consent trail.</p>
+<h2 id="ios-vs-android--contact-permissions">iOS vs Android — Contact Permissions</h2>
+<h3 id="android">Android</h3>
+<p>Single permission (<code>READ_CONTACTS</code> / <code>WRITE_CONTACTS</code>) grants full read/edit/create access. Coarse-grained but powerful.</p>
+<h3 id="ios">iOS</h3>
+<p>More restrictive. Permissions are explicit and revocable. App must break if permissions are denied. Game rule: if you don&rsquo;t grant permissions, you can&rsquo;t play.</p>
+<h2 id="accounts--sync-reality">Accounts &amp; Sync Reality</h2>
+<p>Contacts may live in Google accounts. iOS aggregates sources. When permission is granted, app sees the unified address book. Google will observe changes—acceptable because the user already consented to Google. This system is about consent, not secrecy.</p>
+<h2 id="identity-claiming">Identity Claiming</h2>
+<p>Problem:</p>
+<ul>
+<li>Multiple people may have multiple contacts representing “you”</li>
+<li>No central authority today</li>
+</ul>
+<p>Constraints:</p>
+<ul>
+<li>You do NOT want:
+<ul>
+<li>Manual back-and-forth confirmations</li>
+<li>Asking permission per contact</li>
+<li>Zig-zag workflows</li>
+</ul>
+</li>
+</ul>
+<p>Desired behavior:</p>
+<ul>
+<li>System cleans this automatically</li>
+</ul>
+<p>Direction:</p>
+<ul>
+<li>User claims identity once</li>
+<li>App-level ID maps to multiple legacy contact entries</li>
+<li>Over time:
+<ul>
+<li>Duplicates collapse</li>
+<li>Canonical card dominates</li>
+<li>Old entries become inert or deprecated</li>
+</ul>
+</li>
+</ul>
+<h2 id="architecture-centralized--distributed">Architecture: Centralized → Distributed</h2>
+<p><strong>Initial:</strong> Centralized backend for faster iteration and easier debugging.</p>
+<p><strong>Future:</strong> Distributed social graph inspired by Secure Scuttlebutt. Encrypted payloads, everyone acts as relay, only intended recipients decrypt.</p>
+<h2 id="app-development-stack">App Development Stack</h2>
+<p>Cross-platform: React Native or Flutter. VS Code for development, Xcode for iOS builds/signing/TestFlight, Android Studio only for final packaging.</p>
+<h2 id="distribution--risk">Distribution &amp; Risk</h2>
+<p>iOS requires Apple Developer Account, app review, TestFlight for beta.</p>
+<p><strong>Reality check:</strong> App can delete or rewrite contacts. This is dangerous. Must be explicitly communicated as part of the game rules and accepted knowingly.</p>
+<h2 id="social-incentive">Social Incentive</h2>
+<p>&ldquo;I only exchange contacts with people who play this game&rdquo;—similar to Signal-only communication or closed networks. Creates viral incentive, consent-based social pressure, and cleaner graphs over time.</p>
+<hr>
+<h2 id="open-questions--future-work">Open Questions / Future Work</h2>
+<ul>
+<li>Best UX for identity claiming without spam</li>
+<li>How aggressive auto-merge should be</li>
+<li>How to represent revocation cleanly</li>
+<li>Migration path to decentralization</li>
+<li>Legal framing: consent vs liability</li>
+</ul>
+
+                    
+                    <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+            </article>
+            <aside id="credits">
+  <a href="javascript:void(0)" class="mice credits-close"></a>
+  <div id="qrdisplay"></div>
+  <h2>Gevulot</h2>
+  <p class="date">
+    
+      
+    
+    
+    
+      live 6 days ago
+    
+  </p>
+    <div class="description">A consent-based contacts game</div>
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    <section class="tags">
+      
+      <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+      <div class="popover" id="microlink" style="display: none">
+        
+        <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more</p>
+        
+
+        
+        <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="qrcode.min">QRCode</a>
+
+      <div class="popover" id="qrcode.min" style="display: none">
+        
+        <p>A JavaScript library for generating QR codes in client-side web applications</p>
+        
+
+        
+        <a href="https://davidshimjs.github.io/qrcodejs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="tippy.min">Tippy</a>
+
+      <div class="popover" id="tippy.min" style="display: none">
+        
+        <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js</p>
+        
+
+        
+        <a href="https://atomiks.github.io/tippyjs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+    </section>
+    <section class="references">
+      
+    </section>
+
+
+    <section class="share">
+      <a href="javascript:void(0)" id="share">
+        Share this page</a>
+        
+        <a href="/">
+          About nonlinear
+        </a>
+      </section>
+    </div>
+
+
+  </div>
+  <script src="/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "\/ideas\/gevulot\/",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffcc",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("main.container");
+
+      document.querySelectorAll(".credits-open").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.add("open-credits");
+        });
+      });
+
+      document.querySelectorAll(".credits-close").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.remove("open-credits");
+        });
+      });
+    });
+  </script>
+  <script>
+    if (navigator.share) {
+      document.getElementById("share").style.display = "block";
+      document.getElementById("share").addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: "Check this out!",
+            url: window.location.href,
+          });
+        } catch (err) {
+          console.error("Error sharing:", err);
+        }
+      });
+    }
+  </script>
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+</script>
+
+
+
+
+  <script src="/js/global/popper.min.js"></script>
+  <script src="/js/global/tippy-bundle.umd.min.js"></script>
+
+
+
+
+
+    </body>
+
+
+</html>
+
