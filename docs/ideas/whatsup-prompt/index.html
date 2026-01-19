@@ -1,0 +1,465 @@
+
+
+<!doctype html>
+<html
+    lang="en"
+    class="single no-js whatsup-prompt draft ideas single
+    "
+>
+
+    <head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+
+  
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#000000" />
+
+  <title>Whats up project checking</title>
+  <meta content="Nicholas Frota" name="author" />
+  
+  
+    
+      <link rel="preload" as="font" href="/fonts/safiro-medium.woff2" type="font/woff2" crossorigin>
+      <style>
+        @font-face {
+          font-family: 'safiro-medium';
+          src: url('/fonts/safiro-medium.woff2') format('woff2');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+      </style>
+    
+  
+
+  
+  
+  <link rel="stylesheet" href="/css/main.4bce94ac025904833aefb92667c6e4f8d2bd5a1259aa5738454ebf64ca10282b.css" />
+
+  
+
+
+  
+  
+  
+  
+
+  
+
+    
+    
+    
+    
+    
+
+  
+  
+  
+    
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+    
+  
+  <meta property="og:image" content="/images/covers/live.jpg" />
+  <meta property="og:description" content="Extending file links to support auto-search within EPUBs and PDFs" />
+
+  
+  <script src="/js/global/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'forest',
+        flowchart: {
+          curve: 'monotoneY'
+        }
+      });
+
+      
+      document.querySelectorAll('pre code.language-mermaid').forEach((block) => {
+        const pre = block.parentElement;
+        const code = block.textContent;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code;
+        pre.replaceWith(div);
+      });
+
+      mermaid.run();
+    });
+  </script>
+
+</head>
+
+    <body>
+
+        <main class="container">
+
+                <a href="javascript:void(0)" class="mice credits-open"></a>
+            <article class="content">
+                    
+                        <blockquote>
+<p>Whatsup is a <strong>pre-commit workflow system</strong> that ensures your code changes stay synchronized with project documentation. Before any commit, it:</p></blockquote>
+<ol>
+<li><strong>Reads README</strong> → Locates your ROADMAP, CHANGELOG, and CHECKS files</li>
+<li><strong>Compares Work</strong> → Git diff analysis against documented features</li>
+<li><strong>Runs CHECKS</strong> → Executes all validation scripts (must pass)</li>
+<li><strong>Updates Documentation</strong> → Auto-promotes completed features (ROADMAP → CHANGELOG)</li>
+<li><strong>Decision Point</strong> → Determines commit readiness with context-aware outcomes</li>
+</ol>
+<h3 id="the-three-audiences">The Three Audiences</h3>
+<p>Whatsup serves distinct stakeholders with tailored information:</p>
+<ol>
+<li>
+<p>👷 Developers (You):</p>
+<ul>
+<li><strong>When:</strong> Last worked 2 months ago</li>
+<li><strong>What:</strong> Completed delta indexing feature</li>
+<li><strong>Why:</strong> To avoid reindexing entire library</li>
+<li><strong>Next:</strong> v0.4 Provider Integration OR start new work</li>
+</ul>
+</li>
+<li>
+<p>👥 Users:</p>
+<ul>
+<li><strong>What&rsquo;s New:</strong> Delta indexing - 23× faster reindexing</li>
+<li><strong>Who Cares:</strong> Large library users</li>
+<li><strong>Migration:</strong> None - backward compatible</li>
+<li><strong>Impact:</strong> Only changed books reindex, saves time</li>
+</ul>
+</li>
+<li>
+<p>🤖 AI Assistants:</p>
+<ul>
+<li><strong>Code State:</strong> Live test results from CHECKS</li>
+<li><strong>Planned Work:</strong> Current ROADMAP items</li>
+<li><strong>Completed Work:</strong> Version history from CHANGELOG</li>
+<li><strong>Truth Source:</strong> Documentation matches code reality</li>
+</ul>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TD
+    STEP4([STEP 4: Analyze State]) --&gt; CHECK{Checks passed?}
+
+    CHECK --&gt;|No| FAIL[Outcome 1: FAILED CHECKS]
+    CHECK --&gt;|Yes| STABLE{Docs match reality?}
+
+    STABLE --&gt;|No| MISMATCH[Outcome 2: DOCS MISMATCH]
+    STABLE --&gt;|Yes| PROGRESS{Work done?}
+
+    PROGRESS --&gt;|No changes| GROOM[Outcome 3: GROOMING MODE]
+    PROGRESS --&gt;|Partial| PARTIAL[Outcome 4: IN PROGRESS]
+    PROGRESS --&gt;|Complete| COMPLETE[Outcome 5: VERSION COMPLETE]
+
+    FAIL --&gt; REPORT1([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🛑 Explain problem&lt;br/&gt;List failed tests&lt;br/&gt;Suggest fixes&#34;])
+
+    MISMATCH --&gt; REPORT2([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;⚠️ Update docs&lt;br/&gt;Show what changed&lt;br/&gt;Auto-update files&#34;])
+
+    GROOM --&gt; REPORT3([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🧑 List next options&lt;br/&gt;Show ROADMAP&lt;br/&gt;Ask what&#39;s next&#34;])
+
+    PARTIAL --&gt; REPORT4([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;✅ Update checkboxes&lt;br/&gt;Show progress&lt;br/&gt;Push increment&#34;])
+
+    COMPLETE --&gt; REPORT5([&#34;&lt;b&gt;NEXT:&lt;/b&gt;&lt;br&gt;🎉 Move to CHANGELOG&lt;br/&gt;Announce version&lt;br/&gt;Celebrate!&#34;])
+</code></pre><p><a href="https://github.com/nonlinear/nonlinear.github.io/blob/main/.github/prompts/whatsup.prompt.md">Get whatsup prompt</a></p>
+<hr>
+<hr>
+<hr>
+<h2 id="comparative-analysis">Comparative Analysis</h2>
+<h3 id="-what-works-well">✅ What Works Well</h3>
+<ol>
+<li>
+<p><strong>README-First Architecture</strong>: Aligns strongly with <strong>established version control principles</strong>. Git&rsquo;s hierarchical configuration (repository → user → system) mirrors whatsup&rsquo;s single-source-of-truth approach, making project navigation less error-prone.</p>
+</li>
+<li>
+<p><strong>Outcome-Driven Workflow</strong>: Matches <strong>modern product architecture thinking</strong>. The emphasis on walking the tree (README → opportunity → solution → outcome) reflects the continuous discovery habit of connecting outputs to business value, preventing &ldquo;build trap&rdquo; scenarios.</p>
+</li>
+<li>
+<p><strong>5-Step Iterative Process</strong>: Reflects <strong>commit-based accountability principles</strong>. Git&rsquo;s atomic transactions and immutable history philosophy shows up in whatsup&rsquo;s structured checkpoints (<code>CHECKS</code> → <code>ROADMAP</code> → <code>CHANGELOG</code>).</p>
+</li>
+</ol>
+<hr>
+<h3 id="-whats-problematic">⚠️ What&rsquo;s Problematic</h3>
+<ol>
+<li>
+<p><strong>Missing Conflict Resolution Strategy</strong>: Multi-leader replication systems handle concurrent changes through <strong>automated conflict detection</strong>. Whatsup assumes sequential, single-developer workflows—<strong>no guidance</strong> for when two teammates modify ROADMAP simultaneously or when CHECKS results diverge from local testing.</p>
+</li>
+<li>
+<p><strong>No Rollback Mechanism</strong>: Git&rsquo;s <strong>immutable history</strong> enables safe reverts. Whatsup&rsquo;s &ldquo;update CHANGELOG, update ROADMAP&rdquo; steps lack a <strong>clear undo path</strong> when a commit introduces breaking changes discovered post-merge.</p>
+</li>
+<li>
+<p><strong>Lacks Branching Strategy</strong>: Version control systems use <strong>branches for experimental work</strong>. Whatsup operates in a single timeline—what happens when you need to test risky changes without affecting the main outcome tracking?</p>
+</li>
+</ol>
+<hr>
+<h3 id="-whats-missing">🔍 What&rsquo;s Missing</h3>
+<ol>
+<li>
+<p><strong>Anti-Entropy Verification</strong>: Distributed systems use <strong>automated consistency checks</strong> between replicas. Whatsup relies on manual human judgment in STEP 2A—<strong>no automated cross-validation</strong> that CHECKS pass/fail aligns with ROADMAP promises.</p>
+</li>
+<li>
+<p><strong>Documentation Replication Streams</strong>: Git uses <strong>WAL shipping and logical logs</strong> to keep distributed copies synchronized. For teams using whatsup across repositories, there&rsquo;s <strong>no guidance</strong> on propagating status file updates or maintaining consistency.</p>
+</li>
+<li>
+<p><strong>Semantic Versioning Integration</strong>: Conventional commit messages and semantic versioning aren&rsquo;t embedded in the workflow. CHANGELOG updates lack <strong>structured formatting</strong> that tooling could parse for automated dependency management.</p>
+</li>
+<li>
+<p><strong>Leading vs. Lagging Indicators</strong>: Product outcomes distinguish between what you measure to test assumptions (search starts) vs. what drives business value (hires). Whatsup&rsquo;s CHECKS.md <strong>doesn&rsquo;t differentiate</strong> between stability tests and outcome-impact tests.</p>
+</li>
+<li>
+<p><strong>Incremental Adoption Path</strong>: Whatsup requires <strong>all-or-nothing commitment</strong>. No guidance for teams migrating from existing workflows gradually—which steps to adopt first? How to run whatsup alongside legacy processes? What&rsquo;s the minimum viable implementation?</p>
+</li>
+</ol>
+
+                    
+                    <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
+            </article>
+            <aside id="credits">
+  <a href="javascript:void(0)" class="mice credits-close"></a>
+  <div id="qrdisplay"></div>
+  <h2>Whats up project checking</h2>
+  <p class="date">
+    
+      
+    
+    
+    
+      In draft since today
+    
+  </p>
+    <div class="description">Extending file links to support auto-search within EPUBs and PDFs</div>
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    <section class="tags">
+      
+      <a class="tooltip" data-tooltip-id="microlink">Microlink</a>
+
+      <div class="popover" id="microlink" style="display: none">
+        
+        <p>Structured and normalized data from Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more</p>
+        
+
+        
+        <a href="https://microlink.io" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="qrcode.min">QRCode</a>
+
+      <div class="popover" id="qrcode.min" style="display: none">
+        
+        <p>A JavaScript library for generating QR codes in client-side web applications</p>
+        
+
+        
+        <a href="https://davidshimjs.github.io/qrcodejs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+      <a class="tooltip" data-tooltip-id="tippy.min">Tippy</a>
+
+      <div class="popover" id="tippy.min" style="display: none">
+        
+        <p>A lightweight, highly customizable tooltip and popover library powered by Popper.js</p>
+        
+
+        
+        <a href="https://atomiks.github.io/tippyjs/" class="actions" target="_blank" rel="noopener">Visit page</a>
+        
+      </div>
+      
+    </section>
+    <section class="references">
+      
+    </section>
+
+
+    <section class="share">
+      <a href="javascript:void(0)" id="share">
+        Share this page</a>
+        
+        <a href="/">
+          About nonlinear
+        </a>
+      </section>
+    </div>
+
+
+  </div>
+  <script src="/js/global/qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("qrdisplay"), {
+        text: "\/ideas\/whatsup-prompt\/",
+        width: 100,
+        height: 100,
+        colorDark: "#000000",
+        colorLight: "#ffffcc",
+        correctLevel: QRCode.CorrectLevel.H,
+    });
+</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("main.container");
+
+      document.querySelectorAll(".credits-open").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.add("open-credits");
+        });
+      });
+
+      document.querySelectorAll(".credits-close").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          container.classList.remove("open-credits");
+        });
+      });
+    });
+  </script>
+  <script>
+    if (navigator.share) {
+      document.getElementById("share").style.display = "block";
+      document.getElementById("share").addEventListener("click", async () => {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: "Check this out!",
+            url: window.location.href,
+          });
+        } catch (err) {
+          console.error("Error sharing:", err);
+        }
+      });
+    }
+  </script>
+</aside>
+
+        </main>
+
+
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const isMobile = /iPhone|iPad|iPod|Android/i.test(
+                  navigator.userAgent,
+              );
+
+              if (isMobile) {
+                  setTimeout(() => {
+                      window.scrollTo(0, 1);
+                  }, 100);
+              }
+          });
+      </script>
+
+      
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script>
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+</script>
+
+
+
+
+  <script src="/js/global/popper.min.js"></script>
+  <script src="/js/global/tippy-bundle.umd.min.js"></script>
+
+
+
+
+
+    </body>
+
+
+</html>
+
