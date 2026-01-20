@@ -12,6 +12,9 @@
     "github.copilot.chat.search.excludePatterns": [],
     "github.copilot.advanced": {
       "debug.useNodeFetcher": true
+    },
+    "chat.tools.terminal.autoApprove": {
+      "scp": true
     }
   },
   "folders": [
