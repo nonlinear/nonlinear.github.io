@@ -48,37 +48,11 @@ INSTAGRAM_PASS = os.getenv('INSTAGRAM_PASS', args.password) or getpass.getpass("
 
 SAVED_URL = "https://www.instagram.com/nonlinear/saved/"
 
+
 # Generalization: set output path and count from environment variables
+OUTPUT_FILE = os.getenv('IG_SCRAPE_OUTPUT_PATH') or os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "links/reels.md")
+SCRAPE_COUNT = int(os.getenv('IG_SCRAPE_COUNT', 10))
 
-    # Extrai título e tags do primeiro post
-    first_title = None
-    first_tags = []
-    if links:
-        browser.get(links[0])
-        time.sleep(random.uniform(2.0, 4.0))
-        try:
-            caption_elem = WebDriverWait(browser, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//div[contains(@class,"C4VMK")]/span'))
-            )
-            caption = caption_elem.text
-            first_tags = extract_hashtags(caption)
-            if caption:
-                first_title = caption.split('\n')[0]
-        except Exception:
-            pass
-    if not first_title:
-        first_title = "(sem título)"
-
-    tag_str = " ".join([f"#{GROUP_NAME}"] + first_tags)
-    results = []
-    for link in links:
-        results.append(f"- 🚧 [{first_title}]({link}) {tag_str}")
-
-    with open(OUTPUT_FILE, "a") as f:
-        for line in results:
-            f.write(line + "\n")
-    print(f"[7/7] {len(results)} links adicionados em {OUTPUT_FILE}")
-    time.sleep(5)
 
     # Encontrar todos os grupos de salvos
     print("[3/6] Buscando grupos de salvos...")
@@ -144,6 +118,7 @@ SAVED_URL = "https://www.instagram.com/nonlinear/saved/"
     print(f"[6/6] {len(links)} links encontrados para processar.")
 
 
+
     def extract_hashtags(text):
         import re
         return re.findall(r"#\w+", text)
@@ -170,55 +145,35 @@ SAVED_URL = "https://www.instagram.com/nonlinear/saved/"
             try:
                 author_elem = browser.find_element(By.XPATH, '//a[contains(@href, "/") and contains(@class, "notranslate")]')
                 author = author_elem.text
-            except Exception:
-                pass
-            # Tenta pegar o título (primeira linha do caption)
-            if caption:
-                title = caption.split('\n')[0]
-        except Exception:
-            pass
-        tags = " ".join(hashtags + [f"#{GROUP_NAME}"])
-        results.append(f"{link} {tags}")
-        if idx == 1:
-            first_post_info = {
-                "link": link,
-                "author": author,
-                "tags": hashtags,
-                "title": title
-            }
 
-    if first_post_info:
-        print("\n[INFO] Primeiro post:")
-        print(f"  Link: {first_post_info['link']}")
-        print(f"  Autor: {first_post_info['author']}")
-        print(f"  Tags: {first_post_info['tags']}")
-        print(f"  Título: {first_post_info['title']}")
+            # Extract title and tags from the first post only
+            first_title = None
+            first_tags = []
+            if links:
+                browser.get(links[0])
+                time.sleep(random.uniform(2.0, 4.0))
+                try:
+                    caption_elem = WebDriverWait(browser, 10).until(
+                        EC.presence_of_element_located((By.XPATH, '//div[contains(@class,"C4VMK")]/span'))
+                    )
+                    caption = caption_elem.text
+                    first_tags = extract_hashtags(caption)
+                    if caption:
+                        first_title = caption.split('\n')[0]
+                except Exception:
+                    pass
+            if not first_title:
+                first_title = "(no title)"
 
+            tag_str = " ".join([f"#{GROUP_NAME}"] + first_tags)
+            results = []
+            for link in links:
+                results.append(f"- 🚧 [{first_title}]({link}) {tag_str}")
 
-
-    with open(OUTPUT_FILE, "a") as f:
-        for line in results:
-            f.write(line + "\n")
-    print(f"[7/7] {len(results)} links adicionados em {OUTPUT_FILE}")
-
-
-
-    print("[8/8] Removendo dos salvos (tentando só os primeiros {SCRAPE_COUNT})...")
-    for idx, link in enumerate(links, 1):
-        try:
-            browser.get(link)
-            time.sleep(random.uniform(1.5, 3.0))
-            # Tenta encontrar o botão Remove pelo novo seletor
-            remove_btn = None
-            # 1. Tenta pelo aria-label
-            try:
-                remove_btn = browser.find_element(By.XPATH, '//button[.//svg[@aria-label="Remove"]]')
-            except Exception:
-                pass
-            # 2. Tenta pelo CSS class (fallback)
-            if not remove_btn:
-                btns = browser.find_elements(By.CSS_SELECTOR, 'div[role="button"] svg[aria-label="Remove"]')
-                if btns:
+            with open(OUTPUT_FILE, "a") as f:
+                for line in results:
+                    f.write(line + "\n")
+            print(f"[7/7] {len(results)} links appended to {OUTPUT_FILE}")
                     remove_btn = btns[0].find_element(By.XPATH, './../..')
             if remove_btn:
                 remove_btn.click()

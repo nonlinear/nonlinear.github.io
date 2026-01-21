@@ -1,27 +1,27 @@
 # research_reels.prompt.md
 
-Sugestão automática de reels relevantes com base nos seus interesses e contexto atual.
+Automatic suggestion of relevant reels based on your interests and current context.
 
-## Instruções
+## Instructions
 
-- O sistema lê o arquivo links/reels.md e sugere de 3 a 5 reels relacionados aos temas/tags mais frequentes ou relevantes do seu contexto.
-- O contexto inclui: mental-health, AI, inspiração, receitas, etc.
-- As sugestões são apresentadas no formato:
+- The system reads the file links/reels.md and suggests 3 to 5 reels related to the most frequent or relevant topics/tags in your context.
+- Context may include: mental-health, AI, inspiration, recipes, etc.
+- Suggestions are presented in the format:
 
 ```
-- [TÍTULO](LINK) #tag1 #tag2 #tag3
+- [TITLE](LINK) #tag1 #tag2 #tag3
 ```
 
-## Exemplo de uso
+## Example usage
 
-1. O usuário pede sugestões de reels sobre saúde mental.
-2. O sistema lê links/reels.md, identifica os posts com #mental-health, e sugere os mais recentes ou variados.
-3. O sistema pode variar as sugestões conforme o contexto da conversa.
+1. The user asks for suggestions of reels about mental health.
+2. The system reads links/reels.md, identifies posts with #mental-health, and suggests the most recent or diverse ones.
+3. The system may vary suggestions according to the conversation context.
 
-## Prompt para agente:
+## Agent prompt:
 
-Leia o arquivo links/reels.md e, considerando o contexto da conversa e os temas/tags pedidos, sugira de 3 a 5 reels relevantes. Priorize diversidade de tags e relevância ao pedido.
+Read the file links/reels.md and, considering the conversation context and requested topics/tags, suggest 3 to 5 relevant reels. Prioritize diversity of tags and relevance to the request.
 
 ---
 
-Sugira agora:
+Suggest now:
