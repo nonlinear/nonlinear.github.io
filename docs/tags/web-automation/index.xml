@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title></title>
+    <link>/</link>
+    <description>nonlinear projects</description>
+    <language>pt-BR</language>
+    <itunes:author>Nicholas Frota</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+
+    
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Instagram Reels Library</title>
+        <link>/ideas/reels-library/</link>
+        <guid>/ideas/reels-library/</guid>
+        <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Worklow to move reel links locally for research and archiving</p>
+          <a href="/ideas/reels-library/"><img src="/images/covers/reels-library.jpg" alt="Instagram Reels Library" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Preview in Browser VSCode Extension</title>
+        <link>/ideas/preview-in-browser/</link>
+        <guid>/ideas/preview-in-browser/</guid>
+        <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>VSCode extension for quickly previewing HTML and web content in the browser</p>
+          <a href="/ideas/preview-in-browser/"><img src="/images/covers/preview-in-browser.jpg" alt="Preview in Browser VSCode Extension" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Search Path for EPUBs and PDFs</title>
+        <link>/ideas/search-path/</link>
+        <guid>/ideas/search-path/</guid>
+        <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Extending file links to support auto-search within EPUBs and PDFs</p>
+          <a href="/ideas/search-path/"><img src="/images/covers/search-path.jpg" alt="Search Path for EPUBs and PDFs" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings</title>
+        <link>/illustrations/photo-07/</link>
+        <guid>/illustrations/photo-07/</guid>
+        <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-07/"><img src="/images/covers/photo-07.jpg" alt="Photo drawings" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+        
+      <item>
+        <title>2025 in animation</title>
+        <link>/2025/in-animation/</link>
+        <guid>/2025/in-animation/</guid>
+        <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Some of the best animations I've watched in 2025</p>
+          <a href="/2025/in-animation/"><img src="/images/covers/2025-recap.jpg" alt="2025 in animation" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings</title>
+        <link>/illustrations/photo-05/</link>
+        <guid>/illustrations/photo-05/</guid>
+        <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-05/"><img src="/images/covers/photo-05.jpg" alt="Photo drawings" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings</title>
+        <link>/illustrations/photo-06/</link>
+        <guid>/illustrations/photo-06/</guid>
+        <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-06/"><img src="/images/covers/photo-06.jpg" alt="Photo drawings" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+        
+      <item>
+        <title>2025 in books</title>
+        <link>/2025/in-books/</link>
+        <guid>/2025/in-books/</guid>
+        <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Some of the best books I've read in 2025</p>
+          <a href="/2025/in-books/"><img src="/images/covers/2025-recap.jpg" alt="2025 in books" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+        
+      <item>
+        <title>2025 in comics</title>
+        <link>/2025/in-comics/</link>
+        <guid>/2025/in-comics/</guid>
+        <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Some of the best comics I've read in 2025.</p>
+          <a href="/2025/in-comics/"><img src="/images/covers/2025-recap.jpg" alt="2025 in comics" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+        
+      <item>
+        <title>2025 in manga</title>
+        <link>/2025/in-manga/</link>
+        <guid>/2025/in-manga/</guid>
+        <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Some of the best mangas I've read in 2025</p>
+          <a href="/2025/in-manga/"><img src="/images/covers/2025-recap.jpg" alt="2025 in manga" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings, 4</title>
+        <link>/illustrations/photo-04/</link>
+        <guid>/illustrations/photo-04/</guid>
+        <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-04/"><img src="/images/covers/photo-04.jpg" alt="Photo drawings, 4" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Street drawings</title>
+        <link>/illustrations/street-01/</link>
+        <guid>/illustrations/street-01/</guid>
+        <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Drawing strangers on the street is the most rewarding kind of drawing.</p>
+          <a href="/illustrations/street-01/"><img src="/images/covers/street-01.jpg" alt="Street drawings" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Drawings, 3</title>
+        <link>/illustrations/photo-03/</link>
+        <guid>/illustrations/photo-03/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-03/"><img src="/images/covers/photo-03.jpg" alt="Drawings, 3" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Live models, 1</title>
+        <link>/illustrations/live-01/</link>
+        <guid>/illustrations/live-01/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>illustrations of live models (and sometimes the people drawing them)</p>
+          <a href="/illustrations/live-01/"><img src="/images/covers/live-01.jpg" alt="Live models, 1" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings, 1</title>
+        <link>/illustrations/photo-01/</link>
+        <guid>/illustrations/photo-01/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-01/"><img src="/images/covers/photo-01.jpg" alt="Photo drawings, 1" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Photo drawings, 2</title>
+        <link>/illustrations/photo-02/</link>
+        <guid>/illustrations/photo-02/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>drawings across the years</p>
+          <a href="/illustrations/photo-02/"><img src="/images/covers/photo-02.jpg" alt="Photo drawings, 2" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>Street drawings</title>
+        <link>/illustrations/street-02/</link>
+        <guid>/illustrations/street-02/</guid>
+        <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Drawing strangers on the street is the most rewarding kind of drawing.</p>
+          <a href="/illustrations/street-02/"><img src="/images/covers/street-02.jpg" alt="Street drawings" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>CSS tile patterns</title>
+        <link>/experiments/csstile/</link>
+        <guid>/experiments/csstile/</guid>
+        <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>A gradient-based CSS pattern mixin set (formerly vectortiles). Add [csstile.scss](https://github.com/nonlinear/nonlinear.github.io/blob/main/assets/css/vendor/csstile.scss) to your pipeline and follow instructions.
+
+### digital artist?
+
+Are you interested in creative code explorations? [Join us on
+signal](https://signal.group/#CjQKIIdbvmNZ5REpZKHUq0T_2GY09uznGI3a0qqRgVEltNycEhCtQsqP5nSVyO_dKG5_dK81)
+</p>
+          <a href="/experiments/csstile/"><img src="/images/covers/csstile.jpg" alt="CSS tile patterns" /></a>
+        ]]></description>
+      </item>
+      
+        
+        
+        
+        
+          
+          
+          
+          
+        
+      <item>
+        <title>SVG filters and masks</title>
+        <link>/experiments/filters-masks/</link>
+        <guid>/experiments/filters-masks/</guid>
+        <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+        <description><![CDATA[
+          <p>Demonstration of coloring SVG images via CSS"</p>
+          <a href="/experiments/filters-masks/"><img src="/images/covers/filters-masks.jpg" alt="SVG filters and masks" /></a>
+        ]]></description>
+      </item>
+      
+    
+
+  </channel>
+</rss>

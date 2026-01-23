@@ -2,19 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/ai-enrichment/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/archiving/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/automation/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/ideas/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/instagram/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/ideas/reels-library/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/reels/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/scraping/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/web-automation/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/project/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/prompt/</loc>
-    <lastmod>2026-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/ideas/whatsup-prompt/</loc>

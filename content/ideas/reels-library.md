@@ -3,6 +3,16 @@ title: "Instagram Reels Library"
 date: 2026-01-22
 description: "Worklow to move reel links locally for research and archiving"
 status: live
+fonts:
+  - safiro-medium
+tags:
+  - instagram
+  - reels
+  - scraping
+  - automation
+  - web-automation
+  - ai-enrichment
+  - archiving
 ---
 
 Fully automated workflow that scrapes, enriches, and removes Instagram saved posts in a single run.
@@ -54,13 +64,7 @@ flowchart TD
     J --> K{More posts?}
 
     K -->|Yes| G
-    K -->|No| L[Done! Check md]
-
-    style G fill:#e1f5ff
-    style H fill:#fff3e0
-    style I fill:#f3e5f5
-    style J fill:#e8f5e9
-    style L fill:#c8e6c9
+    K -->|No| L[Updated md]
 ```
 
 **Processing time:** ~5-10 seconds per post
