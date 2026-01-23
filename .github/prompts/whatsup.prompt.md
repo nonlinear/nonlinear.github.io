@@ -117,6 +117,10 @@ cat README.md | head -50
 
 **AI: What actually changed vs what's documented?**
 
+---
+
+> Note: This prompt orchestrates the workflow defined in the status files (CONTRIBUTING.md, ROADMAP.md, CHANGELOG.md, CHECKS.md). All workflow rules and epic/branch conventions live in CONTRIBUTING.md. If you see redundant or outdated workflow details here, update or remove them in favor of the status files as the single source of truth.
+
 ### 1A. Analyze Actual Changes
 
 ```bash
