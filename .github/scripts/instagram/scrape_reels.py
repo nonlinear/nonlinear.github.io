@@ -48,7 +48,9 @@ SAVED_URL = "https://www.instagram.com/nonlinear/saved/"
 
 
 # Pergunta no terminal o caminho do arquivo de saída
-default_output = os.getenv('IG_SCRAPE_OUTPUT_PATH') or os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "links/reels.md")
+# Script is in .github/scripts/instagram/, so go up 3 levels to workspace root
+workspace_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+default_output = os.getenv('IG_SCRAPE_OUTPUT_PATH') or os.path.join(workspace_root, "links/reels.md")
 output_path = input(f"Enter output file path (default: {default_output}): ").strip() or default_output
 OUTPUT_FILE = output_path
 SCRAPE_COUNT = int(os.getenv('IG_SCRAPE_COUNT', 10))
@@ -130,19 +132,6 @@ try:
         title = None
         hashtags = []
         caption = None
-        author = None
-
-        # Extract author username
-        try:
-            author_links = browser.find_elements(By.CSS_SELECTOR, 'a[href^="/"][role="link"]')
-            for el in author_links:
-                href = el.get_attribute('href')
-                match = re.search(r'/([^/]+)/$', href)
-                if match and not any(x in href for x in ['/p/', '/reel/', '/explore/', '/accounts/']):
-                    author = f'@{match.group(1)}'
-                    break
-        except Exception:
-            pass
 
         try:
             # Try robust selector for first comment/caption
@@ -171,8 +160,6 @@ try:
 
         # Build tag list
         tags = [f"#{GROUP_NAME}"] + hashtags + ["#untag"]
-        if author:
-            tags.append(author)
 
         # If no title extracted, mark with #enrich for later enrichment
         if not title:

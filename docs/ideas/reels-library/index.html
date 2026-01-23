@@ -3,7 +3,7 @@
 <!doctype html>
 <html
     lang="en"
-    class="single no-js reels-library draft ideas single
+    class="single no-js reels-library live ideas single
     "
 >
 
@@ -70,7 +70,7 @@
     
   
   <meta property="og:image" content="/images/covers/live.jpg" />
-  <meta property="og:description" content="Automated workflow for scraping, enriching, and organizing saved Instagram reels" />
+  <meta property="og:description" content="Worklow to move reel links locally for research and archiving" />
 
   
   <script src="/js/global/mermaid.min.js"></script>
@@ -107,141 +107,51 @@
                 <a href="javascript:void(0)" class="mice credits-open"></a>
             <article class="content">
                     
-                        <h2 id="instagram-scraping-workflow">Instagram Scraping Workflow</h2>
-<p>This project automates the collection and organization of saved Instagram Reels and posts, making it easy to build a curated library of visual references and inspiration.</p>
-<h3 id="the-process">The Process</h3>
+                        <p>Fully automated workflow that scrapes, enriches, and removes Instagram saved posts in a single run.</p>
+<ul>
+<li>Extract links from your chosen Instagram saved collection</li>
+<li>Add AI-generated titles, language tags, dates, author usernames, and hashtags</li>
+<li>Remove processed posts from Instagram saved (cleanup)</li>
+</ul>
+<hr>
+<p><a href="https://github.com/nonlinear/notes/blob/main/.github/scripts/reels_library.py">reels_library.py</a></p>
+<hr>
+<h2 id="example-output">Example Output</h2>
+<p>After running the script on &ldquo;interesting history&rdquo; group:</p>
+<ul>
+<li><a href="https://www.instagram.com/p/DS4YY6nEReK/">reason Japanese expelled all Westerners in 17th</a> @the_smart_cookies_pod #en-US #2025-12-30 #interesting-history #japanesehistory #japan #historical #asia</li>
+<li><a href="https://www.instagram.com/p/DSffPF3AJuX/">Americans worried about every country but their</a> @lexlos3r #en-US #2025-12-20 #interesting-history #politics</li>
+<li><a href="https://www.instagram.com/p/DSJChIzjJCc/">Lindener Pareto traça um paralelo histórico da</a> @icl.noticias #pt-BR #2025-12-11 #interesting-history #noticias #icl #notícias</li>
+<li><a href="https://www.instagram.com/p/DRdzIPxjDqi/">Corporate America repeating familiar mistake</a> @maxxrosenblum #en-US #2025-11-25 #interesting-history #economics #ai #business #casestudy</li>
+</ul>
+<p>All posts:
+✅ Have meaningful titles (AI-generated)
+✅ Have author usernames
+✅ Have language tags (for semantic search)
+✅ Have publication dates
+✅ Have all original hashtags
+✅ Are removed from Instagram saved
+✅ Are ready for AI queries like &ldquo;find portuguese reels about lula and elections&rdquo;</p>
+<hr>
+<h2 id="workflow">Workflow</h2>
 <ol>
-<li><strong>Scrape</strong> → Extract links from Instagram saved collections</li>
-<li><strong>Enrich</strong> → Add titles and metadata to posts</li>
-<li><strong>Untag</strong> → Remove posts from Instagram saved (cleanup)</li>
+<li>Run script: <code>python3.11 .github/scripts/reels_library.py</code></li>
+<li>Login manually in browser (popup)</li>
+<li>Press Enter to continue</li>
+<li>Select saved group (1-11)</li>
+<li>Enter how many posts to process</li>
+<li>Wait while it processes (scrape → enrich → untag each post)</li>
+<li>Done! Check <code>links/reels.md</code> for results</li>
 </ol>
+<p><strong>Processing time:</strong> ~5-10 seconds per post</p>
 <hr>
-<h2 id="scripts">Scripts</h2>
-<h3 id="1-scrape-scrape_--live">1. Scrape (<a href=".github/scripts/instagram/scrape_reels.py">scrape_reels.py</a>) ✅ Live</h3>
-<p><strong>Purpose:</strong> Extract links from your Instagram saved collections</p>
-<p><strong>How it works:</strong></p>
+<h2 id="todos">Todos</h2>
 <ul>
-<li>Opens browser for manual Instagram login (avoids bot detection)</li>
-<li>Transfers cookies to headless browser for automation</li>
-<li>Navigates to your saved collections page</li>
-<li>Lists all available saved groups (e.g., &ldquo;fashion-inspiration&rdquo;, &ldquo;interesting-history&rdquo;)</li>
-<li>Prompts you to choose which group to scrape</li>
-<li>Scrolls and collects post links from that group</li>
-<li>For each post, extracts:
-<ul>
-<li>Post URL</li>
-<li>Caption/title (first line of text)</li>
-<li>Hashtags from caption</li>
-<li>Group name as hashtag</li>
-<li><strong>Author username</strong> (@username)</li>
+<li><input disabled="" type="checkbox"> Better caption extraction for posts without hashtags</li>
+<li><input disabled="" type="checkbox"> Handle reels with multiple languages (currently picks first detected)</li>
+<li><input disabled="" type="checkbox"> Batch processing optimization (reduce per-post wait time)</li>
+<li><input disabled="" type="checkbox"> Option to skip untag step (scrape + enrich only)</li>
 </ul>
-</li>
-<li>Marks posts with #enrich if title extraction fails</li>
-<li>Appends results to output file with #untag marker</li>
-</ul>
-<p><strong>Output format:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Title from caption</span>](<span style="color:#a6e22e">https://instagram.com/p/ABC123/</span>) #group-name #hashtag1 #hashtag2 @username #untag
-</span></span></code></pre></div><p>If title extraction fails:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">(no title)</span>](<span style="color:#a6e22e">https://instagram.com/p/ABC123/</span>) #group-name @username #untag #enrich
-</span></span></code></pre></div><p><strong>Environment variables:</strong></p>
-<ul>
-<li><code>IG_SCRAPE_OUTPUT_PATH</code> - Where to save (defaults to this file)</li>
-<li><code>IG_SCRAPE_COUNT</code> - Posts to scrape per run (default: 10)</li>
-<li><code>INSTAGRAM_USER</code> - Username</li>
-<li><code>INSTAGRAM_PASS</code> - Password</li>
-</ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3.11 .github/scripts/instagram/scrape_reels.py
-</span></span></code></pre></div><p><strong>Todos:</strong></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> Author username extraction</li>
-<li><input disabled="" type="checkbox"> Better caption extraction (more robust selectors)</li>
-</ul>
-<hr>
-<h3 id="2-enrich-enrich_--live">2. Enrich (<a href=".github/scripts/instagram/enrich_reels.py">enrich_reels.py</a>) ✅ Live</h3>
-<p><strong>Purpose:</strong> Add titles and hashtags to posts marked with #enrich</p>
-<p><strong>How it works:</strong></p>
-<ul>
-<li>Reads markdown file and finds posts with #enrich tag</li>
-<li>Visits each post to extract:
-<ul>
-<li>Caption text (longest span with hashtags)</li>
-<li><strong>AI-style title</strong> (5-7 meaningful words, removing filler)</li>
-<li><strong>Hashtags</strong> from caption</li>
-<li><strong>Language tag</strong> (#en-US, #pt-BR, etc.) using langdetect</li>
-<li><strong>Date tag</strong> (#2025-01-15 format)</li>
-<li><strong>Author username</strong> (@username)</li>
-</ul>
-</li>
-<li>Removes #enrich tag after processing (success or failure)</li>
-<li>Safe file writing (temp file + rename)</li>
-</ul>
-<p><strong>Metadata tags added:</strong></p>
-<ul>
-<li>Language: <code>#en-US</code>, <code>#pt-BR</code>, <code>#es-ES</code>, etc.</li>
-<li>Date: <code>#2025-01-15</code> (post publication date)</li>
-<li>Author: <code>@username</code></li>
-</ul>
-<p><strong>Todos:</strong></p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> Language detection</li>
-<li><input checked="" disabled="" type="checkbox"> Better title logic (AI-style with filler removal)</li>
-<li><input checked="" disabled="" type="checkbox"> Date extraction</li>
-<li><input checked="" disabled="" type="checkbox"> Author username</li>
-<li><input disabled="" type="checkbox"> Handle posts with no caption/hashtags better</li>
-</ul>
-<hr>
-<h3 id="3-untag-untag_--live">3. Untag (<a href=".github/scripts/instagram/untag_reels.py">untag_reels.py</a>) ✅ Live</h3>
-<p><strong>Purpose:</strong> Remove posts from Instagram saved collection</p>
-<p><strong>How it works:</strong></p>
-<ul>
-<li>Reads markdown file and finds posts with #untag tag</li>
-<li>Opens browser for manual login</li>
-<li>For each #untag post:
-<ul>
-<li>Opens the post URL</li>
-<li>Clicks &ldquo;Remove&rdquo; button (SVG with aria-label=&ldquo;Remove&rdquo;)</li>
-<li>Confirms removal by checking for &ldquo;Save&rdquo; button appearance</li>
-<li>Removes #untag tag from markdown line</li>
-</ul>
-</li>
-<li>Safe file writing (temp file + rename)</li>
-</ul>
-<p><strong>Usage:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3.11 .github/scripts/instagram/untag_reels.py
-</span></span></code></pre></div><p><strong>Todos:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Test untag confirmation logic (Save button detection)</li>
-<li><input disabled="" type="checkbox"> Handle edge cases (already unsaved posts)</li>
-</ul>
-<hr>
-<h2 id="dependencies">Dependencies</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install selenium undetected-chromedriver python-dotenv langdetect
-</span></span></code></pre></div><p><strong>Why these tools:</strong></p>
-<ul>
-<li><code>selenium</code> - Browser automation</li>
-<li><code>undetected-chromedriver</code> - Avoids Instagram bot detection</li>
-<li><code>python-dotenv</code> - Load credentials from <code>.env</code> file</li>
-<li><code>langdetect</code> - Detect language from caption text</li>
-</ul>
-<hr>
-<h2 id="workflow-example">Workflow Example</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. Scrape 10 posts from &#34;fashion-inspiration&#34; group</span>
-</span></span><span style="display:flex;"><span>python3.11 .github/scripts/instagram/scrape_reels.py
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># → Adds entries with #untag and #enrich tags, @username, hashtags</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Enrich posts (add AI titles, language, date)</span>
-</span></span><span style="display:flex;"><span>python3.11 .github/scripts/instagram/enrich_reels.py
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># → Adds smart titles, #en-US/#pt-BR, #2025-01-15, removes #enrich</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Untag posts from Instagram saved</span>
-</span></span><span style="display:flex;"><span>python3.11 .github/scripts/instagram/untag_reels.py
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># → Removes posts from Instagram, removes #untag tag</span>
-</span></span></code></pre></div><p><strong>Example output after full workflow:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Trashy Clothing reimagines Palestinian hair salons</span>](<span style="color:#a6e22e">https://instagram.com/p/ABC/</span>) #fashion #popculture #art @illeshamarie #en-US #2024-06-15
-</span></span></code></pre></div><hr>
-<h2 id="saved-reels">Saved Reels</h2>
-<p><em>(Posts will appear below as you run the scraping scripts)</em></p>
 
                     
                     <a href="javascript:void(0)" class="curtain-credits credits-close"></a>
@@ -256,10 +166,10 @@
     
     
     
-      In draft since 1 day ago
+      live 1 day ago
     
   </p>
-    <div class="description">Automated workflow for scraping, enriching, and organizing saved Instagram reels</div>
+    <div class="description">Worklow to move reel links locally for research and archiving</div>
 
     
 
