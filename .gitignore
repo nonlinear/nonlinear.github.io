@@ -12,6 +12,9 @@ resources/
 Thumbs.db
 .vscode/
 
+# Symlinks
+Books
+
 # Logs
 *.log
 
