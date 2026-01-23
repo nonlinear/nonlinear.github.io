@@ -39,13 +39,29 @@ All posts:
 
 ## Workflow
 
-1. Run script: `python3.11 .github/scripts/reels_library.py`
-2. Login manually in browser (popup)
-3. Press Enter to continue
-4. Select saved group (1-11)
-5. Enter how many posts to process
-6. Wait while it processes (scrape → enrich → untag each post)
-7. Done! Check `links/reels.md` for results
+```mermaid
+flowchart TD
+    A[Run script] --> B[Browser popup opens]
+    B --> C[Login to Instagram manually]
+    C --> D[Press Enter to continue]
+    D --> E[Select saved group 1-11]
+    E --> F[Enter number of posts to process]
+    F --> G[Processing loop]
+
+    G --> H[Scrape post data]
+    H --> I[AI enrichment]
+    I --> J[Untag from saved]
+    J --> K{More posts?}
+
+    K -->|Yes| G
+    K -->|No| L[Done! Check md]
+
+    style G fill:#e1f5ff
+    style H fill:#fff3e0
+    style I fill:#f3e5f5
+    style J fill:#e8f5e9
+    style L fill:#c8e6c9
+```
 
 **Processing time:** ~5-10 seconds per post
 
