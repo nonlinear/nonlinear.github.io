@@ -36,14 +36,7 @@ After running the script on "interesting history" group:
 - [Lindener Pareto traça um paralelo histórico da](https://www.instagram.com/p/DSJChIzjJCc/) @icl.noticias #pt-BR #2025-12-11 #interesting-history #noticias #icl #notícias
 - [Corporate America repeating familiar mistake](https://www.instagram.com/p/DRdzIPxjDqi/) @maxxrosenblum #en-US #2025-11-25 #interesting-history #economics #ai #business #casestudy
 
-All posts:
-✅ Have meaningful titles (AI-generated)
-✅ Have author usernames
-✅ Have language tags (for semantic search)
-✅ Have publication dates
-✅ Have all original hashtags
-✅ Are removed from Instagram saved
-✅ Are ready for AI queries like "find portuguese reels about lula and elections"
+All posts are now ready for AI queries like "find portuguese reels about lula and elections"
 
 ---
 
@@ -75,5 +68,7 @@ flowchart TD
 
 - [ ] Better caption extraction for posts without hashtags
 - [ ] Handle reels with multiple languages (currently picks first detected)
+- [ ] reels research prompt
+- [ ] better organization? all in one file?
 - [ ] Batch processing optimization (reduce per-post wait time)
 - [ ] Option to skip untag step (scrape + enrich only)
