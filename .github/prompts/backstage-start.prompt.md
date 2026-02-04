@@ -1,10 +1,14 @@
-# What's Up? (Project Status Check)
+# MGMT Start (Project Status Check)
 
-**Purpose:** Universal pre-commit workflow ensuring documentation-code parity and stability.
+> **Universal pre-commit workflow for AI-assisted development.** Ensures documentation matches reality before every push.
+
+**Purpose:** Validate stability, sync docs, determine next steps.
 
 **When to use:** Before EVERY commit, especially after long breaks or major changes.
 
-**🚨 CRITICAL RULE:** Never push until ALL checks from CHECKS (see [README](/README.md)) pass. Return to fix or ask for clarification.
+**🚨 CRITICAL RULE:** Never push until ALL checks pass. Return to fix or ask for clarification.
+
+**How it works:** Read README's 🤖 navigation block → Run checks → Update docs → Commit
 
 ---
 
@@ -43,73 +47,275 @@ flowchart TD
 
 1. **Read README** to find where status files live (always project-specific)
 2. **Compare** actual work with documented plans
-3. **Validate** stability using CHECKS (check [README](/README.md) for location)
+3. **Validate** stability using HEALTH (check [README](/README.md) for location)
 4. **Update** docs automatically (ROADMAP → CHANGELOG)
 5. **Determine outcome** (1 of 5 possible states)
 6. **Act** (push, fix, or groom)
 
 ---
 
-## 📋 STEP 0: Read README for Status Files Location
+## 📋 STEP 0: Find Status Files in README
 
-**AI: README is the ONLY source of truth for file locations AND navigation block**
+**🤖 CRITICAL: README's navigation block is the ONLY source of truth**
 
-**🚨 CRITICAL: READ-ONLY**
+**README's `> 🤖` block:**
 
-- ✅ **READ** README to find status files locations
-- ✅ **COPY** navigation block (🤖 markers) from README to all status files
-- ❌ **DO NOT EDIT** README without explicit user permission
-- ❌ **DO NOT** create custom navigation - always copy from README
-- README is the entry point - changes affect entire project discovery
+- ✅ **Source of truth** — Canonical list of all status file paths
+- ✅ **Must be distributed** — Copy to ALL status files (with adjusted relative paths)
+- ✅ **Read paths first** — Use these paths for all file operations
 
-### Read README First
+### What to Look For
 
-```bash
-# Step 1: Read README.md
-cat README.md | head -50
-
-# Step 2: Look for 🤖 navigation block
-# Example output should show:
-# > 🤖
-# >
-# > [CHANGELOG](...) - What we did
-# > [ROADMAP](...) - What we wanna do
-# > [CONTRIBUTING](...) - How we do it
-# > [CHECKS](...) - What we accept
-# >
-# > [/whatsup](...) - The prompt that keeps us sane
-# >
-# > 🤖
-```
-
-### Extract Navigation Block
-
-**What README MUST contain:**
+**Every README.md must contain a navigation block starting and ending with `> 🤖`:**
 
 ```markdown
 > 🤖
 >
-> [CHANGELOG](engine/docs/CHANGELOG.md) - What we did
-> [ROADMAP](engine/docs/ROADMAP.md) - What we wanna do
-> [CONTRIBUTING](.github/CONTRIBUTING.md) - How we do it
-> [CHECKS](engine/docs/CHECKS.md) - What we accept
->
-> [/whatsup](.github/prompts/whatsup.prompt.md) - The prompt that keeps us sane
+> - [README](./README.md) - Our project
+> - [CHANGELOG](path/to/CHANGELOG.md) — What we did
+> - [ROADMAP](path/to/ROADMAP.md) — What we wanna do
+> - [POLICY](path/to/POLICY.md) — How we do it
+> - [CHECKS](path/to/HEALTH.md) — What we accept
+> - [/MGMT-start](path/to/MGMT-start.prompt.md) — The prompt that keeps us sane
 >
 > 🤖
 ```
 
-**AI: Copy this block to ALL status files:**
+**This block contains ALL status file paths. Always read it first.**
 
-- Adjust paths relative to each file's location
-- Keep exact same format and descriptions
-- This ensures consistency across the project
+---
 
-**If README doesn't have navigation block:**
+### How to Extract Paths
 
-- ❌ **STOP:** Ask user "Where are your status files? (e.g., /docs/, /engine/docs/, root)"
-- ✅ Update README to document location
-- ✅ Create from templates if needed (see end of this file)
+```bash
+# Step 1: Read README.md
+cat README.md
+
+# Step 2: Look for lines between > 🤖 markers
+# Extract all paths from markdown links
+# Example: > - [CHANGELOG](./MGMT/CHANGELOG.md) — What we did
+#          └─ Path is: ./MGMT/CHANGELOG.md
+```
+
+### Polycentric Governance: Global + Project
+
+**MGMT uses overlapping jurisdictions - check BOTH levels:**
+
+1. **Global defaults** (`MGMT/global/`) - Universal rules from MGMT framework
+2. **Project overrides** (`MGMT/`) - Project-specific rules that take precedence
+
+**For HEALTH.md:**
+
+- Read `MGMT/global/HEALTH.md` first (universal validation)
+- Then read `MGMT/HEALTH.md` (project-specific checks)
+- Run ALL checks from both files
+- If conflict, project check wins
+
+**For POLICY.md:**
+
+- Read `MGMT/global/POLICY.md` first (workflow defaults)
+- Then read `MGMT/POLICY.md` (project rules)
+- Project rules extend/override global rules
+- When documenting: cite which level (e.g., "per project POLICY" or "per global POLICY")
+
+### Critical Rules for Navigation Block
+
+**🚨 AI: NEVER proceed without finding the 🤖 block first**
+
+✅ **DO:**
+
+- Read README.md completely
+- Find the `> 🤖` ... `> 🤖` section
+- Extract all file paths from markdown links
+- Use ONLY these paths for all operations
+- Copy this navigation block to ALL status files (with adjusted relative paths)
+
+❌ **DON'T:**
+
+- Edit README without explicit permission
+- Create custom navigation - always copy from README
+- Assume file locations (even common ones like `/docs/`)
+- Hardcode paths anywhere
+
+### Status Files are AI Prompts
+
+**Each status file is an instruction set for AI:**
+
+- **HEALTH.md** → Executable tests/validation (treat as test suite)
+- **POLICY.md** → Workflow rules and conventions (treat as process spec)
+- **ROADMAP.md** → Planned features with epic format (treat as backlog)
+- **CHANGELOG.md** → Version history (treat as append-only log)
+
+**AI workflow:**
+
+1. Read README → Extract 🤖 paths
+2. **Read status files as prompts** → Follow their instructions
+3. Execute CHECKS → Validate stability
+4. Follow POLICY → Apply workflow rules
+5. Update ROADMAP/CHANGELOG → Sync docs with reality
+
+---
+
+**If README doesn't have `> 🤖` navigation block:**
+
+1. ❌ **STOP:** Ask user "Where are your status files? (e.g., /docs/, /engine/docs/, root)"
+2. ✅ Create navigation block in README first
+3. ✅ Then proceed with whatsup workflow
+
+**Example extraction:**
+
+```markdown
+From README:
+
+> - [CHANGELOG](./MGMT/CHANGELOG.md) — What we did
+
+Extracted path:
+./MGMT/CHANGELOG.md
+
+Use for:
+cat ./MGMT/CHANGELOG.md
+```
+
+### Distributing the 🤖 Block + Mermaid Roadmap
+
+**🚨 WHEN TO UPDATE: Every time you groom ROADMAP (add/complete/move epics) in HEALTH.md**
+
+**Process:**
+
+1. Update mermaid diagram in ROADMAP.md (source of truth)
+2. Copy updated diagram to README.md (at END, after 🤖 block)
+3. Copy 🤖 block + mermaid to ALL other status files (at TOP, after title)
+
+**🚨 CRITICAL: The mermaid roadmap diagram must be duplicated in ALL status files**
+
+**Placement rules:**
+
+- **README.md:** 🤖 block + mermaid at END (before final close)
+- **All others (CHANGELOG, ROADMAP, POLICY, CHECKS):** 🤖 block + mermaid at TOP (right after # Title)
+
+**After reading README's 🤖 block, copy it + mermaid to ALL status files:**
+
+````markdown
+# In README.md (source of truth):
+
+# ... content ...
+
+> 🤖
+>
+> - [CHANGELOG](./MGMT/CHANGELOG.md) — What we did
+> - [ROADMAP](./MGMT/ROADMAP.md) — What we wanna do
+> - etc...
+>
+> 🤖
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'14px'}}}%%
+graph LR
+    ... (roadmap diagram from ROADMAP.md)
+```
+
+# In MGMT/CHANGELOG.md (at TOP after title):
+
+# Librarian MCP - Changelog
+
+> 🤖
+>
+> - [README](../../README.md) - Our project
+> - [CHANGELOG](CHANGELOG.md) — What we did ← adjusted paths
+> - [ROADMAP](ROADMAP.md) — What we wanna do
+> - etc...
+>
+> 🤖
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'14px'}}}%%
+graph LR
+    ... (SAME roadmap diagram)
+```
+
+## v1.0.0
+
+... content ...
+
+# In MGMT/ROADMAP.md (at TOP after title):
+
+# Librarian MCP - Roadmap
+
+> 🤖
+>
+> - [README](../../README.md) - Our project ← adjusted paths
+> - etc...
+>
+> 🤖
+
+```mermaid
+... (source diagram)
+```
+
+## v0.5.1
+
+... content ...
+````
+
+**Path adjustment rules:**
+
+- Same directory → Use filename only: `CHANGELOG.md`
+- Parent directory → Use `../path` or `../../path`
+- Child directory → Use `subdir/file.md`
+- Keep description text identical across all files
+- **Always copy the EXACT same mermaid diagram from ROADMAP.md**
+- **README keeps mermaid at END, all others at TOP**
+
+---
+
+## Workflow Start
+
+### Branch Detection (Run First)
+
+**Get current branch:**
+
+```bash
+git branch --show-current
+```
+
+**Decision tree:**
+
+**A. On epic branch (e.g., `v0.4.0`)**
+→ **Status Update Mode** (skip epic selection)
+
+```
+🔍 You're on: v0.4.0
+
+Reading epic notes from ROADMAP.md...
+```
+
+**Show:**
+
+- ✅ What's done (from session notes)
+- ⏳ What's left (unchecked tasks)
+- 🚫 Blockers (if any)
+- 📊 Quick stats (files changed, hours worked)
+
+**Then ask:**
+
+```
+Continue working? Or:
+1. Run CHECKS and commit
+2. /MGMT-end (pause session)
+3. Switch to different epic
+```
+
+**B. On main branch**
+→ **Normal Flow** (choose epic or groom)
+
+```
+🌟 You're on: main
+
+Options:
+1. Choose epic to work on
+2. Groom ROADMAP
+3. Create new epic
+```
 
 ---
 
@@ -119,7 +325,7 @@ cat README.md | head -50
 
 ---
 
-> Note: This prompt orchestrates the workflow defined in the status files (CONTRIBUTING.md, ROADMAP.md, CHANGELOG.md, CHECKS.md). All workflow rules and epic/branch conventions live in CONTRIBUTING.md. If you see redundant or outdated workflow details here, update or remove them in favor of the status files as the single source of truth.
+> Note: This prompt orchestrates the workflow defined in the status files (POLICY.md, ROADMAP.md, CHANGELOG.md, HEALTH.md). All workflow rules and epic/branch conventions live in POLICY.md. If you see redundant or outdated workflow details here, update or remove them in favor of the status files as the single source of truth.
 
 ### 1A. Analyze Actual Changes
 
@@ -147,7 +353,7 @@ git log --oneline "${LAST_VERSION}..HEAD" || git log --oneline -5
 
 ```bash
 # For Personal Library:
-cat engine/docs/ROADMAP.md | grep "🔶 (IN PROGRESS)\|❌ (PLANNED)" -A 20
+cat MGMT/ROADMAP.md | grep "🔶 (IN PROGRESS)\|❌ (PLANNED)" -A 20
 
 # Generic:
 cat ROADMAP.md | grep -Ei "in progress|planned|todo" -A 20
@@ -191,46 +397,69 @@ cat ROADMAP.md | grep -Ei "in progress|planned|todo" -A 20
 
 **🚨 CRITICAL:** Do NOT proceed to STEP 3 unless ALL checks pass.
 
-### 2A. Read CHECKS
+### 2A. Read HEALTH (Polycentric: Global + Project)
 
-**AI: CHECKS contains all project-specific tests (check [README](/README.md) for location):**
+**AI: Read BOTH global and project HEALTH files (polycentric governance):**
 
 ```bash
-# Read from location specified in README
-cat [STATUS_FILES_LOCATION]/CHECKS.md
+# 1. Read universal checks from global framework
+cat [STATUS_FILES_LOCATION]/global/HEALTH.md
 
-# Look for "For AI:" or "Automated test sequence" section
-# It will contain exact commands to run
+# 2. Read project-specific checks
+cat [STATUS_FILES_LOCATION]/HEALTH.md
+
+# Both files contain checks to run
+# If same check exists in both, project version wins
 ```
 
-**If CHECKS doesn't exist (check [README](/README.md) for location):**
+**If global/HEALTH.md doesn't exist:**
 
-- ❌ **STOP:** "I don't see CHECKS. What tests must pass before pushing?"
-- ✅ Create CHECKS from user input (use template below)
+- This is fine - not all projects use backstage framework
+- Skip to project HEALTH.md only
 
-### 2B. Execute Tests from CHECKS
+**If project HEALTH.md doesn't exist:**
 
-**Run the test script found in CHECKS:**
+- ❌ **STOP:** "I don't see HEALTH.md. What tests must pass before pushing?"
+- ✅ Create HEALTH.md from user input (use template from templates/)
 
-- Look for bash script block
-- Execute it
-- Capture all output
+### 2B. Execute Tests from HEALTH (Run ALL from Both Files)
+
+**Run checks from BOTH files in order:**
+
+1. **Global checks first** (universal framework validation)
+   - Look for bash script blocks in global/HEALTH.md
+   - Execute each test
+   - Track results
+
+2. **Project checks second** (project-specific validation)
+   - Look for bash script blocks in HEALTH.md
+   - Execute each test
+   - Track results
+
+3. **Merge results:**
+   - If same test name appears in both → use project result (project wins)
+   - Otherwise combine all unique tests
 
 **Example output:**
 
 ```
 🔍 Running stability checks...
 
-1️⃣ Server startup test...
-✅ Server starts
+📂 Global checks (from global/HEALTH.md):
+1️⃣ Navigation block exists...
+✅ Pass
 
-2️⃣ Dependencies test...
-✅ Dependencies OK
+2️⃣ File structure valid...
+✅ Pass
 
-3️⃣ File structure test...
-✅ Files exist
+🎯 Project checks (from HEALTH.md):
+3️⃣ Server startup test...
+✅ Pass
 
-✅ All checks complete.
+4️⃣ Dependencies installed...
+✅ Pass
+
+✅ All checks complete (2 global + 2 project = 4 total)
 ```
 
 **Note:** CHECKS location specified in [README](/README.md)
@@ -248,6 +477,8 @@ cat [STATUS_FILES_LOCATION]/CHECKS.md
 | [Test 2] | ✅/❌  | [brief result] |
 
 **Overall:** [✅ ALL PASS / ❌ X FAILURES]
+
+**Current branch:** [branch name from git branch --show-current]
 ```
 
 **Decision tree:**
@@ -280,40 +511,33 @@ cat [STATUS_FILES_LOCATION]/CHECKS.md
 
 **Epic Format:**
 
-> 🤖 **CRITICAL:** Always read epic format from [CONTRIBUTING.md](../.github/CONTRIBUTING.md#epic-format)
+> 🤖 **CRITICAL:** Always read epic format from global/POLICY.md#epic-format
 > User may customize syntax - NEVER use hardcoded format
 
 **To write epics correctly:**
 
-1. Read CONTRIBUTING.md section "Epic Format"
-2. Find the `> 🤖 **AI: Use this syntax when writing epics` marker
+1. Read global/POLICY.md section "Epic Format" (check [README](/README.md) for location)
+2. Find the `**AI Note:** Use this syntax when writing epics` marker
 3. Use that exact syntax for all epic writes
-4. Respect status indicators (🚧 with link, ⏳ without link, ✅ completed)
+4. Respect status indicators defined in POLICY.md:
+   - 🚧 with link = active branch exists
+   - ⏳ no link = planned, no branch yet
+   - ✅ completed (changelog only)
 
 **If feature completed:**
 
 ```markdown
-# Before (in ROADMAP):
+# Read current epic format from global/POLICY.md
 
-> **v0.3**
-> [🚧](link) **Delta Indexing**
+# Mark checkbox as [x] in ROADMAP
 
-- [x] Topic-partitioned storage
-- [ ] Automated change detection ← THIS WAS DONE
-
-# After (AI updates):
-
-> **v0.3**
-> [🚧](link) **Delta Indexing**
-
-- [x] Topic-partitioned storage
-- [x] Automated change detection ← MARKED COMPLETE
+# If all checkboxes done, move entire epic to CHANGELOG
 ```
 
 **If version fully complete:**
 
 - Move entire section from ROADMAP to CHANGELOG (check [README](/README.md) for locations)
-- Change status emoji: `🚧` → `✅`
+- Update status indicator per global/POLICY.md rules
 - Add completion date
 
 **🤖 CRITICAL: Add Navigation Menu to ALL Status Files**
@@ -325,15 +549,15 @@ Every status file (ROADMAP, CHANGELOG, CHECKS) must end with this navigation men
 
 > 🤖: See [ROADMAP](path/to/ROADMAP.md) for planned features & in-progress work
 > 🤖: See [CHANGELOG](path/to/CHANGELOG.md) for version history & completed features
-> 🤖: See [CHECKS](path/to/CHECKS.md) for stability requirements & testing
-> 👷: Consider using [/whatsup prompt](https://github.com/nonlinear/nonlinear.github.io/blob/main/.github/prompts/whatsup.prompt.md) for updates
+> 🤖: See [CHECKS](path/to/HEALTH.md) for stability requirements & testing
+> 👷: Consider using [/MGMT-start prompt](https://github.com/nonlinear/nonlinear.github.io/blob/main/.github/prompts/MGMT-start.prompt.md) for updates
 ```
 
 **Important:** Adjust paths relative to each file's location:
 
-- If file is in `/engine/docs/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `CHECKS.md`, `../../.github/prompts/whatsup.prompt.md`
-- If file is in `/docs/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `CHECKS.md`, `../.github/prompts/whatsup.prompt.md`
-- If file is in root `/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `CHECKS.md`, `.github/prompts/whatsup.prompt.md`
+- If file is in `/MGMT/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `HEALTH.md`, `../.github/prompts/MGMT-start.prompt.md`
+- If file is in `/docs/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `HEALTH.md`, `../.github/prompts/MGMT-start.prompt.md`
+- If file is in root `/ROADMAP.md`, links are: `ROADMAP.md`, `CHANGELOG.md`, `HEALTH.md`, `.github/prompts/MGMT-start.prompt.md`
 
 **When to add menu:**
 
@@ -372,21 +596,13 @@ Every status file (ROADMAP, CHANGELOG, CHECKS) must end with this navigation men
 **AI: Add new entry following project format:**
 
 ```markdown
-## v0.3: Delta Indexing ✅ (Jan 19, 2026)
+# Read CHANGELOG format from existing entries or global/POLICY.md
 
-**👥 Who needs to know:**
+# Follow the established pattern for version headers and content
 
-- Users with large libraries who reindex frequently
+# Add new entry at TOP (newest first)
 
-**📦 What's new:**
-
-- [x] Automated change detection (scripts/update_delta.py)
-- [x] Compare filesystem vs metadata.json
-- [x] Incremental reindexing (23× faster)
-
-**Impact:** Only changed books reindex, saves time
-
-**🔧 Migration:** None (backward compatible)
+# Include completion date, who benefits, what's new, impact
 ```
 
 ### 3C. Version Bumping
@@ -441,14 +657,14 @@ CURRENT=$(grep -m1 "^## v" CHANGELOG.md | sed 's/^## v//' | cut -d':' -f1 | tr -
 
 **Options:**
 
-- Fix the issue and re-run whatsup
+- Fix the issue and re-run /MGMT-start
 - Ask me to clarify the requirement
 - Document as known issue in ROADMAP
 
 What would you like to do?
 ```
 
-**After fixes → Re-run /whatsup → Continues to stable state**
+**After fixes → Re-run /MGMT-start → Continues to stable state**
 
 ---
 
@@ -808,7 +1024,7 @@ Return to STEP 2 after fixes.
 
 **Gets from all files:** (check [README](/README.md) for locations)
 
-- Code state: [from CHECKS tests]
+- Code state: [from HEALTH tests]
 - Planned work: [from ROADMAP]
 - Completed work: [from CHANGELOG]
 - Truth source: [documentation matches code]
@@ -845,7 +1061,7 @@ All status files should include navigation menu pointing to actual location:
 - CHECKS - Stability tests (check README for links)
 ```
 
-**No hardcoded paths in whatsup.prompt.md** - README is the only source of truth for all file locations.
+**No hardcoded paths in MGMT-start.prompt.md** - README is the only source of truth for all file locations.
 
 ---
 
@@ -867,7 +1083,7 @@ This prompt is **Level 3** - the most abstract layer:
 - AI retrieval via `/research` prompt
 - **Example flagship project for Level 3**
 
-### Level 3: Meta-Workflow (whatsup.prompt.md)
+### Level 3: Meta-Workflow (MGMT-start.prompt.md)
 
 - **This file** - works for ANY project
 - Uses Personal Library as working example
@@ -878,7 +1094,7 @@ This prompt is **Level 3** - the most abstract layer:
 **The Hierarchy:**
 
 ```
-whatsup.prompt.md (agnostic workflow)
+MGMT-start.prompt.md (agnostic workflow)
   ↓ Uses as example ↓
 Personal Library MCP (project with status files)
   ↓ User-specific ↓
@@ -892,7 +1108,7 @@ Your books (not tracked, personal)
 **The Model:**
 
 1. **README** → ONLY source of truth for file locations
-2. **whatsup.prompt.md** → Reads README, stays agnostic, works everywhere
+2. **MGMT-start.prompt.md** → Reads README, stays agnostic, works everywhere
 3. **Status Files** → Project-specific (tests, versioning, features)
 
 **Flow:**
@@ -911,6 +1127,20 @@ Run workflow (5 steps → 5 outcomes)
 
 ---
 
-**Last updated:** 2026-01-19
-**Version:** 4.0 (Fully agnostic, 3-level system, README-only discovery)
-**Flagship example:** Personal Library MCP (Level 2 project)
+---
+
+## Key Principles
+
+1. **🤖 Navigation block in README = Single source of truth** — Must be distributed to all status files
+2. **Status files = AI prompts** — CHECKS and POLICY contain executable instructions
+3. **Read paths from 🤖 block** → Never assume file locations
+4. **5 possible outcomes** → Each triggers different actions
+5. **Checks must pass** before any commit
+6. **Documentation auto-syncs** with reality
+7. **Works on ANY project** → No hardcoded paths
+
+---
+
+**Last updated:** 2026-01-26
+**Version:** 5.0 (Renamed to MGMT-start, updated CONTRIBUTING→POLICY)
+**Flagship example:** Librarian MCP (Level 2 project)

@@ -42,7 +42,7 @@ All factual claims must be grounded in retrieved book chunks.
 
 ## Library Configuration
 
-**Absolute library path:** `/Users/nfrota/Documents/personal library`
+**Absolute library path:** `/Users/nfrota/Documents/librarian`
 
 Use this path for ALL commands regardless of current workspace.
 
@@ -50,13 +50,13 @@ Use this path for ALL commands regardless of current workspace.
 
 ## Metadata Structure (Read This First!)
 
-**Location:** `{library_path}/books/metadata.json`
+**Location:** `{library_path}/books/library-index.json`
 
 **Structure:**
 
 ```json
 {
-  "library_path": "/Users/nfrota/Documents/personal library",
+  "library_path": "/Users/nfrota/Documents/librarian",
   "topics": [
     {
       "id": "ai_theory",
@@ -77,13 +77,13 @@ Use this path for ALL commands regardless of current workspace.
 **Get library path (use this exact command):**
 
 ```bash
-python3.11 -c "import json; print(json.load(open('/Users/nfrota/Documents/personal library/books/metadata.json'))['library_path'])"
+python3.11 -c "import json; print(json.load(open('/Users/nfrota/Documents/librarian/books/library-index.json'))['library_path'])"
 ```
 
 **List all topic IDs (use this exact command):**
 
 ```bash
-python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/personal library/books/metadata.json'))['topics']; print('\n'.join(t['id'] for t in topics))"
+python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/librarian/books/library-index.json'))['topics']; print('\n'.join(t['id'] for t in topics))"
 ```
 
 ---
@@ -132,7 +132,7 @@ python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/per
 Execute this exact command:
 
 ```bash
-test -f "/Users/nfrota/Documents/personal library/books/metadata.json" && echo "LIBRARY_FOUND" || echo "LIBRARY_NOT_FOUND"
+test -f "/Users/nfrota/Documents/librarian/books/library-index.json" && echo "LIBRARY_FOUND" || echo "LIBRARY_NOT_FOUND"
 ```
 
 **Decision logic:**
@@ -143,14 +143,14 @@ test -f "/Users/nfrota/Documents/personal library/books/metadata.json" && echo "
 **If research.py cannot run, or the library is not accessible, respond EXACTLY:**
 
 ```
-❌ Personal Library not accessible or research pipeline unavailable.
+❌ Librarian not accessible or research pipeline unavailable.
 
-Expected location: /Users/nfrota/Documents/personal library/books/metadata.json
+Expected location: /Users/nfrota/Documents/librarian/books/library-index.json
 
 Possible fixes:
 1. Verify the library exists at the expected path
 2. Update the library path in this prompt's configuration section
-3. Run `bash ./scripts/setup.sh` to set up your environment
+3. Run `bash ./engine/scripts/setup.sh` to set up your environment
 
 I cannot answer research questions without access to your library and a working research pipeline. No general knowledge or fallback answers will be provided.
 ```
@@ -196,7 +196,7 @@ graph TD
 Execute this exact command:
 
 ```bash
-python3.11 -c "import json; print(json.load(open('/Users/nfrota/Documents/personal library/books/metadata.json'))['library_path'])"
+python3.11 -c "import json; print(json.load(open('/Users/nfrota/Documents/librarian/books/library-index.json'))['library_path'])"
 ```
 
 Store result as `LIBRARY_PATH` variable.
@@ -210,7 +210,7 @@ Store result as `LIBRARY_PATH` variable.
 Execute this exact command:
 
 ```bash
-python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/personal library/books/metadata.json'))['topics']; print('\n'.join(t['id'] for t in topics))"
+python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/librarian/books/library-index.json'))['topics']; print('\n'.join(t['id'] for t in topics))"
 ```
 
 ---
@@ -219,7 +219,7 @@ python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/per
 
 **If topic unclear, infer from metadata:**
 
-- Read `/Users/nfrota/Documents/personal library/books/metadata.json` for topic tags
+- Read `/Users/nfrota/Documents/librarian/books/library-index.json` for topic tags
 - Match query keywords against topic IDs, book titles, tags
 - Weighted scoring: tags 50%, topic ID 30%, labels 20%
 - ✅ Confidence ≥ 60%: Auto-select topic
@@ -229,13 +229,13 @@ python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/per
 **Execute the search command (use LIBRARY_PATH from 🚧 2 of 6):**
 
 ```bash
-python3.11 "{LIBRARY_PATH}/scripts/research.py" "{query}" --topic {topic_id} --top-k {k}
+python3.11 "{LIBRARY_PATH}/engine/scripts/research.py" "{query}" --topic {topic_id} --top-k {k}
 ```
 
 **Example:**
 
 ```bash
-python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "security risks in contact apps" --topic cybersecurity_applied --top-k 5
+python3.11 "/Users/nfrota/Documents/librarian/engine/scripts/research.py" "security risks in contact apps" --topic cybersecurity_applied --top-k 5
 ```
 
 **Parameters:**
@@ -260,6 +260,7 @@ python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "secur
       "text": "...chunk text...",
       "book_title": "Book Title",
       "topic": "topic_id",
+      "folder_path": "anarchy/david graeber",
       "similarity": 0.85
     }
   ]
@@ -270,9 +271,9 @@ python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "secur
 
 - Check if Python 3.11+ is installed
 - Verify `library_path` from metadata.json exists
-- Confirm `{library_path}/scripts/research.py` exists
+- Confirm `{library_path}/engine/scripts/research.py` exists
 - Confirm topic exists in `books/metadata.json`
-- Ask user to run setup: `bash {library_path}/scripts/setup.sh`
+- Ask user to run setup: `bash {library_path}/engine/scripts/setup.sh`
 
 ---
 
@@ -283,6 +284,7 @@ python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "secur
 - `results[].text` - Book chunk content
 - `results[].book_title` - Source book
 - `results[].topic` - Topic ID
+- `results[].folder_path` - Folder path (e.g., "anarchy/david graeber")
 - `results[].similarity` - Relevance score
 
 **Generate answer by:**
@@ -290,7 +292,7 @@ python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "secur
 1. **Synthesize** information from results
 2. **Ground** every claim in specific chunks
 3. **Cite** sources inline with emoji numbers: 1️⃣ 2️⃣ 3️⃣ etc.
-4. **Show topic** above citations
+4. **Show folder_path** (not topic ID) above citations using format: **Topic:** {folder_path}
 5. **Acknowledge gaps** if incomplete
 
 **Example answer format:**
@@ -298,7 +300,9 @@ python3.11 "/Users/nfrota/Documents/personal library/scripts/research.py" "secur
 ```
 According to DeLanda 1️⃣, gradients drive morphogenesis. This connects to Deleuze's concept 2️⃣.
 
-**Topic:** anthropocene
+---
+
+**Topic:** anthropocene/theory
 
 ---
 
@@ -386,7 +390,7 @@ python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/per
 "I found multiple cybersecurity topics: applied, history, strategy. Which one?"
 
 **Execution failed:**
-"Could not execute research.py. Verify Python 3.11+ is installed and run `bash ./scripts/setup.sh`"
+"Could not execute research.py. Verify Python 3.11+ is installed and run `bash ./engine/scripts/setup.sh`"
 
 **No results:**
 "No relevant information in `{topic}`. Try different topic or rephrase."
@@ -412,7 +416,7 @@ python3.11 -c "import json; topics = json.load(open('/Users/nfrota/Documents/per
 
 1. Reads metadata → gets `library_path = "/Users/nfrota/Documents/personal library"`
 2. Finds "Molecular Red" in `anthropocene` topic
-3. Executes: `python3.11 /Users/nfrota/Documents/personal\ library/scripts/research.py "what does Bogdanov say about Mars" --topic anthropocene --top-k 5`
+3. Executes: `python3.11 /Users/nfrota/Documents/personal\ library/engine/scripts/research.py "what does Bogdanov say about Mars" --topic anthropocene --top-k 5`
 4. Parses JSON response
 5. Synthesizes answer with citations
 
@@ -439,7 +443,7 @@ Bogdanov envisioned Mars as a socialist utopia 1️⃣ where collective labor tr
 **AI workflow:**
 
 1. Reads metadata → gets `library_path`
-2. Executes: `python3.11 {library_path}/scripts/research.py "spreads for decision-making" --topic tarot --top-k 5`
+2. Executes: `python3.11 {library_path}/engine/scripts/research.py "spreads for decision-making" --topic tarot --top-k 5`
 3. Parses results
 4. Formats answer with citations
 

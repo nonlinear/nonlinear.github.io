@@ -23,7 +23,13 @@ Fully automated workflow that scrapes, enriches, and removes Instagram saved pos
 
 ---
 
-[reels_library.py](https://github.com/nonlinear/notes/blob/main/.github/scripts/reels_library.py)
+**Script:** [tasks/reels_library.py](../../tasks/reels_library.py)
+
+**Command:**
+
+```bash
+/opt/homebrew/bin/python3.11 tasks/reels_library.py
+```
 
 ---
 

@@ -92,13 +92,13 @@ main "$@"
 ### Location:
 
 ```
-.github/scripts/your-script.sh
+.github/engine/scripts/your-script.sh
 ```
 
 ### Make executable:
 
 ```bash
-chmod +x .github/scripts/your-script.sh
+chmod +x .github/engine/scripts/your-script.sh
 ```
 
 ---
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 ### Location:
 
 ```
-.github/scripts/your-script.py
+.github/engine/scripts/your-script.py
 ```
 
 ### Dependencies:
@@ -209,13 +209,13 @@ end run
 ### Location:
 
 ```
-.github/scripts/your-script.applescript
+.github/engine/scripts/your-script.applescript
 ```
 
 ### Run:
 
 ```bash
-osascript .github/scripts/your-script.applescript
+osascript .github/engine/scripts/your-script.applescript
 ```
 
 ---
@@ -687,7 +687,7 @@ main().catch((err) => {
 ```bash
 # Mac-side watcher
 fswatch -0 "$SHORTCUTS_DIR" | while read -d "" file; do
-    python3 .github/scripts/process-shortcut-export.py "$file"
+    python3 .github/engine/scripts/process-shortcut-export.py "$file"
 done
 ```
 
@@ -705,7 +705,7 @@ done
 {
   "label": "Export Safari Tabs",
   "type": "shell",
-  "command": ".github/scripts/safari-export.sh",
+  "command": ".github/engine/scripts/safari-export.sh",
   "group": "build"
 }
 ```
@@ -723,7 +723,7 @@ Example pre-commit:
 ```bash
 #!/usr/bin/env zsh
 # Format code before commit
-python3 .github/scripts/format-code.py
+python3 .github/engine/scripts/format-code.py
 ```
 
 ---
@@ -863,7 +863,7 @@ Before choosing a tool, ask:
 
 ```
 .github/
-  scripts/
+  engine/scripts/
     shell/
       backup.sh
       deploy.sh
@@ -896,7 +896,7 @@ Before choosing a tool, ask:
 - Format as markdown
 - Save to Shortcuts folder
 
-**Mac Script** (`.github/scripts/process-safari-export.py`):
+**Mac Script** (`.github/engine/scripts/process-safari-export.py`):
 
 ```python
 import sys
@@ -913,7 +913,7 @@ if export_file.exists():
 
 ### Example 2: Automated Git Commit
 
-**Shell** (`.github/scripts/commit.sh`):
+**Shell** (`.github/engine/scripts/commit.sh`):
 
 ```bash
 #!/usr/bin/env zsh
@@ -933,7 +933,7 @@ git push
 {
   "label": "✅ Commit changes",
   "type": "shell",
-  "command": ".github/scripts/commit.sh \"${input:commitMessage}\""
+  "command": ".github/engine/scripts/commit.sh \"${input:commitMessage}\""
 }
 ```
 

@@ -3,7 +3,7 @@
 When triggered, this prompt will:
 
 1. Run the following command in the background:
-   /opt/homebrew/bin/python3.11 /Users/nfrota/Documents/literature/scripts/update_literature.py
+   /opt/homebrew/bin/python3.11 /Users/nfrota/Documents/literature/engine/scripts/update_literature.py
 
 2. Wait for the process to finish.
 3. Return a concise report listing any newly indexed books, or "No new books to index" if nothing was added.

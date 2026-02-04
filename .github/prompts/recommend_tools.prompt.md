@@ -12,7 +12,7 @@ Analyze the current conversation and workflow to recommend the most relevant too
 
    - Chatmodes in `.github/chatmodes/`
    - Prompts in `.github/prompts/`
-   - Scripts in `.github/scripts/`
+   - Scripts in `.github/engine/scripts/`
 
 2. **Analyze current context**:
 
