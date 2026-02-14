@@ -29,7 +29,6 @@ graph LR
 
 ### Self-Promotion & Branding Strategy
 
-**Status:** ⏳ Planned
 
 **Problem:** Personal brand needs cohesive strategy across platforms
 
@@ -66,7 +65,6 @@ graph LR
 
 ### Curva Podcast Infrastructure
 
-**Status:** ⏳ Paused
 
 **Problem:** Podcast needs recording tools and hosting infrastructure
 
@@ -78,25 +76,6 @@ graph LR
 - [x] Find zencastr or similar (remote recording)
 - [ ] AWS for audio files (hosting)
 - [x] Test curva filter
-
----
-
-## 🏗️ Site Maintenance
-
-- Hugo static site generator
-- Content: notes, illustrations, podcasts, experiments
-- GitHub Pages publishing
-- Media sync automation
-
----
-
-## 📚 Content Areas
-
-- Curva podcast
-- Drawings & illustrations
-- Creative coding experiments
-- Knowledge management notes
-- Digital publishing
 
 ---
 
