@@ -1,4 +1,4 @@
-# nonlinear.nyc Health
+# nonlinear Health
 
 > 🤖
 > | Backstage files | Description |
@@ -14,9 +14,14 @@
 
 ```mermaid
 graph LR
-    A[⏳ v0.5.0 Self-Promotion] --> B[📋 v0.4.0 Creative Code]
-    B --> C[📋 v0.3.0 Curva Podcast]
+    A[📋 v0.5.0 Self-Promotion & Branding Strategy]
+    B[📋 v0.4.0 Creative Code Improvements]
+    A --> B
+    C[📋 v0.3.0 Curva Podcast Infrastructure]
+    B --> C
 ```
+
+
 
 ---
 
