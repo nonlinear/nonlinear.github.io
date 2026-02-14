@@ -1,6 +1,4 @@
-# nonlinear.nyc ROADMAP
-
-*Personal site, knowledge management, creative experiments.*
+# nonlinear ROADMAP
 
 > 🤖
 > | Backstage files | Description |
@@ -22,11 +20,9 @@ graph LR
 
 ---
 
-## 🎯 Active Epics
+## v0.5.0
 
-### v0.5.0
-
-#### Self-Promotion & Branding Strategy
+### Self-Promotion & Branding Strategy
 
 **Status:** ⏳ Planned
 
@@ -45,9 +41,9 @@ graph LR
 
 ---
 
-### v0.4.0
+## v0.4.0
 
-#### Creative Code Improvements
+### Creative Code Improvements
 
 **Problem:** Site interactions need better UX hints and missing features
 
@@ -61,9 +57,9 @@ graph LR
 
 ---
 
-### v0.3.0
+## v0.3.0
 
-#### Curva Podcast Infrastructure
+### Curva Podcast Infrastructure
 
 **Status:** ⏳ Paused
 
