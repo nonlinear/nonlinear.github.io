@@ -3,12 +3,15 @@
 *What we did — shipped features, bug fixes, maintenance.*
 
 > 🤖
+> | Backstage files | Description |
+> | ---------------------------------------------------------------------------- | ------------------ |
+> | [README](../README.md) | Our project |
+> | [CHANGELOG](CHANGELOG.md) | What we did |
+> | [ROADMAP](ROADMAP.md) | What we wanna do |
+> | POLICY: [project](POLICY.md), [global](global/POLICY.md) | How we go about it |
+> | HEALTH: [project](HEALTH.md), [global](global/HEALTH.md) | What we accept |
 >
-> - [README](../README.md) - Our project
-> - [CHANGELOG](CHANGELOG.md) — What we did
-> - [ROADMAP](ROADMAP.md) — What we wanna do
-> - [HEALTH](HEALTH.md) — What we accept
->
+> We use **[backstage protocol](https://github.com/nonlinear/backstage)**, v0.3.5
 > 🤖
 
 ```mermaid
