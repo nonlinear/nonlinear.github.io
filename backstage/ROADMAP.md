@@ -79,6 +79,28 @@ graph LR
 
 ---
 
+## v0.10.0
+
+### Self-Hosted Analytics
+
+**Goal:** Privacy-focused analytics for personal sites (nonlinear.nyc, etc.)
+
+**Tasks:**
+- [ ] Research options (Plausible, Umami, Matomo, GoatCounter)
+- [ ] Choose platform (self-hosted, Docker-ready)
+- [ ] Setup on NAS (Docker container)
+- [ ] Configure site tracking (add scripts)
+- [ ] Test data collection
+- [ ] Dashboard design (what metrics matter?)
+
+**Success Criteria:**
+- Analytics running on NAS
+- Sites tracked (visitor count, pages, referrers)
+- Privacy-first (no cookies, GDPR compliant)
+- Low maintenance (auto-updates)
+
+---
+
 ## v0.14.0
 
 ### Professional Strategist Agent
