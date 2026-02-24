@@ -1,0 +1,93 @@
+/*
+* OpenClaw Web UI Redesign
+* Custom styling for http://127.0.0.1:18789/chat
+* Created: 2026-02-10
+*/
+
+/* Example: Darker theme, bigger fonts, whatever you want */
+:root {
+    /* Custom color palette */
+    --claw-bg-primary: #1a1a1a;
+    --claw-bg-secondary: #2a2a2a;
+    --claw-text-primary: #e0e0e0;
+    --claw-text-secondary: #a0a0a0;
+    --claw-accent: #00d9ff;
+    --claw-border: #3a3a3a;
+}
+
+header.topbar,
+section.content-header,
+aside.nav,
+.chat-compose__actions,
+.chat-avatar
+{
+    display: none;
+}
+section.card {
+    padding: 0;
+}
+
+.shell {
+    --shell-topbar-height: 0;
+}
+
+
+.chat-group.other {
+    font-size: 0.8em;
+        opacity: 0.5;
+        max-height: 50px;
+        overflow: hidden;
+}
+
+.chat-group.assistant {
+
+}
+
+.chat-group {
+    margin: 0;
+}
+
+/* .chat-group:has(.chat-tool-card) {
+   display: none !important;
+
+} */
+.chat-group.user {
+
+}
+
+.chat-thread {
+    gap: 5px;
+    padding: 0; margin: 0;
+}
+main.content {
+ background-color:  #eeeeee !important;
+    padding: 0 30px;
+    .chat-split-container, .chat-compose {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+}
+
+.chat-group-footer {
+margin: 0 30px 0 0;
+}
+
+
+.chat-compose
+ {
+            padding: 0;
+            padding-top: 0 !important;
+            padding-bottom: 15px;
+                background: none !important;
+                height: 148px;
+                textarea {
+                    height: 100% !important;
+                }
+ }
+
+
+ .chat-bubble {
+    border-radius: 10px;
+ }
