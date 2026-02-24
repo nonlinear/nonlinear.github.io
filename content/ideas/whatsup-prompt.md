@@ -3,7 +3,6 @@ title: "Whats up project checking"
 date: 2026-01-19
 description: "Pre-commit workflow enforcing documentation-code parity through README-first architecture and automated validation gates"
 status: draft
-description: "Extending file links to support auto-search within EPUBs and PDFs"
 fonts:
   - safiro-medium
 tags:
