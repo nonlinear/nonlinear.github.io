@@ -37,9 +37,21 @@ $mermaid-neutral-gray: #666666;
 	g.node .label foreignObject > div,
 	g.node .label foreignObject > div > span.nodeLabel {
 		padding: 0.5em 0.2em;
-		padding-bottom: 0;
 		border-radius: 2px;
 		box-sizing: border-box;
+	}
+
+	@media screen {
+		g.node .label foreignObject > div,
+		g.node .label foreignObject > div > span.nodeLabel {
+			padding-bottom: 0;
+		}
+	}
+
+	// Print-PDF mode: set padding-bottom same as padding-top
+	html.print-pdf .mermaid g.node .label foreignObject > div,
+	html.print-pdf .mermaid g.node .label foreignObject > div > span.nodeLabel {
+		padding-bottom: 0.5em !important;
 	}
 
 	.label,

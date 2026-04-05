@@ -25,10 +25,6 @@
     </div>
   </div>
 
-  <div class="slide-actions" aria-label="Slide actions">
-    <button type="button" class="slide-action-btn" id="btn-fullscreen" aria-label="Toggle fullscreen">Fullscreen</button>
-    <button type="button" class="slide-action-btn" id="btn-print-pdf" aria-label="Open print PDF view">PDF</button>
-  </div>
 
   <script>
     // UTF-8 safe base64 decode (atob returns Latin1 bytes)
@@ -48,52 +44,12 @@
   <script src="/js/reveal/plugin/markdown/markdown.js"></script>
   <script src="/js/reveal/plugin/highlight/highlight.js"></script>
   <script src="/js/reveal/plugin/notes/notes.js"></script>
-  <script src="/js/vendor/screenfull.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
       transition: 'fade',
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
     });
-
-    (function() {
-      const fsBtn = document.getElementById('btn-fullscreen');
-      const pdfBtn = document.getElementById('btn-print-pdf');
-
-      if (fsBtn) {
-        fsBtn.addEventListener('click', async function() {
-          const target = document.documentElement;
-
-          if (window.screenfull && window.screenfull.isEnabled) {
-            try {
-              if (window.screenfull.isFullscreen) {
-                await window.screenfull.exit();
-              } else {
-                await window.screenfull.request(target);
-              }
-              return;
-            } catch (err) {
-              // Fall through to native API if screenfull throws.
-            }
-          }
-
-          // Native fallback when screenfull is unavailable or rejected.
-          if (!document.fullscreenElement && target.requestFullscreen) {
-            target.requestFullscreen();
-          } else if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        });
-      }
-
-      if (pdfBtn) {
-        pdfBtn.addEventListener('click', function() {
-          const url = new URL(window.location.href);
-          url.searchParams.set('print-pdf', '');
-          window.open(url.toString(), '_blank', 'noopener');
-        });
-      }
-    })();
 
     Reveal.on('ready', function() {
       mermaid.initialize({
