@@ -1,115 +1,294 @@
 // Mermaid diagram styling
 // Docs: https://mermaid.js.org/config/theming.html
 
-.mermaid {
-
-
-  // Override default font
-  svg {
-    max-width: 100%;
-    height: auto;
-    font-family: safiro-medium;
-  }
-
-  // Labels inside nodes
-  .nodeLabel,
-  .label text,
-  span,
-  p {
-    font-family: safiro-medium;
-    font-size: 14px !important;
-    font-weight: 500;
-  }
-
-  // Edge labels (YES, NO, etc) - remove background box
-  .edgeLabel {
-    background-color: black !important;
-    border: solid 5px black !important;
-    border-radius: 4px !important;
-
-
-
-    span {
-      font-family: safiro-medium;
-      color: white !important;
-    }
-  }
-
-  .labelBkg {
-    background-color: transparent !important;
-    fill: none !important;
-  }
-
-  // Arrow markers
-
-
-  // Notes
-  .note {
-    fill: rgba(255, 193, 7, 0.2);
-    stroke: #ffc107;
-    stroke-width: 1px;
-  }
-
-  // Actor (sequence diagrams)
-  .actor {
-    fill: #1a1a1a;
-    stroke: #4a9eff;
-    stroke-width: 2px;
-  }
-
-  // Different node types styling
-  .flowchart-link {
-    stroke: #888888;
-  }
-
-  // State diagram specific
-  .statediagram-state rect {
-    fill: #1a1a1a;
-    stroke: #4a9eff;
-  }
-
-  // Class diagram specific
-  .classGroup rect {
-    fill: #1a1a1a;
-    stroke: #4a9eff;
-  }
-
-  // Pie chart
-  .pieCircle {
-    stroke: #1a1a1a;
-    stroke-width: 2px;
-  }
-
-  // Gantt chart
-  .grid .tick line {
-    stroke: rgba(255, 255, 255, 0.1);
-  }
+@font-face {
+	font-family: safiro-medium;
+	src: url("/fonts/safiro-medium.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
-// Dark theme adjustments (if using theme switcher)
-@media (prefers-color-scheme: light) {
-  .mermaid {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
+$mermaid-neutral-gray: #666666;
 
-    .node rect,
-    .node circle,
-    .node ellipse,
-    .node polygon {
-      fill: #ffffff;
-      stroke: #0066cc;
-    }
+.mermaid {
+	width: 100%;
+	// Override default font
+	svg {
+		display: block;
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		overflow: visible !important;
+	}
 
-    .nodeLabel {
-      color: #000000;
-    }
+	// Labels inside nodes
+	.nodeLabel,
+	.label text,
+	text,
+	tspan,
+	p {
+		font-family: safiro-medium !important;
+		padding: 0.3em 0.6em 0.3em 0.3em;
+		box-sizing: border-box;
+	}
 
-    .edgePath path {
-      stroke: #333333;
-    }
+	// Keep a right-side breathing room to avoid label glyph clipping.
+	g.node .label foreignObject > div,
+	g.node .label foreignObject > div > span.nodeLabel {
+		padding: 0.3em 0.6em 0.3em 0.3em;
+		border-radius: 2px;
+		box-sizing: border-box;
+	}
 
-    marker {
-      fill: #333333;
-    }
-  }
+
+	.label,
+	.nodeLabel,
+	.edgeLabel,
+	foreignObject {
+		overflow: visible !important;
+	}
+
+	.node rect,
+	.node circle,
+	.node ellipse,
+	.node polygon {
+		fill: #ffffff !important;
+		stroke: #0066cc !important;
+	}
+
+	// SVG nodes use rx/ry (not CSS border-radius) for corner rounding.
+	.node rect,
+	.node.active rect,
+	.node.review rect,
+	.node.blocked rect,
+	.node.done rect {
+		rx: 2px;
+		ry: 2px;
+	}
+
+	// Flowchart node semantic classes (used via Mermaid `class NODE className;`)
+	.node.active rect,
+	.node.active circle,
+	.node.active ellipse,
+	.node.active polygon {
+		fill: #e8fff1 !important;
+		stroke: #2f9e44 !important;
+	}
+
+	.node.review rect,
+	.node.review circle,
+	.node.review ellipse,
+	.node.review polygon {
+		fill: #fff8e1 !important;
+		stroke: #f08c00 !important;
+	}
+
+	.node.blocked rect,
+	.node.blocked circle,
+	.node.blocked ellipse,
+	.node.blocked polygon {
+		fill: #ffe8e8 !important;
+		stroke: #c92a2a !important;
+	}
+
+	.node.done rect,
+	.node.done circle,
+	.node.done ellipse,
+	.node.done polygon {
+		fill: #e7f5ff !important;
+		stroke: #1864ab !important;
+	}
+
+	.node.active rect,
+	.node.active circle,
+	.node.active ellipse,
+	.node.active polygon,
+	.node.review rect,
+	.node.review circle,
+	.node.review ellipse,
+	.node.review polygon,
+	.node.blocked rect,
+	.node.blocked circle,
+	.node.blocked ellipse,
+	.node.blocked polygon,
+	.node.done rect,
+	.node.done circle,
+	.node.done ellipse,
+	.node.done polygon {
+		stroke-width: 1px !important;
+		filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.1));
+	}
+
+	.node rect,
+	.node circle,
+	.node ellipse,
+	.node polygon {
+		transition: filter 0.18s ease, stroke-width 0.18s ease;
+		transform-origin: center;
+		transform-box: fill-box;
+	}
+
+	.node:hover rect,
+	.node:hover circle,
+	.node:hover ellipse,
+	.node:hover polygon,
+	.node.active:hover rect,
+	.node.active:hover circle,
+	.node.active:hover ellipse,
+	.node.active:hover polygon,
+	.node.review:hover rect,
+	.node.review:hover circle,
+	.node.review:hover ellipse,
+	.node.review:hover polygon,
+	.node.blocked:hover rect,
+	.node.blocked:hover circle,
+	.node.blocked:hover ellipse,
+	.node.blocked:hover polygon,
+	.node.done:hover rect,
+	.node.done:hover circle,
+	.node.done:hover ellipse,
+	.node.done:hover polygon {
+		filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.16)) !important;
+		stroke-width: 2px !important;
+	}
+
+	// Edge labels (YES, NO, etc)
+	g.edgeLabel {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: 0 !important;
+		pointer-events: auto !important;
+	}
+
+	g.edgeLabel .label,
+	g.edgeLabel .label foreignObject,
+	g.edgeLabel .label foreignObject > div {
+		pointer-events: auto !important;
+	}
+
+	span.edgeLabel {
+		font-family: safiro-medium;
+		color: white !important;
+		border: none !important;
+		display: inline-block;
+		pointer-events: auto;
+	}
+
+	.edgeLabel rect {
+		fill: #ff0000 !important;
+		opacity: 1 !important;
+	}
+
+	.edgeLabel .label,
+	.edgeLabel .label text,
+	.edgeLabel span,
+	.edgeLabel p {
+		color: #ffffff !important;
+		fill: #ffffff !important;
+	}
+
+	// Flowchart edge labels in this Mermaid build are rendered as HTML spans
+	g.edgeLabel .label foreignObject {
+		overflow: visible !important;
+	}
+
+	g.edgeLabel .label foreignObject > div {
+		background-color: transparent !important;
+		padding: 2px 5px !important;
+		border-radius: 0;
+		overflow: visible !important;
+		box-sizing: border-box;
+		border-radius: 30px;
+		transition: background-color 0.2s ease, color 0.2s ease;
+	}
+
+	g.edgeLabel .label foreignObject > div > span.edgeLabel:not(:empty) {
+		background-color: transparent !important;
+		padding: 0 !important;
+		font-size: 0.9em;
+	}
+
+	g.edgeLabel .label foreignObject > div > span.edgeLabel:empty {
+		display: none !important;
+		padding: 0 !important;
+		background: transparent !important;
+	}
+
+	g.edgeLabel .label foreignObject > div:has(> span.edgeLabel:not(:empty)) {
+		background-color: $mermaid-neutral-gray !important;
+	}
+
+	// Edge hover: only label goes black.
+	g.edgeLabel:hover .label foreignObject > div,
+	g.edgeLabel .label foreignObject > div:hover,
+	g.edgeLabel .label foreignObject > div:has(> span.edgeLabel:hover),
+	span.edgeLabel:hover {
+		background-color: #000000 !important;
+	}
+
+	.labelBkg {
+		background-color: transparent !important;
+		fill: none !important;
+	}
+
+	// Arrow markers
+	.arrowMarkerPath,
+	.arrowheadPath,
+	.marker,
+	.marker path {
+		fill: $mermaid-neutral-gray !important;
+		stroke: none !important;
+		stroke-width: 0 !important;
+		display: inline !important;
+		opacity: 1;
+		transform: none;
+	}
+
+
+	// Notes
+	.note {
+		fill: rgba(255, 193, 7, 0.2) !important;
+		stroke: #ffc107 !important;
+		stroke-width: 1px;
+	}
+
+	// Actor (sequence diagrams)
+	.actor {
+		fill: #1a1a1a !important;
+		stroke: #4a9eff !important;
+		stroke-width: 2px;
+	}
+
+	// Different node types styling
+	.flowchart-link {
+		stroke: $mermaid-neutral-gray !important;
+	}
+
+	.edgePath path {
+		stroke: $mermaid-neutral-gray !important;
+	}
+
+	// State diagram specific
+	.statediagram-state rect {
+		fill: #1a1a1a !important;
+		stroke: #4a9eff !important;
+	}
+
+	// Class diagram specific
+	.classGroup rect {
+		fill: #1a1a1a !important;
+		stroke: #4a9eff !important;
+	}
+
+	// Pie chart
+	.pieCircle {
+		stroke: #1a1a1a !important;
+		stroke-width: 2px;
+	}
+
+	// Gantt chart
+	.grid .tick line {
+		stroke: rgba(255, 255, 255, 0.1) !important;
+	}
 }
