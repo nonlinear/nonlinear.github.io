@@ -29,18 +29,18 @@ $mermaid-neutral-gray: #666666;
 	tspan,
 	p {
 		font-family: safiro-medium !important;
-		padding: 0.3em 0.6em 0.3em 0.3em;
+		padding: 0;
 		box-sizing: border-box;
 	}
 
 	// Keep a right-side breathing room to avoid label glyph clipping.
 	g.node .label foreignObject > div,
 	g.node .label foreignObject > div > span.nodeLabel {
-		padding: 0.3em 0.6em 0.3em 0.3em;
+		padding: 0.5em 0.2em;
+		padding-bottom: 0;
 		border-radius: 2px;
 		box-sizing: border-box;
 	}
-
 
 	.label,
 	.nodeLabel,

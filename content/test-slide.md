@@ -15,7 +15,7 @@ Primeiro slide — título e intro
 
 ```mermaid
 flowchart LR
-  A[Active]:::active --> B[Review]:::review
+  A[Active teste]:::active --> B[Review]:::review
   B --> C{Revisar}:::review
   C -->|ok| D[Publicar]:::done
   C -->|refazer| B
