@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="revealjs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Into Design Systems 2026</title>
+
+  
+  
+  
+
+  <link rel="stylesheet" href="/css/main.e23c07571f165cadbe740ee5850a70a881f91f691d09eae7d9a04272c5af963d.css" />
+
+  <link rel="stylesheet" href="/css/reveal/reveal.css" />
+  <link rel="stylesheet" href="/css/slide.76f0b9c468dbd1601d6f503f2083c3633fd07f259776a9b565891e3522a3ff4a.css" />
+
+  <script src="/js/global/mermaid.min.js"></script>
+</head>
+<body class="layout-slide reveal-page">
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-separator-notes="^Note:">
+        <textarea data-template id="slide-raw"></textarea>
+      </section>
+    </div>
+  </div>
+
+
+  <script>
+    
+    (function() {
+      const b64 = "CiMgSW50byBEZXNpZ24gU3lzdGVtcyAyMDI2CgpCdWlsZGluZyBEZXNpZ24gU3lzdGVtcyB3aXRoIEFJIEFnZW50cyAgCkNvcGVuaGFnZW4sIERlbm1hcmsg4oCUIE1heSAxNSwgMjAyNgoKLS0tCgp8IFN0eWxlIGd1aWRlIHwgRGVzaWduIHN5c3RlbSB8IEludGVncmF0ZWQgZGVzaWduIHN5c3RlbSB8CnwtLS18LS0tfC0tLXwKfCBEZWZpbmVzIHZpc3VhbCBydWxlcyBhbmQgYnJhbmQgdXNhZ2UgfCBEZWZpbmVzIHJldXNhYmxlIFVJIGNvbXBvbmVudHMgYW5kIHBhdHRlcm5zIHwgQ29ubmVjdHMgZGVzaWduIGFuZCBjb2RlIGFzIG9uZSBvcGVyYXRpb25hbCBzeXN0ZW0gfAp8IFVzdWFsbHkgc3RhdGljIGRvY3VtZW50YXRpb24gfCBEb2N1bWVudGF0aW9uICsgY29tcG9uZW50IGxpYnJhcnkgfCBEb2N1bWVudGF0aW9uICsgY29tcG9uZW50IGxpYnJhcnkgKyBhdXRvbWF0aW9uIHwKfCBNb3N0bHkgbWFudWFsIHVwZGF0ZXMgfCBNaXhlZCBtYW51YWwvYXV0b21hdGVkIHVwZGF0ZXMgfCBBdXRvLXVwZGF0ZWQgdGhyb3VnaCB0b2tlbnMsIENJLCBhbmQgc3luYyBwaXBlbGluZXMgfAp8IFdlYWsgY29kZSBjb25uZWN0aW9uIHwgUGFydGlhbCBjb2RlIGNvbm5lY3Rpb24gfCBTdHJvbmcgY29kZSBjb25uZWN0aW9uIChkZXNpZ24gdG9rZW5zIGFuZCBjb21wb25lbnRzIGluIHByb2R1Y3Rpb24pIHwKfCBHb29kIGZvciBjb25zaXN0ZW5jeSB8IEdvb2QgZm9yIGNvbnNpc3RlbmN5IGFuZCBzY2FsZSB8IEdvb2QgZm9yIGNvbnNpc3RlbmN5LCBzY2FsZSwgYW5kIGZhc3Qgc2hpcHBpbmcgd2l0aCBsb3cgZHJpZnQgfAoKLS0tCgojIyBXaGF0IHdlIGhhdmUKCmBgYG1lcm1haWQKZmxvd2NoYXJ0IExSCiAgICBGaWdtYVtGaWdtYV06OjphY3RpdmUgPC0tPnwiMe\u002b4j\u002bKDoyJ8IEJyb3dzZXJbQnJvd3Nlcl06OjphY3RpdmUKICAgIENvZGViYXNlW0NvZGViYXNlXTo6OmFjdGl2ZSAtLT4gQnJvd3NlcgpgYGAKCjEuIERlc2lnbiBzcGVjcywgZGVtbywgY29tcG91bmRpbmcgZGVzaWduIGRpc2NyZXBhbmN5CgotLS0KCiMjIFRoZSBwcm9taXNlCgpgYGBtZXJtYWlkCmZsb3djaGFydCBMUgogICAgRmlnbWFbRmlnbWFdOjo6YWN0aXZlCiAgICBCcm93c2VyW0Jyb3dzZXJdOjo6YWN0aXZlCiAgICBDb2RlYmFzZVtDb2RlYmFzZV06OjphY3RpdmUgLS0\u002bIEJyb3dzZXIKICAgIENvZGViYXNlIDwtLT58IjHvuI\/ig6MifCBGaWdtYQpgYGAKCjEuIFNhbWUgdmFyaWFibGVzLCB2ZXJzaW9uZWQKCi0tLQoKIyMgRGF5IDEKCjEuIFtQcm90b3R5cGluZyBmb3IgdGhlIHVua25vd25dKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvcHJvdG90eXBpbmctZm9yLXRoZS11bmtub3duLykKMS4gW1doYXRzQXBwIFdlYjogUmVjbGFpbWluZyBVSSBFeGNlbGxlbmNlIHRocm91Z2ggVmliZSBDb2RpbmddKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvd2hhdHNhcHAtdmliZS1jb2RpbmcvKQoxLiBbUHJvZHVjdCBQcmltaXRpdmVzOiBUaGUgTmV3IE1hdGVyaWFsIG9mIERlc2lnbiBTeXN0ZW1dKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvcHJvZHVjdC1wcmltaXRpdmVzLWRlc2lnbi1zeXN0ZW0vKQoxLiBbVGhlIHBhdGggdG8gYW4gQUkgZW5hYmxlZCBkZXNpZ24gc3lzdGVtOiBPdXIgYXBwcm9hY2ggYW5kIGxlc3NvbnMgbGVhcm5lZF0oL3dpbGV5L2ludG8tZGVzaWduLXN5c3RlbXMtMjAyNi9haS1lbmFibGVkLWRlc2lnbi1zeXN0ZW0tbWlyby8pCjEuIFtBZ2VudGljIERlc2lnbiBTeXN0ZW1zXSgvd2lsZXkvaW50by1kZXNpZ24tc3lzdGVtcy0yMDI2L2FnZW50aWMtZGVzaWduLXN5c3RlbXMvKQoxLiBbSSdtIG5vdCBhbiBlbmdpbmVlciBidXQgSSBzaGlwIGNvZGVdKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvaG93LWRlc2lnbmVycy1zaGlwLXByb2R1Y3Rpb24tY29kZS8pCjEuIFtDb250ZXh0ID4gUHJvYmFiaWxpdHk6IERlc2lnbiBzeXN0ZW1zIGFzIEFJIGluZnJhc3RydWN0dXJlXSgvd2lsZXkvaW50by1kZXNpZ24tc3lzdGVtcy0yMDI2L2Rlc2lnbi1zeXN0ZW1zLWFpLWluZnJhc3RydWN0dXJlLykKMS4gW0VuY29kaW5nIGdvdmVybmFuY2Ugb24gYWdlbnRpYyBkZXNpZ24gc3lzdGVtc10oL3dpbGV5L2ludG8tZGVzaWduLXN5c3RlbXMtMjAyNi90b3dhcmRzLWFuLWFnZW50aWMtZGVzaWduLXN5c3RlbS8pICgxMjozMCBBTSwgdmlyYWRhIHBhcmEgRGF5IDIpCgotLS0KCiMjIERheSAyCgoxLiBbQnVpbGRpbmcgcmVhbCBkZXNpZ24gc3lzdGVtcyB3aXRoIGFnZW50c10oL3dpbGV5L2ludG8tZGVzaWduLXN5c3RlbXMtMjAyNi9idWlsZC1kZXNpZ24tc3lzdGVtcy13aXRoLWFnZW50cy8pCjEuIFtWaWJlIGNvZGluZyB3aXRoIHplcm8gZHJpZnQ6IGZyb20gRmlnbWEgdG8gU3Rvcnlib29rIHRvIFByb2R1Y3Rpb25dKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvdmliZS1jb2RpbmctZnJvbS1maWdtYS10by1wcm9kdWN0aW9uLykKMS4gW01hY2hpbmUtUmVhZGFibGUgRGVzaWduIFN5c3RlbXMgZm9yIE1DUCBhbmQgTExNc10oL3dpbGV5L2ludG8tZGVzaWduLXN5c3RlbXMtMjAyNi9kZXNpZ24tc3lzdGVtcy1mb3ItbWNwLWFuZC1sbG1zLykKMS4gW0Zyb20gZmFsbGluZyBmb3IgbWFya2Rvd24gdG8gc29sdmluZyByZWFsIHByb2JsZW1zIHdpdGggc2NyaXB0c10oL3dpbGV5L2ludG8tZGVzaWduLXN5c3RlbXMtMjAyNi9mcm9tLW1hcmtkb3duLXRvLXNjcmlwdHMvKQoxLiBbU2hpcCBJdCEgVmliZSBDb2RpbmcgWW91ciBGaXJzdCBGaWdtYSBQbHVnaW5dKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvdmliZS1jb2RpbmctZmlnbWEtcGx1Z2luLykKMS4gW0FJIFdpdGhvdXQgdGhlIENoYW9zOiBDb250ZXh0LUJhc2VkIERlc2lnbiBTeXN0ZW1zIHRvIHRoZSBSZXNjdWVdKC93aWxleS9pbnRvLWRlc2lnbi1zeXN0ZW1zLTIwMjYvY29udGV4dC1iYXNlZC1kZXNpZ24tc3lzdGVtcy1haS8pCjEuIFtEZXNpZ25lcnMgd2hvIHNoaXAgcGx1Z2luIGluIDQ4IGhvdXJzXSgvd2lsZXkvaW50by1kZXNpZ24tc3lzdGVtcy0yMDI2L2Rlc2lnbmVycy13aG8tc2hpcC1wbHVnaW4tNDgtaG91cnMvKSAoc2VtIGhvcmFyaW8gZXhwbGljaXRvIG5hcyBub3RhcykKCi0tLQ==";
+      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      const raw = new TextDecoder().decode(bytes);
+      const markdownWithMermaidHtml = raw.replace(
+        /```mermaid\r?\n([\s\S]*?)\r?\n```/g,
+        (_, code) => `<div class="mermaid">\n${code}\n</div>`
+      );
+      document.getElementById('slide-raw').textContent = markdownWithMermaidHtml;
+    })();
+  </script>
+
+  <script src="/js/reveal/reveal.js"></script>
+  <script src="/js/reveal/plugin/markdown/markdown.js"></script>
+  <script src="/js/reveal/plugin/highlight/highlight.js"></script>
+  <script src="/js/reveal/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+
+    Reveal.on('ready', function() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'forest',
+        flowchart: { curve: 'natural' }
+      });
+      mermaid.run({ querySelector: '.mermaid' });
+    });
+  </script>
+</body>
+</html>
