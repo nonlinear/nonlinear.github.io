@@ -11,6 +11,8 @@
 >
 > [README](README.md) 👏 [ROADMAP](backstage/ROADMAP.md) 👏 [CHANGELOG](backstage/CHANGELOG.md) 👏 checks: [local](backstage/checks/local/) <sup>0</sup>, [global](backstage/checks/global/) <sup>0</sup>
 >
+> Hugo notes and patterns: [HUGO.md](HUGO.md)
+>
 > 🤖
 
 
