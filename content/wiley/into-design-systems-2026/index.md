@@ -1,5 +1,6 @@
 ---
 title: Into Design Systems 2026
+draft: true
 date: 2026-04-06
 layout: slide
 conference: Into Design Systems
@@ -14,13 +15,10 @@ Copenhagen, Denmark — May 15, 2026
 
 ---
 
-| Style guide | Design system | Integrated design system |
-|---|---|---|
-| Defines visual rules and brand usage | Defines reusable UI components and patterns | Connects design and code as one operational system |
-| Usually static documentation | Documentation + component library | Documentation + component library + automation |
-| Mostly manual updates | Mixed manual/automated updates | Auto-updated through tokens, CI, and sync pipelines |
-| Weak code connection | Partial code connection | Strong code connection (design tokens and components in production) |
-| Good for consistency | Good for consistency and scale | Good for consistency, scale, and fast shipping with low drift |
+
+- what Wiley has: design specs don't touch code, we communicate thru design specs, reviews and constant design discrepancy exercises
+- industry standard: integrated design systems, connected with codebase and versioned (figma or code)
+- AI promise: the ability to connect codebase and figma (both ways) with less overhead and more automated
 
 ---
 
@@ -47,6 +45,19 @@ flowchart LR
 ```
 
 1. Same variables, versioned
+
+---
+
+## Organize talks
+
+- in quality?
+- in relevance?
+- in topics?
+
+---
+
+- [ ] list best practices we validated
+- [ ] list innovations with links
 
 ---
 
