@@ -1,11 +1,12 @@
-[markup]
-	ignoreLogs = ['warning-goldmark-raw-html']
-[markup.goldmark.renderer]
-	unsafe = true
 baseURL = "https://nonlinear.nyc/"
 languageCode = "en-us"
 title = "Nonlinear"
 publishDir = "docs"
+
+[markup]
+ignoreLogs = ['warning-goldmark-raw-html']
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
 author = "Nicholas Frota"
