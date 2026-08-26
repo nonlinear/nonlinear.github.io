@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Nonlinear"
 publishDir = "docs"
 
+[security]
+allowContent = ['text/markdown', 'text/html']
+
 [markup]
 ignoreLogs = ['warning-goldmark-raw-html']
 [markup.goldmark.renderer]
