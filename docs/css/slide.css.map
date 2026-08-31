@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "slide.css",
-	"sourceRoot": "/Users/nonlinear/Documents/nonlinear",
+	"sourceRoot": "/Users/nonlinear/Documents/nonlinear.github.io",
 	"sources": [
 		"assets/css/slide.scss"
 	],

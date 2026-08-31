@@ -36,3 +36,4 @@ node_modules/
 # Note: /internal/ is protected via .git/info/exclude (not here)
 # This allows VS Code to index folders for #file: suggestions
 # while keeping the folder out of version control
+*.backup-*
