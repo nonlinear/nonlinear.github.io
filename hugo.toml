@@ -1,0 +1,6 @@
+baseURL = "https://nonlinear.nyc/"
+locale = "en-us"
+title = "Nonlinear"
+publishDir = "docs"
+disableKinds = ["sitemap", "rss", "taxonomy", "term"]
+disableHugoGeneratorInject = true

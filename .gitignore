@@ -1,0 +1,5 @@
+vendor/
+.hugo_build.lock
+.hugo_build.cache
+*.log
+.DS_Store
