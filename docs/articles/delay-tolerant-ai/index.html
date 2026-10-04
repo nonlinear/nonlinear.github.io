@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delay Tolerant for AI — conceito e manifestação no Kin — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+<script defer data-domain="nonlinear.nyc" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/index2/">Nonlinear</a>
+    <a href="/projects/">Projects</a>
+    <a href="/articles/">Articles</a>
+    <a href="https://nonlinear.nyc/personal/">/personal</a>
+  </nav>
+</header>
+<main>
+
+<article class="project">
+  <p class="eyebrow">Article</p>
+  <h1>Delay Tolerant for AI — conceito e manifestação no Kin</h1>
+  
+  <div class="ph-img">[ lorem image — Delay Tolerant for AI — conceito e manifestação no Kin hero ]</div>
+  <div class="content">
+    <h1 id="delay-tolerant-for-ai">Delay Tolerant for AI</h1>
+<h2 id="o-conceito">O conceito</h2>
+<p>Offline ready é um estado binário: o app funciona sem rede ou não.
+Delay tolerant é um <strong>espectro</strong>: o app tolera latência, desconexão parcial,
+reações assíncronas, e reconcilia quando a rede volta — sem precisar ser
+&ldquo;completamente offline&rdquo;.</p>
+<p>No Kin (chat interface com bridge architecture), delay tolerant significa:</p>
+<ul>
+<li>Mensagens saem da fila local mesmo sem confirmação do server</li>
+<li>O estado da UI não depende de round-trip imediato</li>
+<li>O agente responde quando pode (não quando o usuário espera)</li>
+<li>Reconciliação otimista: o que o usuário vê pode ser provisório</li>
+</ul>
+<h2 id="o-que-este-epic-precisa-investigar">O que este epic precisa investigar</h2>
+<ol>
+<li><strong>Definição do conceito</strong> — por que &ldquo;delay tolerant&rdquo; é mais preciso que
+&ldquo;offline ready&rdquo; neste contexto</li>
+<li><strong>Manifestação no Kin</strong> — quais componentes da arquitetura implementam isso
+(fila, bridge, optimistic UI, reconciliation)</li>
+<li><strong>Trade-offs</strong> — o que se perde (consistência imediata, feedback instantâneo)
+vs. o que se ganha (resiliência, funcionamento em redes instáveis)</li>
+<li><strong>Fontes</strong> — artigos, papers, sistemas existentes que inspiraram (CRDTs, OT,
+sistemas de mensageria assíncrona)</li>
+</ol>
+<h2 id="artefato">Artefato</h2>
+<ul>
+<li>Artigo long-form: <code>/article/delay-tolerant-ai/</code></li>
+<li>Diagrama(s) mermaid: fluxo de mensagem com delay tolerance</li>
+</ul>
+<h2 id="referências">Referências</h2>
+<ul>
+<li><code>kin/contract.md</code> — arquitetura do Kin</li>
+<li><code>article-pipeline</code> — pipeline para produzir o artigo</li>
+<li><code>article-epic.md</code> (policy) — campos obrigatórios, quality gates</li>
+<li><code>branding-exercise</code> — tom (pensando em voz alta, não whitepaper acadêmico)</li>
+</ul>
+
+  </div>
+</article>
+
+</main>
+<footer>Nonlinear Studio · cognition bleeds</footer>
+</body>
+</html>

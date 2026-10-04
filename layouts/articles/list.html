@@ -1,9 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <ul>
+  <p class="eyebrow">Writing</p>
+  <h1>{{ if .Title }}{{ .Title }}{{ else }}Articles{{ end }}</h1>
+  <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deep dives de design decisions.</p>
+  <div class="grid">
   {{ range .Pages.ByDate.Reverse }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <a class="card" href="{{ .RelPermalink }}">
+      <h3>{{ .Title }}</h3>
+      <p class="muted">{{ with .Description }}{{ . }}{{ else }}Lorem ipsum dolor sit amet, consectetur adipiscing elit.{{ end }}</p>
+    </a>
   {{ end }}
-  </ul>
+  </div>
 {{ end }}

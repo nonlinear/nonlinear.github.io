@@ -1,0 +1,4 @@
+{{ $url := .Get "url" }}
+{{ $highlight := .Get "highlight" }}
+<sup class="source-highlight"><a href="{{ $url }}" target="_blank" rel="noopener">[source]</a></sup>
+{{ if $highlight }}<blockquote class="highlight">{{ $highlight }}</blockquote>{{ end }}

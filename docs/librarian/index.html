@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Librarian — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+<script defer data-domain="nonlinear.nyc" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/index2/">Nonlinear</a>
+    <a href="/projects/">Projects</a>
+    <a href="/articles/">Articles</a>
+    <a href="https://nonlinear.nyc/personal/">/personal</a>
+  </nav>
+</header>
+<main>
+
+<article class="project">
+  <h1>Librarian</h1>
+  <h2 id="you-know-that-feeling-when-an-ai-cites-a-book-it-never-read">&ldquo;You know that feeling when an AI cites a book it never read?&rdquo;</h2>
+<p>Librarian doesn&rsquo;t do that. It searches <strong>your</strong> books and shows you the exact passage, highlighted, link included, with full bibliographic metadata.</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    USER[You add a book] --&gt; WATCHER[Folder watcher]
+    WATCHER --&gt; INDEX[Auto-index: FAISS + embeddings]
+    INDEX --&gt; MCP[MCP server ready]
+    MCP --&gt; AGENT[Your agent queries with citations]
+    AGENT --&gt; YOU[Answer + highlight + page + link]
+</code></pre><p>Trust is nice. <strong>Verification is better.</strong></p>
+<hr>
+<h3 id="what-it-is">What it is</h3>
+<p>A BYOB (Bring Your Own Books) semantic search engine. All local — books, embedding
+models, database. Connect your AI assistant via MCP and ask questions. Every answer
+includes the exact passage, highlighted, with a link back to the source.</p>
+<h3 id="why-i-built-it">Why I built it</h3>
+<p>I got tired of AI tools citing books they never read. Librarian is the antidote:
+your library stays yours, the search is local, and the citations are real.</p>
+<hr>
+<h3 id="want-to-understand-it-deeper">Want to understand it deeper?</h3>
+<p>→ <a href="/article/source-highlights/">Source Highlights — how Librarian makes every source traceable</a></p>
+<p>Or ask your agent: copy this prompt and paste it wherever your AI lives:</p>
+<pre tabindex="0"><code>&gt; Tell me about Nonlinear&#39;s Librarian project.
+&gt; What is it, why does it exist, what&#39;s the architecture,
+&gt; and should I care?
+</code></pre><p>Your agent consults the Cyborg Support MCP and comes back with the full context —
+stack, install, philosophy, current state, everything.</p>
+<hr>
+<h3 id="want-to-help">Want to help?</h3>
+<p>Librarian is open source. I&rsquo;m specifically looking for:</p>
+<ul>
+<li><strong>Knowledge management</strong> — people who actually think about how humans organize, retrieve, preserve, and use knowledge</li>
+<li><strong>RAG / indexing</strong> — where naive vector search falls down, and what better approaches look like</li>
+<li><strong>Real research practitioners</strong> — use Librarian for actual work? I want to watch you. Where does it get in your way? What did you expect?</li>
+</ul>
+<p>No paid contributor work. Your contribution is credited.</p>
+<p><strong>Know someone?</strong> → <a href="/contact/">Tell me</a></p>
+
+</article>
+
+</main>
+<footer>Nonlinear Studio · cognition bleeds</footer>
+</body>
+</html>

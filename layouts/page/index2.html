@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <main class="home">
+    <p class="eyebrow">Nonlinear Studio</p>
+    <h1>{{ if .Content }}{{ end }}Nonlinear</h1>
+    <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Design, produtum, ricerca — sed do eiusmod tempor incididunt ut labore.</p>
+    <p class="tagline">cognition bleeds</p>
+
+    <div class="ph-img">[ lorem image — studio mark / cover ]</div>
+
+    <h2>Work</h2>
+    <div class="grid">
+      {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+        <a class="card" href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p>{{ with .Description }}{{ . }}{{ else }}Lorem ipsum dolor sit amet, consectetur adipiscing elit.{{ end }}</p>
+        </a>
+      {{ end }}
+    </div>
+
+    <h2>Writing</h2>
+    <div class="grid">
+      {{ range first 2 (where .Site.RegularPages "Section" "articles") }}
+        <a class="card" href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+        </a>
+      {{ end }}
+    </div>
+
+    <div class="ph-mermaid">flowchart TD
+  HOME[index2] --> WORK[projects]
+  HOME --> WRITING[articles]
+  WORK --> LIB[librarian]
+  WORK --> KIN[kin]
+  WORK --> MOOD[mood]
+  WRITING --> ART[article pages]
+  %% lorem mermaid placeholder — sitemap skeleton</div>
+  </main>
+{{ end }}

@@ -1,14 +1,25 @@
 +++
 title = "Kin"
-description = "Agent × Flutter chat interface. Real-time, Bridge-architected, session-aware."
+description = "Lorem ipsum dolor sit amet — chat interface placeholder."
 status = "active"
 date = 2026-07-01
 +++
 
-Kin is the chat interface between humans and agents. Built with Flutter, using a Bridge architecture for real-time communication.
+{{< lorem n=2 >}}
 
-**Key capabilities:**
-- Flutter UI with Bubble Viewer
-- Bridge architecture (Flutter ↔ Python)
-- Real-time agent responses
-- Session management with memory
+## Lorem heading
+
+{{< img label="kin — hero lorem" >}}
+
+{{< lorem n=1 >}}
+
+{{< mmd >}}
+flowchart TD
+  A[human] --> B[agent]
+  B --> C[lorem slot]
+  C --> D[response]
+{{< /mmd >}}
+
+## Another lorem heading
+
+{{< lorem n=2 >}}

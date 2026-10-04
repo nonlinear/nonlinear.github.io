@@ -1,0 +1,49 @@
+/* tokens.css — PROVISIONAL design tokens
+   Débito: alinhar à Pattern Library (epic pattern-alignment).
+   Baseline Material-ish: type scale, spacing, color, radii. */
+
+:root {
+  /* color — neutral ramp + brand accent */
+  --n-0:   #0a0a0a;
+  --n-10:  #141414;
+  --n-20:  #1f1f1f;
+  --n-30:  #2a2a2a;
+  --n-60:  #888;
+  --n-80:  #c8c8c8;
+  --n-100: #f2f2f2;
+  --accent: #ffd21e;         /* brand yellow — signal, not decoration */
+  --accent-dim: #8a7210;
+
+  --bg:        var(--n-0);
+  --fg:        var(--n-80);
+  --fg-strong: var(--n-100);
+  --fg-muted:  var(--n-60);
+  --line:      var(--n-30);
+
+  /* type scale (1.25 modular) */
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.25rem;
+  --fs-lg:   1.563rem;
+  --fs-xl:   1.953rem;
+  --fs-2xl:  2.441rem;
+  --fs-3xl:  3.052rem;
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* spacing (8pt grid) */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-4: 2rem;
+  --s-6: 3rem;
+  --s-8: 4rem;
+
+  /* radii + measure */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-full: 999px;
+  --measure: 44rem;
+}

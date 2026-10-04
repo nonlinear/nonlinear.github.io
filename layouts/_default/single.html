@@ -1,5 +1,11 @@
 {{ define "main" }}
+<article class="project">
+  {{ if eq .Section "projects" }}<p class="eyebrow">Project</p>{{ else }}<p class="eyebrow">Article</p>{{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p>{{ . }}</p>{{ end }}
-  <div>{{ .Content }}</div>
+  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+  <div class="ph-img">[ lorem image — {{ .Title }} hero ]</div>
+  <div class="content">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}

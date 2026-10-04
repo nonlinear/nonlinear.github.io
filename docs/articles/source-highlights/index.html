@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source Highlights — librarian cites, enumerates, and links sources — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+<script defer data-domain="nonlinear.nyc" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/index2/">Nonlinear</a>
+    <a href="/projects/">Projects</a>
+    <a href="/articles/">Articles</a>
+    <a href="https://nonlinear.nyc/personal/">/personal</a>
+  </nav>
+</header>
+<main>
+
+<article class="project">
+  <p class="eyebrow">Article</p>
+  <h1>Source Highlights — librarian cites, enumerates, and links sources</h1>
+  
+  <div class="ph-img">[ lorem image — Source Highlights — librarian cites, enumerates, and links sources hero ]</div>
+  <div class="content">
+    <h1 id="source-highlights">Source Highlights</h1>
+<h2 id="o-problema">O problema</h2>
+<p>Um artigo cita fontes. O normal é link no fim ou nota de rodapé.
+Aqui a intenção é diferente: <strong>cada fonte tem link + destaque + enumeração</strong> —
+o leitor vê de onde vem cada afirmação, com contexto do trecho relevante.</p>
+<p>Não é &ldquo;bibliografia&rdquo;. É <strong>rastreabilidade pública da pesquisa</strong> que gerou o artigo.</p>
+<h2 id="o-que-o-epic-cobre">O que o epic cobre</h2>
+<ul>
+<li>Padrão de citação no frontmatter ou shortcode: <code>&amp;#123;&amp;#123;&amp;lt; source &quot;url&quot; highlight=&quot;trecho destacado&quot; &amp;gt;&amp;#125;&amp;#125;</code></li>
+<li>Renderização no layout article: enumeração numérica, links clicáveis, destaque inline</li>
+<li>Opcional: highlights expandem em tooltip/hover (popover glossary style)</li>
+<li>Integração com librarian (semantic search → a source é um book chunk, o highlight é o parágrafo relevante)</li>
+</ul>
+<h2 id="o-que-não-cobre">O que NÃO cobre</h2>
+<ul>
+<li>O mecanismo de busca no librarian (isso é do librarian)</li>
+<li>A pipeline editorial (isso é do article-pipeline)</li>
+<li>Apenas a <strong>camada de apresentação</strong> da source no artigo</li>
+</ul>
+<h2 id="referências">Referências</h2>
+<ul>
+<li><code>librarian</code> — ferramenta de busca que encontra os chunks</li>
+<li><code>article/single.html</code> — layout que renderiza</li>
+<li><code>glossary popover system</code> — conceito similar (hover expansion)</li>
+<li><code>article-pipeline</code> — processo editorial que produz o artigo</li>
+<li><code>article-epic.md</code> (policy) — campos obrigatórios, quality gates</li>
+</ul>
+
+  </div>
+</article>
+
+</main>
+<footer>Nonlinear Studio · cognition bleeds</footer>
+</body>
+</html>
