@@ -1,14 +1,25 @@
 {{ define "main" }}
   <main class="home">
-    <p class="eyebrow">Nonlinear Studio</p>
-    <h1>Nonlinear</h1>
-    <p class="lede">Lorem ipsum dolor sit amet — this home is the LAST thing we design.</p>
-    <p class="tagline">cognition bleeds</p>
+    <p class="eyebrow">{{ .Site.Params.name }}</p>
+    <h1>{{ .Site.Params.name }}</h1>
+    <p class="lede">{{ .Site.Params.description }}</p>
+    <p class="tagline">{{ .Site.Params.slogan }}</p>
 
     <h2>Flagship products</h2>
     <div class="grid">
-      {{/* loop all flagship products — scalable: add/edit frontmatter, the page updates */}}
-      {{ range where .Site.RegularPages "Params.type" "flagship" }}
+      {{/* products where tier = flagship — stable, shipping */}}
+      {{ range where .Site.RegularPages "Params.tier" "flagship" }}
+        <a class="card" href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p>{{ with .Params.slogan }}{{ . }}{{ else }}{{ .Description }}{{ end }}</p>
+        </a>
+      {{ end }}
+    </div>
+
+    <h2>Experimental</h2>
+    <div class="grid">
+      {{/* products where tier = experimental — in evaluation */}}
+      {{ range where .Site.RegularPages "Params.tier" "experimental" }}
         <a class="card" href="{{ .RelPermalink }}">
           <h3>{{ .Title }}</h3>
           <p>{{ with .Params.slogan }}{{ . }}{{ else }}{{ .Description }}{{ end }}</p>

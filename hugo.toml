@@ -4,3 +4,12 @@ title = "Nonlinear"
 publishDir = "docs"
 disableKinds = ["sitemap", "rss", "taxonomy", "term"]
 disableHugoGeneratorInject = true
+
+# TODO(copy): hardcoded for now, duplicated from branding-exercise.
+#   Future: wire through ONE source of truth (see RESEARCH-doc-site-feedback-loop.md, P2).
+#   "nome do site, descricao do site, hardcoded, duplicada. futuro, a gente fala
+#    'na real, pega o conteudo daqui' logo ONE source of truth."
+[params]
+  name = "Nonlinear"
+  slogan = "cognition bleeds"
+  description = "Studio. Design, produto, pesquisa. Brand · Editorial · Systems."

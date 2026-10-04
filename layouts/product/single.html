@@ -1,9 +1,9 @@
 {{ define "main" }}
 <article class="project">
-  <p class="eyebrow">Flagship product</p>
+  <p class="eyebrow">{{ with .Params.tier }}{{ . }}{{ else }}product{{ end }}</p>
   <h1>{{ .Title }}</h1>
   {{ with .Params.slogan }}<p class="lede">{{ . }}</p>{{ end }}
-  <div class="ph-img">[ lorem image — {{ .Title }} hero ]</div>
+  {{ partial "components/figure.html" (dict "label" (printf "%s — hero" .Title)) }}
   <div class="content">{{ .Content }}</div>
 </article>
 {{ end }}
