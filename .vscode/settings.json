@@ -1,0 +1,11 @@
+{
+  "todo-tree.general.tags": ["TODO"],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "issue-opened",
+      "foreground": "#ffd21e",
+      "type": "text"
+    }
+  },
+  "todo-tree.general.enableFileWatcher": true
+}
