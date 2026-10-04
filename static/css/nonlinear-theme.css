@@ -1,0 +1,65 @@
+/* nonlinear-theme.css — THEME: maps the MUI/Material substrate tokens (--md-sys-*)
+   to this destination's CSS variables (--nl-*).
+
+   Per pattern-alignment §1.1: a theme maps substrate → destination. Changing this
+   theme must NEVER require touching a canonical component definition (theme isolation).
+
+   TODO(component): source --md-sys-* from the canonical substrate instead of
+   re-declaring values here → pattern-library component:theme */
+
+:root {
+  /* --- substrate roles (would come from MUI/Material theme model) --- */
+  --md-sys-color-primary:        #ffd21e;   /* brand yellow — signal, not decoration */
+  --md-sys-color-primary-dim:    #8a7210;
+  --md-sys-color-background:     #0a0a0a;
+  --md-sys-color-surface:        #141414;
+  --md-sys-color-on-surface:     #c8c8c8;
+  --md-sys-color-on-surface-strong: #f2f2f2;
+  --md-sys-color-on-surface-muted:  #888;
+  --md-sys-color-outline:        #2a2a2a;
+
+  --md-sys-typescale-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-sys-typescale-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --md-sys-typescale-xs:   0.75rem;
+  --md-sys-typescale-sm:   0.875rem;
+  --md-sys-typescale-base: 1rem;
+  --md-sys-typescale-md:   1.25rem;
+  --md-sys-typescale-lg:   1.563rem;
+  --md-sys-typescale-xl:   1.953rem;
+  --md-sys-typescale-2xl:  2.441rem;
+  --md-sys-typescale-3xl:  3.052rem;
+  --md-sys-typescale-weight-light:   300;
+  --md-sys-typescale-weight-regular: 400;
+  --md-sys-typescale-weight-medium:  500;
+  --md-sys-typescale-line-height: 1.6;
+  --md-sys-typescale-line-height-tight: 1.1;
+
+  --md-sys-spacing: 8px;
+  --md-sys-spacing-1: 0.5rem;
+  --md-sys-spacing-2: 1rem;
+  --md-sys-spacing-3: 1.5rem;
+  --md-sys-spacing-4: 2rem;
+  --md-sys-spacing-6: 3rem;
+  --md-sys-spacing-8: 4rem;
+
+  --md-sys-shape-radius-sm:   4px;
+  --md-sys-shape-radius-md:   8px;
+  --md-sys-shape-radius-full: 999px;
+
+  --md-sys-measure: 44rem;
+
+  /* --- destination mapping: --nl-* → --md-sys-* --- */
+  --nl-color-primary:      var(--md-sys-color-primary);
+  --nl-color-primary-dim:  var(--md-sys-color-primary-dim);
+  --nl-color-bg:           var(--md-sys-color-background);
+  --nl-color-surface:      var(--md-sys-color-surface);
+  --nl-color-fg:           var(--md-sys-color-on-surface);
+  --nl-color-fg-strong:    var(--md-sys-color-on-surface-strong);
+  --nl-color-fg-muted:     var(--md-sys-color-on-surface-muted);
+  --nl-color-line:         var(--md-sys-color-outline);
+
+  --nl-font:      var(--md-sys-typescale-font);
+  --nl-font-mono: var(--md-sys-typescale-font-mono);
+
+  --nl-measure: var(--md-sys-measure);
+}

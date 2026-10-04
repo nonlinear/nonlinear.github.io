@@ -1,4 +1,3 @@
-{{/* img — lorem image placeholder.
-     TODO(component): → pattern-library component:figure (image + caption) */}}
-{{ $label := .Get "label" | default "lorem image" }}
-<div class="ph-img">[ {{ $label }} ]</div>
+{{/* img — shortcode wrapper → partial components/figure.
+     Naming kept as `img` for content authors; maps to canonical Figure. */}}
+{{ partial "components/figure.html" (dict "label" (.Get "label") "caption" (.Get "caption")) }}

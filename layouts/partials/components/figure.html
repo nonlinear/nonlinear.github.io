@@ -1,0 +1,11 @@
+{{/* figure.html — canonical component: Figure (image + optional caption).
+     <!-- Canonical Component: Figure · Version: 0.0.1-provisional · Documentation: pattern-library (TBD) -->
+     TODO(component): replace provisional markup with canonical Figure → pattern-library component:figure
+
+     Variant isolation: geometry (aspect-ratio/width) per-variant, never shared base. */}}
+{{ $label := .label | default "lorem image" }}
+{{ $caption := .caption }}
+<figure>
+  <div class="ph-img">[ {{ $label }} ]</div>
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

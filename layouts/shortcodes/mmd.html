@@ -1,3 +1,2 @@
-{{/* mmd — mermaid placeholder.
-     TODO(component): renderizar mermaid real (client-side) — pattern-library component:diagram */}}
-<div class="ph-mermaid">{{ .Inner | htmlEscape }}</div>
+{{/* mmd — shortcode wrapper → partial components/diagram. */}}
+{{ partial "components/diagram.html" (dict "content" .Inner) }}
