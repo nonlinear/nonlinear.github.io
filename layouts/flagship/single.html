@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="project">
+  <p class="eyebrow">Flagship product</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.slogan }}<p class="lede">{{ . }}</p>{{ end }}
+  <div class="ph-img">[ lorem image — {{ .Title }} hero ]</div>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}

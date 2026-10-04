@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styleguide — content elements — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+<script defer data-domain="nonlinear.nyc" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/index2/">Nonlinear</a>
+    <a href="/projects/">Projects</a>
+    <a href="/articles/">Articles</a>
+    <a href="https://nonlinear.nyc/personal/">/personal</a>
+  </nav>
+</header>
+<main>
+
+<article class="styleguide">
+  <p class="eyebrow">Styleguide</p>
+  <h1>Styleguide — content elements</h1>
+  
+  <div class="content"><p>The full inventory of content elements the site must render. This page is the
+<strong>exercise</strong>: enumerate every element <em>before</em> designing it. Everything here is
+placeholders — the point is coverage, not beauty.</p>
+
+
+
+
+<h2 id="headings">Headings</h2>
+<p>The type scale (h1–h6) — one family, well used.</p>
+<h3 id="h3--section">H3 — section</h3>
+<h4 id="h4--sub-section">H4 — sub-section</h4>
+<h5 id="h5--rarely-used">H5 — rarely used</h5>
+<h6 id="h6--caption-scale">H6 — caption scale</h6>
+<h2 id="paragraphs">Paragraphs</h2>
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+
+<p>A paragraph with <strong>bold</strong>, <em>italic</em>, <code>inline code</code>, and a <a href="https://nonlinear.nyc">link</a>.
+Also <del>strikethrough</del>, H<del>2</del>O subscript, and E=mc^2^ superscript.</p>
+<h2 id="lists">Lists</h2>
+<p>Unordered:</p>
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit
+<ul>
+<li>Nested item — sed do eiusmod</li>
+<li>Nested item — tempor incididunt</li>
+</ul>
+</li>
+<li>Ut labore et dolore magna aliqua</li>
+</ul>
+<p>Ordered:</p>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Sed do eiusmod tempor</li>
+</ol>
+<p>Definition list:</p>
+<dl>
+<dt>Term</dt>
+<dd>Lorem ipsum dolor sit amet definition.</dd>
+</dl>
+<h2 id="blockquote">Blockquote</h2>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua.</p>
+<p>— Attribution, source</p>
+</blockquote>
+<h2 id="code">Code</h2>
+<p>Inline <code>const x = 1</code>. Block:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// fenced code block with language
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>// fenced code block, no language
+plain text preformatted
+</code></pre><p>Indented code (4 spaces) also supported by Markdown.</p>
+<h2 id="tables">Tables</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Element</th>
+					<th>Status</th>
+					<th>Notes</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Headings</td>
+					<td>draft</td>
+					<td>scale TBD</td>
+			</tr>
+			<tr>
+					<td>Lists</td>
+					<td>draft</td>
+					<td>nested ok</td>
+			</tr>
+			<tr>
+					<td>Tables</td>
+					<td>draft</td>
+					<td>responsive?</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="media">Media</h2>
+<p>Image (single):</p>
+
+
+<div class="ph-img">[ single image — figure ]</div>
+
+<p>Image with caption:</p>
+
+
+<div class="ph-img">[ image with caption ]</div>
+
+<p>Mermaid diagram:</p>
+
+<div class="ph-mermaid">
+flowchart TD
+  A[content element] --&amp;gt; B{renders?}
+  B --&amp;gt;|yes| C[done]
+  B --&amp;gt;|no| D[TODO]
+</div>
+
+<h2 id="dividers">Dividers</h2>
+<hr>
+<h2 id="footnotes">Footnotes</h2>
+<p>A sentence with a footnote.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="callouts">Callouts</h2>
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+
+<h2 id="embedded--interactive-later">Embedded / interactive (later)</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Lorem ipsum footnote text.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</div>
+</article>
+
+</main>
+<footer>Nonlinear Studio · cognition bleeds</footer>
+</body>
+</html>

@@ -1,49 +1,56 @@
-/* tokens.css — PROVISIONAL design tokens
+/* tokens.css — PROVISIONAL design tokens, modeled on the MUI theme shape.
    Débito: alinhar à Pattern Library (epic pattern-alignment).
-   Baseline Material-ish: type scale, spacing, color, radii. */
+
+   WHY MUI SHAPE: if our tokens follow MUI's theme model (palette /
+   typography / spacing / shape), then wiring through a Pattern Library
+   theme later is a value swap — not a re-architecture. We keep our
+   identity; the Library provides the substrate. (See RESEARCH file.)
+
+   Three layers (Vox model): token -> role -> value.
+   The tokens below are ROLES; the values are ours (provisional). */
 
 :root {
-  /* color — neutral ramp + brand accent */
-  --n-0:   #0a0a0a;
-  --n-10:  #141414;
-  --n-20:  #1f1f1f;
-  --n-30:  #2a2a2a;
-  --n-60:  #888;
-  --n-80:  #c8c8c8;
-  --n-100: #f2f2f2;
-  --accent: #ffd21e;         /* brand yellow — signal, not decoration */
-  --accent-dim: #8a7210;
+  /* palette — MUI-shaped: primary, background, text, divider */
+  --palette-primary-main:   #ffd21e;   /* brand yellow — signal */
+  --palette-primary-dim:    #8a7210;
+  --palette-background-default: #0a0a0a;
+  --palette-background-paper:   #141414;
+  --palette-text-primary:   #f2f2f2;
+  --palette-text-secondary: #c8c8c8;
+  --palette-text-disabled:  #888;
+  --palette-divider:        #2a2a2a;
 
-  --bg:        var(--n-0);
-  --fg:        var(--n-80);
-  --fg-strong: var(--n-100);
-  --fg-muted:  var(--n-60);
-  --line:      var(--n-30);
+  /* typography — MUI-shaped scale + weights */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-size-xs:   0.75rem;
+  --font-size-sm:   0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md:   1.25rem;
+  --font-size-lg:   1.563rem;
+  --font-size-xl:   1.953rem;
+  --font-size-2xl:  2.441rem;
+  --font-size-3xl:  3.052rem;
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --line-height-base: 1.6;
+  --line-height-tight: 1.1;
 
-  /* type scale (1.25 modular) */
-  --fs-xs:   0.75rem;
-  --fs-sm:   0.875rem;
-  --fs-base: 1rem;
-  --fs-md:   1.25rem;
-  --fs-lg:   1.563rem;
-  --fs-xl:   1.953rem;
-  --fs-2xl:  2.441rem;
-  --fs-3xl:  3.052rem;
+  /* spacing — 8pt grid, MUI spacing(n) = n * 8px */
+  --spacing: 8px;
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
+  --spacing-6: 3rem;
+  --spacing-8: 4rem;
 
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* shape */
+  --shape-radius-sm: 4px;
+  --shape-radius-md: 8px;
+  --shape-radius-full: 999px;
 
-  /* spacing (8pt grid) */
-  --s-1: 0.5rem;
-  --s-2: 1rem;
-  --s-3: 1.5rem;
-  --s-4: 2rem;
-  --s-6: 3rem;
-  --s-8: 4rem;
-
-  /* radii + measure */
-  --r-sm: 4px;
-  --r-md: 8px;
-  --r-full: 999px;
+  /* layout */
   --measure: 44rem;
 }
