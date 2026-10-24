@@ -2,7 +2,9 @@
 title: "Styleguide — content elements"
 type: page
 layout: styleguide
-url: "/styleguide/"
+url: /styleguide/
+date: 2026-10-04
+status: TB
 ---
 
 The full inventory of content elements the site must render. This page is the

@@ -1,0 +1,138 @@
+/* tier.css — cada tier tem um fundo claramente diferente.
+   Objetivo do owner: "make each tier and articles layout com bg colors bem
+   diferentes. daí a gente wire thru later no mock e vê o que funciona."
+
+   Regra: isto é MOCK. Cor aqui é sinal de leitura, não decisão de marca.
+   Quando um tier for desenhado de verdade, este bloco é substituído — o
+   template não muda (theme isolation, pattern-alignment §1.1). */
+
+/* --- base comum a todos os tiers --- */
+.tier {
+  --tier-bg: var(--nl-color-bg);
+  --tier-fg: var(--nl-color-fg);
+  --tier-fg-strong: var(--nl-color-fg-strong);
+  --tier-line: var(--nl-color-line);
+  --tier-accent: var(--nl-color-primary);
+  --tier-radius: 2px;
+
+  background: var(--tier-bg);
+  color: var(--tier-fg);
+  margin-inline: calc(var(--md-sys-spacing-2) * -1);
+  padding: calc(var(--md-sys-spacing-4)) var(--md-sys-spacing-2);
+  border-radius: var(--tier-radius);
+}
+
+.tier__head { border-bottom: 1px solid var(--tier-line); padding-bottom: var(--md-sys-spacing-2); margin-bottom: var(--md-sys-spacing-3); }
+.tier__kicker { color: var(--tier-accent); font-size: var(--md-sys-typescale-sm); margin: 0; letter-spacing: 0.02em; }
+.tier__title { color: var(--tier-fg-strong); margin: var(--md-sys-spacing-1) 0 0; }
+.tier__lede { color: var(--tier-fg); font-size: var(--md-sys-typescale-md); margin-top: var(--md-sys-spacing-1); }
+.tier__coda { margin-top: var(--md-sys-spacing-4); border-top: 1px solid var(--tier-line); padding-top: var(--md-sys-spacing-2); }
+.tier__foot { margin-top: var(--md-sys-spacing-4); }
+.tier__badge {
+  display: inline-block; font-size: var(--md-sys-typescale-xs); text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--tier-accent);
+  border: 1px solid var(--tier-accent); padding: 0.15em 0.5em; border-radius: 999px;
+}
+
+/* --- FLAGSHIP: escuro, âmbar, sólido --- */
+.tier--flagship {
+  --tier-bg: #0f1216;
+  --tier-fg: #d7dbe0;
+  --tier-fg-strong: #fdf6e3;
+  --tier-line: #2b3138;
+  --tier-accent: #ffd21e;
+  border: 1px solid var(--tier-line);
+}
+
+/* --- EXPERIMENTAL: claro, inverter o tema. Tracejado. --- */
+.tier--experimental {
+  --tier-bg: #f4f1ea;
+  --tier-fg: #2b2b2b;
+  --tier-fg-strong: #111;
+  --tier-line: #c9c2b4;
+  --tier-accent: #b4531a;
+  border: 2px dashed var(--tier-line);
+}
+
+/* --- ARTICLE: papel quente, medida estreita. --- */
+.tier--article {
+  --tier-bg: #fbf7ee;
+  --tier-fg: #33302b;
+  --tier-fg-strong: #131210;
+  --tier-line: #e2d9c6;
+  --tier-accent: #7a5230;
+  border: none;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+/* --- WRITING: mesma família do article, superfície de índice. --- */
+.tier--writing {
+  --tier-bg: #f6f1e4;
+  --tier-fg: #33302b;
+  --tier-fg-strong: #131210;
+  --tier-line: #ded3bd;
+  --tier-accent: #7a5230;
+  border: none;
+}
+
+/* --- COLLAB: roxo profundo, sigilo. --- */
+.tier--collab {
+  --tier-bg: #1b1230;
+  --tier-fg: #cfc6e6;
+  --tier-fg-strong: #f0ecfb;
+  --tier-line: #3b2c5c;
+  --tier-accent: #b39ddb;
+  border: 1px solid var(--tier-line);
+}
+
+/* --- DEFAULT: a cover. Superfície neutra, sem accent de tier. --- */
+.tier--default {
+  --tier-bg: transparent;
+  --tier-fg: var(--nl-color-fg);
+  --tier-fg-strong: var(--nl-color-fg-strong);
+  --tier-line: var(--nl-color-line);
+  --tier-accent: var(--nl-color-fg-muted);
+  border: none;
+}
+
+/* --- grid de cards (writing) --- */
+.tier__grid { display: grid; gap: var(--md-sys-spacing-2); }
+.tier__card {
+  display: block; padding: var(--md-sys-spacing-2);
+  border: 1px solid var(--tier-line); border-radius: var(--tier-radius);
+  background: color-mix(in srgb, var(--tier-bg) 92%, #fff 8%);
+}
+.tier__card h3 { margin: 0 0 var(--md-sys-spacing-1); color: var(--tier-fg-strong); }
+.tier__card p { margin: 0; color: var(--tier-fg); font-size: var(--md-sys-typescale-sm); }
+.tier__card-date { display: block; margin-top: var(--md-sys-spacing-1); font-size: var(--md-sys-typescale-xs); color: var(--tier-accent); }
+
+/* --- mock cover: geometria determinística, sem asset --- */
+.mock-cover {
+  margin: var(--md-sys-spacing-3) 0;
+  border: 1px solid var(--tier-line);
+  border-radius: var(--tier-radius);
+  background: color-mix(in srgb, var(--tier-bg) 85%, var(--tier-accent) 15%);
+}
+.mock-cover__grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px;
+  aspect-ratio: 16 / 7;
+}
+.mock-cover__grid span {
+  background: color-mix(in srgb, var(--tier-accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tier-line) 60%, transparent);
+}
+.mock-cover figcaption {
+  padding: var(--md-sys-spacing-1) var(--md-sys-spacing-2);
+  font-size: var(--md-sys-typescale-xs);
+  color: var(--tier-accent);
+  border-top: 1px solid var(--tier-line);
+}
+
+/* --- mock diagram --- */
+.mock-diagram { margin: var(--md-sys-spacing-3) 0; }
+.mock-diagram figcaption { font-size: var(--md-sys-typescale-xs); color: var(--tier-accent); }
+
+/* --- mock body: tipografia herda a do tier --- */
+.mock-body p, .mock-body h2 { color: var(--tier-fg); }
+.mock-body h2 { color: var(--tier-fg-strong); }

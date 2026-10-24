@@ -1,0 +1,73 @@
+/* tiers.css — cada tier tem fundo E estrutura próprios.
+   As regras abaixo estão separadas por tier e cada uma assume o HTML do seu
+   layouts/<tier>/single.html. Nada é compartilhado entre tiers de propósito:
+   se dois tiers precisarem da mesma regra, é sinal de que o HTML deve ser
+   igual — e aí não são dois tiers.
+
+   MOCK. Cor é sinal de leitura, não decisão de marca. */
+
+/* ══ FLAGSHIP — escuro, âmbar, prova + CTA ═══════════════════════════ */
+.t-flagship { background: #0d1013; color: #c9ced4; margin-inline: -8px; padding: 32px 24px; border: 1px solid #262d34; }
+.t-flagship__eyebrow { color: #ffd21e; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; margin: 0; }
+.t-flagship__title { color: #fffdf5; font-size: 2.6rem; line-height: 1.05; margin: .3em 0 .2em; }
+.t-flagship__slogan { color: #ffd21e; font-size: 1.15rem; margin: 0 0 .6em; }
+.t-flagship__lede { color: #9aa3ac; max-width: 46ch; }
+.t-flagship__proof { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: start; margin: 28px 0; }
+.t-flagship__facts { list-style: none; padding: 0; margin: 0; border-top: 1px solid #262d34; }
+.t-flagship__facts li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #262d34; font-size: .85rem; }
+.t-flagship__facts strong { color: #6f7883; font-weight: 400; }
+.t-flagship__facts span { color: #ffd21e; font-family: ui-monospace, monospace; }
+.t-flagship__body { max-width: 52ch; }
+.t-flagship__cta { margin-top: 40px; padding: 24px; background: #141a20; border-left: 3px solid #ffd21e; }
+.t-flagship__cta h2 { margin: 0 0 .4em; color: #fffdf5; }
+.t-flagship__cta-text { color: #9aa3ac; margin: 0 0 16px; }
+.t-flagship__button { display: inline-block; background: #ffd21e; color: #0d1013; padding: 10px 20px; font-weight: 600; border-radius: 2px; }
+
+/* ══ EXPERIMENTAL — claro, tracejado, aviso sem CTA ══════════════════ */
+.t-exp { background: #faf6ec; color: #33302b; margin-inline: -8px; padding: 24px; border: 2px dashed #cbbfa6; }
+.t-exp__banner { background: #ffe9c7; border-left: 4px solid #b4531a; padding: 12px 16px; margin-bottom: 28px; font-size: .9rem; color: #6b3410; }
+.t-exp__title { color: #1b1a17; font-size: 1.9rem; font-weight: 400; margin: 0 0 .3em; }
+.t-exp__lede { color: #5d574c; margin: 0 0 24px; font-style: italic; }
+.t-exp__body { max-width: 44ch; }
+.t-exp__gaps { margin-top: 32px; padding-top: 16px; border-top: 1px dotted #cbbfa6; max-width: 44ch; }
+.t-exp__gaps h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: #b4531a; margin: 0 0 .6em; }
+.t-exp__gaps ul { margin: 0; padding-left: 18px; }
+.t-exp__gaps li { margin-bottom: .4em; }
+
+/* ══ ARTICLE — papel, medida estreita (é para LER) ═══════════════════ */
+.t-article { background: #fdfbf6; color: #2f2c27; max-width: 33rem; margin: 0 auto; padding: 40px 28px; }
+.t-article__date { font-family: ui-monospace, monospace; font-size: .75rem; color: #8a7d63; letter-spacing: .08em; margin: 0 0 8px; }
+.t-article__title { color: #131210; font-size: 1.85rem; line-height: 1.15; margin: 0 0 .5em; }
+.t-article__standfirst { color: #5c554a; font-size: 1.1rem; line-height: 1.5; margin: 0 0 28px; border-bottom: 1px solid #eee4d2; padding-bottom: 20px; }
+.t-article__body p { line-height: 1.7; }
+.t-article__foot { margin-top: 40px; padding-top: 12px; border-top: 1px solid #eee4d2; font-size: .8rem; color: #8a7d63; }
+
+/* ══ COLLAB — roxo, ficha curta, sem corpo longo ═════════════════════ */
+.t-collab { background: #17102b; color: #c3b8dd; margin-inline: -8px; padding: 40px 28px; border-top: 3px solid #b39ddb; }
+.t-collab__seal { display: inline-block; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: #b39ddb; border: 1px solid #4a3a75; padding: 4px 10px; border-radius: 999px; margin: 0 0 24px; }
+.t-collab__title { color: #f2eefc; font-size: 2rem; margin: 0 0 .2em; }
+.t-collab__partner { color: #b39ddb; margin: 0 0 28px; }
+.t-collab__note { max-width: 40ch; font-size: .95rem; }
+
+/* ══ WRITING — índice: a página É uma lista ══════════════════════════ */
+.t-writing { background: #f6f1e4; color: #33302b; margin-inline: -8px; padding: 32px 24px; }
+.t-writing__eyebrow { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #7a5230; margin: 0 0 6px; }
+.t-writing__title { color: #131210; font-size: 2rem; margin: 0 0 .2em; }
+.t-writing__lede { color: #5d574c; margin: 0 0 28px; }
+.t-writing__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid #ded3bd; }
+.t-writing__item { border-bottom: 1px solid #ded3bd; }
+.t-writing__item a { display: grid; grid-template-columns: 7rem 1fr; gap: 4px 16px; padding: 14px 0; text-decoration: none; }
+.t-writing__date { grid-row: span 2; font-family: ui-monospace, monospace; font-size: .75rem; color: #a08b67; }
+.t-writing__name { color: #131210; font-size: 1.05rem; }
+.t-writing__desc { color: #5d574c; font-size: .85rem; }
+
+/* ══ DEFAULT — a cover, sem opinião de tier ══════════════════════════ */
+.t-cover { padding: 24px 0; }
+.t-cover__title { color: var(--nl-color-fg-strong); font-size: 2rem; margin: 0 0 .3em; }
+.t-cover__lede { color: var(--nl-color-fg-muted); margin: 0 0 24px; }
+
+/* ══ página de comparação ════════════════════════════════════════════ */
+.tiers-compare__intro { color: var(--nl-color-fg-muted); margin-bottom: 32px; }
+.tiers-compare__block { margin-bottom: 48px; }
+.tiers-compare__label { font-family: ui-monospace, monospace; font-size: .75rem; color: var(--nl-color-fg-muted); margin: 0 0 8px; }
+.tiers-compare__frame { width: 100%; height: 620px; border: 1px solid var(--nl-color-line); background: #fff; }

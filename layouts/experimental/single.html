@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{- /* EXPERIMENTAL — estrutura: aviso primeiro, conteúdo depois, sem CTA.
+   Ordem: banner de estado → título → corpo → o que não funciona → footer.
+   NÃO existe botão de instalar. A ausência de CTA É a diferença estrutural. */ -}}
+<article class="t-exp">
+  <aside class="t-exp__banner">
+    <strong>In evaluation.</strong> Lorem ipsum — use at your own risk.
+  </aside>
+
+  <header class="t-exp__head">
+    <h1 class="t-exp__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="t-exp__lede">{{ . }}</p>{{ end }}
+  </header>
+
+  <section class="t-exp__body">
+    {{ .Content }}
+    {{ partial "components/mock-body.html" . }}
+  </section>
+
+  <section class="t-exp__gaps">
+    <h2>What does not work yet</h2>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Consectetur adipiscing elit.</li>
+      <li>Sed do eiusmod tempor.</li>
+    </ul>
+    {{ partial "components/mock-diagram.html" (dict "label" (printf "%s — sketch" .Title)) }}
+  </section>
+</article>
+{{ end }}

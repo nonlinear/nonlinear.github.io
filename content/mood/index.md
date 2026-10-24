@@ -1,19 +1,36 @@
 ---
 title: "Mood"
-type: product
-tier: experimental
-slogan: "Lorem ipsum dolor sit amet."
-description: "Lorem ipsum — case study coming."
-date: 2026-08-01
-order: 3
-aliases:
-  - /projects/mood/
+type: experimental
+description: "Image curation and visual reference. Board by feel, not by folder."
+date: 2026-10-23
+status: TB
 ---
 
-{{< lorem n=2 >}}
+In the same way that a well-designed object reveals how it wants to be held,
+this product reveals how it wants to be used before anyone reads a word. That is
+the whole ambition: cognition that shows itself in the surface.
 
-## Lorem heading
+## What it is
 
-{{< img label="mood — hero" >}}
+It began as an internal instrument and stayed one. The shape came from use, not
+from specification — every part that survived is a part someone reached for more
+than once. What follows is a description of that shape.
 
-{{< lorem n=2 >}}
+## How it works
+
+Three movements, in order. First the intake, where material arrives unformed.
+Then the reduction, where it is made small enough to hold. Finally the return,
+where it goes back out into the same world that produced it.
+
+```mermaid
+flowchart LR
+  A[intake] --> B[reduction]
+  B --> C{holds?}
+  C -->|yes| D[return]
+  C -->|no| B
+```
+
+## Status
+
+Working, with the usual caveats. Nothing here asks for attention it has not
+earned, and nothing claims to be finished.

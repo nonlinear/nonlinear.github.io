@@ -1,0 +1,107 @@
+# data/agents.yaml — quem tem página, e em qual tier.
+#
+# Fonte de verdade do tier: <agent>/workspace/IDENTITY.md (campo `tier:`),
+# decidido top-down pelo owner (backstage P02E034). Este arquivo NÃO inventa
+# tier — registra o que foi declarado, e marca `derived: true` quando o tier
+# não está escrito e foi inferido do papel do agente (horizontal que serve,
+# sem produto, não é flagship).
+#
+# TODO(owner): confirmar os `derived: true`. Nenhum deles é decisão minha.
+
+defaults:
+  tier_missing: experimental   # agente sem tier escrito e sem papel → experimental
+  derived_tier: experimental
+
+# --- TIER DECLARADO no IDENTITY.md ---
+declared:
+  - slug: librarian
+    name: Librarian
+    tier: flagship
+    role: "Semantic book search. Private. Local. BYOB."
+  - slug: kin
+    name: Kin
+    tier: flagship
+    role: "Chat with your agents. Real-time, session-aware."
+  - slug: backstage
+    name: Backstage
+    tier: flagship
+    role: "Governance. Epics, parity, taxonomy."
+  - slug: nonlinear
+    name: Nonlinear
+    tier: flagship
+    role: "The studio itself."
+  - slug: mood
+    name: Mood
+    tier: experimental
+    role: "Case study coming."
+  - slug: mesa
+    name: Mesa
+    tier: experimental
+    role: "Table. Working surface."
+  - slug: susu
+    name: Susu
+    tier: experimental
+    role: "Weekly module. Operations."
+  - slug: illo
+    name: Illo
+    tier: experimental
+    role: "Illustration. Under comics."
+  - slug: poster
+    name: Poster
+    tier: collab
+    secured: true
+    role: "Teixeira Kalkhoff Editions. Collaboration."
+  - slug: nugrau
+    name: Nugrau
+    tier: collab
+    secured: true
+    role: "Collaboration tier."
+
+# --- TIER DERIVADO (sem `tier:` escrito; inferido do papel) ---
+# Horizontais que servem, não produzem. Por P02E034 §1 não são flagship:
+# flagship = "existe e é estável" como PRODUTO. Estas são capacidades internas.
+derived:
+  - slug: infrastructure
+    name: Infrastructure
+    role: "Host, tunnels, services, runtime."
+  - slug: interface
+    name: Interface
+    role: "Substrate → destination. Theme, tokens, components."
+  - slug: cyborg-support
+    name: Cyborg Support
+    role: "Onboarding, members, telemetry."
+  - slug: oracle
+    name: Oracle
+    role: "Research and reference."
+  - slug: topology
+    name: Topology
+    role: "Structure of the ecosystem."
+  - slug: studies
+    name: Studies
+    role: "Longitudinal study."
+  - slug: radar
+    name: Radar
+    role: "Signal watching."
+  - slug: home
+    name: Home
+    role: "The household."
+  - slug: gardening
+    name: Gardening
+  - slug: biology
+    name: Biology
+  - slug: dromology
+    name: Dromology
+  - slug: gevulot
+    name: Gevulot
+  - slug: curva
+    name: Curva
+  - slug: money
+    name: Money
+    role: "Personal finance."
+  - slug: ring
+    name: Ring
+  - slug: wiley
+    name: Wiley
+  - slug: main
+    name: Main
+    role: "Coordination."

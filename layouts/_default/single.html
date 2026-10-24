@@ -1,10 +1,14 @@
 {{ define "main" }}
-<article class="project">
-  {{ if eq .Section "projects" }}<p class="eyebrow">Project</p>{{ else }}<p class="eyebrow">Article</p>{{ end }}
-  <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
-  <div class="ph-img">[ lorem image — {{ .Title }} hero ]</div>
-  <div class="content">
+{{- /* DEFAULT — a COVER. A página que não declara tipo.
+   Estrutura mínima: título → resumo → conteúdo cru. Sem opinião de tier.
+   É o fallback do Hugo para qualquer página sem layout — por isso ela tem que
+   ser a mais neutra possível. */ -}}
+<article class="t-cover">
+  <header class="t-cover__head">
+    <h1 class="t-cover__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="t-cover__lede">{{ . }}</p>{{ end }}
+  </header>
+  <div class="t-cover__body">
     {{ .Content }}
   </div>
 </article>

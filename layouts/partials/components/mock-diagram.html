@@ -1,0 +1,14 @@
+{{- /* components/mock-diagram.html — MOCK diagram (mermaid).
+   Mesmo mecanismo do render-codeblock-mermaid: ```mermaid → <pre class="mermaid">.
+   Mermaid já está carregado no baseof. Só dados fake. */ -}}
+{{- $label := .label | default "diagram" -}}
+<figure class="mock-diagram">
+  <pre class="mermaid">
+flowchart LR
+  A[{{ $label }}] --> B[ingest]
+  B --> C{stable?}
+  C -->|yes| D[flagship]
+  C -->|no| E[experimental]
+  </pre>
+  <figcaption>{{ $label }}</figcaption>
+</figure>

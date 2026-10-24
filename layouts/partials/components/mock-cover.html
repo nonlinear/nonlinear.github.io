@@ -1,0 +1,11 @@
+{{- /* components/mock-cover.html — MOCK cover geometry.
+   Placeholder visual até existir imagem real. Determinístico por título:
+   mesmo slug → mesmo desenho, sem asset, sem JS. */ -}}
+{{- $t := .title | default "untitled" -}}
+{{- $seed := len $t -}}
+<figure class="mock-cover" data-seed="{{ $seed }}">
+  <div class="mock-cover__grid" aria-hidden="true">
+    {{ range seq 1 12 }}<span></span>{{ end }}
+  </div>
+  <figcaption>{{ $t }}</figcaption>
+</figure>

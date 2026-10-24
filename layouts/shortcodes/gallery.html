@@ -1,0 +1,22 @@
+{{/* gallery — image grid from a page bundle or /static/img.
+     Usage:
+       {{< gallery >}}
+       img/articles/slug/a.webp | Caption one
+       img/articles/slug/b.webp | Caption two
+       {{< /gallery >}}
+     Each line: <src> | <caption>  (caption optional). Rendered as <figure> in a CSS grid. */}}
+<div class="gallery">
+{{- range split (trim .Inner "\n") "\n" }}
+  {{- $line := trim . " " }}
+  {{- if $line }}
+    {{- $parts := split $line "|" }}
+    {{- $src := trim (index $parts 0) " " }}
+    {{- $cap := "" }}
+    {{- if gt (len $parts) 1 }}{{ $cap = trim (index $parts 1) " " }}{{ end }}
+  <figure>
+    <img src="/{{ $src }}" alt="{{ $cap }}" loading="lazy" decoding="async">
+    {{ with $cap }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+  {{- end }}
+{{- end }}
+</div>

@@ -9,15 +9,20 @@
        TODO(component): alinhar à Pattern Library (epic pattern-alignment). */}}
   <link rel="stylesheet" href="/css/nonlinear-theme.css">
   <link rel="stylesheet" href="/css/base.css">
-<script defer data-domain="nonlinear.nyc" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+  <link rel="stylesheet" href="/css/tiers.css">
+<script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+  {{/* Mermaid: GitHub-compatible diagram rendering (layouts/_default/_markup/render-codeblock-mermaid.html).
+       Client-side, same model as GitHub markdown — ```mermaid blocks become <pre class="mermaid">.
+       Pinned version; swap to build-time SVG if JS-free rendering is ever required. */}}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+  </script>
 </head>
 <body>
 <header>
   <nav>
-    <a href="/index2/">Nonlinear</a>
-    <a href="/projects/">Projects</a>
-    <a href="/articles/">Articles</a>
-    <a href="https://nonlinear.nyc/personal/">/personal</a>
+    <a href="/">Nonlinear</a>
   </nav>
 </header>
 <main>

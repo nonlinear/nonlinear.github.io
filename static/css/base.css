@@ -100,3 +100,13 @@ footer { margin-top: var(--md-sys-spacing-8); border-top: 1px solid var(--nl-col
   font-family: var(--nl-font-mono); font-size: var(--md-sys-typescale-xs); color: var(--nl-color-fg-muted);
   white-space: pre-wrap;
 }
+
+/* gallery — image grid (shortcode: gallery.html) */
+.gallery { display: grid; gap: var(--md-sys-spacing-3); margin-top: var(--md-sys-spacing-4); }
+@media (min-width: 40rem) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+.gallery figure { margin: 0; }
+.gallery img { display: block; width: 100%; height: auto; border-radius: var(--md-sys-shape-radius-md); }
+
+/* blockquote — book citation (attribution line) */
+blockquote p:last-child em:only-child { display: block; font-style: normal; font-size: var(--md-sys-typescale-sm); color: var(--nl-color-fg-muted); margin-top: var(--md-sys-spacing-2); }

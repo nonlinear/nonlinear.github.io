@@ -1,0 +1,6 @@
+{{/* render-codeblock-mermaid.html — GitHub-compatible mermaid code blocks.
+     ```mermaid ... ``` → <pre class="mermaid">, rendered client-side by mermaid.js
+     loaded in baseof.html. Same behaviour as GitHub markdown. */}}
+<pre class="mermaid">
+{{- .Inner | htmlEscape | safeHTML -}}
+</pre>
