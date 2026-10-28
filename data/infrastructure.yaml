@@ -1,0 +1,145 @@
+project: infrastructure
+tier: experimental
+exporter: v1.0
+counts:
+  active: 10
+  planning: 10
+  done: 3
+  done_total: 41
+sections:
+- key: active
+  items:
+  - id: ADV-domain-watch-alerting
+    label: 1
+    title: Advisory — domain-watch alerting design (owner question)
+    goal: TBD
+  - id: INCIDENT-20261015-cf-access-blocks-voice
+    label: 2
+    title: CF Access 403 blocks Pebble /voice at the edge (3045.nonlinear.nyc)
+    goal: TBD
+  - id: P08E007
+    label: 3
+    title: Provider Routing — do OpenCode Go (limite mensal) ao OpenRouter (créditos)
+    goal: TBD
+  - id: P08E008
+    label: 4
+    title: Skill Inventory — consolidar folders, frontmatter, triggers e inventário de scripts
+    goal: 'Consolidar o sistema de skills do Studio num ÚNICO folder canônico que seja, ao mesmo tempo,
+      (a) registry do OpenClaw, (b) folder do Syncthing e (c) vault do Obsidian — eliminando a duplicação
+      de folders. Depois: frontmatter que torna skills ACHÁVEIS, triggers com verbo, inventário de scripts→skills
+      (não tudo numa skill), e um Markdown atualizado que enumere como rodar todos os scripts BYPASSANDO
+      skills.'
+  - id: P08E009
+    label: 5
+    title: Pulse Agent — weekly victory lap & trend viewer
+    goal: 'Operate as the horizontal data agent. Collect from: infrastructure (system health), backstage
+      (epics), finances (money), models (OpenRouter). Produce: weekly pulse.html (browser + email).'
+  - id: P08E011
+    label: 6
+    title: Pi Dreams — migration spike for pi.dev
+    goal: Simulate a migration of the Nonlinear Studio stack from OpenClaw to pi.dev, preserving the same
+      emergent capabilities (skills, MCPs, multi-agent, bridge, heartbeats, pulse).
+  - id: P08E014
+    label: 7
+    title: Fuck Latency — latência local confiável e nimble
+    goal: 'Provar que dá para ter algo CONFIÁVEL e NIMBLE, próprio pra local. Braço 1-4 (MLX vs llama.cpp,
+      cloud vs local, 2B vs 35B) + Braço 5 (pipeline de voz end-to-end: STT + modelo burro + TTS, NESTA
+      máquina).'
+  - id: P08E015
+    label: 8
+    title: Routing Healthcheck
+    goal: Tornar routing uma política declarativa materializada automaticamente, com health checks fornecendo
+      apenas elegibilidade. Classifica falhas de provider (EXHAUSTED/INELIGIBLE/TRANSIENT/AVAILABLE) que
+      o OpenClaw 2026.5.18 não distingue.
+  - id: P08E016
+    label: 9
+    title: Spawn Hygiene
+    goal: Todo spawn tem timeout explícito, marca estado no fim, e é limpo no restart do pai. CLI e Gateway
+      concordam sobre o ledger. A regra vira policy compartilhada para TODOS os agentes.
+  - id: P08E021
+    label: 10
+    title: Dumb Models — selection and criteria
+    goal: 'Definir o CRITÉRIO para escolher "dumb models" (pequenos, locais) e pesquisar os candidatos
+      atuais. Critério = os 4 workloads reais: skills, home assistant, triage (todo), librarian. Língua
+      é critério próprio (herdado de poverty-cognition-tax).'
+- key: planning
+  items:
+  - id: P08E001
+    label: 1
+    title: MCP Manager — adotar um gerenciador de MCP (default, sem profile)
+    goal: 'PRODUTO standalone (padrão Kin Bridge) que fornece o que o OpenClaw não tem: grupos de agentes
+      com config que reverbera (routing, mcp, model). Consolida o grouping de routing (default, wiley)
+      + MCP groups + configs por grupo. Publicável.'
+  - id: P08E005
+    label: 2
+    title: OpenClaw Upgrade & Migration — 2026.5.18 → latest (2.0+) [UNIFICADO]
+    goal: 'Migrate the gateway from OpenClaw 2026.5.18 (node v22) to latest (2026.9.x) WITHOUT a parallel
+      second deployment. The current install is the migration object: solid checkpoint/rollback, observe
+      after upgrade, revalidate T001 on the latest, and only then decide any runtime patch. No clearing
+      of "old" anything until the latest proves itself.'
+  - id: P08E010
+    label: 3
+    title: Agent Merge — pulse + sous → susu 🐾
+    goal: Merge pulse (ex-radar, horizontal data collector) and sous (local worker) into a single agent
+      susu 🐾. Horizontal agent that monitors and presents monitoring of and for projects.
+  - id: P08E012
+    label: 4
+    title: Susu Longitudinal — temporal analysis of persistent observations
+    goal: Susu Longitudinal transforma observações persistentes e comparáveis do Susu em análise baseada
+      em tempo. Consome os artefatos estruturados produzidos por Weekly (YAML semanais) e Report (corpus
+      persistente), e produz Trend / Pattern / Comparison / Aggregate / Discovery — sem nunca modificar
+      observações históricas.
+  - id: P08E013
+    label: 5
+    title: Susu Report — asynchronous skill-driven input/report system
+    goal: 'Susu Report é o sistema de input/report assíncrono e skill-driven do Susu: um único endereço
+      (susu@nonlinear.nyc) recebe emails; o subject identifica a Report Skill; body/attachments são o
+      input; a skill define processamento, evidência, artefato, persistência e formato. Delivery modifier
+      ''!'' devolve o report por email. Complexidade vive na skill, não no protocolo de email.'
+  - id: P08E017
+    label: 6
+    title: Susu App — native share-sheet dispatcher for AI operations
+    goal: Susu is a native share-sheet dispatcher for asynchronous AI operations. It accepts shared content,
+      suggests appropriate Reports, lets the user choose, and dispatches the selected Report through Kin
+      Bridge to the Susu/OpenClaw runtime. The app is the universal entry point to your AI infrastructure
+      from any device.
+  - id: P08E018
+    label: 7
+    title: Susu Mastodon Intake — external feed as sensor for Susu
+    goal: 'Make Mastodon (and eventually Reddit, RSS, Telegram, clipboard) an intake channel for Susu.
+      The nonlinear encounters content on Mastodon, forwards it to susu@ with a #subject, and Susu treats
+      it as any other encounter — same dispatch, same reports, same boundaries. Mastodon is a sensor,
+      not a feature.'
+  - id: P08E019
+    label: 8
+    title: Susu Mood — proveniência visual para o corpus Mood
+    goal: 'Susu entrega imagens com proveniência para o Mood consumir. Não substitui o Mood. URL → RSS/Atom
+      → conteúdo → imagem → stamp visual → ~/Pictures/mood/. A imagem É o artefato: o stamp (source +
+      captured + published) está DENTRO dela, em pixels. Nada externo.'
+  - id: P08E020
+    label: 9
+    title: Susu Reel Report — elevator discovery to personal corpus
+    goal: Turn something interesting discovered on Instagram/TikTok/RedNote into a durable, addressable,
+      cross-platform object. The Reel Report captures source (link + platform + timestamp), content (transcript
+      + tags + title), and artifacts — building a personal discovery corpus independent of any platform's
+      algorithm. Platform-agnostic by design.
+  - id: P08E046
+    label: 10
+    title: OpenClaw SRE — Reliability Engineering para Nonlinear Studio
+    goal: O incidente de PNG corruption (2026-07-13) revelou que OpenClaw pode quebrar silenciosamente
+      o core agent loop sem detecção prévia. O downgrade resolveu, mas não preveniu. Este epic institucionaliza
+      os 4 temas SRE (Workbook ch.41) para...
+- key: done
+  items:
+  - id: e006_20260630
+    label: 1
+    title: Web Search Infrastructure
+    goal: Self-hosted SearXNG for reliable web search, zero latency, zero cost, maximum agency
+  - id: vpn
+    label: 2
+    title: VPN
+    goal: 'Precisamos de acesso remoto que:'
+  - id: e004_20260521
+    label: 3
+    title: VNC via Cloudflare Access
+    goal: '**Current state:**'

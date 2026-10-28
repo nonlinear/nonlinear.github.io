@@ -1,0 +1,98 @@
+project: illo
+tier: experimental
+exporter: v1.0
+counts:
+  active: 4
+  planning: 8
+  done: 1
+  done_total: 1
+sections:
+- key: active
+  items:
+  - id: 3d-sketch-tools
+    label: 1
+    title: 3D Sketch Tools — sketch 3D para ilustração e comic
+    goal: 'Avaliar ferramentas de sketch 3D para ilustração/comic e decidir quais entram no stack. Foco:
+      a etapa de construção de forma e perspectiva — a lacuna que CSP e Krita não cobrem. Critério: ou
+      a ferramenta entra no fluxo do usuário (e com qual papel), ou é rejeitada com motivo.'
+  - id: P22E003
+    label: 2
+    title: CSP Mastery — Dominando o Clip Studio Paint
+    goal: 'Dominar o Clip Studio Paint (CSP) no fluxo do usuário: saber ler e interagir com arquivos .clip
+      sem depender só do app, entender e montar uma Library própria (que hoje parece confusa), ter environment
+      e tools do agente sempre persistidos, ter uma galeria rápida de backgrounds/patterns reutilizáveis,
+      e mapear o que falta configurar para um ambiente CSP completo e produtivo.'
+  - id: experimental
+    label: 3
+    title: projeto experimental (illo.nonlinear.nyc) + MVP
+    goal: 'Transformar o illo em projeto EXPERIMENTAL de verdade: declarar o tier, publicar em illo.nonlinear.nyc
+      usando o MESMO padrão de exposição do mood (tunnel → localhost, sem Cloudflare Access, rate limit),
+      e entregar o MVP mínimo — o "walking skeleton" — que prova o essencial: caneta → pressão → linha
+      vetorial → arquivo → reabre igual.'
+  - id: math-friendly
+    label: 4
+    title: math-friendly by construction (desenho e math juntos)
+    goal: 'Descobrir o que faz uma feature ser "math friendly" — não como meta aspiracional, mas como
+      propriedade verificável — e usá-la como filtro de desenho para brush, query e filtros que a comunidade
+      vai escrever. Referência central: Scriptographer (Lehni & Puckey), que fez exatamente isso para
+      Illustrator e foi morto pelo host, não pelo desenho.'
+- key: planning
+  items:
+  - id: P22E005
+    label: 1
+    title: Git-friendly — epic de planejamento (drawing as repo)
+    goal: 'Deep dive em "drawing as repo" p/ o illo: o que É um file nesse modelo, como o Git vira MEMÓRIA
+      do desenho (granularidade de commit, branch = histórias alternativas, HEAD auto-export), como colaboração/social
+      = git, e decidir o melhor approach (git-native vs version-control-native — provocação do Clustta).'
+  - id: csp-features
+    label: 2
+    title: CSP Features & Materials — Entender, Baixar e Sincronizar
+    goal: Entender o sistema de materiais/features do Clip Studio Paint (tipos, formatos, onde ficam),
+      como baixar do Clip Studio Assets, e como guardar/sincronizar tudo via Syncthing no setup do usuário
+      (Oppo/Android + Mac).
+  - id: git-native-illustration
+    label: 3
+    title: Git-Native Illustration — Discovery (taxonomia git-friendly)
+    goal: 'Investigar a taxonomia de "git-native illustration": o que é arquivo vs repo, o que é HEAD/working-tree/revision/branch/fork/merge,
+      autosave vs commit, onde o repo vive (browser/fs/servidor/remote/Syncthing), e se Git no browser
+      é suficiente (isomorphic-git + LightningFS/ZenFS/OPFS). Decidir browser-first vs app COM BASE na
+      taxonomia e limitação real, não preferência. NÃO construir antes do discovery.'
+  - id: illo
+    label: 4
+    title: App aberto de desenho (vector ink, AI-native, folder-friendly)
+    goal: 'Avaliar/projetar um app próprio de desenho (name: illo) construído sobre primitives OPEN (Pointer
+      Events + InkML + libmypaint/brush engine), em vez de depender de CSP/Krita/Penpot fechados. Requisitos:
+      pen+pressure, vector ink, brush engine, layers, formato aberto, arquivo em pasta (Syncthing Mac↔Android),
+      AI-editable (agente lê/cria/modifica documento), mobile-friendly.'
+  - id: ux-grammar
+    label: 5
+    title: UX grammar (muscle memory × hand-eye coordination)
+    goal: Definir o CONTRATO entre gesto e corpo antes de desenhar gestos. A pergunta não é "qual gesto
+      é bonito" — é "quais condições o corpo exige para incorporar a ferramenta, e o que quebra essa incorporação".
+  - id: krita
+    label: 6
+    title: Krita Analysis — vs Clip Studio Paint + Scriptability
+    goal: 'Análise comparativa Krita vs Clip Studio Paint sob a ótica do estudo de ilustração do usuário:
+      onde o Krita é melhor que o CSP, se/quão editável via API (Python scripting, formato .kra), vector
+      brushes/layers, "erase to intersection", e se/como CSP e Krita trocam arquivos.'
+  - id: P22E006
+    label: 7
+    title: Pressure Sensitivity — epic de planejamento (taxonomia + contenders)
+    goal: 'Deep dive em pressure sensitivity p/ o illo: o que É, como se REGISTRA (capture→representação→mapping→render/edit),
+      o que cada contender promete vs entrega, e decidir o melhor approach p/ o MVP (web, vector, pressure).
+      Fronteira: este epic é o lado INPUT/REGISTRO/MAPPING; o lado brush-engine/ swap/missing pertence
+      ao epic vector-brushes ("brush = font").'
+  - id: vector-brushes
+    label: 8
+    title: Vector Brushes — Contract-Discovery (container de exploração)
+    goal: 'Exploration/CONTRACT-DISCOVERY (não invenção de engine): descobrir o que existe de vector brushes
+      (engines, formatos, presets) e o que podemos REUTILIZAR/ADAPTAR. Definir o CONTRATO de dependência
+      entre .illo, strokes e brushes — incluindo swap, missing brush, e o raster thumbnail de cabeçalho.
+      Tese: brush = fonte.'
+- key: done
+  items:
+  - id: mvp-erase
+    label: 1
+    title: 'MVP: erase to intersection'
+    goal: Um app de desenho offline em que tocar uma linha a corta no cruzamento mais próximo de cada
+      lado. Provar que isso basta para desenhar de verdade.

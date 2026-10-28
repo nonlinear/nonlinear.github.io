@@ -1,0 +1,113 @@
+project: money
+tier: experimental
+exporter: v1.0
+counts:
+  active: 10
+  planning: 7
+  done: 3
+  done_total: 5
+sections:
+- key: active
+  items:
+  - id: money_401k_early
+    label: 1
+    title: 401k early withdrawal — quanto sobra de verdade
+    goal: Dar o número líquido real (USD e BRL) de um saque total/parcial do 401k, com custo efetivo por
+      faixa, para decisão informada.
+  - id: money_401k_rollover_stride
+    label: 2
+    title: 401k Rollover — Stride Consulting (Ascensus/PAi) → destino a decidir
+    goal: Tirar o dinheiro da conta órfã da Ascensus com Direct Rollover (sem tocar no dinheiro), para
+      o destino que minimize custo e maximize controle — 401k da Wiley (Vanguard) ou IRA próprio.
+  - id: money_55_aos_55
+    label: 3
+    title: Aos 55 vs agora — simulação dos dois cenários
+    goal: Entregar o sum de cada cenário em dólar e reais, com premissas explícitas, para o dono escolher
+      o timing.
+  - id: P04E001
+    label: 4
+    title: Automation Platform
+    goal: 'Sistema financeiro integrado: MCPs operacionais + Paperless + Actual + SimpleFIN + roadmap
+      Brasil'
+  - id: P04E002
+    label: 5
+    title: Automation Platform
+    goal: Plataforma sobre a qual todas as capabilities rodam — conectores, event bus, automação
+  - id: P04E003
+    label: 6
+    title: Financial Intelligence
+    goal: Visibilidade automática da saúde financeira — pulse semanal + alerts de anomalia
+  - id: P04E005
+    label: 7
+    title: Principal — Mid-Month Mortgage Principal Prepayment
+    goal: Calcular impacto de prepayment quinzenal/mid-month no principal, anos economizados, juros poupados
+  - id: P04E006
+    label: 8
+    title: 401k Rollover — Old Employer → Current
+    goal: Consolidar 401k antigo no plano atual para simplificar gestão, reduzir fees, e ter controle
+      sobre investimentos
+  - id: P04E007
+    label: 9
+    title: Fraud Detection — Kartas/Liens suspeitos do Kings County
+    goal: Confirmar se as cartas são fraude, documentar, e proteger dados/contas. Nunca pagar sem verificação
+      oficial.
+  - id: P04E008
+    label: 10
+    title: Home Upkeep — 511 Evergreen 2C
+    goal: Decidir escopo e custo das pendências de casa — pagar à vista vs financiar — sem comprometer
+      prioridade
+- key: planning
+  items:
+  - id: P04E010
+    label: 1
+    title: Enrich Paperless — Definição da Estrutura Semântica (taxonomia + metadata + critérios)
+    goal: Um arquivo-morto com estrutura semântica desenhada pelas perguntas que faremos — não um despejo
+      de OCR. Tags estáveis, fatos estruturados extraíveis, e um índice semântico que responde perguntas
+      reais. Trabalho único de configuração; depois o sistema opera continuamente sobre novos documentos.
+  - id: P04E014
+    label: 2
+    title: Paperless + MLX — AI config with MLX server
+    goal: Conectar o Paperless no NAS ao MLX server (Mac) para classificação automática de documentos
+      — tags, correspondent, document type, AI content suggestions.
+  - id: P04E015
+    label: 3
+    title: Co-Living — Thriving in Community
+    goal: '1️⃣[Survey: What Exists] --> 2️⃣[Stories & History]'
+  - id: P04E016
+    label: 4
+    title: Group Outings — Friends' Hangout Fund
+    goal: Pote de amigos pra rolês — contribuição voluntária, sem pressão financeira. Lubrificar o 'vamos
+      sair' sem que uma pessoa vire o pagador padrão.
+  - id: P04E017
+    label: 5
+    title: Transaction Anomalies — Detection System
+    goal: 'Um sistema de detecção de anomalias financeiras — roda em regime contínuo (tipo antivírus),
+      classifica o que merece atenção do que não merece, e informa. Não começa do zero: parte de heurísticas
+      já existentes (livros + corpus do Librarian) e modula a sensibilidade.'
+  - id: P04E019
+    label: 6
+    title: Folding Table — Coworking Fridays
+    goal: Escolher e comprar uma mesa que (a) sente o grupo do coworking de sexta, (b) dobre/recolha quando
+      fora de uso, (c) caiba no apartamento — sem comprometer a prioridade Rio.
+  - id: P04E020
+    label: 7
+    title: Job Hunting — Full Remote, Maior Renda
+    goal: Trocas de emprego por um full-remote melhor pago, com pipeline de leads gerenciado (ticketing),
+      posicionamento e materiais prontos — decisão informada, sem achismo.
+- key: done
+  items:
+  - id: finances-and-legal_paperless-ai
+    label: 1
+    title: Paperless AI — Qwen local via LAN (semantic search + chat)
+    goal: 'Um arquivo-morto conversável e auto-organizado: buscar por sentido, conversar com documentos,
+      auto-classificar. TUDO local/privado ($0, fora da cloud). OpenClaw continua o cérebro financeiro
+      consumindo via API.'
+  - id: finances-and-legal_nyswoes
+    label: 2
+    title: NYS Woes
+    goal: Recuperar ~8 anos de NJ state tax pagos indevidamente
+  - id: finances-and-legal_nysrefinancing
+    label: 3
+    title: NYS Refinancing — quitação à vista do levy
+    goal: Quitar NYS à vista, encerrar o payment plan $1,036×60 e reciclar o fluxo mensal em máquina dupla
+      (401k loan 6.75% + mid-mortgage 4.5%)

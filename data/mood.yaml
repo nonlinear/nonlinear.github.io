@@ -1,0 +1,91 @@
+project: mood
+tier: experimental
+exporter: v1.0
+counts:
+  active: 3
+  planning: 8
+  done: 3
+  done_total: 4
+sections:
+- key: active
+  items:
+  - id: P13E004
+    label: 1
+    title: Reels — Personal Reference-Media Collection (source-agnostic)
+    goal: 'Um índice visual pessoal de mídia referenciada, pesquisável e navegável por tags. Source-agnostic:
+      Instagram é o primeiro provider, RedNote/TikTok/ YouTube podem seguir. Não armazena o vídeo — referência
+      + metadata + tags que apontam pro host original, servidos em reels.nonlinear.nyc.'
+  - id: P13E008
+    label: 2
+    title: Charcoal — Aprender Arte com Carvão & Materiais
+    goal: Expandir o agente mood para cobrir aprendizado de arte — começando com carvão, depois expandindo
+      para materiais, técnicas e escolas de desenho/pintura em NYC.
+  - id: P13E009
+    label: 3
+    title: Configuration
+    goal: Auditar o ecossistema de MCPs e skills do agente Mood, documentar acesso, resolver bloqueios
+      e sugerir novos tools para manter o gallery e expandir capacidades.
+- key: planning
+  items:
+  - id: P13E001
+    label: 1
+    title: Mood — Visual Collection Engine
+    goal: Mood é uma engine de visualização de coleções. Cada path seleciona uma coleção + um visualizador.
+      / é a experiência pública default. Outros paths existem sem serem divulgados (unlisted, não private).
+      Capacidade funcional cresce sem multiplicar superfície operacional.
+  - id: P13E002
+    label: 2
+    title: Reference Pictures — hidden single-image viewer
+    goal: Adicionar /references como visualizador alternativo no mood engine. Uma imagem por vez, aleatória,
+      troca a cada 30min. Sem link, sem README — hidden path. Quem sabe sabe.
+  - id: P13E003
+    label: 3
+    title: Charcoal Drawing — study and reference
+    goal: Coletar e organizar livros de referência sobre desenho a carvão. Alguns já existem no Librarian.
+      Outros precisam ser baixados.
+  - id: P13E005
+    label: 4
+    title: Update Reels — Scraping periódico (Instagram) + pensar RedNote
+    goal: Montar um scraping periódico que "limpa" os Saves do Instagram (detecta novos reels salvos e
+      os injeta no índice do reels.nonlinear.nyc), e pensar/planejar o provider adapter do RedNote. É
+      o contraponto do epic `reels` (que usa só o corpus Markdown já curado, sem scraping).
+  - id: P13E006
+    label: 5
+    title: Reels Design — Visual/UX do viewer e thumbnail/modal
+    goal: 'Definir e construir a camada cosmética do Reels: o viewer (grade/busca por tags), o thumbnail
+      e o modal de visualização da mídia referenciada. A parte técnica (import, SQLite, deploy, launchd/php
+      :3002, git) já está fechada e versionada no epic reels.md — este epic NÃO reabre arquitetura, separa
+      apenas o trabalho visual que fica para depois.'
+  - id: P13E010
+    label: 6
+    title: Hashtag Vocabulary Layer (media-taxonomy-engine)
+    goal: 'Definir a Hashtag Vocabulary Layer como parte do ingestion pipeline (não um cleaner): uma camada
+      taxonomy/controlled-vocabulary (SKOS-aligned) que enriquece as tags RAW de qualquer fonte (Instagram,
+      RedNote, YouTube, Reddit) com conceitos/aliases/traduções — no mesmo nível dos adapters de fonte.
+      Planejar, não agir ainda.'
+  - id: P13E015
+    label: 7
+    title: Traffic Cap & Rate Limiting
+    goal: 'Implement graceful degradation when traffic exceeds capacity: rate limiting (Nginx + Cloudflare)
+      and a ''too busy'' fallback.'
+  - id: P13E016
+    label: 8
+    title: Immich library conversion — review of immich-convert-originals
+    goal: Decidir se, e como, aplicar immich-convert-originals (JXL/AVIF/AV1) à biblioteca Immich do NAS
+      — com números medidos, não estimativas de README.
+- key: done
+  items:
+  - id: e003_20260422
+    label: 1
+    title: Public Connection & Traffic Management
+    goal: Set up secure, performant public access to the inspiration gallery with proper traffic management
+      and monitoring.
+  - id: mood-public-gallery_20260713
+    label: 2
+    title: Mood — Public Gallery
+    goal: mood.nonlinear.nyc acessível publicamente, servido do Mac Studio sem expor IP ou abrir portas,
+      com recuperação automática e código aberto em github.com/nonlinear/mood.
+  - id: e001_20260422
+    label: 3
+    title: Initial Setup
+    goal: 'Launch `mood.nonlinear.nyc` with:'

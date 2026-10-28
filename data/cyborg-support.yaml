@@ -1,0 +1,66 @@
+project: cyborg-support
+tier: experimental
+exporter: v1.0
+counts:
+  active: 3
+  planning: 5
+  done: 3
+  done_total: 4
+sections:
+- key: active
+  items:
+  - id: P03E002
+    label: 1
+    title: Governance — Forgejo Git-based Knowledge Commons
+    goal: Draft administrative + access-layer + permission + naming governance for the Knowledge Commons,
+      manifested by a Forgejo git server
+  - id: P03E003
+    label: 2
+    title: Knowledge Base
+    goal: Federated registry to discover already-built / half-built projects and files, via MCP at mcp.cyborg.support
+  - id: P03E011
+    label: 3
+    title: Configuration
+    goal: Audit, document, and expand cyborg-support's access to skills, MCPs, and tools — ensuring it
+      can run everything it needs to support cyborg workflows.
+- key: planning
+  items:
+  - id: P03E005
+    label: 1
+    title: Financing Opportunities
+    goal: Identify, evaluate and prioritise funding/grant opportunities that advance Cyborg Support's
+      goals — the financing layer the project has not yet designed.
+  - id: P03E006
+    label: 2
+    title: Benchmarks — Local LLM Benchmark Reports from the Community
+    goal: Design and ship an automatic, membership-part-of pipeline that collects standardized local-LLM
+      benchmark reports from community devices (hardware stack + per-engine/per-model stats) into the
+      members repo — privacy-preserving, schema-first, cron-driven, publishable via token/API without
+      a local checkout — so the club can build reports and calculations (and emergent properties) on top
+      of the data.
+  - id: P03E010
+    label: 3
+    title: Calendar and Events
+    goal: Event scheduling and calendar for Office Hours and Study Group sessions
+  - id: P03E012
+    label: 4
+    title: Generic Hugo
+    goal: 'Reusable Hugo site pattern: GitHub Pages deploy, calendar, how-to articles, Reveal.js presentations'
+  - id: P03E019
+    label: 5
+    title: Study Group
+    goal: Peer learning community for advanced cyborg techniques
+- key: done
+  items:
+  - id: e007_20260630
+    label: 1
+    title: Site Tutorials
+    goal: How-to guides for using the Hugo springboard features
+  - id: e005_20260630
+    label: 2
+    title: Reveal.js
+    goal: Presentation system using Reveal.js for cyborg workflows
+  - id: e002_20260630
+    label: 3
+    title: Hugo Site
+    goal: Documentation hub for cyborg workflows and patterns

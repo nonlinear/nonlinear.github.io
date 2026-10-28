@@ -1,0 +1,41 @@
+project: gardening
+tier: experimental
+exporter: v1.0
+counts:
+  active: 3
+  planning: 0
+  done: 3
+  done_total: 4
+sections:
+- key: active
+  items:
+  - id: P05E001
+    label: 1
+    title: Configuration
+    goal: Mapear, auditar e documentar o ecossistema de ferramentas, MCPs, skills e integrações do agente
+      Gardening — diagnosticar o que funciona, o que está quebrado, e o que falta instalar.
+  - id: P05E006
+    label: 2
+    title: Program Design
+    goal: Design evidence-based training program based on assessment results
+  - id: food-forest
+    label: 3
+    title: Food Forest
+    goal: Munir o agente de todo o conhecimento (livros, MCPs, tooling, alerts, dados) necessário para
+      projetar e executar um food forest — sem pressa, com plantio real a partir da primavera de 2027.
+- key: planning
+  items: []
+- key: done
+  items:
+  - id: e001_20260511
+    label: 1
+    title: Personalize Agent
+    goal: 'Interactive workflow to customize personal-trainer agent: goals, tools, skills, connections'
+  - id: e004_20260511
+    label: 2
+    title: Integrations
+    goal: Automate workout scheduling, randomization, and TTS announcements
+  - id: gardening_20260717
+    label: 3
+    title: Gardening Books Wishlist
+    goal: Baixar livros de jardinagem/compostagem/adubação orgânica pro Librarian

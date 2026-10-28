@@ -1,0 +1,27 @@
+project: gevulot
+tier: experimental
+exporter: v1.0
+counts:
+  active: 2
+  planning: 0
+  done: 0
+  done_total: 0
+sections:
+- key: active
+  items:
+  - id: P06E001
+    label: 1
+    title: Configuration
+    goal: Auditar, documentar e sugerir melhorias no ecossistema de MCPs, skills e ferramentas dos agentes
+      OpenClaw — mapeando quem tem acesso a o quê, quais gaps existem, e recomendando novos tools com
+      prioridade.
+  - id: P06E003
+    label: 2
+    title: Configuration
+    goal: Auditar, documentar e sugerir melhorias no ecossistema de MCPs, skills e ferramentas dos agentes
+      OpenClaw — mapeando quem tem acesso a o quê, quais gaps existem, e recomendando novos tools com
+      prioridade.
+- key: planning
+  items: []
+- key: done
+  items: []

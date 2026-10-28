@@ -1,0 +1,101 @@
+project: interface
+tier: experimental
+exporter: v1.0
+counts:
+  active: 10
+  planning: 8
+  done: 0
+  done_total: 0
+sections:
+- key: active
+  items:
+  - id: P19E001
+    label: 1
+    title: Font Management — Substrate (self-host, folder-friendly, Penpot × HTML)
+    goal: 'Decisão do dono (2026-08-15): novo epic de font management para o substrate.'
+  - id: P19E002
+    label: 2
+    title: Interface — Front-End Compiler 'Dragon' 🐉 (projeto horizontal)
+    goal: M+N (hub) em vez de M×N (teia). Produto novo com front-end = 1 theme/backend
+  - id: P19E005
+    label: 3
+    title: Penpot — Governança do Design System (permissões online + font library)
+    goal: o Dragon governa o Penpot
+  - id: P19E011
+    label: 4
+    title: Figma Depletion — component discovery pass on ReX (foundation → partials)
+    goal: Recuperado em 2026-08-18 (heartbeat) da sessão a3e37585 — o write original foi
+  - id: P19E014
+    label: 5
+    title: Architecture — What the Compiler IS (arquitetura conceitual do compiler)
+    goal: 'Síntese do dono (2026-08-29): viemos discutindo o COMO (methodology,'
+  - id: P19E015
+    label: 6
+    title: Glossary Compiler — Design System → Compiler (tradução semântica)
+    goal: 'Abordagem (dono 16:36): NÃO fazer apenas ''Design System → Compiler''.'
+  - id: P19E017
+    label: 7
+    title: Transcode — Figma → Hugo (source-of-truth migration, under components)
+    goal: TBD
+  - id: P19E018
+    label: 8
+    title: Transcode — Pagination (Figma → Hugo)
+    goal: TBD
+  - id: TBD
+    label: 9
+    title: Component documentation — how to
+    goal: TBD
+  - id: interface_documentation_as_target_20260825
+    label: 10
+    title: Documentation as Target — one canonical documentation contract, emitted by a docs compiler
+    goal: (what the dragon books actually support)
+- key: planning
+  items:
+  - id: P19E003
+    label: 1
+    title: Front-End Compiler 'Dragon' — serve componentes Material p/ Rex E Kin (cada um com seu tema)
+    goal: Um projeto/agente que, dado um componente Material (definido no IR/Rosetta
+  - id: P19E004
+    label: 2
+    title: Front-End Compiler 'Dragon' — substrate Material+texto; convergência front-end
+    goal: 'Dragon é um agente PETNA horizontal (shadow project): mantém as ferramentas que garantem CONVERGÊNCIA
+      do front-end — visual, textual e de roteamento (style router). A partir de um P15E002 (Material
+      UI sem React + linguagem/texto como componente de design), serve componentes a qualquer projeto
+      COM FRONT-END (Rex, Kin, P14E006 site, mood, ...), cada um como um theme do mesmo P15E002. Projeto
+      dedicado (A17); P14E006 é dono do projeto + cliente. Responsável por convergência, não por posse.
+      Backstage fora (A16). Design system = compiler quando código (A19).'
+  - id: P19E012
+    label: 3
+    title: Documentation as Target — one canonical documentation contract, emitted by a docs compiler
+    goal: (what the dragon books actually support)
+  - id: P19E013
+    label: 4
+    title: Infograph Framework — review & selection of charting framework compatible with MUI
+    goal: 'Goal: select charting framework(s) for infographics, compatible with MUI and fitting the'
+  - id: P19E028
+    label: 5
+    title: Nonlinear–Interface Subscription — first client of the Pattern Library
+    goal: Serve clients the canonical component substrate from the Pattern Library, and convert what they
+      build into canon. Nonlinear is the first client; the model must hold for the next one without being
+      redesigned.
+  - id: P19E027
+    label: 6
+    title: Component Relationship
+    goal: Resolve and represent the relationships between components — the dependency graph (uses:/used-by),
+      the Wiley product consumer axis, and the schema + fitness checks that keep those relations true
+      — so the Pattern Library can answer 'what depends on what, and who uses it' deterministically.
+  - id: nonlinear_20261004-epic-contract-on-code
+    label: 7
+    title: Epic Contract on Code
+    goal: 'Estender o marcador TODO de débito para carregar o id do epic que o pagará. Os comentários
+      de débito tornam-se extensão do contrato do epic, direto no código — backstage lê a codebase e recolhe.
+      Move faster: documenta débito no lugar onde dói, paga epic por epic.'
+  - id: P19E024
+    label: 8
+    title: Synthetic User Testing
+    goal: 'Programmatic Synthetic User Testing (PSUT) — a continuous experimental benchmark of a knowledge
+      system (currently the Pattern Library skill + documentation): can a fresh (amnesic) agent traverse
+      skill + documentation and operate the system correctly? Not human UX research — synthetic-agent
+      usability testing, executed programmatically.'
+- key: done
+  items: []

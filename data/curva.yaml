@@ -1,0 +1,87 @@
+project: curva
+tier: experimental
+exporter: v1.0
+counts:
+  active: 4
+  planning: 10
+  done: 0
+  done_total: 0
+sections:
+- key: active
+  items:
+  - id: P20E001
+    label: 1
+    title: Setup & Pipeline — Vídeocast
+    goal: Define a reproducible capture setup (host cameras, flat-top magazine camera, remote local recording)
+      and a deterministic pipeline that turns timestamped sources into a proto-edit.
+  - id: P20E002
+    label: 2
+    title: MVP — Vídeocast
+    goal: 'Deliver the smallest artifact that validates the format: one recorded episode, composed (magazine
+      + participants), delivered as a proto-edit.'
+  - id: P20E003
+    label: 3
+    title: Tooling — Vídeocast
+    goal: Choose and own the editing/automation tooling (ffmpeg, Resolve scripting, Remotion, agentic
+      video editing) and the technical book library that supports it.
+  - id: P20E006
+    label: 4
+    title: Craft Suite Spike
+    goal: Provar se FilmCraft + ffmpeg sustentam o pipeline do videocast (gravacao, sync por timecode,
+      composite radial, proto-edicao) sob os criterios B1-B6, com SoundCraft fora do caminho critico.
+- key: planning
+  items:
+  - id: P20E004
+    label: 1
+    title: A Curva — podcast (feed RSS na secção `curva` do Hugo pessoal)
+    goal: 'Entregar A Curva ao vivo: gravar 45-60 min de conversa em pt-BR com um agente de voz, sem edicao,
+      e publicar como feed RSS na secao `curva` do Hugo pessoal.'
+  - id: P20E005
+    label: 2
+    title: Agent Host — testar o melhor agente para apresentar
+    goal: Escolher o agente que apresenta A Curva testando a matriz modelo x persona (facilitator e co-host)
+      por latencia, pt-BR, custo e estabilidade.
+  - id: P20E008
+    label: 3
+    title: Episode Manifest — high legibility por episódio
+    goal: Fazer cada episodio carregar seu proprio registro (stack, custos, prompts, livros, fontes, gravacoes,
+      value_debt) gravado durante o pipeline, com campo nao medido declarado unknown.
+  - id: P20E010
+    label: 4
+    title: Voice Training — treinar a voz (minha e do agente)
+    goal: Treinar a performance vocal para microfone -- minha voz e a do agente -- para 45-60 min continuos
+      e dialogo com TTS em 24 kHz, sem confundir com terapia fonoaudiologica.
+  - id: P20E011
+    label: 5
+    title: Spike S2S — MVP de conversa por voz + transcript de lado + pack de features
+    goal: Provar com numero que S2S em nuvem serve para conversa pt-BR de 45-60 min, entregando de brinde
+      um transcript timestampado montado ao lado (STT paralelo) e o pack de metadados de podcast (chapters,
+      transcript, soundbite, person) como output do mesmo pipeline.
+  - id: P20E012
+    label: 6
+    title: Hardware — captura de voz em um take, sem post-produção
+    goal: Escolher e comprar o caminho de captura de voz que garanta o maximo de qualidade em um so take,
+      sem post-producao bespoke, cabendo em mala de viagem (Brasil por 2 meses).
+  - id: P20E013
+    label: 7
+    title: Voice Prod — pipeline de voz para produção (hardware + software), self-hosted e FOSS
+    goal: Escolher e montar a cadeia repetível que transforma o take cru de cada episódio em áudio publicável
+      (-16 LUFS, TP <= -1.5 dBTP) sem edição bespoke, preferindo self-hosted/FOSS a hardware que prenda
+      o dono em casa.
+  - id: P20E014
+    label: 8
+    title: Visions — A Curva em três anos (três línguas, audiência que participa)
+    goal: 'Guardar o imaginário de sucesso do vídeocast e derivar dele o que falta no desenho de hoje:
+      o tenet de audiência, as portas de participação e cinco cenários de estudo expansivo.'
+  - id: P20E015
+    label: 9
+    title: Librarian como cérebro do agente — MCP remoto para Gemini Live
+    goal: TBD
+  - id: P20E016
+    label: 10
+    title: RSS Support Matrix — 'Can I Use' para o namespace de podcast (e por que ainda não existe)
+    goal: Responder, com dados vivos, quais players e apps suportam quais tags do podcast namespace, para
+      decidir o que o nosso feed usa — e publicar a matriz como commons, já que a única fonte existente
+      cobre hosts de publicação e não players de escuta.
+- key: done
+  items: []

@@ -1,0 +1,48 @@
+project: mesa
+tier: experimental
+exporter: v1.0
+counts:
+  active: 5
+  planning: 0
+  done: 1
+  done_total: 1
+sections:
+- key: active
+  items:
+  - id: P12E001
+    label: 1
+    title: Analytics — PostHog Adoption
+    goal: Adotar PostHog self-hosted como substrato de eventos da frota — definir eventos, queries e integração
+      nos workflows dos epics ativos
+  - id: P12E003
+    label: 2
+    title: Configuration
+    goal: Analisar, auditar e documentar todos os MCPs, skills e ferramentas disponíveis para o agente
+      mesa, identificar gaps, e sugerir novas tools com prioridade.
+  - id: P12E006
+    label: 3
+    title: Projection Interface — Spatial Augmented Reality
+    goal: Pesquisar e desenvolver sistema de projeção computacional com câmera + projetor calibrados para
+      interfaces gráficas sobre objetos físicos
+  - id: P12E009
+    label: 4
+    title: Mesa — experimental project + mesa.nonlinear.nyc bench
+    goal: 'Tornar `mesa` um projeto EXPERIMENTAL formal (tier declarado, group nonlinear-studio) e dar-lhe
+      a superfície pública mínima de um experimental: `mesa.nonlinear.nyc` servindo um bench HTML. O primeiro
+      experimento do bench é a página que pede permissão de câmera — o ponto de entrada do eixo Projection
+      Interface (P12E006: camera → CV → homography → projector). Em paralelo, fixar o que é MVP do Mesa
+      em candidatos rastreáveis a literatura, para que o bench seja montado a partir do MVP e não o contrário.'
+  - id: P12E010
+    label: 5
+    title: Hardware — Projetores, câmeras e dispositivos de projeção-com-câmera
+    goal: 'Ser a fonte única para decisões de hardware de captura+projeção do Studio: o que existe à venda,
+      o que existe em pesquisa, o que não existe e precisa ser construído. Cada dispositivo avaliado vira
+      uma nota com specs verificadas, fonte e veredito rastreável a um experimento.'
+- key: planning
+  items: []
+- key: done
+  items:
+  - id: e001_20260630
+    label: 1
+    title: Branding & Presentation Materials
+    goal: Complete brand identity, pitch deck, and investor materials

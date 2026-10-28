@@ -1,0 +1,112 @@
+project: biology
+tier: experimental
+exporter: v1.0
+counts:
+  active: 9
+  planning: 7
+  done: 1
+  done_total: 1
+sections:
+- key: active
+  items:
+  - id: P17E001
+    label: 1
+    title: Configuration — Fitness Agent SSOT
+    goal: Auditar, documentar e expandir o acesso do agente Fitness a skills, MCPs e ferramentas — garantindo
+      que ele pode gerar treinos, pesquisar ciência do esporte, planejar nutrição, e integrar com calendário/reminders
+      com o máximo de recursos disponíveis.
+  - id: P17E003
+    label: 2
+    title: Configuration — Cooking Agent SSOT
+    goal: Inventariar, auditar e expandir o acesso do agente Cooking a MCPs, skills, livros e ferramentas
+      — garantindo que ele pode buscar receitas, rastrear compras, calcular custos de pratos, pesquisar
+      ciência da nutrição, e integrar com o ecossistema de food prep.
+  - id: P17E008
+    label: 3
+    title: Food Passport / Dishes — Information Shadow & Source-of-Truth Contract
+    goal: 'Every cooked dish has a persistent information shadow in NocoDB. QR code on container → card
+      view with full story: recipe, ingredients, cost, batches, eat history. Food Passport is the concept
+      name; Dishes is the data model. NocoDB is derived data, not system of record.'
+  - id: P17E009
+    label: 4
+    title: Cooking System — Audit Contract
+    goal: 'Contract that defines the auditability architecture: artifact chain, freeze rules, merge discipline,
+      and provenancial links. Core ontology: Grocery is potential demand. Pantry is current inventory.
+      Batch is the assembly of inventory into food, evolving from potential to actual through the Epic
+      lifecycle. Every actual quantity crossing these boundaries must be recorded.'
+  - id: P17E011
+    label: 5
+    title: Consolidation & Reconciliation — Dead Epic Cleanup
+    goal: Eliminar epics obsoletos/duplicados, consolidar contratos vivos, e reconciliar barcodes pendentes
+      no Grocy.
+  - id: P17E015
+    label: 6
+    title: Rigatoni Soup — LOTE-RIG-001
+    goal: Produzir e congelar a Rigatoni Soup (RP-016) usando os ingredientes que o usuário já tem (tomato,
+      rigatoni, ginger, carrot, couve-flor, fish broth). Aproveita os 2 ingredientes que nenhuma sopa
+      usava (couve-flor + fish broth) + técnica validada do carrot-ginger (CE-003).
+  - id: P17E016
+    label: 7
+    title: Health Stats — Blood Work & Vitals
+    goal: Ingerir e consolidar dados clínicos de saúde (blood work/labs, vitals, meds) vindos do Healow
+      patient portal, para correlacionar com treino e nutrição e dar visibilidade de tendências ao longo
+      do tempo.
+  - id: P17E017
+    label: 8
+    title: Configuration
+    goal: Auditar skills, MCPs e configuracoes do ecossistema OpenClaw — identificando o que o agente
+      style tem acesso, o que falta, e propondo novas ferramentas.
+  - id: P17E020
+    label: 9
+    title: Harm Reduction — Acervo e Crítica ao Modelo de Doença
+    goal: Consolidar no acervo do Librarian a literatura de harm reduction de verdade — historiografia
+      do movimento, crítica neurocientífica ao modelo de doença da addiction, e etiologia do trauma.
+- key: planning
+  items:
+  - id: P17E004
+    label: 1
+    title: Automation
+    goal: 'Automate repetitive Grocy operations: receipt OCR → purchase recording, price history tracking,
+      freezer sensor integration, and scheduled batch reminders.'
+  - id: P17E005
+    label: 2
+    title: Cooking Agent
+    goal: Cooking Agent conecta Grocy (estado) + Librarian (conhecimento) para meal planning, batch cooking,
+      shopping list, cost queries, e consultas culinárias — tudo conversacional.
+  - id: P17E006
+    label: 3
+    title: Food Cost Accounting
+    goal: Calcular o custo real de produção de uma receita/batch usando preço histórico de compra, conversão
+      de unidades, rendimento culinário, e quantidade efetivamente utilizada.
+  - id: P17E007
+    label: 4
+    title: Nutrition Intelligence
+    goal: Integrate nutrition data (USDA SR Legacy, Open Food Facts) with Grocy products — per-batch macros,
+      meal-level tracking, agent queries for 'what has the most protein per dollar'.
+  - id: P17E012
+    label: 5
+    title: Batch Epic Type — Lifecycle Customization
+    goal: Especializar o modelo de epics do OpenClaw para o domínio de cozinha. Batch Epic é um tipo de
+      epic com semântica própria de status, campos específicos, e regras de imutabilidade. Não é um sistema
+      novo — é uma especialização.
+  - id: P17E013
+    label: 6
+    title: Food System Post-Mortem — integration test (após 4 soups + TRAYBAKE-V1)
+    goal: Transformar a produção dos 4 soups + TRAYBAKE-V1 em um teste de campo do sistema de Food Passport
+      / Pantry Allocation. Avaliar se a cadeia compra → produto → ingrediente → allocation → batch → produção
+      → consumo → freezer → refeição manteve alta auditabilidade. Produzir, se necessário, o contrato
+      v2 do Food System (invariantes, não apenas lições).
+  - id: P17E014
+    label: 7
+    title: FULFILLMENT-ALERT — Perishable ingredients after purchase
+    goal: Sistema de alerta para evitar que ingredientes perecíveis comprados para um Batch Epic permaneçam
+      no Pantry sem serem transformados em comida congelada. Não cozinha. Não muda o status do Batch.
+      Não cria pressão contínua. Detecta quando uma compra transformou um plano futuro em uma obrigação
+      temporal.
+- key: done
+  items:
+  - id: fitness_migration_20260630
+    label: 1
+    title: Wellness → Fitness Migration
+    goal: Migrar todo o conteúdo do old Backstage (wellness) + agente personal-trainer para o novo agente
+      fitness, seguindo o método PETNA.

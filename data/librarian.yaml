@@ -1,0 +1,122 @@
+project: librarian
+tier: flagship
+exporter: v1.0
+counts:
+  active: 6
+  planning: 10
+  done: 3
+  done_total: 28
+sections:
+- key: active
+  items:
+  - id: P10E024
+    label: 1
+    title: Proof Layer (Contract Hardening + Reader V1)
+    goal: 'Fechar o Proof Layer ponta-a-ponta: Search → Evidence → citation.url → Reader → texto visível
+      na posição correta com highlight. Contract Hardening (locator íntegro, proof determinístico) + Reader
+      V1 (materializar o trecho exato, highlight 800ms centralizado, zero chrome). Contrato do locator
+      é a peça central.'
+  - id: bindery-acquisition
+    label: 2
+    title: Bindery Acquisition
+    goal: 'Tornar o Bindery um canal de aquisição confiável e mensurável: saber quanto ele realmente cobre,
+      por que os livros ficam em `wanted`, e rodar batches de download sem intervenção manual — fechando
+      o loop até o índice (intake).'
+  - id: indexing-master
+    label: 3
+    title: Indexing — Master Epic
+    goal: One door into indexing. There are four epics touching this machine's index and no single place
+      that says what is true *now*, what is broken, and in what order to fix it. This epic holds the live
+      measurement, the failure taxonomy, and the sequence — and delegates detail to the four.
+  - id: librarian-readme
+    label: 4
+    title: Librarian
+    goal: A BYOB (Bring Your Own Books) semantic search for your personal library.
+  - id: publication-postflight
+    label: 5
+    title: Publication Postflight — repo landing + doc parity fixes
+    goal: TBD
+  - id: librarian_20260714-reader
+    label: 6
+    title: Proof Layer (Contract Hardening + Reader V1)
+    goal: 'Fechar o Proof Layer ponta-a-ponta: Search → Evidence → citation.url → Reader → texto visível
+      na posição correta com highlight. Contract Hardening (locator íntegro, proof determinístico) + Reader
+      V1 (materializar o trecho exato, highlight 800ms centralizado, zero chrome). Contrato do locator
+      é a peça central.'
+- key: planning
+  items:
+  - id: librarian_book_identity_permalinks
+    label: 1
+    title: Book Identity & Durable Permalinks
+    goal: Permalinks duráveis apoiados em IDENTIDADE BIBLIOGRÁFICA PADRONIZADA — não reinventar a roda.
+      ISO/OL/DOI já resolvem identidade de livro. O trabalho é mapear cada TIPO de fonte para o identificador
+      canônico existente e preservá-lo no sistema.
+  - id: P10E007
+    label: 2
+    title: DB Optimization — Memória & Latência do Motor FAISS
+    goal: 'Otimizar o motor de busca vetorial FAISS do Librarian: reduzir footprint de memória (4.4 GiB
+      RSS, maior consumidor do Colima), baixar latência, e consolidar a arquitetura de retrieval/persistência
+      do índice. Epic HEAD que agrega os sub-epics de otimização de DB/search como notes.'
+  - id: P10E008
+    label: 3
+    title: Evidence & Provenance Model
+    goal: 'Define como uma afirmação mantém ligação verificável com sua origem. Camada central do Librarian:
+      Evidence, Source, Locator, CitationTarget.'
+  - id: P10E011
+    label: 4
+    title: Index Optimization — Batching, Caching, Progressive Publication
+    goal: 'O indexador atual leva ~15h e deixa o corpus indisponível. Três problemas: embedding sem batch
+      (25x slowdown), sem cache de embeddings (crash perde tudo), FAISS só no final (corpus offline).
+      Consertar cada um.'
+  - id: P10E014
+    label: 5
+    title: Librarian Platform
+    goal: 'Definir e estabilizar o Librarian como uma plataforma microkernel: um núcleo mínimo (Core Service
+      :8088) que hospeda capabilities como extensões plug-in (Retrieval, Reader, Indexer, Log, Users),
+      compartilhando processo, porta e corpus, mas com contratos independentes. Cada módulo deve ter um
+      contrato testável antes de crescer (architectural freeze 2026-07-29: Research Triage / Retrieval
+      Engine / Corpus / Evidence-Reader).'
+  - id: P10E016
+    label: 6
+    title: Librarian Reliability Layer
+    goal: Librarian must never falsely report itself as healthy when its knowledge retrieval capability
+      is unavailable. Index rebuild must never make corpus unavailable.
+  - id: P10E025
+    label: 7
+    title: Research Strategies — First Mile Triage
+    goal: 'Formalizar o Librarian como uma plataforma modular com 4 módulos independentes: (1) Research
+      Triage & Planning, (2) Indexing/Knowledge Engine, (3) Knowledge Corpus, (4) Evidence Experience/Last
+      Mile. O conceito central é o ResearchPlan — um objeto que carrega intenção, contexto, estratégia,
+      confiança e critérios de sucesso — produzido pelo Triage e consumido pelo Engine.'
+  - id: librarian_20260811
+    label: 8
+    title: DB Optimization — Memória & Latência do Motor FAISS
+    goal: 'Otimizar o motor de busca vetorial FAISS do Librarian: reduzir footprint de memória (4.4 GiB
+      RSS, maior consumidor do Colima), baixar latência, e consolidar a arquitetura de retrieval/persistência
+      do índice. Epic HEAD que agrega os sub-epics de otimização de DB/search como notes.'
+  - id: librarian_20260717
+    label: 9
+    title: Evidence & Provenance Model
+    goal: 'Define como uma afirmação mantém ligação verificável com sua origem. Camada central do Librarian:
+      Evidence, Source, Locator, CitationTarget.'
+  - id: librarian_20260630
+    label: 10
+    title: Experience History & Analytics
+    goal: 'Track how books are experienced via RAG citations e leitura, não só lidos. Inclui: log/biografia
+      de uso (timeline, co-ocorrência), citation history, ranking de livros citados-nunca-lidos, analytics
+      por cluster e auditabilidade. Absorve E002 usage-analytics e o epic Log (2026-08-11).'
+- key: done
+  items:
+  - id: librarian_20260521
+    label: 1
+    title: Weak Handshake
+    goal: Migrated from old backstage (E049)
+  - id: librarian_20260630-016
+    label: 2
+    title: Update Indexing for Clusters
+    goal: Refactor RAG indexing to use clusters (not folder structure) and enable context-aware search
+      based on conversation histo
+  - id: librarian_20260630-015
+    label: 3
+    title: Topic Curation - Systems & Cybernetics
+    goal: Acquire, organize, and reindex foundational books on systems, cybernetics, coordination

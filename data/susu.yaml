@@ -1,0 +1,110 @@
+project: susu
+tier: experimental
+exporter: v1.0
+counts:
+  active: 10
+  planning: 4
+  done: 3
+  done_total: 10
+sections:
+- key: active
+  items:
+  - id: P00E003
+    label: 1
+    title: Reviews — corpus de NÃO-LIVROS (transcrições, artigos, outros)
+    goal: 'Governar o SEGUNDO corpus sob a doutrina do librarian-grounding (#07): um acervo de NÃO-LIVROS
+      — transcrições + artigos + outros objetos que não são books — com schema próprio, metadata, índice,
+      retrieval, ACL, retenção, provenance e deep-links. Investigação central: o que é exatamente um transcript/artigo
+      como OBJETO DE MEMÓRIA ORGANIZACIONAL (não ''onde ponho os arquivos'').'
+  - id: P00E004
+    label: 2
+    title: Susu Weekly — module calculations (token-costs wonky fix + M4 balances)
+    goal: Make the Susu Weekly module numbers add up. Today the Token Costs module mixes three providers
+      (OpenRouter, DeepSeek direct, local Qwen) and shows ONE provider's real billing as the "total" while
+      listing per-session estimates that diverge by ~60% ($38.57 OpenRouter real vs $62.95 session-estimate
+      in W39). Add M4 (Balance/Runway) so the weekly shows provider balances and warns when any paid provider
+      is below US$ 5 — the weekly sibling of the real-time alert.
+  - id: P00E005
+    label: 3
+    title: Meetings — corpus e skill de reuniões (produto sobre a capacidade de transcrição)
+    goal: Estabelecer "meetings" como produto/corpus PRÓPRIO (separado de reviews), com skill que captura
+      o ciclo start→attach→stop→meeting.md, pedindo ao usuário o contexto que o Teams não fornece (participantes,
+      tipo, horário) e destilando decisões/action items com evidence_refs para os segments do transcript.
+  - id: P00E006
+    label: 4
+    title: Transcription Infrastructure — STT como capacidade horizontal (não módulo de report)
+    goal: Estabelecer a capacidade horizontal de transcrição (audio/video → transcript resource) como
+      infraestrutura própria, SEPARADA de qualquer produto consumidor (Reviews, meetings, reels, captions,
+      subtitles). Investigar o que o nosso stack real fornece (INSTALLED ≠ WORKING), provar o primeiro
+      experimento (whisper-stream local com modelo próprio e fonte real), e fundamentar a arquitetura
+      nos livros sem que o livro decida a ferramenta.
+  - id: P00E009
+    label: 5
+    title: Configuration
+    goal: Auditar, documentar e garantir acesso total do agente sous a skills, MCPs e ferramentas do ecossistema
+      OpenClaw, identificar gaps, e sugerir novos tools que expandam a capacidade do substrate.
+  - id: P00E015
+    label: 6
+    title: Librarian Grounding — grounding de reports contra o acervo atual (livros)
+    goal: 'Adicionar camada de grounding via Librarian a todo report manifesto: confrontar claims com
+      o corpus atual (cabe ou quebra policy, é re-descrição de padrão conhecido?), prospectivo e retrospectivo
+      — com citações navegáveis em EPUB (skill librarian). Corpus é input fixo; o Radar não expande o
+      acervo.'
+  - id: P00E018
+    label: 7
+    title: Sous v2 - Modular Data Substrate
+    goal: Rebuild Sous as filesystem-based event log with append-only temporal semantics, multi-writer
+      substrate, and query-time composition.
+  - id: P00E021
+    label: 8
+    title: FOSS review — provider offer normalization (candidates for infrastructure/P08E074)
+    goal: TBD
+  - id: book-intake
+    label: 9
+    title: Book Intake — todo ↔ Librarian reconciliation + Bindery diagnosis
+    goal: Remover do todo livros já indexados no Librarian; diagnosticar por que o Bindery cobre só ~40%.
+  - id: meetings
+    label: 10
+    title: Meetings — produto/corpus sobre transcrição (skill meetings)
+    goal: 'Meetings como produto/corpus: skill semântica (triggers naturais), script de captura agendável
+      por trás, corpus susu/meetings/. Transcrição é capacidade (infrastructure); meetings é o produto
+      (susu).'
+- key: planning
+  items:
+  - id: P00E017
+    label: 1
+    title: Radar — Continuous Discovery & Future Signals
+    goal: 'Camada de inteligência prospectiva: observa via NocoDB/Reddit/Feedly, preserva proveniência
+      como source of truth, e sinaliza — sem decidir, rotear ou agir.'
+  - id: P00E022
+    label: 2
+    title: Notifications — one protocol for how and when the fleet notifies
+    goal: 'Concentrar num ÚNICO protocolo (skill `notifications`) as regras que hoje estão esparsas em
+      prosa entre infra, money, ring e susu: o que é um alerta, como é formatado, quem pode mandar, com
+      que frequência, com que dedupe, e como o canal é escolhido (hoje email; amanhã Kin app / device
+      notification). Dizer a cada agente QUANDO, COMO e QUÃO OFTEN notificar — em vez de cada um inventar.'
+  - id: health-list-module
+    label: 3
+    title: Health List module — Susu Weekly consumer (infra → susu)
+    goal: 'Consumir o artefato de saúde do infrastructure (current.json) como módulo do Susu Weekly: coletor
+      read-only (mN-health.py) + seção ''Health'' no render, com spark em LINE chart. 2ª aplicação da
+      POL-WEEKLY-DATA.'
+  - id: OMNIVORE-AI
+    label: 4
+    title: Omnivore AI
+    goal: Discutir IA sobre o Omnivore (router OpenClaw / MLX Qwen), estender Reviews, e novas ideias
+      via webhooks.
+- key: done
+  items:
+  - id: e008_20260513
+    label: 1
+    title: today.html - Interactive Dashboard
+    goal: Migrated from old backstage (E008)
+  - id: e002_20260511
+    label: 2
+    title: Radio Script & Template
+    goal: Migrated from old backstage (E002)
+  - id: e005_20260512
+    label: 3
+    title: Outlook Calendar Scraper
+    goal: '**You DEPEND on Outlook Calendar but have NO API access:**'

@@ -1,0 +1,43 @@
+project: home
+tier: experimental
+exporter: v1.0
+counts:
+  active: 3
+  planning: 0
+  done: 3
+  done_total: 7
+sections:
+- key: active
+  items:
+  - id: P07E002
+    label: 1
+    title: Consumer Decision Engine
+    goal: Biblioteca de evidência + critérios + experiência real para decisões de compra. Framework +
+      evidence tiers + aquisição dirigida dos livros de grounding.
+  - id: P07E006
+    label: 2
+    title: Living Room Curtain
+    goal: PAREAR a drapery rod SmartWings da sala (Zigbee motor, sem remote) no Home Assistant via ZHA/sonoff
+      dongle.
+  - id: home_20261023
+    label: 3
+    title: Oppo Find N5 — Daily-Driver Tweaks
+    goal: 'Turn the Oppo Find N5 into a comfortable daily driver for a power user coming from iOS: better
+      ANC with AirPods Pro 3, and eliminate cover-screen friction.'
+- key: planning
+  items: []
+- key: done
+  items:
+  - id: home_20260630
+    label: 1
+    title: Open Source Notes
+    goal: :** Apple Notes/Reminders locked to Apple ecosystem, no self-hosted option, privacy concerns.
+  - id: keurig_20260701
+    label: 2
+    title: Keurig
+    goal: Identificar modelo, documentar descale, avaliar IoT (smart plug / Home Assistant), e projetar
+      mod de water line direct para manter sempre cheio.
+  - id: e021_20260630
+    label: 3
+    title: ipad for kiddos
+    goal: Migrated from old backstage (E021)

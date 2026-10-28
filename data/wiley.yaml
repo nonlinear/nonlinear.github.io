@@ -1,0 +1,143 @@
+project: wiley
+tier: experimental
+exporter: v1.0
+counts:
+  active: 10
+  planning: 10
+  done: 2
+  done_total: 2
+sections:
+- key: active
+  items:
+  - id: P18E001
+    label: 1
+    title: Configuration
+    goal: Auditar e consolidar todo o ecossistema de ferramentas, skills e MCPs de Wiley — documentar
+      o que funciona, o que falta, e sugerir novos tools. Migrar e organizar o conhecimento disperso dos
+      old notes.
+  - id: P18E004
+    label: 2
+    title: Icons
+    goal: Mapear e prototipar o sistema de ícones ReX — biblioteca, naming, tamanhos, uso correto vs.
+      Material Icons.
+  - id: P18E006
+    label: 3
+    title: Skills
+    goal: Criar e instalar as skills necessárias para o fluxo de prototipagem UI — prototype-review, component-check,
+      handoff, design-system-sync — e garantir que os livros de referência estão indexados no Librarian.
+  - id: P18E007
+    label: 4
+    title: Code Review Reader
+    goal: Design Implementation Reader — camada de comunicação entre OpenClaw e o designer. Não é editor,
+      é leitor com evidências. Contrato → evidência → validação.
+  - id: P18E009
+    label: 5
+    title: Figma → Hugo Prototype
+    goal: Mover a fonte de verdade do design do Figma para o Hugo (protótipo ReX Submission), deixando
+      o design mais perto do código — com validação objetiva via feedback-loop.
+  - id: P18E010
+    label: 6
+    title: Confluence MCP
+    goal: Avaliar e integrar um MCP do Confluence para dar à equipe Wiley acesso a páginas, espaços e
+      busca do Confluence diretamente do agente.
+  - id: P18E013
+    label: 7
+    title: Figma Depletion → theme (exaurir o Figma em layers; variables = parte 1)
+    goal: 'Exaurir o Figma em layers, começando pelas VARIABLES. Figma é a source of truth IN THE MAKING:
+      se algo está lá, é source of truth. Extrair o que o Figma DÁ que enriquece o theme (cores + tipografia);
+      NÃO questionar o theme atual (hugo é latest p/ spacing/shadow/transition/layout). Wiley é dono do
+      entregável; Interface fornece policy + certificação + post-mortem.'
+  - id: P18E017
+    label: 8
+    title: Footer variants
+    goal: 'Ajustar o footer do pattern library para um partial parametrizado (variant x tenant), com o
+      vocabulario canonico alinhado no Figma primeiro e documentado em content/components/footer.md. Repo:
+      ~/Documents/wiley/pattern-library (~/Documents/interface nao existe neste host). O produto transferivel
+      deste epic e a policy de traducao Figma->Hugo para variants (reusavel por outros componentes); o
+      footer e o caso de estudo.'
+  - id: P18E018
+    label: 9
+    title: Smart tables
+    goal: Criar um discovery de 'smart tables' para apresentar aos product managers, usando Hugo (não
+      Figma) como meio de apresentação — navegável, versionável, publicável, e reaproveitando os componentes/partials
+      já existentes no pattern library sempre que fizer sentido.
+  - id: P18E019
+    label: 10
+    title: Buttons
+    goal: 'Depletar Figma como source of truth para o BUTTON component: exaurir os 5 variants (todos os
+      estados, todos os tokens) até que Hugo seja a verdade. Buttons compõem icons; smart table consome
+      buttons — bottom-up por dependência.'
+- key: planning
+  items:
+  - id: P18E002
+    label: 1
+    title: Components
+    goal: 'Prototipar o catálogo de componentes ReX a partir do Figma (components page). Source of truth:
+      Figma → Hugo partials MD3 (Material Web), com validação via feedback-loop. Output: implementações
+      protótipo hardcoded por ora; instâncias via YAML num futuro.'
+  - id: P18E003
+    label: 2
+    title: Copy Management
+    goal: Prototipar gestão de copy nos protótipos ReX — centralizar strings, labels, erros e mensagens.
+      Evitar copy hardcoded disperso.
+  - id: P18E005
+    label: 3
+    title: Steps
+    goal: Prototipar o componente Steps — fluxo multi-etapa de submission. Validar estrutura, estados,
+      e navegação entre steps.
+  - id: P18E011
+    label: 4
+    title: Token Efficiency
+    goal: Projetar e validar testes científicos e mensuráveis de copy eficiente em tokens, para o uso
+      de LLMs; como a Wiley terá pelo menos 50 power users regulares, qualquer economia de token importa
+      — mas precisa ser medida com rigor, inclusive rastreando o tráfego real de uso.
+  - id: P18E012
+    label: 5
+    title: Presentation-Ready Deliverables & Sample Patterns
+    goal: 'Define usability policies and a shared, sanitized "sample everything" pattern library for presentation-ready
+      deliverables (Figma, high-definition, vector) used across Wiley products. Converge standards HORIZONTALLY
+      (pattern alignment): one approved sample (journal / tenant-publisher / authors / submissions) reused
+      consistently — across ReX and other Wiley products — for continuity and recognition, not lorem ipsum.'
+  - id: P18E014
+    label: 6
+    title: system-prototype parity
+    goal: 'Refactor do protótipo (rex-submission-prototypes) para dar match ao MÁXIMO com o que temos
+      no sistema real (rex-prototypes), produzindo deliverables ''closer to code'': names, files, instructions
+      to update, etc. — colors, copy e qualquer outro aspecto.'
+  - id: P18E015
+    label: 7
+    title: ARI
+    goal: 'ARI — planejamento e notas de reunião de AI. Fonte viva das decisões deste epic. Usa o conceito
+      de interface compiler: high tides lift all boats.'
+  - id: P18E016
+    label: 8
+    title: Theme & Layout Architecture
+    goal: Establish one canonical layout contract and one canonical source of truth for themes, so that
+      every product (generic, ReX, ARI, …) declares its own layout family and theme as separable dimensions
+      over a common base — M+N, not M×N — while supporting silent per-page theme override and explicit
+      theme selection in component documentation. The mechanism (directory inside the repo, published
+      repo, or Hugo Module) is deliberately left undecided until the consumption model is known.
+  - id: P18E021
+    label: 9
+    title: CSS-Tricks as a frontend source (practice corpus)
+    goal: 'Tornar CSS-Tricks o corpus PRIMÁRIO de experiência prática de frontend no nosso processo —
+      não autoridade absoluta, mas o primeiro lugar onde procuramos. Em duas camadas: (1) reflexo de pesquisa;
+      (2) corpus indexado com retrieval + evidência verificável. PENSAR DEPOIS — por ora é planning.'
+  - id: P18E025
+    label: 10
+    title: Jira Tasks Integration
+    goal: 'One-way mirror: Jira tasks assigned to the owner become local epics. Agent reads Jira (read-only,
+      REST API); never writes. Jira is source of truth — status maps directly (To Do → planning, In Progress
+      → active, Done → done/archived).'
+- key: done
+  items:
+  - id: wiley_20260911_fy27_q2_self_evaluation
+    label: 1
+    title: FY27 Q2 self evaluation
+    goal: 'ONGOING cycle of quarterly self evaluations. Each cycle (FYxx Qy) is its own epic derived from
+      two sources: progress of Wiley epics + previous self evaluations (chain). Template → fill → submit.'
+  - id: wiley_20260624
+    label: 2
+    title: Figma Migration
+    goal: Migrar assets e estrutura do Figma do projeto atual para o novo projeto, garantindo que ninguém
+      seja esquecido no acesso.
