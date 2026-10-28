@@ -1,0 +1,150 @@
+project: kin
+tier: flagship
+exporter: v1.0
+counts:
+  active: 10
+  planning: 10
+  done: 3
+  done_total: 34
+sections:
+- key: active
+  items:
+  - id: P09E005
+    label: 1
+    title: Embedded Tunneling
+    goal: The bridge embeds the smallest secure tunnelling option that is open source and self-hosted,
+      so remote access works without a third party and without asking the user to understand networking.
+      Remote here means the central web interface and the remote app, both reached through the same embedded
+      path.
+  - id: P09E015
+    label: 2
+    title: Quality Playbook
+    goal: 'The studio''s playbook states how it verifies and maintains quality: a fast feedback loop with
+      rigor, a triage at three speeds, a pipeline with promotion, assurance tests as lock-in, spawn hygiene,
+      the protocol of rounds and the artifact gate. It is the written form of a process that already runs.'
+  - id: P09E016
+    label: 3
+    title: Midstep
+    goal: 'A link that survives email resolves to the right native scheme on the right device: the bridge
+      validates it against a per-device allowlist and hands it off in one click, with no residual web
+      page. Each step is a midstep in an ecology, and the first case is a note.'
+  - id: P09E020
+    label: 4
+    title: Action Menu
+    goal: One action menu reached by press and hold serves every action surface, and it scales to new
+      actions without a new component per screen. The menu knows which actions apply where, so the user
+      does not see the ones that do not.
+  - id: P09E029
+    label: 5
+    title: Bridge Runtime
+    goal: The bridge runtime carries the new agent endpoint and the operations built on it, with the protocol
+      version it declares matching the one it serves. A client that reads the declared version gets the
+      behavior that version promises.
+  - id: P09E075
+    label: 6
+    title: Session Health
+    goal: A session survives an arbitrary rotation or restart without losing conversational identity or
+      the working context the task needs, while the event stream stays continuous and the user sees one
+      conversation. The healing does not depend on the same provider that failed.
+  - id: P09E076
+    label: 7
+    title: Local Admin
+    goal: The user installs the bridge, opens a local web surface that shows and edits the configuration
+      — home network, devices, usage — and the app reports its bootstrap and timeline state there. The
+      admin is small and local, independent of the message stamp.
+  - id: P09E097
+    label: 8
+    title: Lane Deadlock
+    goal: 'The class of failure that makes several agents look frozen is isolated and mitigated: two writers
+      colliding on one session, with its upstream causes in a watchdog blind to state and a long failover.
+      The fix names the class, not the symptom.'
+  - id: P09E0XX
+    label: 9
+    title: Design Fix
+    goal: 'Primeiro field epic recovery do mea-culpa (P09E019). Prova o fluxo: stable → experimental →
+      automated → HOME/AWAY/OFFLINE/RECOVERY → device → aprovação do nonlinear → juntos promovemos o MESMO
+      artifact a novo stable.'
+  - id: P09E101
+    label: 10
+    title: Offline Channel
+    goal: One channel stays offline while the stable channel stays online on the same device, the same
+      cellular network and the same endpoint. The divergence needs a demonstrated root cause before it
+      is explained.
+- key: planning
+  items:
+  - id: P09E003
+    label: 1
+    title: Policy Propagation
+    goal: A single product-wide policy reaches every agent that can host the product, without two agents
+      editing the same file and without the copies diverging. The policy has one source, and an agent
+      either carries the current version or is visibly out of date.
+  - id: P09E006
+    label: 2
+    title: Health Telemetry
+    goal: The frequency of tunnel and bridge failures on the phone is measured, and the measurement separates
+      tunnel flapping from a refused request from a timeout. The problem is named before it is fixed.
+  - id: P09E007
+    label: 3
+    title: Timeline Platform
+    goal: The timeline gives guarantees strong enough that a new feature — bubbles, diagrams, tables —
+      can be added without breaking scroll, gesture or state. A feature that cannot be added inside those
+      guarantees is a change to the platform, not a feature.
+  - id: P09E008
+    label: 4
+    title: Testing Platform
+    goal: 'The verification cycle is formal: contract, tests, report, done. Every epic proves feature
+      correctness and platform compatibility before it counts as delivered, and the report is evidence
+      a reader can check.'
+  - id: P09E009
+    label: 5
+    title: Epistemic Validator
+    goal: 'The library is no longer only a semantic searcher: it validates a claim against its sources.
+      An answer that cannot be traced does not pass, and the library reports the gap instead of the nearest
+      text.'
+  - id: P09E010
+    label: 6
+    title: Visible Spawns
+    goal: 'Agent spawns are visible in the product: a progress board, a lifecycle and the logs, so the
+      user can see what their agents are doing without asking. This is the surface where every per-agent
+      activity of the platform appears.'
+  - id: P09E013
+    label: 7
+    title: Frontend Compiler
+    goal: A component defined once in the shared material language compiles to each target a product needs,
+      so the same button is the same button in every renderer. The record was truncated in August and
+      recovered only in part; what survives is the compiler's contract.
+  - id: P09E014
+    label: 8
+    title: Message Stamp
+    goal: Every message would carry a standard stamp — device, installation, artifact, origin — born in
+      the bridge. This is an architectural hypothesis in planning, not a contract, and the first round
+      is research.
+  - id: P09E017
+    label: 9
+    title: Midstep Planning
+    goal: 'The midstep ecology is planned before it is built: which schemes, which devices, which allowlist,
+      and what a step returns when the target is absent. The planning epic holds the decisions the active
+      epic executes.'
+  - id: P09E026
+    label: 10
+    title: Bootstrap State
+    goal: 'A fresh install is a state the product can render: the app knows that the agent list may be
+      empty and degrades to a local surface instead of a blank screen. A banner is not the answer; a state
+      machine is.'
+- key: done
+  items:
+  - id: e048_20260514
+    label: 1
+    title: Two-Way Kin Bridge
+    goal: '**Make Kin and OpenClaw talk to each other in real-time.**'
+  - id: tunnel-flap-emergency_20260831
+    label: 2
+    title: EMERGÊNCIA — Kin dependente do Cloudflare Tunnel (P1) + decisão kin-remote
+    goal: 'Tratar o flap persistente do Cloudflare Tunnel como dependência de transporte do Produto Kin
+      (P1 imediato), implementar watchdog de recuperação inteligente + escape hatch, e documentar a decisão
+      estrutural: abandonar Cloudflare como arquitetura futura em favor de kin-remote embedded no bridge.'
+  - id: kin_20260624-tooling
+    label: 3
+    title: Tooling
+    goal: Equipar o agente OpenClaw com MCPs, skills e ferramentas para desenvolver, buildar, testar e
+      debuggar Kin em iOS (simulator + device) e Android (emulador + device).

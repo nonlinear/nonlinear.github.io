@@ -11,119 +11,124 @@ sections:
   items:
   - id: P14E001
     label: 1
-    title: Branding Exercise (com VRWND Audiences)
-    goal: Define positioning, audience, tone of voice, and personas for Nonlinear — unificando branding
-      exercise + exercício VRWND de audiências. Audiences são o deliverable deste epic.
+    title: Studio Positioning
+    goal: 'The studio''s positioning, audience, tone of voice and personas are one coherent statement.
+      The branding exercise and the audience research converge into a single set of audiences, and those
+      audiences are the deliverable: every product page and every piece of writing addresses one of them
+      by name.'
   - id: P14E002
     label: 2
-    title: Hugo Foundations — nonlinear.site
-    goal: 'Criar o nonlinear.nyc — site Hugo que funciona como portfólio vivo do Nonlinear Studio, surfando
-      o progresso do Oracle e dos agentes. Duas camadas: permalink por flagship project e seção de artigos.
-      Foundation para storytelling.'
+    title: Living Portfolio
+    goal: 'The studio site is a living portfolio: a permalink per flagship project and a section of articles,
+      both fed by the progress of the agents. The two layers are one Hugo site, and the foundation for
+      storytelling is laid before the first article is written.'
   - id: P14E008
     label: 3
-    title: Front-End Compiler 'Interface Agent' — substrate Material+texto; converge front-end
-    goal: 'Agente PETNA horizontal (P19E002 agent): mantém as ferramentas que garantem CONVERGÊNCIA do
-      front-end — visual, textual e de roteamento (style router). A partir de um P15E002 (Material UI
-      sem React + linguagem/texto como componente de design), serve componentes a qualquer projeto COM
-      FRONT-END (Rex, Kin, P14E006 site, mood, ...), cada um como um theme do mesmo P15E002. Projeto dedicado
-      (A17). Responsável por convergência, não por posse. Backstage fora (A16). Design system = compiler
-      quando código (A19). Plateau A5 comprovado (2026-08-16): action.primary + voice.cta + P09E062.'
+    title: Frontend Convergence
+    goal: 'One horizontal agent keeps the tools that guarantee convergence of the front end: visual, textual
+      and routing. From one shared library it serves components to every project that has a front end,
+      each as a theme of the same base. It is responsible for convergence, not for ownership.'
   - id: P14E009
     label: 4
-    title: New Nonlinear — Root Site Reset & Foundations
-    goal: Zerar o nonlinear.github.io (root site) e reconstruir do zero com foundations sólidas — enquanto
-      o /personal/ continua no ar como fallback. Quando o novo root estiver pronto, tirar o redirect e
-      oficializar.
+    title: Root Rebuild
+    goal: The root site is emptied and rebuilt on solid foundations while the personal path stays up as
+      a fallback. When the new root is ready the redirect is removed and the rebuild becomes official.
   - id: P14E011
     label: 5
-    title: Nonlinear–Interface Subscription — primeiro cliente externo do pattern library
-    goal: 'Registrar Nonlinear como primeiro cliente externo do Interface/pattern-library: fronteira de
-      responsabilidade, contrato de versionamento, e mecanismos de higiene entre library e cliente.'
+    title: Library Client
+    goal: 'The studio is registered as the first external client of the pattern library: the boundary
+      of responsibility, the versioning contract, and the hygiene mechanisms between library and client
+      are written down. A client is a client, not an informal consumer.'
   - id: P14E017
     label: 6
-    title: Analytics Infrastructure
-    goal: Self-hosted web analytics para sites do Nonlinear Studio.
+    title: Web Analytics
+    goal: The studio's sites answer questions about their own traffic from a self-hosted analytics system,
+      with no third-party script and no data leaving the infrastructure. Every site reports to the same
+      instance.
   - id: P14E037
     label: 7
-    title: portfolio-roadmap-surface — roadmap → Hugo data → portfolio layout (publication skill v1.0)
-    goal: 'Tornar o roadmap de cada projeto de portfolio uma superfície viva no site: a skill publication
-      pega about/roadmap.yaml, exporta para data/<project>.yaml num contrato fixo, e o layout de portfolio
-      renderiza duas colunas (Currently working / Coming soon) sempre com o latest — sem intervenção manual.'
+    title: Live Roadmap
+    goal: 'Every portfolio project''s roadmap is a live surface on the site: the publication skill reads
+      the roadmap file, exports it to a fixed contract, and the portfolio layout renders two columns with
+      the latest state. No manual pass is needed to keep it current.'
   - id: cloudflare-dns
     label: 8
-    title: Inventário e operações DNS (nonlinear.nyc, nonlinearstudio.net, nonlinearstudio.org)
-    goal: Apagar toda operação DNS não autorizada ou morta sem interromper serviço vivo — wildcard removido,
-      rotas órfãs limpas, cada remoção com evidência por camada e caminho de reversão.
+    title: DNS Cleanup
+    goal: 'Every DNS record that is unauthorized or dead is removed without interrupting a live service:
+      the wildcard goes, orphaned routes are cleaned, and each removal carries per-layer evidence and
+      a path back. What remains is a zone where every record has an owner.'
   - id: P14E033
     label: 9
-    title: Community Hubs - fórum por produto + concierge + analytics
-    goal: 'Um hub por produto onde enthusiasts se ajudam, o owner aparece às vezes como ''nonlinear sim'',
-      e um agente sanitizado (local, MLX, sandbox) responde só sobre o produto, com limite por usuário.
-      Perguntas e sugestões viram dado: roadmap check, sugestão em epic, dashboard público. O hub é CTA
-      da página do produto e responde ''o que tá rolando lá dentro''.'
+    title: Community Hubs
+    goal: Each product has a hub where enthusiasts help each other, the owner appears occasionally, and
+      a sanitized local agent answers only about that product within a per-user limit. Questions and suggestions
+      become data that feed the roadmap, and the hub is the call to action on the product page.
   - id: distribution-system
     label: 10
-    title: Distribution System
-    goal: Um registry público de produtos que acessa o latest content de cada um e explica ao usuário
-      a melhor maneira de instalar, customizar, comparar e upgrade — dentro do contexto da máquina que
-      rege. Produto primeiro, tecnologia depois.
+    title: Distribution Registry
+    goal: A public registry of products reads the latest content of each one and explains to a user the
+      best way to install, customize, compare and upgrade it, inside the context of the machine that governs
+      it. The product comes first and the technology after.
 - key: planning
   items:
   - id: P14E003
     label: 1
-    title: Multimodal Style System + Style Router
-    goal: Create a style system with sensible defaults, context routing, and compounding exceptions —
-      governing text, image, motion, interaction, and layout across all Nonlinear deliverables. The Style
-      Router is the composition engine within this system.
+    title: Style System
+    goal: 'One style system governs text, image, motion, interaction and layout across every deliverable:
+      defaults that are sensible without configuration, a router that picks the right one per context,
+      and exceptions that compound instead of accumulating. The router is the composition engine inside
+      the system.'
   - id: P14E004
     label: 2
-    title: Content Operating System
-    goal: Transform project work and emerging ideas into a prioritized, maturing portfolio of articles
-      — operationalized via NocoDB Kanban, with lifecycle, analytics, and post-publication promotion.
+    title: Article Pipeline
+    goal: Project work and emerging ideas become a prioritized, maturing portfolio of articles with a
+      lifecycle, analytics and promotion after publication. A candidate is trackable from idea to mature
+      article, and nothing is published without a place in the pipeline.
   - id: P14E007
     label: 3
-    title: Site Design — nonlinear.nyc
-    goal: 'Discutir e experimentar design do nonlinear.nyc — direção visual, layout, tipografia, cor.
-      Discutir: o que estamos tentando dizer e como. Experimentar: protótipos, tentativas, comparações.
-      O design system visual emerge da experimentação, não de um moodboard estático.'
+    title: Site Design
+    goal: 'The visual direction of the site is decided by experiment: layout, typography and color are
+      tried as prototypes and compared, with the question of what the studio is trying to say driving
+      each attempt. The design system emerges from those comparisons, not from a static moodboard.'
   - id: P14E010
     label: 4
-    title: Presentations — markdown presentations on Hugo (creation → skills)
-    goal: Ter um caminho ponta-a-ponta para apresentações em Markdown renderizadas pelo Hugo — da criação
-      (template, estrutura, estilo) até uma SKILL para que agentes criem uma apresentação rapidamente,
-      sem redescobrir o processo.
+    title: Markdown Decks
+    goal: 'A presentation goes from Markdown to a rendered deck end to end: a template, a structure and
+      a style, plus a skill so an agent can produce a new deck quickly without rediscovering the process
+      each time.'
   - id: P14E012
     label: 5
-    title: Article Pipeline — editorial research process for Nonlinear
-    goal: Investigar como transformar investigação interna + pesquisa externa em artigo long-form verificável,
-      narrativamente forte e repetível — antes de criar a máquina que faz Articles.
+    title: Longform Method
+    goal: 'The route from internal investigation and external research to a long-form article is known
+      before the machine that produces articles is built: verifiable claims, a strong narrative, and a
+      repeatable process.'
   - id: P14E013
     label: 6
-    title: Epic Promotion — campaigns, storyboard, repackaging, timing
-    goal: 'Definir como todo article-epic (e alguns epics de projeto) recebe promoção: campanha estratégica
-      que se desdobra em múltiplos vetores (reels, social, newsletter, cross-links), com storyboard, timing,
-      feedback, e assinatura visual consistente (brand guidelines + MUI theme).'
+    title: Article Promotion
+    goal: Every article epic, and some project epics, gets a strategic promotion that unfolds across several
+      vectors with a storyboard, timing, feedback and a consistent visual signature. Promotion is part
+      of the article's definition, not an afterthought.
   - id: P14E018
     label: 7
-    title: Biomimicry for Security
-    goal: Build epistemic arsenal against vectoralist extraction by mining 3.5 billion years of adversarial
-      coevolution patterns f
+    title: Epistemic Arsenal
+    goal: The studio builds an epistemic arsenal against vectoralist extraction by mining three and a
+      half billion years of adversarial coevolution from biology. The patterns are extracted, tested against
+      the extraction they are meant to counter, and written where a designer can use them.
   - id: P14E019
     label: 8
-    title: Business Model for Commons
-    goal: Define no-paywall revenue model, agent hierarchy, legal structure for commons-focused design
-      studio
+    title: Commons Model
+    goal: The studio has a revenue model without a paywall, an agent hierarchy, and a legal structure
+      that fits a commons-focused practice. Low overhead and self-hosted infrastructure are the premises,
+      and the model says how the work is paid for without gating the work.
   - id: P14E029
     label: 9
-    title: Subscription
-    goal: 'Lógica de SUBSCRIPTION do nonlinear ao pattern library: receber os components como SOURCE RAW
-      (não compilado — o nonlinear é Hugo target e usa/atualiza o componente), contribuir de volta por
-      PR, e — por ora sem versioning — achatar tudo num baseline único. OWNERSHIP: interface. Este epic
-      = pedido + decisões do owner antes de empacotar.'
+    title: Library Subscription
+    goal: The studio receives library components as raw source rather than compiled output, contributes
+      back by pull request, and flattens everything into a single baseline for now. The request and the
+      owner's decisions are recorded here before the package is cut.
   - id: P14E030
     label: 10
-    title: Video Pipeline — one reel, many channels, one analytics ledger
+    title: Video Pipeline
     goal: Publish ONE reel video to every target channel from a single canonical source and pull each
       channel's performance back into one normalized ledger, so a reel is created once, delivered everywhere,
       and measured in the same place.
