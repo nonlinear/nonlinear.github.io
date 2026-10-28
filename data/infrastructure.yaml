@@ -5,7 +5,7 @@ counts:
   active: 10
   planning: 10
   done: 3
-  done_total: 41
+  done_total: 40
 sections:
 - key: active
   items:
