@@ -41,10 +41,10 @@ sections:
     label: 8
     title: Transcode — Pagination (Figma → Hugo)
     goal: TBD
-  - id: TBD
+  - id: P19E029
     label: 9
-    title: Component documentation — how to
-    goal: TBD
+    title: component-versioning
+    goal: Give each component its own version without splitting the library into N repositories.
   - id: interface_documentation_as_target_20260825
     label: 10
     title: Documentation as Target — one canonical documentation contract, emitted by a docs compiler
