@@ -18,7 +18,7 @@ sections:
     label: 2
     title: Program Design
     goal: Design evidence-based training program based on assessment results
-  - id: food-forest
+  - id: P05E008
     label: 3
     title: Food Forest
     goal: Munir o agente de todo o conhecimento (livros, MCPs, tooling, alerts, dados) necessário para

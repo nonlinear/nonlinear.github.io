@@ -9,53 +9,53 @@ counts:
 sections:
 - key: active
   items:
-  - id: money_401k_early
-    label: 1
-    title: 401k early withdrawal — quanto sobra de verdade
-    goal: Dar o número líquido real (USD e BRL) de um saque total/parcial do 401k, com custo efetivo por
-      faixa, para decisão informada.
-  - id: money_401k_rollover_stride
-    label: 2
-    title: 401k Rollover — Stride Consulting (Ascensus/PAi) → destino a decidir
-    goal: Tirar o dinheiro da conta órfã da Ascensus com Direct Rollover (sem tocar no dinheiro), para
-      o destino que minimize custo e maximize controle — 401k da Wiley (Vanguard) ou IRA próprio.
-  - id: money_55_aos_55
-    label: 3
-    title: Aos 55 vs agora — simulação dos dois cenários
-    goal: Entregar o sum de cada cenário em dólar e reais, com premissas explícitas, para o dono escolher
-      o timing.
   - id: P04E001
-    label: 4
+    label: 1
     title: Automation Platform
     goal: 'Sistema financeiro integrado: MCPs operacionais + Paperless + Actual + SimpleFIN + roadmap
       Brasil'
   - id: P04E002
-    label: 5
+    label: 2
     title: Automation Platform
     goal: Plataforma sobre a qual todas as capabilities rodam — conectores, event bus, automação
   - id: P04E003
-    label: 6
+    label: 3
     title: Financial Intelligence
     goal: Visibilidade automática da saúde financeira — pulse semanal + alerts de anomalia
   - id: P04E005
-    label: 7
+    label: 4
     title: Principal — Mid-Month Mortgage Principal Prepayment
     goal: Calcular impacto de prepayment quinzenal/mid-month no principal, anos economizados, juros poupados
   - id: P04E006
-    label: 8
+    label: 5
     title: 401k Rollover — Old Employer → Current
     goal: Consolidar 401k antigo no plano atual para simplificar gestão, reduzir fees, e ter controle
       sobre investimentos
   - id: P04E007
-    label: 9
+    label: 6
     title: Fraud Detection — Kartas/Liens suspeitos do Kings County
     goal: Confirmar se as cartas são fraude, documentar, e proteger dados/contas. Nunca pagar sem verificação
       oficial.
   - id: P04E008
-    label: 10
+    label: 7
     title: Home Upkeep — 511 Evergreen 2C
     goal: Decidir escopo e custo das pendências de casa — pagar à vista vs financiar — sem comprometer
       prioridade
+  - id: P04E009
+    label: 8
+    title: Mortgage — Evergreen on Putnam (Valley)
+    goal: Manter dados da mortgage em arm's length para decisões (upkeep, refi, prepayment, equity, Rio)
+      sem precisar re-descobrir. Base para TODAS as simulações futuras.
+  - id: P04E011
+    label: 9
+    title: Rio Nov 2026
+    goal: 'Logística completa da viagem de novembro: documentos, hospedagem, saúde, packing, finanças,
+      casa em NYC'
+  - id: P04E012
+    label: 10
+    title: Freelance
+    goal: Compra do Mac Studio M4 dedutível como despesa de negócio legítima — estabelecer, com prova,
+      a atividade freelance (Schedule C) que sustenta o abatimento, e validar com a tax accountant.
 - key: planning
   items:
   - id: P04E010

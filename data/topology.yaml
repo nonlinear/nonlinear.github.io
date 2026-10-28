@@ -29,7 +29,7 @@ sections:
     title: Garment reconstruction pipeline — Blender headless + CLO web path
     goal: 'Answer, with measured evidence, what the 3D infra can carry for garment reconstruction: Blender
       CLI/sim/export capability, and the concrete browser path for CLO assets.'
-  - id: planting-beds
+  - id: P01E010
     label: 5
     title: Planting Beds 3D
     goal: Visualizar 3 canteiros elevados (muretas de plantio) com medidas reais do jardim em 3D, via

@@ -20,7 +20,7 @@ sections:
     goal: Map the intersection between simulation philosophy (DeLanda), philosophy of difference (D&G),
       Peircean semiotics, computational emergence, and the radical thesis that altered states reveal the
       same isomorphic architecture — across substrates.
-  - id: ORACLE-001
+  - id: P15E006
     label: 3
     title: Orixás / Mitologia Iorubá — acervo para a prática oracular
     goal: Adquirir e integrar livros de mitologia iorubá/orixás ao Librarian, para sustentar com fonte
@@ -28,7 +28,7 @@ sections:
       em itans reais — não memória.
 - key: planning
   items:
-  - id: P15E006
+  - id: P15E007
     label: 1
     title: Visual Spread — SVG vetorial para a semiótica topológica do tarot
     goal: TBD

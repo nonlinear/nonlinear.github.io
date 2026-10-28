@@ -5,7 +5,7 @@ counts:
   active: 4
   planning: 0
   done: 3
-  done_total: 5
+  done_total: 7
 sections:
 - key: active
   items:
@@ -19,12 +19,12 @@ sections:
     title: Living Room Curtain
     goal: PAREAR a drapery rod SmartWings da sala (Zigbee motor, sem remote) no Home Assistant via ZHA/sonoff
       dongle.
-  - id: home_20261023
+  - id: P07E010
     label: 3
     title: Oppo Find N5 — Daily-Driver Tweaks
     goal: 'Turn the Oppo Find N5 into a comfortable daily driver for a power user coming from iOS: better
       ANC with AirPods Pro 3, and eliminate cover-screen friction.'
-  - id: home_20261027
+  - id: P07E011
     label: 4
     title: Signal in Brazil — same account on Oppo (home) and iPhone (travel)
     goal: Keep using Signal for two months in Brazil on an old iPhone, while the primary Signal account

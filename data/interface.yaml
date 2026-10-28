@@ -3,7 +3,7 @@ tier: experimental
 exporter: v1.0
 counts:
   active: 10
-  planning: 5
+  planning: 8
   done: 0
   done_total: 0
 sections:
@@ -78,5 +78,24 @@ sections:
     goal: Serve clients the canonical component substrate from the Pattern Library, and convert what they
       build into canon. Nonlinear is the first client; the model must hold for the next one without being
       redesigned.
+  - id: P19E048
+    label: 6
+    title: Component Relationship
+    goal: Resolve and represent the relationships between components — the dependency graph (uses:/used-by),
+      the Wiley product consumer axis, and the schema + fitness checks that keep those relations true
+      — so the Pattern Library can answer 'what depends on what, and who uses it' deterministically.
+  - id: P19E049
+    label: 7
+    title: Epic Contract on Code
+    goal: 'Estender o marcador TODO de débito para carregar o id do epic que o pagará. Os comentários
+      de débito tornam-se extensão do contrato do epic, direto no código — backstage lê a codebase e recolhe.
+      Move faster: documenta débito no lugar onde dói, paga epic por epic.'
+  - id: P19E052
+    label: 8
+    title: Synthetic User Testing
+    goal: 'Programmatic Synthetic User Testing (PSUT) — a continuous experimental benchmark of a knowledge
+      system (currently the Pattern Library skill + documentation): can a fresh (amnesic) agent traverse
+      skill + documentation and operate the system correctly? Not human UX research — synthetic-agent
+      usability testing, executed programmatically.'
 - key: done
   items: []
