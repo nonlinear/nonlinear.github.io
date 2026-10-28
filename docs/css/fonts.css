@@ -1,0 +1,28 @@
+/* fonts.css — @font-face declarations. ONE rule per weight; there is no shortcut.
+   Files live in static/fonts/<family>/ so Hugo copies them into docs/fonts/ and
+   Cloudflare can serve them. A path outside the repo resolves locally and 404s
+   in production — that is not a test mode, it is a bug waiting for deploy. */
+
+/* UFFICIO DISPLAY — logo only (reserved to branding).
+   Source: ~/Documents/apps/FontBase/2025/Ufficio/  ·  300/400/500/600/700
+   License: not shipped with the files — status UNVERIFIED. Fine for the mock,
+   confirm before public release (typography skill, licence gate). */
+@font-face { font-family: "Ufficio Display"; font-style: normal; font-weight: 300; font-display: swap; src: local("Ufficio Display Light"), url("/fonts/ufficio-display/UfficioDisplay-300.otf") format("opentype"); }
+@font-face { font-family: "Ufficio Display"; font-style: normal; font-weight: 400; font-display: swap; src: local("Ufficio Display"), url("/fonts/ufficio-display/UfficioDisplay-400.otf") format("opentype"); }
+@font-face { font-family: "Ufficio Display"; font-style: normal; font-weight: 500; font-display: swap; src: local("Ufficio Display Medium"), url("/fonts/ufficio-display/UfficioDisplay-500.otf") format("opentype"); }
+@font-face { font-family: "Ufficio Display"; font-style: normal; font-weight: 600; font-display: swap; src: local("Ufficio Display Semibold"), url("/fonts/ufficio-display/UfficioDisplay-600.otf") format("opentype"); }
+@font-face { font-family: "Ufficio Display"; font-style: normal; font-weight: 700; font-display: swap; src: local("Ufficio Display Bold"), url("/fonts/ufficio-display/UfficioDisplay-700.otf") format("opentype"); }
+
+/* SPACE GROTESK — header role. Source: ~/Documents/apps/FontBase/branding/
+   Licence: UNVERIFIED (no EULA in the library). Mock use only. */
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 400; font-display: swap; src: local("Space Grotesk Regular"), url("/fonts/space-grotesk/SpaceGrotesk-Regular.otf") format("opentype"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: local("Space Grotesk Medium"), url("/fonts/space-grotesk/SpaceGrotesk-Medium.otf") format("opentype"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: local("Space Grotesk SemiBold"), url("/fonts/space-grotesk/SpaceGrotesk-SemiBold.otf") format("opentype"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: local("Space Grotesk Bold"), url("/fonts/space-grotesk/SpaceGrotesk-Bold.otf") format("opentype"); }
+
+/* AKROBAT — text role. Source: ~/Documents/apps/FontBase/sans-serif/
+   Licence: UNVERIFIED. Mock use only. */
+@font-face { font-family: "Akrobat"; font-style: normal; font-weight: 300; font-display: swap; src: local("Akrobat Light"), url("/fonts/akrobat/Akrobat-Light.otf") format("opentype"); }
+@font-face { font-family: "Akrobat"; font-style: normal; font-weight: 400; font-display: swap; src: local("Akrobat Regular"), url("/fonts/akrobat/Akrobat-Regular.otf") format("opentype"); }
+@font-face { font-family: "Akrobat"; font-style: normal; font-weight: 600; font-display: swap; src: local("Akrobat SemiBold"), url("/fonts/akrobat/Akrobat-SemiBold.otf") format("opentype"); }
+@font-face { font-family: "Akrobat"; font-style: normal; font-weight: 700; font-display: swap; src: local("Akrobat Bold"), url("/fonts/akrobat/Akrobat-Bold.otf") format("opentype"); }

@@ -71,3 +71,11 @@
 .tiers-compare__block { margin-bottom: 48px; }
 .tiers-compare__label { font-family: ui-monospace, monospace; font-size: .75rem; color: var(--nl-color-fg-muted); margin: 0 0 8px; }
 .tiers-compare__frame { width: 100%; height: 620px; border: 1px solid var(--nl-color-line); background: #fff; }
+
+/* ══ COVER (default) — a imagem é a primeira prova ════════════════════
+   MOCK. Toda página tem cover; flagship tem cover própria (arte), as outras
+   caem na default. A cover não é “hero”: é prova visual antes da leitura. */
+.t-flagship__cover { margin: 0 0 28px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #262d34; background: #11161c; }
+.t-flagship__cover img, .t-flagship__cover .t-cover__fallback { width: 100%; height: 100%; display: block; object-fit: cover; }
+.t-cover__fallback { display: grid; place-items: center; background: re repeating-linear-gradient(135deg, #141414, #141414 10px, #181818 10px, #181818 20px); color: #6f7883; font-family: ui-monospace, monospace; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+.t-cover__cover { margin: 0 0 24px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--nl-color-line); }
