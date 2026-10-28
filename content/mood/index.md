@@ -1,6 +1,7 @@
 ---
 title: "Mood"
-type: experimental
+type: portfolio
+tier: experimental
 description: "Image curation and visual reference. Board by feel, not by folder."
 date: 2026-10-23
 status: TB

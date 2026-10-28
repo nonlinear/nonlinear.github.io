@@ -1,10 +1,9 @@
-{{ define "main" }}
 {{- /* collab — produto em colaboração com terceiro.
        NÃO é publicado hoje: poster e nugrau têm tier collab, mas página
        é proibida por sigilo/contrato. Este layout existe para quando o
        owner autorizar a primeira superfície collab. Até então, nenhuma
        página tem `type: collab` e este arquivo nunca é invocado. */ -}}
-<article class="t-collab">
+<div class="t-collab">
   <header class="t-collab__head">
     <p class="t-collab__seal">collaboration · under agreement</p>
     <h1 class="t-collab__title">{{ .Title }}</h1>
@@ -19,5 +18,4 @@
   {{ with .Params.note }}
   <footer class="t-collab__note">{{ . }}</footer>
   {{ end }}
-</article>
-{{ end }}
+</div>

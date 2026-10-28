@@ -4,8 +4,13 @@
    É o fallback do Hugo para qualquer página sem layout — por isso ela tem que
    ser a mais neutra possível. */ -}}
 <article class="t-cover">
+  {{- /* COVER (default) — no art, but the slot exists so every page has one. */ -}}
+  <div class="t-cover__cover">
+    {{ with .Params.cover }}<img src="{{ . }}" alt="">
+    {{ else }}<span class="t-cover__fallback">cover</span>{{ end }}
+  </div>
   <header class="t-cover__head">
-    <h1 class="t-cover__title">{{ .Title }}</h1>
+    <h1 class="t-cover__title">{{ .Title }}{{ with .Params.subtitle }}<span class="subtitle">{{ . }}</span>{{ end }}</h1>
     {{ with .Description }}<p class="t-cover__lede">{{ . }}</p>{{ end }}
   </header>
   <div class="t-cover__body">

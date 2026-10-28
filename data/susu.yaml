@@ -59,16 +59,15 @@ sections:
     label: 8
     title: FOSS review — provider offer normalization (candidates for infrastructure/P08E074)
     goal: TBD
-  - id: book-intake
+  - id: P00E023
     label: 9
-    title: Book Intake — todo ↔ Librarian reconciliation + Bindery diagnosis
-    goal: Remover do todo livros já indexados no Librarian; diagnosticar por que o Bindery cobre só ~40%.
-  - id: meetings
+    title: Omnivore self-hosted — install, import, cleanup
+    goal: Instalar Omnivore self-hosted no Mac Studio via Colima, importar Instapaper (só não-lidos),
+      limpar dados, versões Android/Mac. FIM. IA e Reviews vivem no epic `omnivore-ai`.
+  - id: P00E026
     label: 10
-    title: Meetings — produto/corpus sobre transcrição (skill meetings)
-    goal: 'Meetings como produto/corpus: skill semântica (triggers naturais), script de captura agendável
-      por trás, corpus susu/meetings/. Transcrição é capacidade (infrastructure); meetings é o produto
-      (susu).'
+    title: Transcript Corpus — storage & retrieval (o corpus de meetings)
+    goal: TBD
 - key: planning
   items:
   - id: P00E017
@@ -83,17 +82,17 @@ sections:
       prosa entre infra, money, ring e susu: o que é um alerta, como é formatado, quem pode mandar, com
       que frequência, com que dedupe, e como o canal é escolhido (hoje email; amanhã Kin app / device
       notification). Dizer a cada agente QUANDO, COMO e QUÃO OFTEN notificar — em vez de cada um inventar.'
-  - id: health-list-module
+  - id: P00E024
     label: 3
+    title: Omnivore AI
+    goal: Discutir IA sobre o Omnivore (router OpenClaw / MLX Qwen), estender Reviews, e novas ideias
+      via webhooks.
+  - id: P00E042
+    label: 4
     title: Health List module — Susu Weekly consumer (infra → susu)
     goal: 'Consumir o artefato de saúde do infrastructure (current.json) como módulo do Susu Weekly: coletor
       read-only (mN-health.py) + seção ''Health'' no render, com spark em LINE chart. 2ª aplicação da
       POL-WEEKLY-DATA.'
-  - id: OMNIVORE-AI
-    label: 4
-    title: Omnivore AI
-    goal: Discutir IA sobre o Omnivore (router OpenClaw / MLX Qwen), estender Reviews, e novas ideias
-      via webhooks.
 - key: done
   items:
   - id: e008_20260513

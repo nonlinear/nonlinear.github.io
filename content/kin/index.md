@@ -1,6 +1,7 @@
 ---
 title: "Kin"
-type: flagship
+type: portfolio
+tier: flagship
 description: "Design-Engineer with motion in the bones. Visual brain, animator's eye."
 date: 2026-10-23
 status: TB

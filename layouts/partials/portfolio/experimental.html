@@ -1,8 +1,7 @@
-{{ define "main" }}
 {{- /* EXPERIMENTAL — estrutura: aviso primeiro, conteúdo depois, sem CTA.
    Ordem: banner de estado → título → corpo → o que não funciona → footer.
    NÃO existe botão de instalar. A ausência de CTA É a diferença estrutural. */ -}}
-<article class="t-exp">
+<div class="t-exp">
   <aside class="t-exp__banner">
     <strong>In evaluation.</strong> Lorem ipsum — use at your own risk.
   </aside>
@@ -11,6 +10,9 @@
     <h1 class="t-exp__title">{{ .Title }}</h1>
     {{ with .Description }}<p class="t-exp__lede">{{ . }}</p>{{ end }}
   </header>
+
+  {{- /* ROADMAP — same projection, different frame. */ -}}
+  {{ partial "portfolio/roadmap.html" (dict "project" .File.ContentBaseName) }}
 
   <section class="t-exp__body">
     {{ .Content }}
@@ -26,5 +28,4 @@
     </ul>
     {{ partial "components/mock-diagram.html" (dict "label" (printf "%s — sketch" .Title)) }}
   </section>
-</article>
-{{ end }}
+</div>

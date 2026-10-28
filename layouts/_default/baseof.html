@@ -7,9 +7,11 @@
   {{/* Substrate: MUI/Material theme model, no React (pattern-alignment §1.1).
        theme maps substrate → destination vars; base consumes the theme.
        TODO(component): alinhar à Pattern Library (epic pattern-alignment). */}}
+  <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/nonlinear-theme.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/tiers.css">
+  <link rel="stylesheet" href="/css/blocks.css">
 <script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
   {{/* Mermaid: GitHub-compatible diagram rendering (layouts/_default/_markup/render-codeblock-mermaid.html).
        Client-side, same model as GitHub markdown — ```mermaid blocks become <pre class="mermaid">.
@@ -20,11 +22,7 @@
   </script>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="/">Nonlinear</a>
-  </nav>
-</header>
+{{ partial "site-header.html" . }}
 <main>
 {{ block "main" . }}{{ end }}
 </main>

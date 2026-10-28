@@ -58,18 +58,18 @@ sections:
     goal: 'The class of failure that makes several agents look frozen is isolated and mitigated: two writers
       colliding on one session, with its upstream causes in a watchdog blind to state and a long failover.
       The fix names the class, not the symptom.'
-  - id: P09E0XX
-    label: 9
-    title: Design Fix
-    goal: 'Primeiro field epic recovery do mea-culpa (P09E019). Prova o fluxo: stable → experimental →
-      automated → HOME/AWAY/OFFLINE/RECOVERY → device → aprovação do nonlinear → juntos promovemos o MESMO
-      artifact a novo stable.'
   - id: P09E101
-    label: 10
+    label: 9
     title: Offline Channel
     goal: One channel stays offline while the stable channel stays online on the same device, the same
       cellular network and the same endpoint. The divergence needs a demonstrated root cause before it
       is explained.
+  - id: P09E102
+    label: 10
+    title: Envelope Authoritative Classification
+    goal: 'Stop classifying control-plane events by matching text inside the message body. Classify only
+      by an authoritative marker: a declared type field on the envelope, or (interim) an ANCHORED match
+      on the transport envelope. Body-substring matching is banned. Fixes two opposite defects at once.'
 - key: planning
   items:
   - id: P09E003

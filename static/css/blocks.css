@@ -1,0 +1,208 @@
+/* blocks.css — copy building blocks. MOCK: structure only, no brand opinion.
+   Every rule consumes a role variable (--font-*) so the typography exercise can
+   swap a whole role by changing ONE declaration in type-roles.css. */
+
+/* ══ TYPE ROLES — 5 slots, swapped independently ══════════════════════
+   limit of font families is a GUIDELINE, not a rule (owner, 2026-10-24). */
+:root {
+  /* --font-default is DEFINED here, first. Without it, a role pointing at it
+     produces an invalid declaration, the browser drops the rule, and the role
+     silently inherits <body> — the exact failure mode that made `.logo` look
+     "not wired" while the CSS looked correct. */
+  --font-default: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-logo:   "Ufficio Display", ui-sans-serif, system-ui, sans-serif;   /* reserved to branding */
+  --font-header: "Space Grotesk", var(--font-default);   /* regular */
+  --font-text:   "Akrobat", var(--font-default);
+  --font-quote:  Georgia, "Iowan Old Style", serif;
+  --font-code:   ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ══ LOGO — default heading, every page, not a portfolio concern ══════
+   Caps are VISUAL (text-transform). The HTML keeps "Nonlinear Studio" so screen
+   readers, clipboard and search get the real name. Text comes from config.
+
+   `.logo` is the ONLY owner of the logo family. No element selector anywhere may
+   claim it — that is what "anything with class logo gets the logo font" means in
+   practice: whichever tag wears the class, the class decides the type. */
+.site-header { border-bottom: 1px solid var(--nl-color-line, #232a31); padding-bottom: .8em; }
+.site-nav { display: flex; align-items: baseline; }
+.logo {
+  font-family: var(--font-logo);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.logo a { color: var(--nl-color-fg-strong, #f2f2f2); text-decoration: none; }
+.logo a:hover { color: var(--nl-color-primary, #ffd21e); }
+
+/* ══ HEADINGS — one family, hierarchy from size + weight ═════════════
+   Headings get the header family ONLY when they are not a logo. `:not(.logo)`
+   is the load-bearing part: without it, a later element rule outranks the class
+   and the logo silently reverts to the header family. This is the general fix —
+   it covers h1 through h6 and any future heading level, in one selector. */
+:is(h1, h2, h3, h4, h5, h6):not(.logo) { font-family: var(--font-header); }
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.05; letter-spacing: -0.025em; font-weight: 300; margin: 0 0 .5em; }
+h2 { font-size: 1.5rem; line-height: 1.2; font-weight: 500; margin: 2.2em 0 .6em; letter-spacing: -0.015em; }
+h3 { font-size: 1.125rem; line-height: 1.3; font-weight: 600; margin: 1.8em 0 .4em; }
+h4 { font-size: 1rem; line-height: 1.35; font-weight: 600; letter-spacing: .01em; margin: 1.5em 0 .3em; }
+
+/* subtitle: NOT a heading — inert span inside h1 (Pickering) */
+h1 .subtitle, .subtitle {
+  display: block;
+  font-family: var(--font-text);
+  font-size: .42em;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.35;
+  color: var(--nl-color-fg-muted, #8a8a8a);
+  margin-top: .5em;
+}
+
+/* ══ TEXT ════════════════════════════════════════════════════════════ */
+p, li, td, th, figcaption, .lede { font-family: var(--font-text); }
+p { margin: 0 0 1.1em; line-height: 1.62; }
+.lede { font-size: 1.2rem; line-height: 1.5; color: var(--nl-color-fg-muted, #9a9a9a); }
+
+/* ══ LISTS — rhythm, not decoration ══════════════════════════════════ */
+ul, ol { margin: 0 0 1.2em; padding-left: 1.3em; }
+li { margin-bottom: .45em; line-height: 1.58; }
+li > ul, li > ol { margin-top: .45em; margin-bottom: 0; }
+ol { list-style: decimal; }
+ul { list-style: disc; }
+/* a list of one item is a paragraph — collapse the marker */
+ul:has(> li:only-child) { list-style: none; padding-left: 0; }
+
+/* ══ QUOTE — borrowed text, visibly borrowed ═════════════════════════ */
+blockquote {
+  font-family: var(--font-quote);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin: 1.8em 0;
+  padding: 0 0 0 1.2em;
+  border-left: 2px solid var(--nl-color-primary, #ffd21e);
+  color: var(--nl-color-fg-strong, #e8e8e8);
+}
+blockquote p { margin-bottom: .6em; }
+blockquote footer, blockquote cite {
+  font-family: var(--font-text);
+  font-size: .82rem;
+  font-style: normal;
+  letter-spacing: .01em;
+  color: var(--nl-color-fg-muted, #8a8a8a);
+  margin-top: .8em;
+  display: block;
+}
+
+/* ══ ALERT — MUI severity model, no React ════════════════════════════ */
+.alert {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .2em 1em;
+  margin: 1.6em 0;
+  padding: .9em 1.1em;
+  border-left: 3px solid currentColor;
+  background: color-mix(in srgb, currentColor 7%, transparent);
+  font-family: var(--font-text);
+}
+.alert__label {
+  grid-column: 1;
+  font-family: var(--font-code);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: .35em;
+  opacity: .85;
+}
+.alert__body { grid-column: 2; font-size: .95rem; }
+.alert__body p:last-child { margin-bottom: 0; }
+.alert--info    { color: #7cb7ff; }
+.alert--success { color: #6ede9b; }
+.alert--warning { color: #ffc65c; }
+.alert--error   { color: #ff8f8f; }
+
+/* ══ CODE — three registers ══════════════════════════════════════════ */
+code, kbd, var, samp, pre { font-family: var(--font-code); }
+:not(pre) > code {
+  font-size: .875em;
+  padding: .12em .38em;
+  border-radius: 3px;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  letter-spacing: -.01em;
+}
+kbd {
+  font-size: .78em;
+  padding: .15em .45em;
+  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+var { font-style: italic; opacity: .9; }
+pre, .highlight pre {
+  font-size: .85rem;
+  line-height: 1.55;
+  padding: 1em 1.15em;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  background: #14181d;
+  border: 1px solid #232a31;
+}
+pre code { font-size: inherit; padding: 0; background: none; }
+
+/* ══ TABLE ═══════════════════════════════════════════════════════════ */
+table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: .9rem; }
+th, td { text-align: left; padding: .55em .7em; border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
+th { font-family: var(--font-header); font-weight: 600; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; opacity: .75; }
+
+/* ══ RULES ═══════════════════════════════════════════════════════════ */
+hr { border: 0; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); margin: 2.6em 0; }
+
+/* ══ MERMAID ═════════════════════════════════════════════════════════ */
+pre.mermaid { background: none; border: 0; padding: 0; display: flex; justify-content: center; }
+
+/* ── ROADMAP (portfolio) ────────────────────────────────────────────────
+   Two columns, same rhythm as the rest of the tier. Reads only from
+   data/roadmap/<project>.yaml (publication heartbeat). No new tokens. */
+.roadmap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+  margin-block: 32px;
+  padding-block: 24px;
+  border-block: 1px solid currentColor;
+  border-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+@media (max-width: 640px) { .roadmap { grid-template-columns: 1fr; } }
+.roadmap-h {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  opacity: .6;
+  margin: 0 0 12px;
+}
+.roadmap-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.roadmap-list li { font-size: .9375rem; line-height: 1.45; }
+.roadmap-list strong { font-weight: 600; }
+.roadmap-id {
+  font-size: .5625rem;
+  letter-spacing: .04em;
+  opacity: .45;
+  margin-left: 3px;
+  vertical-align: super;
+}
+.roadmap-goal { opacity: .75; }
+.roadmap-empty { opacity: .5; font-size: .875rem; margin: 0; }
+.roadmap-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: .6875rem;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: .45;
+  font-weight: 400;
+}

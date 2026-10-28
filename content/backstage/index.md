@@ -1,6 +1,7 @@
 ---
 title: "Backstage"
-type: flagship
+type: portfolio
+tier: flagship
 description: "Governance. Epics, parity, taxonomy — the studio's own operating system."
 date: 2026-10-23
 status: TB

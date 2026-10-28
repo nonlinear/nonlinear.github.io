@@ -1,6 +1,6 @@
 baseURL = "https://nonlinearstudio.org/"
 locale = "en-us"
-title = "Nonlinear"
+title = "Nonlinear Studio"
 publishDir = "docs"
 disableKinds = ["sitemap", "rss", "taxonomy", "term"]
 disableHugoGeneratorInject = true
@@ -10,6 +10,15 @@ disableHugoGeneratorInject = true
 #   "nome do site, descricao do site, hardcoded, duplicada. futuro, a gente fala
 #    'na real, pega o conteudo daqui' logo ONE source of truth."
 [params]
-  name = "Nonlinear"
+  name = "Nonlinear Studio"
   slogan = "cognition bleeds"
   description = "Studio. Design, produto, pesquisa. Brand · Editorial · Systems."
+
+# Markdown — GFM-compatible output. `unsafe` lets content carry the small amount
+# of raw HTML the doc layer needs (<kbd>, <var>); structure still comes from
+# markdown + render hooks, never from hand-written divs.
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions]
+  typographer = true

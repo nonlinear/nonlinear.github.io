@@ -38,7 +38,7 @@ sections:
     goal: Consult the library on Manuel De Landa's philosophy + simulation, and work out how stacking
       emergent properties produces self-sustaining evolution — vs De Landa, Deleuze/Guattari, Haraway,
       and adjacent thinkers.
-  - id: camille-001
+  - id: P16E034
     label: 7
     title: Camille — book intake
     goal: Intake, index, and keep a record of the books Camille sends to the library — organized in books/Camille/
@@ -48,7 +48,7 @@ sections:
     title: Green Colonialism — fichamento + correlacao
     goal: Read, fichamento e correlacionar 'The Geopolitics of Green Colonialism' (Lang, Manahan & Bringel,
       eds.) com o acervo — corroborações e pushbacks.
-  - id: studies-kind
+  - id: P16E035
     label: 9
     title: studies-kind — kinds canônicos do agente studies
     goal: Tornar os kinds de epic do agente studies (P16) uma fonte de verdade YAML autoritativa — o mesmo

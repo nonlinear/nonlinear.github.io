@@ -1,0 +1,33 @@
+{{/* BLOCKQUOTE render hook - two jobs.
+
+   1. Mermaid inside a blockquote (the README pattern) becomes the same
+      renderer as the mermaid fence.
+
+   2. Plain blockquote becomes blockquote + footer + cite, so borrowed text is
+      attributed in structure instead of by a hanging dash.
+
+   Authoring:
+     > quoted line
+     > - Author, TITLE     last line starting with an em dash becomes cite
+
+   Alerts are NOT handled here. On Hugo 0.146 and later .Text arrives already
+   rendered and the [!NOTE] marker is consumed before the hook runs. Use the
+   alert shortcode (layouts/shortcodes/alert.html). Tracked in P14E035.
+*/}}
+{{ $inner := .Text | strings.TrimSpace }}
+
+{{ if findRE `(?s)^<p>\s*(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|gantt|pie|mindmap|timeline|journey|gitGraph|quadrantChart|xychart|sankey)` $inner }}
+  <pre class="mermaid">{{ $inner | replaceRE `</?p>` "" | safeHTML }}</pre>
+{{ else }}
+  {{ $cite := "" }}
+  {{ $body := $inner }}
+  {{ $cm := findRESubmatch `(?s)^(.*)<p>\s*—\s*(.+?)</p>\s*$` $inner 1 }}
+  {{ if $cm }}
+    {{ $body = index (index $cm 0) 1 }}
+    {{ $cite = index (index $cm 0) 2 | strings.TrimSpace }}
+  {{ end }}
+  <blockquote>
+    {{ $body | safeHTML }}
+    {{ with $cite }}<footer><cite>{{ . | safeHTML }}</cite></footer>{{ end }}
+  </blockquote>
+{{ end }}

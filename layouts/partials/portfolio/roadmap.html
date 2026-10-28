@@ -1,0 +1,38 @@
+{{- /* PORTFOLIO/ROADMAP — the two lists of the MVP.
+   Source: data/<project>.yaml, written by the publication skill
+   (roadmap-exporter v1.0). Fixed name, fixed structure — nothing breaks.
+
+   No `done` column: roadmap.yaml does not project a completion timestamp.
+   Adding one is the backstage epic "latest done on roadmap".
+   Reading it back is: sections key=done already ships in the data. */ -}}
+
+{{ $p := .project }}
+{{ $rm := index site.Data $p }}
+{{ if not (and $rm $rm.sections) }}
+  {{ warnf "roadmap: no data/%s.yaml with sections — project not in the publication heartbeat" $p }}
+{{ else }}
+<section class="roadmap" aria-label="Roadmap {{ $p }}">
+  {{ range $rm.sections }}{{ if in (slice "active" "planning") .key }}
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">
+      {{- if eq .key "active" -}}
+        Currently working<span class="roadmap-sub">Active epics</span>
+      {{- else -}}
+        Coming soon<span class="roadmap-sub">Planning epics</span>
+      {{- end -}}
+    </h3>
+    {{ with .items }}
+      <ul class="roadmap-list">
+        {{ range . }}
+        <li>
+          <strong>{{ .title }}</strong>{{ if .id }}<sup class="roadmap-id">{{ .id }}</sup>{{ end }}{{ with .goal }}<span class="roadmap-goal"> — {{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="roadmap-empty">{{ if eq .key "active" }}Nothing active.{{ else }}Nothing planned.{{ end }}</p>
+    {{ end }}
+  </div>
+  {{ end }}{{ end }}
+</section>
+{{ end }}

@@ -97,44 +97,44 @@ sections:
     goal: 'The updated skill creator is applied to every existing skill: descriptions audited, evaluations
       run on the critical ones, triggers optimized, and documentation structure normalized with parity.
       A skill that survives the pass is one an agent can find and use.'
-  - id: P02E040
+  - id: P02E036
     label: 5
+    title: Reusable Playbook
+    goal: 'The playbook proven in one product generalizes into a platform of reusable procedures for any
+      deliverable: hypothesis, two witnesses, gates, battery delta, compounding knowledge. The originating
+      product keeps running without breaking its check system.'
+  - id: P02E037
+    label: 6
+    title: Trigger Inventory
+    goal: 'Every trigger check in the ecosystem is mapped and the minimum enforcement model is decided:
+      a skill the agent runs itself, a checkpoint at each commit, or a hybrid. A trigger nobody runs is
+      a rule in prose, and prose is the thing being replaced.'
+  - id: P02E038
+    label: 7
+    title: User Personas
+    goal: 'Persona management is a transversal standard: a canonical schema that products declare and
+      consumers read as an input contract. A persona says who the user is, and being amnesiac is a property
+      of the experiment, never of the persona.'
+  - id: P02E040
+    label: 8
     title: Check Architecture
     goal: The architecture of the check system scales from the single trigger of today to many triggers,
       with checks that attach selectively and generalize across projects that need variables. The gold
       standard is transcoding a government requirement into a check, including the simulation of what
       happens if that requirement is implied.
   - id: P02E047
-    label: 6
+    label: 9
     title: Delivery Annotation
     goal: The question is whether done needs a delivery annotation to distinguish finished from shipped
       in a named release, and the answer closes with a deterministic consumer. No state without an exit,
       and no inference from tags.
   - id: P02E048
-    label: 7
+    label: 10
     title: Skill publication
     goal: Publish a skill once and ship it to three targets. One pipeline checks the frontmatter each
       consumer requires, then pushes the same tagged revision to OpenClaw, to Claude, and to GitHub, so
       that a skill that runs here also runs there, and no target silently holds a different copy. The
       same instrument answers which skills this project owns.
-  - id: P02E049
-    label: 8
-    title: Skill status
-    goal: Give every skill one status that means one thing, derived from evidence where the evidence exists,
-      so that a skill claiming production actually carries a battery behind the claim and a reader can
-      sort the corpus without asking its author.
-  - id: P02E053
-    label: 9
-    title: Done Timestamps
-    goal: The roadmap projects WHEN an epic became done, so the public surface shows the last three in
-      real order instead of the arbitrary order of the projection. The data is in the epic today and does
-      not reach the roadmap, which blocks the consumer from computing what the source already knows.
-  - id: P02E054
-    label: 10
-    title: Release Home
-    goal: 'The release publication mechanism needs a home after its name was reassigned to the portfolio
-      publisher. Two outcomes are acceptable: it returns as its own skill under a name that says what
-      it does, or the chain it guarantees is written into the contract that absorbs it.'
 - key: done
   items:
   - id: visions

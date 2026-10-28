@@ -1,6 +1,7 @@
 ---
 title: "Nonlinear"
-type: flagship
+type: portfolio
+tier: flagship
 description: "The studio itself. Design, product, research, editorial curation."
 date: 2026-10-23
 status: TB

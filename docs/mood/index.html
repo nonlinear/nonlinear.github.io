@@ -1,166 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mood — Nonlinear</title>
-  
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/nonlinear-theme.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/tiers.css">
-  <link rel="stylesheet" href="/css/blocks.css">
-<script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
-  
-  <script type="module">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Mood — Nonlinear</title><link rel=stylesheet href=/css/fonts.css><link rel=stylesheet href=/css/nonlinear-theme.css><link rel=stylesheet href=/css/base.css><link rel=stylesheet href=/css/tiers.css><link rel=stylesheet href=/css/blocks.css><script defer data-domain=nonlinearstudio.org src=https://analytics.nonlinear.nyc/js/script.js></script><script type=module>
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script>
-</head>
-<body>
-
-<header class="site-header">
-  <nav class="site-nav" aria-label="Site">
-    <h2 class="logo"><a href="/">Nonlinear Studio</a></h2>
-  </nav>
-</header>
-
-<main>
-<article class="t-portfolio t-experimental">
-    <div class="t-exp">
-  <aside class="t-exp__banner">
-    <strong>In evaluation.</strong> Lorem ipsum — use at your own risk.
-  </aside>
-
-  <header class="t-exp__head">
-    <h1 class="t-exp__title">Mood</h1>
-    <p class="t-exp__lede">Image curation and visual reference. Board by feel, not by folder.</p>
-  </header>
-
-
-<section class="roadmap" aria-label="Roadmap mood">
-  
-  <div class="roadmap-col">
-    <h3 class="roadmap-h">Currently working<span class="roadmap-sub">Active epics</span></h3>
-    
-      <ul class="roadmap-list">
-        
-        <li>
-          <strong>Reels — Personal Reference-Media Collection (source-agnostic)</strong><sup class="roadmap-id">P13E004</sup><span class="roadmap-goal"> — Um índice visual pessoal de mídia referenciada, pesquisável e navegável por tags. Source-agnostic: Instagram é o primeiro provider, RedNote/TikTok/ YouTube podem seguir. Não armazena o vídeo — referência &#43; metadata &#43; tags que apontam pro host original, servidos em reels.nonlinear.nyc.</span>
-        </li>
-        
-        <li>
-          <strong>Charcoal — Aprender Arte com Carvão &amp; Materiais</strong><sup class="roadmap-id">P13E008</sup><span class="roadmap-goal"> — Expandir o agente mood para cobrir aprendizado de arte — começando com carvão, depois expandindo para materiais, técnicas e escolas de desenho/pintura em NYC.</span>
-        </li>
-        
-        <li>
-          <strong>Configuration</strong><sup class="roadmap-id">P13E009</sup><span class="roadmap-goal"> — Auditar o ecossistema de MCPs e skills do agente Mood, documentar acesso, resolver bloqueios e sugerir novos tools para manter o gallery e expandir capacidades.</span>
-        </li>
-        
-      </ul>
-    
-  </div>
-  
-  <div class="roadmap-col">
-    <h3 class="roadmap-h">Coming soon<span class="roadmap-sub">Planning epics</span></h3>
-    
-      <ul class="roadmap-list">
-        
-        <li>
-          <strong>Mood — Visual Collection Engine</strong><sup class="roadmap-id">P13E001</sup><span class="roadmap-goal"> — Mood é uma engine de visualização de coleções. Cada path seleciona uma coleção &#43; um visualizador. / é a experiência pública default. Outros paths existem sem serem divulgados (unlisted, não private). Capacidade funcional cresce sem multiplicar superfície operacional.</span>
-        </li>
-        
-        <li>
-          <strong>Reference Pictures — hidden single-image viewer</strong><sup class="roadmap-id">P13E002</sup><span class="roadmap-goal"> — Adicionar /references como visualizador alternativo no mood engine. Uma imagem por vez, aleatória, troca a cada 30min. Sem link, sem README — hidden path. Quem sabe sabe.</span>
-        </li>
-        
-        <li>
-          <strong>Charcoal Drawing — study and reference</strong><sup class="roadmap-id">P13E003</sup><span class="roadmap-goal"> — Coletar e organizar livros de referência sobre desenho a carvão. Alguns já existem no Librarian. Outros precisam ser baixados.</span>
-        </li>
-        
-        <li>
-          <strong>Update Reels — Scraping periódico (Instagram) &#43; pensar RedNote</strong><sup class="roadmap-id">P13E005</sup><span class="roadmap-goal"> — Montar um scraping periódico que &#34;limpa&#34; os Saves do Instagram (detecta novos reels salvos e os injeta no índice do reels.nonlinear.nyc), e pensar/planejar o provider adapter do RedNote. É o contraponto do epic `reels` (que usa só o corpus Markdown já curado, sem scraping).</span>
-        </li>
-        
-        <li>
-          <strong>Reels Design — Visual/UX do viewer e thumbnail/modal</strong><sup class="roadmap-id">P13E006</sup><span class="roadmap-goal"> — Definir e construir a camada cosmética do Reels: o viewer (grade/busca por tags), o thumbnail e o modal de visualização da mídia referenciada. A parte técnica (import, SQLite, deploy, launchd/php :3002, git) já está fechada e versionada no epic reels.md — este epic NÃO reabre arquitetura, separa apenas o trabalho visual que fica para depois.</span>
-        </li>
-        
-        <li>
-          <strong>Hashtag Vocabulary Layer (media-taxonomy-engine)</strong><sup class="roadmap-id">P13E010</sup><span class="roadmap-goal"> — Definir a Hashtag Vocabulary Layer como parte do ingestion pipeline (não um cleaner): uma camada taxonomy/controlled-vocabulary (SKOS-aligned) que enriquece as tags RAW de qualquer fonte (Instagram, RedNote, YouTube, Reddit) com conceitos/aliases/traduções — no mesmo nível dos adapters de fonte. Planejar, não agir ainda.</span>
-        </li>
-        
-        <li>
-          <strong>Traffic Cap &amp; Rate Limiting</strong><sup class="roadmap-id">P13E015</sup><span class="roadmap-goal"> — Implement graceful degradation when traffic exceeds capacity: rate limiting (Nginx &#43; Cloudflare) and a &#39;too busy&#39; fallback.</span>
-        </li>
-        
-        <li>
-          <strong>Immich library conversion — review of immich-convert-originals</strong><sup class="roadmap-id">P13E016</sup><span class="roadmap-goal"> — Decidir se, e como, aplicar immich-convert-originals (JXL/AVIF/AV1) à biblioteca Immich do NAS — com números medidos, não estimativas de README.</span>
-        </li>
-        
-      </ul>
-    
-  </div>
-  
-</section>
-
-
-
-  <section class="t-exp__body">
-    <p>In the same way that a well-designed object reveals how it wants to be held,
+  </script></head><body><header class=site-header><nav class=site-nav aria-label=Site><h2 class=logo><a href=/>Nonlinear Studio</a></h2></nav></header><main><article class="t-portfolio t-experimental"><div class=t-exp><aside class=t-exp__banner><strong>In evaluation.</strong> Lorem ipsum — use at your own risk.</aside><header class=t-exp__head><h1 class=t-exp__title>Mood</h1><p class=t-exp__lede>Image curation and visual reference. Board by feel, not by folder.</p></header><section class=roadmap aria-label="Roadmap mood"><div class=roadmap-col><h3 class=roadmap-h>Currently working<span class=roadmap-sub>Active epics</span></h3><ul class=roadmap-list><li><strong>Reels Index</strong><sup class=roadmap-id>P13E004</sup><span class=roadmap-goal> — A personal visual index of referenced media, searchable and navigable by tag. A source adapter is the only thing a new host requires, and Instagram is the first one. The video is not stored: the reference, its metadata and its tags point back to the host.</span></li><li><strong>Art Study</strong><sup class=roadmap-id>P13E008</sup><span class=roadmap-goal> — The agent covers art learning, starting with charcoal and widening to materials, techniques and drawing or painting schools in the city. Each entry is a study item with a source, not a bookmark.</span></li><li><strong>Tool Audit</strong><sup class=roadmap-id>P13E009</sup><span class=roadmap-goal> — Every MCP and skill available to the agent is audited, its access is documented, and the blockers are resolved or named. Missing tools are written down with what they would enable.</span></li></ul></div><div class=roadmap-col><h3 class=roadmap-h>Coming soon<span class=roadmap-sub>Planning epics</span></h3><ul class=roadmap-list><li><strong>Collection Engine</strong><sup class=roadmap-id>P13E001</sup><span class=roadmap-goal> — One engine serves visual collections. A path selects a collection and a viewer, the root path is the public default, and other paths exist without being advertised. Functional capacity grows without multiplying the operational surface.</span></li><li><strong>Hidden Viewer</strong><sup class=roadmap-id>P13E002</sup><span class=roadmap-goal> — A references path exists as an alternate viewer: one image at a time, chosen at random, changing every thirty minutes. No link and no readme point at it. Whoever knows the path knows it.</span></li><li><strong>Charcoal Sources</strong><sup class=roadmap-id>P13E003</sup><span class=roadmap-goal> — Reference books on charcoal drawing are collected and organized, with the ones already in the library kept where they are and the missing ones acquired. The set is complete enough to study from without searching again.</span></li><li><strong>Reels Scraping</strong><sup class=roadmap-id>P13E005</sup><span class=roadmap-goal> — A scheduled scrape detects newly saved reels and injects them into the index, so a save becomes a searchable reference without a manual pass. The source adapter for a second host is planned on the same contract.</span></li><li><strong>Reels Design</strong><sup class=roadmap-id>P13E006</sup><span class=roadmap-goal> — The visual layer of the reels index is defined and built: the grid with tag search, the thumbnail, and the modal that shows the media. The technical path is closed and versioned elsewhere; this epic holds only the work that comes after it.</span></li><li><strong>Hashtag Vocabulary</strong><sup class=roadmap-id>P13E010</sup><span class=roadmap-goal> — A vocabulary layer enriches the raw tags of any source with concepts, aliases and translations, at the same level as a source adapter and not as a cleaner after the fact. The layer is planned and SKOS-aligned; it does not act yet.</span></li><li><strong>Traffic Cap</strong><sup class=roadmap-id>P13E015</sup><span class=roadmap-goal> — When traffic exceeds capacity the service degrades on purpose instead of failing: requests are rate limited at the proxy and the CDN, and a busy page stands in for the collection. The cap is a number the operator sets, not an outage.</span></li><li><strong>Immich Conversion</strong><sup class=roadmap-id>P13E016</sup><span class=roadmap-goal> — The library conversion is decided from measured numbers on the real collection, not from a readme estimate: whether to convert originals to newer formats, at what saving, and what breaks. The answer is a decision with evidence attached.</span></li></ul></div></section><section class=t-exp__body><p>In the same way that a well-designed object reveals how it wants to be held,
 this product reveals how it wants to be used before anyone reads a word. That is
-the whole ambition: cognition that shows itself in the surface.</p>
-<h2 id="what-it-is">What it is</h2>
-<p>It began as an internal instrument and stayed one. The shape came from use, not
+the whole ambition: cognition that shows itself in the surface.</p><h2 id=what-it-is>What it is</h2><p>It began as an internal instrument and stayed one. The shape came from use, not
 from specification — every part that survived is a part someone reached for more
-than once. What follows is a description of that shape.</p>
-<h2 id="how-it-works">How it works</h2>
-<p>Three movements, in order. First the intake, where material arrives unformed.
+than once. What follows is a description of that shape.</p><h2 id=how-it-works>How it works</h2><p>Three movements, in order. First the intake, where material arrives unformed.
 Then the reduction, where it is made small enough to hold. Finally the return,
-where it goes back out into the same world that produced it.</p>
-
-<pre class="mermaid">flowchart LR
+where it goes back out into the same world that produced it.</p><pre class=mermaid>flowchart LR
   A[intake] --&gt; B[reduction]
   B --&gt; C{holds?}
   C --&gt;|yes| D[return]
-  C --&gt;|no| B</pre>
-<h2 id="status">Status</h2>
-<p>Working, with the usual caveats. Nothing here asks for attention it has not
-earned, and nothing claims to be finished.</p>
-
-    <div class="mock-body">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-  <h2>Lorem heading</h2>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-  </section>
-
-  <section class="t-exp__gaps">
-    <h2>What does not work yet</h2>
-    <ul>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Consectetur adipiscing elit.</li>
-      <li>Sed do eiusmod tempor.</li>
-    </ul>
-    <figure class="mock-diagram">
-  <pre class="mermaid">
+  C --&gt;|no| B</pre><h2 id=status>Status</h2><p>Working, with the usual caveats. Nothing here asks for attention it has not
+earned, and nothing claims to be finished.</p><div class=mock-body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p><h2>Lorem heading</h2><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></section><section class=t-exp__gaps><h2>What does not work yet</h2><ul><li>Lorem ipsum dolor sit amet.</li><li>Consectetur adipiscing elit.</li><li>Sed do eiusmod tempor.</li></ul><figure class=mock-diagram><pre class=mermaid>
 flowchart LR
   A[Mood — sketch] --> B[ingest]
   B --> C{stable?}
   C -->|yes| D[flagship]
   C -->|no| E[experimental]
-  </pre>
-  <figcaption>Mood — sketch</figcaption>
-</figure>
-
-  </section>
-</div>
-
-  
-</article>
-
-</main>
-<footer>Nonlinear Studio Studio · cognition bleeds</footer>
-</body>
-</html>
+  </pre><figcaption>Mood — sketch</figcaption></figure></section></div></article></main><footer>Nonlinear Studio Studio · cognition bleeds</footer></body></html>

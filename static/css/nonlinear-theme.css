@@ -18,7 +18,7 @@
   --md-sys-color-on-surface-muted:  #888;
   --md-sys-color-outline:        #2a2a2a;
 
-  --md-sys-typescale-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-sys-typescale-font: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --md-sys-typescale-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --md-sys-typescale-xs:   0.75rem;
   --md-sys-typescale-sm:   0.875rem;

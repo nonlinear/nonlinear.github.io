@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{- /* PORTFOLIO — one template per CATEGORY. Render happens in tier partials;
+   the tier is only a class on the root. If two tiers ever need the same rule,
+   that is the signal the HTML should be identical — and then they were never
+   two tiers (doctrine from the mock phase).
+
+   WIRE (2026-10-24): Hugo selects layouts by `.Type`, not by a `category` field.
+   Content carries `type: portfolio` + `tier: <name>`. `category` remains the
+   vocab word used in docs; `type` is what the engine reads. One word, one job,
+   no alias field pretending to be both. */ -}}
+{{- $tier := .Params.tier | default "experimental" -}}
+<article class="t-portfolio t-{{ $tier }}">
+  {{- $tpl := printf "_partials/portfolio/%s.html" $tier -}}
+  {{ if templates.Exists $tpl }}
+    {{ partial (printf "portfolio/%s.html" $tier) . }}
+  {{ else }}
+    {{ partial "portfolio/experimental.html" . }}
+  {{ end }}
+</article>
+{{ end }}

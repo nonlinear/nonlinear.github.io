@@ -9,20 +9,12 @@ counts:
 sections:
 - key: active
   items:
-  - id: ADV-domain-watch-alerting
-    label: 1
-    title: Advisory — domain-watch alerting design (owner question)
-    goal: TBD
-  - id: INCIDENT-20261015-cf-access-blocks-voice
-    label: 2
-    title: CF Access 403 blocks Pebble /voice at the edge (3045.nonlinear.nyc)
-    goal: TBD
   - id: P08E007
-    label: 3
+    label: 1
     title: Provider Routing — do OpenCode Go (limite mensal) ao OpenRouter (créditos)
     goal: TBD
   - id: P08E008
-    label: 4
+    label: 2
     title: Skill Inventory — consolidar folders, frontmatter, triggers e inventário de scripts
     goal: 'Consolidar o sistema de skills do Studio num ÚNICO folder canônico que seja, ao mesmo tempo,
       (a) registry do OpenClaw, (b) folder do Syncthing e (c) vault do Obsidian — eliminando a duplicação
@@ -30,38 +22,50 @@ sections:
       (não tudo numa skill), e um Markdown atualizado que enumere como rodar todos os scripts BYPASSANDO
       skills.'
   - id: P08E009
-    label: 5
+    label: 3
     title: Pulse Agent — weekly victory lap & trend viewer
     goal: 'Operate as the horizontal data agent. Collect from: infrastructure (system health), backstage
       (epics), finances (money), models (OpenRouter). Produce: weekly pulse.html (browser + email).'
   - id: P08E011
-    label: 6
+    label: 4
     title: Pi Dreams — migration spike for pi.dev
     goal: Simulate a migration of the Nonlinear Studio stack from OpenClaw to pi.dev, preserving the same
       emergent capabilities (skills, MCPs, multi-agent, bridge, heartbeats, pulse).
   - id: P08E014
-    label: 7
+    label: 5
     title: Fuck Latency — latência local confiável e nimble
     goal: 'Provar que dá para ter algo CONFIÁVEL e NIMBLE, próprio pra local. Braço 1-4 (MLX vs llama.cpp,
       cloud vs local, 2B vs 35B) + Braço 5 (pipeline de voz end-to-end: STT + modelo burro + TTS, NESTA
       máquina).'
   - id: P08E015
-    label: 8
+    label: 6
     title: Routing Healthcheck
     goal: Tornar routing uma política declarativa materializada automaticamente, com health checks fornecendo
       apenas elegibilidade. Classifica falhas de provider (EXHAUSTED/INELIGIBLE/TRANSIENT/AVAILABLE) que
       o OpenClaw 2026.5.18 não distingue.
   - id: P08E016
-    label: 9
+    label: 7
     title: Spawn Hygiene
     goal: Todo spawn tem timeout explícito, marca estado no fim, e é limpo no restart do pai. CLI e Gateway
       concordam sobre o ledger. A regra vira policy compartilhada para TODOS os agentes.
   - id: P08E021
-    label: 10
+    label: 8
     title: Dumb Models — selection and criteria
     goal: 'Definir o CRITÉRIO para escolher "dumb models" (pequenos, locais) e pesquisar os candidatos
       atuais. Critério = os 4 workloads reais: skills, home assistant, triage (todo), librarian. Língua
       é critério próprio (herdado de poverty-cognition-tax).'
+  - id: P08E022
+    label: 9
+    title: Endpoint Registry — declared interfaces for OpenClaw
+    goal: 'Tornar TODA dependência de endpoint DECLARADA e VERIFICÁVEL no OpenClaw, para que trocar uma
+      porta/engine nunca mais quebre um consumidor em silêncio. Origem: 3 falhas de "interface implícita"
+      (Paperless) + o provider fantasma.'
+  - id: P08E023
+    label: 10
+    title: Nurtured Cognition — intelligence lives in the environment
+    goal: Codify the thesis that an agent's capability emerges from the environment that nurtures it,
+      not from the model's parameters. Produce an operational policy (POL-001) that decides WHERE to place
+      intelligence.
 - key: planning
   items:
   - id: P08E001

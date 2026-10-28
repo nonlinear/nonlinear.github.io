@@ -11,68 +11,69 @@ sections:
   items:
   - id: P13E004
     label: 1
-    title: Reels — Personal Reference-Media Collection (source-agnostic)
-    goal: 'Um índice visual pessoal de mídia referenciada, pesquisável e navegável por tags. Source-agnostic:
-      Instagram é o primeiro provider, RedNote/TikTok/ YouTube podem seguir. Não armazena o vídeo — referência
-      + metadata + tags que apontam pro host original, servidos em reels.nonlinear.nyc.'
+    title: Reels Index
+    goal: 'A personal visual index of referenced media, searchable and navigable by tag. A source adapter
+      is the only thing a new host requires, and Instagram is the first one. The video is not stored:
+      the reference, its metadata and its tags point back to the host.'
   - id: P13E008
     label: 2
-    title: Charcoal — Aprender Arte com Carvão & Materiais
-    goal: Expandir o agente mood para cobrir aprendizado de arte — começando com carvão, depois expandindo
-      para materiais, técnicas e escolas de desenho/pintura em NYC.
+    title: Art Study
+    goal: The agent covers art learning, starting with charcoal and widening to materials, techniques
+      and drawing or painting schools in the city. Each entry is a study item with a source, not a bookmark.
   - id: P13E009
     label: 3
-    title: Configuration
-    goal: Auditar o ecossistema de MCPs e skills do agente Mood, documentar acesso, resolver bloqueios
-      e sugerir novos tools para manter o gallery e expandir capacidades.
+    title: Tool Audit
+    goal: Every MCP and skill available to the agent is audited, its access is documented, and the blockers
+      are resolved or named. Missing tools are written down with what they would enable.
 - key: planning
   items:
   - id: P13E001
     label: 1
-    title: Mood — Visual Collection Engine
-    goal: Mood é uma engine de visualização de coleções. Cada path seleciona uma coleção + um visualizador.
-      / é a experiência pública default. Outros paths existem sem serem divulgados (unlisted, não private).
-      Capacidade funcional cresce sem multiplicar superfície operacional.
+    title: Collection Engine
+    goal: One engine serves visual collections. A path selects a collection and a viewer, the root path
+      is the public default, and other paths exist without being advertised. Functional capacity grows
+      without multiplying the operational surface.
   - id: P13E002
     label: 2
-    title: Reference Pictures — hidden single-image viewer
-    goal: Adicionar /references como visualizador alternativo no mood engine. Uma imagem por vez, aleatória,
-      troca a cada 30min. Sem link, sem README — hidden path. Quem sabe sabe.
+    title: Hidden Viewer
+    goal: 'A references path exists as an alternate viewer: one image at a time, chosen at random, changing
+      every thirty minutes. No link and no readme point at it. Whoever knows the path knows it.'
   - id: P13E003
     label: 3
-    title: Charcoal Drawing — study and reference
-    goal: Coletar e organizar livros de referência sobre desenho a carvão. Alguns já existem no Librarian.
-      Outros precisam ser baixados.
+    title: Charcoal Sources
+    goal: Reference books on charcoal drawing are collected and organized, with the ones already in the
+      library kept where they are and the missing ones acquired. The set is complete enough to study from
+      without searching again.
   - id: P13E005
     label: 4
-    title: Update Reels — Scraping periódico (Instagram) + pensar RedNote
-    goal: Montar um scraping periódico que "limpa" os Saves do Instagram (detecta novos reels salvos e
-      os injeta no índice do reels.nonlinear.nyc), e pensar/planejar o provider adapter do RedNote. É
-      o contraponto do epic `reels` (que usa só o corpus Markdown já curado, sem scraping).
+    title: Reels Scraping
+    goal: A scheduled scrape detects newly saved reels and injects them into the index, so a save becomes
+      a searchable reference without a manual pass. The source adapter for a second host is planned on
+      the same contract.
   - id: P13E006
     label: 5
-    title: Reels Design — Visual/UX do viewer e thumbnail/modal
-    goal: 'Definir e construir a camada cosmética do Reels: o viewer (grade/busca por tags), o thumbnail
-      e o modal de visualização da mídia referenciada. A parte técnica (import, SQLite, deploy, launchd/php
-      :3002, git) já está fechada e versionada no epic reels.md — este epic NÃO reabre arquitetura, separa
-      apenas o trabalho visual que fica para depois.'
+    title: Reels Design
+    goal: 'The visual layer of the reels index is defined and built: the grid with tag search, the thumbnail,
+      and the modal that shows the media. The technical path is closed and versioned elsewhere; this epic
+      holds only the work that comes after it.'
   - id: P13E010
     label: 6
-    title: Hashtag Vocabulary Layer (media-taxonomy-engine)
-    goal: 'Definir a Hashtag Vocabulary Layer como parte do ingestion pipeline (não um cleaner): uma camada
-      taxonomy/controlled-vocabulary (SKOS-aligned) que enriquece as tags RAW de qualquer fonte (Instagram,
-      RedNote, YouTube, Reddit) com conceitos/aliases/traduções — no mesmo nível dos adapters de fonte.
-      Planejar, não agir ainda.'
+    title: Hashtag Vocabulary
+    goal: A vocabulary layer enriches the raw tags of any source with concepts, aliases and translations,
+      at the same level as a source adapter and not as a cleaner after the fact. The layer is planned
+      and SKOS-aligned; it does not act yet.
   - id: P13E015
     label: 7
-    title: Traffic Cap & Rate Limiting
-    goal: 'Implement graceful degradation when traffic exceeds capacity: rate limiting (Nginx + Cloudflare)
-      and a ''too busy'' fallback.'
+    title: Traffic Cap
+    goal: 'When traffic exceeds capacity the service degrades on purpose instead of failing: requests
+      are rate limited at the proxy and the CDN, and a busy page stands in for the collection. The cap
+      is a number the operator sets, not an outage.'
   - id: P13E016
     label: 8
-    title: Immich library conversion — review of immich-convert-originals
-    goal: Decidir se, e como, aplicar immich-convert-originals (JXL/AVIF/AV1) à biblioteca Immich do NAS
-      — com números medidos, não estimativas de README.
+    title: Immich Conversion
+    goal: 'The library conversion is decided from measured numbers on the real collection, not from a
+      readme estimate: whether to convert originals to newer formats, at what saving, and what breaks.
+      The answer is a decision with evidence attached.'
 - key: done
   items:
   - id: e003_20260422

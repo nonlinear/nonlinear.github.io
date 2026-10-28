@@ -1,0 +1,11 @@
+{{/* SITE HEADER — one partial, every layout calls it.
+   The logo heading is DEFAULT, not portfolio: it appears on every page.
+   Text comes from the config (.Site.Title). No hardcoded name here — change
+   the name once in hugo.toml and every page follows.
+   Caps are visual (text-transform), never literal: HTML keeps "Nonlinear Studio"
+   so screen readers, clipboard and search keep the real name. */}}
+<header class="site-header">
+  <nav class="site-nav" aria-label="Site">
+    <h2 class="logo"><a href="/">{{ site.Title }}</a></h2>
+  </nav>
+</header>

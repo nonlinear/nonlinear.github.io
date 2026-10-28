@@ -45,29 +45,30 @@ sections:
     goal: The studio's sites answer questions about their own traffic from a self-hosted analytics system,
       with no third-party script and no data leaving the infrastructure. Every site reports to the same
       instance.
-  - id: P14E037
+  - id: P14E031
     label: 7
-    title: Live Roadmap
-    goal: 'Every portfolio project''s roadmap is a live surface on the site: the publication skill reads
-      the roadmap file, exports it to a fixed contract, and the portfolio layout renders two columns with
-      the latest state. No manual pass is needed to keep it current.'
-  - id: P14E038
+    title: Site Build
+    goal: The sitemap of the main site is manifested as a navigable site with placeholder copy, images
+      and diagrams, so design can be tested on real devices slowly and iteratively behind a guarded path.
+      Discrepancies are recorded as they appear, without cascading.
+  - id: P14E032
     label: 8
-    title: help-needed-scheduling — needs por produto, Share contextual, Schedule em modal (MVP contract)
-    goal: Cada produto publica suas necessidades reais de ajuda; qualquer pessoa pode compartilhar uma
-      necessidade específica por link, ou agendar uma conversa sobre ela sem perder o contexto do produto.
-  - id: cloudflare-dns
-    label: 9
-    title: DNS Cleanup
-    goal: 'Every DNS record that is unauthorized or dead is removed without interrupting a live service:
-      the wildcard goes, orphaned routes are cleaned, and each removal carries per-layer evidence and
-      a path back. What remains is a zone where every record has an owner.'
+    title: Domain Registry
+    goal: One place holds the domains that are ours with expiry and state, and the candidates under consideration
+      with their real price. A domain is a long-term promise, and the inventory exists so no purchase
+      happens without seeing what is already paid for and until when.
   - id: P14E033
-    label: 10
+    label: 9
     title: Community Hubs
     goal: Each product has a hub where enthusiasts help each other, the owner appears occasionally, and
       a sanitized local agent answers only about that product within a per-user limit. Questions and suggestions
       become data that feed the roadmap, and the hub is the call to action on the product page.
+  - id: P14E037
+    label: 10
+    title: Live Roadmap
+    goal: 'Every portfolio project''s roadmap is a live surface on the site: the publication skill reads
+      the roadmap file, exports it to a fixed contract, and the portfolio layout renders two columns with
+      the latest state. No manual pass is needed to keep it current.'
 - key: planning
   items:
   - id: P14E003

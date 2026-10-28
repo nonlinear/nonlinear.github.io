@@ -1,6 +1,7 @@
 ---
 title: "Illo"
-type: experimental
+type: portfolio
+tier: experimental
 description: "Comics and illustration pipeline. Panels, sequencing, ink."
 date: 2026-10-23
 status: TB

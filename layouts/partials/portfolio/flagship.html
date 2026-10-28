@@ -1,11 +1,17 @@
-{{ define "main" }}
 {{- /* FLAGSHIP — estrutura: prova primeiro, porta depois.
    Ordem: lede → prova visual → corpo → números → CTA (porta de entrada) → footer.
    NÃO compartilha esqueleto com experimental: aqui existe CTA e existe prova. */ -}}
-<article class="t-flagship">
+<div class="t-flagship">
+  {{- /* COVER — flagship ships with its own art; fallback is the default cover. */ -}}
+  <div class="t-flagship__cover">
+    {{ with .Params.cover }}<img src="{{ . }}" alt="">
+    {{ else }}<span class="t-cover__fallback">cover — {{ .Title }}</span>{{ end }}
+  </div>
+
   <header class="t-flagship__head">
     <p class="t-flagship__eyebrow">Flagship</p>
     <h1 class="t-flagship__title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<span class="subtitle">{{ . }}</span>{{ end }}
     {{ with .Params.slogan }}<p class="t-flagship__slogan">{{ . }}</p>{{ end }}
     {{ with .Description }}<p class="t-flagship__lede">{{ . }}</p>{{ end }}
   </header>
@@ -19,6 +25,9 @@
     </ul>
   </section>
 
+  {{- /* ROADMAP — the project's latest projected epics. Key = content dir name. */ -}}
+  {{ partial "portfolio/roadmap.html" (dict "project" .File.ContentBaseName) }}
+
   <section class="t-flagship__body">
     {{ .Content }}
     {{ partial "components/mock-body.html" . }}
@@ -30,5 +39,4 @@
     <p class="t-flagship__cta-text">Lorem ipsum — install path, requirements, what lands on day one.</p>
     <p><a class="t-flagship__button" href="#">{{ .Title }} — start</a></p>
   </section>
-</article>
-{{ end }}
+</div>

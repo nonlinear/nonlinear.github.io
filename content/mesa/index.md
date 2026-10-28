@@ -1,6 +1,7 @@
 ---
 title: "Mesa"
-type: experimental
+type: portfolio
+tier: experimental
 description: "Video capture and proto-editing. Multi-camera, seated interview setup."
 date: 2026-10-23
 status: TB

@@ -1,6 +1,7 @@
 ---
 title: "Susu"
-type: experimental
+type: portfolio
+tier: experimental
 description: "Monitoring that presents itself. Watches projects, says what it sees."
 date: 2026-10-23
 status: TB

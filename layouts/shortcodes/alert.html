@@ -1,0 +1,21 @@
+{{- /* ALERT — MUI Alert, no React. Three severities, matching the O'Reilly
+   convention set (tip / note / warning) so both vocabularies agree.
+
+   Usage:
+     {{< alert note >}}the note text{{< /alert >}}
+     {{< alert tip >}}…{{< /alert >}}
+     {{< alert warning >}}…{{< /alert >}}
+
+   `kind` defaults to note. IMPORTANT/CAUTION map down to note/warning —
+   intensity variants, not new types. */ -}}
+{{- $kind := .Get 0 | default "note" -}}
+{{- $sev := "info" -}}
+{{- $label := upper $kind -}}
+{{- if eq $kind "tip" }}{{ $sev = "success" }}{{ end -}}
+{{- if eq $kind "warning" }}{{ $sev = "warning" }}{{ end -}}
+{{- if eq $kind "important" }}{{ $sev = "info" }}{{ $label = "IMPORTANT" }}{{ end -}}
+{{- if eq $kind "caution" }}{{ $sev = "warning" }}{{ $label = "CAUTION" }}{{ end -}}
+<aside class="alert alert--{{ $sev }}" role="note">
+  <p class="alert__label">{{ $label }}</p>
+  <div class="alert__body">{{ .Inner | .Page.RenderString }}</div>
+</aside>
