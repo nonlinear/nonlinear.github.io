@@ -51,24 +51,23 @@ sections:
     goal: 'Every portfolio project''s roadmap is a live surface on the site: the publication skill reads
       the roadmap file, exports it to a fixed contract, and the portfolio layout renders two columns with
       the latest state. No manual pass is needed to keep it current.'
-  - id: cloudflare-dns
+  - id: P14E038
     label: 8
+    title: help-needed-scheduling — needs por produto, Share contextual, Schedule em modal (MVP contract)
+    goal: Cada produto publica suas necessidades reais de ajuda; qualquer pessoa pode compartilhar uma
+      necessidade específica por link, ou agendar uma conversa sobre ela sem perder o contexto do produto.
+  - id: cloudflare-dns
+    label: 9
     title: DNS Cleanup
     goal: 'Every DNS record that is unauthorized or dead is removed without interrupting a live service:
       the wildcard goes, orphaned routes are cleaned, and each removal carries per-layer evidence and
       a path back. What remains is a zone where every record has an owner.'
   - id: P14E033
-    label: 9
+    label: 10
     title: Community Hubs
     goal: Each product has a hub where enthusiasts help each other, the owner appears occasionally, and
       a sanitized local agent answers only about that product within a per-user limit. Questions and suggestions
       become data that feed the roadmap, and the hub is the call to action on the product page.
-  - id: distribution-system
-    label: 10
-    title: Distribution Registry
-    goal: A public registry of products reads the latest content of each one and explains to a user the
-      best way to install, customize, compare and upgrade it, inside the context of the machine that governs
-      it. The product comes first and the technology after.
 - key: planning
   items:
   - id: P14E003
