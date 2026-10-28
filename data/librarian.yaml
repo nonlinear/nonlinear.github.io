@@ -11,38 +11,40 @@ sections:
   items:
   - id: P10E024
     label: 1
-    title: Proof Layer (Contract Hardening + Reader V1)
-    goal: 'Fechar o Proof Layer ponta-a-ponta: Search → Evidence → citation.url → Reader → texto visível
-      na posição correta com highlight. Contract Hardening (locator íntegro, proof determinístico) + Reader
-      V1 (materializar o trecho exato, highlight 800ms centralizado, zero chrome). Contrato do locator
-      é a peça central.'
+    title: Proof Layer
+    goal: Every promise the reader makes about a source is backed by a contract that a test can check.
+      The reader returns a page with its provenance, and hardening work turns each assumption into a named,
+      verifiable claim. A claim that cannot be checked is dropped from the surface.
   - id: bindery-acquisition
     label: 2
     title: Bindery Acquisition
-    goal: 'Tornar o Bindery um canal de aquisição confiável e mensurável: saber quanto ele realmente cobre,
-      por que os livros ficam em `wanted`, e rodar batches de download sem intervenção manual — fechando
-      o loop até o índice (intake).'
+    goal: 'The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted
+      have a named reason, and a download batch runs without manual intervention. The loop closes at the
+      index: a book that was acquired is a book a query can find.'
   - id: indexing-master
     label: 3
-    title: Indexing — Master Epic
-    goal: One door into indexing. There are four epics touching this machine's index and no single place
-      that says what is true *now*, what is broken, and in what order to fix it. This epic holds the live
-      measurement, the failure taxonomy, and the sequence — and delegates detail to the four.
+    title: Indexing Master
+    goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
+      a searchable chunk through the same stages every other book used, and a failure at any stage names
+      the stage. The master epic holds the pipeline together across the format epics.
   - id: librarian-readme
     label: 4
-    title: Librarian
-    goal: A BYOB (Bring Your Own Books) semantic search for your personal library.
+    title: Readme
+    goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
+      how to run it, and where the corpus lives. The readme is the front door of the project and it is
+      written for the person who has not read any other document.'
   - id: publication-postflight
     label: 5
-    title: Publication Postflight — repo landing + doc parity fixes
-    goal: TBD
+    title: Publication Postflight
+    goal: A published landing matches the repository it came from. Postflight checks the pushed artifact
+      against the documentation it claims to describe, and reports the difference as a gap instead of
+      a success. Nothing is announced as published until the artifact exists where the claim says it does.
   - id: librarian_20260714-reader
     label: 6
-    title: Proof Layer (Contract Hardening + Reader V1)
-    goal: 'Fechar o Proof Layer ponta-a-ponta: Search → Evidence → citation.url → Reader → texto visível
-      na posição correta com highlight. Contract Hardening (locator íntegro, proof determinístico) + Reader
-      V1 (materializar o trecho exato, highlight 800ms centralizado, zero chrome). Contrato do locator
-      é a peça central.'
+    title: Proof Layer
+    goal: Every promise the reader makes about a source is backed by a contract that a test can check.
+      The reader returns a page with its provenance, and hardening work turns each assumption into a named,
+      verifiable claim. A claim that cannot be checked is dropped from the surface.
 - key: planning
   items:
   - id: librarian_book_identity_permalinks
@@ -53,58 +55,58 @@ sections:
       canônico existente e preservá-lo no sistema.
   - id: P10E007
     label: 2
-    title: DB Optimization — Memória & Latência do Motor FAISS
-    goal: 'Otimizar o motor de busca vetorial FAISS do Librarian: reduzir footprint de memória (4.4 GiB
-      RSS, maior consumidor do Colima), baixar latência, e consolidar a arquitetura de retrieval/persistência
-      do índice. Epic HEAD que agrega os sub-epics de otimização de DB/search como notes.'
+    title: FAISS Memory
+    goal: 'The index answers memory and latency questions on the full corpus without loading it twice:
+      a query returns in bounded time while the process stays inside its memory budget. Batching, caching
+      and progressive publication exist so the indexer can restart mid-corpus and continue.'
   - id: P10E008
     label: 3
-    title: Evidence & Provenance Model
-    goal: 'Define como uma afirmação mantém ligação verificável com sua origem. Camada central do Librarian:
-      Evidence, Source, Locator, CitationTarget.'
+    title: Evidence Provenance
+    goal: Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a
+      resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing
+      source reads as missing instead of as confidence.
   - id: P10E011
     label: 4
-    title: Index Optimization — Batching, Caching, Progressive Publication
-    goal: 'O indexador atual leva ~15h e deixa o corpus indisponível. Três problemas: embedding sem batch
-      (25x slowdown), sem cache de embeddings (crash perde tudo), FAISS só no final (corpus offline).
-      Consertar cada um.'
+    title: Index Batching
+    goal: The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes
+      progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written
+      one. Re-indexing a large intake costs the changed books, not the whole corpus.
   - id: P10E014
     label: 5
-    title: Librarian Platform
-    goal: 'Definir e estabilizar o Librarian como uma plataforma microkernel: um núcleo mínimo (Core Service
-      :8088) que hospeda capabilities como extensões plug-in (Retrieval, Reader, Indexer, Log, Users),
-      compartilhando processo, porta e corpus, mas com contratos independentes. Cada módulo deve ter um
-      contrato testável antes de crescer (architectural freeze 2026-07-29: Research Triage / Retrieval
-      Engine / Corpus / Evidence-Reader).'
+    title: Microkernel Platform
+    goal: The platform runs as a minimal core that hosts capabilities as plug-ins. Retrieval, reader,
+      indexer, log and users share one process, one port and one corpus, and each keeps its own testable
+      contract. A capability grows inside its contract before it grows in surface.
   - id: P10E016
     label: 6
-    title: Librarian Reliability Layer
-    goal: Librarian must never falsely report itself as healthy when its knowledge retrieval capability
-      is unavailable. Index rebuild must never make corpus unavailable.
+    title: Reliability Layer
+    goal: 'A reader can rely on the same answer twice. The system states what it knows, degrades visibly
+      when it cannot, and never presents a stale or partial result as a fresh one. The claim under test
+      is the answer to one question: can the system reliably say what it knows?'
   - id: P10E025
     label: 7
-    title: Research Strategies — First Mile Triage
-    goal: 'Formalizar o Librarian como uma plataforma modular com 4 módulos independentes: (1) Research
-      Triage & Planning, (2) Indexing/Knowledge Engine, (3) Knowledge Corpus, (4) Evidence Experience/Last
-      Mile. O conceito central é o ResearchPlan — um objeto que carrega intenção, contexto, estratégia,
-      confiança e critérios de sucesso — produzido pelo Triage e consumido pelo Engine.'
+    title: Research Triage
+    goal: 'A research question enters the system, gets triaged against the corpus, and leaves with a decision:
+      answered, partially answered with the gap named, or not in the corpus. The first mile of research
+      is explicit, so a missing book is reported as a missing book and not as a weak answer.'
   - id: librarian_20260811
     label: 8
-    title: DB Optimization — Memória & Latência do Motor FAISS
-    goal: 'Otimizar o motor de busca vetorial FAISS do Librarian: reduzir footprint de memória (4.4 GiB
-      RSS, maior consumidor do Colima), baixar latência, e consolidar a arquitetura de retrieval/persistência
-      do índice. Epic HEAD que agrega os sub-epics de otimização de DB/search como notes.'
+    title: FAISS Memory
+    goal: 'The index answers memory and latency questions on the full corpus without loading it twice:
+      a query returns in bounded time while the process stays inside its memory budget. Batching, caching
+      and progressive publication exist so the indexer can restart mid-corpus and continue.'
   - id: librarian_20260717
     label: 9
-    title: Evidence & Provenance Model
-    goal: 'Define como uma afirmação mantém ligação verificável com sua origem. Camada central do Librarian:
-      Evidence, Source, Locator, CitationTarget.'
+    title: Evidence Provenance
+    goal: Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a
+      resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing
+      source reads as missing instead of as confidence.
   - id: librarian_20260630
     label: 10
-    title: Experience History & Analytics
-    goal: 'Track how books are experienced via RAG citations e leitura, não só lidos. Inclui: log/biografia
-      de uso (timeline, co-ocorrência), citation history, ranking de livros citados-nunca-lidos, analytics
-      por cluster e auditabilidade. Absorve E002 usage-analytics e o epic Log (2026-08-11).'
+    title: Experience History
+    goal: The record of what a reader asked and received is queryable as history. Patterns of use, abandoned
+      questions and reopened books become visible from the log rather than from opinion. Analytics read
+      one store, and that store is the interaction record.
 - key: done
   items:
   - id: librarian_20260521
