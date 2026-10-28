@@ -3,43 +3,43 @@ tier: flagship
 exporter: v1.0
 counts:
   active: 6
-  planning: 10
+  planning: 9
   done: 3
-  done_total: 28
+  done_total: 35
 sections:
 - key: active
   items:
-  - id: P10E024
+  - id: P10E023
     label: 1
-    title: Proof Layer
-    goal: Every promise the reader makes about a source is backed by a contract that a test can check.
-      The reader returns a page with its provenance, and hardening work turns each assumption into a named,
-      verifiable claim. A claim that cannot be checked is dropped from the surface.
-  - id: bindery-acquisition
-    label: 2
-    title: Bindery Acquisition
-    goal: 'The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted
-      have a named reason, and a download batch runs without manual intervention. The loop closes at the
-      index: a book that was acquired is a book a query can find.'
-  - id: indexing-master
-    label: 3
-    title: Indexing Master
-    goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
-      a searchable chunk through the same stages every other book used, and a failure at any stage names
-      the stage. The master epic holds the pipeline together across the format epics.
-  - id: librarian-readme
-    label: 4
-    title: Readme
-    goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
-      how to run it, and where the corpus lives. The readme is the front door of the project and it is
-      written for the person who has not read any other document.'
-  - id: publication-postflight
-    label: 5
     title: Publication Postflight
     goal: A published landing matches the repository it came from. Postflight checks the pushed artifact
       against the documentation it claims to describe, and reports the difference as a gap instead of
       a success. Nothing is announced as published until the artifact exists where the claim says it does.
-  - id: librarian_20260714-reader
+  - id: P10E024
+    label: 2
+    title: Proof Layer
+    goal: Every promise the reader makes about a source is backed by a contract that a test can check.
+      The reader returns a page with its provenance, and hardening work turns each assumption into a named,
+      verifiable claim. A claim that cannot be checked is dropped from the surface.
+  - id: P10E032
+    label: 3
+    title: Bindery Acquisition
+    goal: 'The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted
+      have a named reason, and a download batch runs without manual intervention. The loop closes at the
+      index: a book that was acquired is a book a query can find.'
+  - id: P10E049
+    label: 4
+    title: Indexing Master
+    goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
+      a searchable chunk through the same stages every other book used, and a failure at any stage names
+      the stage. The master epic holds the pipeline together across the format epics.
+  - id: P10E052
+    label: 5
+    title: Readme
+    goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
+      how to run it, and where the corpus lives. The readme is the front door of the project and it is
+      written for the person who has not read any other document.'
+  - id: P10E071
     label: 6
     title: Proof Layer
     goal: Every promise the reader makes about a source is backed by a contract that a test can check.
@@ -47,12 +47,13 @@ sections:
       verifiable claim. A claim that cannot be checked is dropped from the surface.
 - key: planning
   items:
-  - id: librarian_book_identity_permalinks
+  - id: P10E002
     label: 1
-    title: Book Identity & Durable Permalinks
-    goal: Permalinks duráveis apoiados em IDENTIDADE BIBLIOGRÁFICA PADRONIZADA — não reinventar a roda.
-      ISO/OL/DOI já resolvem identidade de livro. O trabalho é mapear cada TIPO de fonte para o identificador
-      canônico existente e preservá-lo no sistema.
+    title: Topology Analogy
+    goal: Two clusters that share the same topology are surfaced as an analogy, not only as neighbours.
+      Urbanism and vascular systems both carry flow, distribution, bottlenecks and circulation, so the
+      system can name the shared shape and show both sides. The open question the epic answers is whether
+      the system must build this or only reveal what the model already sees.
   - id: P10E007
     label: 2
     title: FAISS Memory
@@ -83,42 +84,38 @@ sections:
     goal: 'A reader can rely on the same answer twice. The system states what it knows, degrades visibly
       when it cannot, and never presents a stale or partial result as a fresh one. The claim under test
       is the answer to one question: can the system reliably say what it knows?'
-  - id: P10E025
+  - id: P10E017
     label: 7
+    title: Interaction Log
+    goal: Every interaction is recorded as history with its source and its outcome, so the corpus can
+      be read as an autobiography and not only as a library. The log carries what was asked, what was
+      returned, and which books were opened. Analytics read this log; nothing else writes it.
+  - id: P10E025
+    label: 8
     title: Research Triage
     goal: 'A research question enters the system, gets triaged against the corpus, and leaves with a decision:
       answered, partially answered with the gap named, or not in the corpus. The first mile of research
       is explicit, so a missing book is reported as a missing book and not as a weak answer.'
-  - id: librarian_20260811
-    label: 8
-    title: FAISS Memory
-    goal: 'The index answers memory and latency questions on the full corpus without loading it twice:
-      a query returns in bounded time while the process stays inside its memory budget. Batching, caching
-      and progressive publication exist so the indexer can restart mid-corpus and continue.'
-  - id: librarian_20260717
+  - id: P10E044
     label: 9
-    title: Evidence Provenance
-    goal: Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a
-      resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing
-      source reads as missing instead of as confidence.
-  - id: librarian_20260630
-    label: 10
     title: Experience History
     goal: The record of what a reader asked and received is queryable as history. Patterns of use, abandoned
       questions and reopened books become visible from the log rather than from opinion. Analytics read
       one store, and that store is the interaction record.
 - key: done
   items:
-  - id: librarian_20260521
+  - id: P10E069
     label: 1
     title: Weak Handshake
     goal: Migrated from old backstage (E049)
-  - id: librarian_20260630-016
+  - id: P10E068
     label: 2
+    title: usage-analytics
+    goal: Build usage analytics on top of `usage.jsonl` to rank topics, measure query success rate, detect
+      research patterns, and identify corpus gaps — so the human can see which topics they use most, which
+      queries succeed or fail, and how their research behavior evolves.
+  - id: P10E067
+    label: 3
     title: Update Indexing for Clusters
     goal: Refactor RAG indexing to use clusters (not folder structure) and enable context-aware search
       based on conversation histo
-  - id: librarian_20260630-015
-    label: 3
-    title: Topic Curation - Systems & Cybernetics
-    goal: Acquire, organize, and reindex foundational books on systems, cybernetics, coordination
