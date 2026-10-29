@@ -11,42 +11,48 @@ sections:
   items:
   - id: P24E001
     label: 1
-    title: Poster — Kickoff
-    goal: 'Estabelecer o agente Poster (📮, P24) e definir seu primeiro trabalho concreto: pipeline de
-      design de pôster/print (composição, tipografia, arquivos prontos para impressão) e o primeiro projeto
-      real a produzir.'
+    title: Kickoff
+    goal: A print-ready production practice exists, owning layout, grid, type, color, bleed and CMYK output
+      end to end, distinct from the broad design agent and from the print shop. The first real project
+      is identified and moving through a defined toolchain, with a baseline print spec and a reference
+      library serving production.
 - key: planning
   items:
   - id: P24E002
     label: 1
-    title: Editions — Product Taxonomy
-    goal: 'Definir a taxonomia de produto das edições limitadas (Teixeira Kalkhoff Editions): o que é
-      uma edição, formatos (folha individual → livro handmade), séries, estados de raridade/tiragem, campos
-      de catálogo e vocabulário canônico. Base estrutural para Shop, Analytics e Pipeline.'
+    title: Editions Taxonomy
+    goal: 'A product taxonomy exists for the limited editions (Teixeira Kalkhoff Editions): what an edition
+      is, its formats from single sheet to handmade book, series, rarity and print-run states, catalog
+      fields and canonical vocabulary. It is the single source of truth for what exists, and the structural
+      base the shop, analytics and pipeline all read from.'
   - id: P24E003
     label: 2
-    title: Editions — Analytics
-    goal: 'Definir o que medir e por quê no selo de edições limitadas: métricas de venda, tiragem, margem,
-      alcance de curadoria, comportamento de colecionador — sem reduzir a curadoria de nicho a vaidade
-      de métrica. Depende da taxonomia (P24E002).'
+    title: Editions Analytics
+    goal: 'The editions label measures what it needs to decide its next move: sell-through of a print
+      run, time to sell out, average price, collector recurrence and traffic origin. Each metric is tied
+      to a real decision — what to produce next, run size, price, guest artist — and anti-metrics such
+      as scale and growth at any cost are explicitly refused, so niche curation never collapses into vanity
+      metrics.'
   - id: P24E004
     label: 3
-    title: Editions — Shop
-    goal: 'Definir a loja das edições limitadas: apresentação do item, ficha técnica arquival, fluxo de
-      compra, pagamento, frete/embalagem de arte, e a narrativa de curadoria. Acessível no preço, rigoroso
-      no padrão. Consome a taxonomia.'
+    title: Editions Shop
+    goal: 'A storefront exists where each limited edition is presented and sold with the same rigor as
+      the printed archive: an archival spec sheet, images, price and availability, a checkout and payment
+      flow, art-safe shipping and packaging, and curation usable as navigation by artist, series and format.
+      Affordable in price, uncompromising in standard.'
   - id: P24E005
     label: 4
-    title: Editions — Rolodex & Relationships
-    goal: 'Definir o registro próprio de relações (o Rolodex) e como cada edição é lançada: cadência de
-      drops, canais/endpoints, narrativa de curadoria, relação com colecionadores e artistas convidados.
-      "Mailing list" é apenas UM caso do registro — o ativo é a relação, canal-agnóstica, por papeis e
-      estágios.'
+    title: Rolodex Relationships
+    goal: 'The label keeps its own register of relationships and activates it to launch each edition:
+      drop cadence, channels, curation narrative, and the standing relationship with collectors and guest
+      artists. A person carries roles, several endpoints, a relationship stage and provenance; the mailing
+      list is only one case of the register. The asset is the relationship, not the channel.'
   - id: P24E006
     label: 5
-    title: Editions — Pipeline
-    goal: 'Definir o pipeline de produção das edições: da ideia → arte → preparação de impressão (bleed,
-      DPI, CMYK, prova) → tiragem → numeração/assinatura → catálogo. Onde a intenção vira folha impressa
-      com controle técnico arquival.'
+    title: Editions Pipeline
+    goal: 'An edition moves through a defined production pipeline: concept, art, prepress with bleed,
+      safe margin, CMYK and proof, then print run, finishing, numbering and signature, and catalog registration.
+      Intent becomes a printed sheet under archival technical control, with no reprint surprises, and
+      the handmade book runs as a subtype of the same pipeline.'
 - key: done
   items: []

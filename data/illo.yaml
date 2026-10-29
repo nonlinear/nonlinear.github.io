@@ -42,7 +42,7 @@ sections:
       nobody bypasses it to keep moving.
   - id: P22E021
     label: 6
-    title: Verification — the gate at the commit
+    title: Verification gate commit
     goal: 'Every commit states what was verified and what was not, and the statement is true. The battery
       is measured before it is extended: a check that cannot fail is removed or fixed, never trusted.
       The gate runs on the commit, because there is no publish — editing is publishing, and the commit

@@ -23,7 +23,7 @@ sections:
       a success. Nothing is announced as published until the artifact exists where the claim says it does.
   - id: P10E041
     label: 3
-    title: Deduplication & Content Integrity
+    title: Deduplication Integrity
     goal: 'Detect and handle duplicate books in the library so each title exists exactly once: index pollution
       stops (one book indexed many times), search noise stops (duplicate results), embeddings stop being
       wasted on redundant copies, and book_id collisions between paths are eliminated.'
@@ -54,9 +54,10 @@ sections:
   - id: P10E075
     label: 8
     title: Bibliographic Consultation
-    goal: Serve citável, verificado no acervo físico, às consultas de referência feitas por outros agentes.
-      Cada resposta vira uma nota com livro + capítulo/seção + trecho verificado, para que o solicitante
-      cite no contrato do epic dele sem depender de paráfrase.
+    goal: Other agents receive citable, verified references for their architecture decisions. Each consultation
+      exists as a note naming the book, chapter or section, and the quoted passage, all confirmed by opening
+      the physical file in the corpus. The requesting agent cites that passage in its own contract without
+      relying on paraphrase or memory.
 - key: planning
   items:
   - id: P10E002

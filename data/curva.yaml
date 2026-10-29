@@ -2,7 +2,7 @@ project: curva
 tier: experimental
 exporter: v1.0
 counts:
-  active: 4
+  active: 3
   planning: 10
   done: 0
   done_total: 0
@@ -11,77 +11,99 @@ sections:
   items:
   - id: P20E001
     label: 1
-    title: Setup & Pipeline — Vídeocast
-    goal: Define a reproducible capture setup (host cameras, flat-top magazine camera, remote local recording)
-      and a deterministic pipeline that turns timestamped sources into a proto-edit.
+    title: Reproducible Capture Setup
+    goal: 'A capture setup any host can mount in minutes exists: host cameras, a flat-top camera for the
+      magazine, and local recordings from every remote participant. All sources carry a timestamp, so
+      the deterministic pipeline aligns them and delivers a proto-edit of the full episode conversation.
+      Contributors join remotely with their own local capture, and the magazine page stays visible as
+      the visual anchor that triggers association.'
   - id: P20E002
     label: 2
-    title: MVP — Vídeocast
-    goal: 'Deliver the smallest artifact that validates the format: one recorded episode, composed (magazine
-      + participants), delivered as a proto-edit.'
-  - id: P20E003
-    label: 3
-    title: Tooling — Vídeocast
-    goal: Choose and own the editing/automation tooling (ffmpeg, Resolve scripting, Remotion, agentic
-      video editing) and the technical book library that supports it.
+    title: Smallest Valid Episode
+    goal: 'One recorded episode proves the format works end to end. It is captured with the magazine camera,
+      the host and the remote participants, aligned by timestamp, composed radially and delivered as a
+      proto-edit of the whole conversation. The episode also ships its promotional reels. The artifact
+      is the floor of the project: everything after it is improvement, not proof.'
   - id: P20E006
-    label: 4
+    label: 3
     title: Craft Suite Spike
-    goal: Provar se FilmCraft + ffmpeg sustentam o pipeline do videocast (gravacao, sync por timecode,
-      composite radial, proto-edicao) sob os criterios B1-B6, com SoundCraft fora do caminho critico.
+    goal: 'It is known, under criteria B1 to B6, whether FilmCraft plus ffmpeg sustain the video pipeline:
+      recording, timecode sync, radial composite and proto-edit. FilmCraft edits and exports, ffmpeg records
+      with a timecode track, and SoundCraft is declared outside the critical path with the measurement
+      that justifies it. Tooling choices for capture and editing rest on tested evidence instead of vendor
+      claims.'
 - key: planning
   items:
   - id: P20E004
     label: 1
-    title: A Curva — podcast (feed RSS na secção `curva` do Hugo pessoal)
-    goal: 'Entregar A Curva ao vivo: gravar 45-60 min de conversa em pt-BR com um agente de voz, sem edicao,
-      e publicar como feed RSS na secao `curva` do Hugo pessoal.'
+    title: Learning Curve Podcast
+    goal: A human machine conversation podcast in Brazilian Portuguese is published as an RSS feed inside
+      the personal Hugo site. Each episode is one take of 45 to 60 minutes with a voice agent, recorded
+      without editing, with two raw tracks kept side by side. The feed carries episodes, metadata and
+      audio hosted outside the static site, so a listener can subscribe and hear the show as it was recorded.
   - id: P20E005
     label: 2
-    title: Agent Host — testar o melhor agente para apresentar
-    goal: Escolher o agente que apresenta A Curva testando a matriz modelo x persona (facilitator e co-host)
-      por latencia, pt-BR, custo e estabilidade.
+    title: Host Agent Selection
+    goal: The host that presents the show is chosen by measurement, not by preference. A matrix of speech
+      models against two personas, facilitator and co-host, is tested on latency, Brazilian Portuguese
+      quality, cost and stability. Each cell produces a recorded number, and the decision on which pair
+      to run stays open until an owner call sets the persona direction.
   - id: P20E008
     label: 3
-    title: Episode Manifest — high legibility por episódio
-    goal: Fazer cada episodio carregar seu proprio registro (stack, custos, prompts, livros, fontes, gravacoes,
-      value_debt) gravado durante o pipeline, com campo nao medido declarado unknown.
+    title: Episode Manifest
+    goal: 'Every episode carries its own record of how it was made: stack, costs, prompts, books, sources,
+      recordings and value debt, written during the pipeline. A field that was not measured is declared
+      unknown, so no invented number passes as data. A reader of any episode can see what produced it
+      and what it cost, without asking the producer.'
   - id: P20E010
     label: 4
-    title: Voice Training — treinar a voz (minha e do agente)
-    goal: Treinar a performance vocal para microfone -- minha voz e a do agente -- para 45-60 min continuos
-      e dialogo com TTS em 24 kHz, sem confundir com terapia fonoaudiologica.
+    title: Voice Performance Training
+    goal: The human host and the voice agent both sustain 45 to 60 minutes of continuous microphone performance
+      without fatigue. Breathing, projection, rhythm and articulation are trained for one take recording,
+      and the agent side is trained for dialogue at 24 kHz. It is performance coaching for recording,
+      not speech therapy for a clinical condition.
   - id: P20E011
     label: 5
-    title: Spike S2S — MVP de conversa por voz + transcript de lado + pack de features
-    goal: Provar com numero que S2S em nuvem serve para conversa pt-BR de 45-60 min, entregando de brinde
-      um transcript timestampado montado ao lado (STT paralelo) e o pack de metadados de podcast (chapters,
-      transcript, soundbite, person) como output do mesmo pipeline.
+    title: Speech Speech Spike
+    goal: A measured number says whether cloud speech to speech carries a 45 to 60 minute Brazilian Portuguese
+      conversation. The same pipeline delivers a timestamped transcript built alongside, so bypassing
+      speech to text costs no legibility. The podcast metadata pack, chapters, transcript, soundbite and
+      person tags, comes out of that run as well, and the decision on the provider rests on data.
   - id: P20E012
     label: 6
-    title: Hardware — captura de voz em um take, sem post-produção
-    goal: Escolher e comprar o caminho de captura de voz que garanta o maximo de qualidade em um so take,
-      sem post-producao bespoke, cabendo em mala de viagem (Brasil por 2 meses).
+    title: Voice Capture Hardware
+    goal: The voice capture path is chosen and bought, and it produces maximum quality in a single take
+      with no bespoke post production. The whole kit fits in a travel bag for two months in Brazil, and
+      anything the chain needs afterwards is automated, not hand tuned. Open speakers and no headphones
+      are supported through echo handling, so the host can talk and listen freely.
   - id: P20E013
     label: 7
-    title: Voice Prod — pipeline de voz para produção (hardware + software), self-hosted e FOSS
-    goal: Escolher e montar a cadeia repetível que transforma o take cru de cada episódio em áudio publicável
-      (-16 LUFS, TP <= -1.5 dBTP) sem edição bespoke, preferindo self-hosted/FOSS a hardware que prenda
-      o dono em casa.
+    title: Voice Production Chain
+    goal: A repeatable chain turns the raw take of each episode into publishable audio at minus sixteen
+      LUFS with true peak at or below minus one point five dBTP. No bespoke editing step is needed, and
+      self hosted open source tools are preferred over hardware that ties the owner to a fixed room. The
+      same chain runs on a laptop, a phone recording or a hotel room input.
   - id: P20E014
     label: 8
-    title: Visions — A Curva em três anos (três línguas, audiência que participa)
-    goal: 'Guardar o imaginário de sucesso do vídeocast e derivar dele o que falta no desenho de hoje:
-      o tenet de audiência, as portas de participação e cinco cenários de estudo expansivo.'
+    title: Success Vision Scenarios
+    goal: The success imaginary of the videocast is written and kept, and the design of today is checked
+      against it. Five expansive scenarios describe where the show goes in three years, and the audience
+      tenet plus the participation doors derive from them as owner decisions. Every gap between that imaginary
+      and the current design appears as a named decision, not as a feeling.
   - id: P20E015
     label: 9
-    title: Librarian como cérebro do agente — MCP remoto para Gemini Live
-    goal: TBD
+    title: Librarian As Brain
+    goal: The live voice agent answers from the book collection, so every episode works as promotion for
+      the library. When it cites a passage it names the book and the locator, and a local bridge executes
+      the search while the collection stays private. A failed search degrades to conversation without
+      citation instead of inventing a reference. The tool surface stays minimal and the first call is
+      warmed before the session starts.
   - id: P20E016
     label: 10
-    title: RSS Support Matrix — 'Can I Use' para o namespace de podcast (e por que ainda não existe)
-    goal: Responder, com dados vivos, quais players e apps suportam quais tags do podcast namespace, para
-      decidir o que o nosso feed usa — e publicar a matriz como commons, já que a única fonte existente
-      cobre hosts de publicação e não players de escuta.
+    title: Tag Support Matrix
+    goal: A measured matrix names which listening players and apps render which podcast namespace tags,
+      with the evidence level, app version and date for every cell. The feed decides what it emits from
+      that matrix instead of folklore, and the matrix plus its test harness are published as commons.
+      The official element support document gets the missing player coverage back as a pull request.
 - key: done
   items: []

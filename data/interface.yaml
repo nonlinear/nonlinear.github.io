@@ -11,73 +11,99 @@ sections:
   items:
   - id: P19E001
     label: 1
-    title: Font Management — Substrate (self-host, folder-friendly, Penpot × HTML)
-    goal: 'Decisão do dono (2026-08-15): novo epic de font management para o substrate.'
+    title: Font Substrate
+    goal: 'The substrate owns its fonts: every target resolves one canonical font set from a self-hosted,
+      folder-friendly library, and the Penpot library and the HTML targets read the same files, so a typeface
+      added once reaches every product without a per-target install.'
   - id: P19E002
     label: 2
-    title: Interface — Front-End Compiler 'Dragon' 🐉 (projeto horizontal)
-    goal: M+N (hub) em vez de M×N (teia). Produto novo com front-end = 1 theme/backend
+    title: Substrate Convergence
+    goal: Every product with a front end has one shared substrate, so a new product costs a theme instead
+      of a whole new presentation layer. Typography, colour and component behaviour reach the products
+      from a single canonical source, and a target-specific change stays inside its own target instead
+      of spreading through the network.
   - id: P19E005
     label: 3
-    title: Penpot — Governança do Design System (permissões online + font library)
-    goal: o Dragon governa o Penpot
+    title: Penpot Governance
+    goal: 'The shared design environment has governed access and a governed font library: teams reach
+      the assets they need, the local font library mirrors the online one, and file creation, membership
+      and font availability are managed as an explicit boundary instead of an accumulation of ad-hoc invites.'
   - id: P19E011
     label: 4
-    title: Figma Depletion — component discovery pass on ReX (foundation → partials)
-    goal: Recuperado em 2026-08-18 (heartbeat) da sessão a3e37585 — o write original foi
+    title: Figma Depletion
+    goal: 'Visual and component evidence is inventoried exhaustively before a Figma dependency is retired:
+      variables, components, variants and states are recorded from the target library and carried into
+      the canonical material, so retirement proceeds on recorded evidence instead of on a visual impression.'
   - id: P19E014
     label: 5
-    title: Architecture — What the Compiler IS (arquitetura conceitual do compiler)
-    goal: 'Síntese do dono (2026-08-29): viemos discutindo o COMO (methodology,'
+    title: Compiler Architecture
+    goal: The compiler has a fixed conceptual architecture that separates what is decided from what is
+      still hypothesis; methodology lives as engine behaviour instead of as a parallel document, so every
+      later question is answered inside the architecture rather than beside it.
   - id: P19E015
     label: 6
-    title: Glossary Compiler — Design System → Compiler (tradução semântica)
-    goal: 'Abordagem (dono 16:36): NÃO fazer apenas ''Design System → Compiler''.'
+    title: Compiler Glossary
+    goal: Design-system vocabulary has compiler equivalents, and the terms that do not translate one-to-one
+      are known by name; the glossary records which concept survives when UI is removed, so shared discussions
+      start from one vocabulary and disagreements surface before they become implementation.
   - id: P19E017
     label: 7
-    title: Transcode — Figma → Hugo (source-of-truth migration, under components)
-    goal: TBD
+    title: Transcode Table
+    goal: 'Tabular components move from the design tool into the canonical implementation through one
+      documented procedure: the source component, its structure and its states are recorded, the transcode
+      runs the same way each time, and the resulting component serves every target that consumes tables.'
   - id: P19E018
     label: 8
-    title: Transcode — Pagination (Figma → Hugo)
-    goal: TBD
+    title: Transcode Pagination
+    goal: Pagination exists in the canonical implementation with the same behaviour and the same states
+      as its design source, produced through the transcode procedure rather than by hand, so the next
+      paginated surface consumes a component that is already canonical.
   - id: P19E029
     label: 9
-    title: component-versioning
-    goal: Give each component its own version without splitting the library into N repositories.
+    title: Component Versioning
+    goal: Every component carries its own version inside a single library, so a component advances without
+      splitting the library into many repositories and a consumer can state which version it uses.
   - id: P19E031
     label: 10
-    title: Documentation as Target — one canonical documentation contract, emitted by a docs compiler
-    goal: (what the dragon books actually support)
+    title: Documentation Compiler
+    goal: 'Documentation is a canonical manifestation of system knowledge, not a property of a platform:
+      one documentation contract per component carries the concepts plus per-target evidence, and a docs
+      compiler emits it wherever the documentation must appear, starting with the current documentation
+      backend as the proof.'
 - key: planning
   items:
   - id: P19E003
     label: 1
-    title: Front-End Compiler 'Dragon' — serve componentes Material p/ Rex E Kin (cada um com seu tema)
-    goal: Um projeto/agente que, dado um componente Material (definido no IR/Rosetta
+    title: Component Compilers
+    goal: 'Products that share design intent share components: one canonical component definition serves
+      both the documentation and the application targets, each target receiving a fresh manifestation
+      with its own theme, so a component shipped once appears in both the HTML targets and the mobile
+      targets without a second authoring pass.'
   - id: P19E004
     label: 2
-    title: Front-End Compiler 'Dragon' — substrate Material+texto; convergência front-end
-    goal: 'Dragon é um agente PETNA horizontal (shadow project): mantém as ferramentas que garantem CONVERGÊNCIA
-      do front-end — visual, textual e de roteamento (style router). A partir de um P15E002 (Material
-      UI sem React + linguagem/texto como componente de design), serve componentes a qualquer projeto
-      COM FRONT-END (Rex, Kin, P14E006 site, mood, ...), cada um como um theme do mesmo P15E002. Projeto
-      dedicado (A17); P14E006 é dono do projeto + cliente. Responsável por convergência, não por posse.
-      Backstage fora (A16). Design system = compiler quando código (A19).'
+    title: Design Substrate
+    goal: 'Text, visual style and style routing are first-class design components: the substrate holds
+      them as canonical material, targets consume them through a theme, and changing a theme never touches
+      the canonical definition, so the network keeps convergence of front-end language without a per-product
+      rewrite.'
   - id: P19E012
     label: 3
-    title: Documentation as Target — one canonical documentation contract, emitted by a docs compiler
-    goal: (what the dragon books actually support)
+    title: Documentation Contract
+    goal: One canonical documentation contract exists per component, carries concept and per-target evidence,
+      and a documentation compiler emits it to each documentation backend, so documentation is a system
+      output instead of a page hand-maintained on every platform.
   - id: P19E013
     label: 4
-    title: Infograph Framework — review & selection of charting framework compatible with MUI
-    goal: 'Goal: select charting framework(s) for infographics, compatible with MUI and fitting the'
+    title: Chart Framework
+    goal: Infographics are drawn on a selected charting layer that fits the shared component substrate
+      and serves every target consistently; the selected framework is recorded with the criteria that
+      justified it, so a later infographic starts from a decision instead of from a fresh evaluation.
   - id: P19E028
     label: 5
-    title: Nonlinear–Interface Subscription — first client of the Pattern Library
-    goal: Serve clients the canonical component substrate from the Pattern Library, and convert what they
-      build into canon. Nonlinear is the first client; the model must hold for the next one without being
-      redesigned.
+    title: Publication Subscription
+    goal: 'The first external client consumes the published library: the subscription is defined, the
+      published surface is versioned, and a consumer receives updates through that surface, so the library
+      is proven as a published product rather than as a private repository.'
   - id: P19E048
     label: 6
     title: Component Relationship
@@ -86,10 +112,10 @@ sections:
       — so the Pattern Library can answer 'what depends on what, and who uses it' deterministically.
   - id: P19E049
     label: 7
-    title: Epic Contract on Code
-    goal: 'Estender o marcador TODO de débito para carregar o id do epic que o pagará. Os comentários
-      de débito tornam-se extensão do contrato do epic, direto no código — backstage lê a codebase e recolhe.
-      Move faster: documenta débito no lugar onde dói, paga epic por epic.'
+    title: Debt Contract
+    goal: 'A debt comment in the code carries the id of the epic that will pay it, so debt is recorded
+      where it hurts and read automatically from the codebase: the backstage collects it, and the debt
+      is paid epic by epic instead of being remembered.'
   - id: P19E052
     label: 8
     title: Synthetic User Testing
