@@ -2,39 +2,45 @@ project: librarian
 tier: flagship
 exporter: v1.0
 counts:
-  active: 5
-  planning: 9
+  active: 6
+  planning: 8
   done: 3
-  done_total: 35
+  done_total: 24
 sections:
 - key: active
   items:
-  - id: P10E023
+  - id: P10E011
     label: 1
+    title: Index Batching
+    goal: The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes
+      progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written
+      one. Re-indexing a large intake costs the changed books, not the whole corpus.
+  - id: P10E023
+    label: 2
     title: Publication Postflight
     goal: A published landing matches the repository it came from. Postflight checks the pushed artifact
       against the documentation it claims to describe, and reports the difference as a gap instead of
       a success. Nothing is announced as published until the artifact exists where the claim says it does.
   - id: P10E071
-    label: 2
+    label: 3
     title: Proof Layer
     goal: Every promise the reader makes about a source is backed by a contract that a test can check.
       The reader returns a page with its provenance, and hardening work turns each assumption into a named,
       verifiable claim. A claim that cannot be checked is dropped from the surface.
   - id: P10E072
-    label: 3
+    label: 4
     title: Bindery Acquisition
     goal: 'The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted
       have a named reason, and a download batch runs without manual intervention. The loop closes at the
       index: a book that was acquired is a book a query can find.'
   - id: P10E073
-    label: 4
+    label: 5
     title: Indexing Master
     goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
       a searchable chunk through the same stages every other book used, and a failure at any stage names
       the stage. The master epic holds the pipeline together across the format epics.
   - id: P10E074
-    label: 5
+    label: 6
     title: Readme
     goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
       how to run it, and where the corpus lives. The readme is the front door of the project and it is
@@ -60,38 +66,32 @@ sections:
     goal: Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a
       resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing
       source reads as missing instead of as confidence.
-  - id: P10E011
-    label: 4
-    title: Index Batching
-    goal: The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes
-      progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written
-      one. Re-indexing a large intake costs the changed books, not the whole corpus.
   - id: P10E014
-    label: 5
+    label: 4
     title: Microkernel Platform
     goal: The platform runs as a minimal core that hosts capabilities as plug-ins. Retrieval, reader,
       indexer, log and users share one process, one port and one corpus, and each keeps its own testable
       contract. A capability grows inside its contract before it grows in surface.
   - id: P10E016
-    label: 6
+    label: 5
     title: Reliability Layer
     goal: 'A reader can rely on the same answer twice. The system states what it knows, degrades visibly
       when it cannot, and never presents a stale or partial result as a fresh one. The claim under test
       is the answer to one question: can the system reliably say what it knows?'
   - id: P10E017
-    label: 7
+    label: 6
     title: Interaction Log
     goal: Every interaction is recorded as history with its source and its outcome, so the corpus can
       be read as an autobiography and not only as a library. The log carries what was asked, what was
       returned, and which books were opened. Analytics read this log; nothing else writes it.
   - id: P10E025
-    label: 8
+    label: 7
     title: Research Triage
     goal: 'A research question enters the system, gets triaged against the corpus, and leaves with a decision:
       answered, partially answered with the gap named, or not in the corpus. The first mile of research
       is explicit, so a missing book is reported as a missing book and not as a weak answer.'
   - id: P10E044
-    label: 9
+    label: 8
     title: Experience History
     goal: The record of what a reader asked and received is queryable as history. Patterns of use, abandoned
       questions and reopened books become visible from the log rather than from opinion. Analytics read
@@ -108,8 +108,7 @@ sections:
     goal: Build usage analytics on top of `usage.jsonl` to rank topics, measure query success rate, detect
       research patterns, and identify corpus gaps — so the human can see which topics they use most, which
       queries succeed or fail, and how their research behavior evolves.
-  - id: P10E067
+  - id: P10E066
     label: 3
-    title: Update Indexing for Clusters
-    goal: Refactor RAG indexing to use clusters (not folder structure) and enable context-aware search
-      based on conversation histo
+    title: Topic Curation - Systems & Cybernetics
+    goal: Acquire, organize, and reindex foundational books on systems, cybernetics, coordination
