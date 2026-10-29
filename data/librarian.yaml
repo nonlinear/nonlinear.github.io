@@ -2,7 +2,7 @@ project: librarian
 tier: flagship
 exporter: v1.0
 counts:
-  active: 7
+  active: 8
   planning: 8
   done: 3
   done_total: 24
@@ -51,6 +51,12 @@ sections:
     goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
       how to run it, and where the corpus lives. The readme is the front door of the project and it is
       written for the person who has not read any other document.'
+  - id: P10E075
+    label: 8
+    title: Bibliographic Consultation
+    goal: Serve citável, verificado no acervo físico, às consultas de referência feitas por outros agentes.
+      Cada resposta vira uma nota com livro + capítulo/seção + trecho verificado, para que o solicitante
+      cite no contrato do epic dele sem depender de paráfrase.
 - key: planning
   items:
   - id: P10E002
