@@ -2,7 +2,7 @@ project: librarian
 tier: flagship
 exporter: v1.0
 counts:
-  active: 6
+  active: 7
   planning: 8
   done: 3
   done_total: 24
@@ -21,26 +21,30 @@ sections:
     goal: A published landing matches the repository it came from. Postflight checks the pushed artifact
       against the documentation it claims to describe, and reports the difference as a gap instead of
       a success. Nothing is announced as published until the artifact exists where the claim says it does.
-  - id: P10E071
+  - id: P10E041
     label: 3
+    title: Deduplication & Content Integrity
+    goal: 'Detect and handle duplicate books in library to prevent:'
+  - id: P10E071
+    label: 4
     title: Proof Layer
     goal: Every promise the reader makes about a source is backed by a contract that a test can check.
       The reader returns a page with its provenance, and hardening work turns each assumption into a named,
       verifiable claim. A claim that cannot be checked is dropped from the surface.
   - id: P10E072
-    label: 4
+    label: 5
     title: Bindery Acquisition
     goal: 'The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted
       have a named reason, and a download batch runs without manual intervention. The loop closes at the
       index: a book that was acquired is a book a query can find.'
   - id: P10E073
-    label: 5
+    label: 6
     title: Indexing Master
     goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
       a searchable chunk through the same stages every other book used, and a failure at any stage names
       the stage. The master epic holds the pipeline together across the format epics.
   - id: P10E074
-    label: 6
+    label: 7
     title: Readme
     goal: 'The repository explains itself to a reader who arrives with no context: what the system does,
       how to run it, and where the corpus lives. The readme is the front door of the project and it is
