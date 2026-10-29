@@ -24,7 +24,9 @@ sections:
   - id: P10E041
     label: 3
     title: Deduplication & Content Integrity
-    goal: 'Detect and handle duplicate books in library to prevent:'
+    goal: 'Detect and handle duplicate books in the library so each title exists exactly once: index pollution
+      stops (one book indexed many times), search noise stops (duplicate results), embeddings stop being
+      wasted on redundant copies, and book_id collisions between paths are eliminated.'
   - id: P10E071
     label: 4
     title: Proof Layer
