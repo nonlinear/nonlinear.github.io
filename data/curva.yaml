@@ -2,7 +2,7 @@ project: curva
 tier: experimental
 exporter: v1.0
 counts:
-  active: 3
+  active: 4
   planning: 10
   done: 0
   done_total: 0
@@ -24,8 +24,16 @@ sections:
       the host and the remote participants, aligned by timestamp, composed radially and delivered as a
       proto-edit of the whole conversation. The episode also ships its promotional reels. The artifact
       is the floor of the project: everything after it is improvement, not proof.'
-  - id: P20E006
+  - id: P20E003
     label: 3
+    title: Editing Tooling Library
+    goal: A single tech library serves every capture and editing tool of the project, and the automation
+      layer that cuts and composes episodes is driven by script. DaVinci Resolve scripting and Remotion
+      are available as renderers, ffmpeg does the deterministic transforms, and the technical book collection
+      that supports agentic video work lives here. When a new tool arrives, the criteria to accept or
+      reject it already exist.
+  - id: P20E006
+    label: 4
     title: Craft Suite Spike
     goal: 'It is known, under criteria B1 to B6, whether FilmCraft plus ffmpeg sustain the video pipeline:
       recording, timecode sync, radial composite and proto-edit. FilmCraft edits and exports, ffmpeg records
