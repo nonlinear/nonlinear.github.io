@@ -12,17 +12,28 @@ sections:
   - id: P05E001
     label: 1
     title: Configuration
-    goal: Mapear, auditar e documentar o ecossistema de ferramentas, MCPs, skills e integrações do agente
-      Gardening — diagnosticar o que funciona, o que está quebrado, e o que falta instalar.
+    goal: A single source of truth answers which MCPs, skills, built-in tools and external integrations
+      this agent can reach, and whether each one works, works with a limitation, or is broken. Every tool
+      carries a measured status, every failure carries a documented cause and workaround, and every missing
+      capability carries a ranked suggestion. The inventory exists as MCP-INVENTORY.md in the workspace,
+      with a weekly health check reporting to HEARTBEAT.md, so no question about tool availability is
+      answered from memory.
   - id: P05E006
     label: 2
     title: Program Design
-    goal: Design evidence-based training program based on assessment results
+    goal: A finalized evidence-based training program exists, built with the user from the completed assessment,
+      so every training day already names its muscle group split, frequency, selected exercises from the
+      Gymera catalog, and progressive overload protocol. Each choice carries a research citation from
+      the fitness library. The program document is ready for the automation layer to generate daily workouts
+      from it, and the daily view shows only today's work while every completed workout stays in the permanent
+      logs.
   - id: P05E008
     label: 3
     title: Food Forest
-    goal: Munir o agente de todo o conhecimento (livros, MCPs, tooling, alerts, dados) necessário para
-      projetar e executar um food forest — sem pressa, com plantio real a partir da primavera de 2027.
+    goal: By March 2027 every book, MCP, tooling piece, climate alert and site measurement needed to design
+      and plant a layered polyculture food forest on the balcony is already in hand, and the guild design
+      has waited out the whole winter. Nothing is urgent, because the real deadline is the 2027 thaw.
+      Planning runs from October 2026 to March 2027, and the knowledge shelf is the active front now.
 - key: planning
   items: []
 - key: done

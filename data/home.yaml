@@ -12,23 +12,35 @@ sections:
   - id: P07E002
     label: 1
     title: Consumer Decision Engine
-    goal: Biblioteca de evidência + critérios + experiência real para decisões de compra. Framework +
-      evidence tiers + aquisição dirigida dos livros de grounding.
+    goal: A purchase question is answered from evidence, not from opinion. When the owner asks which vacuum,
+      appliance or detergent to buy, the Librarian separates what is proven from what is partial and what
+      has no grounding at all, and names the tier behind every claim. Book knowledge explains how products
+      work. Current reports show how a concrete object performs. Each answer carries a nine-dimension
+      framework and an evidence schema, so a gap is declared as a gap instead of filled with invented
+      authority.
   - id: P07E006
     label: 2
     title: Living Room Curtain
-    goal: PAREAR a drapery rod SmartWings da sala (Zigbee motor, sem remote) no Home Assistant via ZHA/sonoff
-      dongle.
+    goal: The SmartWings drapery rod in the living room is controlled from the house dashboard. The Zigbee
+      motor runs the curtain one way across 107 inches, opens and closes from the dashboard and from automations,
+      and travel limits keep it from overrunning. The pair-up happens over the SONOFF ZHA coordinator,
+      with no remote control in the kit, so the motor joins the network directly and shows up as a working
+      cover entity beside the two rollershades that are already paired.
   - id: P07E010
     label: 3
-    title: Oppo Find N5 — Daily-Driver Tweaks
+    title: Oppo Find N5
     goal: 'Turn the Oppo Find N5 into a comfortable daily driver for a power user coming from iOS: better
-      ANC with AirPods Pro 3, and eliminate cover-screen friction.'
+      ANC with AirPods Pro 3, and eliminate cover-screen friction. The device is not the problem — the
+      *environment* around it is (iOS-flavored habits, Apple''''s earbud stack, a two-screen shell that
+      assumes you fold). This epic tracks the changes that make the phone behave the way the owner expects.'
   - id: P07E011
     label: 4
-    title: Signal in Brazil — same account on Oppo (home) and iPhone (travel)
-    goal: Keep using Signal for two months in Brazil on an old iPhone, while the primary Signal account
-      stays on the Oppo Find N5 at home — same phone number, no second SIM, no paid plan.
+    title: Signal Brazil same
+    goal: The owner reads and replies to Signal from an old iPhone for two months in Brazil, while the
+      primary Signal account stays on the Oppo Find N5 at the residence. Same phone number, no second
+      SIM, no paid plan. The iPhone 11 is a linked device, so messages arrive on it from the server, history
+      is carried over, and the trip works with the primary idle on Wi-Fi in New York. Voice and video
+      calls, disappearing messages, and push delivery with the primary unused are proven before departure.
 - key: planning
   items: []
 - key: done
