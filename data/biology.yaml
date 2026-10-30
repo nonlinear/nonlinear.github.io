@@ -82,11 +82,7 @@ sections:
     label: 1
     title: Automation
     goal: 'Automate repetitive Grocy operations: receipt OCR → purchase recording, price history tracking,
-      freezer sensor integration, and scheduled batch reminders. ```mermaid flowchart LR RECEIPT[Receipt
-      photo<br/>phone / scan] --> OCR[OCR pipeline<br/>Tesseract / ML] OCR --> GRO[Grocy stock_log<br/>purchase
-      + price] GRO --> PH[Price history<br/>append-only] GEN[Generic items<br/>milk, eggs, bread] -->
-      GRO FREEZER[Freezer sensor<br/>temperature] --> ALERT[Alert: freezer may fail] SCHED[Calendar: batch
-      day] --> REMIND[Remind: shopping list ready] ```'
+      freezer sensor integration, and scheduled batch reminders.'
   - id: P17E005
     label: 2
     title: Cooking Agent
@@ -104,11 +100,11 @@ sections:
   - id: P17E007
     label: 4
     title: Nutrition Intelligence
-    goal: Integrate nutrition data (USDA SR Legacy, Open Food Facts) with Grocy products — per-batch macros,
-      meal-level tracking, agent queries for ''what has the most protein per dollar''. ```mermaid flowchart
-      LR OFF[Open Food Facts<br/>3M+ products with nutrition] --> LC[Local cache] USDA[USDA FoodData Central<br/>SR
-      Legacy / Foundation Foods] --> LC LC --> P[Grocy products<br/>nutrition fields] P --> Q[Agent queries<br/>protein
-      per dollar<br/>macro per batch] ```
+    goal: 'Integrate nutrition data (USDA SR Legacy, Open Food Facts) with Grocy products — per-batch
+      macros, meal-level tracking, agent queries for ''''what has the most protein per dollar''''. We''''re
+      pescariano. Not tracking macros daily, but want *per-batch* visibility: - "This traybake has 35g
+      protein per serving" - "What''''s the cheapest protein per gram right now?" - "Does this batch meet
+      the protein target?"'
   - id: P17E012
     label: 5
     title: Batch Epic Type

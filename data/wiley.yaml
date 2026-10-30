@@ -12,106 +12,141 @@ sections:
   - id: P18E001
     label: 1
     title: Configuration
-    goal: Auditar e consolidar todo o ecossistema de ferramentas, skills e MCPs de Wiley — documentar
-      o que funciona, o que falta, e sugerir novos tools. Migrar e organizar o conhecimento disperso dos
-      old notes.
+    goal: 'The agent''''s tooling ecosystem is audited and consolidated: every skill and MCP is documented
+      as working or missing, and knowledge scattered across old notes lives in one readable inventory.
+      When a capability gap appears, the inventory names the tool to add instead of spawning a new one-off
+      note. New tools are proposed from that same consolidated view, and the loose notes that no longer
+      carry weight are retired so the map stays trustworthy.'
   - id: P18E004
     label: 2
     title: Icons
-    goal: Mapear e prototipar o sistema de ícones ReX — biblioteca, naming, tamanhos, uso correto vs.
-      Material Icons.
+    goal: 'The ReX icon system is mapped and prototyped as one vocabulary: which icons are custom, which
+      inherit from Material Icons, and the naming convention that keeps them apart. Sizes and use contexts
+      are recorded with each icon, so a designer picks an icon because it fits the context, not because
+      it was the first one found. The library renders through a single partial, and the open debt of icons
+      still drawn in stroke is written down.'
   - id: P18E006
     label: 3
     title: Skills
-    goal: Criar e instalar as skills necessárias para o fluxo de prototipagem UI — prototype-review, component-check,
-      handoff, design-system-sync — e garantir que os livros de referência estão indexados no Librarian.
+    goal: 'The skills the UI prototyping flow depends on are installed and working: prototype review,
+      component check, handoff and design system sync. Each one runs on a real task rather than existing
+      as a stub, and reference books are indexed in the library so a retrieval answers from a source,
+      not from memory. Gaps are identified before a task fails on them, which is how the workstation keeps
+      the flow from stalling when a new kind of work appears.'
   - id: P18E007
     label: 4
     title: Code Review Reader
-    goal: Design Implementation Reader — camada de comunicação entre OpenClaw e o designer. Não é editor,
-      é leitor com evidências. Contrato → evidência → validação.
+    goal: 'A file viewer exists for reading code with a review layer, so a designer and an agent discuss
+      a change from the same page instead of pasting fragments at each other. It is a reader, not an editor:
+      it shows the contract, then the evidence, then the validation, in that order. Because it never writes,
+      a reader can open it without fear of altering the work. The boundary is the product: a clear layer
+      shared between the two sides.'
   - id: P18E009
     label: 5
-    title: Figma → Hugo Prototype
-    goal: Mover a fonte de verdade do design do Figma para o Hugo (protótipo ReX Submission), deixando
-      o design mais perto do código — com validação objetiva via feedback-loop.
+    title: Figma Hugo Prototype
+    goal: The design source of truth has moved from Figma into the Hugo ReX submission prototype, so design
+      sits closer to the code that ships. The design system, components and specs live as versioned MD3
+      and Material Web code in the repo, which means a change is a diff and history is readable. The feedback
+      loop validates each change with objective evidence rather than opinion. Figma remains the reference
+      input while the prototype answers what the system actually does.
   - id: P18E010
     label: 6
     title: Confluence MCP
-    goal: Avaliar e integrar um MCP do Confluence para dar à equipe Wiley acesso a páginas, espaços e
-      busca do Confluence diretamente do agente.
+    goal: Team members reach Confluence pages, spaces and search directly from the agent, so a question
+      about a page is answered without the reader leaving the conversation. The MCP is chosen on stated
+      requirements rather than popularity, configured with its authentication, and proven against real
+      pages and spaces. It is recorded in the MCP inventory so the next person knows it exists and how
+      to reach it instead of rebuilding the integration from scratch.
   - id: P18E013
     label: 7
-    title: Figma Depletion → theme (exaurir o Figma em layers; variables = parte 1)
-    goal: 'Exaurir o Figma em layers, começando pelas VARIABLES. Figma é a source of truth IN THE MAKING:
-      se algo está lá, é source of truth. Extrair o que o Figma DÁ que enriquece o theme (cores + tipografia);
-      NÃO questionar o theme atual (hugo é latest p/ spacing/shadow/transition/layout). Wiley é dono do
-      entregável; Interface fornece policy + certificação + post-mortem.'
+    title: Figma Depletion
+    goal: Figma is exhausted layer by layer, starting with variables, and whatever it yields that enriches
+      the theme is extracted and used. Colour and typography come from that extraction, while spacing,
+      shadow, transition and layout follow the current Hugo theme and are left alone. Because Figma is
+      the source of truth in the making, presence there is evidence and is treated as such. The current
+      theme is not relitigated, and ownership of the deliverable is recorded plainly.
   - id: P18E017
     label: 8
-    title: Footer variants
-    goal: 'Ajustar o footer do pattern library para um partial parametrizado (variant x tenant), com o
-      vocabulario canonico alinhado no Figma primeiro e documentado em content/components/footer.md. Repo:
-      ~/Documents/wiley/pattern-library (~/Documents/interface nao existe neste host). O produto transferivel
-      deste epic e a policy de traducao Figma->Hugo para variants (reusavel por outros componentes); o
-      footer e o caso de estudo.'
+    title: Footer Variants
+    goal: The pattern library footer is a parameterised partial taking a variant and a tenant, so one
+      component serves every surface instead of a copy per project. The canonical vocabulary is agreed
+      in Figma before it is coded, then documented with the component. The transferable product is the
+      translation policy from Figma to Hugo for variants, which other components reuse. The footer is
+      the case study, not the whole point, so the lesson outlives the one component.
   - id: P18E018
     label: 9
-    title: Smart tables
-    goal: Criar um discovery de 'smart tables' para apresentar aos product managers, usando Hugo (não
-      Figma) como meio de apresentação — navegável, versionável, publicável, e reaproveitando os componentes/partials
-      já existentes no pattern library sempre que fizer sentido.
+    title: Smart Tables
+    goal: A smart tables discovery is presented to product managers as a navigable Hugo site rather than
+      a design file, so the reader explores the idea in a browser that version history and publishing
+      already cover. Components and partials that the pattern library already provides are reused wherever
+      they fit, which keeps the presentation honest about what exists today. The discovery stands on its
+      own and can be shared, reopened and cited long after the meeting.
   - id: P18E019
     label: 10
     title: Buttons
-    goal: 'Depletar Figma como source of truth para o BUTTON component: exaurir os 5 variants (todos os
-      estados, todos os tokens) até que Hugo seja a verdade. Buttons compõem icons; smart table consome
-      buttons — bottom-up por dependência.'
+    goal: 'Figma is depleted as the source of truth for the button component, so all five variants are
+      exhausted across every state and every token until Hugo is the truth. Work proceeds bottom-up by
+      dependency: buttons compose icons, and smart tables consume buttons, so the layers below are settled
+      before the layer above relies on them. The result is a button whose states and tokens are read from
+      the prototype rather than inferred from a design file that cannot be checked in.'
 - key: planning
   items:
   - id: P18E002
     label: 1
     title: Components
-    goal: 'Prototipar o catálogo de componentes ReX a partir do Figma (components page). Source of truth:
-      Figma → Hugo partials MD3 (Material Web), com validação via feedback-loop. Output: implementações
-      protótipo hardcoded por ora; instâncias via YAML num futuro.'
+    goal: The ReX component catalogue is prototyped in Hugo from the Figma components page, so a designer
+      opens a catalogue and reads one page per component instead of hunting design files. Each entry shows
+      its states, variants and markup, kept honest by the feedback loop before anything is called ready.
+      Instances are still hardcoded, and the shape of a future YAML-driven instance is written down so
+      the next step is not a guess.
   - id: P18E003
     label: 2
     title: Copy Management
-    goal: Prototipar gestão de copy nos protótipos ReX — centralizar strings, labels, erros e mensagens.
-      Evitar copy hardcoded disperso.
+    goal: Copy in the ReX prototypes is managed centrally, so labels, error messages, empty states and
+      tooltips change in one place and every screen follows. A writer edits words without touching HTML
+      or opening a component, which ends the hunt for hardcoded strings across templates. Versioned copy
+      keeps a record of what the interface said on a given day, and the feedback loop proves the change
+      landed on screen before anyone claims it did.
   - id: P18E005
     label: 3
     title: Steps
-    goal: Prototipar o componente Steps — fluxo multi-etapa de submission. Validar estrutura, estados,
-      e navegação entre steps.
+    goal: 'The Steps component is prototyped as a real multi-step submission flow, so a designer opens
+      a working sequence and reads how a person moves through it. Structure and the four states are shown
+      together: active, completed, disabled and error. Linear and non-linear navigation are both exercised,
+      which is how the prototype answers whether a step can be revisited mid-flow. Every state is reviewable
+      on screen rather than described in a document.'
   - id: P18E011
     label: 4
     title: Token Efficiency
-    goal: Projetar e validar testes científicos e mensuráveis de copy eficiente em tokens, para o uso
-      de LLMs; como a Wiley terá pelo menos 50 power users regulares, qualquer economia de token importa
-      — mas precisa ser medida com rigor, inclusive rastreando o tráfego real de uso.
+    goal: 'Token-efficient copy for LLM use is measured with scientific, repeatable tests, so an economy
+      claim is backed by a number rather than an impression. Because at least fifty regular power users
+      will share the platform, every saved token compounds, and the tests are designed to show by how
+      much. Real usage traffic is tracked so the measurement reflects what people send, not what a benchmark
+      assumed. Rigour is the point: an unmeasured saving is treated as no saving.'
   - id: P18E012
     label: 5
-    title: Presentation-Ready Deliverables & Sample Patterns
-    goal: 'Define usability policies and a shared, sanitized "sample everything" pattern library for presentation-ready
-      deliverables (Figma, high-definition, vector) used across Wiley products. Converge standards HORIZONTALLY
-      (pattern alignment): one approved sample (journal / tenant-publisher / authors / submissions) reused
-      consistently — across ReX and other Wiley products — for continuity and recognition, not lorem ipsum.'
+    title: Presentation Ready Deliverables
+    goal: A shared, sanitized pattern library of presentation-ready deliverables is in use across the
+      publisher's products, so
   - id: P18E014
     label: 6
-    title: system-prototype parity
-    goal: 'Refactor do protótipo (rex-submission-prototypes) para dar match ao MÁXIMO com o que temos
-      no sistema real (rex-prototypes), produzindo deliverables ''closer to code'': names, files, instructions
-      to update, etc. — colors, copy e qualquer outro aspecto.'
+    title: Prototype Parity
+    goal: The rex submission prototype matches the real system as closely as it can, so a deliverable
+      handed over reads closer to the code that will ship. Component names, file paths and the instructions
+      to update each one are aligned, and colours and copy follow the same rule. The work is scoped to
+      what produces parity, not a general cleanup. Once aligned, a reader moves between the prototype
+      and the real system without translating a second set of names in their head.
   - id: P18E015
     label: 7
     title: ARI
-    goal: 'ARI — planejamento e notas de reunião de AI. Fonte viva das decisões deste epic. Usa o conceito
-      de interface compiler: high tides lift all boats.'
+    goal: 'The ARI decisions live as a living record, so anyone asking why the platform works a certain
+      way reads the reasoning instead of reconstructing it from memory. Weekly meeting notes and decisions
+      accumulate in one place and are dated, which makes the direction readable over time. The interface
+      compiler is the guiding concept: high tides lift all boats, so an improvement at the shared layer
+      serves every product built above it. Open questions stay visible rather than being resolved silently.'
   - id: P18E016
     label: 8
-    title: Theme & Layout Architecture
+    title: Theme Layout Architecture
     goal: Establish one canonical layout contract and one canonical source of truth for themes, so that
       every product (generic, ReX, ARI, …) declares its own layout family and theme as separable dimensions
       over a common base — M+N, not M×N — while supporting silent per-page theme override and explicit
@@ -119,10 +154,13 @@ sections:
       repo, or Hugo Module) is deliberately left undecided until the consumption model is known.
   - id: P18E021
     label: 9
-    title: CSS-Tricks as a frontend source (practice corpus)
-    goal: 'Tornar CSS-Tricks o corpus PRIMÁRIO de experiência prática de frontend no nosso processo —
-      não autoridade absoluta, mas o primeiro lugar onde procuramos. Em duas camadas: (1) reflexo de pesquisa;
-      (2) corpus indexado com retrieval + evidência verificável. PENSAR DEPOIS — por ora é planning.'
+    title: CSS Tricks Frontend
+    goal: 'CSS-Tricks serves as the primary corpus of practical frontend experience, not as an absolute
+      authority but as the first place a question goes. Two layers are described: the research reflex,
+      so consulting it becomes habit rather than an afterthought, and an indexed corpus with retrieval
+      and verifiable evidence, so an answer can be checked. Thinking is deliberately deferred: the corpus
+      is specified before it is built. Nothing is treated as settled until retrieval can point at the
+      passage.'
   - id: P18E025
     label: 10
     title: Jira Tasks Integration
