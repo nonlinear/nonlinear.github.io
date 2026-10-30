@@ -9,70 +9,68 @@ counts:
 sections:
 - key: active
   items:
-  - id: P08E007
+  - id: P08E005
     label: 1
+    title: P08E005 Upgrade rehearsal
+    goal: TBD
+  - id: P08E007
+    label: 2
     title: Provider Exhaustion
     goal: 'A shared provider account running out of monthly quota stops freezing the agents that depend
       on it: the exhaustion is detected, every dependent agent falls to its next provider, and the state
       is recorded once instead of being rediscovered agent by agent. A reader can tell from the record
       which account is exhausted and until when.'
   - id: P08E008
-    label: 2
+    label: 3
     title: Skill Inventory
     goal: The studio's skills live in one canonical folder that is the runtime registry, the synchronised
       folder and the vault at the same time, so a skill exists in exactly one place. Every skill declares
       triggers that make it findable, and there is a written index of how to run the scripts without loading
       a skill at all.
   - id: P08E009
-    label: 3
+    label: 4
     title: Pulse Weekly
     goal: 'One weekly page presents the studio''s own numbers: system health, open epics, spend and model
       usage are collected from the systems that own them and rendered as a lap of the week a reader can
       open in a browser or receive by email.'
   - id: P08E011
-    label: 4
+    label: 5
     title: Pi Dreams
     goal: A migration of the studio stack to another runtime is evaluated by building the smallest real
       path, so the answer rests on what actually ported rather than on what looked portable. The result
       names which capabilities carried over, which needed an adapter, and what the remaining work would
       cost.
   - id: P08E014
-    label: 5
+    label: 6
     title: Fuck Latency
     goal: 'The studio proves with measurement that a local setup can be both reliable and nimble: local
       runtimes are compared against each other, a small model is compared against a large one, and a full
       voice path of speech to text, a small model and speech back is run end to end on this machine.'
   - id: P08E015
-    label: 6
+    label: 7
     title: Routing Healthcheck
     goal: Routing becomes a declarative policy that is materialized automatically, with health checks
       supplying only eligibility. Provider failures are classified into exhausted, ineligible, transient
       and available, states the current runtime does not distinguish, so a shared account failure is answered
       once instead of once per agent.
   - id: P08E016
-    label: 7
+    label: 8
     title: Spawn Hygiene
     goal: Every spawn carries an explicit timeout, marks its state when it ends, and is cleaned up when
       the parent restarts. The command line and the gateway agree on the same ledger, and the rule becomes
       a shared policy that every agent follows rather than a habit of the one that learned it.
   - id: P08E021
-    label: 8
+    label: 9
     title: Dumb Models
     goal: 'Small local models are chosen against a written criterion rather than by size: the four real
       workloads of the studio decide which candidate is sufficient, and language is judged as its own
       criterion. The result names which model serves which workload and what evidence decided it.'
   - id: P08E022
-    label: 9
+    label: 10
     title: Endpoint Registry
     goal: Every endpoint the system depends on is declared and verified, so changing a port or an engine
       can no longer break a consumer silently. A reader can list what the system expects to reach, and
       a check proves that each declared endpoint actually answers before a change is called done.
-  - id: P08E023
-    label: 10
-    title: Nurtured Cognition intelligence
-    goal: Codify the thesis that an agent's capability emerges from the environment that nurtures it,
-      not from the model's parameters. Produce an operational policy (POL-001) that decides WHERE to place
-      intelligence.
 - key: planning
   items:
   - id: P08E001
@@ -81,65 +79,64 @@ sections:
     goal: One standalone manager groups agents with a configuration that resounds across routing, MCP
       servers and model choice, which the current runtime cannot express. A group is defined once, every
       member inherits it, and a change to the group reaches its members without editing them one by one.
-  - id: P08E005
-    label: 2
-    title: OpenClaw Upgrade Migration
-    goal: 'Migrate the gateway from OpenClaw 2026.5.18 (node v22) to latest (2026.9.x) WITHOUT a parallel
-      second deployment. The current install is the migration object: solid checkpoint/rollback, observe
-      after upgrade, revalidate T001 on the latest, and only then decide any runtime patch. No clearing
-      of "old" anything until the latest proves itself.'
   - id: P08E010
-    label: 3
+    label: 2
     title: Agent Merge pulse
     goal: Merge pulse (ex-radar, horizontal data collector) and sous (local worker) into a single agent
       susu 🐾. Horizontal agent that monitors and presents monitoring of and for projects. Agent Merge
       — pulse + sous → susu
   - id: P08E012
-    label: 4
+    label: 3
     title: Susu Longitudinal
     goal: 'Persistent, comparable observations of one person become time-based analysis: weekly records
       feed trends, patterns, comparisons and aggregates that a reader can follow, while the historical
       observations are never modified. The output is a change over time that can be checked against the
       record that produced it.'
   - id: P08E013
-    label: 5
+    label: 4
     title: Susu Report
     goal: 'Reports arrive by email and the subject names which report skill handles them: the body and
       attachments are the input, the skill defines how it is processed, evidenced and stored, and a delivery
       marker returns the report to the sender. Complexity lives in the skill, so the email protocol stays
       one address and one rule.'
   - id: P08E017
-    label: 6
+    label: 5
     title: Susu App
     goal: 'The phone share sheet becomes the universal entry point to the studio''s asynchronous work:
       shared content opens the app, the app suggests the reports that fit, the reader picks one, and the
       chosen report is dispatched to the runtime. Any device can start the work without opening a chat.'
   - id: P08E018
-    label: 7
+    label: 6
     title: Susu Mastodon Intake
     goal: 'Make Mastodon (and eventually Reddit, RSS, Telegram, clipboard) an intake channel for Susu.
       The nonlinear encounters content on Mastodon, forwards it to susu@ with a #subject, and Susu treats
       it as any other encounter — same dispatch, same reports, same boundaries. Mastodon is a sensor,
       not a feature.'
   - id: P08E019
-    label: 8
+    label: 7
     title: Susu Mood
     goal: 'Images arrive with their provenance baked into the pixels: a source, a capture time and a publish
       time are stamped inside each image before it lands in the reader''s picture folder. Nothing external
       is required to know where an image came from, because the artifact carries its own record.'
   - id: P08E020
-    label: 9
+    label: 8
     title: Susu Reel Report
     goal: Turn something interesting discovered on Instagram/TikTok/RedNote into a durable, addressable,
       cross-platform object. The Reel Report captures source (link + platform + timestamp), content (transcript
       + tags + title), and artifacts — building a personal discovery corpus independent of any platform's
       algorithm. Platform-agnostic by design.
   - id: P08E046
-    label: 10
+    label: 9
     title: OpenClaw SRE
     goal: 'Practice drawn from site reliability becomes institutional here: the agent loop is watched
       well enough that a silent break is detected before it is discovered by a reader, and each failure
       leaves a record that a later session can act on without rediscovery.'
+  - id: P08E050
+    label: 10
+    title: Agent Resilience
+    goal: 'Agents keep running through the failures that used to end them: a failed call retries with
+      backoff, one failing component is isolated from the rest, and resources are bounded so a single
+      agent cannot exhaust the host. The behaviour is measured against the incidents that preceded it.'
 - key: done
   items:
   - id: e006_20260630
