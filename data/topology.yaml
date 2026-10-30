@@ -59,18 +59,18 @@ sections:
       refraction, the inverse-square falloff of a lamp, refraction indices for glass, water and metal,
       moment of inertia for a falling body, and elasticity for deformable shapes. Each concept maps to
       a concrete Blender setting, so a chosen value is explained by physics rather than guessed.'
-  - id: P01E012
+  - id: P01E011
     label: 3
+    title: Math Friendly Review
+    goal: A cross-domain read of the math-friendly criterion from the drawing agent, judged from solid
+      modeling. The epic keeps the verdict on the four properties, names the tests that are missing, and
+      lists which books in the library support the claim, which contradict it, and which are absent.
+  - id: P01E012
+    label: 4
     title: Math Friendly Review
     goal: 'A sourced, unflattering verdict on the drawing agent''s "math friendly" criterion: which of
       its four properties hold, which are weak, and what solid modeling — a domain where the criterion
       has existed for decades — teaches that a 2D drawing with x, y and pressure cannot. The epic answers
       in prose and citation, with no code and no files written outside this folder.'
-  - id: P01E011
-    label: 4
-    title: Math Friendly Review
-    goal: A cross-domain read of the math-friendly criterion from the drawing agent, judged from solid
-      modeling. The epic keeps the verdict on the four properties, names the tests that are missing, and
-      lists which books in the library support the claim, which contradict it, and which are absent.
 - key: done
   items: []

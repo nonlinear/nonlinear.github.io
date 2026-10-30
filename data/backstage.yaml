@@ -122,19 +122,19 @@ sections:
       with checks that attach selectively and generalize across projects that need variables. The gold
       standard is transcoding a government requirement into a check, including the simulation of what
       happens if that requirement is implied.
-  - id: P02E047
+  - id: P02E041
     label: 9
+    title: Checks Migration
+    goal: 'Migrate the LOCAL check systems (kin first, librarian second) to the GLOBAL check system. Kin
+      pauses its own checks and runs them on the global, without ever leaving verification coverage unprotected
+      during the transition. Then: triage to MERGE redundant checks — fewer checks, more powerful, reusable
+      multi-product (checks belong to a language or deliverable, not to a product).'
+  - id: P02E047
+    label: 10
     title: Delivery Annotation
     goal: The question is whether done needs a delivery annotation to distinguish finished from shipped
       in a named release, and the answer closes with a deterministic consumer. No state without an exit,
       and no inference from tags.
-  - id: P02E048
-    label: 10
-    title: Skill publication
-    goal: Publish a skill once and ship it to three targets. One pipeline checks the frontmatter each
-      consumer requires, then pushes the same tagged revision to OpenClaw, to Claude, and to GitHub, so
-      that a skill that runs here also runs there, and no target silently holds a different copy. The
-      same instrument answers which skills this project owns.
 - key: done
   items:
   - id: visions
