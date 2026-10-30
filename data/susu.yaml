@@ -3,96 +3,123 @@ tier: experimental
 exporter: v1.0
 counts:
   active: 10
-  planning: 4
+  planning: 5
   done: 3
-  done_total: 10
+  done_total: 12
 sections:
 - key: active
   items:
   - id: P00E003
     label: 1
-    title: Reviews — corpus de NÃO-LIVROS (transcrições, artigos, outros)
-    goal: 'Governar o SEGUNDO corpus sob a doutrina do librarian-grounding (#07): um acervo de NÃO-LIVROS
-      — transcrições + artigos + outros objetos que não são books — com schema próprio, metadata, índice,
-      retrieval, ACL, retenção, provenance e deep-links. Investigação central: o que é exatamente um transcript/artigo
-      como OBJETO DE MEMÓRIA ORGANIZACIONAL (não ''onde ponho os arquivos'').'
+    title: Reviews Corpus
+    goal: 'The agent governs a second corpus under the librarian-grounding doctrine: an archive of NON-BOOK
+      sources such as transcripts, articles and posts. Reviews drawn from that corpus are grounded against
+      what the archive actually holds, so a claim never cites material that is absent. Each review names
+      the source it came from and the archive entry that supports it. Portuguese-language inputs are accepted;
+      the governing contract is English.'
   - id: P00E004
     label: 2
-    title: Susu Weekly — module calculations (token-costs wonky fix + M4 balances)
-    goal: Make the Susu Weekly module numbers add up. Today the Token Costs module mixes three providers
-      (OpenRouter, DeepSeek direct, local Qwen) and shows ONE provider's real billing as the "total" while
-      listing per-session estimates that diverge by ~60% ($38.57 OpenRouter real vs $62.95 session-estimate
-      in W39). Add M4 (Balance/Runway) so the weekly shows provider balances and warns when any paid provider
-      is below US$ 5 — the weekly sibling of the real-time alert.
+    title: Weekly Calculations
+    goal: The weekly report's module calculations are correct and stable. Token costs render without the
+      wonky numbers that the earlier build produced, and the balance module shows OpenRouter and DeepSeek
+      as plain lines inside Token Costs. A thin paid balance raises a subtle mark, never a top banner.
+      The report still renders when a balance capture fails, and the failure is visible rather than silent.
   - id: P00E005
     label: 3
-    title: Meetings — corpus e skill de reuniões (produto sobre a capacidade de transcrição)
-    goal: Estabelecer "meetings" como produto/corpus PRÓPRIO (separado de reviews), com skill que captura
-      o ciclo start→attach→stop→meeting.md, pedindo ao usuário o contexto que o Teams não fornece (participantes,
-      tipo, horário) e destilando decisões/action items com evidence_refs para os segments do transcript.
+    title: Meetings Corpus
+    goal: Meetings exist as their own product with a corpus kept separate from Reviews. The corpus holds
+      transcripts and their metadata, and a skill lets the owner find, browse and add to it. Transcription
+      itself is a shared horizontal capability owned elsewhere; this product consumes it and never duplicates
+      it. Portuguese-language meeting content is preserved verbatim.
   - id: P00E006
     label: 4
-    title: Transcription Infrastructure — STT como capacidade horizontal (não módulo de report)
-    goal: Estabelecer a capacidade horizontal de transcrição (audio/video → transcript resource) como
-      infraestrutura própria, SEPARADA de qualquer produto consumidor (Reviews, meetings, reels, captions,
-      subtitles). Investigar o que o nosso stack real fornece (INSTALLED ≠ WORKING), provar o primeiro
-      experimento (whisper-stream local com modelo próprio e fonte real), e fundamentar a arquitetura
-      nos livros sem que o livro decida a ferramenta.
+    title: Transcription Capability
+    goal: Transcription exists as a horizontal capability that any product consumes, not as a report module.
+      Audio is captured, transcribed and stored once, and the result is available to every consumer that
+      needs it. The capability owns the engine and its runtime; products own what they do with the text.
+      Nothing in the report pipeline depends on it directly, so the two can evolve apart.
   - id: P00E009
     label: 5
-    title: Configuration
-    goal: Auditar, documentar e garantir acesso total do agente sous a skills, MCPs e ferramentas do ecossistema
-      OpenClaw, identificar gaps, e sugerir novos tools que expandam a capacidade do substrate.
+    title: Tooling Access Audit
+    goal: The agent's access to the ecosystem's skills, MCP servers and tools is fully audited and documented.
+      An inventory exists, an access matrix records what is reachable and what is blocked, and the gaps
+      that limit capability are named with a suggestion for each. Tooling that expands the substrate is
+      researched and proposed, never installed without a decision. The audit is repeatable, so a later
+      run can show what changed.
   - id: P00E015
     label: 6
-    title: Librarian Grounding — grounding de reports contra o acervo atual (livros)
-    goal: 'Adicionar camada de grounding via Librarian a todo report manifesto: confrontar claims com
-      o corpus atual (cabe ou quebra policy, é re-descrição de padrão conhecido?), prospectivo e retrospectivo
-      — com citações navegáveis em EPUB (skill librarian). Corpus é input fixo; o Radar não expande o
-      acervo.'
+    title: Librarian Grounding
+    goal: Every report that makes a claim is grounded against the current book archive before it ships.
+      The Librarian answers what the corpus contains and which book entry matches, and the report confronts
+      each claim with that answer. A claim with no support in the archive is marked as such, not smoothed
+      over. When the archive is unavailable the gap is stated plainly rather than assumed away.
   - id: P00E018
     label: 7
-    title: Sous v2 - Modular Data Substrate
-    goal: Rebuild Sous as filesystem-based event log with append-only temporal semantics, multi-writer
-      substrate, and query-time composition.
+    title: Modular Substrate
+    goal: The worker runs on a filesystem-based event log with append-only temporal semantics. Multiple
+      writers add to the substrate without a lock, and readers compose a view at query time instead of
+      relying on a materialized state. History is never rewritten, so any past view can be reconstructed
+      exactly. Governance is minimal by design; the substrate carries the structure, not ceremony.
   - id: P00E021
     label: 8
-    title: FOSS review — provider offer normalization (candidates for infrastructure/P08E074)
-    goal: TBD
+    title: FOSS Provider Review
+    goal: A review of open-source projects establishes which parts of a provider-offer normalization strategy
+      are commodity and reusable, and which gap requires the organization's own work. The question is
+      what can be composed, and what is the smallest proprietary layer that preserves the strategy. Candidates
+      are named with their licence, hosting posture and fit. The review informs the provider-routing decision;
+      it does not implement it.
   - id: P00E023
     label: 9
-    title: Omnivore self-hosted — install, import, cleanup
-    goal: Instalar Omnivore self-hosted no Mac Studio via Colima, importar Instapaper (só não-lidos),
-      limpar dados, versões Android/Mac. FIM. IA e Reviews vivem no epic `omnivore-ai`.
+    title: Omnivore Install
+    goal: Omnivore runs self-hosted on the local machine through a container runtime, with the Instapaper
+      archive imported for unread items only and the data cleaned before use. Android and Mac clients
+      are documented so the owner can read from either. The epic ends at the install and import boundary;
+      artificial intelligence over the corpus lives elsewhere. Phases are set by the owner, not by convenience.
   - id: P00E026
     label: 10
-    title: Transcript Corpus — storage & retrieval (o corpus de meetings)
-    goal: TBD
+    title: Transcript Storage
+    goal: 'A corpus of meeting transcripts exists with storage and retrieval, and a skill teaches how
+      to find an entry, navigate its frontmatter, and add a new transcript from whatever transcription
+      system a contributor uses. The capture and speech-to-text engine lives in a separate epic, so the
+      corpus is not tied to one motor. Scope is deliberately narrow: storage and retrieval, nothing else.'
 - key: planning
   items:
   - id: P00E017
     label: 1
-    title: Radar — Continuous Discovery & Future Signals
-    goal: 'Camada de inteligência prospectiva: observa via NocoDB/Reddit/Feedly, preserva proveniência
-      como source of truth, e sinaliza — sem decidir, rotear ou agir.'
-  - id: P00E022
+    title: Radar Discovery
+    goal: 'A prospective intelligence layer watches NocoDB, Reddit and Feedly for signals that are worth
+      the owner''s attention. Provenance is preserved as the source of truth: every entry carries its
+      origin, so a later reader can verify it. The layer signals and presents; it does not decide, route,
+      or act on what it finds. Signals that stop mattering decay instead of accumulating forever.'
+  - id: P00E020
     label: 2
-    title: Notifications — one protocol for how and when the fleet notifies
-    goal: 'Concentrar num ÚNICO protocolo (skill `notifications`) as regras que hoje estão esparsas em
-      prosa entre infra, money, ring e susu: o que é um alerta, como é formatado, quem pode mandar, com
-      que frequência, com que dedupe, e como o canal é escolhido (hoje email; amanhã Kin app / device
-      notification). Dizer a cada agente QUANDO, COMO e QUÃO OFTEN notificar — em vez de cada um inventar.'
-  - id: P00E024
+    title: Reading Memory
+    goal: The system remembers what the owner has read, not only what the corpus contains. A reading record
+      captures what was read, when, and what the owner thought of it, and it lives beside the sourcing
+      record rather than replacing it. Consumption data is governed here; sourcing stays with the Librarian,
+      which answers corpus and match questions on request. Queries can tell the two apart without confusion.
+  - id: P00E022
     label: 3
-    title: Omnivore AI
-    goal: Discutir IA sobre o Omnivore (router OpenClaw / MLX Qwen), estender Reviews, e novas ideias
-      via webhooks.
-  - id: P00E042
+    title: Notification Protocol
+    goal: One protocol defines how and when anything in the fleet notifies a human. Channels, severity
+      and quiet rules are stated once, so an agent does not invent its own notification behavior. A notification
+      carries what happened and where to look, and it never duplicates a report the owner can read directly.
+      Alerts that fire too often are a defect in the protocol, not noise to tolerate.
+  - id: P00E024
     label: 4
-    title: Health List module — Susu Weekly consumer (infra → susu)
-    goal: 'Consumir o artefato de saúde do infrastructure (current.json) como módulo do Susu Weekly: coletor
-      read-only (mN-health.py) + seção ''Health'' no render, com spark em LINE chart. 2ª aplicação da
-      POL-WEEKLY-DATA.'
+    title: Omnivore AI
+    goal: 'Ideas for intelligence over the read-it-later corpus are discussed here: routing through the
+      local model runtime, extending Reviews, and hooks that new saves could trigger. The owner sets the
+      agenda, and nothing is implemented without an explicit request. The epic is a discussion record,
+      so a later reader can see which ideas were raised, which were dropped, and why. It holds no running
+      code.'
+  - id: P00E042
+    label: 5
+    title: Health List Module
+    goal: The weekly report consumes the health artifact that infrastructure publishes and renders it
+      as a module. The module reads the current file, shows what is unhealthy in plain language, and does
+      not reproduce the check itself. A missing or unreadable artifact is stated as a gap rather than
+      rendered as a healthy system. Format changes are negotiated with the producing side.
 - key: done
   items:
   - id: e008_20260513

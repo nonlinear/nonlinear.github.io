@@ -12,88 +12,117 @@ sections:
   - id: P04E001
     label: 1
     title: Automation Platform
-    goal: 'Sistema financeiro integrado: MCPs operacionais + Paperless + Actual + SimpleFIN + roadmap
-      Brasil'
+    goal: 'The financial system exists as one integrated stack: MCP servers are operational, Paperless-ngx
+      ingests documents, Actual Budget holds categorized spending, and SimpleFIN streams live balances.
+      The Brazil roadmap is data, not a plan on paper. Tooling gaps are visible before they block a decision.'
   - id: P04E002
     label: 2
     title: Automation Platform
-    goal: Plataforma sobre a qual todas as capabilities rodam — conectores, event bus, automação
+    goal: 'The automation platform exists as the substrate every capability runs on: connectors, an event
+      bus, scheduled watchers and secrets are live and shared. A new capability plugs in without rebuilding
+      plumbing. Integrations report their own health, so a broken connector is visible before it silently
+      skews advice.'
   - id: P04E003
     label: 3
     title: Financial Intelligence
-    goal: Visibilidade automática da saúde financeira — pulse semanal + alerts de anomalia
+    goal: 'Financial health is visible without asking: balances, spending, savings rate, net worth and
+      runway update themselves. A weekly pulse arrives before each week starts, and outliers surface with
+      the transaction that caused them. The owner answers ''how am I doing'' with a number, not a guess.'
   - id: P04E005
     label: 4
-    title: Principal — Mid-Month Mortgage Principal Prepayment
-    goal: Calcular impacto de prepayment quinzenal/mid-month no principal, anos economizados, juros poupados
+    title: Prepayment Core
+    goal: The mid-month principal prepayment has a known price. The owner sees, for each prepayment amount,
+      how many months fall off the loan and how much interest disappears, so the trade-off against the
+      Rio fund is explicit and repeatable. The calculation reruns after every rate or balance change.
   - id: P04E006
     label: 5
-    title: 401k Rollover — Old Employer → Current
-    goal: Consolidar 401k antigo no plano atual para simplificar gestão, reduzir fees, e ter controle
-      sobre investimentos
+    title: 401k Rollover Wiley
+    goal: 'The old-employer 401k is consolidated into the current plan: one statement, one login, one
+      fee schedule. Investment control sits with the owner, and no orphan account is left unmonitored.
+      The consolidation runs as a direct rollover, so no tax event occurs.'
   - id: P04E007
     label: 6
-    title: Fraud Detection — Kartas/Liens suspeitos do Kings County
-    goal: Confirmar se as cartas são fraude, documentar, e proteger dados/contas. Nunca pagar sem verificação
-      oficial.
+    title: Fraud Detection
+    goal: 'The suspected liens are classified: each letter is verified against official Kings County and
+      credit-bureau records, then documented as fraud or legitimate. Unverified demands are never paid.
+      The owner''s identity and accounts are protected, and any real lien is visible with its amount and
+      filing source.'
   - id: P04E008
     label: 7
-    title: Home Upkeep — 511 Evergreen 2C
-    goal: Decidir escopo e custo das pendências de casa — pagar à vista vs financiar — sem comprometer
-      prioridade
+    title: Home Upkeep
+    goal: The condo has a settled scope and cost for its open work — washer, kitchen, and the electrical
+      breakout for home automation — with pay-cash versus finance decided per item. House spending comes
+      from a defined bucket, and the Rio purchase keeps priority. No item stalls for lack of an estimate.
   - id: P04E009
     label: 8
-    title: Mortgage — Evergreen on Putnam (Valley)
-    goal: Manter dados da mortgage em arm's length para decisões (upkeep, refi, prepayment, equity, Rio)
-      sem precisar re-descobrir. Base para TODAS as simulações futuras.
+    title: Mortgage Valley
+    goal: Mortgage terms, balance history and reference documents sit in one place, current and reconcilable,
+      so every decision about upkeep, refinancing, prepayment or equity uses the same numbers instead
+      of rediscovered ones. Simulations start from verified data and carry a date stamp that shows how
+      fresh the source is.
   - id: P04E011
     label: 9
     title: Rio Nov 2026
-    goal: 'Logística completa da viagem de novembro: documentos, hospedagem, saúde, packing, finanças,
-      casa em NYC'
+    goal: 'The November Rio trip exists as a closed checklist: tickets, lodging, health, documents, packing,
+      trip budget and the New York apartment absence are all resolved before departure. Each open item
+      has an owner and a deadline. Nothing is discovered for the first time at the airport or the consulate.'
   - id: P04E012
     label: 10
     title: Freelance
-    goal: Compra do Mac Studio M4 dedutível como despesa de negócio legítima — estabelecer, com prova,
-      a atividade freelance (Schedule C) que sustenta o abatimento, e validar com a tax accountant.
+    goal: 'The Mac Studio purchase is a documented, legitimate business deduction: freelance activity
+      is established under Schedule C with income proof from the European client, supporting records are
+      filed, and the tax accountant has confirmed the treatment in writing. The deduction is claimed without
+      audit exposure.'
 - key: planning
   items:
   - id: P04E010
     label: 1
-    title: Enrich Paperless — Definição da Estrutura Semântica (taxonomia + metadata + critérios)
-    goal: Um arquivo-morto com estrutura semântica desenhada pelas perguntas que faremos — não um despejo
-      de OCR. Tags estáveis, fatos estruturados extraíveis, e um índice semântico que responde perguntas
-      reais. Trabalho único de configuração; depois o sistema opera continuamente sobre novos documentos.
+    title: Enrich Paperless
+    goal: 'Paperless has a designed semantic structure: a stable tag taxonomy, defined metadata fields
+      and document types, classification rules with positive and negative examples, and an explicit list
+      of what is never extracted. Every document entering the archive lands in that structure, so later
+      questions are answered from structured facts, not raw OCR dumps.'
   - id: P04E014
     label: 2
-    title: Paperless + MLX — AI config with MLX server
-    goal: Conectar o Paperless no NAS ao MLX server (Mac) para classificação automática de documentos
-      — tags, correspondent, document type, AI content suggestions.
+    title: Paperless AI
+    goal: 'Paperless on the NAS classifies incoming documents by itself: tags, correspondent and document
+      type arrive already suggested, using the local MLX model on the Mac. The owner reviews and accepts
+      rather than fills fields by hand, and the classifier degrades gracefully when the model host is
+      unreachable.'
   - id: P04E015
     label: 3
-    title: Co-Living — Thriving in Community
-    goal: '1️⃣[Survey: What Exists] --> 2️⃣[Stories & History]'
+    title: Living Community
+    goal: 'The owner and friends live together in a co-living arrangement that has been studied before
+      it starts: literature, real stories and failures, legal frameworks for both Brazil and the United
+      States, and agreed conflict-resolution practice. The house agreement exists in draft, so costs and
+      chores are settled before friction, not after.'
   - id: P04E016
     label: 4
-    title: Group Outings — Friends' Hangout Fund
-    goal: Pote de amigos pra rolês — contribuição voluntária, sem pressão financeira. Lubrificar o 'vamos
-      sair' sem que uma pessoa vire o pagador padrão.
+    title: Group Outings
+    goal: 'The friends'' outing pool exists and works: voluntary contributions land in one clearly accounted
+      pot, spending shows up on a shared ledger, and nobody becomes the default payer. The group says
+      yes to outings without a budget conversation each time, and the pot''s balance is visible to every
+      member.'
   - id: P04E017
     label: 5
-    title: Transaction Anomalies — Detection System
-    goal: 'Um sistema de detecção de anomalias financeiras — roda em regime contínuo (tipo antivírus),
-      classifica o que merece atenção do que não merece, e informa. Não começa do zero: parte de heurísticas
-      já existentes (livros + corpus do Librarian) e modula a sensibilidade.'
+    title: Transaction Anomalies
+    goal: 'Financial anomalies are detected continuously, like an antivirus: transactions are scored against
+      learned and heuristic baselines, routine noise stays quiet, and anything that warrants attention
+      arrives with its evidence. Sensitivity is tunable, and the owner trusts the alerts enough to act
+      on them rather than ignore them.'
   - id: P04E019
     label: 6
-    title: Folding Table — Coworking Fridays
-    goal: Escolher e comprar uma mesa que (a) sente o grupo do coworking de sexta, (b) dobre/recolha quando
-      fora de uso, (c) caiba no apartamento — sem comprometer a prioridade Rio.
+    title: Folding Table
+    goal: 'A folding table and seating exist for the Friday coworking group: the group fits around it,
+      it folds away when unused, and it fits the apartment. The choice was made on function, footprint
+      and price against the Rio priority, and it is bought and in place.'
   - id: P04E020
     label: 7
-    title: Job Hunting — Full Remote, Maior Renda
-    goal: Trocas de emprego por um full-remote melhor pago, com pipeline de leads gerenciado (ticketing),
-      posicionamento e materiais prontos — decisão informada, sem achismo.
+    title: Job Hunting
+    goal: 'A higher-paying full-remote role exists on paper before the search begins: the target profile
+      is written, leads run through a tracked pipeline, positioning and materials are ready, and the owner
+      compares offers on total compensation rather than gut feel. The search runs as a system, not as
+      occasional browsing.'
 - key: done
   items:
   - id: finances-and-legal_paperless-ai

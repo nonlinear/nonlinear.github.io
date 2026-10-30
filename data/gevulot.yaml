@@ -2,7 +2,7 @@ project: gevulot
 tier: experimental
 exporter: v1.0
 counts:
-  active: 2
+  active: 3
   planning: 0
   done: 0
   done_total: 0
@@ -11,16 +11,29 @@ sections:
   items:
   - id: P06E001
     label: 1
-    title: Configuration
-    goal: Auditar, documentar e sugerir melhorias no ecossistema de MCPs, skills e ferramentas dos agentes
-      OpenClaw — mapeando quem tem acesso a o quê, quais gaps existem, e recomendando novos tools com
-      prioridade.
-  - id: P06E003
+    title: Tooling Inventory
+    goal: The complete tooling inventory of the OpenClaw fleet exists as durable notes, covering every
+      MCP server registered in the runtime config and every skill available to each agent. Every agent
+      maps to the tools it can actually reach, each access asymmetry is named, and each capability gap
+      carries a justified recommendation with explicit priority. Owners read the inventory before any
+      configuration change is proposed, so no change ships without an audit trail showing the prior state.
+  - id: P06E002
     label: 2
-    title: Configuration
-    goal: Auditar, documentar e sugerir melhorias no ecossistema de MCPs, skills e ferramentas dos agentes
-      OpenClaw — mapeando quem tem acesso a o quê, quais gaps existem, e recomendando novos tools com
-      prioridade.
+    title: PostHog Adoption
+    goal: Product analytics reach the calendar and query flows as live PostHog events, so every event
+      created, every agenda query answered, and every external calendar sync is observable with latency,
+      channel and result count attached. Named queries answer the standing questions about usage volume,
+      request origin and query performance without ad hoc SQL. The analytics stack of the infrastructure
+      is shared, and events emitted by other agents cross-reference against calendar data where a timestamp
+      makes the join possible.
+  - id: P06E003
+    label: 3
+    title: Tooling Audit
+    goal: 'A written audit of every MCP server and skill in the OpenClaw ecosystem exists, in English,
+      with a cross-reference map of which agent reaches which tool and where access is asymmetric or absent.
+      Each detected capability gap carries a recommendation with explicit priority, and each proposal
+      states what it unlocks, why current tools cannot cover it, and an approval path for global configuration
+      changes. The audit is the gate: no configuration change is proposed without a documented prior state.'
 - key: planning
   items: []
 - key: done
