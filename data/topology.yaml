@@ -3,7 +3,7 @@ tier: experimental
 exporter: v1.0
 counts:
   active: 5
-  planning: 2
+  planning: 4
   done: 0
   done_total: 0
 sections:
@@ -12,37 +12,65 @@ sections:
   - id: P01E002
     label: 1
     title: 3D Viewer
-    goal: 'Um endpoint público que serve o modelo 3D atual com visualizador interativo (rotação, zoom,
-      AR). Atualizado via script: subo um .glb novo → viewer reflete instantaneamente.'
+    goal: A public link at 8765.nonlinear.nyc always serves the latest 3D model the agent produced. I
+      share the link in chat and the person sees the model rotating, orbit and zoom, with AR, without
+      installing anything and without downloading a file. Publishing a new .glb replaces the served model
+      instantly.
   - id: P01E003
     label: 2
     title: 3D Agent Configuration
-    goal: 'Map all tools, MCPs, books, and scripts the 3D agent needs. Establish shared visual language
-      for direction art. Close the loop: talk → Blender edit → bubble preview.'
+    goal: Every tool, MCP, book and script the 3D agent needs is inventoried with its status. The agent
+      directs art with one shared visual language and closes the loop from chat to a Blender edit to a
+      bubble preview, so a direction spoken in conversation appears as a rendered preview without a manual
+      handoff.
   - id: P01E004
     label: 3
-    title: Papercraft — 3D → Flat → Print → Assemble
-    goal: Aprender a transformar modelos 3D em objetos físicos montáveis em papel. Primeiro dominar o
-      ecossistema existente, depois pensar em ferramenta própria.
+    title: Papercraft 3D Flat
+    goal: I describe a scene and the agent models it in Blender, unfolds it into a papercraft pattern
+      with tabs and fold lines, and returns a print-ready PDF. I print, cut, fold and assemble a physical
+      object. The same model also lives as a .glb in the 3D Viewer, so one description yields both a physical
+      build and a public link.
   - id: P01E009
     label: 4
-    title: Garment reconstruction pipeline — Blender headless + CLO web path
-    goal: 'Answer, with measured evidence, what the 3D infra can carry for garment reconstruction: Blender
-      CLI/sim/export capability, and the concrete browser path for CLO assets.'
+    title: Garment reconstruction pipeline
+    goal: 'A garment mesh from CLO or any other source is simulated headless in Blender and published
+      to the browser as a GLB the studio owns. The measured limits of that path are known: which import
+      operators exist, how long a cloth bake takes, and which export formats carry a simulated garment.
+      Product decisions stay with nugrau E003.'
   - id: P01E010
     label: 5
     title: Planting Beds 3D
-    goal: Visualizar 3 canteiros elevados (muretas de plantio) com medidas reais do jardim em 3D, via
-      viewer público (8765.nonlinear.nyc), para validar dimensões e posição antes de plantar.
+    goal: The owner opens a public link in the browser and orbits, zooms and checks the three raised planting
+      beds at real garden scale before the first stone is laid. Each bed carries its true width, length
+      and height in centimetres and its real position, next to a one-metre reference cube, so proportions
+      and relative placement are verified in 3D instead of on paper.
 - key: planning
   items:
   - id: P01E007
     label: 1
-    title: Harem / Pleated Pants — custom pipeline
-    goal: Do meu corpo/scan 3D → harem pants customizadas → padrão 2D → costureira produzir
+    title: Harem Pleated Pants
+    goal: 'Turn a 3D body scan into custom pleated harem pants, so the garment is drafted from the body
+      rather than guessed: scan, avatar, silhouette, textile simulation, 2D pattern, cheap prototype,
+      fitting, final pattern, then the tailor produces it.'
   - id: P01E008
     label: 2
     title: Física
-    goal: física importa pra 3D?
+    goal: 'The agent models, simulates and renders with correct physical intuition: light reflection and
+      refraction, the inverse-square falloff of a lamp, refraction indices for glass, water and metal,
+      moment of inertia for a falling body, and elasticity for deformable shapes. Each concept maps to
+      a concrete Blender setting, so a chosen value is explained by physics rather than guessed.'
+  - id: P01E012
+    label: 3
+    title: Math Friendly Review
+    goal: 'A sourced, unflattering verdict on the drawing agent''s "math friendly" criterion: which of
+      its four properties hold, which are weak, and what solid modeling — a domain where the criterion
+      has existed for decades — teaches that a 2D drawing with x, y and pressure cannot. The epic answers
+      in prose and citation, with no code and no files written outside this folder.'
+  - id: P01E011
+    label: 4
+    title: Math Friendly Review
+    goal: A cross-domain read of the math-friendly criterion from the drawing agent, judged from solid
+      modeling. The epic keeps the verdict on the four properties, names the tests that are missing, and
+      lists which books in the library support the claim, which contradict it, and which are absent.
 - key: done
   items: []
