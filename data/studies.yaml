@@ -12,37 +12,51 @@ sections:
   - id: P16E001
     label: 1
     title: Semiotics
-    goal: Build a canonical semiotics section in the Librarian library.
+    goal: A canonical semiotics shelf exists in the library, so any question on signs, umwelt, biosemiotics
+      or affordances resolves to a citable primary source instead of a paraphrase from memory. The Peircean
+      canon and its ecological constellation stay acquired, indexed and reachable for reading and cross-reference.
   - id: P16E002
     label: 2
     title: Recollections
-    goal: Rastrear livros que já li para revisitar, recomprar, reler, ou conectar. Bounce back — falar
-      sobre, não só listar.
+    goal: Every book that has passed before the reader''s eyes, not only the ones on the shelf, is tracked
+      in one consolidated log with when and where it was read. That record lets a title be revisited,
+      re-bought, re-read, or connected to another, and it gives something to bounce back from by talking
+      about the book rather than listing it.
   - id: P16E013
     label: 3
     title: Data Storytelling Acquisition
-    goal: Baixar 3 pedidos de leitura (data storytelling / economia / sucesso) para o acervo.
+    goal: The three requested reading acquisitions are in the library and indexed, so Storytelling with
+      Data, Freakonomics and Outliers are readable and semantically searchable alongside the rest of the
+      shelf. Acquisition ran through a working channel after Shelfmark textual search proved unreliable,
+      and each title''s arrival is confirmed by file presence plus a live search hit.
   - id: P16E018
     label: 4
     title: Empire of Normality
-    goal: Estudo de neurodiversidade / crítica à 'normalidade' como construção (capacitismo).
+    goal: A studied account of Chapman''s argument that normality is a construction of capitalist ableism,
+      usable to answer questions on neurodiversity, the social model and the politics of the normal. The
+      book is acquired or its absence is tracked to a ticket, and its claims stay traceable to chapter
+      and passage when the topic is discussed.
   - id: P16E021
     label: 5
-    title: From the Clinic to the Streets
-    goal: 'Read Lara Sheehi — From the Clinic to the Streets: Psychoanalysis for Revolutionary Futures
-      (2026) — and work out its argument: psychoanalysis as a resource for revolutionary struggle, not
-      a clinical retreat. Track my questions as I read and answer them from the library + the book.'
+    title: Clinic to Streets
+    goal: Reading Lara Sheehi''s From the Clinic to the Streets yields a working account of its argument,
+      that psychoanalysis is a resource for revolutionary struggle and not a clinical retreat. Questions
+      raised during the reading are recorded as they come and answered from the library and from the book
+      itself, so the output is a set of cited answers rather than a summary.
   - id: P16E028
     label: 6
-    title: Simulation — Emergence, Self-Sustaining Evolution, and Non-Gradient Systems
-    goal: Consult the library on Manuel De Landa's philosophy + simulation, and work out how stacking
-      emergent properties produces self-sustaining evolution — vs De Landa, Deleuze/Guattari, Haraway,
-      and adjacent thinkers.
+    title: Simulation Emergence Self
+    goal: A cited answer to whether emergent properties can produce self-sustaining evolution once they
+      exhaust the gradients that fuel them, and whether stacking one emergent layer against another supplies
+      more fuel. The answer comes from the library on Gilles Deleuze's philosophy of simulation, on Deacon,
+      on Deleuze and Guattari, on Haraway and on adjacent thinkers. It tests the reader's starting intuition
+      and either confirms it or rejects it, with quoted passages and worked examples.
   - id: P16E034
     label: 7
-    title: Camille — book intake
-    goal: Intake, index, and keep a record of the books Camille sends to the library — organized in books/Camille/
-      and tracked here.
+    title: Camille book intake
+    goal: Books Camille sends to the library are intaken, indexed and recorded, so each one is findable
+      in the shelf and traceable to the day it arrived. Every title has a state, from received to indexed,
+      and the record stays readable as a list instead of living in message history.
   - id: camille-green-colonialism
     label: 8
     title: Green Colonialism — fichamento + correlacao
@@ -50,28 +64,34 @@ sections:
       eds.) com o acervo — corroborações e pushbacks.
   - id: P16E035
     label: 9
-    title: studies-kind — kinds canônicos do agente studies
-    goal: Tornar os kinds de epic do agente studies (P16) uma fonte de verdade YAML autoritativa — o mesmo
-      tipo de objeto que os statuses e as relations já têm — em vez de prosa em política org/backstage
-      que não é lida por script nenhum.
+    title: Canonical kinds
+    goal: Epic kinds are an authoritative YAML source of truth, the same class of object that statuses
+      and relations already are, so classification of every contract is validatable instead of depending
+      on prose no script reads. Each kind carries its own closure rule and the consumers that justify
+      it, which means a new kind cannot be added without naming what breaks if it is missing.
 - key: planning
   items:
   - id: P16E005
     label: 1
-    title: Biomimicry for Commons — Tactical Triad + Biological Strategy
-    goal: Map commons tenets to biological defense strategies. Validate through Librarian books. Build
-      tactical framework for the studio.
+    title: Biomimicry Commons Tactical
+    goal: Commons tenets are mapped to biological defence strategies, validated against library books,
+      and turned into a tactical framework the studio can use. The premise is that a commons gives exclusive
+      resources that vectoralists and proprietors cannot copy, and the open question is what biology teaches
+      about deploying those resources under pressure.
   - id: P16E026
     label: 2
     title: Nag Hammadi Library
-    goal: Read, navigate, and synthesize the Nag Hammadi Library gnostic corpus.
+    goal: The Nag Hammadi gnostic corpus is readable, navigable and synthesized, so any text in the collection
+      can be located, placed in its context, and discussed with citations. Thirteen codices found in Upper
+      Egypt in 1945, more than fifty texts including the Gospel of Thomas, Philip, Truth and the Apocryphon
+      of John, each with a reading state and a map entry.
   - id: P16E033
     label: 3
-    title: Biopolitics — life as the object of power
-    goal: Build a working map of biopolitics — how power takes life itself as its object — using Sheehi''s
-      *From the Clinic to the Streets* as the spine, Fanon as the clinical hinge, and the library''s critique
-      of Foucault (Federici, Mbembe, Brown) as the corrective. Deliver a fichamento and a glossary I can
-      actually use, not a survey.
+    title: Biopolitics life object
+    goal: A working map of biopolitics exists, showing how power takes life itself as its object. Sheehi''s
+      From the Clinic to the Streets supplies the spine, Fanon is the clinical hinge, and the library''s
+      critique of Foucault through Federici, Mbembe and Brown supplies the corrective. What the reader
+      gets is a fichamento and a glossary usable for arguing about the field, not a survey of it.
 - key: done
   items:
   - id: e001_20260512
