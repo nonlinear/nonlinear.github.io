@@ -65,9 +65,11 @@ sections:
   - id: P22E010
     label: 3
     title: Line Or Brush
-    goal: The drawing decides whether a stroke is a line, whose identity is the path, or a brush, whose
-      identity is the stamp. What the file saves, what erase-to-intersection may assume, what a brush
-      swap re-renders and what one commit per second costs in bytes all follow from that decision.
+    goal: 'The drawing decides whether a stroke is a line, whose identity is the path, or a brush, whose
+      identity is the stamp. Owner''s thesis (2026-10-29, verbatim): "line is for brush like text is for
+      font. that''s it." The path is the string; the brush is the renderer. What the file saves, what
+      erase-to-intersection may assume, what a brush swap re-renders and what one commit per second costs
+      in bytes all follow from that analogy.'
   - id: P22E012
     label: 4
     title: Gesture Contract

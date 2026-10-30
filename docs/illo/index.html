@@ -1,21 +1,186 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Illo — Nonlinear</title><link rel=stylesheet href=/css/fonts.css><link rel=stylesheet href=/css/nonlinear-theme.css><link rel=stylesheet href=/css/base.css><link rel=stylesheet href=/css/tiers.css><link rel=stylesheet href=/css/blocks.css><script defer data-domain=nonlinearstudio.org src=https://analytics.nonlinear.nyc/js/script.js></script><script type=module>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Illo — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/nonlinear-theme.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/tiers.css">
+  <link rel="stylesheet" href="/css/blocks.css">
+<script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+  
+  <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script></head><body><header class=site-header><nav class=site-nav aria-label=Site><h2 class=logo><a href=/>Nonlinear Studio</a></h2></nav></header><main><article class="t-portfolio t-experimental"><div class=t-exp><aside class=t-exp__banner><strong>In evaluation.</strong> Lorem ipsum — use at your own risk.</aside><header class=t-exp__head><h1 class=t-exp__title>Illo</h1><p class=t-exp__lede>Comics and illustration pipeline. Panels, sequencing, ink.</p></header><section class=roadmap aria-label="Roadmap illo"><div class=roadmap-col><h3 class=roadmap-h>Currently working<span class=roadmap-sub>Active epics</span></h3><ul class=roadmap-list><li><strong>CSP Mastery</strong><sup class=roadmap-id>P22E003</sup><span class=roadmap-goal> — The user flow reaches Clip Studio Paint without depending on the app alone: .clip files are readable and writable, the library is the user's own and it makes sense, and agent environment and tools persist between sessions. A quick gallery of reusable backgrounds and patterns exists, and the gaps to a productive setup are named.</span></li><li><strong>Walking Skeleton</strong><sup class=roadmap-id>P22E007</sup><span class=roadmap-goal> — The project is a declared experimental tier, published on its own domain through the same exposure pattern the other experimental project uses: tunnel to localhost, no access gate, rate limit. The walking skeleton proves the essential loop — pen, pressure, vector line, file, reopen identical.</span></li><li><strong>Math Friendly</strong><sup class=roadmap-id>P22E011</sup><span class=roadmap-goal> — Math friendly is a verifiable property, not an aspiration, and it filters which brushes, queries and filters the community can write. A feature that cannot be expressed as a function over strokes does not enter the set, and the reason is recorded.</span></li><li><strong>3D Sketch</strong><sup class=roadmap-id>P22E013</sup><span class=roadmap-goal> — Form and perspective construction is the step the two desktop tools leave open, and a sketch tool in three dimensions fills it. Each candidate either enters the user flow with a named role or is rejected with a reason, and the decision is recorded before any tool is adopted.</span></li><li><strong>Commit Battery</strong><sup class=roadmap-id>P22E017</sup><span class=roadmap-goal> — A battery of checks runs before every commit in the project, so a commit that breaks the build or the contract never lands. Each check names what it protects, and the battery is fast enough that nobody bypasses it to keep moving.</span></li><li><strong>Verification gate commit</strong><sup class=roadmap-id>P22E021</sup><span class=roadmap-goal> — Every commit states what was verified and what was not, and the statement is true. The battery is measured before it is extended: a check that cannot fail is removed or fixed, never trusted. The gate runs on the commit, because there is no publish — editing is publishing, and the commit is the only moment where "this version is the true one" can be said.</span></li></ul></div><div class=roadmap-col><h3 class=roadmap-h>Coming soon<span class=roadmap-sub>Planning epics</span></h3><ul class=roadmap-list><li><strong>Drawing As Repo</strong><sup class=roadmap-id>P22E005</sup><span class=roadmap-goal> — Drawing is versioned work: a file has a defined place in the repository, and git becomes the memory of the drawing. Commit granularity carries meaning, a branch holds an alternative story, and HEAD exports on its own. Collaboration follows git, and the chosen approach says why it is git-native rather than version-control-native.</span></li><li><strong>Consumer Era</strong><sup class=roadmap-id>P22E006</sup><span class=roadmap-goal> — The consumer era is closed. Epics that existed to use CSP and Krita as the user's own tools stop being work. What survives is competitor knowledge, and that is collected only when there is a feature to compare against. Retiring is removing from the path, not deleting the record.</span></li><li><strong>Line Or Brush</strong><sup class=roadmap-id>P22E010</sup><span class=roadmap-goal> — The drawing decides whether a stroke is a line, whose identity is the path, or a brush, whose identity is the stamp. What the file saves, what erase-to-intersection may assume, what a brush swap re-renders and what one commit per second costs in bytes all follow from that decision.</span></li><li><strong>Gesture Contract</strong><sup class=roadmap-id>P22E012</sup><span class=roadmap-goal> — The contract between gesture and body is written before any gesture is designed. The question is which conditions the body needs to incorporate the tool, and what breaks that incorporation — not which gesture looks good.</span></li><li><strong>CSP Materials</strong><sup class=roadmap-id>P22E014</sup><span class=roadmap-goal> — The material system of Clip Studio Paint is understood: types, formats and where each lives on disk. Assets download from Clip Studio Assets, and the whole set syncs through Syncthing to the user's phone and Mac without a manual pass.</span></li><li><strong>Git Native Drawing</strong><sup class=roadmap-id>P22E015</sup><span class=roadmap-goal> — The taxonomy of git-native illustration is written: file versus repo, HEAD against working tree, revision, branch, fork and merge, autosave against commit, and where the repository lives. The boundary of git in the browser is measured. Browser-first or app follows from the taxonomy, not from preference, and nothing is built before the discovery closes.</span></li><li><strong>Open Drawing App</strong><sup class=roadmap-id>P22E016</sup><span class=roadmap-goal> — A drawing app built on open primitives — pointer events, InkML, a libmypaint brush engine — instead of depending on closed tools. Pen and pressure, vector ink, layers, an open format, a file that lives in a folder, a document an agent can read and modify, and a mobile surface that works.</span></li><li><strong>Krita Comparison</strong><sup class=roadmap-id>P22E018</sup><span class=roadmap-goal> — Krita and Clip Studio Paint are compared through the lens of the user's illustration study: where Krita is better, how far its API and .kra format allow editing, what vector brushes and layers exist, whether erase-to-intersection survives, and how the two trade files.</span></li><li><strong>Vector Brushes</strong><sup class=roadmap-id>P22E019</sup><span class=roadmap-goal> — Existing vector brush engines, formats and presets are discovered and what can be reused or adapted is named. The dependency contract between document, stroke and brush is written, including swap, a missing brush and the raster thumbnail. The thesis is that a brush is a font.</span></li><li><strong>Pressure</strong><sup class=roadmap-id>P22E020</sup><span class=roadmap-goal> — Pressure sensitivity is defined through its path: capture, representation, mapping, then render or edit. Each contender's promise is compared with what it delivers, and the approach for the web vector MVP follows from the comparison. Input and mapping live here; the brush engine lives in its own epic.</span></li></ul></div></section><section class=t-exp__body><p>In the same way that a well-designed object reveals how it wants to be held,
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Site">
+    <h2 class="logo"><a href="/">Nonlinear Studio</a></h2>
+  </nav>
+</header>
+
+<main>
+<article class="t-portfolio t-experimental">
+    <div class="t-exp">
+  <aside class="t-exp__banner">
+    <strong>In evaluation.</strong> Lorem ipsum — use at your own risk.
+  </aside>
+
+  <header class="t-exp__head">
+    <h1 class="t-exp__title">Illo</h1>
+    <p class="t-exp__lede">Comics and illustration pipeline. Panels, sequencing, ink.</p>
+  </header>
+
+
+<section class="roadmap" aria-label="Roadmap illo">
+  
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Currently working<span class="roadmap-sub">Active epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>CSP Mastery</strong><sup class="roadmap-id">P22E003</sup><span class="roadmap-goal"> — The user flow reaches Clip Studio Paint without depending on the app alone: .clip files are readable and writable, the library is the user&#39;s own and it makes sense, and agent environment and tools persist between sessions. A quick gallery of reusable backgrounds and patterns exists, and the gaps to a productive setup are named.</span>
+        </li>
+        
+        <li>
+          <strong>Walking Skeleton</strong><sup class="roadmap-id">P22E007</sup><span class="roadmap-goal"> — The project is a declared experimental tier, published on its own domain through the same exposure pattern the other experimental project uses: tunnel to localhost, no access gate, rate limit. The walking skeleton proves the essential loop — pen, pressure, vector line, file, reopen identical.</span>
+        </li>
+        
+        <li>
+          <strong>Math Friendly</strong><sup class="roadmap-id">P22E011</sup><span class="roadmap-goal"> — Math friendly is a verifiable property, not an aspiration, and it filters which brushes, queries and filters the community can write. A feature that cannot be expressed as a function over strokes does not enter the set, and the reason is recorded.</span>
+        </li>
+        
+        <li>
+          <strong>3D Sketch</strong><sup class="roadmap-id">P22E013</sup><span class="roadmap-goal"> — Form and perspective construction is the step the two desktop tools leave open, and a sketch tool in three dimensions fills it. Each candidate either enters the user flow with a named role or is rejected with a reason, and the decision is recorded before any tool is adopted.</span>
+        </li>
+        
+        <li>
+          <strong>Commit Battery</strong><sup class="roadmap-id">P22E017</sup><span class="roadmap-goal"> — A battery of checks runs before every commit in the project, so a commit that breaks the build or the contract never lands. Each check names what it protects, and the battery is fast enough that nobody bypasses it to keep moving.</span>
+        </li>
+        
+        <li>
+          <strong>Verification gate commit</strong><sup class="roadmap-id">P22E021</sup><span class="roadmap-goal"> — Every commit states what was verified and what was not, and the statement is true. The battery is measured before it is extended: a check that cannot fail is removed or fixed, never trusted. The gate runs on the commit, because there is no publish — editing is publishing, and the commit is the only moment where &#34;this version is the true one&#34; can be said.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Coming soon<span class="roadmap-sub">Planning epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>Drawing As Repo</strong><sup class="roadmap-id">P22E005</sup><span class="roadmap-goal"> — Drawing is versioned work: a file has a defined place in the repository, and git becomes the memory of the drawing. Commit granularity carries meaning, a branch holds an alternative story, and HEAD exports on its own. Collaboration follows git, and the chosen approach says why it is git-native rather than version-control-native.</span>
+        </li>
+        
+        <li>
+          <strong>Consumer Era</strong><sup class="roadmap-id">P22E006</sup><span class="roadmap-goal"> — The consumer era is closed. Epics that existed to use CSP and Krita as the user&#39;s own tools stop being work. What survives is competitor knowledge, and that is collected only when there is a feature to compare against. Retiring is removing from the path, not deleting the record.</span>
+        </li>
+        
+        <li>
+          <strong>Line Or Brush</strong><sup class="roadmap-id">P22E010</sup><span class="roadmap-goal"> — The drawing decides whether a stroke is a line, whose identity is the path, or a brush, whose identity is the stamp. Owner&#39;s thesis (2026-10-29, verbatim): &#34;line is for brush like text is for font. that&#39;s it.&#34; The path is the string; the brush is the renderer. What the file saves, what erase-to-intersection may assume, what a brush swap re-renders and what one commit per second costs in bytes all follow from that analogy.</span>
+        </li>
+        
+        <li>
+          <strong>Gesture Contract</strong><sup class="roadmap-id">P22E012</sup><span class="roadmap-goal"> — The contract between gesture and body is written before any gesture is designed. The question is which conditions the body needs to incorporate the tool, and what breaks that incorporation — not which gesture looks good.</span>
+        </li>
+        
+        <li>
+          <strong>CSP Materials</strong><sup class="roadmap-id">P22E014</sup><span class="roadmap-goal"> — The material system of Clip Studio Paint is understood: types, formats and where each lives on disk. Assets download from Clip Studio Assets, and the whole set syncs through Syncthing to the user&#39;s phone and Mac without a manual pass.</span>
+        </li>
+        
+        <li>
+          <strong>Git Native Drawing</strong><sup class="roadmap-id">P22E015</sup><span class="roadmap-goal"> — The taxonomy of git-native illustration is written: file versus repo, HEAD against working tree, revision, branch, fork and merge, autosave against commit, and where the repository lives. The boundary of git in the browser is measured. Browser-first or app follows from the taxonomy, not from preference, and nothing is built before the discovery closes.</span>
+        </li>
+        
+        <li>
+          <strong>Open Drawing App</strong><sup class="roadmap-id">P22E016</sup><span class="roadmap-goal"> — A drawing app built on open primitives — pointer events, InkML, a libmypaint brush engine — instead of depending on closed tools. Pen and pressure, vector ink, layers, an open format, a file that lives in a folder, a document an agent can read and modify, and a mobile surface that works.</span>
+        </li>
+        
+        <li>
+          <strong>Krita Comparison</strong><sup class="roadmap-id">P22E018</sup><span class="roadmap-goal"> — Krita and Clip Studio Paint are compared through the lens of the user&#39;s illustration study: where Krita is better, how far its API and .kra format allow editing, what vector brushes and layers exist, whether erase-to-intersection survives, and how the two trade files.</span>
+        </li>
+        
+        <li>
+          <strong>Vector Brushes</strong><sup class="roadmap-id">P22E019</sup><span class="roadmap-goal"> — Existing vector brush engines, formats and presets are discovered and what can be reused or adapted is named. The dependency contract between document, stroke and brush is written, including swap, a missing brush and the raster thumbnail. The thesis is that a brush is a font.</span>
+        </li>
+        
+        <li>
+          <strong>Pressure</strong><sup class="roadmap-id">P22E020</sup><span class="roadmap-goal"> — Pressure sensitivity is defined through its path: capture, representation, mapping, then render or edit. Each contender&#39;s promise is compared with what it delivers, and the approach for the web vector MVP follows from the comparison. Input and mapping live here; the brush engine lives in its own epic.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+</section>
+
+
+
+  <section class="t-exp__body">
+    <p>In the same way that a well-designed object reveals how it wants to be held,
 this product reveals how it wants to be used before anyone reads a word. That is
-the whole ambition: cognition that shows itself in the surface.</p><h2 id=what-it-is>What it is</h2><p>It began as an internal instrument and stayed one. The shape came from use, not
+the whole ambition: cognition that shows itself in the surface.</p>
+<h2 id="what-it-is">What it is</h2>
+<p>It began as an internal instrument and stayed one. The shape came from use, not
 from specification — every part that survived is a part someone reached for more
-than once. What follows is a description of that shape.</p><h2 id=how-it-works>How it works</h2><p>Three movements, in order. First the intake, where material arrives unformed.
+than once. What follows is a description of that shape.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Three movements, in order. First the intake, where material arrives unformed.
 Then the reduction, where it is made small enough to hold. Finally the return,
-where it goes back out into the same world that produced it.</p><pre class=mermaid>flowchart LR
+where it goes back out into the same world that produced it.</p>
+
+<pre class="mermaid">flowchart LR
   A[intake] --&gt; B[reduction]
   B --&gt; C{holds?}
   C --&gt;|yes| D[return]
-  C --&gt;|no| B</pre><h2 id=status>Status</h2><p>Working, with the usual caveats. Nothing here asks for attention it has not
-earned, and nothing claims to be finished.</p><div class=mock-body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p><h2>Lorem heading</h2><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></section><section class=t-exp__gaps><h2>What does not work yet</h2><ul><li>Lorem ipsum dolor sit amet.</li><li>Consectetur adipiscing elit.</li><li>Sed do eiusmod tempor.</li></ul><figure class=mock-diagram><pre class=mermaid>
+  C --&gt;|no| B</pre>
+<h2 id="status">Status</h2>
+<p>Working, with the usual caveats. Nothing here asks for attention it has not
+earned, and nothing claims to be finished.</p>
+
+    <div class="mock-body">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  <h2>Lorem heading</h2>
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+  </section>
+
+  <section class="t-exp__gaps">
+    <h2>What does not work yet</h2>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Consectetur adipiscing elit.</li>
+      <li>Sed do eiusmod tempor.</li>
+    </ul>
+    <figure class="mock-diagram">
+  <pre class="mermaid">
 flowchart LR
   A[Illo — sketch] --> B[ingest]
   B --> C{stable?}
   C -->|yes| D[flagship]
   C -->|no| E[experimental]
-  </pre><figcaption>Illo — sketch</figcaption></figure></section></div></article></main><footer>Nonlinear Studio Studio · cognition bleeds</footer></body></html>
+  </pre>
+  <figcaption>Illo — sketch</figcaption>
+</figure>
+
+  </section>
+</div>
+
+  
+</article>
+
+</main>
+<footer>Nonlinear Studio Studio · cognition bleeds</footer>
+</body>
+</html>
