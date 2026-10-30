@@ -11,9 +11,10 @@ sections:
   items:
   - id: P03E002
     label: 1
-    title: Governance — Forgejo Git-based Knowledge Commons
-    goal: Draft administrative + access-layer + permission + naming governance for the Knowledge Commons,
-      manifested by a Forgejo git server
+    title: Governance Forgejo Git
+    goal: Agree on the administrative side of the Knowledge Commons with Eon, so the layers of access,
+      permissions and naming are written down and Forgejo manifests them as real users, repos, teams and
+      permissions instead of a document nobody enforces.
   - id: P03E003
     label: 2
     title: Knowledge Base
@@ -32,7 +33,7 @@ sections:
       goals — the financing layer the project has not yet designed.
   - id: P03E006
     label: 2
-    title: Benchmarks — Local LLM Benchmark Reports from the Community
+    title: Benchmarks Local LLM
     goal: Design and ship an automatic, membership-part-of pipeline that collects standardized local-LLM
       benchmark reports from community devices (hardware stack + per-engine/per-model stats) into the
       members repo — privacy-preserving, schema-first, cron-driven, publishable via token/API without
@@ -41,15 +42,27 @@ sections:
   - id: P03E010
     label: 3
     title: Calendar and Events
-    goal: Event scheduling and calendar for Office Hours and Study Group sessions
+    goal: A shared calendar lists every Office Hours and Study Group session in one place, so people find
+      the next gathering and its time zone without asking. Sessions publish as events with date, time,
+      host, and joining link. Subscribers add the schedule to their own calendar and get reminders before
+      a session starts. Hosts schedule, move, or cancel a session once and every calendar reflects it
+      immediately.
   - id: P03E012
     label: 4
     title: Generic Hugo
-    goal: 'Reusable Hugo site pattern: GitHub Pages deploy, calendar, how-to articles, Reveal.js presentations'
+    goal: A reusable Hugo site pattern serves as the base for each new site, so a launch needs content
+      edits instead of a rebuild. The pattern ships a GitHub Pages deploy path, a calendar of upcoming
+      sessions, how-to articles, and Reveal.js presentations. Authors add pages and front matter; layout,
+      structured data, and deployment stay fixed. Every site built from the pattern looks consistent and
+      deploys the same way.
   - id: P03E019
     label: 5
     title: Study Group
-    goal: Peer learning community for advanced cyborg techniques
+    goal: A peer learning community carries advanced cyborg techniques past what office hours can teach.
+      Members join a cohort with a defined curriculum, work through case studies together, and get mentorship
+      from people further along. Sessions run at a stated cadence, and discussion continues asynchronously
+      between them. Learners bring a real problem, leave with a working approach, and teach that approach
+      to the next cohort.
 - key: done
   items:
   - id: e007_20260630
