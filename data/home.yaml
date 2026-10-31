@@ -2,7 +2,7 @@ project: home
 tier: experimental
 exporter: v1.0
 counts:
-  active: 4
+  active: 5
   planning: 0
   done: 3
   done_total: 7
@@ -41,6 +41,12 @@ sections:
       SIM, no paid plan. The iPhone 11 is a linked device, so messages arrive on it from the server, history
       is carried over, and the trip works with the primary idle on Wi-Fi in New York. Voice and video
       calls, disappearing messages, and push delivery with the primary unused are proven before departure.
+  - id: P07E014
+    label: 5
+    title: Haunted Oppo
+    goal: Return the Oppo Find N5 to a stable ColorOS 15 build after the voluntary ColorOS 16 upgrade
+      broke fold behaviour, restore the cellular service lost during the factory reset, and identify whether
+      the installed build has blown the hardware anti-rollback fuse before any flash is attempted.
 - key: planning
   items: []
 - key: done
