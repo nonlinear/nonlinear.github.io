@@ -11,13 +11,13 @@ sections:
   items:
   - id: P17E001
     label: 1
-    title: Configuration — Fitness Agent SSOT
+    title: Configuration Fitness Agent
     goal: Auditar, documentar e expandir o acesso do agente Fitness a skills, MCPs e ferramentas — garantindo
       que ele pode gerar treinos, pesquisar ciência do esporte, planejar nutrição, e integrar com calendário/reminders
       com o máximo de recursos disponíveis.
   - id: P17E003
     label: 2
-    title: Configuration — Cooking Agent SSOT
+    title: Configuration Cooking Agent
     goal: Inventariar, auditar e expandir o acesso do agente Cooking a MCPs, skills, livros e ferramentas
       — garantindo que ele pode buscar receitas, rastrear compras, calcular custos de pratos, pesquisar
       ciência da nutrição, e integrar com o ecossistema de food prep.
@@ -54,8 +54,10 @@ sections:
   - id: P17E017
     label: 8
     title: Configuration
-    goal: Auditar skills, MCPs e configuracoes do ecossistema OpenClaw — identificando o que o agente
-      style tem acesso, o que falta, e propondo novas ferramentas.
+    goal: 'Auditar skills, MCPs e configuracoes do ecossistema OpenClaw — identificando o que o agente
+      style tem acesso, o que falta, e propondo novas ferramentas. O agente `style` foi criado sem projetos
+      ou epics próprios. Este epic mapeia o território: quais MCPs e skills estão disponíveis no sistema,
+      se o agente tem acesso a eles, e onde há gaps que valem a pena preencher.'
   - id: P17E020
     label: 9
     title: Harm Reduction Acervo
