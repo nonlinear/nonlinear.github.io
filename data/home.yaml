@@ -2,7 +2,7 @@ project: home
 tier: experimental
 exporter: v1.0
 counts:
-  active: 5
+  active: 6
   planning: 0
   done: 3
   done_total: 7
@@ -47,6 +47,11 @@ sections:
     goal: Return the Oppo Find N5 to a stable ColorOS 15 build after the voluntary ColorOS 16 upgrade
       broke fold behaviour, restore the cellular service lost during the factory reset, and identify whether
       the installed build has blown the hardware anti-rollback fuse before any flash is attempted.
+  - id: P07E015
+    label: 6
+    title: Transcoding
+    goal: Measure the actual media library (video + music on the NAS) and answer, with numbers, whether
+      transcoding reduces it meaningfully without losing quality — and where transcoding does NOT help.
 - key: planning
   items: []
 - key: done
