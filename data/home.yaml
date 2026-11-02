@@ -2,7 +2,7 @@ project: home
 tier: experimental
 exporter: v1.0
 counts:
-  active: 6
+  active: 7
   planning: 0
   done: 3
   done_total: 7
@@ -52,6 +52,12 @@ sections:
     title: Transcoding
     goal: Measure the actual media library (video + music on the NAS) and answer, with numbers, whether
       transcoding reduces it meaningfully without losing quality — and where transcoding does NOT help.
+  - id: P07E016
+    label: 7
+    title: Oppo Rio Service
+    goal: Get the Oppo Find N5's fold/display defect fixed or downgraded through OPPO Brasil while the
+      owner is physically in Rio de Janeiro — with the Signal primary protected by an off-device backup
+      before the handset leaves the house.
 - key: planning
   items: []
 - key: done
