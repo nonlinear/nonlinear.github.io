@@ -36,12 +36,12 @@ declared:
     role: "Case study coming."
   - slug: mesa
     name: Mesa
-    tier: experimental
+    tier: pending
     role: "Table. Working surface."
-  - slug: susu
-    name: Susu
-    tier: experimental
-    role: "Weekly module. Operations."
+  - slug: bolo
+    name: Bolo
+    tier: pending
+    role: "Internal. Not exposed on the surface."
   - slug: illo
     name: Illo
     tier: experimental

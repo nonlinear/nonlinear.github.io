@@ -1,35 +1,338 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Librarian — Nonlinear</title><link rel=stylesheet href=/css/fonts.css><link rel=stylesheet href=/css/nonlinear-theme.css><link rel=stylesheet href=/css/base.css><link rel=stylesheet href=/css/tiers.css><link rel=stylesheet href=/css/blocks.css><script defer data-domain=nonlinearstudio.org src=https://analytics.nonlinear.nyc/js/script.js></script><script type=module>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Librarian — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/nonlinear-theme.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/tiers.css">
+  <link rel="stylesheet" href="/css/blocks.css">
+<script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+  
+  <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script></head><body><header class=site-header><nav class=site-nav aria-label=Site><h2 class=logo><a href=/>Nonlinear Studio</a></h2></nav></header><main><article class="t-portfolio t-flagship"><div class=t-flagship><div class=t-flagship__cover><span class=t-cover__fallback>cover — Librarian</span></div><header class=t-flagship__head><p class=t-flagship__eyebrow>Flagship</p><h1 class=t-flagship__title>Librarian</h1><span class=subtitle>Semantic search across the studio's books</span><p class=t-flagship__lede>Ask a question, get the passage. An instrument that returns text you can use, not a summary you have to trust.</p></header><section class=t-flagship__proof><figure class=mock-cover data-seed=9><div class=mock-cover__grid aria-hidden=true><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><figcaption>Librarian</figcaption></figure><ul class=t-flagship__facts><li><strong>Status</strong><span>stable</span></li><li><strong>Since</strong><span>2026</span></li><li><strong>Access</strong><span>install</span></li></ul></section><section class=roadmap aria-label="Roadmap librarian"><div class=roadmap-col><h3 class=roadmap-h>Currently working<span class=roadmap-sub>Active epics</span></h3><ul class=roadmap-list><li><strong>Index Batching</strong><sup class=roadmap-id>P10E011</sup><span class=roadmap-goal> — The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written one. Re-indexing a large intake costs the changed books, not the whole corpus.</span></li><li><strong>Publication Postflight</strong><sup class=roadmap-id>P10E023</sup><span class=roadmap-goal> — A published landing matches the repository it came from. Postflight checks the pushed artifact against the documentation it claims to describe, and reports the difference as a gap instead of a success. Nothing is announced as published until the artifact exists where the claim says it does.</span></li><li><strong>Deduplication Integrity</strong><sup class=roadmap-id>P10E041</sup><span class=roadmap-goal> — Detect and handle duplicate books in the library so each title exists exactly once: index pollution stops (one book indexed many times), search noise stops (duplicate results), embeddings stop being wasted on redundant copies, and book_id collisions between paths are eliminated.</span></li><li><strong>Proof Layer</strong><sup class=roadmap-id>P10E071</sup><span class=roadmap-goal> — Every promise the reader makes about a source is backed by a contract that a test can check. The reader returns a page with its provenance, and hardening work turns each assumption into a named, verifiable claim. A claim that cannot be checked is dropped from the surface.</span></li><li><strong>Bindery Acquisition</strong><sup class=roadmap-id>P10E072</sup><span class=roadmap-goal> — The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted have a named reason, and a download batch runs without manual intervention. The loop closes at the index: a book that was acquired is a book a query can find.</span></li><li><strong>Indexing Master</strong><sup class=roadmap-id>P10E073</sup><span class=roadmap-goal> — Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches a searchable chunk through the same stages every other book used, and a failure at any stage names the stage. The master epic holds the pipeline together across the format epics.</span></li><li><strong>Readme</strong><sup class=roadmap-id>P10E074</sup><span class=roadmap-goal> — The repository explains itself to a reader who arrives with no context: what the system does, how to run it, and where the corpus lives. The readme is the front door of the project and it is written for the person who has not read any other document.</span></li><li><strong>Bibliographic Consultation</strong><sup class=roadmap-id>P10E075</sup><span class=roadmap-goal> — Other agents receive citable, verified references for their architecture decisions. Each consultation exists as a note naming the book, chapter or section, and the quoted passage, all confirmed by opening the physical file in the corpus. The requesting agent cites that passage in its own contract without relying on paraphrase or memory.</span></li></ul></div><div class=roadmap-col><h3 class=roadmap-h>Coming soon<span class=roadmap-sub>Planning epics</span></h3><ul class=roadmap-list><li><strong>Topology Analogy</strong><sup class=roadmap-id>P10E002</sup><span class=roadmap-goal> — Two clusters that share the same topology are surfaced as an analogy, not only as neighbours. Urbanism and vascular systems both carry flow, distribution, bottlenecks and circulation, so the system can name the shared shape and show both sides. The open question the epic answers is whether the system must build this or only reveal what the model already sees.</span></li><li><strong>FAISS Memory</strong><sup class=roadmap-id>P10E007</sup><span class=roadmap-goal> — The index answers memory and latency questions on the full corpus without loading it twice: a query returns in bounded time while the process stays inside its memory budget. Batching, caching and progressive publication exist so the indexer can restart mid-corpus and continue.</span></li><li><strong>Evidence Provenance</strong><sup class=roadmap-id>P10E008</sup><span class=roadmap-goal> — Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing source reads as missing instead of as confidence.</span></li><li><strong>Microkernel Platform</strong><sup class=roadmap-id>P10E014</sup><span class=roadmap-goal> — The platform runs as a minimal core that hosts capabilities as plug-ins. Retrieval, reader, indexer, log and users share one process, one port and one corpus, and each keeps its own testable contract. A capability grows inside its contract before it grows in surface.</span></li><li><strong>Reliability Layer</strong><sup class=roadmap-id>P10E016</sup><span class=roadmap-goal> — A reader can rely on the same answer twice. The system states what it knows, degrades visibly when it cannot, and never presents a stale or partial result as a fresh one. The claim under test is the answer to one question: can the system reliably say what it knows?</span></li><li><strong>Interaction Log</strong><sup class=roadmap-id>P10E017</sup><span class=roadmap-goal> — Every interaction is recorded as history with its source and its outcome, so the corpus can be read as an autobiography and not only as a library. The log carries what was asked, what was returned, and which books were opened. Analytics read this log; nothing else writes it.</span></li><li><strong>Research Triage</strong><sup class=roadmap-id>P10E025</sup><span class=roadmap-goal> — A research question enters the system, gets triaged against the corpus, and leaves with a decision: answered, partially answered with the gap named, or not in the corpus. The first mile of research is explicit, so a missing book is reported as a missing book and not as a weak answer.</span></li><li><strong>Experience History</strong><sup class=roadmap-id>P10E044</sup><span class=roadmap-goal> — The record of what a reader asked and received is queryable as history. Patterns of use, abandoned questions and reopened books become visible from the log rather than from opinion. Analytics read one store, and that store is the interaction record.</span></li></ul></div></section><section class=t-flagship__body><p>In the same way that a well-designed object reveals how it wants to be held,
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Site">
+    <h2 class="logo"><a href="/">Nonlinear Studio</a></h2>
+  </nav>
+</header>
+
+<main>
+<article class="t-portfolio t-flagship">
+    <div class="t-flagship"><div class="t-flagship__cover">
+    <span class="t-cover__fallback">cover — Librarian</span>
+  </div>
+
+  <header class="t-flagship__head">
+    <p class="t-flagship__eyebrow">Flagship</p>
+    <h1 class="t-flagship__title">Librarian</h1>
+    <span class="subtitle">Semantic search across the studio&#39;s books</span>
+    
+    <p class="t-flagship__lede">Ask a question, get the passage. An instrument that returns text you can use, not a summary you have to trust.</p>
+  </header>
+
+  <section class="t-flagship__proof">
+    <figure class="mock-cover" data-seed="9">
+  <div class="mock-cover__grid" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <figcaption>Librarian</figcaption>
+</figure>
+
+    <ul class="t-flagship__facts">
+      <li><strong>Status</strong><span>stable</span></li>
+      <li><strong>Since</strong><span>2026</span></li>
+      <li><strong>Access</strong><span>install</span></li>
+    </ul>
+  </section>
+
+
+<section class="roadmap" aria-label="Roadmap librarian">
+  
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Currently working<span class="roadmap-sub">Active epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>Index Batching</strong><sup class="roadmap-id">P10E011</sup><span class="roadmap-goal"> — The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written one. Re-indexing a large intake costs the changed books, not the whole corpus.</span>
+        </li>
+        
+        <li>
+          <strong>Publication Postflight</strong><sup class="roadmap-id">P10E023</sup><span class="roadmap-goal"> — A published landing matches the repository it came from. Postflight checks the pushed artifact against the documentation it claims to describe, and reports the difference as a gap instead of a success. Nothing is announced as published until the artifact exists where the claim says it does.</span>
+        </li>
+        
+        <li>
+          <strong>Deduplication Integrity</strong><sup class="roadmap-id">P10E041</sup><span class="roadmap-goal"> — Detect and handle duplicate books in the library so each title exists exactly once: index pollution stops (one book indexed many times), search noise stops (duplicate results), embeddings stop being wasted on redundant copies, and book_id collisions between paths are eliminated.</span>
+        </li>
+        
+        <li>
+          <strong>Proof Layer</strong><sup class="roadmap-id">P10E071</sup><span class="roadmap-goal"> — Every promise the reader makes about a source is backed by a contract that a test can check. The reader returns a page with its provenance, and hardening work turns each assumption into a named, verifiable claim. A claim that cannot be checked is dropped from the surface.</span>
+        </li>
+        
+        <li>
+          <strong>Bindery Acquisition</strong><sup class="roadmap-id">P10E072</sup><span class="roadmap-goal"> — The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted have a named reason, and a download batch runs without manual intervention. The loop closes at the index: a book that was acquired is a book a query can find.</span>
+        </li>
+        
+        <li>
+          <strong>Indexing Master</strong><sup class="roadmap-id">P10E073</sup><span class="roadmap-goal"> — Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches a searchable chunk through the same stages every other book used, and a failure at any stage names the stage. The master epic holds the pipeline together across the format epics.</span>
+        </li>
+        
+        <li>
+          <strong>Readme</strong><sup class="roadmap-id">P10E074</sup><span class="roadmap-goal"> — The repository explains itself to a reader who arrives with no context: what the system does, how to run it, and where the corpus lives. The readme is the front door of the project and it is written for the person who has not read any other document.</span>
+        </li>
+        
+        <li>
+          <strong>Bibliographic Consultation</strong><sup class="roadmap-id">P10E075</sup><span class="roadmap-goal"> — Other agents receive citable, verified references for their architecture decisions. Each consultation exists as a note naming the book, chapter or section, and the quoted passage, all confirmed by opening the physical file in the corpus. The requesting agent cites that passage in its own contract without relying on paraphrase or memory.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Coming soon<span class="roadmap-sub">Planning epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>Topology Analogy</strong><sup class="roadmap-id">P10E002</sup><span class="roadmap-goal"> — Two clusters that share the same topology are surfaced as an analogy, not only as neighbours. Urbanism and vascular systems both carry flow, distribution, bottlenecks and circulation, so the system can name the shared shape and show both sides. The open question the epic answers is whether the system must build this or only reveal what the model already sees.</span>
+        </li>
+        
+        <li>
+          <strong>FAISS Memory</strong><sup class="roadmap-id">P10E007</sup><span class="roadmap-goal"> — The index answers memory and latency questions on the full corpus without loading it twice: a query returns in bounded time while the process stays inside its memory budget. Batching, caching and progressive publication exist so the indexer can restart mid-corpus and continue.</span>
+        </li>
+        
+        <li>
+          <strong>Evidence Provenance</strong><sup class="roadmap-id">P10E008</sup><span class="roadmap-goal"> — Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing source reads as missing instead of as confidence.</span>
+        </li>
+        
+        <li>
+          <strong>Microkernel Platform</strong><sup class="roadmap-id">P10E014</sup><span class="roadmap-goal"> — The platform runs as a minimal core that hosts capabilities as plug-ins. Retrieval, reader, indexer, log and users share one process, one port and one corpus, and each keeps its own testable contract. A capability grows inside its contract before it grows in surface.</span>
+        </li>
+        
+        <li>
+          <strong>Reliability Layer</strong><sup class="roadmap-id">P10E016</sup><span class="roadmap-goal"> — A reader can rely on the same answer twice. The system states what it knows, degrades visibly when it cannot, and never presents a stale or partial result as a fresh one. The claim under test is the answer to one question: can the system reliably say what it knows?</span>
+        </li>
+        
+        <li>
+          <strong>Interaction Log</strong><sup class="roadmap-id">P10E017</sup><span class="roadmap-goal"> — Every interaction is recorded as history with its source and its outcome, so the corpus can be read as an autobiography and not only as a library. The log carries what was asked, what was returned, and which books were opened. Analytics read this log; nothing else writes it.</span>
+        </li>
+        
+        <li>
+          <strong>Research Triage</strong><sup class="roadmap-id">P10E025</sup><span class="roadmap-goal"> — A research question enters the system, gets triaged against the corpus, and leaves with a decision: answered, partially answered with the gap named, or not in the corpus. The first mile of research is explicit, so a missing book is reported as a missing book and not as a weak answer.</span>
+        </li>
+        
+        <li>
+          <strong>Experience History</strong><sup class="roadmap-id">P10E044</sup><span class="roadmap-goal"> — The record of what a reader asked and received is queryable as history. Patterns of use, abandoned questions and reopened books become visible from the log rather than from opinion. Analytics read one store, and that store is the interaction record.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+</section>
+
+
+
+  <section class="t-flagship__body">
+    <p>In the same way that a well-designed object reveals how it wants to be held,
 this product reveals how it wants to be used before anyone reads a word. That is
-the whole ambition: cognition that shows itself in the surface.</p><h2 id=what-it-is>What it is</h2><p>It began as an internal instrument and stayed one. The shape came from use, not
+the whole ambition: cognition that shows itself in the surface.</p>
+<h2 id="what-it-is">What it is</h2>
+<p>It began as an internal instrument and stayed one. The shape came from use, not
 from specification — every part that survived is a part someone reached for more
-than once. What follows is a description of that shape.</p><p>The instrument does one thing: it maps a question onto the passages that answer
-it. It does not summarize. A summary asks you to trust a voice you cannot check.</p><h2 id=how-it-works>How it works</h2><p>Three movements, in order. First the intake, where material arrives unformed.
+than once. What follows is a description of that shape.</p>
+<p>The instrument does one thing: it maps a question onto the passages that answer
+it. It does not summarize. A summary asks you to trust a voice you cannot check.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Three movements, in order. First the intake, where material arrives unformed.
 Then the reduction, where it is made small enough to hold. Finally the return,
-where it goes back out into the same world that produced it.</p><pre class=mermaid>flowchart LR
+where it goes back out into the same world that produced it.</p>
+
+<pre class="mermaid">flowchart LR
   A[intake] --&gt; B[reduction]
   B --&gt; C{holds?}
   C --&gt;|yes| D[return]
-  C --&gt;|no| B</pre><h3 id=what-the-movements-cost>What the movements cost</h3><p>Each movement has a price, and the price is not hidden.</p><ol><li>Intake takes time proportional to the shelf.</li><li>Reduction throws away everything that does not answer.</li><li>Return is the only step the reader sees.</li></ol><h3 id=what-it-refuses>What it refuses</h3><ul><li>It refuses to invent a passage.</li><li>It refuses to average two authors into one voice.</li><li>It refuses to return a page number it did not read.</li></ul><h2 id=a-passage-it-returned>A passage it returned</h2><p>The instrument exists because this problem is old and already named.</p><blockquote><p>The law of the instrument: give a small knowledge, and things look uniform,
-give a large one, and they look varied.</p></blockquote><blockquote><footer><cite>Warren Weaver, <em>Recent Contributions to the Mathematical Theory of Communication</em></cite></footer></blockquote><h3 id=the-same-claim-sharper>The same claim, sharper</h3><blockquote><p>We can prevent or reduce identifier collisions by adding information about the
-namespace, the domain from which the names or identifiers are selected.</p></blockquote><blockquote><footer><cite>Robert J. Glushko, <em>The Discipline of Organizing</em>, §3.4.3.4</cite></footer></blockquote><h2 id=reading-the-output>Reading the output</h2><p>A result is a passage, a source, and a score. The score is not truth; it is
-proximity. Two passages can score alike and say opposite things.</p><p>Inline detail appears like <code>librarian.search(query)</code> in a sentence, and a command
+  C --&gt;|no| B</pre>
+<h3 id="what-the-movements-cost">What the movements cost</h3>
+<p>Each movement has a price, and the price is not hidden.</p>
+<ol>
+<li>Intake takes time proportional to the shelf.</li>
+<li>Reduction throws away everything that does not answer.</li>
+<li>Return is the only step the reader sees.</li>
+</ol>
+<h3 id="what-it-refuses">What it refuses</h3>
+<ul>
+<li>It refuses to invent a passage.</li>
+<li>It refuses to average two authors into one voice.</li>
+<li>It refuses to return a page number it did not read.</li>
+</ul>
+<h2 id="a-passage-it-returned">A passage it returned</h2>
+<p>The instrument exists because this problem is old and already named.</p>
+
+
+
+
+  
+  
+  
+  
+  <blockquote>
+    <p>The law of the instrument: give a small knowledge, and things look uniform,
+give a large one, and they look varied.</p>
+    
+  </blockquote>
+
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+  <blockquote>
+    
+    <footer><cite>Warren Weaver, <em>Recent Contributions to the Mathematical Theory of Communication</em></cite></footer>
+  </blockquote>
+
+<h3 id="the-same-claim-sharper">The same claim, sharper</h3>
+
+
+
+
+  
+  
+  
+  
+  <blockquote>
+    <p>We can prevent or reduce identifier collisions by adding information about the
+namespace, the domain from which the names or identifiers are selected.</p>
+    
+  </blockquote>
+
+
+
+
+
+  
+  
+  
+  
+    
+    
+  
+  <blockquote>
+    
+    <footer><cite>Robert J. Glushko, <em>The Discipline of Organizing</em>, §3.4.3.4</cite></footer>
+  </blockquote>
+
+<h2 id="reading-the-output">Reading the output</h2>
+<p>A result is a passage, a source, and a score. The score is not truth; it is
+proximity. Two passages can score alike and say opposite things.</p>
+<p>Inline detail appears like <code>librarian.search(query)</code> in a sentence, and a command
 looks like <code>librarian index --rebuild</code>. Both are set apart from prose; neither
-competes with it.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span>result <span style=color:#f92672>=</span> librarian<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#34;delay tolerant routing&#34;</span>, k<span style=color:#f92672>=</span><span style=color:#ae81ff>5</span>)
-</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> passage <span style=color:#f92672>in</span> result<span style=color:#f92672>.</span>passages:
-</span></span><span style=display:flex><span>    print(passage<span style=color:#f92672>.</span>book_title, passage<span style=color:#f92672>.</span>score)
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-console data-lang=console><span style=display:flex><span>$ librarian index --rebuild
-</span></span><span style=display:flex><span>indexed 412 books in 9m12s
-</span></span></code></pre></div><p>A value you supply yourself is written <code>--shelf &lt;path></code> and is set apart from the
-instruction, so the two never read as one thing.</p><h2 id=notes>Notes</h2><aside class="alert alert--info" role=note><p class=alert__label>NOTE</p><div class=alert__body>The index is rebuilt on write. A search during a rebuild returns the previous
-index, not a partial one.</div></aside><aside class="alert alert--success" role=note><p class=alert__label>TIP</p><div class=alert__body>Ask in the language of the book, not the language of the question.</div></aside><aside class="alert alert--warning" role=note><p class=alert__label>WARNING</p><div class=alert__body>A high score on a short passage is weaker evidence than a middling score on a
-long one. Length is not noise.</div></aside><h2 id=status>Status</h2><p>Working, with the usual caveats. Nothing here asks for attention it has not
-earned, and nothing claims to be finished.</p><table><thead><tr><th>Surface</th><th>State</th><th>Since</th></tr></thead><tbody><tr><td>Search</td><td>working</td><td>2026-08</td></tr><tr><td>Index rebuild</td><td>working</td><td>2026-09</td></tr><tr><td>Multi-shelf</td><td>not started</td><td>—</td></tr></tbody></table><p>Press <kbd>⌘</kbd> + <kbd>K</kbd> to open the query field.</p><hr><p>Cover art is reserved for this product; the default cover ships first.</p><div class=mock-body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p><h2>Lorem heading</h2><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div><figure class=mock-diagram><pre class=mermaid>
+competes with it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> librarian<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;delay tolerant routing&#34;</span>, k<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> passage <span style="color:#f92672">in</span> result<span style="color:#f92672">.</span>passages:
+</span></span><span style="display:flex;"><span>    print(passage<span style="color:#f92672">.</span>book_title, passage<span style="color:#f92672">.</span>score)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ librarian index --rebuild
+</span></span><span style="display:flex;"><span>indexed 412 books in 9m12s
+</span></span></code></pre></div><p>A value you supply yourself is written <code>--shelf &lt;path&gt;</code> and is set apart from the
+instruction, so the two never read as one thing.</p>
+<h2 id="notes">Notes</h2>
+<aside class="alert alert--info" role="note">
+  <p class="alert__label">NOTE</p>
+  <div class="alert__body">The index is rebuilt on write. A search during a rebuild returns the previous
+index, not a partial one.</div>
+</aside>
+
+<aside class="alert alert--success" role="note">
+  <p class="alert__label">TIP</p>
+  <div class="alert__body">Ask in the language of the book, not the language of the question.</div>
+</aside>
+
+<aside class="alert alert--warning" role="note">
+  <p class="alert__label">WARNING</p>
+  <div class="alert__body">A high score on a short passage is weaker evidence than a middling score on a
+long one. Length is not noise.</div>
+</aside>
+
+<h2 id="status">Status</h2>
+<p>Working, with the usual caveats. Nothing here asks for attention it has not
+earned, and nothing claims to be finished.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Surface</th>
+					<th>State</th>
+					<th>Since</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Search</td>
+					<td>working</td>
+					<td>2026-08</td>
+			</tr>
+			<tr>
+					<td>Index rebuild</td>
+					<td>working</td>
+					<td>2026-09</td>
+			</tr>
+			<tr>
+					<td>Multi-shelf</td>
+					<td>not started</td>
+					<td>—</td>
+			</tr>
+	</tbody>
+</table>
+<p>Press <kbd>⌘</kbd> + <kbd>K</kbd> to open the query field.</p>
+<hr>
+<p>Cover art is reserved for this product; the default cover ships first.</p>
+
+    <div class="mock-body">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  <h2>Lorem heading</h2>
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+    <figure class="mock-diagram">
+  <pre class="mermaid">
 flowchart LR
   A[Librarian — architecture] --> B[ingest]
   B --> C{stable?}
   C -->|yes| D[flagship]
   C -->|no| E[experimental]
-  </pre><figcaption>Librarian — architecture</figcaption></figure></section><section class=t-flagship__cta><h2>Get it</h2><p class=t-flagship__cta-text>Lorem ipsum — install path, requirements, what lands on day one.</p><p><a class=t-flagship__button href=#>Librarian — start</a></p></section></div></article></main><footer>Nonlinear Studio Studio · cognition bleeds</footer></body></html>
+  </pre>
+  <figcaption>Librarian — architecture</figcaption>
+</figure>
+
+  </section>
+
+  <section class="t-flagship__cta">
+    <h2>Get it</h2>
+    <p class="t-flagship__cta-text">Lorem ipsum — install path, requirements, what lands on day one.</p>
+    <p><a class="t-flagship__button" href="#">Librarian — start</a></p>
+  </section>
+</div>
+
+  
+</article>
+
+</main>
+<footer>Nonlinear Studio Studio · cognition bleeds</footer>
+</body>
+</html>
