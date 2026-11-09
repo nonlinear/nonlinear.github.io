@@ -1,12 +1,8 @@
 {{ define "main" }}
-{{- /* PORTFOLIO — ONE renderer. The tier is a gate, not a layout choice.
+{{- /* PORTFOLIO — one renderer, two partials, one gate.
 
    Rule (owner, 2026-11-09): "só experimental e flagship tem página e help.
-   se não eh não tem. automático."
-
-   Data comes from data/<project>/roadmap.yaml and data/<project>/help.yaml,
-   copied verbatim by site-publish.py. This template captures exact fields.
-   It does not build, normalize or enrich anything. */ -}}
+   se não eh não tem. automático." */ -}}
 
 {{- $tier := .Params.tier | default "" -}}
 {{- $p := .File.ContentBaseName -}}
@@ -19,7 +15,8 @@
 </header>
 
 {{ if or (eq $tier "flagship") (eq $tier "experimental") }}
-  {{ partial "portfolio/dev.html" (dict "project" $p) }}
+  {{ partial "portfolio/help.html" (dict "project" $p) }}
+  {{ partial "portfolio/roadmap.html" (dict "project" $p) }}
   <div class="t-portfolio__body">{{ .Content }}</div>
 {{ else }}
   <p class="lede">This project has no public page. Tier: <code>{{ $tier | default "none" }}</code>.</p>

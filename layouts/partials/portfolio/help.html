@@ -1,0 +1,30 @@
+{{- /* PORTFOLIO/HELP — renders the declaration, does not build it.
+   Source: data/<project>/help.yaml, copied verbatim from
+   agents/<project>/about/help.yaml by site-publish.py.
+
+   Fields are exact: needs[].id, needs[].status, needs[].title.
+   A need without title prints its id — the source decides, not the template. */ -}}
+
+{{ $p := .project }}
+{{ $hp := index (index site.Data $p) "help" }}
+
+{{ if not $hp }}
+  {{ warnf "help: no data/%s/help.yaml — run site-publish.py --project %s" $p $p }}
+{{ else }}
+<section class="help" aria-label="Help needed {{ $p }}">
+  <h2>Help <small>{{ len ($hp.needs | default slice) }} needs</small></h2>
+
+  <table class="help-table">
+    <thead><tr><th>id</th><th>status</th><th>title</th></tr></thead>
+    <tbody>
+      {{ range $hp.needs }}
+      <tr><td><code>{{ .id }}</code></td><td>{{ .status }}</td><td>{{ .title }}</td></tr>
+      {{ end }}
+    </tbody>
+  </table>
+
+  {{ if not $hp.needs }}
+  <p class="help-empty">Not asking for help right now.</p>
+  {{ end }}
+</section>
+{{ end }}
