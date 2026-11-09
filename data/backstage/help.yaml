@@ -1,0 +1,124 @@
+---
+schema_version: 2.0
+project: backstage
+tier: flagship
+last_reconciled_at: "2026-11-06T10:40-05:00"
+reconciled_by: nonlinear
+
+
+# Backstage — help.yaml
+#
+# Declaração de estado, não campanha.
+# Tudo aqui é GRATUITO e VOLUNTÁRIO. Open source, commons. Respeitamos o tempo
+# do voluntário e damos crédito.
+#
+# Fonte: epics/P02E000-help-needed/FINDINGS.md (2026-11-06).
+# Citações de livro ausentes: biblioteca fora do ar durante a análise.
+
+needs:
+  # ---------------------------------------------------------------------
+  # O que o owner nomeou: "project manager".
+  # ---------------------------------------------------------------------
+  - id: cross-epic-sequencing
+    type: review
+    title: "Alguém que seja dono da sequência entre epics"
+    description: >
+      Cinco epics tocam o mesmo mecanismo de check. Têm status diferentes, donos
+      diferentes dentro do mesmo agente, e cada um cita o outro como relacionado.
+      Nada nomeia uma sequência única. Um pedido de migração ficou preso em
+      backlog desde 13/10 enquanto o owner pediu duas vezes. O mesmo escopo foi
+      reaberto três vezes em quatro dias. Não falta esforço — falta alguém lendo
+      os oito epics e produzindo uma ordem.
+    status: open
+    effort: medium
+    time: "1 a 2 sessões: ler 8 epics, devolver 1 sequência"
+    skills: ["project management", "sequenciamento", "mapeamento de dependência"]
+    response:
+      mode: intake
+      cta: "Assumir a sequência"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P02E041
+      quote: "'The migration had been stuck in backlog since 2026-10-13 while the owner asked for it twice (2026-10-20).'"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # O que o owner nomeou: "hooks, git hooks, OpenClaw hooks e qual o outro".
+  # O outro é Forgejo — e a comparação é o achado.
+  # ---------------------------------------------------------------------
+  - id: hook-family-audit
+    type: review
+    title: "Auditar a família de hooks como família (git, OpenClaw, Forgejo)"
+    description: >
+      Três famílias de hook existem e ninguém as olhou juntas: git hooks locais,
+      os 37 plugin hooks do OpenClaw (só 9 dos quais podem dizer 'não'), e os
+      hooks server-side do Forgejo — pre-receive, update, post-receive. O epic
+      do Forgejo é draft desde 25/07 e é o único lugar onde a distinção está
+      escrita: OpenClaw hooks são intenção, Forgejo hooks são enforcement.
+      Cliente sempre pode fugir de hook local com --no-verify. Quem conhece
+      githooks de verdade pode dizer qual hook pertence a qual família, e o que
+      cada uma consegue garantir.
+    status: open
+    effort: medium
+    time: "1 sessão: ler P02E058, P02E071, P02E046 + auditar os hooks em disco"
+    skills: ["git hooks", "githooks", "release engineering", "shell", "Forgejo/Gitea"]
+    response:
+      mode: intake
+      cta: "Auditar os hooks"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P02E058
+      quote: "'OpenClaw hooks = intent. Forgejo hooks = enforcement.' — and P02E046: 'only 9 of 37 hooks can say no.'"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # Achado do agente: checks sem versão.
+  # ---------------------------------------------------------------------
+  - id: versioned-checks
+    type: contribution
+    title: "Fazer os checks serem versionáveis"
+    description: >
+      Os checks existem só como especificação. Não há como reproduzir um check
+      antigo, comparar duas versões dele, ou saber quando um check mudou de
+      opinião. Quem já versionou pipelines de verificação pode dizer o que
+      precisa ser um arquivo, o que precisa ser um commit, e onde isso quebra.
+    status: open
+    effort: large
+    time: "sessão de desenho + revisão de implementação"
+    skills: ["release engineering", "CI", "versionamento", "specs executáveis"]
+    response:
+      mode: intake
+      cta: "Desenhar os checks versionados"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P02E071
+      quote: "Checks exist only as a spec (A8); nothing can version them."
+      library: null
+
+  # ---------------------------------------------------------------------
+  # Achado do agente: drift documental medido duas vezes, com números diferentes.
+  # ---------------------------------------------------------------------
+  - id: drift-measurement-disagreement
+    type: review
+    title: "Dois epics medem o mesmo corpus e discordam — qual está certo?"
+    description: >
+      Um epic mede 1657 violações; outro mede 714 em 272 arquivos. Mesmo corpus,
+      números incompatíveis. E até 28/10 o gate bloqueava por sintaxe, não por
+      voz — ou seja, o número que existia não era sobre o que se pensava. Antes
+      de corrigir o drift é preciso saber se a régua mede a coisa certa.
+    status: open
+    effort: medium
+    time: "2 horas, auditoria de duas medições"
+    skills: ["auditoria de métrica", "documentação", "análise estática"]
+    response:
+      mode: intake
+      cta: "Auditar a medição"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P02E057
+      quote: "1657 violations (P02E050) vs 714 over 272 files (P02E057) — same corpus, incompatible numbers"
+      library: null

@@ -1,0 +1,631 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: backstage
+# source: epics/ + workspace/epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "P02E001"
+    kind: project
+    title: "MCP Management — Stage 3: Backstage Catalog"
+    goal: "Backstage oferece o catálogo (Stage 3) de MCPs: cada servidor registrado com escopo, dono e ferramenta exposta. Qualquer agente consulta o catálogo antes de declarar que uma capacidade não existe."
+    status: backlog
+  - id: "P02E002"
+    kind: project
+    title: "Horizontal Agents — formalizar topologia vertical/horizontal e o protocolo de chamada"
+    goal: "Formalizar a topologia vertical/horizontal/híbrido do PETNA JÁ DECIDIDA (A2/A22) e — o que falta — definir o PROTOCOLO de chamada/atuação: como um agente horizontal é INVOCADO e COMO AGE SOBRE os verticais (e vice-versa). Hoje a topologia existe mas o mecanismo de interação (quem chama quem, com qual contrato, em qual modo) é implícito. Este epic torna explícito o modo de interação entre agentes do ecossistema, ancorado nos três modos de interação de Team Topologies (collaboration / X-as-a-Service / facilitating)."
+    status: backlog
+  - id: "P02E003"
+    kind: project
+    title: "Agents Cleanup — sanitize agents folder, migrate about/identity.md, enforceable rules"
+    goal: "Clean up and sanitize the agents folder: migrate the narrative content of `about/identity.md` (currently NOT machine-read) to actionable OpenClaw surfaces (SOUL.md / AGENTS.md / TOOLS.md), remove stale/duplicate identity files, and define enforceable rules so the folder stays clean."
+    status: backlog
+  - id: "P02E004"
+    kind: project
+    title: "Checkpoint Machine"
+    goal: "The lifecycle machine is proven: a status change fires a checkpoint that runs checks, each check returns pass or fail, all passing authorizes the transition, and any failure rejects it and records the result. The minimum structure of check and checkpoint works with one toy check, before any real policy exists."
+    status: active
+  - id: "P02E005"
+    kind: project
+    title: "ID Collisions"
+    goal: "Two epics that share the same id cannot be told apart by the roadmap projection, and eighteen groups do. The target is an id that is the identity of the epic and not of its container, so the epic migrates without changing name. The epic closes when every id in the ecosystem is unique."
+    status: planning
+  - id: "P02E006"
+    kind: project
+    title: "Roadmap Registry Cleanup — de histórico operacional para control-plane state"
+    goal: "Transformar o `workspace/ROADMAP.yaml` (registry de reconciliação do backstage) de **histórico operacional** (P10E017 de ciclos + estado) em **control-plane state** (só intenção operacional viva). O histórico de ciclos vai para o Git; o arquivo fica com o estado operacional necessário: quem reconcilio, tiers, e — novo — a rollout policy (qual projeto recebe qual versão de P08E047). Renomear para `registry.yaml` para eliminar a ambiguidade com `about/roadmap.yaml`."
+    status: backlog
+  - id: "P02E007"
+    kind: project
+    title: "Multi-User — Backstage com mais de um usuário por projeto"
+    goal: "Garantir que o Backstage funciona com mais de um usuário por projeto — compartilhamento de repo de projeto, especialmente sob P08E047 hygiene e migração multi-editor. Premissas e riscos ainda em thought exercise (ver §Riscos)."
+    status: backlog
+  - id: "P02E008"
+    kind: project
+    title: "Parity v3.6 — domains configuration/interfaces + modo promotion"
+    goal: "Evoluir a skill P08E047 v3.5 → v3.6: (a) adicionar `P06E001` e `interfaces` à tabela de DOMAINS reconciliáveis (sem skill/domain novo por tipo — domains continuam entrando no mesmo mecanismo); (b) formalizar `promotion` como MODO DE INVOCAÇÃO do protocolo sobre um candidate congelado (release-gate de P02E024), não novo domain nem novo protocol; (c) seguir o ciclo da própria P08E047 (dry-run → impact → off-ramp → migration) antes de propagar aos consumidores (Kin, Nonlinear, Librarian). Documentar como evidência os findings de produto do Librarian (domínios P06E001/interfaces), não como requisito Librarian-only."
+    status: backlog
+  - id: "P02E009"
+    kind: project
+    title: "Dashboard — visual representation of backstage/agent state (calendar, epics, costs, trends)"
+    goal: "Give the operator (nonlinear) a single visual surface over the backstage ecosystem: what epics exist / their status, upcoming agenda (calendar/tasks/memory/context), costs trends, and parity/observability signals — instead of digging through files. Absorbs the agenda-visual-day (visual day representation) and epic-costs (weekly model-cost reconciliation) ideas as notes."
+    status: backlog
+  - id: "P02E010"
+    kind: project
+    title: "Context Pollution — detect and mitigate conflicting prompts that degrade or disable Backstage core"
+    goal: "Inform and guide the user on how to DETECT and MITIGATE conflicting prompts that may reduce — or even prevent — Backstage core from working. Context pollution is when harness prompts, policies, memory, or agent instructions conflict with Backstage's protocol, so the Core silently stops functioning (drift, ignored checks, skipped parity, malformed epics) even though nothing \"errors.\""
+    status: backlog
+  - id: "P02E011"
+    kind: project
+    title: "Multi-Harness — run Backstage (and other products) seamlessly across harnesses"
+    goal: "Make Backstage (and other products) run seamlessly across MULTIPLE harnesses. Today we work on OpenClaw; other harnesses are possible (Hermes, Claude Code, pi, …). One methodology/protocol that installs and behaves the same regardless of host — with harness-specific behavior isolated in adapters, never in the Core. RENAMED 2026-09-16 (nonlinear): \"normalization\" is ONE deliverable of multi-harness, not the whole thing. Other deliverables: test environment, analysis, adapters, conformance, per-harness capability discovery. Implements `backstage-as-product` §3.32 (harness-agnostic by design) and §3.33 (cross-harness conformance testing)."
+    status: backlog
+  - id: "P02E012"
+    kind: project
+    title: "Check Presets — tags, presets and non-hierarchical selection (beyond global|project)"
+    goal: "Extend check scope beyond the current hierarchical model (global | project) with TAGS and PRESETS. Today scope is hierarchical — global or project — which is fine: projects must manually assemble common logic. But in the future, language and project-type should carry their OWN preset of checks at certain points: flutter → this check at that trigger, this check at another trigger; hugo → the same; experimental projects → the same; flagship projects → the same. A preset is therefore ANOTHER CHECK COLLECTION that you can USE, CREATE or CUSTOMIZE. FUTURE STATE — recorded now, built later."
+    status: backlog
+  - id: "P02E013"
+    kind: project
+    title: "ID Normalization — a scalable, best-practice ID syntax"
+    goal: "Establish a stable machine identity for every epic without making the human-facing title part of the identity. ID = P<agent>E<epic> (imutável, único por construção); title = fantasy name (mutável); folder = ID. Migrar epics OPEN para o novo schema (contagem nova por agente); closed permanecem frozen. Schema em policies/epic-schema.yaml (fonte única); parity enforça."
+    status: done
+  - id: "P02E014"
+    kind: project
+    title: "Edit Needed"
+    goal: "Define EDIT_NEEDED as a new verdict: the check identifies a concrete, actionable edit that an agent can apply autonomously. The agent applies edits, the checkpoint re-runs, and both rounds are recorded as commits. If edits break another check, the second round catches it."
+    status: backlog
+  - id: "P02E015"
+    kind: project
+    title: "Help Evaluation — decision machine (Checkpoint that synthesises decisions)"
+    goal: "Define the DECISION side of help_needed: given collected responses + evidence, run them through decision criteria as a Checkpoint, produce a synthesis report, and surface a decision outcome. Sibling to the demand machine (help-needed). Procurement discipline name: evaluation committee / scoring matrix / award memo."
+    status: backlog
+  - id: "P02E016"
+    kind: project
+    title: "Demand Intake"
+    goal: "A project declares a need, receives responses, and each response becomes work items. The intake side owns the declaration, the response lifecycle and the routing to tickets, following procurement discipline: the request is published, proposals arrive, and each proposal is a vendor thread."
+    status: planning
+  - id: "P02E017"
+    kind: project
+    title: "Product Brief — Backstage (product understanding)"
+    goal: "Executar o skill P02E017 sobre o Backstage: P14E006 responde as 14 áreas do giant prompt; backstage analisa e consolida em about/P02E017.md (destilação YAML + corpo de evidência), consumido downstream pelo P14E006 portfolio. Absorve backstage-as-product (MIGRATED): a visão §3, a validação §3A e o glossário §10 são a matéria-prima da entrevista. Deliverable = /about object, não posicionamento."
+    status: backlog
+  - id: "P02E018"
+    kind: project
+    title: "Debugging"
+    goal: "Migrated from old backstage (E072)"
+    status: backlog
+  - id: "P02E019"
+    kind: project
+    title: "Epic Protocol v2 — structural parity / protocol migration test"
+    goal: "Test whether the system can change its own structural epic protocol and certify migration of the live artifacts — without migrating project by project manually. It is a compliance experiment (protocol migration), not a compliance abstraction."
+    status: backlog
+  - id: "P02E020"
+    kind: project
+    title: "Nimble Companies"
+    goal: "The concept of a nimble company is explored and written: an organization that operates with autonomous agents in deterministic workflows. The studio is positioned as the standard handshake protocol between those agents and those companies."
+    status: active
+  - id: "P02E021"
+    kind: project
+    title: "Ideas Parking Lot — System Improvements"
+    goal: "Um epic-parking-lot de SYSTEM IMPROVEMENTS: memória de \"coisas que percebemos durante o trabalho e que podem melhorar o sistema\". Não é um backlog genérico — cada entrada tem origem, feedback original, contexto, interpretação, possíveis ações, status e — acima de tudo — PROVENIÊNCIA (quem disse o quê). O consumer do feedback vive aqui: o feedback não morre quando o ticket arquiva."
+    status: backlog
+  - id: "P02E022"
+    kind: project
+    title: "Cognition Policy"
+    goal: "The policy is canonical: before increasing the intelligence of the model, ask whether the environment can already carry the answer. Nurture the environment, not the model. The four questions and the conformance test that enforce it are part of the policy, not advice beside it."
+    status: active
+  - id: "P02E023"
+    kind: project
+    title: "Writing Head"
+    goal: "The group that holds how agents write epics consolidates the writing and quality epics into notes for analysis, under one criterion: lose nothing. The provisional name does not matter. The contract of the group is still undecided, so nothing is executed yet."
+    status: planning
+  - id: "P02E024"
+    kind: project
+    title: "Publication — generalizing backstage for adoption (flagship)"
+    goal: "Design e roadmap de como transformar o backstage em algo generalizável e publicável — com conceito flagship, layer de abstração, e processo de extração — sem quebrar o uso próprio."
+    status: backlog
+  - id: "P02E025"
+    kind: project
+    title: "Repo Reconciliation — enforcement commit no .openclaw + propagação do skill"
+    goal: "Resolver a arquitetura de versionamento/enforcement do workspace vivo (repo ~/.openclaw) e propagar o modelo novo de escrita ao ponto que os agentes realmente consomem (o skill parity). Hoje o enforcement está desacoplado do repositório onde os documentos vivem, e o desenho v2 não chegou aos agentes."
+    status: backlog
+  - id: "P02E026"
+    kind: project
+    title: "Rethink Composites"
+    goal: "**Composites are organizational structures in Backstage, but their role and value are unclear.**"
+    status: backlog
+  - id: "P02E027"
+    kind: project
+    title: "Retroactive Epics — methodology for creating docs from git history + code"
+    goal: "Explore whether/how Backstage can derive documentation from git history and code: a repeatable methodology (not a one-off audit) for retroactive doc generation. Feasibility is the open question — \"if it's even possible.\""
+    status: backlog
+  - id: "P02E028"
+    kind: project
+    title: "Reusable Policies (Nonlinear Studio Methodology)"
+    goal: "Reusable-policies methodology: permanent normative knowledge, discovered by intent before any work, generalizable to all agents. The FIRST methodology policy. Owned by the Studio, used by Kin + Librarian (clients)."
+    status: backlog
+  - id: "P02E029"
+    kind: project
+    title: "Second Brain Setup Guide (Obsidian + Claude Code)"
+    goal: "Setup guide for Obsidian vault as source of truth with Claude Code access via MCP"
+    status: backlog
+  - id: "P02E030"
+    kind: project
+    title: "Session Management Companion Skill"
+    goal: "Skill for managing OpenClaw sessions - list, archive, and define agents per session"
+    status: backlog
+  - id: "P02E031"
+    kind: project
+    title: "Status Schema"
+    goal: "There is one canonical source of statuses for policies and for skills, read by the validator, with the heartbeat reconciling drift. It mirrors what the epic schema already does for epics, so a status is a value the machine knows instead of a word a writer chooses."
+    status: active
+  - id: "P02E032"
+    kind: project
+    title: "Organization Level"
+    goal: "The canonical organization level is defined: a sibling of the agents directory that holds artifacts shared by every agent and owned by none. Today it does not exist, because the work-location policy models the inside of the agents directory and stops there."
+    status: active
+  - id: "P02E033"
+    kind: project
+    title: "Heartbeat × memory: wire the reconciliation loop to the event store"
+    goal: "Ligar o heartbeat (drift scan + ecosystem health + enforcement/parity history + ticket delivery) à superfície de memória (JSONL → DuckDB, skills/memory). Hoje o heartbeat decide 'clean vs drift' sem consultar histórico; a superfície existe e está verificada."
+    status: backlog
+  - id: "P02E034"
+    kind: project
+    title: "Project Tiers"
+    goal: "The studio has three project tiers: flagship, experimental and collab. Each project declares its tier, the public experience derives from it in resources and attention, and the tier itself is never exposed to the reader. The rules, the assignations and the enforcement are part of the taxonomy."
+    status: active
+  - id: "P02E035"
+    kind: project
+    title: "Skill Audit"
+    goal: "The updated skill creator is applied to every existing skill: descriptions audited, evaluations run on the critical ones, triggers optimized, and documentation structure normalized with parity. A skill that survives the pass is one an agent can find and use."
+    status: planning
+  - id: "P02E036"
+    kind: project
+    title: "Reusable Playbook"
+    goal: "The playbook proven in one product generalizes into a platform of reusable procedures for any deliverable: hypothesis, two witnesses, gates, battery delta, compounding knowledge. The originating product keeps running without breaking its check system."
+    status: planning
+  - id: "P02E037"
+    kind: project
+    title: "Trigger Inventory"
+    goal: "Every trigger check in the ecosystem is mapped and the minimum enforcement model is decided: a skill the agent runs itself, a checkpoint at each commit, or a hybrid. A trigger nobody runs is a rule in prose, and prose is the thing being replaced."
+    status: planning
+  - id: "P02E038"
+    kind: project
+    title: "User Personas"
+    goal: "Persona management is a transversal standard: a canonical schema that products declare and consumers read as an input contract. A persona says who the user is, and being amnesiac is a property of the experiment, never of the persona."
+    status: planning
+  - id: "P02E039"
+    kind: project
+    title: "Cross Agent Work"
+    goal: "The canonical mechanism for one agent working inside another agent's epic is decided and enforced. It never creates a second truth, both sides discover the work explicitly, no glob or git or validator breaks, and the id validator passes."
+    status: active
+  - id: "P02E040"
+    kind: project
+    title: "Check Architecture"
+    goal: "The architecture of the check system scales from the single trigger of today to many triggers, with checks that attach selectively and generalize across projects that need variables. The gold standard is transcoding a government requirement into a check, including the simulation of what happens if that requirement is implied."
+    status: planning
+  - id: "P02E041"
+    kind: project
+    title: "Checks Migration"
+    goal: "Kin is a CLIENT of a check system that this agent owns; illo, librarian and others are the next clients. Ownership of the engine, the schema and the promotion rules sits here; each client owns its domain folders, its checks and its executor. The axis (owner, 2026-10-30): checklist / simulated / manual — a checklist that GROWS in coverage so that new work does not re-verify old work. Epics add, modify or do-not-touch the checklist per case, and must DECLARE which (`checklist_effect: add|modify|none` + reason). See DECISION-checklist-as-assurance.md."
+    status: planning
+  - id: "P02E042"
+    kind: project
+    title: "Agent Registry"
+    goal: "Every agent has an allocated number from one canonical registry, so an identifier is assigned once and never guessed. The registry is the table that the portfolio, the epic ids and the documentation all read from."
+    status: active
+  - id: "P02E043"
+    kind: project
+    title: "Fourth System"
+    goal: "The invariant that a fourth system cannot be introduced was blocked in practice, and the block is recorded with its evidence. The ecosystem keeps three systems, and a proposal that would make it four has a named place to fail."
+    status: active
+  - id: "P02E044"
+    kind: methodology
+    title: "Epic Kind"
+    goal: "Kind is a closed enum of epic: project, study, recipe or methodology. Each kind closes in its own way, the legal relations between kinds are stated, and three executable consumers read it. The free prose of the old epic type field died in September and nothing replaces it with prose."
+    status: active
+  - id: "P02E045"
+    kind: methodology
+    title: "Spike Epic Protocol"
+    goal: "Make \"decide with evidence\" a mechanism every agent is forced through: the spike protocol becomes a skill (envelope + printer + impact gate) and the 4th `kind` becomes real (spike epics cannot close without evidence, affected epics cannot close without a recorded destination)."
+    status: active
+  - id: "P02E046"
+    kind: project
+    title: "Hook Boundary"
+    goal: "A hook may observe anything and may refuse only what a file already refuses; it is never the only place where a rule exists. Applied to the thirty-seven hooks of the infrastructure catalogue, the law accepted three and refused seven that had no file behind them."
+    status: active
+  - id: "P02E047"
+    kind: project
+    title: "Delivery Annotation"
+    goal: "The question is whether done needs a delivery annotation to distinguish finished from shipped in a named release, and the answer closes with a deterministic consumer. No state without an exit, and no inference from tags."
+    status: planning
+  - id: "P02E048"
+    kind: project
+    title: "Skill publication"
+    goal: "Publish a skill once and ship it to three targets. One pipeline checks the frontmatter each consumer requires, then pushes the same tagged revision to OpenClaw, to Claude, and to GitHub, so that a skill that runs here also runs there, and no target silently holds a different copy. The same instrument answers which skills this project owns."
+    status: planning
+  - id: "P02E049"
+    kind: project
+    title: "Skill status"
+    goal: "Give every skill one status that means one thing, derived from evidence where the evidence exists, so that a skill claiming production actually carries a battery behind the claim and a reader can sort the corpus without asking its author."
+    status: planning
+  - id: "P02E050"
+    kind: methodology
+    title: "Epic writing enforcement"
+    goal: "Make epic writing a gate instead of a sentence. W1-W5 are defined once in voice 11 and enforced by parity 2.8 through four triggers (author, batch, heartbeat, commit), so that the 1657 current violations become a shrinking number with an owner per batch, not a rule that 51% of the corpus ignores. The site publishes epics, so the reader is public."
+    status: active
+  - id: "P02E052"
+    kind: project
+    title: "Agent renames"
+    goal: "Execute the owner's authorized agent renames (comics→illo, podcast→curva) with the two conditions attached: old-name mentions in LIVE artifacts must disappear, and the result must be visible in Kin. Historical timeline entries are evidence and are NOT rewritten."
+    status: active
+  - id: "P02E053"
+    kind: project
+    title: "Done Timestamps"
+    goal: "The roadmap projects WHEN an epic became done, so the public surface shows the last three in real order instead of the arbitrary order of the projection. The data is in the epic today and does not reach the roadmap, which blocks the consumer from computing what the source already knows."
+    status: planning
+  - id: "P02E054"
+    kind: project
+    title: "Release Home"
+    goal: "The release publication mechanism needs a home after its name was reassigned to the portfolio publisher. Two outcomes are acceptable: it returns as its own skill under a name that says what it does, or the chain it guarantees is written into the contract that absorbs it."
+    status: planning
+  - id: "P02E057"
+    kind: project
+    title: "Epic Writing Sweep"
+    goal: "The 105 epics that will be published carry titles of 1 to 3 words and goals of 30 to 100 English words that state what the product has, not the method used to build it. A reader of the public roadmap understands each epic from its title and goal alone."
+    status: active
+  - id: "P02E058"
+    kind: project
+    title: "Forgejo Hooks — server-side enforcement via gitea hooks"
+    goal: "Server-side git hooks on forgejo (gitea hooks) for push-time enforcement. Pre-receive validates commit messages reference project/epic/task. Post-receive triggers CI/CD and logs to backstage."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P02E059"
+    kind: project
+    title: "Amnesiac Testing"
+    goal: "An isolated agent with no memory of the project follows the published installation and usage instructions and lists the errors it finds. It is the missing half of the publication battery: the policy validates the artifact, and this validates whether a stranger can use it. The errors it lists are the deliverable."
+    status: planning
+  - id: "P02E068"
+    kind: project
+    title: "Infrastructure epics — complete inventory"
+    goal: "Epics que pertencem à infraestrutura (hooks, watchers, memory, agents, skills, ID, GUI tooling, checkpoints, scripts) e devem migrar de `backstage/` para `infrastructure/`."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P02E069"
+    kind: project
+    title: "Parity Assurance — certificação determinística de confiança por projeto"
+    goal: "Produzir certificação determinística de confiança para entidades sob mudança (entities under change): resposta \"Can I trust this project?\" derivada da DIREÇÃO em relação ao drift (towards_parity / towards_drift / unknown) em segundos. Transformar observações em conhecimento persistente, consultável e confiável (uma read model / projection), não em prosa de ROADMAP. Não certificar tudo o tempo todo — certificar onde existe movimento. Ciclo: movement detected → parity obligation → observation → direction classified → certification derived. PROMESSA CENTRAL: o sistema nunca fica silenciosamente inconsciente — drift não pode existir sem rastro. Garantia de que a tentativa de paridade nunca desaparece silenciosamente, não garantia de ausência de drift (impossível em sistemas vivos)."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P02E070"
+    kind: project
+    title: "Contract Convergence"
+    goal: "Every published epic carries a canonical id, a title of three words or fewer, a goal written in English as the product claim it makes, and an authored goal that is never empty. The rule is not advice: the next parity cycle repairs the unambiguous cases and reports the rest as residue, so an agent that forgets the rule is corrected, not published wrong."
+    status: active
+  - id: "P02E071"
+    kind: project
+    title: "Checks MVP"
+    goal: "Move the ownership of verification checks, gates and checkpoints out of each product (starting with Kin) into a central harness, so the product agent keeps working unchanged while the harness governs what is verified and when. Built as a braided strangler: the device stays the same, the conductor moves."
+    status: planning
+  - id: "P02E072"
+    kind: methodology
+    title: "kind vs type"
+    goal: "Decide whether `promotion` is a new `kind` and whether `type` is a second field for the same idea — and install the admission test that answers this class of question without a new argument each time. Answer recorded for P14E052 (nonlinear) and P22E030 (illo)."
+    status: active
+  - id: "e014_20260630"
+    kind: project
+    title: "Agent Framework"
+    goal: "Create agents, squads, and composite system"
+    status: done
+  - id: "e012_20260630"
+    kind: project
+    title: "Agent Placeholders"
+    goal: "Create agent infrastructure: 21 agents across 7 squads with values injection system and governance architecture"
+    status: done
+  - id: "e006_20260630"
+    kind: project
+    title: "Agents and skills on Hugo"
+    goal: "Hugo surfaces agents/skills; OpenClaw reads them (single source of truth)"
+    status: done
+  - id: "backstage_anatomy_of_checks_20260915"
+    kind: project
+    title: "Anatomy of Checks"
+    goal: "Define Check anatomy: what a Check is, where it lives, what it verifies, how it proves it ran. Produce the vocabulary and taxonomy so Lane builds the machine and P14E006 builds the anatomy."
+    status: done
+  - id: "backstage_backstage-as-product_20260905"
+    kind: project
+    title: "Backstage as Product — methodology + distribution + governance + observability layer for agents/projects"
+    goal: "Treat Backstage as a single-lane PRODUCT. What started as \"Backstage with checks\" consolidated into a system of methodology + distribution + governance + observability for agents/projects. backstage-as-product ABSORBS preparing-backstage-for-public-release: it defines both WHAT we want (product vision) and HOW we build it (engineering/adoption). A friend of nonlinear takes the technical side (architecture, code, infra, automation); nonlinear takes the product side (positioning, value, who adopts, go-to-market, narrative). This epic is the recorded reasoning. Next step: validate the architecture against experts via library books before freezing foundations (ID/version/license/ permissioning schemas deliberately left open). ⚡ MIGRATED 2026-09-28: absorvido pelo epic `product-brief` (backstage) — o product understanding vira deliverable do novo epic; este contrato permanece como fonte histórica (visão §3 + validação §3A + glossário §10)."
+    status: migrated
+  - id: "e009_20260630"
+    kind: project
+    title: "Backstage Context Switch Merge"
+    goal: "Merge context-switch workflow into backstage for morning/evening rituals, session state tracking, and project switching"
+    status: done
+  - id: "e031_20260519"
+    kind: project
+    title: "Backstage enforcement — lints + project/epic/task binding"
+    goal: "Hooks as linters for Backstage. Ensure agents read and write Backstage correctly (no malformed frontmatter, no orphan files). Demand every piece of work, especially every code change, to have a project/epic/task attached."
+    status: migrated
+  - id: "e011_20260630"
+    kind: project
+    title: "Backstage GUI"
+    goal: "Read-only interface for projects and epics"
+    status: done
+  - id: "backstage-orchestration"
+    kind: project
+    title: "Backstage Orchestration — parity queue + deterministic scheduling"
+    goal: "O heartbeat NÃO é 'cada agente roda a cada 2h'. É: parity queue + deterministic scheduling — o scheduler decide quem roda agora; o heartbeat é só o clock."
+    status: migrated
+  - id: "e076_20260518"
+    kind: project
+    title: "Backstage runtime — from watchers to hooks"
+    goal: "Migrated from old backstage (E076)"
+    status: migrated
+  - id: "e018_20260630"
+    kind: project
+    title: "Backstage Skill Update"
+    goal: "Update OpenClaw backstage skill to reflect Hugo migration and current workflow"
+    status: done
+  - id: "backstage_better-diagram-skill_20260808"
+    kind: project
+    title: "Better Diagram Skill — Contract A"
+    goal: "Every agent designs diagrams that are LOGICALLY USEFUL, not merely technically valid. Two independent conditions: TECHNICALLY VALID (parses, renders) + SEMANTICALLY USEFUL (the right type, the right channels, a real causal structure). Teach the decision process — question first, syntax after — not the list of Mermaid types."
+    status: done
+  - id: "e080_20260523"
+    kind: project
+    title: "Bird-Eye View"
+    goal: "Make project epics easily scannable for review and strategy."
+    status: migrated
+  - id: "e052_20260508"
+    kind: project
+    title: "Check Execution Log"
+    goal: "**Current:** Checks run but we have no record of:"
+    status: migrated
+  - id: "e064_20260507"
+    kind: project
+    title: "Check Notifications"
+    goal: "Visual feedback when checks run - status bar + notifications for failures."
+    status: migrated
+  - id: "e027_20260630"
+    kind: project
+    title: "Checkpoint Logs"
+    goal: "Implement automated validation gates at lifecycle transitions with composite check resolution, auditability, and retrospective analysis (merged from E002)"
+    status: migrated
+  - id: "e068_20260509"
+    kind: project
+    title: "Checkpoint System Enhancements"
+    goal: "Migrated from old backstage (E068)"
+    status: migrated
+  - id: "e008_20260630"
+    kind: project
+    title: "Codebase Auto-Commit"
+    goal: "Expand composite watcher/check system to auto-commit project codebases"
+    status: done
+  - id: "e075_20260518"
+    kind: project
+    title: "Commit Intentions as Hook"
+    goal: "Migrated from old backstage (E075)"
+    status: migrated
+  - id: "e007_20260630"
+    kind: project
+    title: "Composite Watcher System"
+    goal: "Declarative skill/value/library assignment via _index.md composites. Watcher materializes declarations into agent workspaces automatically."
+    status: done
+  - id: "e010_20260630"
+    kind: project
+    title: "Contract diagram"
+    goal: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+    status: done
+  - id: "document-parity"
+    kind: project
+    title: "Document Parity — ensuring epic is the canonical historical record"
+    goal: "Every epic is simultaneously contract, execution plan, and historical ledger. Agents maintain parity between documentation, progress, and discussion — verifiable through reconciliation, not trust."
+    status: done
+  - id: "backstage_epic_level_variables_20260824"
+    kind: project
+    title: "Epic-Level Variables — ROADMAP como projeção mínima de descoberta"
+    goal: "Every project has an `about/roadmap.yaml` projection, and Parity keeps it converged with the project's epics. Teste decisivo de done: change epic → next P08E047 → roadmap changes → git records delta. Se isso funcionar, o epic está done. Sem campos de timestamp novos (o lifecycle é canônico; o git registra quando o estado mudou). Arquivo compactado (roadmap.yaml, não ROADMAP.yaml). Contrato documentado (08-27) foi a passagem planning → active; a implementação é o goal."
+    status: done
+  - id: "e020_20260630"
+    kind: project
+    title: "Epic & Task Validator System"
+    goal: "Anti-drift validation system: deterministic checks for epics, tasks, agents, and writing quality. Keep Backstage repository aligned."
+    status: done
+  - id: "epic-taxonomy-migration_20260828"
+    kind: project
+    title: "Epic Taxonomy Migration — epics/<name>.md → epics/<name>/contract.md"
+    goal: "Migrar TODOS os epics do ecossistema para a taxonomia canônica: cada epic = pasta `epics/<name>/` com NO MÍNIMO `contract.md` (ex-`epics/<name>.md`) + `timeline.md`. Retroactive, sem exceção. Atualizar skill P08E047 + scripts (equipe de 3: skill, script, heartbeat) para o novo layout. Preservar permalinks do git."
+    status: done
+  - id: "e070_20260509"
+    kind: project
+    title: "Fixes"
+    goal: "Catch-all epic for:"
+    status: done
+  - id: "backstage_goal_correction_20260827"
+    kind: project
+    title: "Goal Correction — reconciliar OPEN epics sem goal (38)"
+    goal: "Reconciliar os 38 epics OPEN (backlog/planning/active) que estão sem `goal` no frontmatter. A regra é OPEN ⇒ goal. A correção lê notes/contract de cada epic e grava o goal verdadeiro no frontmatter do epic FONTE (não no roadmap). O roadmap é projeção; a fonte é o epic. Este epic só fica done quando os 38 estiverem reconciliados (goal real, não TBD)."
+    status: done
+  - id: "e022_20260630"
+    kind: project
+    title: "Groups and Statuses"
+    goal: "List object relationships + status checks"
+    status: done
+  - id: "e077_20260521"
+    kind: project
+    title: "Hook authoring skill — co-creation via negotiation"
+    goal: "**Users don't know how to think in enforcement boundaries.**"
+    status: migrated
+  - id: "e030_20260519"
+    kind: project
+    title: "Hook refactoring — watchers/checks → hook system"
+    goal: "Migrate all existing watchers and checks (Hugo watcher, task-build-binding, smoke tests, etc.) into the OpenClaw hook system. Introduce scope frontmatter. Ship a skill to author new hooks by prompt during onboarding."
+    status: migrated
+  - id: "e078_20260630"
+    kind: project
+    title: "Hook System Retro & Infrastructure"
+    goal: "Migrated from old backstage (E078)"
+    status: migrated
+  - id: "e029_20260519"
+    kind: project
+    title: "Hooks MVP — commit-with-justification + log"
+    goal: "First real OpenClaw hook end-to-end. Codebase watcher → commit-with-justification policy. Error logged 100%, success logged at sample rate. Anti-drift mechanism. Default OpenClaw events/handlers — no custom infra yet."
+    status: migrated
+  - id: "e016_20260630"
+    kind: project
+    title: "ID system"
+    goal: "Migrate projects to immutable ID structure (P/E/T) and redesign GUI with lifecycle states, task metadata popover, simplified URLs, and visual polish."
+    status: done
+  - id: "e005_20260630"
+    kind: project
+    title: "Markdown GUI"
+    goal: "Explore and design GUI layer for markdown-based epic/task management with real-time editing and automation triggers"
+    status: done
+  - id: "infrastructure_20260630-migrate-backlog"
+    kind: project
+    title: "Migrate Backlog Projects from Old Backstage"
+    goal: "Migrate remaining 11 projects (~76 epics) from old Hugo Backstage to new PETNA format under the correct agent/project"
+    status: migrated
+  - id: "e028_20260630"
+    kind: project
+    title: "Migrating to Hugo"
+    goal: "Migrated Backstage from Next.js to Hugo static site generator"
+    status: done
+  - id: "migration"
+    kind: project
+    title: "Migration — separating infrastructure from Backstage"
+    goal: "Return Backstage to its core purpose (project management, strategy, contracts) by defederating infrastructure concerns (hooks, watchers, P10E019, agents, P18E006) into their own top-level domain. Create clean ownership, separate work streams, and stop confusing 'improving Backstage the tool' with 'building Backstage the project management system'."
+    status: migrated
+  - id: "e050_20260630"
+    kind: project
+    title: "Modular Watcher System"
+    goal: "Refactor existing composite watcher into modular trigger/check structure with GUI visibility"
+    status: done
+  - id: "nonlinear-tickets"
+    kind: project
+    title: "Nonlinear Tickets"
+    goal: "A single queue (in NocoDB) where agents create first-class work items for the nonlinear, the nonlinear reads and responds (Response field), and Backstage coordinates delivery. An interface between the distributed agent world and the human's limited attention."
+    status: done
+  - id: "e024_20260630"
+    kind: project
+    title: "Organize scripts"
+    goal: "Documenting all scripts with Mermaid diagrams, testing, and categorizing for automation"
+    status: done
+  - id: "parity_biblio"
+    kind: project
+    title: "Parity (bibliografia)"
+    goal: "Bibliografia de referência sobre P08E047/documentação do backstage. Conteúdo histórico preservado em P08E047/books.md (indexação de livros de UI/agent/docs). Sem goal operacional próprio — tudo absorvido por document-parity (norma) e P02E019 (manifestação)."
+    status: migrated
+  - id: "backstage_parity-git_20260924"
+    kind: project
+    title: "Parity + Git — heartbeat commit and push (canonical delta publication)"
+    goal: "Close the heartbeat cycle with a deterministic commit + push of the canonical state delta observed by parity. Extends parity from a reconciliation tool into a knowledge-persistence boundary: relevant conversation knowledge is promoted to epic state (parity), and the resulting delta is published to the personal Forgejo (heartbeat commit-push). The Forgejo history becomes a low-ceremony organizational event log consumable by SuSu, weekly reports, and other agents."
+    status: done
+  - id: "e009_20260528"
+    kind: project
+    title: "PETNA - Disambiguation & Documentation Structure"
+    goal: "Migrated from old backstage (E009)"
+    status: migrated
+  - id: "e074_20260630"
+    kind: project
+    title: "PETNA Protocol"
+    goal: "Provenance layer linking conversation ↔ context ↔ documentation ↔ code. Enables auditability, auto-generation of downstream artifacts, and upstream leverage."
+    status: migrated
+  - id: "e069_20260509"
+    kind: project
+    title: "Project About"
+    goal: "Catch-all epic for:"
+    status: done
+  - id: "project-identity"
+    kind: project
+    title: "Project Identity — padrão canônico de identidade de projetos"
+    goal: "Definir, validar e provar um sistema de Project Identity: o padrão homogêneo de identidade de projetos que alimenta agentes, humanos e portfolio. E reconciliar essa identidade com o trabalho real dos epics."
+    status: migrated
+  - id: "e015_20260630"
+    kind: project
+    title: "Project-Level Library Topics"
+    goal: "Agents inherit library topics from projects they work on (context-aware knowledge)"
+    status: done
+  - id: "backstage_project-level-variables_54e472d3"
+    kind: project
+    title: "Project-Level Variables — the canonical project/agent baseline"
+    goal: "Define the canonical PROJECT baseline — about/identity.md — as \"project-level variables\": id, kind, locations. Establish the granularity boundary between project-level (identity.md), epic-level (ROADMAP.yaml), and OpenClaw runtime (config.yaml). These are the deliverables that horizontal agents consume for a bounded bird's-eye view of the ecosystem."
+    status: done
+  - id: "e031_20260630"
+    kind: project
+    title: "Prompts"
+    goal: "VS Code and Backstage Hugo prompt parity"
+    status: done
+  - id: "e017_20260630"
+    kind: project
+    title: "Resolving Epic Malformation"
+    goal: "Backstage UI shows same epics as filesystem (zero parity deviation)"
+    status: done
+  - id: "sanitization"
+    kind: project
+    title: "Sanitization"
+    goal: "Capacidade TRANSVERSAL de sanitização de documentação, dono = backstage. Garantir que documentação selecionada (about/, epics, docs) que cruza a fronteira do Knowledge Commons seja sanitizada (secret/PII/paths privados), validada e publicada conforme policy — e que SE MANTENHA sanitizada de forma enforceável. Não é para um projeto específico (backstage, librarian, cyborg, futuros Commons)."
+    status: migrated
+  - id: "e059_20260503"
+    kind: project
+    title: "Skill Discovery & Agent Capability System"
+    goal: "**Agents have skills but don't know they have them.**"
+    status: done
+  - id: "e027_20260510"
+    kind: project
+    title: "Skill Issues"
+    goal: "Skill system improvements: build process, agent assignment, trigger discovery, health checks"
+    status: done
+  - id: "e061_20260507"
+    kind: project
+    title: "Status Check"
+    goal: "Migrated from old backstage (E061)"
+    status: done
+  - id: "e021_20260630"
+    kind: project
+    title: "Surface Objects"
+    goal: "Surface vision, agents, skills, MCPs, pinned notes"
+    status: done
+  - id: "ticket-response"
+    kind: project
+    title: "Ticket Response"
+    goal: "When the nonlinear marks a ticket DONE (wrote an answer), Backstage detects it, reads the answer, delivers it to the owning agent as a prompt, archives the ticket (keeping DONE fresh), and the agent acts. Piece 3 of the nonlinear tickets design."
+    status: migrated
+  - id: "e019_20260630"
+    kind: project
+    title: "True Parity"
+    goal: "Backstage + Librarian absolute P08E047 with file system: add epic → instant reload, edit yaml → instant update, new task → instant render. Hot reload changes ONLY what changed, not full page. Grooming = P08E004 visualization in real-time. Supervised mode (backlog/intake/grooming) needs tight feedback loops for flow. Multi-device (iPhone Mattermost + iPad Backstage) over Tailscale."
+    status: migrated
+  - id: "e063_20260630"
+    kind: project
+    title: "Validating System (Planning ↔ Validating Loop)"
+    goal: "Multi-agent validation and ambiguity elimination before execution"
+    status: migrated
+  - id: "visions"
+    kind: project
+    title: "Visions"
+    goal: "A sandboxed space where articulated dreams become the Studio's north star. Each vision arrives with articles and sources; the epic returns interesting extrapolations, consults the library (Librarian), and suggests disciplines, authors, and books to enrich it. Dream → vision → extrapolation → discipline."
+    status: done
+  - id: "e055_20260507"
+    kind: project
+    title: "Watcher Status Display"
+    goal: "Visual feedback when watcher runs checks - status bar + toast notifications in Backstage UI."
+    status: migrated
+  - id: "P02E051"
+    kind: project
+    title: "Roadmap projection went"
+    goal: "Detect and repair about/roadmap.yaml artifacts that drifted from their epic sources, because --check-clean only proves the source is unchanged in this cycle and never proves the projection was derived from that source; the roadmap can pass the guard forever while being stale or wrong in the opposite direction (declaring removed epics, omitting epics that never moved)."
+    status: active
+# --- help-projector managed begin ---
+help_open:
+  - "cross-epic-sequencing"
+  - "hook-family-audit"
+  - "versioned-checks"
+  - "drift-measurement-disagreement"
+latest:
+  id: "P02E072"
+  title: "kind vs type"
+  kind: "methodology"
+  date: "2026-11-06T15:22:54+00:00"
+# --- help-projector managed end ---

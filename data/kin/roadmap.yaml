@@ -1,0 +1,728 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: kin
+# source: epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "503-patch"
+    kind: project
+    title: "503 Patch — UI Honesto"
+    goal: "Quando bridge/tunnel cai, o app IMPEDE o envio. Não perde mensagens. Ícone No Connection em vez de send button mentiroso."
+    status: done
+  - id: "P09E001"
+    kind: project
+    title: "Configuration"
+    goal: "Criar um SSOT (single source of truth) de configuração do ecossistema de MCPs, skills e ferramentas — quem tem acesso a o quê, quais estão funcionando, quais faltam, e por quê."
+    status: backlog
+  - id: "P09E002"
+    kind: project
+    title: "Kin-Ready Agents"
+    goal: "Details criteria to present agents on Kin devices, using the maximum of harness resources, as substrate, just expanding it."
+    status: backlog
+  - id: "P09E003"
+    kind: project
+    title: "Policy Propagation"
+    goal: "A single product-wide policy reaches every agent that can host the product, without two agents editing the same file and without the copies diverging. The policy has one source, and an agent either carries the current version or is visibly out of date."
+    status: planning
+  - id: "P09E004"
+    kind: project
+    title: "Commenting on Markdown"
+    goal: "Inline commenting on markdown documents (bubbles, messages, files). Select text → comment → agent reads + responds. Comments as native Kin events."
+    status: backlog
+  - id: "P09E005"
+    kind: project
+    title: "Embedded Tunneling"
+    goal: "The bridge embeds the smallest secure tunnelling option that is open source and self-hosted, so remote access works without a third party and without asking the user to understand networking. Remote here means the central web interface and the remote app, both reached through the same embedded path."
+    status: active
+  - id: "P09E006"
+    kind: project
+    title: "Health Telemetry"
+    goal: "The frequency of tunnel and bridge failures on the phone is measured, and the measurement separates tunnel flapping from a refused request from a timeout. The problem is named before it is fixed."
+    status: planning
+  - id: "P09E007"
+    kind: project
+    title: "Timeline Platform"
+    goal: "The timeline gives guarantees strong enough that a new feature — bubbles, diagrams, tables — can be added without breaking scroll, gesture or state. A feature that cannot be added inside those guarantees is a change to the platform, not a feature."
+    status: planning
+  - id: "P09E008"
+    kind: project
+    title: "Testing Platform"
+    goal: "The verification cycle is formal: contract, tests, report, done. Every epic proves feature correctness and platform compatibility before it counts as delivered, and the report is evidence a reader can check."
+    status: planning
+  - id: "P09E009"
+    kind: project
+    title: "Epistemic Validator"
+    goal: "The library is no longer only a semantic searcher: it validates a claim against its sources. An answer that cannot be traced does not pass, and the library reports the gap instead of the nearest text."
+    status: planning
+  - id: "P09E010"
+    kind: project
+    title: "Visible Spawns"
+    goal: "Agent spawns are visible in the product: a progress board, a lifecycle and the logs, so the user can see what their agents are doing without asking. This is the surface where every per-agent activity of the platform appears."
+    status: planning
+  - id: "P09E011"
+    kind: project
+    title: "Visions"
+    goal: "Espaço sandboxed pra sonhar: user enuncia o que envisiona o projeto virando (com artigos e source), Kin extrapola com rigor, consulta a biblioteca e sugere novas disciplinas, autores e livros. Sonhos viram north star."
+    status: done
+  - id: "P09E012"
+    kind: project
+    title: "💭 Emoting — Micro-Expressões Glanceable do Agente"
+    goal: "O agente (Kin) comunica só com texto. Texto exige leitura linear — atenção"
+    status: backlog
+  - id: "P09E013"
+    kind: project
+    title: "Frontend Compiler"
+    goal: "A component defined once in the shared material language compiles to each target a product needs, so the same button is the same button in every renderer. The record was truncated in August and recovered only in part; what survives is the compiler's contract."
+    status: planning
+  - id: "P09E014"
+    kind: project
+    title: "Message Stamp"
+    goal: "Every message would carry a standard stamp — device, installation, artifact, origin — born in the bridge. This is an architectural hypothesis in planning, not a contract, and the first round is research."
+    status: planning
+  - id: "P09E015"
+    kind: project
+    title: "Quality Playbook"
+    goal: "The studio's playbook states how it verifies and maintains quality: a fast feedback loop with rigor, a triage at three speeds, a pipeline with promotion, assurance tests as lock-in, spawn hygiene, the protocol of rounds and the artifact gate. It is the written form of a process that already runs."
+    status: active
+  - id: "P09E016"
+    kind: project
+    title: "Midstep"
+    goal: "A link that survives email resolves to the right native scheme on the right device: the bridge validates it against a per-device allowlist and hands it off in one click, with no residual web page. Each step is a midstep in an ecology, and the first case is a note."
+    status: active
+  - id: "P09E017"
+    kind: project
+    title: "Midstep Planning"
+    goal: "The midstep ecology is planned before it is built: which schemes, which devices, which allowlist, and what a step returns when the target is absent. The planning epic holds the decisions the active epic executes."
+    status: planning
+  - id: "P09E019"
+    kind: project
+    title: "Mea Culpa — Recovery + War-Tested Testing Foundation"
+    goal: "SCOPE CORRIGIDO (nonlinear, 2026-10-01 13:55 EDT): este epic faz APENAS UMA COISA — produzir um **new stable + new baseline** usando a fundação de verificação war-tested. As pontas-soltas NÃO pertencem a este epic: cada uma vive no SEU PRÓPRIO epic (já indexados). O único requisito sobre elas é que estejam **não-done** — porque `done` foi um ERRO: nunca integramos. O mea-culpa não recupera field epics; ele só cria o stable/baseline confiável a partir do qual esses epics podem ser retomados."
+    status: done
+  - id: "P09E020"
+    kind: project
+    title: "Action Menu"
+    goal: "One action menu reached by press and hold serves every action surface, and it scales to new actions without a new component per screen. The menu knows which actions apply where, so the user does not see the ones that do not."
+    status: active
+  - id: "P09E021"
+    kind: project
+    title: "Advanced Async Execution & Run Lifecycle"
+    goal: "o MVP A já estabelece (fundação)"
+    status: backlog
+  - id: "P09E022"
+    kind: project
+    title: "Agent Self-Heal — Session Identity Mismatch"
+    goal: "está PROVADO vs PENDENTE (honestidade da evidência)"
+    status: backlog
+  - id: "P09E023"
+    kind: project
+    title: "Kin Android"
+    goal: "Kin funcionando no Android (simulador e/ou dispositivo físico)."
+    status: backlog
+  - id: "P09E025"
+    kind: project
+    title: "Audio Security — autenticar e proteger ações por voz"
+    goal: "Definir como separar ações simples de críticas, provar que quem fala é o nonlinear, confirmar ações críticas, e ter proteções testadas pra emergência no pipeline de voz (Index 01)."
+    status: backlog
+  - id: "P09E026"
+    kind: project
+    title: "Bootstrap State"
+    goal: "A fresh install is a state the product can render: the app knows that the agent list may be empty and degrades to a local surface instead of a blank screen. A banner is not the answer; a state machine is."
+    status: planning
+  - id: "P09E027"
+    kind: project
+    title: "Freezing Model"
+    goal: "The theory of why agents freeze in the product is unified into one causal model, with surveillance and prevention built on it. The catalogue of fourteen conditions becomes a model, and the work stops being only firefighting."
+    status: planning
+  - id: "P09E028"
+    kind: project
+    title: "Bridge Offline Incident — kin morreu, respostas ao app sumiram, epic de ajuste"
+    goal: "Registrado por Infrastructure agent a pedido do nonlinear (2026-08-14 12:07 EDT)."
+    status: backlog
+  - id: "P09E029"
+    kind: project
+    title: "Bridge Runtime"
+    goal: "The bridge runtime carries the new agent endpoint and the operations built on it, with the protocol version it declares matching the one it serves. A client that reads the declared version gets the behavior that version promises."
+    status: active
+  - id: "P09E030"
+    kind: project
+    title: "Capability System"
+    goal: "Default-deny resource model where every agent has explicit capability grants."
+    status: backlog
+  - id: "P09E031"
+    kind: project
+    title: "CF Token Debug — Evidência Programática Completa"
+    goal: "foi testado"
+    status: backlog
+  - id: "P09E032"
+    kind: project
+    title: "Conversation Context Segments"
+    goal: "Migrated from old backstage (E031)"
+    status: backlog
+  - id: "P09E033"
+    kind: project
+    title: "Conversation Continuity"
+    goal: "Migrated from old backstage (E065)"
+    status: backlog
+  - id: "P09E034"
+    kind: project
+    title: "Cross-Device Kin"
+    goal: "Extending agent wallet objects across devices"
+    status: backlog
+  - id: "P09E035"
+    kind: project
+    title: "Design Fixes — Message Card Full-Width + OG Card Placement"
+    goal: "isso significa"
+    status: backlog
+  - id: "P09E036"
+    kind: project
+    title: "Device Authentication"
+    goal: "Device-specific authentication tokens to prevent unauthorized Gateway access. Deploy blocker."
+    status: backlog
+  - id: "P09E037"
+    kind: project
+    title: "Documentation Migration"
+    goal: "Migrar epics done do old Backstage para o schema novo, e fazer o grooming de todos os epics (backlog, planning, active)."
+    status: backlog
+  - id: "P09E038"
+    kind: project
+    title: "Fast Agent Swap"
+    goal: "Switching agents loads the next agent's surface lazily, so the swap feels immediate and holds no more of the previous agent in memory than it needs. Speed is the requirement; the loading strategy is the means."
+    status: planning
+  - id: "P09E039"
+    kind: project
+    title: "Ghost Messages Bug"
+    goal: "Collect ghost message occurrences to investigate root cause"
+    status: backlog
+  - id: "P09E040"
+    kind: project
+    title: "Bridge Health"
+    goal: "Three endpoints — health, readiness and experience — measure the bridge at each step it serves, so a failure names the step instead of the whole bridge. A monitor that says only up or down does not answer the question."
+    status: planning
+  - id: "P09E041"
+    kind: project
+    title: "Verification First"
+    goal: "Verification outranks code: a claim about the product is accepted when a test shows it, and work that cannot be shown is not counted as done. The product's own testing platform is the place where that is proven."
+    status: planning
+  - id: "P09E042"
+    kind: project
+    title: "Heartbeat Message Filtering"
+    goal: "Filter heartbeat messages from timeline — show as collapsed pill, expand on click. Heartbeat replies pollute conversation when agent rarely used."
+    status: backlog
+  - id: "P09E043"
+    kind: project
+    title: "Heartbeat Protocol Fix"
+    goal: "Heartbeat replies should be metadata, not conversation messages. Current protocol pollutes timeline for rarely-used agents."
+    status: backlog
+  - id: "P09E044"
+    kind: project
+    title: "I'm Home — SSID Network Detection"
+    goal: "Detectar SSID da WiFi para alternar automaticamente entre LAN (local) e Cloudflare (remoto). Abre porta pra \"modo casa\" com outras funções que dependem de saber se o usuário está em casa."
+    status: backlog
+  - id: "P09E046"
+    kind: project
+    title: "iOS Integrations & System Embedding"
+    goal: "Make Kin a system layer on iOS - widgets, shortcuts, notifications, audio, context awareness"
+    status: backlog
+  - id: "P09E047"
+    kind: project
+    title: "iOS Stability Hardening"
+    goal: "Kin não crasha mais no iPhone com tela vermelha ErrorWidget"
+    status: backlog
+  - id: "P09E048"
+    kind: project
+    title: "Kin Android — Cloudflare Access: cadeia VERIFICADA (resolved — falso alarme)"
+    goal: "foi verificado (cadeia completa, sem mudar nada)"
+    status: backlog
+  - id: "P09E049"
+    kind: project
+    title: "Kin as Product"
+    goal: "Product-ready: onboarding, remote access, pairing, branding, visual identity, distribution"
+    status: backlog
+  - id: "P09E050"
+    kind: project
+    title: "Kin Backlog & Interesting Ideas"
+    goal: "Parking lot para ideias/pendências futuras do Kin que não são epics ativos nem"
+    status: backlog
+  - id: "P09E051"
+    kind: project
+    title: "Kin Fitness Testing — Capabilities para FF Registry"
+    goal: "o Infrastructure precisa fazer"
+    status: backlog
+  - id: "P09E052"
+    kind: project
+    title: "Kin Kit"
+    goal: "Third-party SDK, deep links, integration rules, 'Share with Kin' button"
+    status: backlog
+  - id: "P09E053"
+    kind: project
+    title: "Kin Runtime Health — Detect, Classify, Recover, Verify"
+    goal: "ficou PROVADO"
+    status: backlog
+  - id: "P09E054"
+    kind: project
+    title: "Lenses"
+    goal: "**Lens = composition of native Flutter widgets that re-renders Backstage content (file or folder) inline in Kin, replaci"
+    status: backlog
+  - id: "P09E055"
+    kind: project
+    title: "Message Types and Presentation"
+    goal: "Capturing OpenClaw message types + UI presentation rules (merged from E020)"
+    status: backlog
+  - id: "P09E056"
+    kind: project
+    title: "Device Modes"
+    goal: "The device context is detected and named, and a mode can enable or disable actions, or tag events for audit. Modes are isolated, they compound, and they adapt. The origin of a message is one of them."
+    status: planning
+  - id: "P09E057"
+    kind: project
+    title: "Muscle Memory (expert actions)"
+    goal: "Camadas de velocidade para expert P10E028: slide-to-activate e padrões de gesture P10E019 em cima do Action Menu."
+    status: backlog
+  - id: "P09E058"
+    kind: project
+    title: "New Platforms"
+    goal: "Expand Kin to new platforms beyond iOS — Android, Windows, Linux. Web considered but rejected (security risk)."
+    status: backlog
+  - id: "P09E059"
+    kind: project
+    title: "Offline Reading"
+    goal: "Offline = mesma experiência (ler/escrever/navegar); só ENVIAR exige rede. TimelineCache local-first + AgentCatalog + AgentWallet + Composer 3 estados. Planning FECHADO exceto chunk/window semantics."
+    status: backlog
+  - id: "P09E060"
+    kind: project
+    title: "Parity Onboarding"
+    goal: "Parity between the bridge, the app and the agent is defined, the way to reach it is stated, and the user sees loading while it does not exist yet. A user never sees a surface that looks ready and is not."
+    status: planning
+  - id: "P09E061"
+    kind: project
+    title: "OpenGraph Link Previews"
+    goal: "OG/link previews corretos e completos: (v1 ✅) card branded anti-phishing; (v2) placement DENTRO do message card; (v3) OG inline — URL→título bold na posição do parágrafo, OG após o parágrafo, URL sozinha deletada; (v4) fallback sem-OG mostra a URL crua."
+    status: done
+  - id: "P09E062"
+    kind: project
+    title: "Design Tooling"
+    goal: "The design toolchain is chosen and wired: a human draws the high-definition frame, an agent reads the native structure, and the result reaches the app. The decision is recorded with its trade-offs, and the reading and writing by an agent is proven before it is adopted."
+    status: planning
+  - id: "P09E063"
+    kind: project
+    title: "Penpot × Fontbase — como integrar os dois"
+    goal: "Integrar Penpot e Fontbase para gestão de fontes compartilhada, evitando instalar fontes em cada device. Fontes disponíveis em qualquer computador que abra o Penpot."
+    status: backlog
+  - id: "P09E064"
+    kind: project
+    title: "Presenting Kin"
+    goal: "A Nonlinear Studio article on Kin app"
+    status: backlog
+  - id: "P09E065"
+    kind: project
+    title: "Pricing & Packaging Strategy"
+    goal: "Define Kin monetization - free tier, add-on packs, pricing model, upgrade flows"
+    status: backlog
+  - id: "P09E066"
+    kind: project
+    title: "Publication Hygiene"
+    goal: "Histórico de deploy Kin macOS, piorando a cada movimento:"
+    status: backlog
+  - id: "P09E067"
+    kind: project
+    title: "Remote Access"
+    goal: "A remote app authenticates against the bridge without turning a static bridge credential into a secret distributed on the device. The connection is remote and the credential stays where it was issued."
+    status: planning
+  - id: "P09E069"
+    kind: project
+    title: "Rich Content Formats"
+    goal: "PlantUML diagrams, image galleries, richer markdown rendering"
+    status: backlog
+  - id: "P09E070"
+    kind: project
+    title: "Scroll-Aware Context"
+    goal: "Context changes as user scrolls up or down"
+    status: backlog
+  - id: "P09E071"
+    kind: project
+    title: "Security & Privacy"
+    goal: "**CAW stores sensitive data locally (drafts, session history, credentials).**"
+    status: backlog
+  - id: "P09E072"
+    kind: project
+    title: "Send Trace Protocol (Foundation Fortification)"
+    goal: "**Current state:**"
+    status: backlog
+  - id: "P09E074"
+    kind: project
+    title: "Session Compaction × Bridge Mirroring"
+    goal: "O Mirror (Event Store) é a API estável do Kin. Compaction revelou que Kin dependia de internal storage do OpenClaw como API pública. Step 1: Canonical Event Store implementado e funcional."
+    status: backlog
+  - id: "P09E075"
+    kind: project
+    title: "Session Health"
+    goal: "A session survives an arbitrary rotation or restart without losing conversational identity or the working context the task needs, while the event stream stays continuous and the user sees one conversation. The healing does not depend on the same provider that failed."
+    status: active
+  - id: "P09E076"
+    kind: project
+    title: "Local Admin"
+    goal: "The user installs the bridge, opens a local web surface that shows and edits the configuration — home network, devices, usage — and the app reports its bootstrap and timeline state there. The admin is small and local, independent of the message stamp."
+    status: active
+  - id: "P09E077"
+    kind: project
+    title: "Shared Agent UX"
+    goal: "Shared agent experience feels intentional, not 'guest mode."
+    status: backlog
+  - id: "P09E078"
+    kind: project
+    title: "Shared Agents"
+    goal: "Enable sharing individual agents (not entire Kin system)."
+    status: backlog
+  - id: "P09E079"
+    kind: project
+    title: "surfacing openclaw"
+    goal: "Migrated from old backstage (E046)"
+    status: backlog
+  - id: "P09E080"
+    kind: project
+    title: "Tech Debt"
+    goal: "The product is stable enough to pay down what it borrowed to get there: regressions are removed from the testing path and the debt that would block the next feature is cleared."
+    status: planning
+  - id: "P09E081"
+    kind: project
+    title: "Testing House — Kin Product Verification"
+    goal: "⚠️ Arquivado 2026-07-15. A estrutura genérica de testes (L0-L7, report schema,"
+    status: backlog
+  - id: "P09E082"
+    kind: project
+    title: "Tunneling Switch — Kin troca entre mecanismos de tunnelling para o mesmo Bridge"
+    goal: "Duas fases: (F1) em casa → direct/serverNetwork; fora → Cloudflare (tunnel atual). (F2) Kin troca entre MECANISMOS de tunnelling (Cloudflare/Tailscale/SSH/rathole) para chegar ao MESMO Bridge. A pergunta não é 'como ficar online quando o tunnel falha', é 'como o Kin troca entre tunnels'."
+    status: backlog
+  - id: "kin_tunnel-failsafe_20260917"
+    kind: project
+    title: "Tunnel Failsafe — alternativas ao Cloudflare (tailscale e outros)"
+    goal: "Garantir que o Kin NUNCA dependa de um único transporte de acesso remoto. Cloudflare é o ingress ATUAL (temporário); o failsafe define a estratégia multi-transporte: tailscale, kin-remote, outros — com fallback automático."
+    status: planning
+  - id: "P09E083"
+    kind: project
+    title: "Voice Input — Index/kin → OpenClaw, with mode (origin flag)"
+    goal: "Simple INPUT: the message (text) reaches the agent with a MODE (= origin flag: pebble index, kin android, kin mac, etc). Expandable in the future."
+    status: done
+  - id: "P09E084"
+    kind: project
+    title: "Voice Output — comportamento por mode (nota: TTS quando pebble)"
+    goal: "Voice output is determined by origin, device identity, and environment: speak only when origin == pebble AND origin_device == me AND (home OR fone); otherwise text. The policy is extensible by mode. (A policy depends on the home dimension; the canonical source of home remains the future device-context/modes epic — 3c does NOT discover home.)"
+    status: done
+  - id: "P09E085"
+    kind: project
+    title: "Voice Updates — generalizar voz (default = agente selecionado no device, possivel 'call a outros')"
+    goal: "Generalizar a voz para NÃO depender de um único concierge (hoje defaultAgent=ring no config). Por padrão, a voz roteia para o agente SELECIONADO no device pareado; com a possibilidade de 'chamar' outros agentes explicitamente. Kin Stamps carregam mood-prompts por origem (ex: origem voz -> resposta breve, texto simples)."
+    status: backlog
+  - id: "P09E086"
+    kind: project
+    title: "Agent Run Reliability — freezes/catalog de causas-raiz"
+    goal: "Catálogo de causas-raiz dos freezes de agent run (3 freezes em 2026-09-30, infra+librarian) em vez de revive por sintoma."
+    status: backlog
+  - id: "P09E087"
+    kind: project
+    title: "Kin Logo — parity de ícones entre plataformas + header"
+    goal: "Paridade visual total: Android, iOS e macOS usam o MESMO ícone Kin, e o header dentro do app também. Um ÚNICO arquivo fonte (SVG/PNG) gera TODOS os tamanhos e plataformas — mudou o logo, muda tudo de uma vez."
+    status: backlog
+  - id: "P09E088"
+    kind: project
+    title: "Scroll Positioning"
+    goal: "Scroll memory semântico: lembrar ONDE o usuário estava lendo, por agente, entre sessões e restarts — de forma NIMBLE (não interferir no gesto natural do dedo). Cursor por Content Anchor (não pixel, não offset, não índice). Restauração que CEDE ao usuário."
+    status: paused
+  - id: "P09E089"
+    kind: project
+    title: "Scroll Adjustments (backlog de refinos)"
+    goal: "Backlog onde o owner ANOTA refinos e fixes de scroll conforme observa no uso real (Kin stable). Cada item é um ajuste observado no device — não arquitetura. Promovido a investigação/contract quando reproduzido."
+    status: backlog
+  - id: "P09E090"
+    kind: project
+    title: "Agent Ordering"
+    goal: "Agents are ordered by evidence of engagement rather than by visits or taps: an engaged agent rises to the top, and one that has not been live for long appears as dormant. The concept is forming, and the reuse audit is part of the record."
+    status: planning
+  - id: "P09E091"
+    kind: project
+    title: "Design Fixes"
+    goal: "Refinos visuais cosméticos (comportamento/interação vira finding/epic separado). Round de design, não contrato."
+    status: done
+  - id: "P09E092"
+    kind: project
+    title: "Kin Test Harness: Pipeline Architecture & Gates"
+    goal: "Establish Kin's test system as a versioned, reproducible, traceable evidence chain linked by artifact, epic, and run. \"not tested\" ≠ \"passed\". Blocks new infrastructure epics — no battery may claim a production property if the environment to exercise it was not actually executed."
+    status: done
+  - id: "P09E093"
+    kind: project
+    title: "Check Parity — real-world coverage (device reality + re-verify source epics)"
+    goal: "Close the debt that ORIGINATED P09E092: exercise the connectivity property against reality (device, cellular-only) and re-verify the epics that shipped without it — finding and fixing what was missing. P09E092 built the ability to see; this epic uses it."
+    status: backlog
+  - id: "P09E094"
+    kind: project
+    title: "Epic Branches — branch-per-epic policy (ADR: paused 2026-10-07)"
+    goal: "Definir (ou adiar formalmente) a política de branch por epic: ciclo de vida, naming, base limpa, sync com main, enforcement via Forgejo, invariantes de merge/DONE. Pausado em 2026-10-07 — não é rejeição, é adiamento. Nem todo epic mexe em código."
+    status: backlog
+  - id: "P09E095"
+    kind: project
+    title: "Playground Rules for Bridge — different deliverable, different assurance"
+    goal: "Definir uma assurance pipeline PRÓPRIA para o Kin Bridge — instância única, blast radius sistêmico — distinta da do app (muitas instâncias, sandbox por deploy). Arquivado em 2026-10-07: não resolver agora, só registrar."
+    status: backlog
+  - id: "P09E096"
+    kind: project
+    title: "Native Substrate"
+    goal: "The product can consume the platform's native substrate without losing a capability it has today, and the migration guards are named before the first line moves. A capability that would be lost is a reason to stay."
+    status: planning
+  - id: "P09E097"
+    kind: project
+    title: "Lane Deadlock"
+    goal: "The class of failure that makes several agents look frozen is isolated and mitigated: two writers colliding on one session, with its upstream causes in a watchdog blind to state and a long failover. The fix names the class, not the symptom."
+    status: active
+  - id: "P09E098"
+    kind: project
+    title: "Freezing Explained"
+    goal: "Why the product appears to freeze is explained by cause, condition and frequency, and the answer is a set of architectural invariants rather than one change. No single fix is assumed to settle it."
+    status: planning
+  - id: "P09E099"
+    kind: project
+    title: "No Bridge"
+    goal: "The product can run without the bridge by consuming the platform substrate directly, and the migration guards are named before anything moves. The analysis is the deliverable: what is gained, what is lost, and what would have to be true to switch."
+    status: planning
+  - id: "P09E100"
+    kind: project
+    title: "Python Bridge CORS Analysis"
+    goal: "Complete analysis of Python Bridge CORS configuration and WebSocket connectivity"
+    status: done
+  - id: "P09E101"
+    kind: project
+    title: "Offline Channel"
+    goal: "One channel stays offline while the stable channel stays online on the same device, the same cellular network and the same endpoint. The divergence needs a demonstrated root cause before it is explained."
+    status: active
+  - id: "P09E102"
+    kind: project
+    title: "Envelope Authoritative Classification"
+    goal: "Stop classifying control-plane events by matching text inside the message body. Classify only by an authoritative marker: a declared type field on the envelope, or (interim) an ANCHORED match on the transport envelope. Body-substring matching is banned. Fixes two opposite defects at once."
+    status: active
+  - id: "P09E103"
+    kind: project
+    title: "Collapse by Metadata"
+    goal: "Heartbeats (and other control-plane events) are shown, not hidden — but as a SINGLE collapsed pill (e.g. \"50 ❤️\"), not one bubble per event and not zero. Classification is driven by an authoritative TYPE field (metadata), never by matching substrings of the message body — so there are no false positives when a normal message merely mentions a token."
+    status: active
+  - id: "P09E104"
+    kind: project
+    title: "Image Syntax"
+    goal: "The exact syntaxes that render an image in a message are locked, and vector images render instead of failing silently. Every claim was probed on the real renderer and the simulator, so the list is evidence and not guesswork."
+    status: active
+  - id: "P09E105"
+    kind: project
+    title: "Rich Media"
+    goal: "Images render reliably, raster and vector alike, and several images can present as a gallery. This epic is the umbrella for every media finding, and each fix beneath it belongs to its own epic."
+    status: active
+  - id: "P09E106"
+    kind: project
+    title: "Direct Transport"
+    goal: "The product talks to the platform without the bridge in the path, and the direct transport carries every operation the bridge carries today. What the bridge did before the switch is what the new path must do after it."
+    status: active
+  - id: "P09E107"
+    kind: project
+    title: "Provenance stamping"
+    goal: "Every message carries an immutable, self-describing provenance stamp written ONCE at generation time by the layer that actually knows the fact. Display is a projection of the stamp; readers never guess, never backfill, never invent empty fields."
+    status: active
+  - id: "P09E108"
+    kind: project
+    title: "check the pantry"
+    goal: "Before building anything, prove that OpenClaw (or a framework we already adopted) does not already provide it. A demand is first \"drunk\" toward the pantry: the check is a required gate on every epic, not a good intention."
+    status: planning
+  - id: "P09E109"
+    kind: project
+    title: "Spike Epic Protocol — a skill for creating spike epics (meta: the epic that creates the thing that creates epics)"
+    goal: "Definir o tipo de épico \"Spike Epic\" e a SKILL que o Backstage Agent usa para criar, executar, avaliar e fechar cada spike — incluindo as consequências obrigatórias sobre roadmap, checks e épicos afetados. Este épico é META: ele cria o instrumento que cria os spikes. Ele NÃO cria spike algum."
+    status: done
+  - id: "P09E110"
+    kind: spike
+    title: "Gateway Parity"
+    goal: "The gateway can carry every operation the bridge carries today without abandoning the product contract. Parity is measured operation by operation, and the gaps are named before anything is switched over."
+    status: planning
+  - id: "P09E111"
+    kind: project
+    title: "Design Decision"
+    goal: "The choice between a cloud design tool and a self-hosted one is made by experiment, for the flow where a human draws and an agent reads the native structure. Prototyping an agent reading and writing native design files is part of the decision."
+    status: planning
+  - id: "P09E112"
+    kind: project
+    title: "Affordance parity"
+    goal: "TBD"
+    status: active
+  - id: "P09E113"
+    kind: project
+    title: "Dedicated Test Devices"
+    goal: "Establish a small, always-on physical device fleet that provides deterministic, continuously available runtime validation for Kin, replacing unreliable local emulation as the primary integration/device gate."
+    status: backlog
+  - id: "P09E114"
+    kind: project
+    title: "Liveness"
+    goal: "Liveness is observable: on a slow answer the user can see that the agent is still working, and the surface distinguishes working from stuck. A wait without a signal is indistinguishable from a failure."
+    status: planning
+  - id: "P09E127"
+    kind: project
+    title: "Canonical States"
+    goal: "Canonical"
+    status: backlog
+  - id: "P09E128"
+    kind: project
+    title: "Small Fixes"
+    goal: "Cosmetic and minor fixes discovered durante delay-tolerance discussion (2026-07-16)."
+    status: backlog
+  - id: "P09E129"
+    kind: project
+    title: "Timeline Platform"
+    goal: "The timeline gives guarantees strong enough that a new feature can be added without breaking scroll, gesture or state. A feature that cannot be added inside those guarantees is a change to the platform, not a feature."
+    status: planning
+  - id: "P09E130"
+    kind: project
+    title: "Design Fix"
+    goal: "Primeiro field epic recovery do mea-culpa (P09E019). Prova o fluxo: stable → experimental → automated → HOME/AWAY/OFFLINE/RECOVERY → device → aprovação do nonlinear → juntos promovemos o MESMO artifact a novo stable."
+    status: active
+  - id: "P09E131"
+    kind: project
+    title: "KinBoard — Input-Adjacent Action Surface"
+    goal: "Cross-platform input-adjacent action surface: a thin layer that observes text composition context and surfaces actions the personal harness can fulfill — not a keyboard that types for you."
+    status: backlog
+  - id: "P09E132"
+    kind: project
+    title: "SDK Hygiene / Test-Runner Recovery"
+    goal: "Recuperar o test runner (`flutter test`) no ambiente de desenvolvimento atual. Resolução transversal — afeta todos os testes do Kin (não só P09E088). A abordagem é: reproduzir o erro em ambiente mínimo → isolar a causa → identificar combinação Flutter/Dart que roda `flutter test` → tornar essa combinação reproduzível e pinada via FVM → bateria volta a executar."
+    status: backlog
+  - id: "e018_20260427"
+    kind: project
+    title: "Agent Discovery & Metadata"
+    goal: "Agent discovery, session switching, and visual polish - COMPLETE"
+    status: done
+  - id: "kin_20260522-E079"
+    kind: project
+    title: "Bridge Performance Fix"
+    goal: "Fix bridge latency: direct timeline write instead of worker orchestration"
+    status: done
+  - id: "kin_cache_rebuild_state"
+    kind: project
+    title: "Cache Rebuild State — tornar o rebuild local observável (device novo)"
+    goal: "Quando o Kin está num device novo — ou com cache local vazio — o usuário não deve interpretar o histórico vazio como ausência de dados. O Kin deve tornar visível que está reconstruindo o cache local, até o rebuild terminar ou falhar explicitamente. Tornar o local-first existente observável e verificável; NÃO redesenhar o cache."
+    status: done
+  - id: "kin_20260525-E072"
+    kind: project
+    title: "Context Grouping"
+    goal: "Latest context display with real-time polling updates"
+    status: done
+  - id: "e032_20260630"
+    kind: project
+    title: "Context v1"
+    goal: "Orientation landmarks via append-only context stream. Not message metadata—temporal ranges."
+    status: done
+  - id: "kin_20260702_delay"
+    kind: project
+    title: "Delay Tolerance — Intention Before Delivery"
+    goal: "Três estados de botão: Send, Loading, No Connection. No Connection = qualquer condição que impeça envio (rede, 403, tunnel, bridge morto, timeout). Tudo mesma apresentação. Sem texto, banners, popups. Composer sempre editável. Resolver as causas do No Connection é futuro — detectar e apresentar honestamente é agora."
+    status: done
+  - id: "design_updates"
+    kind: project
+    title: "Design Updates — cards (messages) flushed 100% width"
+    goal: "Card/mensagem sempre 'flushed' 100% width (sem branco à direita quando a msg é curta). [OG movido para opengraph-previews em 2026-09-13]"
+    status: done
+  - id: "e034_20260428"
+    kind: project
+    title: "Enhanced Chat Experience"
+    goal: "**Multiple UX friction points in chat experience:** 1. **Incomplete messages:** Polling catches responses mid-write (\"bl\" — truncated at source)."
+    status: done
+  - id: "e017_20260426"
+    kind: project
+    title: "Flutter Native"
+    goal: "Migrated from old backstage (E017)"
+    status: done
+  - id: "kin_20260508-E058"
+    kind: project
+    title: "Golden Reference Fixes"
+    goal: "Restore send after rename broke it. Establish canonical baseline."
+    status: done
+  - id: "e028_20260630"
+    kind: project
+    title: "Initial UX Polish"
+    goal: "Avatar swap, typography, gestures, and input isolation"
+    status: done
+  - id: "e023_20260428"
+    kind: project
+    title: "Kin Bridge"
+    goal: "Event-driven architecture - HTTP bridge working, deployed to iPhone"
+    status: done
+  - id: "e027_20260630"
+    kind: project
+    title: "Kin UI Redesign"
+    goal: "Transform Caw iOS app from horizontal tabs to vertical sidebar menu with smooth animations, full-screen mode, and flat d"
+    status: done
+  - id: "kin_20260523-E076"
+    kind: project
+    title: "Message Collapse Variant"
+    goal: "Group consecutive control-plane messages into collapsible pills"
+    status: done
+  - id: "onboarding-experience"
+    kind: project
+    title: "Onboarding Experience"
+    goal: "Primeira experiência do Kin — fundido em P09E076 (settings como guarda-chuva)."
+    status: migrated
+  - id: "kin_E095"
+    kind: project
+    title: "Platform Readiness & Deploy Hygiene"
+    goal: "Recuperar a cadeia de publicação do Kin — Cloudflare Access, bridge authentication, secret hygiene, release builds, e verificação end-to-end no device real. Transformar o incidente 403 em política permanente."
+    status: done
+  - id: "product-voice-framing"
+    kind: project
+    title: "Product Voice Framing"
+    goal: "Framing de produto entregue ao ring (voice extension) — origem de agents/ring/epics/kin-offers/."
+    status: done
+  - id: "kin_20260623"
+    kind: project
+    title: "Project-Centric Kin"
+    goal: "Kin migra de agent-based pra project-based. Bridge como host contract, sessions por projeto, lista de projects vinda do backstage."
+    status: done
+  - id: "e045_20260507"
+    kind: project
+    title: "Protocol Contracts & Timeline Correctness"
+    goal: "Move from:"
+    status: done
+  - id: "e030_20260513"
+    kind: project
+    title: "Refinements"
+    goal: "Migrated from old backstage (E030)"
+    status: done
+  - id: "e004_20260424"
+    kind: project
+    title: "Strategy"
+    goal: "Migrated from old backstage (E004)"
+    status: done
+  - id: "e003_20260424"
+    kind: project
+    title: "Tech Stack"
+    goal: "Migrated from old backstage (E003)"
+    status: done
+  - id: "kin_20260624-tooling"
+    kind: project
+    title: "Tooling"
+    goal: "Equipar o agente OpenClaw com MCPs, skills e ferramentas para desenvolver, buildar, testar e debuggar Kin em iOS (simulator + device) e Android (emulador + device)."
+    status: done
+  - id: "tunnel-flap-emergency_20260831"
+    kind: project
+    title: "EMERGÊNCIA — Kin dependente do Cloudflare Tunnel (P1) + decisão kin-remote"
+    goal: "Tratar o flap persistente do Cloudflare Tunnel como dependência de transporte do Produto Kin (P1 imediato), implementar watchdog de recuperação inteligente + escape hatch, e documentar a decisão estrutural: abandonar Cloudflare como arquitetura futura em favor de kin-remote embedded no bridge."
+    status: done
+  - id: "e048_20260514"
+    kind: project
+    title: "Two-Way Kin Bridge"
+    goal: "**Make Kin and OpenClaw talk to each other in real-time.**"
+    status: done
+# --- help-projector managed begin ---
+help_open:
+  - "harness-architect"
+  - "security-posture"
+  - "audio-engineer-voice-loop"
+  - "nat-traversal"
+latest:
+  id: "P09E131"
+  title: "KinBoard — Input-Adjacent Action Surface"
+  kind: "project"
+  date: "2026-10-30T01:14:48+00:00"
+# --- help-projector managed end ---

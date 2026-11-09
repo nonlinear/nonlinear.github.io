@@ -1,0 +1,365 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: librarian
+# source: epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "P10E001"
+    kind: project
+    title: "docref"
+    goal: "Avaliar e, se justificado por números, adicionar uma camada relacional/grafo sobre o corpo FAISS atual (1108 livros / 517k chunks) para capturar relações que a busca puramente semântica perde — co-citação, referências cruzadas, entidades compartilhadas, hierarquia conceitual. NÃO substituir o motor atual; estender o Middle Layer (Retrieval Engine + Corpus) com GraphRAG ou embeddings relacionais como estratégia de retrieval complementar."
+    status: backlog
+  - id: "P10E002"
+    kind: project
+    title: "Topology Analogy"
+    goal: "Two clusters that share the same topology are surfaced as an analogy, not only as neighbours. Urbanism and vascular systems both carry flow, distribution, bottlenecks and circulation, so the system can name the shared shape and show both sides. The open question the epic answers is whether the system must build this or only reveal what the model already sees."
+    status: planning
+  - id: "P10E003"
+    kind: project
+    title: "Book Identity & Durable Permalinks"
+    goal: "Permalinks duráveis apoiados em IDENTIDADE BIBLIOGRÁFICA PADRONIZADA — não reinventar a roda. ISO/OL/DOI já resolvem identidade de livro. O trabalho é mapear cada TIPO de fonte para o identificador canônico existente e preservá-lo no sistema."
+    status: done
+  - id: "P10E004"
+    kind: project
+    title: "Chunk Indexing"
+    goal: "Index books at chunk level, paragraph by paragraph, with CFI so a citation can point at an exact passage instead of a whole book. Search stops returning a title and starts returning the text that matched it, with a durable locator that survives reindexing. The epic covers the extraction method, the index schema and the reader handoff that together make a chunk addressable end to end."
+    status: archived
+  - id: "P10E005"
+    kind: project
+    title: "Configuration"
+    goal: "Transformar o Librarian específico (856 books, corpus pessoal) em um BYOB engine genérico e replicável — qualquer pessoa pode clonar, configurar e rodar com seus próprios livros. Inclui: setup zero-to-indexed, skills genéricos, documentação de onboarding, last mile de sources, mecanismo de flash (docker compose + .env)."
+    status: backlog
+  - id: "P10E007"
+    kind: project
+    title: "FAISS Memory"
+    goal: "The index answers memory and latency questions on the full corpus without loading it twice: a query returns in bounded time while the process stays inside its memory budget. Batching, caching and progressive publication exist so the indexer can restart mid-corpus and continue."
+    status: planning
+  - id: "P10E008"
+    kind: project
+    title: "Evidence Provenance"
+    goal: "Every answer the reader shows can be traced to a page, a chunk and a book. A claim without a resolvable source does not reach the answer surface. The model of evidence is explicit, so a missing source reads as missing instead of as confidence."
+    status: planning
+  - id: "P10E009"
+    kind: project
+    title: "Find Books Skill"
+    goal: "Migrated from old backstage (E038)"
+    status: backlog
+  - id: "P10E010"
+    kind: project
+    title: "Hybrid Search"
+    goal: "Migrated from old backstage (E053)"
+    status: backlog
+  - id: "P10E011"
+    kind: project
+    title: "Index Batching"
+    goal: "The indexer ingests a corpus in bounded batches, caches what it has already computed, and publishes progressively. A run that dies halfway leaves a consistent pair of index and metadata, never a half-written one. Re-indexing a large intake costs the changed books, not the whole corpus."
+    status: active
+  - id: "P10E012"
+    kind: project
+    title: "Index Publication — Progressive & Atomic"
+    goal: "O índice FAISS deve ser publicado progressivamente — cada livro indexado fica imediatamente consultável. Rebuild nunca destrói disponibilidade. Troca de índice é atômica: B substitui A só depois de validado."
+    status: archived
+  - id: "P10E013"
+    kind: project
+    title: "Librarian hooks"
+    goal: "Migrated from old backstage (E048)"
+    status: backlog
+  - id: "P10E014"
+    kind: project
+    title: "Microkernel Platform"
+    goal: "The platform runs as a minimal core that hosts capabilities as plug-ins. Retrieval, reader, indexer, log and users share one process, one port and one corpus, and each keeps its own testable contract. A capability grows inside its contract before it grows in surface."
+    status: planning
+  - id: "P10E015"
+    kind: project
+    title: "Librarian"
+    goal: "A BYOB (Bring Your Own Books) semantic search for your personal library."
+    status: backlog
+  - id: "P10E016"
+    kind: project
+    title: "Reliability Layer"
+    goal: "A reader can rely on the same answer twice. The system states what it knows, degrades visibly when it cannot, and never presents a stale or partial result as a fresh one. The claim under test is the answer to one question: can the system reliably say what it knows?"
+    status: planning
+  - id: "P10E017"
+    kind: project
+    title: "Interaction Log"
+    goal: "Every interaction is recorded as history with its source and its outcome, so the corpus can be read as an autobiography and not only as a library. The log carries what was asked, what was returned, and which books were opened. Analytics read this log; nothing else writes it."
+    status: planning
+  - id: "P10E018"
+    kind: project
+    title: "Margin Notes"
+    goal: "Migrated from old backstage (E047)"
+    status: backlog
+  - id: "P10E019"
+    kind: project
+    title: "Memory"
+    goal: "Memory — persist a durable, append-only history of how the Librarian's corpus was consulted and used, with sufficient provenance to reconstruct what was knowable, what was retrieved, and what happened at a given point in time; and expose that history to the Librarian as a source for derived reasoning. É CAPACIDADE de memória, não analytics e não features: Cassandra/Missing Stair/bridges/trends emergem do uso acumulado. PostHog é storage layer (projeção); o produto é Memory. (Reframe owner 2026-09-29 — ver seção Product.)"
+    status: done
+  - id: "P10E020"
+    kind: project
+    title: "multi-format"
+    goal: "Adicionar suporte a multiplos formatos alem de EPUB: Excel (.xlsx), web links (bookmarks/articles), PowerPoint (.pptx), Markdown (.md), e PDF aprimorado (imagens escaneadas + estrutura). O corpus atual e so EPUB+PDF parcial; conhecimento relevante esta em outros formatos."
+    status: backlog
+  - id: "P10E021"
+    kind: project
+    title: "OCR Capabilities"
+    goal: "Adicionar OCR via Unlimited-OCR (Baidu) pra livros escaneados/sem camada de texto."
+    status: backlog
+  - id: "P10E022"
+    kind: project
+    title: "Persistent Reading State"
+    goal: "Permitir que o Librarian Reader funcione tanto como superfície de verificação de citações quanto como ambiente de leitura pessoal persistente, usando a mesma infraestrutura de locator para citações, progresso de leitura, bookmarks e anotações."
+    status: backlog
+  - id: "P10E023"
+    kind: project
+    title: "Publication Postflight"
+    goal: "A published landing matches the repository it came from. Postflight checks the pushed artifact against the documentation it claims to describe, and reports the difference as a gap instead of a success. Nothing is announced as published until the artifact exists where the claim says it does."
+    status: active
+  - id: "P10E025"
+    kind: project
+    title: "Research Triage"
+    goal: "A research question enters the system, gets triaged against the corpus, and leaves with a decision: answered, partially answered with the gap named, or not in the corpus. The first mile of research is explicit, so a missing book is reported as a missing book and not as a weak answer."
+    status: planning
+  - id: "P10E026"
+    kind: project
+    title: "Retrieval Substrate Separation"
+    goal: "Recategorize the FAISS index from 'tooling inside the reader' to **retrieval substrate** — a persistent HTTP service who"
+    status: backlog
+  - id: "P10E027"
+    kind: project
+    title: "skill-translation"
+    goal: "Traduzir a SKILL.md do Librarian do formato antigo (verboso, enforcement pesado) para o formato oficial de skill do OpenClaw. O problema real nao e o conteudo (ja documentado) — e o FORMATO e o TOM (protocol enforcement vs documentacao)."
+    status: backlog
+  - id: "P10E028"
+    kind: project
+    title: "Users"
+    goal: "Expandir Librarian para múltiplos usuários com mecanismo seguro de convite. Admin gera link/token, envia pra outra pessoa, essa pessoa entra na biblioteca, acessa mesmo corpus, mas cria seu próprio log isolado do admin."
+    status: backlog
+  - id: "P10E029"
+    kind: project
+    title: "Visions"
+    goal: "Manter o north star do Librarian como cidadão de primeira classe: um mecanismo de captura de intenção de longo prazo onde visions (sonhos) não são backlog nem roadmap, mas bússola. Ciclo: vision → extrapolação → lacuna de corpus → novo livro → reforça a vision. Nicholas conta uma visão (com sources), o Librarian extrapola implicações/bordas/contradições, consulta o corpus (FAISS) e sugere disciplinas, autores e livros novos — tudo sandboxed até decisão conjunta. Insight central: o corpus cresce porque uma visão pediu uma disciplina que não temos; o corpus vira objeto de estudo de si mesmo."
+    status: backlog
+  - id: "P10E030"
+    kind: project
+    title: "Cover Artifact"
+    goal: "Every book in `books/` HAS a cover — a cover indexer that runs IN PARALLEL to the content indexer, working the same way but over images. Completeness invariant (owner 2026-09-30): if a book is in the corpus, it has a cover. The cover is a first-class corpus artifact, on the same footing as indexer / reader / log / MCP: format-agnostic (EPUB and PDF yield the SAME cover_hash), keyed by the canonical book_id, extracted in parallel with text indexing, verified deterministically (no cover_hash ⇒ no cover), and served by every surface (registry, Reader, MCP). The cover is not decoration: its shelfmark cache_id carries the canonical provider identity (e.g. OL work ID), so indexing the cover also captures identity."
+    status: archived
+  - id: "P10E031"
+    kind: project
+    title: "Adaptive Knowledge Organization"
+    goal: "Entropy-based adaptive organization: structure only when data supports it (clustering gate, boundary validation, lens-based retrieval)"
+    status: done
+  - id: "P10E033"
+    kind: project
+    title: "Book Router"
+    goal: "Migrated from old backstage (E041)"
+    status: done
+  - id: "P10E034"
+    kind: project
+    title: "Book Suggestion"
+    goal: "Build **complete v5 system** with:"
+    status: done
+  - id: "P10E035"
+    kind: project
+    title: "Cleaning Legacy"
+    goal: "Single source of truth across **source** and **container**:"
+    status: done
+  - id: "P10E036"
+    kind: project
+    title: "Consolidation"
+    goal: "Single docker-compose: MCP (always-on) + watcher (auto-reindex). Remove everything else."
+    status: done
+  - id: "P10E037"
+    kind: project
+    title: "Context-aware search"
+    goal: "Librarian MCP understands conversation history before answering"
+    status: done
+  - id: "P10E038"
+    kind: project
+    title: "Corpus Integrity"
+    goal: "Estabelecer o Corpus Integrity Protocol (CIP-1): nenhuma feature nova é válida acima de um corpus instável — Integrity primeiro, depois CFI, synthesis e discovery. Invariante por chunk: `chunk_id ∈ FAISS AND chunk_id ∈ metadata.json AND metadata[chunk_id].book_id ∈ books registry`; falha em qualquer um = chunk ORPHAN → quarantine. Pipeline Load → Validate → Repair → Report, com estados STABLE / DEGRADED / BROKEN."
+    status: backlog
+  - id: "P10E039"
+    kind: project
+    title: "Corpus Recovery & Index Integrity"
+    goal: "Reconstruir o corpus do Librarian (784→856 books, 410k chunks) com FAISS + metadata íntegros. Baseline: 856 books, 410,676 chunks, FAISS 602 MB, backup em backup/2026-07-23-baseline/"
+    status: archived
+  - id: "P10E040"
+    kind: project
+    title: "Cover Extraction"
+    goal: "Extract EPUB covers automatically, store in covers/ folder for GUI display"
+    status: archived
+  - id: "P10E041"
+    kind: project
+    title: "Deduplication Integrity"
+    goal: "Detect and handle duplicate books in the library so each title exists exactly once: index pollution stops (one book indexed many times), search noise stops (duplicate results), embeddings stop being wasted on redundant copies, and book_id collisions between paths are eliminated."
+    status: active
+  - id: "P10E042"
+    kind: project
+    title: "E034: EPUB Paragraph Extraction + Structural Location"
+    goal: "**Previous approach (WRONG):**"
+    status: archived
+  - id: "P10E043"
+    kind: project
+    title: "EPUB div-only body text — silent under-indexing (selector gap)"
+    goal: "Ensure no EPUB with real body text indexes to near-zero. The block selector in extract_epub_paragraphs() omitted <div>, so EPUBs that store body text in bare <div>s (common in Anna's Archive / converted files) became invisible to semantic search. 18 books were repaired; a guard now makes the class non-silent."
+    status: archived
+  - id: "P10E044"
+    kind: project
+    title: "Experience History"
+    goal: "The record of what a reader asked and received is queryable as history. Patterns of use, abandoned questions and reopened books become visible from the log rather than from opinion. Analytics read one store, and that store is the interaction record."
+    status: planning
+  - id: "P10E045"
+    kind: project
+    title: "FAISS Vector Store Migration"
+    goal: "Migrate from 2.3GB JSON index to FAISS vector store for production-grade semantic search"
+    status: archived
+  - id: "P10E046"
+    kind: project
+    title: "HTTP MCP Migration"
+    goal: "Migrated from old backstage (E051)"
+    status: done
+  - id: "P10E047"
+    kind: project
+    title: "Index Optimization"
+    goal: "O indexador atual leva ~15h e deixa o corpus indisponível. Três problemas: embedding sem batch (25x slowdown), sem cache de embeddings (crash perde tudo), FAISS só no final (corpus offline). Consertar cada um."
+    status: archived
+  - id: "P10E048"
+    kind: project
+    title: "indexing-bug-subfolders"
+    goal: "Discover and index books living in NESTED subfolders (book subdirectories like `theory/system/`, `magick/tarot/`, `anarchy/hakim bey/`), so the whole library — not just top-level folders — is reachable via research. Root cause: `scan_library_folders()` in `index_library.py` checked only the immediate folder for books and never registered subfolders as independent topics, leaving ~50+ folders (half the library or more) inaccessible."
+    status: archived
+  - id: "P10E050"
+    kind: project
+    title: "Indexing subfolders"
+    goal: "Fix index_library.py to handle book subdirectories"
+    status: archived
+  - id: "P10E051"
+    kind: project
+    title: "Librarian as MCP"
+    goal: "MCP server for faster queries (persistent process, indexes in RAM)"
+    status: done
+  - id: "P10E053"
+    kind: project
+    title: "Librarian Repo"
+    goal: "Package librarian as a shareable repo — article, onboarding, skill, prompt"
+    status: done
+  - id: "P10E054"
+    kind: project
+    title: "MCP Stdio Connection Fix"
+    goal: "Migrated from old backstage (E043)"
+    status: done
+  - id: "P10E055"
+    kind: project
+    title: "Papers"
+    goal: "Construir o pipeline de discovery + synthesis layer + recomendações do Librarian: (1) fazer a synthesis funcionar dentro do Docker (LLM_HOST=host.docker.internal), (2) plugar ArXiv como provedor (engine/scripts/arxiv_mcp.py já existe — decidir stdio MCP vs função interna), (3) usar Shelfmark (localhost:8083) para recomendações 'pesquisou X → sugere Y', (4) pipeline de aquisição (paper encontrado → download PDF → extrair → chunk → embed → append FAISS, com dedup e watcher)."
+    status: paused
+  - id: "P10E056"
+    kind: project
+    title: "Product Brief"
+    goal: "Entrevistar o Librarian via product-brief skill para popular about/product-brief.md, que será consumido pelo nonlinear portfolio."
+    status: done
+  - id: "P10E057"
+    kind: project
+    title: "Publication"
+    goal: "Extrair do LIBRARIAN ESPECÍFICO (usado/operado por mim, com corpus real) um LIBRARIAN GENÉRICO, atualizado e pronto para ser instalado por outras pessoas — sanitizado, reproduzível, compreensível por outra pessoa, por meio da LIBRARIAN PUBLICATION POLICY (checklist determinístico P0-P8, com artifact identity chain). O genérico vai pro GitHub nonlinear/librarian e é instalado por outros via BYOBook (trazem o próprio corpus). Publicação = transformação/verificação de uma release candidata do específico em clean room; o personal repo pode ser a fonte, mas o processo NÃO depende do seu estado pessoal. (flagship antigo = artefato histórico, não molde.)"
+    status: done
+  - id: "P10E058"
+    kind: project
+    title: "Publication v16"
+    goal: "TBD"
+    status: backlog
+  - id: "P10E059"
+    kind: project
+    title: "Reader comparison"
+    goal: "Find reader with deep links OR search URL params (remove folder-friendly if reader auto-loads)"
+    status: done
+  - id: "P10E060"
+    kind: project
+    title: "Semantic Organization & Clustering"
+    goal: "Organize library **semantically** (not by folders):"
+    status: done
+  - id: "P10E061"
+    kind: project
+    title: "Sigmap Integration"
+    goal: "Migrated from old backstage (E044)"
+    status: done
+  - id: "P10E062"
+    kind: project
+    title: "Sigmap Integration (Both Librarians)"
+    goal: "Migrated from old backstage (E042)"
+    status: done
+  - id: "P10E063"
+    kind: project
+    title: "Skill"
+    goal: "Translate librarian SKILL.md to official skill format"
+    status: done
+  - id: "P10E064"
+    kind: project
+    title: "Skill validation"
+    goal: "Validate librarian.sh input and output"
+    status: done
+  - id: "P10E065"
+    kind: project
+    title: "M6 — Librarian covers row no Susu Weekly"
+    goal: ""
+    status: done
+  - id: "P10E066"
+    kind: project
+    title: "Topic Curation - Systems & Cybernetics"
+    goal: "Acquire, organize, and reindex foundational books on systems, cybernetics, coordination"
+    status: done
+  - id: "P10E067"
+    kind: project
+    title: "Update Indexing for Clusters"
+    goal: "Refactor RAG indexing to use clusters (not folder structure) and enable context-aware search based on conversation histo"
+    status: archived
+  - id: "P10E068"
+    kind: project
+    title: "usage-analytics"
+    goal: "Build usage analytics on top of `usage.jsonl` to rank topics, measure query success rate, detect research patterns, and identify corpus gaps — so the human can see which topics they use most, which queries succeed or fail, and how their research behavior evolves."
+    status: done
+  - id: "P10E069"
+    kind: project
+    title: "Weak Handshake"
+    goal: "Migrated from old backstage (E049)"
+    status: done
+  - id: "P10E071"
+    kind: project
+    title: "Proof Layer"
+    goal: "Every promise the reader makes about a source is backed by a contract that a test can check. The reader returns a page with its provenance, and hardening work turns each assumption into a named, verifiable claim. A claim that cannot be checked is dropped from the surface."
+    status: active
+  - id: "P10E072"
+    kind: project
+    title: "Bindery Acquisition"
+    goal: "The Bindery is a measurable acquisition channel. Coverage is a number, books stuck in wanted have a named reason, and a download batch runs without manual intervention. The loop closes at the index: a book that was acquired is a book a query can find."
+    status: active
+  - id: "P10E073"
+    kind: project
+    title: "Indexing Master"
+    goal: "Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches a searchable chunk through the same stages every other book used, and a failure at any stage names the stage. The master epic holds the pipeline together across the format epics."
+    status: active
+  - id: "P10E074"
+    kind: project
+    title: "Readme"
+    goal: "The repository explains itself to a reader who arrives with no context: what the system does, how to run it, and where the corpus lives. The readme is the front door of the project and it is written for the person who has not read any other document."
+    status: active
+  - id: "P10E075"
+    kind: project
+    title: "Bibliographic Consultation"
+    goal: "Other agents receive citable, verified references for their architecture decisions. Each consultation exists as a note naming the book, chapter or section, and the quoted passage, all confirmed by opening the physical file in the corpus. The requesting agent cites that passage in its own contract without relying on paraphrase or memory."
+    status: active
+# --- help-projector managed begin ---
+help_open:
+  - "rag-architecture-review"
+  - "mcp-rag-validation"
+  - "bounded-memory-ingestion"
+  - "corpus-integrity-check"
+  - "dedup-gate-owner"
+  - "abstract-query-street-test"
+latest:
+  id: "P10E060"
+  title: "Semantic Organization & Clustering"
+  kind: "project"
+  date: "2026-11-08T21:58:25+00:00"
+# --- help-projector managed end ---

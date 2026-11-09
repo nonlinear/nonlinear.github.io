@@ -27,140 +27,338 @@
 
 <main>
 <article class="t-portfolio t-flagship">
-    <div class="t-flagship"><div class="t-flagship__cover">
-    <span class="t-cover__fallback">cover — Kin</span>
-  </div>
-
-  <header class="t-flagship__head">
-    <p class="t-flagship__eyebrow">Flagship</p>
-    <h1 class="t-flagship__title">Kin</h1>
-    
-    
-    <p class="t-flagship__lede">Design-Engineer with motion in the bones. Visual brain, animator&#39;s eye.</p>
-  </header>
-
-  <section class="t-flagship__proof">
-    <figure class="mock-cover" data-seed="3">
-  <div class="mock-cover__grid" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-  </div>
-  <figcaption>Kin</figcaption>
-</figure>
-
-    <ul class="t-flagship__facts">
-      <li><strong>Status</strong><span>stable</span></li>
-      <li><strong>Since</strong><span>2026</span></li>
-      <li><strong>Access</strong><span>install</span></li>
-    </ul>
-  </section>
+<header class="t-portfolio__head">
+  <p class="eyebrow">flagship</p>
+  <h1>Kin</h1>
+  <p class="lede">Design-Engineer with motion in the bones. Visual brain, animator&#39;s eye.</p>
+</header>
 
 
-<section class="roadmap" aria-label="Roadmap kin">
   
-  <div class="roadmap-col">
-    <h3 class="roadmap-h">Currently working<span class="roadmap-sub">Active epics</span></h3>
-    
-      <ul class="roadmap-list">
-        
-        <li>
-          <strong>Embedded Tunneling</strong><sup class="roadmap-id">P09E005</sup><span class="roadmap-goal"> — The bridge embeds the smallest secure tunnelling option that is open source and self-hosted, so remote access works without a third party and without asking the user to understand networking. Remote here means the central web interface and the remote app, both reached through the same embedded path.</span>
-        </li>
-        
-        <li>
-          <strong>Quality Playbook</strong><sup class="roadmap-id">P09E015</sup><span class="roadmap-goal"> — The studio&#39;s playbook states how it verifies and maintains quality: a fast feedback loop with rigor, a triage at three speeds, a pipeline with promotion, assurance tests as lock-in, spawn hygiene, the protocol of rounds and the artifact gate. It is the written form of a process that already runs.</span>
-        </li>
-        
-        <li>
-          <strong>Midstep</strong><sup class="roadmap-id">P09E016</sup><span class="roadmap-goal"> — A link that survives email resolves to the right native scheme on the right device: the bridge validates it against a per-device allowlist and hands it off in one click, with no residual web page. Each step is a midstep in an ecology, and the first case is a note.</span>
-        </li>
-        
-        <li>
-          <strong>Action Menu</strong><sup class="roadmap-id">P09E020</sup><span class="roadmap-goal"> — One action menu reached by press and hold serves every action surface, and it scales to new actions without a new component per screen. The menu knows which actions apply where, so the user does not see the ones that do not.</span>
-        </li>
-        
-        <li>
-          <strong>Bridge Runtime</strong><sup class="roadmap-id">P09E029</sup><span class="roadmap-goal"> — The bridge runtime carries the new agent endpoint and the operations built on it, with the protocol version it declares matching the one it serves. A client that reads the declared version gets the behavior that version promises.</span>
-        </li>
-        
-        <li>
-          <strong>Session Health</strong><sup class="roadmap-id">P09E075</sup><span class="roadmap-goal"> — A session survives an arbitrary rotation or restart without losing conversational identity or the working context the task needs, while the event stream stays continuous and the user sees one conversation. The healing does not depend on the same provider that failed.</span>
-        </li>
-        
-        <li>
-          <strong>Local Admin</strong><sup class="roadmap-id">P09E076</sup><span class="roadmap-goal"> — The user installs the bridge, opens a local web surface that shows and edits the configuration — home network, devices, usage — and the app reports its bootstrap and timeline state there. The admin is small and local, independent of the message stamp.</span>
-        </li>
-        
-        <li>
-          <strong>Lane Deadlock</strong><sup class="roadmap-id">P09E097</sup><span class="roadmap-goal"> — The class of failure that makes several agents look frozen is isolated and mitigated: two writers colliding on one session, with its upstream causes in a watchdog blind to state and a long failover. The fix names the class, not the symptom.</span>
-        </li>
-        
-        <li>
-          <strong>Offline Channel</strong><sup class="roadmap-id">P09E101</sup><span class="roadmap-goal"> — One channel stays offline while the stable channel stays online on the same device, the same cellular network and the same endpoint. The divergence needs a demonstrated root cause before it is explained.</span>
-        </li>
-        
-        <li>
-          <strong>Envelope Authoritative Classification</strong><sup class="roadmap-id">P09E102</sup><span class="roadmap-goal"> — Stop classifying control-plane events by matching text inside the message body. Classify only by an authoritative marker: a declared type field on the envelope, or (interim) an ANCHORED match on the transport envelope. Body-substring matching is banned. Fixes two opposite defects at once.</span>
-        </li>
-        
-      </ul>
-    
-  </div>
+
+
+
+
+
+<section class="dev" aria-label="Projection kin">
+
   
-  <div class="roadmap-col">
-    <h3 class="roadmap-h">Coming soon<span class="roadmap-sub">Planning epics</span></h3>
-    
-      <ul class="roadmap-list">
-        
-        <li>
-          <strong>Policy Propagation</strong><sup class="roadmap-id">P09E003</sup><span class="roadmap-goal"> — A single product-wide policy reaches every agent that can host the product, without two agents editing the same file and without the copies diverging. The policy has one source, and an agent either carries the current version or is visibly out of date.</span>
-        </li>
-        
-        <li>
-          <strong>Health Telemetry</strong><sup class="roadmap-id">P09E006</sup><span class="roadmap-goal"> — The frequency of tunnel and bridge failures on the phone is measured, and the measurement separates tunnel flapping from a refused request from a timeout. The problem is named before it is fixed.</span>
-        </li>
-        
-        <li>
-          <strong>Timeline Platform</strong><sup class="roadmap-id">P09E007</sup><span class="roadmap-goal"> — The timeline gives guarantees strong enough that a new feature — bubbles, diagrams, tables — can be added without breaking scroll, gesture or state. A feature that cannot be added inside those guarantees is a change to the platform, not a feature.</span>
-        </li>
-        
-        <li>
-          <strong>Testing Platform</strong><sup class="roadmap-id">P09E008</sup><span class="roadmap-goal"> — The verification cycle is formal: contract, tests, report, done. Every epic proves feature correctness and platform compatibility before it counts as delivered, and the report is evidence a reader can check.</span>
-        </li>
-        
-        <li>
-          <strong>Epistemic Validator</strong><sup class="roadmap-id">P09E009</sup><span class="roadmap-goal"> — The library is no longer only a semantic searcher: it validates a claim against its sources. An answer that cannot be traced does not pass, and the library reports the gap instead of the nearest text.</span>
-        </li>
-        
-        <li>
-          <strong>Visible Spawns</strong><sup class="roadmap-id">P09E010</sup><span class="roadmap-goal"> — Agent spawns are visible in the product: a progress board, a lifecycle and the logs, so the user can see what their agents are doing without asking. This is the surface where every per-agent activity of the platform appears.</span>
-        </li>
-        
-        <li>
-          <strong>Frontend Compiler</strong><sup class="roadmap-id">P09E013</sup><span class="roadmap-goal"> — A component defined once in the shared material language compiles to each target a product needs, so the same button is the same button in every renderer. The record was truncated in August and recovered only in part; what survives is the compiler&#39;s contract.</span>
-        </li>
-        
-        <li>
-          <strong>Message Stamp</strong><sup class="roadmap-id">P09E014</sup><span class="roadmap-goal"> — Every message would carry a standard stamp — device, installation, artifact, origin — born in the bridge. This is an architectural hypothesis in planning, not a contract, and the first round is research.</span>
-        </li>
-        
-        <li>
-          <strong>Midstep Planning</strong><sup class="roadmap-id">P09E017</sup><span class="roadmap-goal"> — The midstep ecology is planned before it is built: which schemes, which devices, which allowlist, and what a step returns when the target is absent. The planning epic holds the decisions the active epic executes.</span>
-        </li>
-        
-        <li>
-          <strong>Bootstrap State</strong><sup class="roadmap-id">P09E026</sup><span class="roadmap-goal"> — A fresh install is a state the product can render: the app knows that the agent list may be empty and degrades to a local surface instead of a blank screen. A banner is not the answer; a state machine is.</span>
-        </li>
-        
-      </ul>
-    
-  </div>
+  <h2>Roadmap <small>142 epics</small></h2>
+  <table class="dev-table">
+    <thead><tr><th>id</th><th>status</th><th>title</th></tr></thead>
+    <tbody>
+      
+      <tr><td><code>503-patch</code></td><td>done</td><td>503 Patch — UI Honesto</td></tr>
+      
+      <tr><td><code>P09E001</code></td><td>backlog</td><td>Configuration</td></tr>
+      
+      <tr><td><code>P09E002</code></td><td>backlog</td><td>Kin-Ready Agents</td></tr>
+      
+      <tr><td><code>P09E003</code></td><td>planning</td><td>Policy Propagation</td></tr>
+      
+      <tr><td><code>P09E004</code></td><td>backlog</td><td>Commenting on Markdown</td></tr>
+      
+      <tr><td><code>P09E005</code></td><td>active</td><td>Embedded Tunneling</td></tr>
+      
+      <tr><td><code>P09E006</code></td><td>planning</td><td>Health Telemetry</td></tr>
+      
+      <tr><td><code>P09E007</code></td><td>planning</td><td>Timeline Platform</td></tr>
+      
+      <tr><td><code>P09E008</code></td><td>planning</td><td>Testing Platform</td></tr>
+      
+      <tr><td><code>P09E009</code></td><td>planning</td><td>Epistemic Validator</td></tr>
+      
+      <tr><td><code>P09E010</code></td><td>planning</td><td>Visible Spawns</td></tr>
+      
+      <tr><td><code>P09E011</code></td><td>done</td><td>Visions</td></tr>
+      
+      <tr><td><code>P09E012</code></td><td>backlog</td><td>💭 Emoting — Micro-Expressões Glanceable do Agente</td></tr>
+      
+      <tr><td><code>P09E013</code></td><td>planning</td><td>Frontend Compiler</td></tr>
+      
+      <tr><td><code>P09E014</code></td><td>planning</td><td>Message Stamp</td></tr>
+      
+      <tr><td><code>P09E015</code></td><td>active</td><td>Quality Playbook</td></tr>
+      
+      <tr><td><code>P09E016</code></td><td>active</td><td>Midstep</td></tr>
+      
+      <tr><td><code>P09E017</code></td><td>planning</td><td>Midstep Planning</td></tr>
+      
+      <tr><td><code>P09E019</code></td><td>done</td><td>Mea Culpa — Recovery &#43; War-Tested Testing Foundation</td></tr>
+      
+      <tr><td><code>P09E020</code></td><td>active</td><td>Action Menu</td></tr>
+      
+      <tr><td><code>P09E021</code></td><td>backlog</td><td>Advanced Async Execution &amp; Run Lifecycle</td></tr>
+      
+      <tr><td><code>P09E022</code></td><td>backlog</td><td>Agent Self-Heal — Session Identity Mismatch</td></tr>
+      
+      <tr><td><code>P09E023</code></td><td>backlog</td><td>Kin Android</td></tr>
+      
+      <tr><td><code>P09E025</code></td><td>backlog</td><td>Audio Security — autenticar e proteger ações por voz</td></tr>
+      
+      <tr><td><code>P09E026</code></td><td>planning</td><td>Bootstrap State</td></tr>
+      
+      <tr><td><code>P09E027</code></td><td>planning</td><td>Freezing Model</td></tr>
+      
+      <tr><td><code>P09E028</code></td><td>backlog</td><td>Bridge Offline Incident — kin morreu, respostas ao app sumiram, epic de ajuste</td></tr>
+      
+      <tr><td><code>P09E029</code></td><td>active</td><td>Bridge Runtime</td></tr>
+      
+      <tr><td><code>P09E030</code></td><td>backlog</td><td>Capability System</td></tr>
+      
+      <tr><td><code>P09E031</code></td><td>backlog</td><td>CF Token Debug — Evidência Programática Completa</td></tr>
+      
+      <tr><td><code>P09E032</code></td><td>backlog</td><td>Conversation Context Segments</td></tr>
+      
+      <tr><td><code>P09E033</code></td><td>backlog</td><td>Conversation Continuity</td></tr>
+      
+      <tr><td><code>P09E034</code></td><td>backlog</td><td>Cross-Device Kin</td></tr>
+      
+      <tr><td><code>P09E035</code></td><td>backlog</td><td>Design Fixes — Message Card Full-Width &#43; OG Card Placement</td></tr>
+      
+      <tr><td><code>P09E036</code></td><td>backlog</td><td>Device Authentication</td></tr>
+      
+      <tr><td><code>P09E037</code></td><td>backlog</td><td>Documentation Migration</td></tr>
+      
+      <tr><td><code>P09E038</code></td><td>planning</td><td>Fast Agent Swap</td></tr>
+      
+      <tr><td><code>P09E039</code></td><td>backlog</td><td>Ghost Messages Bug</td></tr>
+      
+      <tr><td><code>P09E040</code></td><td>planning</td><td>Bridge Health</td></tr>
+      
+      <tr><td><code>P09E041</code></td><td>planning</td><td>Verification First</td></tr>
+      
+      <tr><td><code>P09E042</code></td><td>backlog</td><td>Heartbeat Message Filtering</td></tr>
+      
+      <tr><td><code>P09E043</code></td><td>backlog</td><td>Heartbeat Protocol Fix</td></tr>
+      
+      <tr><td><code>P09E044</code></td><td>backlog</td><td>I&#39;m Home — SSID Network Detection</td></tr>
+      
+      <tr><td><code>P09E046</code></td><td>backlog</td><td>iOS Integrations &amp; System Embedding</td></tr>
+      
+      <tr><td><code>P09E047</code></td><td>backlog</td><td>iOS Stability Hardening</td></tr>
+      
+      <tr><td><code>P09E048</code></td><td>backlog</td><td>Kin Android — Cloudflare Access: cadeia VERIFICADA (resolved — falso alarme)</td></tr>
+      
+      <tr><td><code>P09E049</code></td><td>backlog</td><td>Kin as Product</td></tr>
+      
+      <tr><td><code>P09E050</code></td><td>backlog</td><td>Kin Backlog &amp; Interesting Ideas</td></tr>
+      
+      <tr><td><code>P09E051</code></td><td>backlog</td><td>Kin Fitness Testing — Capabilities para FF Registry</td></tr>
+      
+      <tr><td><code>P09E052</code></td><td>backlog</td><td>Kin Kit</td></tr>
+      
+      <tr><td><code>P09E053</code></td><td>backlog</td><td>Kin Runtime Health — Detect, Classify, Recover, Verify</td></tr>
+      
+      <tr><td><code>P09E054</code></td><td>backlog</td><td>Lenses</td></tr>
+      
+      <tr><td><code>P09E055</code></td><td>backlog</td><td>Message Types and Presentation</td></tr>
+      
+      <tr><td><code>P09E056</code></td><td>planning</td><td>Device Modes</td></tr>
+      
+      <tr><td><code>P09E057</code></td><td>backlog</td><td>Muscle Memory (expert actions)</td></tr>
+      
+      <tr><td><code>P09E058</code></td><td>backlog</td><td>New Platforms</td></tr>
+      
+      <tr><td><code>P09E059</code></td><td>backlog</td><td>Offline Reading</td></tr>
+      
+      <tr><td><code>P09E060</code></td><td>planning</td><td>Parity Onboarding</td></tr>
+      
+      <tr><td><code>P09E061</code></td><td>done</td><td>OpenGraph Link Previews</td></tr>
+      
+      <tr><td><code>P09E062</code></td><td>planning</td><td>Design Tooling</td></tr>
+      
+      <tr><td><code>P09E063</code></td><td>backlog</td><td>Penpot × Fontbase — como integrar os dois</td></tr>
+      
+      <tr><td><code>P09E064</code></td><td>backlog</td><td>Presenting Kin</td></tr>
+      
+      <tr><td><code>P09E065</code></td><td>backlog</td><td>Pricing &amp; Packaging Strategy</td></tr>
+      
+      <tr><td><code>P09E066</code></td><td>backlog</td><td>Publication Hygiene</td></tr>
+      
+      <tr><td><code>P09E067</code></td><td>planning</td><td>Remote Access</td></tr>
+      
+      <tr><td><code>P09E069</code></td><td>backlog</td><td>Rich Content Formats</td></tr>
+      
+      <tr><td><code>P09E070</code></td><td>backlog</td><td>Scroll-Aware Context</td></tr>
+      
+      <tr><td><code>P09E071</code></td><td>backlog</td><td>Security &amp; Privacy</td></tr>
+      
+      <tr><td><code>P09E072</code></td><td>backlog</td><td>Send Trace Protocol (Foundation Fortification)</td></tr>
+      
+      <tr><td><code>P09E074</code></td><td>backlog</td><td>Session Compaction × Bridge Mirroring</td></tr>
+      
+      <tr><td><code>P09E075</code></td><td>active</td><td>Session Health</td></tr>
+      
+      <tr><td><code>P09E076</code></td><td>active</td><td>Local Admin</td></tr>
+      
+      <tr><td><code>P09E077</code></td><td>backlog</td><td>Shared Agent UX</td></tr>
+      
+      <tr><td><code>P09E078</code></td><td>backlog</td><td>Shared Agents</td></tr>
+      
+      <tr><td><code>P09E079</code></td><td>backlog</td><td>surfacing openclaw</td></tr>
+      
+      <tr><td><code>P09E080</code></td><td>planning</td><td>Tech Debt</td></tr>
+      
+      <tr><td><code>P09E081</code></td><td>backlog</td><td>Testing House — Kin Product Verification</td></tr>
+      
+      <tr><td><code>P09E082</code></td><td>backlog</td><td>Tunneling Switch — Kin troca entre mecanismos de tunnelling para o mesmo Bridge</td></tr>
+      
+      <tr><td><code>kin_tunnel-failsafe_20260917</code></td><td>planning</td><td>Tunnel Failsafe — alternativas ao Cloudflare (tailscale e outros)</td></tr>
+      
+      <tr><td><code>P09E083</code></td><td>done</td><td>Voice Input — Index/kin → OpenClaw, with mode (origin flag)</td></tr>
+      
+      <tr><td><code>P09E084</code></td><td>done</td><td>Voice Output — comportamento por mode (nota: TTS quando pebble)</td></tr>
+      
+      <tr><td><code>P09E085</code></td><td>backlog</td><td>Voice Updates — generalizar voz (default = agente selecionado no device, possivel &#39;call a outros&#39;)</td></tr>
+      
+      <tr><td><code>P09E086</code></td><td>backlog</td><td>Agent Run Reliability — freezes/catalog de causas-raiz</td></tr>
+      
+      <tr><td><code>P09E087</code></td><td>backlog</td><td>Kin Logo — parity de ícones entre plataformas &#43; header</td></tr>
+      
+      <tr><td><code>P09E088</code></td><td>paused</td><td>Scroll Positioning</td></tr>
+      
+      <tr><td><code>P09E089</code></td><td>backlog</td><td>Scroll Adjustments (backlog de refinos)</td></tr>
+      
+      <tr><td><code>P09E090</code></td><td>planning</td><td>Agent Ordering</td></tr>
+      
+      <tr><td><code>P09E091</code></td><td>done</td><td>Design Fixes</td></tr>
+      
+      <tr><td><code>P09E092</code></td><td>done</td><td>Kin Test Harness: Pipeline Architecture &amp; Gates</td></tr>
+      
+      <tr><td><code>P09E093</code></td><td>backlog</td><td>Check Parity — real-world coverage (device reality &#43; re-verify source epics)</td></tr>
+      
+      <tr><td><code>P09E094</code></td><td>backlog</td><td>Epic Branches — branch-per-epic policy (ADR: paused 2026-10-07)</td></tr>
+      
+      <tr><td><code>P09E095</code></td><td>backlog</td><td>Playground Rules for Bridge — different deliverable, different assurance</td></tr>
+      
+      <tr><td><code>P09E096</code></td><td>planning</td><td>Native Substrate</td></tr>
+      
+      <tr><td><code>P09E097</code></td><td>active</td><td>Lane Deadlock</td></tr>
+      
+      <tr><td><code>P09E098</code></td><td>planning</td><td>Freezing Explained</td></tr>
+      
+      <tr><td><code>P09E099</code></td><td>planning</td><td>No Bridge</td></tr>
+      
+      <tr><td><code>P09E100</code></td><td>done</td><td>Python Bridge CORS Analysis</td></tr>
+      
+      <tr><td><code>P09E101</code></td><td>active</td><td>Offline Channel</td></tr>
+      
+      <tr><td><code>P09E102</code></td><td>active</td><td>Envelope Authoritative Classification</td></tr>
+      
+      <tr><td><code>P09E103</code></td><td>active</td><td>Collapse by Metadata</td></tr>
+      
+      <tr><td><code>P09E104</code></td><td>active</td><td>Image Syntax</td></tr>
+      
+      <tr><td><code>P09E105</code></td><td>active</td><td>Rich Media</td></tr>
+      
+      <tr><td><code>P09E106</code></td><td>active</td><td>Direct Transport</td></tr>
+      
+      <tr><td><code>P09E107</code></td><td>active</td><td>Provenance stamping</td></tr>
+      
+      <tr><td><code>P09E108</code></td><td>planning</td><td>check the pantry</td></tr>
+      
+      <tr><td><code>P09E109</code></td><td>done</td><td>Spike Epic Protocol — a skill for creating spike epics (meta: the epic that creates the thing that creates epics)</td></tr>
+      
+      <tr><td><code>P09E110</code></td><td>planning</td><td>Gateway Parity</td></tr>
+      
+      <tr><td><code>P09E111</code></td><td>planning</td><td>Design Decision</td></tr>
+      
+      <tr><td><code>P09E112</code></td><td>active</td><td>Affordance parity</td></tr>
+      
+      <tr><td><code>P09E113</code></td><td>backlog</td><td>Dedicated Test Devices</td></tr>
+      
+      <tr><td><code>P09E114</code></td><td>planning</td><td>Liveness</td></tr>
+      
+      <tr><td><code>P09E127</code></td><td>backlog</td><td>Canonical States</td></tr>
+      
+      <tr><td><code>P09E128</code></td><td>backlog</td><td>Small Fixes</td></tr>
+      
+      <tr><td><code>P09E129</code></td><td>planning</td><td>Timeline Platform</td></tr>
+      
+      <tr><td><code>P09E130</code></td><td>active</td><td>Design Fix</td></tr>
+      
+      <tr><td><code>P09E131</code></td><td>backlog</td><td>KinBoard — Input-Adjacent Action Surface</td></tr>
+      
+      <tr><td><code>P09E132</code></td><td>backlog</td><td>SDK Hygiene / Test-Runner Recovery</td></tr>
+      
+      <tr><td><code>e018_20260427</code></td><td>done</td><td>Agent Discovery &amp; Metadata</td></tr>
+      
+      <tr><td><code>kin_20260522-E079</code></td><td>done</td><td>Bridge Performance Fix</td></tr>
+      
+      <tr><td><code>kin_cache_rebuild_state</code></td><td>done</td><td>Cache Rebuild State — tornar o rebuild local observável (device novo)</td></tr>
+      
+      <tr><td><code>kin_20260525-E072</code></td><td>done</td><td>Context Grouping</td></tr>
+      
+      <tr><td><code>e032_20260630</code></td><td>done</td><td>Context v1</td></tr>
+      
+      <tr><td><code>kin_20260702_delay</code></td><td>done</td><td>Delay Tolerance — Intention Before Delivery</td></tr>
+      
+      <tr><td><code>design_updates</code></td><td>done</td><td>Design Updates — cards (messages) flushed 100% width</td></tr>
+      
+      <tr><td><code>e034_20260428</code></td><td>done</td><td>Enhanced Chat Experience</td></tr>
+      
+      <tr><td><code>e017_20260426</code></td><td>done</td><td>Flutter Native</td></tr>
+      
+      <tr><td><code>kin_20260508-E058</code></td><td>done</td><td>Golden Reference Fixes</td></tr>
+      
+      <tr><td><code>e028_20260630</code></td><td>done</td><td>Initial UX Polish</td></tr>
+      
+      <tr><td><code>e023_20260428</code></td><td>done</td><td>Kin Bridge</td></tr>
+      
+      <tr><td><code>e027_20260630</code></td><td>done</td><td>Kin UI Redesign</td></tr>
+      
+      <tr><td><code>kin_20260523-E076</code></td><td>done</td><td>Message Collapse Variant</td></tr>
+      
+      <tr><td><code>onboarding-experience</code></td><td>migrated</td><td>Onboarding Experience</td></tr>
+      
+      <tr><td><code>kin_E095</code></td><td>done</td><td>Platform Readiness &amp; Deploy Hygiene</td></tr>
+      
+      <tr><td><code>product-voice-framing</code></td><td>done</td><td>Product Voice Framing</td></tr>
+      
+      <tr><td><code>kin_20260623</code></td><td>done</td><td>Project-Centric Kin</td></tr>
+      
+      <tr><td><code>e045_20260507</code></td><td>done</td><td>Protocol Contracts &amp; Timeline Correctness</td></tr>
+      
+      <tr><td><code>e030_20260513</code></td><td>done</td><td>Refinements</td></tr>
+      
+      <tr><td><code>e004_20260424</code></td><td>done</td><td>Strategy</td></tr>
+      
+      <tr><td><code>e003_20260424</code></td><td>done</td><td>Tech Stack</td></tr>
+      
+      <tr><td><code>kin_20260624-tooling</code></td><td>done</td><td>Tooling</td></tr>
+      
+      <tr><td><code>tunnel-flap-emergency_20260831</code></td><td>done</td><td>EMERGÊNCIA — Kin dependente do Cloudflare Tunnel (P1) &#43; decisão kin-remote</td></tr>
+      
+      <tr><td><code>e048_20260514</code></td><td>done</td><td>Two-Way Kin Bridge</td></tr>
+      
+    </tbody>
+  </table>
+  <p><strong>latest</strong> <code>P09E131</code> KinBoard — Input-Adjacent Action Surface</p>
+  <p><strong>help_open</strong> harness-architect, security-posture, audio-engineer-voice-loop, nat-traversal</p>
   
+
+  
+  <h2>Help <small>4 needs</small></h2>
+  <table class="dev-table">
+    <thead><tr><th>id</th><th>status</th><th>title</th></tr></thead>
+    <tbody>
+      
+      <tr><td><code>harness-architect</code></td><td>open</td><td>Quem já construiu um harness de agente para revisar a fronteira do runtime</td></tr>
+      
+      <tr><td><code>security-posture</code></td><td>open</td><td>Decidir o que &#39;up to par&#39; significa para um agente pessoal</td></tr>
+      
+      <tr><td><code>audio-engineer-voice-loop</code></td><td>open</td><td>Audio engineer para o loop de voz (STT → agente → TTS) no Android/iOS</td></tr>
+      
+      <tr><td><code>nat-traversal</code></td><td>open</td><td>Networking: o transporte remoto não tem segundo domínio de falha</td></tr>
+      
+    </tbody>
+  </table>
+  
+
 </section>
 
-
-
-  <section class="t-flagship__body">
-    <p>In the same way that a well-designed object reveals how it wants to be held,
+  <div class="t-portfolio__body"><p>In the same way that a well-designed object reveals how it wants to be held,
 this product reveals how it wants to be used before anyone reads a word. That is
 the whole ambition: cognition that shows itself in the surface.</p>
 <h2 id="what-it-is">What it is</h2>
@@ -180,34 +378,8 @@ where it goes back out into the same world that produced it.</p>
 <h2 id="status">Status</h2>
 <p>Working, with the usual caveats. Nothing here asks for attention it has not
 earned, and nothing claims to be finished.</p>
-
-    <div class="mock-body">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-  <h2>Lorem heading</h2>
-  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
-    <figure class="mock-diagram">
-  <pre class="mermaid">
-flowchart LR
-  A[Kin — architecture] --> B[ingest]
-  B --> C{stable?}
-  C -->|yes| D[flagship]
-  C -->|no| E[experimental]
-  </pre>
-  <figcaption>Kin — architecture</figcaption>
-</figure>
-
-  </section>
-
-  <section class="t-flagship__cta">
-    <h2>Get it</h2>
-    <p class="t-flagship__cta-text">Lorem ipsum — install path, requirements, what lands on day one.</p>
-    <p><a class="t-flagship__button" href="#">Kin — start</a></p>
-  </section>
-</div>
-
-  
 </article>
 
 </main>

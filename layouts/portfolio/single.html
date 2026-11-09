@@ -1,20 +1,28 @@
 {{ define "main" }}
-{{- /* PORTFOLIO — one template per CATEGORY. Render happens in tier partials;
-   the tier is only a class on the root. If two tiers ever need the same rule,
-   that is the signal the HTML should be identical — and then they were never
-   two tiers (doctrine from the mock phase).
+{{- /* PORTFOLIO — ONE renderer. The tier is a gate, not a layout choice.
 
-   WIRE (2026-10-24): Hugo selects layouts by `.Type`, not by a `category` field.
-   Content carries `type: portfolio` + `tier: <name>`. `category` remains the
-   vocab word used in docs; `type` is what the engine reads. One word, one job,
-   no alias field pretending to be both. */ -}}
-{{- $tier := .Params.tier | default "experimental" -}}
-<article class="t-portfolio t-{{ $tier }}">
-  {{- $tpl := printf "_partials/portfolio/%s.html" $tier -}}
-  {{ if templates.Exists $tpl }}
-    {{ partial (printf "portfolio/%s.html" $tier) . }}
-  {{ else }}
-    {{ partial "portfolio/experimental.html" . }}
-  {{ end }}
+   Rule (owner, 2026-11-09): "só experimental e flagship tem página e help.
+   se não eh não tem. automático."
+
+   Data comes from data/<project>/roadmap.yaml and data/<project>/help.yaml,
+   copied verbatim by site-publish.py. This template captures exact fields.
+   It does not build, normalize or enrich anything. */ -}}
+
+{{- $tier := .Params.tier | default "" -}}
+{{- $p := .File.ContentBaseName -}}
+
+<article class="t-portfolio t-{{ $tier | default "none" }}">
+<header class="t-portfolio__head">
+  <p class="eyebrow">{{ $tier | default "no tier" }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+</header>
+
+{{ if or (eq $tier "flagship") (eq $tier "experimental") }}
+  {{ partial "portfolio/dev.html" (dict "project" $p) }}
+  <div class="t-portfolio__body">{{ .Content }}</div>
+{{ else }}
+  <p class="lede">This project has no public page. Tier: <code>{{ $tier | default "none" }}</code>.</p>
+{{ end }}
 </article>
 {{ end }}

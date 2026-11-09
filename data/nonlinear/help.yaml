@@ -1,0 +1,54 @@
+---
+schema_version: 2.0
+project: nonlinear
+tier: flagship
+last_reconciled_at: "2026-11-06T16:02Z"
+reconciled_by: ""
+
+# nonlinear — help.yaml
+#
+# ESTADO, não campanha. "Neste momento, esta é uma relação que o projeto
+# está aberto a receber."
+#
+# Este arquivo declara estado. O AVISO mostrado a quem clica (gratuito,
+# voluntário, commons, respeitamos seu tempo, damos crédito) é COPY DE
+# PÁGINA — vive no site, não aqui.
+#
+# ---------------------------------------------------------------------------
+# PREENCHER
+#   reconciled_by  ->  quem populou este arquivo
+#   needs          ->  3 a 6 necessidades reais, cada uma com evidence.epic
+#
+# REGRAS
+#   1. need sem evidence.epic  -> o projector rebaixa para draft
+#   2. open sem time           -> o projector rebaixa para draft
+#   3. library: null           -> honesto. Não invente citação.
+#   4. só o que um VOLUNTÁRIO pode responder.
+#      "falta tempo", "falta dinheiro", "falta o owner" NÃO são needs.
+#   5. needs: []               -> estado válido: "não estamos pedindo agora"
+# ---------------------------------------------------------------------------
+#
+# EXEMPLO — apagar depois de preencher
+#
+# needs:
+#   - id: slug-unico
+#     type: contribution        # contribution | testing | conversation | review | referral
+#     title: "Título que um estranho entende"
+#     description: >
+#       Duas ou três frases. Qual é o problema. Sem marketing. A pessoa
+#       precisa saber, só por isso, se ela é quem pode ajudar.
+#     status: open              # open | draft | closed | expired
+#     effort: small             # small | medium | large
+#     time: "30 min"            # OBRIGATÓRIO quando status: open
+#     skills: ["skill", "skill"]
+#     response:
+#       mode: intake            # referral | intake | scheduled
+#       cta: "Contribuir"
+#     limit: 3
+#     visibility: public
+#     evidence:
+#       epic: P00E000
+#       quote: "a frase do epic que prova"
+#       library: null
+
+needs: []

@@ -1,0 +1,120 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: mood
+# source: epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "P13E001"
+    kind: project
+    title: "Collection Engine"
+    goal: "One engine serves visual collections. A path selects a collection and a viewer, the root path is the public default, and other paths exist without being advertised. Functional capacity grows without multiplying the operational surface."
+    status: planning
+  - id: "P13E002"
+    kind: project
+    title: "Hidden Viewer"
+    goal: "A references path exists as an alternate viewer: one image at a time, chosen at random, changing every thirty minutes. No link and no readme point at it. Whoever knows the path knows it."
+    status: planning
+  - id: "P13E003"
+    kind: project
+    title: "Charcoal Sources"
+    goal: "Reference books on charcoal drawing are collected and organized, with the ones already in the library kept where they are and the missing ones acquired. The set is complete enough to study from without searching again."
+    status: planning
+  - id: "P13E004"
+    kind: project
+    title: "Reels Index"
+    goal: "A personal visual index of referenced media, searchable and navigable by tag. A source adapter is the only thing a new host requires, and Instagram is the first one. The video is not stored: the reference, its metadata and its tags point back to the host."
+    status: active
+  - id: "P13E005"
+    kind: project
+    title: "Reels Scraping"
+    goal: "A scheduled scrape detects newly saved reels and injects them into the index, so a save becomes a searchable reference without a manual pass. The source adapter for a second host is planned on the same contract."
+    status: planning
+  - id: "P13E006"
+    kind: project
+    title: "Reels Design"
+    goal: "The visual layer of the reels index is defined and built: the grid with tag search, the thumbnail, and the modal that shows the media. The technical path is closed and versioned elsewhere; this epic holds only the work that comes after it."
+    status: planning
+  - id: "P13E007"
+    kind: project
+    title: "Local Mood"
+    goal: "Permitir que a interface Mood seja apontada para uma pasta local (corpus local de imagens), sem depender só da coleção servida em mood.nonlinear.nyc. O sistema lembra os paths usados e os grupos (collections) montados sobre cada um. Tudo é salvo via browser (localStorage/similar), com export e import."
+    status: backlog
+  - id: "P13E008"
+    kind: project
+    title: "Art Study"
+    goal: "The agent covers art learning, starting with charcoal and widening to materials, techniques and drawing or painting schools in the city. Each entry is a study item with a source, not a bookmark."
+    status: active
+  - id: "P13E009"
+    kind: project
+    title: "Tool Audit"
+    goal: "Every MCP and skill available to the agent is audited, its access is documented, and the blockers are resolved or named. Missing tools are written down with what they would enable."
+    status: active
+  - id: "P13E010"
+    kind: project
+    title: "Hashtag Vocabulary"
+    goal: "A vocabulary layer enriches the raw tags of any source with concepts, aliases and translations, at the same level as a source adapter and not as a cleaner after the fact. The layer is planned and SKOS-aligned; it does not act yet."
+    status: planning
+  - id: "P13E011"
+    kind: project
+    title: "Image Tagging System"
+    goal: "Auto-tag 22,528 design inspiration images with visual style metadata using local Qwen2-VL 72B"
+    status: backlog
+  - id: "P13E012"
+    kind: project
+    title: "Location on Screenshots"
+    goal: "**Current dependencies:**"
+    status: backlog
+  - id: "P13E013"
+    kind: project
+    title: "Preferences System"
+    goal: "a way to save images in groups, or visit other groups"
+    status: backlog
+  - id: "P13E014"
+    kind: project
+    title: "Radial Menu"
+    goal: "Migrated from old backstage (E006)"
+    status: backlog
+  - id: "P13E015"
+    kind: project
+    title: "Traffic Cap"
+    goal: "When traffic exceeds capacity the service degrades on purpose instead of failing: requests are rate limited at the proxy and the CDN, and a busy page stands in for the collection. The cap is a number the operator sets, not an outage."
+    status: planning
+  - id: "P13E016"
+    kind: project
+    title: "Immich Conversion"
+    goal: "The library conversion is decided from measured numbers on the real collection, not from a readme estimate: whether to convert originals to newer formats, at what saving, and what breaks. The answer is a decision with evidence attached."
+    status: planning
+  - id: "P13E017"
+    kind: project
+    title: "Parity Gap — migração protocol v3.1 (PT→EN + anti-redundância)"
+    goal: "Hardening of the parity protocol v3.1 (anti-redundancy: one source of truth per subject, no repetition) plus the Portuguese-to-English migration of the three active mood epics, so their records match the current protocol."
+    status: backlog
+  - id: "e007_20260515"
+    kind: project
+    title: "Infra path drift after pulse migration"
+    goal: "Migrated from old backstage (E007)"
+    status: done
+  - id: "e001_20260422"
+    kind: project
+    title: "Initial Setup"
+    goal: "Launch `mood.nonlinear.nyc` with:"
+    status: done
+  - id: "mood-public-gallery_20260713"
+    kind: project
+    title: "Mood — Public Gallery"
+    goal: "mood.nonlinear.nyc acessível publicamente, servido do Mac Studio sem expor IP ou abrir portas, com recuperação automática e código aberto em github.com/nonlinear/mood."
+    status: done
+  - id: "e003_20260422"
+    kind: project
+    title: "Public Connection & Traffic Management"
+    goal: "Set up secure, performant public access to the inspiration gallery with proper traffic management and monitoring."
+    status: done
+# --- help-projector managed begin ---
+help_open:
+  []
+latest:
+  id: "P13E004"
+  title: "Reels Index"
+  kind: "project"
+  date: "2026-11-04T19:10:41+00:00"
+# --- help-projector managed end ---

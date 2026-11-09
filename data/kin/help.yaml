@@ -1,0 +1,125 @@
+---
+schema_version: 2.0
+project: kin
+tier: flagship
+last_reconciled_at: "2026-11-06T10:40-05:00"
+reconciled_by: nonlinear
+
+
+# Kin — help.yaml
+#
+# Declaração de estado, não campanha.
+# Tudo aqui é GRATUITO e VOLUNTÁRIO. Open source, commons. Respeitamos o tempo
+# do voluntário e damos crédito.
+#
+# Fonte: epics/P01E000-help-needed/FINDINGS.md (2026-11-06).
+# Citações de livro ausentes: biblioteca fora do ar durante a análise.
+
+needs:
+  # ---------------------------------------------------------------------
+  # O que o owner nomeou primeiro: "alguém que saiba de harnesses".
+  # ---------------------------------------------------------------------
+  - id: harness-architect
+    type: review
+    title: "Quem já construiu um harness de agente para revisar a fronteira do runtime"
+    description: >
+      O bridge do Kin spawna `openclaw agent --json` e passa flags por versão do
+      binário. Essa suposição já quebrou uma vez — um branch `--session-key`
+      morto em produção. E há um número que ninguém sabe interpretar: o input
+      fixo por turno é 77–84 KB de system prompt mais 143–156 KB de tool schema,
+      contra ~18 KB de um agente irmão. Queremos alguém que julgue se o contrato
+      bridge→runtime e a superfície de ferramentas estão com a forma certa, não
+      alguém para aplicar patch.
+    status: open
+    effort: medium
+    time: "4 horas, uma sessão de revisão"
+    skills: ["harness de agentes", "versionamento de CLI/runtime", "orçamento de contexto", "Node.js"]
+    response:
+      mode: intake
+      cta: "Revisar o harness"
+    limit: 3
+    visibility: public
+    evidence:
+      epic: P09E075
+      quote: "systemPrompt ~77-84 KB, tool surface schemaChars 143,509-156,028 — 'hipótese forte, não causa raiz provada: tool surface é o gargalo de latência. Falta A/B.'"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # O que o owner nomeou: "security expert pra saber se kin está up to par".
+  # ---------------------------------------------------------------------
+  - id: security-posture
+    type: review
+    title: "Decidir o que 'up to par' significa para um agente pessoal"
+    description: >
+      O projeto nunca respondeu à própria pergunta de modelo de ameaça. As
+      métricas de sucesso do epic de segurança dizem literalmente: não sabemos
+      o que sincroniza pro iCloud, não sabemos se os dados estão criptografados,
+      não sabemos quem acessa nossos dados. E ainda shippa um token de bridge
+      hardcoded sem autenticação de dispositivo. Nada disso precisa de mais
+      engenharia antes de alguém qualificado dizer qual é o escopo.
+    status: open
+    effort: large
+    time: "2 sessões (~2 dias): modelo de ameaça + auditoria de postura"
+    skills: ["application security", "threat modelling mobile", "authn/authz", "OWASP MASVS"]
+    response:
+      mode: intake
+      cta: "Auditar a segurança"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P09E071
+      quote: "'Don't know what's syncing to iCloud · Don't know if data is encrypted · Don't know who can access our data'; open question: 'What's our threat model?'"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # O que o owner nomeou: "áudio engineer, TTS STT etc".
+  # ---------------------------------------------------------------------
+  - id: audio-engineer-voice-loop
+    type: review
+    title: "Audio engineer para o loop de voz (STT → agente → TTS) no Android/iOS"
+    description: >
+      Voz funciona só com a Activity em foreground; o poll para quando ela sai.
+      Captura em background, fala em background e sobrevivência ao OS estão todos
+      em aberto. E o simulador iOS não produz TTS — então qualquer verde ali é
+      falso verde. O loop nunca foi revisto por quem entende roteamento de áudio,
+      wake locks, foreground services e comportamento de engine TTS no Android.
+    status: open
+    effort: medium
+    time: "1 dia: revisão de desenho + 1 sessão no aparelho"
+    skills: ["áudio Android", "foreground services", "AudioFocus", "TTS/STT", "iOS AVSpeechSynthesizer"]
+    response:
+      mode: intake
+      cta: "Revisar o loop de voz"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P09E084
+      quote: "gate 3 'Background/always-on capacidade ❌ não validado'; gate 4 'OS survival ❌ não resolvido'; 'iOS Simulator NÃO produz áudio TTS → testar no simulator = FALSO GREEN'"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # Descoberto pelo próprio agente, não pedido pelo owner.
+  # ---------------------------------------------------------------------
+  - id: nat-traversal
+    type: contribution
+    title: "Networking: o transporte remoto não tem segundo domínio de falha"
+    description: >
+      O transporte remoto depende de Cloudflare, e as duas bordas falham no
+      mesmo segundo — 89% de sobreposição, 8/8 e 8/8 simultâneos. Ambos caem no
+      mesmo WAN/ISP, então o "segundo caminho" não é um segundo domínio de
+      falha. O substituto (P2P/dial-out) está desenhado mas travado em quatro
+      perguntas de arquitetura. Quem opera NAT traversal de verdade pode
+      responder essas quatro.
+    status: open
+    effort: medium
+    time: "2 horas, conversa técnica sobre as 4 perguntas abertas"
+    skills: ["NAT traversal", "TURN/STUN", "WebRTC", "P2P", "Flutter"]
+    response:
+      mode: intake
+      cta: "Responder as perguntas de transporte"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P09E106
+      quote: "A and B edges fail in the same second (89% overlap); replacement transport blocked on four unanswered architecture questions"
+      library: null

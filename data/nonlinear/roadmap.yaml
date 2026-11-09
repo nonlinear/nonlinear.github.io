@@ -1,0 +1,303 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: nonlinear
+# source: epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "P14E001"
+    kind: project
+    title: "Studio Positioning"
+    goal: "The studio's positioning, audience, tone of voice and personas are one coherent statement. The branding exercise and the audience research converge into a single set of audiences, and those audiences are the deliverable: every product page and every piece of writing addresses one of them by name."
+    status: active
+  - id: "P14E002"
+    kind: project
+    title: "Living Portfolio"
+    goal: "The studio site is a living portfolio: a permalink per flagship project and a section of articles, both fed by the progress of the agents. The two layers are one Hugo site, and the foundation for storytelling is laid before the first article is written."
+    status: active
+  - id: "P14E003"
+    kind: project
+    title: "Style System"
+    goal: "One style system governs text, image, motion, interaction and layout across every deliverable: defaults that are sensible without configuration, a router that picks the right one per context, and exceptions that compound instead of accumulating. The router is the composition engine inside the system."
+    status: planning
+  - id: "P14E004"
+    kind: project
+    title: "Article Pipeline"
+    goal: "Project work and emerging ideas become a prioritized, maturing portfolio of articles with a lifecycle, analytics and promotion after publication. A candidate is trackable from idea to mature article, and nothing is published without a place in the pipeline."
+    status: planning
+  - id: "P14E005"
+    kind: project
+    title: "Glossary — Popover System"
+    goal: "Auto-inject popover definitions for recurring Nonlinear terms in published texts, with fallback glossary page."
+    status: backlog
+  - id: "P14E006"
+    kind: project
+    title: "nonlinear — Studio Portfolio & Personal Site"
+    goal: "Projeto guarda-chuva do nonlinear.site — o portfólio pessoal de Nicholas Frota. O site surfa o progresso do Oracle e dos agentes do Nonlinear Studio, servindo como vitrine para futuras oportunidades."
+    status: backlog
+  - id: "P14E007"
+    kind: project
+    title: "Site Design"
+    goal: "The visual direction of the site is decided by experiment: layout, typography and color are tried as prototypes and compared, with the question of what the studio is trying to say driving each attempt. The design system emerges from those comparisons, not from a static moodboard."
+    status: planning
+  - id: "P14E008"
+    kind: project
+    title: "Frontend Convergence"
+    goal: "One horizontal agent keeps the tools that guarantee convergence of the front end: visual, textual and routing. From one shared library it serves components to every project that has a front end, each as a theme of the same base. It is responsible for convergence, not for ownership."
+    status: active
+  - id: "P14E009"
+    kind: project
+    title: "Root Rebuild"
+    goal: "The root site is emptied and rebuilt on solid foundations while the personal path stays up as a fallback. When the new root is ready the redirect is removed and the rebuild becomes official."
+    status: active
+  - id: "P14E010"
+    kind: project
+    title: "Markdown Decks"
+    goal: "A presentation goes from Markdown to a rendered deck end to end: a template, a structure and a style, plus a skill so an agent can produce a new deck quickly without rediscovering the process each time."
+    status: planning
+  - id: "P14E011"
+    kind: project
+    title: "Library Client"
+    goal: "The studio is registered as the first external client of the pattern library: the boundary of responsibility, the versioning contract, and the hygiene mechanisms between library and client are written down. A client is a client, not an informal consumer."
+    status: active
+  - id: "P14E012"
+    kind: project
+    title: "Longform Method"
+    goal: "The route from internal investigation and external research to a long-form article is known before the machine that produces articles is built: verifiable claims, a strong narrative, and a repeatable process."
+    status: planning
+  - id: "P14E013"
+    kind: project
+    title: "Article Promotion"
+    goal: "Every article epic, and some project epics, gets a strategic promotion that unfolds across several vectors with a storyboard, timing, feedback and a consistent visual signature. Promotion is part of the article's definition, not an afterthought."
+    status: planning
+  - id: "P14E014"
+    kind: project
+    title: "Surfacing Epics — backstage as source of truth on nonlinear.nyc"
+    goal: "Consume backstage roadmap.yaml as HTML on nonlinear.nyc. Bonus: epics have permalinks too. Source is the backstage clone, read via filesystem or cyborg-support MCP."
+    status: backlog
+  - id: "P14E015"
+    kind: project
+    title: "Scheduler — infraestrutura de contato e agendamento"
+    goal: "Tornar contato humano uma primitiva de infraestrutura: substrato self-hosted, endereçável por API, que transforma interesse contextual vindo do site em conversas e workflows subsequentes — retendo o contexto que causou o booking."
+    status: backlog
+  - id: "P14E016"
+    kind: project
+    title: "Success Metrics — o que conta como evidência de que Nonlinear funciona"
+    goal: "Determinar quais outcomes o Nonlinear considera evidência de que o trabalho está funcionando, como campanhas expressam hipóteses contra esses outcomes, e como o analytics contribui evidência para essas decisões."
+    status: backlog
+  - id: "P14E017"
+    kind: project
+    title: "Web Analytics"
+    goal: "The studio's sites answer questions about their own traffic from a self-hosted analytics system, with no third-party script and no data leaving the infrastructure. Every site reports to the same instance."
+    status: active
+  - id: "P14E018"
+    kind: project
+    title: "Epistemic Arsenal"
+    goal: "The studio builds an epistemic arsenal against vectoralist extraction by mining three and a half billion years of adversarial coevolution from biology. The patterns are extracted, tested against the extraction they are meant to counter, and written where a designer can use them."
+    status: planning
+  - id: "P14E019"
+    kind: project
+    title: "Commons Model"
+    goal: "The studio has a revenue model without a paywall, an agent hierarchy, and a legal structure that fits a commons-focused practice. Low overhead and self-hosted infrastructure are the premises, and the model says how the work is paid for without gating the work."
+    status: planning
+  - id: "P14E020"
+    kind: project
+    title: "Stakeholder Roadmap"
+    goal: "Community engagement turns into stakeholder participation in the roadmap: a suggestion from the community has a path to a place in the roadmap, and the person who raised it can see what happened to it."
+    status: backlog
+  - id: "P14E021"
+    kind: project
+    title: "Creative Code"
+    goal: "The studio keeps a working surface for experiments in HTML, animation, machine learning, kinetic effects and creative coding, where an idea is built rather than described. Each experiment is a small artifact that can be shown."
+    status: backlog
+  - id: "P14E022"
+    kind: project
+    title: "E002 — Biweekly Retro (Operations)"
+    goal: "**Close feedback loop:**"
+    status: backlog
+  - id: "P14E023"
+    kind: project
+    title: "🐉 Extrapolations — o que ganhamos quando o substrate converge e atinge plateau"
+    goal: "Epic: frontend-compiler-dragon"
+    status: backlog
+  - id: "P14E024"
+    kind: project
+    title: "Personal Branding"
+    goal: "Self-promotion and personal branding strategy"
+    status: backlog
+  - id: "P14E025"
+    kind: project
+    title: "Project Phases - Studio Roadmap"
+    goal: "Strategic roadmap: Phase 1 (Plumbing), Phase 2 (Quality Control), Phase 3 (Taste & Storytelling)"
+    status: backlog
+  - id: "P14E026"
+    kind: project
+    title: "Resume & Portfolio"
+    goal: "Professional resume, portfolio site, career materials"
+    status: backlog
+  - id: "P14E027"
+    kind: project
+    title: "Voice & Values"
+    goal: "Dois eixos do Studio: VOICE (como falamos) e VALUES (o que acreditamos, manifestado nas escolhas). Um exercício: angariar o espalhado → concentrar nas skills `voice` e `values` → cada agente referencia (o comum vive na skill; o SOUL guarda só o diferencial). Ambas type: nonlinear."
+    status: done
+  - id: "P14E028"
+    kind: project
+    title: "Comparison Table"
+    goal: "Fonte da verdade para escrever comparison tables — resolvida como especialização da skill `diagram` (table ⊂ diagram ⊃ comparison table). Decision tree de hierarquia + quando/como usar tabela vivem em `diagram/SEMANTIC.md` §0.1–§0.3. Consulta aos livros em `notes-books.md`."
+    status: done
+  - id: "P14E029"
+    kind: project
+    title: "Library Subscription"
+    goal: "The studio receives library components as raw source rather than compiled output, contributes back by pull request, and flattens everything into a single baseline for now. The request and the owner's decisions are recorded here before the package is cut."
+    status: planning
+  - id: "P14E030"
+    kind: project
+    title: "Video Pipeline"
+    goal: "Publish ONE reel video to every target channel from a single canonical source and pull each channel's performance back into one normalized ledger, so a reel is created once, delivered everywhere, and measured in the same place."
+    status: planning
+  - id: "P14E031"
+    kind: project
+    title: "Site Build"
+    goal: "The sitemap of the main site is manifested as a navigable site with placeholder copy, images and diagrams, so design can be tested on real devices slowly and iteratively behind a guarded path. Discrepancies are recorded as they appear, without cascading."
+    status: active
+  - id: "P14E032"
+    kind: project
+    title: "Domain Registry"
+    goal: "One place holds the domains that are ours with expiry and state, and the candidates under consideration with their real price. A domain is a long-term promise, and the inventory exists so no purchase happens without seeing what is already paid for and until when."
+    status: active
+  - id: "P14E033"
+    kind: project
+    title: "Community Hubs"
+    goal: "Each product has a hub where enthusiasts help each other, the owner appears occasionally, and a sanitized local agent answers only about that product within a per-user limit. Questions and suggestions become data that feed the roadmap, and the hub is the call to action on the product page."
+    status: active
+  - id: "P14E034"
+    kind: project
+    title: "Mastodon server — nonlinearstudio.social"
+    goal: "Own the studio's announcement channel: a self-hosted Mastodon instance that carries main announcements and product announcements, on infrastructure the studio controls."
+    status: backlog
+  - id: "P14E035"
+    kind: project
+    title: "Nonlinear doc integration — design debt carried past MVP"
+    goal: "Record, as design debt, the documentation-layer work deliberately excluded from the site MVP (page taxonomy category × tier, copy building-block contracts, GitHub-style code-block chrome, 5-role typography scale). Picked up AFTER MVP."
+    status: backlog
+  - id: "P14E036"
+    kind: project
+    title: "Hugo Skill"
+    goal: "The Hugo skill lands as a committed, validated artifact: the level protocol, the advanced template reference, diagrams and the typography protocol are absorbed into one skill. The epic is reconciled with the canonical layout so the skill and the repo agree."
+    status: planning
+  - id: "P14E037"
+    kind: project
+    title: "Live Roadmap"
+    goal: "Every portfolio project's roadmap is a live surface on the site: the publication skill reads the roadmap file, exports it to a fixed contract, and the portfolio layout renders two columns with the latest state. No manual pass is needed to keep it current."
+    status: active
+  - id: "P14E038"
+    kind: project
+    title: "Help Needed Scheduling"
+    goal: "Every product publishes its real needs for help, so any person can share one specific need through a link, or schedule a conversation about it, without losing the product context that makes the need understandable."
+    status: active
+  - id: "P14E039"
+    kind: project
+    title: "Marketing Tooling"
+    goal: "Automate promotion material generation and cross-platform publishing across social media — Twitter/X, Bluesky, LinkedIn, and future channels."
+    status: backlog
+  - id: "P14E040"
+    kind: project
+    title: "DNS Cleanup"
+    goal: "Every DNS record that is unauthorized or dead is removed without interrupting a live service: the wildcard goes, orphaned routes are cleaned, and each removal carries per-layer evidence and a path back. What remains is a zone where every record has an owner."
+    status: active
+  - id: "P14E041"
+    kind: project
+    title: "Distribution Registry"
+    goal: "A public registry of products reads the latest content of each one and explains to a user the best way to install, customize, compare and upgrade it, inside the context of the machine that governs it. The product comes first and the technology after."
+    status: active
+  - id: "P14E042"
+    kind: project
+    title: "Domain: nonlinear.art acquisition + email"
+    goal: "Acquire nonlinear.art (FREE, verified) as the new brand domain + set up hello@nonlinear.art on a non-Google provider with a decent API (Fastmail JMAP preferred; Proton excluded due to Bridge dependency). This epic = DOMAIN + EMAIL SETUP. The .nyc phase-out is a separate epic (nyc-phaseout)."
+    status: backlog
+  - id: "P14E043"
+    kind: project
+    title: "Domain Migration"
+    goal: "The studio domain becomes canonical for the studio and its services, and the personal site moves to the root of the personal domain. The move is additive and interrupts no existing client."
+    status: active
+  - id: "P14E044"
+    kind: project
+    title: "Studio MCP"
+    goal: "A self-hosted MCP server behind the tunnel exposes the tools of the four working agents with an atomic whitelist and no generic file reader. The surface a tool exposes is the whole surface an agent can reach."
+    status: active
+  - id: "P14E045"
+    kind: project
+    title: "Domain Flip — sair do nonlinear.nyc (alvo: nonlinear.art)"
+    goal: "Tirar o nonlinear.nyc como domínio primário e mover os serviços para nonlinear.art. NÃO é uma troca de DNS: envolve Proton (email, MX/DKIM/SPF/coexistência), 27 hostnames de Cloudflare tunnel, GitHub Pages, Hugo baseURL e o archive /personal/. O .nyc continua pago indefinidamente como forwarding de email."
+    status: backlog
+  - id: "P14E046"
+    kind: project
+    title: "Toolbox Allowlist"
+    goal: "Reports from the toolbox enter the allowlist automatically once they meet the value and technical criteria, and the criteria are written so a report can be judged before it arrives. Nothing enters the allowlist by hand."
+    status: active
+  - id: "P14E047"
+    kind: project
+    title: "Email Sovereignty"
+    goal: "Move personal email and calendar off Google without losing data: Fastmail Standard with two domains and a catch-all per domain, contacts and calendar migrated, and the paid Google subscription cancelled. Every step has a verifiable rollback."
+    status: planning
+  - id: "P14E048"
+    kind: project
+    title: "Credentials Durability"
+    goal: "Every credential the studio depends on survives without human renewal inside the window of the work it enables. Each one declares its renewal period in a manifest, the heartbeat probes it and reports state without prompting anyone, and no credential enters service while it fails the durability rule. Re-auth requests stop arriving as interruptions because expiry is known in advance and a durable path exists before the old one dies."
+    status: active
+  - id: "P14E049"
+    kind: project
+    title: "Public Runtime Leak"
+    goal: "Published agent repositories carry documents only, never operational runtime. The publish pipeline fails loudly when a path it must remove is absent, so a silent success can no longer stand in for a real sanitisation. Every published repository is certified by reading the remote tree, not by trusting an exit code, and no agent memory, session log or workspace state is reachable without authentication from the public org."
+    status: active
+  - id: "P14E050"
+    kind: project
+    title: "Mail archive migration"
+    goal: "Answer the owner's question on whether a Gmail takeout can be cut by date (2026 onward, then 2025, then 2024, each with a measured size) or migrated without attachments that stay referenced in the backup, and produce an honest recommended plan before any migration runs."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P14E051"
+    kind: project
+    title: "Cal.com + meet.nonlinearstudio.com"
+    goal: "Stand up self-hosted Cal.com with Fastmail calendar (CalDAV) and the company Outlook calendar connected, and serve it at meet.nonlinearstudio.com. Determine whether single-use rotating booking links are feasible and how."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P14E052"
+    kind: project
+    title: "Promotion (portfolio and beyond)"
+    goal: "Own promotion as a capability: the rules of what gets published, where, in what form, and what the analytics of top-performing short-form video actually say. Illo stays illo. This epic does not create a new agent and does not touch illo's epics."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "e005_20260630"
+    kind: project
+    title: "Buyer agent"
+    goal: "Automação para compra e venda de produtos (price watching, eBay, marketplaces)"
+    status: done
+  - id: "nonlinear_20260630-configuration"
+    kind: project
+    title: "Configuration"
+    goal: "Criar SSOT do ecossistema de MCPs, skills e ferramentas do agente nonlinear — quem tem acesso a o quê, o que funciona, o que falta, e por quê."
+    status: done
+  - id: "e027_20260630"
+    kind: project
+    title: "Design Strategy"
+    goal: "AI agent architecture and design strategy consolidation from talk sessions"
+    status: done
+  - id: "e026_20260630"
+    kind: project
+    title: "Self-Promotion & Digital Identity"
+    goal: "Research-driven personal branding strategy (positioning, narrative, content tactics, income streams)"
+    status: done
+  - id: "e012_20260630"
+    kind: project
+    title: "Simplify Skills System"
+    goal: "Move all skills to workspace, remove symlinks, reduce infrastructure overhead from 3 steps to 1 step"
+    status: done
+# --- help-projector managed begin ---
+help_open:
+  []
+latest:
+  id: "P14E052"
+  title: "Promotion (portfolio and beyond)"
+  kind: "project"
+  date: "2026-10-31T01:09:57+00:00"
+# --- help-projector managed end ---

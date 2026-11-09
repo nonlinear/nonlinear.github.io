@@ -1,0 +1,174 @@
+---
+schema_version: 2.0
+project: librarian
+tier: flagship
+last_reconciled_at: "2026-11-06T10:40-05:00"
+reconciled_by: nonlinear
+
+
+# Librarian — help.yaml
+#
+# Declaração de estado, não campanha. "Neste momento, esta é uma relação que
+# o projeto está aberto a receber."
+#
+# Tudo aqui é GRATUITO e VOLUNTÁRIO. Os produtos são open source e commons —
+# é por isso que a ajuda pode ser de graça. Respeitamos o tempo do voluntário
+# e damos crédito.
+#
+# Fonte: epics/P02E000-help-needed/FINDINGS.md (evidence-only, 2026-11-06).
+# Citações de livro ausentes: biblioteca estava fora do ar durante a análise.
+# `library: null` é honesto, não é lacuna a preencher com suposição.
+
+needs:
+  # ---------------------------------------------------------------------
+  # 1. A necessidade número um, e é a que o owner nomeou.
+  # ---------------------------------------------------------------------
+  - id: rag-architecture-review
+    type: review
+    title: "Revisar a arquitetura de recuperação (FAISS, chunking, híbrido)"
+    description: >
+      O projeto roda um único FAISS IndexFlatIP (384-dim, bge-small-en-v1.5,
+      chunks de 1024 chars). Busca semântica pura devolve zero para consultas
+      abstratas — do tipo "como este autor pensa sobre X". Busca híbrida
+      (BM25 + FAISS + RRF) foi escrita como proposta e nunca construída.
+      Queremos alguém que leia o desenho e diga onde ele está errado, contra
+      a literatura de IR — não alguém para implementar.
+    status: open
+    effort: medium
+    time: "2 a 3 horas, uma vez, leitura assíncrona"
+    skills: ["information retrieval", "RAG", "vector search", "chunking", "avaliação"]
+    response:
+      mode: intake
+      cta: "Revisar a arquitetura"
+    limit: 3
+    visibility: public
+    evidence:
+      epic: P10E010
+      quote: "semantic-only retrieval returns 0 for architecture-level queries; BM25+FAISS+RRF exists as a proposal only"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # 2. O que o owner nomeou como "alguém que saiba de MCP e RAG".
+  # ---------------------------------------------------------------------
+  - id: mcp-rag-validation
+    type: conversation
+    title: "Validar nossas decisões de MCP e RAG com quem já fez"
+    description: >
+      Tomamos decisões que carregam peso e não foram validadas por ninguém de
+      fora: transporte HTTP em vez de stdio, bridge de 50 linhas no host,
+      eager loading do índice, e um esquema de nomes de ferramenta. Uma
+      conversa aberta — queremos ouvir onde isso quebra, não consenso.
+    status: open
+    effort: medium
+    time: "1 hora, uma conversa"
+    skills: ["MCP", "RAG", "arquitetura de agentes", "infraestrutura de busca"]
+    response:
+      mode: intake
+      cta: "Conversar"
+    limit: 5
+    visibility: public
+    evidence:
+      epic: P10E058
+      quote: "fixes written 2026-10-24 were 'verified' in a scratch container and never reached the live product"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # 3. O problema mais medido do projeto.
+  # ---------------------------------------------------------------------
+  - id: bounded-memory-ingestion
+    type: contribution
+    title: "Ingestão com memória limitada e publicação atômica do índice"
+    description: >
+      A ingestão carrega o corpus inteiro na memória para uma operação parcial.
+      Falhou seis vezes com a mesma assinatura: o FAISS é commitado e o metadata
+      não, deixando vetores órfãos. Foi "consertado" com mais RAM e depois
+      declarado bloqueador. Quem já escreveu escrita atômica de índice em escala
+      pode contribuir com o desenho, não só o patch.
+    status: open
+    effort: large
+    time: "sessão de desenho + revisão; estimar juntos"
+    skills: ["Python", "FAISS", "streaming", "atomic writes", "memória"]
+    response:
+      mode: intake
+      cta: "Contribuir com o desenho"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P10E011
+      quote: "three documented incidents with the same signature (FAISS committed, metadata not); promoted to BLOCKER 2026-10-29"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # 4. Integridade do corpus vista de fora.
+  # ---------------------------------------------------------------------
+  - id: corpus-integrity-check
+    type: testing
+    title: "Checagem de integridade do corpus por alguém de fora"
+    description: >
+      Três fontes de verdade discordam sobre o corpus: metadata.json,
+      .index_state.json e /stats. Cada endpoint escolhe uma chave de join
+      diferente, então book_title volta vazio. A equipe já diagnosticou isso
+      errado uma vez e quase rodou um reparo destrutivo. Precisamos de alguém
+      que olhe o corpus com olhos de fora e diga qual número é o verdadeiro.
+    status: open
+    effort: medium
+    time: "2 horas, leitura dos arquivos e do relatório"
+    skills: ["auditoria de dados", "integridade", "Python", "SQL"]
+    response:
+      mode: intake
+      cta: "Auditar o corpus"
+    limit: 2
+    visibility: public
+    evidence:
+      epic: P10E038
+      quote: "/search joins on book_hash, /resolve and /chunk on book_id -> book_title: ''; the team misdiagnosed this as 99.6% orphan and nearly ran a destructive repair"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # 5. Deduplicação — nunca passou por um gate.
+  # ---------------------------------------------------------------------
+  - id: dedup-gate-owner
+    type: contribution
+    title: "Dono de um gate de deduplicação que realmente rode"
+    description: >
+      Não existe código de deduplicação, só 13 grupos duplicados catalogados.
+      A deduplicação nunca passou por um gate porque não há gate. O trabalho não
+      é técnico difícil — é decidir o critério, escrevê-lo e fazer ele rodar em
+      toda ingestão.
+    status: open
+    effort: medium
+    time: "sessão de definição + implementação pequena"
+    skills: ["deduplicação", "hashing", "testes de gate"]
+    response:
+      mode: intake
+      cta: "Ser dono do gate"
+    limit: 1
+    visibility: public
+    evidence:
+      epic: P10E041
+      quote: "no dedup code exists; 13 duplicate groups; dedup has never passed a gate"
+      library: null
+
+  # ---------------------------------------------------------------------
+  # 6. O teste de rua: corpus estrangeiro.
+  # ---------------------------------------------------------------------
+  - id: abstract-query-street-test
+    type: testing
+    title: "Trazer um corpus seu e ver se a busca abstrata sobrevive"
+    description: >
+      O teste que interessa: rode a busca abstrata contra um corpus que não é o
+      nosso. Se quebra no seu, quebra no nosso. Queremos o caso feio — não o
+      demo arrumado.
+    status: open
+    effort: small
+    time: "30 minutos"
+    skills: ["RAG", "avaliação de busca"]
+    response:
+      mode: intake
+      cta: "Testar com meu corpus"
+    limit: 5
+    visibility: public
+    evidence:
+      epic: P10E010
+      quote: "abstract queries return zero; intended hybrid search was shelved"
+      library: null

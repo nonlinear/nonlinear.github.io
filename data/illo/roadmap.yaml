@@ -1,0 +1,200 @@
+# ROADMAP — projeção de descoberta (gerado por roadmap-projector)
+# project: illo
+# source: epics/  (epics são a fonte de verdade; este arquivo é índice derivado)
+# projector: roadmap-projector v2.1
+# NOTA: NÃO editar manualmente — o Parity regenera a partir dos epics. Git registra delta.
+epics:
+  - id: "P22E001"
+    kind: project
+    title: "Character Design & Illustration Classes"
+    goal: "Art learning resources, character design references, illustration techniques, cursos e professores de desenho/ilustração."
+    status: backlog
+  - id: "P22E002"
+    kind: project
+    title: "Configuration"
+    title_rest: "Configuration — Bases do Estudo de Ilustração"
+    goal: "Estabelecer as bases operacionais do estudo de ilustração do usuário: ferramentas próprias do agente, pipeline de extração de arte do Clip Studio Paint (no Oppo/Android) para o workspace, e o fluxo de review da arte (composição, estrutura de faces, comics, cores)."
+    status: backlog
+  - id: "P22E003"
+    kind: project
+    title: "CSP Mastery"
+    goal: "The user flow reaches Clip Studio Paint without depending on the app alone: .clip files are readable and writable, the library is the user's own and it makes sense, and agent environment and tools persist between sessions. A quick gallery of reusable backgrounds and patterns exists, and the gaps to a productive setup are named."
+    status: active
+  - id: "P22E004"
+    kind: project
+    title: "Drawing Exercises"
+    title_rest: "Drawing Exercises — Programa de Exercícios de Desenho"
+    goal: "Montar um programa de exercícios de desenho para o usuário, com base nos livros do acervo do Librarian, focado nos seus 4 eixos: composição, estrutura de faces, comics (ritmo/painéis) e cores."
+    status: backlog
+  - id: "P22E005"
+    kind: project
+    title: "Drawing As Repo"
+    goal: "Drawing is versioned work: a file has a defined place in the repository, and git becomes the memory of the drawing. Commit granularity carries meaning, a branch holds an alternative story, and HEAD exports on its own. Collaboration follows git, and the chosen approach says why it is git-native rather than version-control-native."
+    status: planning
+  - id: "P22E006"
+    kind: project
+    title: "Consumer Era"
+    goal: "The consumer era is closed. Epics that existed to use CSP and Krita as the user's own tools stop being work. What survives is competitor knowledge, and that is collected only when there is a feature to compare against. Retiring is removing from the path, not deleting the record."
+    status: planning
+  - id: "P22E007"
+    kind: project
+    title: "Walking Skeleton"
+    goal: "The project is a declared experimental tier, published on its own domain through the same exposure pattern the other experimental project uses: tunnel to localhost, no access gate, rate limit. The walking skeleton proves the essential loop — pen, pressure, vector line, file, reopen identical."
+    status: active
+  - id: "P22E008"
+    kind: project
+    title: "EXPORT MODE"
+    title_rest: "export mode (não é 1:1)"
+    goal: "Tratar export como TEORIA DE TRADUÇÃO, não como botão. O .illo é o dado canônico; SVG/PNG/.clip são projeções lossy — e cada projeção tem que declarar o que perdeu."
+    status: backlog
+  - id: "P22E009"
+    kind: project
+    title: "LAYER AND TOOL"
+    title_rest: "layer and tool (BACKLOG / ideias a explorar)"
+    goal: "Explorar se \"layer\" pode ser o CONTEXTO DE DESENHO (brush + tool + cor/range) em vez de uma pilha de conteúdo. Se der certo, trocar de brush/tool/cor deixa de ser uma escolha em UI e passa a ser uma consequência do que você está desenhando — e a barra de 375 botões desaparece."
+    status: backlog
+  - id: "P22E010"
+    kind: project
+    title: "Line Or Brush"
+    goal: "The drawing decides whether a stroke is a line, whose identity is the path, or a brush, whose identity is the stamp. Owner's thesis (2026-10-29, verbatim): \"line is for brush like text is for font. that's it.\" The path is the string; the brush is the renderer. What the file saves, what erase-to-intersection may assume, what a brush swap re-renders and what one commit per second costs in bytes all follow from that analogy."
+    status: planning
+  - id: "P22E011"
+    kind: project
+    title: "Math Friendly"
+    goal: "Math friendly is a verifiable property, not an aspiration, and it filters which brushes, queries and filters the community can write. A feature that cannot be expressed as a function over strokes does not enter the set, and the reason is recorded."
+    status: active
+  - id: "P22E012"
+    kind: project
+    title: "Gesture Contract"
+    goal: "The contract between gesture and body is written before any gesture is designed. The question is which conditions the body needs to incorporate the tool, and what breaks that incorporation — not which gesture looks good."
+    status: planning
+  - id: "P22E013"
+    kind: project
+    title: "3D Sketch"
+    goal: "Form and perspective construction is the step the two desktop tools leave open, and a sketch tool in three dimensions fills it. Each candidate either enters the user flow with a named role or is rejected with a reason, and the decision is recorded before any tool is adopted."
+    status: active
+  - id: "P22E014"
+    kind: project
+    title: "CSP Materials"
+    goal: "The material system of Clip Studio Paint is understood: types, formats and where each lives on disk. Assets download from Clip Studio Assets, and the whole set syncs through Syncthing to the user's phone and Mac without a manual pass."
+    status: planning
+  - id: "P22E015"
+    kind: project
+    title: "Git Native Drawing"
+    goal: "The taxonomy of git-native illustration is written: file versus repo, HEAD against working tree, revision, branch, fork and merge, autosave against commit, and where the repository lives. The boundary of git in the browser is measured. Browser-first or app follows from the taxonomy, not from preference, and nothing is built before the discovery closes."
+    status: planning
+  - id: "P22E016"
+    kind: project
+    title: "Open Drawing App"
+    goal: "A drawing app built on open primitives — pointer events, InkML, a libmypaint brush engine — instead of depending on closed tools. Pen and pressure, vector ink, layers, an open format, a file that lives in a folder, a document an agent can read and modify, and a mobile surface that works."
+    status: planning
+  - id: "P22E017"
+    kind: project
+    title: "Commit Battery"
+    goal: "A battery of checks runs before every commit in the project, so a commit that breaks the build or the contract never lands. Each check names what it protects, and the battery is fast enough that nobody bypasses it to keep moving."
+    status: active
+  - id: "P22E018"
+    kind: project
+    title: "Krita Comparison"
+    goal: "Krita and Clip Studio Paint are compared through the lens of the user's illustration study: where Krita is better, how far its API and .kra format allow editing, what vector brushes and layers exist, whether erase-to-intersection survives, and how the two trade files."
+    status: planning
+  - id: "P22E019"
+    kind: project
+    title: "Vector Brushes"
+    goal: "Existing vector brush engines, formats and presets are discovered and what can be reused or adapted is named. The dependency contract between document, stroke and brush is written, including swap, a missing brush and the raster thumbnail. The thesis is that a brush is a font."
+    status: planning
+  - id: "P22E020"
+    kind: project
+    title: "Pressure"
+    goal: "Pressure sensitivity is defined through its path: capture, representation, mapping, then render or edit. Each contender's promise is compared with what it delivers, and the approach for the web vector MVP follows from the comparison. Input and mapping live here; the brush engine lives in its own epic."
+    status: planning
+  - id: "P22E021"
+    kind: project
+    title: "Verification gate commit"
+    goal: "Every commit states what was verified and what was not, and the statement is true. The battery is measured before it is extended: a check that cannot fail is removed or fixed, never trusted. The gate runs on the commit, because there is no publish — editing is publishing, and the commit is the only moment where \"this version is the true one\" can be said."
+    status: active
+  - id: "P22E024"
+    kind: project
+    title: "Reality Show"
+    goal: "The work being done is shown as it happens, in the open, to a community that answers back — not a launch of a finished product. This epic holds that thinking so it is not lost, and so the MVP is built knowing a show may follow it. It commits to no channel and no code, and it does not unblock before the MVP closes; the body separates what the idea is from what it is not."
+    status: planning
+  - id: "P22E025"
+    kind: project
+    title: "SVG filters — know them to go beyond them"
+    goal: "Understand the SVG filter model well enough to use it deliberately and to leave it deliberately: which effects are expressible as a filter chain, which need a different mechanism, and where the browser price is paid. The deliverable is a control dictionary with a decision per primitive, the same shape as the Procreate DNA table in P22E010."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E026"
+    kind: project
+    title: "O illo é"
+    goal: "Fixar o critério de aceitação de recursos do .illo — \"o browser roda, então o .illo aceita\" — e fixar a consequência dele: o .illo é uma PROJEÇÃO, não um documento portátil. O portable/export é um alvo futuro e derivado. O critério de comunidade (parque, real time ou across time) é o que justifica o browser, e portanto é o que governa a arquitetura."
+    status: planning
+  - id: "P22E027"
+    kind: project
+    title: "Manifestação fiel o"
+    goal: "Nomear a qualidade, escrever o contrato que a sustenta, e deixá-la testável. A qualidade é **reprodução fiel** (*faithful reproduction*): dado o mesmo `.illo`, o mesmo renderer e o mesmo ambiente, qualquer parte reconstitui bit-a-bit a mesma imagem — depois de 3 meses, 2 anos ou 10 anos. O teste de MVP é o *freeze check*: congelar a saída de hoje e provar que amanhã ela ainda reproduz."
+    status: planning
+  - id: "P22E028"
+    kind: project
+    title: "O que nós"
+    goal: "Nomear o que o illo É, em três camadas (value → protocolo → invariantes), e — o item novo e operacional — desenhar o único teste que a paranoia não substitui: **este commit toca um invariante?** Não é vigilância permanente. É classificação obrigatória, para que \"toca o invariante\" seja uma resposta, não uma suspeita."
+    status: planning
+  - id: "P22E029"
+    kind: project
+    title: "O parque — e se o parque já tiver 100 anos?"
+    goal: "Manter aberta a pergunta do parque como problema de TEMPO, não de recurso social. Este epic é o lado illo; o lado teórico vive em `dromology/P23E004`. Nada aqui é requisito. Tudo aqui é pergunta que muda o desenho do `.illo` se for respondida."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E030"
+    kind: project
+    title: "Community base o"
+    goal: "Separar três coisas que vinham juntas e não são a mesma: **a base** (quem existe), **o parque** (onde se encontra) e **a divulgação** (como alguém fica sabendo). O pedido do owner é sobre a terceira, mas ela depende da primeira. E o argumento novo — **\"illo is a protocol\"** — é o que torna a divulgação possível sem virar marketing."
+    status: planning
+  - id: "P22E031"
+    kind: project
+    title: "O parque por proximidade — cadê o desenho que está aqui?"
+    goal: "Registrar a única variante de parque que **não** é feed: o parque indexado por **PROXIMIDADE FÍSICA** em vez de tempo. Ela não é uma feature nova — é a resposta a três perguntas já abertas (P22E029 q2 \"muita gente é quantos\", q4 \"real time é requisito\", P22E030 \"o `.illo` como endereço\"). Este epic diz o que a ideia **resolve**, o que ela **custa** e o que ela **proíbe**."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E032"
+    kind: project
+    title: "Identidade e permissão — cada desenho é um repo, e depois o git não basta"
+    goal: "Separar duas coisas que hoje o projeto trata como uma só — **identidade** (quem é você) e **permissão** (quem pode fazer o quê com este desenho). Registrar que o git serve como mecanismo de permissão hoje e **não serve amanhã**, e que a descentralização é uma decisão de arquitetura, não uma bandeira política."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E033"
+    kind: project
+    title: "Collage — o parque onde os amigos colam"
+    goal: "**Finger only. Photos only. Creations only.** O objetivo do owner (2026-10-30 22:08 EDT), verbatim. Três restrições de entrada, e elas são o epic inteiro: a colagem é feita **com o dedo**, com **fotos**, e o que entra são **criações** — não telas, não capturas, não arquivos quaisquer. Collage é **função sobre strokes**, não tipo de arquivo (já decidido, e está certo)."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E034"
+    kind: project
+    title: "notas no site"
+    goal: "Publicar os epics como páginas do site — não como dump de markdown, mas como **uma coisa que quem chega consegue ler**. O acesso é pelo **tool box**, não pelo repo. As notas existem para fazer alguém **sair de casa e ir desenhar**, então a régua de \"bonito e interessante\" não é estética: é **o que faz a pessoa desenhar amanhã**."
+    status: planning
+  - id: "P22E035"
+    kind: project
+    title: "Pertencimento — o que faz alguém já se sentir de casa"
+    goal: "Propor **P (pertencimento)** como o invariante que hoje não existe, e **dar a cada clique o cláusula de clique** — um critério que decide, sem opinião, se duas pessoas estão na mesma manga da árvore ou na mesma manga mas longe. E registrar o que isso custa em operação."
+    status: unknown
+    reason: status_nao_canonico
+  - id: "P22E036"
+    kind: project
+    title: "Locale no commit"
+    goal: "Responder **como** o lugar entra num commit sem virar parâmetro, sem virar GPS cru, e sem depender de um servidor que ainda não existe. A resposta curta: **trailer no commit**. O resto deste contrato é por que os outros dois caminhos reprovam."
+    status: planning
+  - id: "mvp-erase"
+    kind: project
+    title: "MVP: erase to intersection"
+    goal: "Um app de desenho offline em que tocar uma linha a corta no cruzamento mais próximo de cada lado. Provar que isso basta para desenhar de verdade."
+    status: done
+# --- help-projector managed begin ---
+help_open:
+  []
+latest:
+  id: "P22E009"
+  title: "LAYER AND TOOL"
+  kind: "project"
+  date: "2026-11-01T12:28:17+00:00"
+# --- help-projector managed end ---
