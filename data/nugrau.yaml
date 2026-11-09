@@ -1,0 +1,27 @@
+project: nugrau
+tier: collab
+exporter: v1.0
+counts:
+  active: 1
+  planning: 0
+  done: 1
+  done_total: 1
+sections:
+- key: active
+  items:
+  - id: P25E001
+    label: 1
+    title: Garment Pipeline
+    goal: 'The agent turns a flat photo of a garment into a piece it can reason about: detection, classification,
+      3D reconstruction and virtual try-on. Wardrobe organization is the surface where those pieces meet.
+      The first real piece of work is chosen from what survives as concrete today.'
+- key: planning
+  items: []
+- key: done
+  items:
+  - id: P25E004
+    label: 1
+    title: First Iteration — historical record
+    goal: 'Preserve the historical record of Nugrau''s first exploratory iteration: early tech-lab notes,
+      the electromagnetic/industrial timeline sketch, and the Centelha grant submission materials. This
+      epic is a recovered archive, not active work.'
