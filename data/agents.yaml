@@ -2,15 +2,16 @@
 #
 # Fonte de verdade do tier: <agent>/workspace/IDENTITY.md (campo `tier:`),
 # decidido top-down pelo owner (backstage P02E034). Este arquivo NÃO inventa
-# tier — registra o que foi declarado, e marca `derived: true` quando o tier
-# não está escrito e foi inferido do papel do agente (horizontal que serve,
-# sem produto, não é flagship).
+# tier. Sem `tier:` no IDENTITY.md, o agente vai para `unenrolled` e não tem
+# tier nenhum — não é "experimental por omissão".
 #
-# TODO(owner): confirmar os `derived: true`. Nenhum deles é decisão minha.
+# Divergência entre este arquivo e o IDENTITY.md de um agente é bug deste
+# arquivo. O IDENTITY ganha sempre.
 
 defaults:
-  tier_missing: experimental   # agente sem tier escrito e sem papel → experimental
-  derived_tier: experimental
+  # Nenhum tier é inventado. Sem `tier:` no IDENTITY.md, o agente não tem tier.
+  tier_missing: null
+  unenrolled_visible: false    # não tem página, não tem help, não entra no heartbeat
 
 # --- TIER DECLARADO no IDENTITY.md ---
 declared:
@@ -57,10 +58,19 @@ declared:
     secured: true
     role: "Collaboration tier."
 
-# --- TIER DERIVADO (sem `tier:` escrito; inferido do papel) ---
-# Horizontais que servem, não produzem. Por P02E034 §1 não são flagship:
-# flagship = "existe e é estável" como PRODUTO. Estas são capacidades internas.
-derived:
+# --- SEM TIER DECLARADO ---
+# Estes agentes não têm `tier:` no IDENTITY.md. O IDENTITY é canônico: sem tier
+# escrito, o agente NÃO tem tier. Não se infere.
+#
+# Regra (owner, 2026-11-09): "se não [dizem experimental no identity], não são.
+# se sim, tão errados. identity eh o canônico. no confusion."
+#
+# Consequência: não entram no roadmap heartbeat, não têm página, não têm help.
+# Para sair desta lista, alguém escreve `tier:` no IDENTITY.md do agente.
+#
+# O campo `tier` abaixo foi REMOVIDO. `role` é descrição, não classificação.
+
+unenrolled:
   - slug: infrastructure
     name: Infrastructure
     role: "Host, tunnels, services, runtime."
