@@ -1,15 +1,306 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Kin — Nonlinear</title><link rel=stylesheet href=/css/fonts.css><link rel=stylesheet href=/css/nonlinear-theme.css><link rel=stylesheet href=/css/base.css><link rel=stylesheet href=/css/tiers.css><link rel=stylesheet href=/css/blocks.css><script defer data-domain=nonlinearstudio.org src=https://analytics.nonlinear.nyc/js/script.js></script><script type=module>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kin — Nonlinear</title>
+  
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/nonlinear-theme.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/tiers.css">
+  <link rel="stylesheet" href="/css/blocks.css">
+<script defer data-domain="nonlinearstudio.org" src="https://analytics.nonlinear.nyc/js/script.js"></script>
+  
+  <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script></head><body><header class=site-header><nav class=site-nav aria-label=Site><h2 class=logo><a href=/>Nonlinear Studio</a></h2></nav></header><main><article class="t-portfolio t-flagship"><header class=t-portfolio__head><p class=eyebrow>flagship</p><h1>Kin</h1><p class=lede>Design-Engineer with motion in the bones. Visual brain, animator's eye.</p></header><section class=help aria-label="Help needed kin"><h2>Help <small>4 needs</small></h2><table class=help-table><thead><tr><th>id</th><th>status</th><th>title</th></tr></thead><tbody><tr><td><code>harness-architect</code></td><td>open</td><td>Quem já construiu um harness de agente para revisar a fronteira do runtime</td></tr><tr><td><code>security-posture</code></td><td>open</td><td>Decidir o que 'up to par' significa para um agente pessoal</td></tr><tr><td><code>audio-engineer-voice-loop</code></td><td>open</td><td>Audio engineer para o loop de voz (STT → agente → TTS) no Android/iOS</td></tr><tr><td><code>nat-traversal</code></td><td>open</td><td>Networking: o transporte remoto não tem segundo domínio de falha</td></tr></tbody></table></section><section class=roadmap aria-label="Roadmap kin"><h2>Roadmap <small>142 epics</small></h2><table class=roadmap-table><thead><tr><th>id</th><th>status</th><th>title</th></tr></thead><tbody><tr><td><code>503-patch</code></td><td>done</td><td>503 Patch — UI Honesto</td></tr><tr><td><code>P09E001</code></td><td>backlog</td><td>Configuration</td></tr><tr><td><code>P09E002</code></td><td>backlog</td><td>Kin-Ready Agents</td></tr><tr><td><code>P09E003</code></td><td>planning</td><td>Policy Propagation</td></tr><tr><td><code>P09E004</code></td><td>backlog</td><td>Commenting on Markdown</td></tr><tr><td><code>P09E005</code></td><td>active</td><td>Embedded Tunneling</td></tr><tr><td><code>P09E006</code></td><td>planning</td><td>Health Telemetry</td></tr><tr><td><code>P09E007</code></td><td>planning</td><td>Timeline Platform</td></tr><tr><td><code>P09E008</code></td><td>planning</td><td>Testing Platform</td></tr><tr><td><code>P09E009</code></td><td>planning</td><td>Epistemic Validator</td></tr><tr><td><code>P09E010</code></td><td>planning</td><td>Visible Spawns</td></tr><tr><td><code>P09E011</code></td><td>done</td><td>Visions</td></tr><tr><td><code>P09E012</code></td><td>backlog</td><td>💭 Emoting — Micro-Expressões Glanceable do Agente</td></tr><tr><td><code>P09E013</code></td><td>planning</td><td>Frontend Compiler</td></tr><tr><td><code>P09E014</code></td><td>planning</td><td>Message Stamp</td></tr><tr><td><code>P09E015</code></td><td>active</td><td>Quality Playbook</td></tr><tr><td><code>P09E016</code></td><td>active</td><td>Midstep</td></tr><tr><td><code>P09E017</code></td><td>planning</td><td>Midstep Planning</td></tr><tr><td><code>P09E019</code></td><td>done</td><td>Mea Culpa — Recovery + War-Tested Testing Foundation</td></tr><tr><td><code>P09E020</code></td><td>active</td><td>Action Menu</td></tr><tr><td><code>P09E021</code></td><td>backlog</td><td>Advanced Async Execution & Run Lifecycle</td></tr><tr><td><code>P09E022</code></td><td>backlog</td><td>Agent Self-Heal — Session Identity Mismatch</td></tr><tr><td><code>P09E023</code></td><td>backlog</td><td>Kin Android</td></tr><tr><td><code>P09E025</code></td><td>backlog</td><td>Audio Security — autenticar e proteger ações por voz</td></tr><tr><td><code>P09E026</code></td><td>planning</td><td>Bootstrap State</td></tr><tr><td><code>P09E027</code></td><td>planning</td><td>Freezing Model</td></tr><tr><td><code>P09E028</code></td><td>backlog</td><td>Bridge Offline Incident — kin morreu, respostas ao app sumiram, epic de ajuste</td></tr><tr><td><code>P09E029</code></td><td>active</td><td>Bridge Runtime</td></tr><tr><td><code>P09E030</code></td><td>backlog</td><td>Capability System</td></tr><tr><td><code>P09E031</code></td><td>backlog</td><td>CF Token Debug — Evidência Programática Completa</td></tr><tr><td><code>P09E032</code></td><td>backlog</td><td>Conversation Context Segments</td></tr><tr><td><code>P09E033</code></td><td>backlog</td><td>Conversation Continuity</td></tr><tr><td><code>P09E034</code></td><td>backlog</td><td>Cross-Device Kin</td></tr><tr><td><code>P09E035</code></td><td>backlog</td><td>Design Fixes — Message Card Full-Width + OG Card Placement</td></tr><tr><td><code>P09E036</code></td><td>backlog</td><td>Device Authentication</td></tr><tr><td><code>P09E037</code></td><td>backlog</td><td>Documentation Migration</td></tr><tr><td><code>P09E038</code></td><td>planning</td><td>Fast Agent Swap</td></tr><tr><td><code>P09E039</code></td><td>backlog</td><td>Ghost Messages Bug</td></tr><tr><td><code>P09E040</code></td><td>planning</td><td>Bridge Health</td></tr><tr><td><code>P09E041</code></td><td>planning</td><td>Verification First</td></tr><tr><td><code>P09E042</code></td><td>backlog</td><td>Heartbeat Message Filtering</td></tr><tr><td><code>P09E043</code></td><td>backlog</td><td>Heartbeat Protocol Fix</td></tr><tr><td><code>P09E044</code></td><td>backlog</td><td>I'm Home — SSID Network Detection</td></tr><tr><td><code>P09E046</code></td><td>backlog</td><td>iOS Integrations & System Embedding</td></tr><tr><td><code>P09E047</code></td><td>backlog</td><td>iOS Stability Hardening</td></tr><tr><td><code>P09E048</code></td><td>backlog</td><td>Kin Android — Cloudflare Access: cadeia VERIFICADA (resolved — falso alarme)</td></tr><tr><td><code>P09E049</code></td><td>backlog</td><td>Kin as Product</td></tr><tr><td><code>P09E050</code></td><td>backlog</td><td>Kin Backlog & Interesting Ideas</td></tr><tr><td><code>P09E051</code></td><td>backlog</td><td>Kin Fitness Testing — Capabilities para FF Registry</td></tr><tr><td><code>P09E052</code></td><td>backlog</td><td>Kin Kit</td></tr><tr><td><code>P09E053</code></td><td>backlog</td><td>Kin Runtime Health — Detect, Classify, Recover, Verify</td></tr><tr><td><code>P09E054</code></td><td>backlog</td><td>Lenses</td></tr><tr><td><code>P09E055</code></td><td>backlog</td><td>Message Types and Presentation</td></tr><tr><td><code>P09E056</code></td><td>planning</td><td>Device Modes</td></tr><tr><td><code>P09E057</code></td><td>backlog</td><td>Muscle Memory (expert actions)</td></tr><tr><td><code>P09E058</code></td><td>backlog</td><td>New Platforms</td></tr><tr><td><code>P09E059</code></td><td>backlog</td><td>Offline Reading</td></tr><tr><td><code>P09E060</code></td><td>planning</td><td>Parity Onboarding</td></tr><tr><td><code>P09E061</code></td><td>done</td><td>OpenGraph Link Previews</td></tr><tr><td><code>P09E062</code></td><td>planning</td><td>Design Tooling</td></tr><tr><td><code>P09E063</code></td><td>backlog</td><td>Penpot × Fontbase — como integrar os dois</td></tr><tr><td><code>P09E064</code></td><td>backlog</td><td>Presenting Kin</td></tr><tr><td><code>P09E065</code></td><td>backlog</td><td>Pricing & Packaging Strategy</td></tr><tr><td><code>P09E066</code></td><td>backlog</td><td>Publication Hygiene</td></tr><tr><td><code>P09E067</code></td><td>planning</td><td>Remote Access</td></tr><tr><td><code>P09E069</code></td><td>backlog</td><td>Rich Content Formats</td></tr><tr><td><code>P09E070</code></td><td>backlog</td><td>Scroll-Aware Context</td></tr><tr><td><code>P09E071</code></td><td>backlog</td><td>Security & Privacy</td></tr><tr><td><code>P09E072</code></td><td>backlog</td><td>Send Trace Protocol (Foundation Fortification)</td></tr><tr><td><code>P09E074</code></td><td>backlog</td><td>Session Compaction × Bridge Mirroring</td></tr><tr><td><code>P09E075</code></td><td>active</td><td>Session Health</td></tr><tr><td><code>P09E076</code></td><td>active</td><td>Local Admin</td></tr><tr><td><code>P09E077</code></td><td>backlog</td><td>Shared Agent UX</td></tr><tr><td><code>P09E078</code></td><td>backlog</td><td>Shared Agents</td></tr><tr><td><code>P09E079</code></td><td>backlog</td><td>surfacing openclaw</td></tr><tr><td><code>P09E080</code></td><td>planning</td><td>Tech Debt</td></tr><tr><td><code>P09E081</code></td><td>backlog</td><td>Testing House — Kin Product Verification</td></tr><tr><td><code>P09E082</code></td><td>backlog</td><td>Tunneling Switch — Kin troca entre mecanismos de tunnelling para o mesmo Bridge</td></tr><tr><td><code>kin_tunnel-failsafe_20260917</code></td><td>planning</td><td>Tunnel Failsafe — alternativas ao Cloudflare (tailscale e outros)</td></tr><tr><td><code>P09E083</code></td><td>done</td><td>Voice Input — Index/kin → OpenClaw, with mode (origin flag)</td></tr><tr><td><code>P09E084</code></td><td>done</td><td>Voice Output — comportamento por mode (nota: TTS quando pebble)</td></tr><tr><td><code>P09E085</code></td><td>backlog</td><td>Voice Updates — generalizar voz (default = agente selecionado no device, possivel 'call a outros')</td></tr><tr><td><code>P09E086</code></td><td>backlog</td><td>Agent Run Reliability — freezes/catalog de causas-raiz</td></tr><tr><td><code>P09E087</code></td><td>backlog</td><td>Kin Logo — parity de ícones entre plataformas + header</td></tr><tr><td><code>P09E088</code></td><td>paused</td><td>Scroll Positioning</td></tr><tr><td><code>P09E089</code></td><td>backlog</td><td>Scroll Adjustments (backlog de refinos)</td></tr><tr><td><code>P09E090</code></td><td>planning</td><td>Agent Ordering</td></tr><tr><td><code>P09E091</code></td><td>done</td><td>Design Fixes</td></tr><tr><td><code>P09E092</code></td><td>done</td><td>Kin Test Harness: Pipeline Architecture & Gates</td></tr><tr><td><code>P09E093</code></td><td>backlog</td><td>Check Parity — real-world coverage (device reality + re-verify source epics)</td></tr><tr><td><code>P09E094</code></td><td>backlog</td><td>Epic Branches — branch-per-epic policy (ADR: paused 2026-10-07)</td></tr><tr><td><code>P09E095</code></td><td>backlog</td><td>Playground Rules for Bridge — different deliverable, different assurance</td></tr><tr><td><code>P09E096</code></td><td>planning</td><td>Native Substrate</td></tr><tr><td><code>P09E097</code></td><td>active</td><td>Lane Deadlock</td></tr><tr><td><code>P09E098</code></td><td>planning</td><td>Freezing Explained</td></tr><tr><td><code>P09E099</code></td><td>planning</td><td>No Bridge</td></tr><tr><td><code>P09E100</code></td><td>done</td><td>Python Bridge CORS Analysis</td></tr><tr><td><code>P09E101</code></td><td>active</td><td>Offline Channel</td></tr><tr><td><code>P09E102</code></td><td>active</td><td>Envelope Authoritative Classification</td></tr><tr><td><code>P09E103</code></td><td>active</td><td>Collapse by Metadata</td></tr><tr><td><code>P09E104</code></td><td>active</td><td>Image Syntax</td></tr><tr><td><code>P09E105</code></td><td>active</td><td>Rich Media</td></tr><tr><td><code>P09E106</code></td><td>active</td><td>Direct Transport</td></tr><tr><td><code>P09E107</code></td><td>active</td><td>Provenance stamping</td></tr><tr><td><code>P09E108</code></td><td>planning</td><td>check the pantry</td></tr><tr><td><code>P09E109</code></td><td>done</td><td>Spike Epic Protocol — a skill for creating spike epics (meta: the epic that creates the thing that creates epics)</td></tr><tr><td><code>P09E110</code></td><td>planning</td><td>Gateway Parity</td></tr><tr><td><code>P09E111</code></td><td>planning</td><td>Design Decision</td></tr><tr><td><code>P09E112</code></td><td>active</td><td>Affordance parity</td></tr><tr><td><code>P09E113</code></td><td>backlog</td><td>Dedicated Test Devices</td></tr><tr><td><code>P09E114</code></td><td>planning</td><td>Liveness</td></tr><tr><td><code>P09E127</code></td><td>backlog</td><td>Canonical States</td></tr><tr><td><code>P09E128</code></td><td>backlog</td><td>Small Fixes</td></tr><tr><td><code>P09E129</code></td><td>planning</td><td>Timeline Platform</td></tr><tr><td><code>P09E130</code></td><td>active</td><td>Design Fix</td></tr><tr><td><code>P09E131</code></td><td>backlog</td><td>KinBoard — Input-Adjacent Action Surface</td></tr><tr><td><code>P09E132</code></td><td>backlog</td><td>SDK Hygiene / Test-Runner Recovery</td></tr><tr><td><code>e018_20260427</code></td><td>done</td><td>Agent Discovery & Metadata</td></tr><tr><td><code>kin_20260522-E079</code></td><td>done</td><td>Bridge Performance Fix</td></tr><tr><td><code>kin_cache_rebuild_state</code></td><td>done</td><td>Cache Rebuild State — tornar o rebuild local observável (device novo)</td></tr><tr><td><code>kin_20260525-E072</code></td><td>done</td><td>Context Grouping</td></tr><tr><td><code>e032_20260630</code></td><td>done</td><td>Context v1</td></tr><tr><td><code>kin_20260702_delay</code></td><td>done</td><td>Delay Tolerance — Intention Before Delivery</td></tr><tr><td><code>design_updates</code></td><td>done</td><td>Design Updates — cards (messages) flushed 100% width</td></tr><tr><td><code>e034_20260428</code></td><td>done</td><td>Enhanced Chat Experience</td></tr><tr><td><code>e017_20260426</code></td><td>done</td><td>Flutter Native</td></tr><tr><td><code>kin_20260508-E058</code></td><td>done</td><td>Golden Reference Fixes</td></tr><tr><td><code>e028_20260630</code></td><td>done</td><td>Initial UX Polish</td></tr><tr><td><code>e023_20260428</code></td><td>done</td><td>Kin Bridge</td></tr><tr><td><code>e027_20260630</code></td><td>done</td><td>Kin UI Redesign</td></tr><tr><td><code>kin_20260523-E076</code></td><td>done</td><td>Message Collapse Variant</td></tr><tr><td><code>onboarding-experience</code></td><td>migrated</td><td>Onboarding Experience</td></tr><tr><td><code>kin_E095</code></td><td>done</td><td>Platform Readiness & Deploy Hygiene</td></tr><tr><td><code>product-voice-framing</code></td><td>done</td><td>Product Voice Framing</td></tr><tr><td><code>kin_20260623</code></td><td>done</td><td>Project-Centric Kin</td></tr><tr><td><code>e045_20260507</code></td><td>done</td><td>Protocol Contracts & Timeline Correctness</td></tr><tr><td><code>e030_20260513</code></td><td>done</td><td>Refinements</td></tr><tr><td><code>e004_20260424</code></td><td>done</td><td>Strategy</td></tr><tr><td><code>e003_20260424</code></td><td>done</td><td>Tech Stack</td></tr><tr><td><code>kin_20260624-tooling</code></td><td>done</td><td>Tooling</td></tr><tr><td><code>tunnel-flap-emergency_20260831</code></td><td>done</td><td>EMERGÊNCIA — Kin dependente do Cloudflare Tunnel (P1) + decisão kin-remote</td></tr><tr><td><code>e048_20260514</code></td><td>done</td><td>Two-Way Kin Bridge</td></tr></tbody></table><p class=roadmap-latest><strong>latest</strong> <code>P09E131</code> KinBoard — Input-Adjacent Action Surface</p></section><div class=t-portfolio__body><p>In the same way that a well-designed object reveals how it wants to be held,
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Site">
+    <h2 class="logo"><a href="/">Nonlinear Studio</a></h2>
+  </nav>
+</header>
+
+<main>
+<article class="t-portfolio t-flagship">
+<header class="t-portfolio__head">
+  <p class="eyebrow">flagship</p>
+  <h1>Kin</h1>
+  <p class="lede">Design-Engineer with motion in the bones. Visual brain, animator&#39;s eye.</p>
+</header>
+
+
+  
+
+
+
+<section class="help" aria-label="Help needed kin">
+  <h2>Help <small>4 needs</small></h2>
+
+  <table class="help-table">
+    <thead><tr><th>id</th><th>status</th><th>title</th></tr></thead>
+    <tbody>
+      
+      <tr><td><code>harness-architect</code></td><td>open</td><td>Quem já construiu um harness de agente para revisar a fronteira do runtime</td></tr>
+      
+      <tr><td><code>security-posture</code></td><td>open</td><td>Decidir o que &#39;up to par&#39; significa para um agente pessoal</td></tr>
+      
+      <tr><td><code>audio-engineer-voice-loop</code></td><td>open</td><td>Audio engineer para o loop de voz (STT → agente → TTS) no Android/iOS</td></tr>
+      
+      <tr><td><code>nat-traversal</code></td><td>open</td><td>Networking: o transporte remoto não tem segundo domínio de falha</td></tr>
+      
+    </tbody>
+  </table>
+
+  
+</section>
+
+
+  
+
+
+
+<section class="roadmap" aria-label="Roadmap kin">
+  
+  
+    
+    
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Currently working<span class="roadmap-sub">Active epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>Embedded Tunneling</strong><sup class="roadmap-id">P09E005</sup><span class="roadmap-goal"> — The bridge embeds the smallest secure tunnelling option that is open source and self-hosted, so remote access works without a third party and without asking the user to understand networking. Remote here means the central web interface and the remote app, both reached through the same embedded path.</span>
+        </li>
+        
+        <li>
+          <strong>Quality Playbook</strong><sup class="roadmap-id">P09E015</sup><span class="roadmap-goal"> — The studio&#39;s playbook states how it verifies and maintains quality: a fast feedback loop with rigor, a triage at three speeds, a pipeline with promotion, assurance tests as lock-in, spawn hygiene, the protocol of rounds and the artifact gate. It is the written form of a process that already runs.</span>
+        </li>
+        
+        <li>
+          <strong>Midstep</strong><sup class="roadmap-id">P09E016</sup><span class="roadmap-goal"> — A link that survives email resolves to the right native scheme on the right device: the bridge validates it against a per-device allowlist and hands it off in one click, with no residual web page. Each step is a midstep in an ecology, and the first case is a note.</span>
+        </li>
+        
+        <li>
+          <strong>Action Menu</strong><sup class="roadmap-id">P09E020</sup><span class="roadmap-goal"> — One action menu reached by press and hold serves every action surface, and it scales to new actions without a new component per screen. The menu knows which actions apply where, so the user does not see the ones that do not.</span>
+        </li>
+        
+        <li>
+          <strong>Bridge Runtime</strong><sup class="roadmap-id">P09E029</sup><span class="roadmap-goal"> — The bridge runtime carries the new agent endpoint and the operations built on it, with the protocol version it declares matching the one it serves. A client that reads the declared version gets the behavior that version promises.</span>
+        </li>
+        
+        <li>
+          <strong>Session Health</strong><sup class="roadmap-id">P09E075</sup><span class="roadmap-goal"> — A session survives an arbitrary rotation or restart without losing conversational identity or the working context the task needs, while the event stream stays continuous and the user sees one conversation. The healing does not depend on the same provider that failed.</span>
+        </li>
+        
+        <li>
+          <strong>Local Admin</strong><sup class="roadmap-id">P09E076</sup><span class="roadmap-goal"> — The user installs the bridge, opens a local web surface that shows and edits the configuration — home network, devices, usage — and the app reports its bootstrap and timeline state there. The admin is small and local, independent of the message stamp.</span>
+        </li>
+        
+        <li>
+          <strong>Lane Deadlock</strong><sup class="roadmap-id">P09E097</sup><span class="roadmap-goal"> — The class of failure that makes several agents look frozen is isolated and mitigated: two writers colliding on one session, with its upstream causes in a watchdog blind to state and a long failover. The fix names the class, not the symptom.</span>
+        </li>
+        
+        <li>
+          <strong>Offline Channel</strong><sup class="roadmap-id">P09E101</sup><span class="roadmap-goal"> — One channel stays offline while the stable channel stays online on the same device, the same cellular network and the same endpoint. The divergence needs a demonstrated root cause before it is explained.</span>
+        </li>
+        
+        <li>
+          <strong>Envelope Authoritative Classification</strong><sup class="roadmap-id">P09E102</sup><span class="roadmap-goal"> — Stop classifying control-plane events by matching text inside the message body. Classify only by an authoritative marker: a declared type field on the envelope, or (interim) an ANCHORED match on the transport envelope. Body-substring matching is banned. Fixes two opposite defects at once.</span>
+        </li>
+        
+        <li>
+          <strong>Collapse by Metadata</strong><sup class="roadmap-id">P09E103</sup><span class="roadmap-goal"> — Heartbeats (and other control-plane events) are shown, not hidden — but as a SINGLE collapsed pill (e.g. &#34;50 ❤️&#34;), not one bubble per event and not zero. Classification is driven by an authoritative TYPE field (metadata), never by matching substrings of the message body — so there are no false positives when a normal message merely mentions a token.</span>
+        </li>
+        
+        <li>
+          <strong>Image Syntax</strong><sup class="roadmap-id">P09E104</sup><span class="roadmap-goal"> — The exact syntaxes that render an image in a message are locked, and vector images render instead of failing silently. Every claim was probed on the real renderer and the simulator, so the list is evidence and not guesswork.</span>
+        </li>
+        
+        <li>
+          <strong>Rich Media</strong><sup class="roadmap-id">P09E105</sup><span class="roadmap-goal"> — Images render reliably, raster and vector alike, and several images can present as a gallery. This epic is the umbrella for every media finding, and each fix beneath it belongs to its own epic.</span>
+        </li>
+        
+        <li>
+          <strong>Direct Transport</strong><sup class="roadmap-id">P09E106</sup><span class="roadmap-goal"> — The product talks to the platform without the bridge in the path, and the direct transport carries every operation the bridge carries today. What the bridge did before the switch is what the new path must do after it.</span>
+        </li>
+        
+        <li>
+          <strong>Provenance stamping</strong><sup class="roadmap-id">P09E107</sup><span class="roadmap-goal"> — Every message carries an immutable, self-describing provenance stamp written ONCE at generation time by the layer that actually knows the fact. Display is a projection of the stamp; readers never guess, never backfill, never invent empty fields.</span>
+        </li>
+        
+        <li>
+          <strong>Affordance parity</strong><sup class="roadmap-id">P09E112</sup><span class="roadmap-goal"> — TBD</span>
+        </li>
+        
+        <li>
+          <strong>Design Fix</strong><sup class="roadmap-id">P09E130</sup><span class="roadmap-goal"> — Primeiro field epic recovery do mea-culpa (P09E019). Prova o fluxo: stable → experimental → automated → HOME/AWAY/OFFLINE/RECOVERY → device → aprovação do nonlinear → juntos promovemos o MESMO artifact a novo stable.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+    
+    
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">Coming soon<span class="roadmap-sub">Planning epics</span></h3>
+    
+      <ul class="roadmap-list">
+        
+        <li>
+          <strong>Policy Propagation</strong><sup class="roadmap-id">P09E003</sup><span class="roadmap-goal"> — A single product-wide policy reaches every agent that can host the product, without two agents editing the same file and without the copies diverging. The policy has one source, and an agent either carries the current version or is visibly out of date.</span>
+        </li>
+        
+        <li>
+          <strong>Health Telemetry</strong><sup class="roadmap-id">P09E006</sup><span class="roadmap-goal"> — The frequency of tunnel and bridge failures on the phone is measured, and the measurement separates tunnel flapping from a refused request from a timeout. The problem is named before it is fixed.</span>
+        </li>
+        
+        <li>
+          <strong>Timeline Platform</strong><sup class="roadmap-id">P09E007</sup><span class="roadmap-goal"> — The timeline gives guarantees strong enough that a new feature — bubbles, diagrams, tables — can be added without breaking scroll, gesture or state. A feature that cannot be added inside those guarantees is a change to the platform, not a feature.</span>
+        </li>
+        
+        <li>
+          <strong>Testing Platform</strong><sup class="roadmap-id">P09E008</sup><span class="roadmap-goal"> — The verification cycle is formal: contract, tests, report, done. Every epic proves feature correctness and platform compatibility before it counts as delivered, and the report is evidence a reader can check.</span>
+        </li>
+        
+        <li>
+          <strong>Epistemic Validator</strong><sup class="roadmap-id">P09E009</sup><span class="roadmap-goal"> — The library is no longer only a semantic searcher: it validates a claim against its sources. An answer that cannot be traced does not pass, and the library reports the gap instead of the nearest text.</span>
+        </li>
+        
+        <li>
+          <strong>Visible Spawns</strong><sup class="roadmap-id">P09E010</sup><span class="roadmap-goal"> — Agent spawns are visible in the product: a progress board, a lifecycle and the logs, so the user can see what their agents are doing without asking. This is the surface where every per-agent activity of the platform appears.</span>
+        </li>
+        
+        <li>
+          <strong>Frontend Compiler</strong><sup class="roadmap-id">P09E013</sup><span class="roadmap-goal"> — A component defined once in the shared material language compiles to each target a product needs, so the same button is the same button in every renderer. The record was truncated in August and recovered only in part; what survives is the compiler&#39;s contract.</span>
+        </li>
+        
+        <li>
+          <strong>Message Stamp</strong><sup class="roadmap-id">P09E014</sup><span class="roadmap-goal"> — Every message would carry a standard stamp — device, installation, artifact, origin — born in the bridge. This is an architectural hypothesis in planning, not a contract, and the first round is research.</span>
+        </li>
+        
+        <li>
+          <strong>Midstep Planning</strong><sup class="roadmap-id">P09E017</sup><span class="roadmap-goal"> — The midstep ecology is planned before it is built: which schemes, which devices, which allowlist, and what a step returns when the target is absent. The planning epic holds the decisions the active epic executes.</span>
+        </li>
+        
+        <li>
+          <strong>Bootstrap State</strong><sup class="roadmap-id">P09E026</sup><span class="roadmap-goal"> — A fresh install is a state the product can render: the app knows that the agent list may be empty and degrades to a local surface instead of a blank screen. A banner is not the answer; a state machine is.</span>
+        </li>
+        
+        <li>
+          <strong>Freezing Model</strong><sup class="roadmap-id">P09E027</sup><span class="roadmap-goal"> — The theory of why agents freeze in the product is unified into one causal model, with surveillance and prevention built on it. The catalogue of fourteen conditions becomes a model, and the work stops being only firefighting.</span>
+        </li>
+        
+        <li>
+          <strong>Fast Agent Swap</strong><sup class="roadmap-id">P09E038</sup><span class="roadmap-goal"> — Switching agents loads the next agent&#39;s surface lazily, so the swap feels immediate and holds no more of the previous agent in memory than it needs. Speed is the requirement; the loading strategy is the means.</span>
+        </li>
+        
+        <li>
+          <strong>Bridge Health</strong><sup class="roadmap-id">P09E040</sup><span class="roadmap-goal"> — Three endpoints — health, readiness and experience — measure the bridge at each step it serves, so a failure names the step instead of the whole bridge. A monitor that says only up or down does not answer the question.</span>
+        </li>
+        
+        <li>
+          <strong>Verification First</strong><sup class="roadmap-id">P09E041</sup><span class="roadmap-goal"> — Verification outranks code: a claim about the product is accepted when a test shows it, and work that cannot be shown is not counted as done. The product&#39;s own testing platform is the place where that is proven.</span>
+        </li>
+        
+        <li>
+          <strong>Device Modes</strong><sup class="roadmap-id">P09E056</sup><span class="roadmap-goal"> — The device context is detected and named, and a mode can enable or disable actions, or tag events for audit. Modes are isolated, they compound, and they adapt. The origin of a message is one of them.</span>
+        </li>
+        
+        <li>
+          <strong>Parity Onboarding</strong><sup class="roadmap-id">P09E060</sup><span class="roadmap-goal"> — Parity between the bridge, the app and the agent is defined, the way to reach it is stated, and the user sees loading while it does not exist yet. A user never sees a surface that looks ready and is not.</span>
+        </li>
+        
+        <li>
+          <strong>Design Tooling</strong><sup class="roadmap-id">P09E062</sup><span class="roadmap-goal"> — The design toolchain is chosen and wired: a human draws the high-definition frame, an agent reads the native structure, and the result reaches the app. The decision is recorded with its trade-offs, and the reading and writing by an agent is proven before it is adopted.</span>
+        </li>
+        
+        <li>
+          <strong>Remote Access</strong><sup class="roadmap-id">P09E067</sup><span class="roadmap-goal"> — A remote app authenticates against the bridge without turning a static bridge credential into a secret distributed on the device. The connection is remote and the credential stays where it was issued.</span>
+        </li>
+        
+        <li>
+          <strong>Tech Debt</strong><sup class="roadmap-id">P09E080</sup><span class="roadmap-goal"> — The product is stable enough to pay down what it borrowed to get there: regressions are removed from the testing path and the debt that would block the next feature is cleared.</span>
+        </li>
+        
+        <li>
+          <strong>Tunnel Failsafe — alternativas ao Cloudflare (tailscale e outros)</strong><sup class="roadmap-id">kin_tunnel-failsafe_20260917</sup><span class="roadmap-goal"> — Garantir que o Kin NUNCA dependa de um único transporte de acesso remoto. Cloudflare é o ingress ATUAL (temporário); o failsafe define a estratégia multi-transporte: tailscale, kin-remote, outros — com fallback automático.</span>
+        </li>
+        
+        <li>
+          <strong>Agent Ordering</strong><sup class="roadmap-id">P09E090</sup><span class="roadmap-goal"> — Agents are ordered by evidence of engagement rather than by visits or taps: an engaged agent rises to the top, and one that has not been live for long appears as dormant. The concept is forming, and the reuse audit is part of the record.</span>
+        </li>
+        
+        <li>
+          <strong>Native Substrate</strong><sup class="roadmap-id">P09E096</sup><span class="roadmap-goal"> — The product can consume the platform&#39;s native substrate without losing a capability it has today, and the migration guards are named before the first line moves. A capability that would be lost is a reason to stay.</span>
+        </li>
+        
+        <li>
+          <strong>Freezing Explained</strong><sup class="roadmap-id">P09E098</sup><span class="roadmap-goal"> — Why the product appears to freeze is explained by cause, condition and frequency, and the answer is a set of architectural invariants rather than one change. No single fix is assumed to settle it.</span>
+        </li>
+        
+        <li>
+          <strong>No Bridge</strong><sup class="roadmap-id">P09E099</sup><span class="roadmap-goal"> — The product can run without the bridge by consuming the platform substrate directly, and the migration guards are named before anything moves. The analysis is the deliverable: what is gained, what is lost, and what would have to be true to switch.</span>
+        </li>
+        
+        <li>
+          <strong>check the pantry</strong><sup class="roadmap-id">P09E108</sup><span class="roadmap-goal"> — Before building anything, prove that OpenClaw (or a framework we already adopted) does not already provide it. A demand is first &#34;drunk&#34; toward the pantry: the check is a required gate on every epic, not a good intention.</span>
+        </li>
+        
+        <li>
+          <strong>Gateway Parity</strong><sup class="roadmap-id">P09E110</sup><span class="roadmap-goal"> — The gateway can carry every operation the bridge carries today without abandoning the product contract. Parity is measured operation by operation, and the gaps are named before anything is switched over.</span>
+        </li>
+        
+        <li>
+          <strong>Design Decision</strong><sup class="roadmap-id">P09E111</sup><span class="roadmap-goal"> — The choice between a cloud design tool and a self-hosted one is made by experiment, for the flow where a human draws and an agent reads the native structure. Prototyping an agent reading and writing native design files is part of the decision.</span>
+        </li>
+        
+        <li>
+          <strong>Liveness</strong><sup class="roadmap-id">P09E114</sup><span class="roadmap-goal"> — Liveness is observable: on a slow answer the user can see that the agent is still working, and the surface distinguishes working from stuck. A wait without a signal is indistinguishable from a failure.</span>
+        </li>
+        
+        <li>
+          <strong>Timeline Platform</strong><sup class="roadmap-id">P09E129</sup><span class="roadmap-goal"> — The timeline gives guarantees strong enough that a new feature can be added without breaking scroll, gesture or state. A feature that cannot be added inside those guarantees is a change to the platform, not a feature.</span>
+        </li>
+        
+      </ul>
+    
+  </div>
+  
+</section>
+
+
+  <div class="t-portfolio__body"><p>In the same way that a well-designed object reveals how it wants to be held,
 this product reveals how it wants to be used before anyone reads a word. That is
-the whole ambition: cognition that shows itself in the surface.</p><h2 id=what-it-is>What it is</h2><p>It began as an internal instrument and stayed one. The shape came from use, not
+the whole ambition: cognition that shows itself in the surface.</p>
+<h2 id="what-it-is">What it is</h2>
+<p>It began as an internal instrument and stayed one. The shape came from use, not
 from specification — every part that survived is a part someone reached for more
-than once. What follows is a description of that shape.</p><h2 id=how-it-works>How it works</h2><p>Three movements, in order. First the intake, where material arrives unformed.
+than once. What follows is a description of that shape.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Three movements, in order. First the intake, where material arrives unformed.
 Then the reduction, where it is made small enough to hold. Finally the return,
-where it goes back out into the same world that produced it.</p><pre class=mermaid>flowchart LR
+where it goes back out into the same world that produced it.</p>
+
+<pre class="mermaid">flowchart LR
   A[intake] --&gt; B[reduction]
   B --&gt; C{holds?}
   C --&gt;|yes| D[return]
-  C --&gt;|no| B</pre><h2 id=status>Status</h2><p>Working, with the usual caveats. Nothing here asks for attention it has not
-earned, and nothing claims to be finished.</p></div></article></main><footer>Nonlinear Studio Studio · cognition bleeds</footer></body></html>
+  C --&gt;|no| B</pre>
+<h2 id="status">Status</h2>
+<p>Working, with the usual caveats. Nothing here asks for attention it has not
+earned, and nothing claims to be finished.</p>
+</div>
+
+</article>
+
+</main>
+<footer>Nonlinear Studio Studio · cognition bleeds</footer>
+</body>
+</html>

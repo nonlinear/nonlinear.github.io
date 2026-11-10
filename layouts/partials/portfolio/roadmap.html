@@ -1,9 +1,18 @@
-{{- /* PORTFOLIO/ROADMAP — renders the projection, does not build it.
+{{- /* PORTFOLIO/ROADMAP — the two lists of the MVP.
    Source: data/<project>/roadmap.yaml, copied verbatim from
    agents/<project>/about/roadmap.yaml by site-publish.py.
 
-   Fields are exact: epics[].id, epics[].status, epics[].title,
-   latest{id,title,kind,date}, help_open[]. */ -}}
+   ⛔ FORMAT IS LOCKED (owner, 2026-11-10). Two columns, active + planning only.
+   Do NOT add a `done` column: roadmap.yaml does not project a completion
+   timestamp.  Adding one is the backstage epic "latest done on roadmap".
+
+   The data shape changed on 2026-11-09 from `sections[key].items` (exporter)
+   to `epics[]` with a flat `status` (projector v2.1).  That is a DATA change,
+   not a FORMAT change: this template filters `epics` by status to produce the
+   same two columns.  If the data ever stops carrying `status`, STOP and ask —
+   do not rewrite this template to match a new shape.
+
+   Fields read: epics[].id, epics[].status, epics[].title */ -}}
 
 {{ $p := .project }}
 {{ $rm := index (index site.Data $p) "roadmap" }}
@@ -12,19 +21,30 @@
   {{ warnf "roadmap: no data/%s/roadmap.yaml — run site-publish.py --project %s" $p $p }}
 {{ else }}
 <section class="roadmap" aria-label="Roadmap {{ $p }}">
-  <h2>Roadmap <small>{{ len ($rm.epics | default slice) }} epics</small></h2>
-
-  <table class="roadmap-table">
-    <thead><tr><th>id</th><th>status</th><th>title</th></tr></thead>
-    <tbody>
-      {{ range $rm.epics }}
-      <tr><td><code>{{ .id }}</code></td><td>{{ .status }}</td><td>{{ .title }}</td></tr>
-      {{ end }}
-    </tbody>
-  </table>
-
-  {{ with $rm.latest }}
-  <p class="roadmap-latest"><strong>latest</strong> <code>{{ .id }}</code> {{ .title }}</p>
+  {{ $cols := slice (dict "key" "active") (dict "key" "planning") }}
+  {{ range $cols }}
+    {{ $key := .key }}
+    {{ $items := where $rm.epics "status" $key | default slice }}
+  <div class="roadmap-col">
+    <h3 class="roadmap-h">
+      {{- if eq $key "active" -}}
+        Currently working<span class="roadmap-sub">Active epics</span>
+      {{- else -}}
+        Coming soon<span class="roadmap-sub">Planning epics</span>
+      {{- end -}}
+    </h3>
+    {{ with $items }}
+      <ul class="roadmap-list">
+        {{ range . }}
+        <li>
+          <strong>{{ .title }}</strong>{{ if .id }}<sup class="roadmap-id">{{ .id }}</sup>{{ end }}{{ with .goal }}<span class="roadmap-goal"> — {{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="roadmap-empty">{{ if eq $key "active" }}Nothing active.{{ else }}Nothing planned.{{ end }}</p>
+    {{ end }}
+  </div>
   {{ end }}
 </section>
 {{ end }}
