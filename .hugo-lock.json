@@ -1,6 +1,6 @@
 {
-  "owner": "nonlinear-heartbeat",
-  "pid": "heartbeat",
-  "since": "2026-11-18T04:53:57.503657+00:00",
-  "purpose": "publication:librarian"
+  "owner": "heartbeat",
+  "pid": "hb-18nov26",
+  "since": "2026-11-18T22:53Z",
+  "purpose": "heartbeat publication"
 }

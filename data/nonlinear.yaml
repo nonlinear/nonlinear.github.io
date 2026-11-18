@@ -134,17 +134,17 @@ sections:
       and measured in the same place.
 - key: done
   items:
-  - id: e012_20260630
+  - id: nonlinear_20260630-configuration
     label: 1
-    title: Simplify Skills System
-    goal: Move all skills to workspace, remove symlinks, reduce infrastructure overhead from 3 steps to
-      1 step
-  - id: e026_20260630
+    title: Configuration
+    goal: Criar SSOT do ecossistema de MCPs, skills e ferramentas do agente nonlinear — quem tem acesso
+      a o quê, o que funciona, o que falta, e por quê.
+  - id: e027_20260630
     label: 2
+    title: Design Strategy
+    goal: AI agent architecture and design strategy consolidation from talk sessions
+  - id: e026_20260630
+    label: 3
     title: Self-Promotion & Digital Identity
     goal: Research-driven personal branding strategy (positioning, narrative, content tactics, income
       streams)
-  - id: e027_20260630
-    label: 3
-    title: Design Strategy
-    goal: AI agent architecture and design strategy consolidation from talk sessions

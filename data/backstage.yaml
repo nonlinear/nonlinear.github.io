@@ -145,11 +145,16 @@ sections:
     goal: A sandboxed space where articulated dreams become the Studio's north star. Each vision arrives
       with articles and sources; the epic returns interesting extrapolations, consults the library (Librarian),
       and suggests disciplines, authors, and books to enrich it. Dream → vision → extrapolation → discipline.
-  - id: e021_20260630
+  - id: nonlinear-tickets
     label: 2
-    title: Surface Objects
-    goal: Surface vision, agents, skills, MCPs, pinned notes
-  - id: e061_20260507
+    title: Nonlinear Tickets
+    goal: A single queue (in NocoDB) where agents create first-class work items for the nonlinear, the
+      nonlinear reads and responds (Response field), and Backstage coordinates delivery. An interface
+      between the distributed agent world and the human's limited attention.
+  - id: epic-taxonomy-migration_20260828
     label: 3
-    title: Status Check
-    goal: Migrated from old backstage (E061)
+    title: Epic Taxonomy Migration — epics/<name>.md → epics/<name>/contract.md
+    goal: 'Migrar TODOS os epics do ecossistema para a taxonomia canônica: cada epic = pasta `epics/<name>/`
+      com NO MÍNIMO `contract.md` (ex-`epics/<name>.md`) + `timeline.md`. Retroactive, sem exceção. Atualizar
+      skill P08E047 + scripts (equipe de 3: skill, script, heartbeat) para o novo layout. Preservar permalinks
+      do git.'

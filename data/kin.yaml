@@ -133,18 +133,20 @@ sections:
       machine is.'
 - key: done
   items:
-  - id: e048_20260514
-    label: 1
-    title: Two-Way Kin Bridge
-    goal: '**Make Kin and OpenClaw talk to each other in real-time.**'
   - id: tunnel-flap-emergency_20260831
-    label: 2
+    label: 1
     title: EMERGÊNCIA — Kin dependente do Cloudflare Tunnel (P1) + decisão kin-remote
     goal: 'Tratar o flap persistente do Cloudflare Tunnel como dependência de transporte do Produto Kin
       (P1 imediato), implementar watchdog de recuperação inteligente + escape hatch, e documentar a decisão
       estrutural: abandonar Cloudflare como arquitetura futura em favor de kin-remote embedded no bridge.'
-  - id: kin_20260624-tooling
+  - id: product-voice-framing
+    label: 2
+    title: Product Voice Framing
+    goal: Framing de produto entregue ao ring (voice extension) — origem de agents/ring/epics/kin-offers/.
+  - id: kin_cache_rebuild_state
     label: 3
-    title: Tooling
-    goal: Equipar o agente OpenClaw com MCPs, skills e ferramentas para desenvolver, buildar, testar e
-      debuggar Kin em iOS (simulator + device) e Android (emulador + device).
+    title: Cache Rebuild State — tornar o rebuild local observável (device novo)
+    goal: Quando o Kin está num device novo — ou com cache local vazio — o usuário não deve interpretar
+      o histórico vazio como ausência de dados. O Kin deve tornar visível que está reconstruindo o cache
+      local, até o rebuild terminar ou falhar explicitamente. Tornar o local-first existente observável
+      e verificável; NÃO redesenhar o cache.
