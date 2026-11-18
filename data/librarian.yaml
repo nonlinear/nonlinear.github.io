@@ -41,7 +41,7 @@ sections:
       index: a book that was acquired is a book a query can find.'
   - id: P10E073
     label: 6
-    title: Indexing Master
+    title: Indexing Master Epic
     goal: Ingestion is one pipeline with one owner, not a set of scripts per format. A new book reaches
       a searchable chunk through the same stages every other book used, and a failure at any stage names
       the stage. The master epic holds the pipeline together across the format epics.
