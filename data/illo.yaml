@@ -4,8 +4,8 @@ exporter: v1.0
 counts:
   active: 7
   planning: 10
-  done: 1
-  done_total: 1
+  done: 0
+  done_total: 0
 sections:
 - key: active
   items:
@@ -119,9 +119,4 @@ sections:
       vector MVP follows from the comparison. Input and mapping live here; the brush engine lives in its
       own epic.'
 - key: done
-  items:
-  - id: mvp-erase
-    label: 1
-    title: 'MVP: erase to intersection'
-    goal: Um app de desenho offline em que tocar uma linha a corta no cruzamento mais próximo de cada
-      lado. Provar que isso basta para desenhar de verdade.
+  items: []

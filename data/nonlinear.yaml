@@ -2,27 +2,21 @@ project: nonlinear
 tier: flagship
 exporter: v1.0
 counts:
-  active: 3
+  active: 2
   planning: 10
   done: 3
   done_total: 15
 sections:
 - key: active
   items:
-  - id: P14E017
-    label: 1
-    title: Web Analytics
-    goal: The studio's sites answer questions about their own traffic from a self-hosted analytics system,
-      with no third-party script and no data leaving the infrastructure. Every site reports to the same
-      instance.
   - id: P14E031
-    label: 2
+    label: 1
     title: Site Build
     goal: The sitemap of the main site is manifested as a navigable site with placeholder copy, images
       and diagrams, so design can be tested on real devices slowly and iteratively behind a guarded path.
       Discrepancies are recorded as they appear, without cascading.
   - id: P14E044
-    label: 3
+    label: 2
     title: Studio MCP
     goal: A self-hosted MCP server behind the tunnel exposes the tools of the four working agents with
       an atomic whitelist and no generic file reader. The surface a tool exposes is the whole surface
